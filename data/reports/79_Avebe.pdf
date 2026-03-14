@@ -1,0 +1,263 @@
+<!doctype html>
+<html class="no-js" lang="nl-NL">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title></title>
+		
+        <meta name="description" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://www.pensioenfondsavebe.nl/assets/downloads/Jaarverslagen" />
+<meta http-equiv="language" content="NL" />
+<meta property="og:locale" content="nl_NL" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="" />
+<meta property="og:description" content="" />
+<meta property="og:url" content="https://www.pensioenfondsavebe.nl/" />
+<meta property="og:site_name" content="Pensioenfonds AVEBE" />
+<meta property="og:image" content="https://www.pensioenfondsavebe.nl/assets/img/logo-avebe.png" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:title" content="" />
+<meta name="twitter:image" content="https://www.pensioenfondsavebe.nl/assets/img/logo-avebe.png" />
+<meta name="web_author" content="Jelle Dijkstra - BuroDenG! - www.burodeng.nl">
+<link rel="apple-touch-icon" sizes="57x57" href="https://www.pensioenfondsavebe.nl/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://www.pensioenfondsavebe.nl/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://www.pensioenfondsavebe.nl/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://www.pensioenfondsavebe.nl/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://www.pensioenfondsavebe.nl/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://www.pensioenfondsavebe.nl/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://www.pensioenfondsavebe.nl/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://www.pensioenfondsavebe.nl/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.pensioenfondsavebe.nl/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://www.pensioenfondsavebe.nl/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.pensioenfondsavebe.nl/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://www.pensioenfondsavebe.nl/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.pensioenfondsavebe.nl/favicon-16x16.png">
+<link rel="manifest" href="https://www.pensioenfondsavebe.nl/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="https://www.pensioenfondsavebe.nl/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="https://www.pensioenfondsavebe.nl/?css=site/slider.css">
+
+		<link rel="stylesheet" href="/assets/css/nouislider.min.css">
+		<link rel="stylesheet" href="/assets/css/nouislider.pips.css">
+		<link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="/assets/css/foundation-datepicker.min.css">
+		<link rel="stylesheet" href="/assets/css/application.css">
+		<link rel="stylesheet" href="/assets/css/slick.css">
+		<link rel="stylesheet" href="/assets/css/slick-theme.css">
+
+		
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,700">
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Arvo:400,700">
+		<script src="//use.fontawesome.com/3df80f7a2f.js"></script>
+		
+	</head>
+	<body >
+	
+	<div id="menu-sticky" data-sticky-container>
+	
+	
+		<div class="menu-bar" data-sticky data-margin-top="0" data-sticky-on="small" style="width:100%">
+		
+			<div class="title-bar" data-responsive-toggle="avebe-menu" data-hide-for="iphone">
+				<div class="top-bar-left">
+					<a href="https://www.pensioenfondsavebe.nl/" title="Terug naar de homepage"><img src="https://www.pensioenfondsavebe.nl/assets/img/logo-avebe-small.png" alt="Home Avebe" width="260" height="23"></a>
+				</div>
+				<div class="top-bar-right">
+					<span class="font-small active">A</span>
+					<span class="font-large">A</span>
+					
+					<button class="menu-icon" type="button" data-toggle></button>
+					
+				</div>
+			</div>
+		
+			<div class="top-bar" id="avebe-menu">
+				<div class="top-bar-left hide-for-small-only">
+					<div class="contact">
+						<img class="icon" src="https://www.pensioenfondsavebe.nl/assets/img/icons/information-turqouise.png" alt="Informatie" width="33" height="33" data-toggle="information-dropdown">
+						<div class="dropdown-pane" id="information-dropdown" data-dropdown>
+							<h5 class="title">Contact</h5>
+							<p>Werkdagen van 8.30 tot 17.00 uur<br>088 404 46 71</p>
+							<span  class="button"><span data-eeEncEmail_JfEJqncvrU='1'>.(JavaScript must be enabled to view this email address)</span><script>/*<![CDATA[*/var out = '',el = document.getElementsByTagName('span'),l = ['>','a','/','<',' 115',' 110',' 111',' 32',' 108',' 105',' 97',' 77','>','\"',' 109',' 111',' 99',' 46',' 97',' 109',' 115',' 105',' 118',' 64',' 101',' 98',' 101',' 118',' 97',' 115',' 100',' 110',' 111',' 102',' 110',' 101',' 111',' 105',' 115',' 110',' 101',' 112',':','o','t','l','i','a','m','\"','=','f','e','r','h','a ','<'],i = l.length,j = el.length;while (--i >= 0)out += decodeURIComponent(l[i].replace(/^\s\s*/, '&#'));while (--j >= 0)if (el[j].getAttribute('data-eeEncEmail_JfEJqncvrU'))el[j].innerHTML = out;/*]]>*/</script></span>
+							
+						</div>
+					</div>
+					<a href="https://www.pensioenfondsavebe.nl/" title="Terug naar de homepage">
+						<img id="logo" src="https://www.pensioenfondsavebe.nl/assets/img/logo-avebe.png" alt="Home Avebe" width="260" height="23">
+						<img id="logo-home" src="https://www.pensioenfondsavebe.nl/assets/img/logo-avebe-white.png" alt="Home Avebe" width="260" height="23">
+					</a>
+				</div>
+				
+				<div class="top-bar-right">
+					<ul class="horizontal menu" data-responsive-menu="drilldown medium-dropdown">
+						<li><a href="https://www.pensioenfondsavebe.nl/" title="Home">Home</a></li>
+						<li id="situaties">
+							<a href="https://www.pensioenfondsavebe.nl/situaties">Situaties</a>
+							<ul class="menu vertical">
+							
+								<li><a href="https://www.pensioenfondsavebe.nl/situaties/u-gaat-trouwen-of-samenwonen" title="U gaat trouwen of samenwonen">U gaat trouwen of samenwonen</a></li>
+							
+								<li><a href="https://www.pensioenfondsavebe.nl/situaties/verhuizen" title="Verhuizen">Verhuizen</a></li>
+							
+								<li><a href="https://www.pensioenfondsavebe.nl/situaties/uit-elkaar" title="Uit elkaar">Uit elkaar</a></li>
+							
+								<li><a href="https://www.pensioenfondsavebe.nl/situaties/Nieuwe-baan" title="Nieuwe baan">Nieuwe baan</a></li>
+							
+								<li><a href="https://www.pensioenfondsavebe.nl/situaties/met-pensioen" title="Met pensioen">Met pensioen</a></li>
+							
+								<li><a href="https://www.pensioenfondsavebe.nl/situaties/bijna-met-pensioen" title="Bijna met pensioen">Bijna met pensioen</a></li>
+							
+								<li><a href="https://www.pensioenfondsavebe.nl/situaties/u-gaat-minder-werken" title="Minder werken">Minder werken</a></li>
+							
+								<li><a href="https://www.pensioenfondsavebe.nl/situaties/ik-krijg-een-kind" title="U krijgt een kind">U krijgt een kind</a></li>
+							
+								<li><a href="https://www.pensioenfondsavebe.nl/situaties/ziekte" title="Ziekte">Ziekte</a></li>
+							
+								<li><a href="https://www.pensioenfondsavebe.nl/situaties/Overlijden" title="Overlijden">Overlijden</a></li>
+							
+								<li><a href="https://www.pensioenfondsavebe.nl/situaties/verlof" title="Verlof">Verlof</a></li>
+							
+							</ul>
+						</li>
+						
+						<li>
+							<a href="https://www.pensioenfondsavebe.nl/nieuws">Nieuws</a>
+							<ul class="menu vertical">
+								<li><a href="https://www.pensioenfondsavebe.nl/een-nieuw-pensioen">Een nieuw pensioen</a></li>	
+							</ul>
+						</li>
+						<li id="over"><a href="https://www.pensioenfondsavebe.nl/over-ons">Over ons</a>
+						<ul class="menu vertical">
+							<li><a href="https://www.pensioenfondsavebe.nl/over-ons/het-bestuur" title="Het bestuur">Het bestuur</a></li>
+							<li><a href="https://www.pensioenfondsavebe.nl/over-ons/verantwoording-en-toezicht" title="Verantwoording en toezicht">Toezicht</a></li>
+							<li><a href="https://www.pensioenfondsavebe.nl/over-ons/beleggingsbeleid" title="beleggingsbeleid">Beleggingsbeleid</a></li>
+							<li><a href="https://www.pensioenfondsavebe.nl/over-ons/vereniging-van-gepensioneerden" title="Vereniging van gepensioneerden">Vereniging van gepensioneerden</a></li>
+							<li><a href="https://www.pensioenfondsavebe.nl/over-ons/dekkingsgraad" title="dekkingsgraad">Dekkingsgraad</a></li>
+							<li><a href="https://www.pensioenfondsavebe.nl/over-ons/kerncijfers" title="kerncijfers">Kerncijfers</a></li>
+							<li><a href="https://www.pensioenfondsavebe.nl/over-ons/klachten" title="Klachten">Klachten</a></li>
+							<li><a href="https://www.pensioenfondsavebe.nl/over-ons/brochures-en-formulieren" title="Brochures en formulieren">Brochures en formulieren</a></li>
+							<li><a href="https://www.pensioenfondsavebe.nl/over-ons/veel-gestelde-vragen" title="Veel gestelde vragen">Veel gestelde vragen</a></li>
+							</ul>
+						
+						</li>
+						<li><a href="https://mijn.pensioenfondsavebe.nl" target="_blank" rel="noopener noreferrer">MijnPensioen</a></li>
+						<li><a href="https://www.pensioenfondsavebe.nl/keuzehulp">Keuzehulp</a></li>
+						<li><a href="https://www.pensioenfondsavebe.nl/pensioen123">Pensioen 1-2-3</a></li>
+						<li><a href="https://www.pensioenfondsavebe.nl/contact">Contact</a></li>
+						<li class="border-left"><a href="https://www.pensioenfondsavebe.nl/zoeken"><i class="fa fa-search"></i></a></li>
+						<li class="border-left">
+							<span class="font-small active">A</span>
+							<span class="font-large">A</span>
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+    
+
+
+	<footer>
+		<div class="row">
+			<div class="small-12 medium-4 columns">
+				<h5>Pensioenfonds Avebe</h5>
+				p/a  VISMA Idella<br>
+				Postbus 35<br>
+				2650 AA Berkel en Rodenrijs 
+			</div>
+			<div class="small-12 medium-4 columns">
+				<h5>Telefoonnummer</h5>
+				<a href="tel:+310884044671">088 404 46 71</a><br>
+				&nbsp;<br>
+				<h5>Email</h5>
+				<span data-eeEncEmail_roAUHkcWPL='1'>.(JavaScript must be enabled to view this email address)</span><script>/*<![CDATA[*/var out = '',el = document.getElementsByTagName('span'),l = ['>','a','/','<',' 109',' 111',' 99',' 46',' 97',' 109',' 115',' 105',' 118',' 64',' 101',' 98',' 101',' 118',' 97',' 115',' 100',' 110',' 111',' 102',' 110',' 101',' 111',' 105',' 115',' 110',' 101',' 112','>','\"',' 109',' 111',' 99',' 46',' 97',' 109',' 115',' 105',' 118',' 64',' 101',' 98',' 101',' 118',' 97',' 115',' 100',' 110',' 111',' 102',' 110',' 101',' 111',' 105',' 115',' 110',' 101',' 112',':','o','t','l','i','a','m','\"','=','f','e','r','h','a ','<'],i = l.length,j = el.length;while (--i >= 0)out += decodeURIComponent(l[i].replace(/^\s\s*/, '&#'));while (--j >= 0)if (el[j].getAttribute('data-eeEncEmail_roAUHkcWPL'))el[j].innerHTML = out;/*]]>*/</script>
+			</div>
+			<div class="small-12 medium-4  columns">
+				<a href="https://www.pensioenfondsavebe.nl/sitemap" title="Sitemap">Sitemap</a><br>
+				<a href="https://www.pensioenfondsavebe.nl/service/disclaimer">Disclaimer</a><br>
+				<a href="https://www.pensioenfondsavebe.nl/service/privacy-cookies">Privacy &amp; Cookies</a><br>
+				<a href="https://www.pensioenfondsavebe.nl/service/nieuwsbrief">Nieuwsbrief</a><br>
+				Copyright &copy; Pensioenfonds Avebe 2026<br>
+				
+			</div>
+			<div class="large-12 columns">
+        	<a href="https://www.burodeng.nl" title="Site by BuroDenG!">Site by BuroDenG!</a>
+        </div>
+		</div>
+	</footer>
+	
+
+	<script type="text/javascript" src="https://www.pensioenfondsavebe.nl/assets/js/application.min.js"></script>
+	<script type="text/javascript" src="https://www.pensioenfondsavebe.nl/assets/js/slick.min.js"></script>
+	<script type="text/javascript" src="https://www.pensioenfondsavebe.nl/assets/js/foundation-datepicker.min.js"></script>
+	<script type="text/javascript" src="https://www.pensioenfondsavebe.nl/assets/js/foundation-datepicker.nl.js"></script>
+	<script type="text/javascript" src="https://www.pensioenfondsavebe.nl/assets/js/wNumb.min.js"></script> 
+	
+	
+
+
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80182034-1', 'pensioenfondsavebe.nl');
+  ga('require', 'linkid', 'linkid.js');
+  ga('send', 'pageview');
+
+
+
+</script>
+
+	
+	<script>
+		$(function(){
+			$('#newsletter-date').fdatepicker({
+				language: 'nl',
+				format: 'mm-dd-yyyy',
+				disableDblClickSelection: true
+			});
+		});
+	</script>
+	
+	<script>
+		//select module
+		(function() {
+			[].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {
+				new SelectFx(el, {
+						 newTab: false
+					});
+			} );
+		})();
+	</script>
+	
+	
+	
+<script>
+$('.slide-dates').slick({
+			centerMode: true,
+			centerPadding: '10px',
+			slidesToShow: 3,
+			initialSlide: 2,
+			infinite: "false",
+			responsive: [
+				{
+					breakpoint: 480,
+					settings: {
+						arrows: true,
+						centerMode: true,
+						centerPadding: '40px',
+						slidesToShow: 1
+					}
+				}
+			]
+		});
+</script>
+
+</body>
+</html>

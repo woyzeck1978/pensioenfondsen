@@ -1,0 +1,120 @@
+fund_id,allocation_pct,source_file
+33,25.1,33_Rail  Openbaar Vervoer Rail  Public Transport.pdf
+104,7.8,104_Haskoning DHV.pdf
+144,1.0,144_ASR.pdf
+51,25.0,51_Shell (SSPF and SNPS schemes).pdf
+66,1.39,66_De Nationale APF.pdf
+120,1.6,120_Pon.pdf
+129,75.0,129_SNS REAAL.pdf
+70,0.2,70_Abbott  Abbott Nederland.pdf
+72,9.0,72_Achmea.pdf
+108,27.10,108_ING  ING CDC.pdf
+123,10.0,123_Rabobank.pdf
+57,23.0,57_Media PNO Creative and Digital Sector.pdf
+132,35.3,132_Thales Nederland.pdf
+110,47.8,110_KAS BANK.pdf
+128,12.0,128_Smurfit Kappa.pdf
+119,22.80,119_Philips.pdf
+112,30.0,112_Lloyds Register Nederland.pdf
+92,13.2,92_Ecolab.pdf
+88,31.5,88_Delta Lloyd.pdf
+114,9.1,114_Mercer.pdf
+81,30.96,81_Brocacef.pdf
+55,30.0,55_PME.pdf
+86,9.0,86_Cosun  Koninklijke Cosun.pdf
+125,5.0,125_Rockwool.pdf
+118,3.0,118_NN CDC.pdf
+135,21.3,135_UWV.pdf
+116,10.4,116_MSD.pdf
+64,20.0,64_APF Het Nederlandse Pensioenfonds.pdf
+8,20.0,8_Verloskundigen SPV - Midwives.pdf
+126,9.4,126_SABIC.pdf
+133,0.01,133_TNO.pdf
+68,20.0,68_Unilever APF.pdf
+96,0.5,96_Forbo.pdf
+28,7.0,28_Notariaat Notaries.pdf
+47,9.8,47_KLM Algemeen Ground Staff.pdf
+3,7.0,3_Huisartsen.pdf
+26,55.0,26_Molenaars Millers.pdf
+78,24.75,78_Atos.pdf
+94,24.4,94_Exxonmobil.pdf
+56,95.0,56_Foodservice  Groothandel in Levensmiddelen Foodservice  Wholesale.pdf
+85,8.09,85_Citigroup.pdf
+46,6.0,46_IKEA STIP.pdf
+122,50.0,122_Provisum.pdf
+84,10.05,84_Cargill.pdf
+2,0.6,2_Fysiotherapeuten SPF - Physiotherapists.pdf
+83,27.5,83_Capgemini  Capgemini Nederland.pdf
+63,59.9,63_Vlees Vleeswaren Gemaksvoeding en Pluimveevlees  VLEP Meat and Poultry.pdf
+42,6.25,42_Zorgverzekeraars  SBZ Health Insurers.pdf
+62,25.0,62_Vlakglas Verf Glasbewerking- en het Glazeniersbedrijf  BPFV Flat Glass Paint and Glazing.pdf
+117,25.33,117_Nederlandse Bisdommen.pdf
+121,26.0,121_PostNL.pdf
+21,11.0,21_Koopvaardij Merchant Navy.pdf
+98,0.9,98_Gazelle.pdf
+27,8.0,27_Nederlandse Groothandel  SPNG Dutch Wholesale.pdf
+145,1.39,145_Nationale-Nederlanden.pdf
+4,0.1,4_Loodsen.pdf
+44,1.6,44_BP  Pensioenfonds BP.pdf
+103,11.53,103_HAL.pdf
+51,26.0,51_Shell SNPS.pdf
+35,12.1,35_Slagersbedrijf Butchers.pdf
+31,30.0,31_Personeelsdiensten Personnel Services.pdf
+131,6.3,131_TDV.pdf
+74,25.0,74_Alliance.pdf
+41,29.6,41_Zorg en Welzijn  PFZW Healthcare and Welfare.pdf
+49,1.5,49_KLM Vliegend Personeel Flight Crew.pdf
+130,0.17,130_Sportfondsen.pdf
+1,14.0,1_Dierenartsen SPD - Veterinarians.pdf
+113,38.0,113_Mars.pdf
+36,52.0,36_StiPP Temp Agency and Seconded Workers.pdf
+93,15.4,93_Essity.pdf
+48,9.8,48_KLM Cabinepersoneel Cabin Crew.pdf
+76,18.3,76_APG.pdf
+20,9.3,20_Kappersbedrijf Hairdressers.pdf
+12,8.5,12_Banden- en Wielenbranche Tire and Wheel Branch.pdf
+25,0.5,25_MITT Fashion Interior Carpet and Textile Industry.pdf
+105,12.6,105_Heineken.pdf
+23,0.5,23_Medewerkers Apotheken  PMA Pharmacy Employees.pdf
+60,9.0,60_Schilders- Afwerkings- en Glaszetbedrijf Painters and Glaziers.pdf
+32,23.0,32_PGB.pdf
+16,36.0,16_BPL Pensioen Agriculture.pdf
+13,20.0,13_Beroepsvervoer over de Weg Commercial Road Transport.pdf
+95,5.3,95_Flexsecurity.pdf
+67,50.0,67_Stap APF.pdf
+43,90.0,43_Zuivel- en aanverwante industrie  BPZ Dairy Industry.pdf
+89,27.0,89_DHL Nederland.pdf
+17,25.0,17_Detailhandel Retail.pdf
+127,4.1,127_Sagittarius.pdf
+137,7.15,137_WitteveenBos.pdf
+4,50.0,4_Loodsen Pilots.pdf
+53,30.0,53_Athora Zwitserleven.pdf
+106,38.50,106_Hoogovens.pdf
+111,0.6,111_KPN.pdf
+73,2.3,73_Ahold Delhaize.pdf
+77,1.32,77_ATT Nederland.pdf
+75,20.0,75_APF AkzoNobel Nouryon Nobian Salt.pdf
+87,75.0,87_De Nederlandsche Bank.pdf
+97,48.5,97_Gasunie.pdf
+107,7.4,107_Huntsman Rozenburg.pdf
+136,26.0,136_Vopak.pdf
+124,10.0,124_Robeco.pdf
+115,50.0,115_Metro.pdf
+90,2.5,90_DOW.pdf
+58,30.0,58_Metalektro  PME.pdf
+140,20.0,140_Be Frank PPI.pdf
+5,20.0,5_Medisch Specialisten SPMS - Medical Specialists.pdf
+80,9.0,80_Avery Dennison.pdf
+126,23.9,126_SABIC.pdf
+76,34.35,76_APG.pdf
+71,17.00,71_ABN_Amro_Jaarverslag_2024.pdf
+71,17.00,71_ABN_Amro_Jaarverslag_2024.pdf
+71,17.00,71_ABN_Amro_Jaarverslag_2024.pdf
+91,48.40,91_DSM (PDN) Nederland_full.pdf
+152,18.20,152_BPF Foodservice.pdf
+165,84.80,165_Kring Arcadis Hnp.pdf
+167,84.80,167_Kring CK1 Hnp.pdf
+173,61.50,173_Kring McCain De Nationale.pdf
+178,20.00,178_Levensmiddelenbedrijf.pdf
+187,84.80,187_Pensioenkring CRH Hnp.pdf
+193,60.00,193_Pensioenkring Van Lanschot Hnp.pdf
