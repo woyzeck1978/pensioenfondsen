@@ -3,6 +3,7 @@ import sqlite3
 import pandas as pd
 import plotly.express as px
 import os
+import urllib.parse
 
 # --- PAGE CONFIGURATION ---
 st.set_page_config(
@@ -11,6 +12,12 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
+
+# Process cross-page URL query parameters
+if "fund" in st.query_params:
+    st.session_state.selected_fund = st.query_params["fund"]
+    st.session_state.page = "Fund Deep-Dive"
+    st.query_params.clear()
 
 # --- DATABASE CONNECTION ---
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -104,9 +111,19 @@ st.markdown("Interactive exploration of the Dutch pension sector (AUM, Allocatio
 # Retrieve core dataset
 df_funds = get_all_funds()
 
+# Session State Initialization
+if "page" not in st.session_state:
+    st.session_state.page = "Sector Overview"
+
+if "selected_fund" not in st.session_state:
+    st.session_state.selected_fund = None
+
+pages = ["Sector Overview", "Fund Deep-Dive", "Asset Managers Exposure", "WTP Tracker", "Dekkingsgraad Analysis", "ESG & SFDR Tracker"]
+
 # Sidebar Navigation
 st.sidebar.title("Navigation")
-page = st.sidebar.radio("Go to", ["Sector Overview", "Fund Deep-Dive", "Asset Managers Exposure", "WTP Tracker", "Dekkingsgraad Analysis", "ESG & SFDR Tracker"])
+# Use the session_state 'page' as the key to bind it bidirectionally
+st.sidebar.radio("Go to", pages, key="page")
 
 st.sidebar.markdown("---")
 st.sidebar.info(f"**Database Stats:**\\nTracking **{len(df_funds)}** Pension Funds.\\nTotal AUM: **€{df_funds['aum_euro_bn'].sum():,.1f} Billion**")
@@ -115,7 +132,7 @@ st.sidebar.info(f"**Database Stats:**\\nTracking **{len(df_funds)}** Pension Fun
 # ==========================================
 # PAGE 1: SECTOR OVERVIEW
 # ==========================================
-if page == "Sector Overview":
+if st.session_state.page == "Sector Overview":
     st.header("Sector Overview")
     
     # KPI Row
@@ -154,18 +171,50 @@ if page == "Sector Overview":
         
     st.divider()
     st.subheader("Fund Directory")
-    st.dataframe(df_funds[['name', 'category', 'aum_euro_bn', 'dekkingsgraad_pct', 'equity_allocation_pct', 'uitvoerder']], use_container_width=True)
-
+    st.markdown("💡 *Click the **View Profile** link to jump directly into the fund's specific Deep-Dive!*")
+    
+    # Create the display dataframe
+    df_display = df_funds[['name', 'category', 'aum_euro_bn', 'dekkingsgraad_pct', 'equity_allocation_pct', 'uitvoerder']].copy()
+    
+    # Inject an explicit URL mapping column to support Streamlit versions < 1.35
+    df_display.insert(0, 'Profile Link', df_display['name'].apply(lambda x: f"/?fund={urllib.parse.quote_plus(x)}"))
+    
+    st.dataframe(
+        df_display, 
+        use_container_width=True,
+        column_config={
+            "Profile Link": st.column_config.LinkColumn(
+                "Action",
+                help="Click to view the Deep-Dive profile.",
+                display_text="View Profile \u2192"
+            )
+        }
+    )
 
 # ==========================================
 # PAGE 2: FUND DEEP-DIVE
 # ==========================================
-elif page == "Fund Deep-Dive":
+elif st.session_state.page == "Fund Deep-Dive":
     st.header("Fund Profile Deep-Dive")
     
     # Fund Selector
     fund_names = df_funds['name'].sort_values().tolist()
-    selected_fund_name = st.selectbox("Search for a Pension Fund:", fund_names)
+    
+    # Try to initialize the selectbox with the globally selected fund
+    default_index = 0
+    if st.session_state.selected_fund and st.session_state.selected_fund in fund_names:
+        default_index = fund_names.index(st.session_state.selected_fund)
+        
+    def update_selected_fund():
+        st.session_state.selected_fund = st.session_state.fund_selector_ui
+        
+    selected_fund_name = st.selectbox(
+        "Search for a Pension Fund:", 
+        fund_names, 
+        index=default_index,
+        key="fund_selector_ui",
+        on_change=update_selected_fund
+    )
     
     if selected_fund_name:
         fund_data = df_funds[df_funds['name'] == selected_fund_name].iloc[0]
@@ -278,7 +327,7 @@ elif page == "Fund Deep-Dive":
 # ==========================================
 # PAGE 3: ASSET MANAGERS EXPOSURE
 # ==========================================
-elif page == "Asset Managers Exposure":
+elif st.session_state.page == "Asset Managers Exposure":
     st.header("External Asset Managers (Equity Portfolios)")
     st.markdown("Tracking which external investment firms manage the equity portfolios of Dutch pension funds.")
     
@@ -301,7 +350,7 @@ elif page == "Asset Managers Exposure":
 # ==========================================
 # PAGE 4: WTP TRACKER
 # ==========================================
-elif page == "WTP Tracker":
+elif st.session_state.page == "WTP Tracker":
     st.header("WTP Transition Tracker")
     st.markdown("Tracking the planned transition dates to the new pension system (Wet Toekomst Pensioenen).")
     
@@ -335,7 +384,7 @@ elif page == "WTP Tracker":
 # ==========================================
 # PAGE 5: DEKKINGSGRAAD ANALYSIS
 # ==========================================
-elif page == "Dekkingsgraad Analysis":
+elif st.session_state.page == "Dekkingsgraad Analysis":
     st.header("Funding Ratios (Dekkingsgraad)")
     st.markdown("Analysis of the financial health and funding ratios of Dutch pension funds.")
     
@@ -380,7 +429,7 @@ elif page == "Dekkingsgraad Analysis":
 # ==========================================
 # PAGE 6: ESG & SFDR Tracker
 # ==========================================
-elif page == "ESG & SFDR Tracker":
+elif st.session_state.page == "ESG & SFDR Tracker":
     st.header("ESG & SFDR Analysis")
     st.markdown("Analysis of Sustainable Finance Disclosure Regulation (SFDR) Article classifications and EU Taxonomy alignment across the pension sector. This data is extracted via LLM from recently published 2024 annual reports (Phase 22).")
     
