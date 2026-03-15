@@ -29,6 +29,7 @@ def get_all_funds():
     SELECT 
         f.id, f.name, f.category, f.aum_euro_bn, f.dekkingsgraad_pct, 
         f.equity_allocation_pct, f.uitvoerder, f.deelnemers_totaal, f.website,
+        f.deelnemers_actief, f.deelnemers_slapers, f.deelnemers_gepensioneerd,
         e.co2_reduction_goal, e.sfdr_classification
     FROM funds f
     LEFT JOIN fund_esg_metrics e ON f.id = e.fund_id
@@ -176,6 +177,13 @@ elif page == "Fund Deep-Dive":
                                    labels={"value": "Percentage (%)", "year": "Year", "variable": "Metric"},
                                    title="Funding Ratio & Investment Return History")
                 st.plotly_chart(fig_line, use_container_width=True)
+                
+                st.markdown("#### Investment Returns (Last 5 Years)")
+                last_5 = history_df[history_df['beleggingsrendement_pct'].notnull()].tail(5)
+                if not last_5.empty:
+                    last_5 = last_5[['year', 'beleggingsrendement_pct']].rename(columns={'year': 'Year', 'beleggingsrendement_pct': 'Return (%)'})
+                    last_5['Year'] = last_5['Year'].astype(str)
+                    st.dataframe(last_5, hide_index=True)
             else:
                 st.info("No historical metrics available for this fund.")
                 
@@ -188,6 +196,13 @@ elif page == "Fund Deep-Dive":
                 st.info("No recent news articles scraped.")
                 
         with col_side:
+            st.markdown("### Key Metrics")
+            if pd.notnull(fund_data['deelnemers_totaal']):
+                st.markdown(f"**Total Participants:** {fund_data['deelnemers_totaal']:,.0f}")
+                st.markdown(f"- **Active:** {fund_data['deelnemers_actief']:,.0f}" if pd.notnull(fund_data['deelnemers_actief']) else "- **Active:** N/A")
+                st.markdown(f"- **Sleepers:** {fund_data['deelnemers_slapers']:,.0f}" if pd.notnull(fund_data['deelnemers_slapers']) else "- **Sleepers:** N/A")
+                st.markdown(f"- **Retired:** {fund_data['deelnemers_gepensioneerd']:,.0f}" if pd.notnull(fund_data['deelnemers_gepensioneerd']) else "- **Retired:** N/A")
+            
             st.markdown("### Operations & ESG")
             st.markdown(f"**Administrator (Uitvoerder):** {fund_data['uitvoerder'] if pd.notnull(fund_data['uitvoerder']) else 'Unknown'}")
             st.markdown(f"**SFDR Classification:** {fund_data['sfdr_classification'] if pd.notnull(fund_data['sfdr_classification']) else 'Not Specified'}")
