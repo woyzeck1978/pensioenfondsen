@@ -23,7 +23,8 @@ def main():
         "PFZW": "Zorg en Welzijn",
         "PMT": "Metaal & Techniek / PMT",
         "PME": "Metalektro / PME",
-        "bpfBOUW": "BPFBouw"
+        "bpfBOUW": "BPFBouw",
+        "ABN_AMRO": "ABN AMRO"
     }
     
     # Pre-compiled explicit links (2019-2023 generally covers the last 5 years)
@@ -62,6 +63,13 @@ def main():
             ("Jaarverslag 2021", "https://www.bpfbouw.nl/binaries/content/assets/bpfbouw-documenten/over-bpfbouw/jaarverslag-bpfbouw-2021.pdf"),
             ("Jaarverslag 2020", "https://www.bpfbouw.nl/binaries/content/assets/bpfbouw-documenten/over-bpfbouw/jaarverslag-bpfbouw-2020.pdf"),
             ("Jaarverslag 2019", "https://www.bpfbouw.nl/binaries/content/assets/bpfbouw-documenten/over-bpfbouw/bpfbouw_jaarverslag-2019.pdf")
+        ],
+        "ABN_AMRO": [
+            ("Jaarverslag 2023", "https://abnamropensioenfonds.nl/images/abn-amro-pensioenfonds-jaarverslag-2023.pdf"),
+            ("Jaarverslag 2022", "https://abnamropensioenfonds.nl/images/abn-amro-pensioenfonds-jaarverslag-2022.pdf"),
+            ("Jaarverslag 2021", "https://abnamropensioenfonds.nl/images/abn-amro-pensioenfonds-jaarverslag-2021.pdf"),
+            ("Jaarverslag 2020", "https://abnamropensioenfonds.nl/images/abn-amro-pensioenfonds-jaarverslag-2020.pdf"),
+            ("Jaarverslag 2019", "https://abnamropensioenfonds.nl/images/abn-amro-pensioenfonds-jaarverslag-2019.pdf")
         ]
     }
 
