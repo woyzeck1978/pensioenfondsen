@@ -483,6 +483,28 @@ elif st.session_state.page == "Industry News Feed":
     df_news = get_latest_news()
     
     if not df_news.empty:
+        # Proper Chronological Sorting of Dutch Dates
+        months = {
+            'januari': '01', 'februari': '02', 'maart': '03', 'april': '04',
+            'mei': '05', 'juni': '06', 'juli': '07', 'augustus': '08',
+            'september': '09', 'oktober': '10', 'november': '11', 'december': '12'
+        }
+        
+        def parse_dutch_date(d_str):
+            if not isinstance(d_str, str): return pd.NaT
+            d_lower = d_str.lower().strip()
+            for dut, num in months.items():
+                if dut in d_lower:
+                    d_lower = d_lower.replace(dut, f"-{num}-").replace(' ', '')
+                    break
+            try:
+                return pd.to_datetime(d_lower, format="%d-%m-%Y", errors='coerce')
+            except:
+                return pd.NaT
+                
+        df_news['_dt'] = df_news['Date'].apply(parse_dutch_date)
+        df_news = df_news.sort_values(by=['_dt', 'Date'], ascending=[False, False]).drop(columns=['_dt'])
+
         c1, c2 = st.columns([1, 2])
         with c1:
             cat_filter = st.multiselect("Filter by Fund Category:", df_news["Category"].dropna().unique())
