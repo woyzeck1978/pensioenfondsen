@@ -135,7 +135,7 @@ if "page" not in st.session_state:
 if "selected_fund" not in st.session_state:
     st.session_state.selected_fund = None
 
-pages = ["Sector Overview", "Fund Deep-Dive", "Asset Managers Exposure", "WTP Tracker", "Dekkingsgraad Analysis", "ESG & SFDR Tracker", "Industry News Feed"]
+pages = ["Sector Overview", "Fund Deep-Dive", "Asset Managers Exposure", "WTP Tracker", "Dekkingsgraad Analysis", "ESG & SFDR Tracker", "Industry News Feed", "Begrippenlijst"]
 
 # Sidebar Navigation
 st.sidebar.title("Navigation")
@@ -542,16 +542,20 @@ elif st.session_state.page == "Industry News Feed":
     else:
         st.info("No news articles found in the database. Ensure the `scrape_fund_news.py` crawler has run.")
         
-    st.divider()
-    with st.expander("📖 Begrippenlijst (Glossary)"):
-        st.markdown("""
-        **Veelvoorkomende pensioentermen in het nieuws:**
-        * **Indexatie / Toeslagverlening:** Het verhogen van de opgebouwde pensioenen (en vaak ook de pensioenuitkeringen) om ze aan te passen aan de inflatie of loonontwikkeling.
-        * **Dekkingsgraad:** De financiële gezondheid van een pensioenfonds, uitgedrukt in een percentage. Het is de verhouding tussen het beschikbare vermogen en de pensioenverplichtingen (nu en in de toekomst). Ligt het onder 100%, dan is er een tekort.
-        * **Beleidsdekkingsgraad:** Het gemiddelde van de actuele dekkingsgraden van de afgelopen 12 maanden. Deze is stabieler en wordt vaak gebruikt als formele graadmeter voor besluiten over bijvoorbeeld indexatie.
-        * **Wtp (Wet toekomst pensioenen):** De nieuwe pensioenwet die in 2023 is ingegaan. Alle fondsen moeten in 2028 definitief overgestapt zijn op het nieuwe stelsel (premieregeling).
-        * **Invaren:** Het omzetten (omrekenen) van de in het verleden opgebouwde pensioenaanspraken naar persoonlijke pensioenvermogens in het nieuwe Wtp-stelsel.
-        * **Rekenrente:** De rentevoet (door DNB vastgesteld) waarmee pensioenfondsen hun toekomstige verplichtingen contant moeten maken. Een lage rekenrente zorgt voor enorme (papieren) verplichtingen.
-        * **UPO (Uniform Pensioenoverzicht):** Het jaarlijkse overzicht dat iedere werknemer ontvangt met daarin de status van het opgebouwde pensioen.
-        * **Waardeoverdracht:** Het meenemen van je opgebouwde pensioenwaarde als je van werkgever wisselt en daardoor bij een ander pensioenfonds terechtkomt.
-        """)
+# ==========================================
+# PAGE 8: GLOSSARY (BEGRIPPENLIJST)
+# ==========================================
+elif st.session_state.page == "Begrippenlijst":
+    st.header("📖 Begrippenlijst (Glossary)")
+    st.markdown("Een handig overzicht van veelvoorkomende pensioentermen en concepten die in deze database (en in het dagelijkse nieuws) worden gebruikt.")
+    
+    st.markdown("""
+    * **Indexatie / Toeslagverlening:** Het verhogen van de opgebouwde pensioenen (en vaak ook de pensioenuitkeringen) om ze aan te passen aan de inflatie of loonontwikkeling.
+    * **Dekkingsgraad:** De financiële gezondheid van een pensioenfonds, uitgedrukt in een percentage. Het is de verhouding tussen het beschikbare vermogen en de pensioenverplichtingen (nu en in de toekomst). Ligt het onder 100%, dan is er een tekort.
+    * **Beleidsdekkingsgraad:** Het gemiddelde van de actuele dekkingsgraden van de afgelopen 12 maanden. Deze is stabieler en wordt vaak gebruikt als formele graadmeter voor besluiten over bijvoorbeeld indexatie.
+    * **Wtp (Wet toekomst pensioenen):** De nieuwe pensioenwet die in 2023 is ingegaan. Alle fondsen moeten in 2028 definitief overgestapt zijn op het nieuwe stelsel (premieregeling).
+    * **Invaren:** Het omzetten (omrekenen) van de in het verleden opgebouwde pensioenaanspraken naar persoonlijke pensioenvermogens in het nieuwe Wtp-stelsel.
+    * **Rekenrente:** De rentevoet (door DNB vastgesteld) waarmee pensioenfondsen hun toekomstige verplichtingen contant moeten maken. Een lage rekenrente zorgt voor enorme (papieren) verplichtingen.
+    * **UPO (Uniform Pensioenoverzicht):** Het jaarlijkse overzicht dat iedere werknemer ontvangt met daarin de status van het opgebouwde pensioen.
+    * **Waardeoverdracht:** Het meenemen van je opgebouwde pensioenwaarde als je van werkgever wisselt en daardoor bij een ander pensioenfonds terechtkomt.
+    """)
