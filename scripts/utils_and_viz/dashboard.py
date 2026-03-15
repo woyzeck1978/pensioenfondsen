@@ -75,8 +75,23 @@ def get_fund_reports(fund_id):
         WHERE fund_id = {fund_id} 
           AND doc_type = 'document' 
           AND (lower(title) LIKE '%jaarverslag%' OR lower(title) LIKE '%jaarrapport%' OR lower(title) LIKE '%annual report%')
+          AND lower(title) NOT LIKE '%maatschappelijk%'
+          AND lower(title) NOT LIKE '%duurzaam%'
+          AND lower(title) NOT LIKE '%esg%'
     )
     ORDER BY year_extracted DESC NULLS LAST, title DESC
+    LIMIT 5
+    """
+    return load_data(query)
+
+def get_fund_esg_reports(fund_id):
+    query = f"""
+    SELECT title, url
+    FROM scraped_documents
+    WHERE fund_id = {fund_id} 
+      AND doc_type = 'document' 
+      AND (lower(title) LIKE '%duurzaam%' OR lower(title) LIKE '%esg%' OR lower(title) LIKE '%maatschappelijk%' OR lower(title) LIKE '%mvo%')
+    ORDER BY title DESC
     LIMIT 5
     """
     return load_data(query)
@@ -242,6 +257,14 @@ elif page == "Fund Deep-Dive":
                     st.markdown(f"- [{row['title']}]({row['url']})")
             else:
                 st.write("No annual report links found in the database.")
+                
+            st.markdown("### ESG & Sustainability Reports")
+            esg_reports_df = get_fund_esg_reports(fund_id)
+            if not esg_reports_df.empty:
+                for _, row in esg_reports_df.iterrows():
+                    st.markdown(f"- [{row['title']}]({row['url']})")
+            else:
+                st.write("No specific sustainability reports extracted.")
 
 # ==========================================
 # PAGE 3: ASSET MANAGERS EXPOSURE
