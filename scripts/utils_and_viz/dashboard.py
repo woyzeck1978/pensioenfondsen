@@ -37,7 +37,9 @@ def get_all_funds():
 
 def get_metrics_history(fund_id):
     query = f"""
-    SELECT year, beleidsdekkingsgraad_pct, beleggingsrendement_pct
+    SELECT year, economische_dekkingsgraad_pct, nominale_dekkingsgraad_pct, 
+           beleidsdekkingsgraad_pct, reele_dekkingsgraad_pct, 
+           beleggingsrendement_pct, indexatieverlening_pct, cpi_pct
     FROM historical_metrics
     WHERE fund_id = {fund_id}
     ORDER BY year ASC
@@ -177,12 +179,27 @@ elif page == "Fund Deep-Dive":
                                    title="Funding Ratio & Investment Return History")
                 st.plotly_chart(fig_line, use_container_width=True)
                 
-                st.markdown("#### Investment Returns (Last 5 Years)")
-                last_5 = history_df[history_df['beleggingsrendement_pct'].notnull()].tail(5)
-                if not last_5.empty:
-                    last_5 = last_5[['year', 'beleggingsrendement_pct']].rename(columns={'year': 'Year', 'beleggingsrendement_pct': 'Return (%)'})
-                    last_5['Year'] = last_5['Year'].astype(str)
-                    st.dataframe(last_5, hide_index=True)
+                st.markdown("#### Meerjarenoverzicht (Multi-Year Overview)")
+                
+                rename_map = {
+                    'economische_dekkingsgraad_pct': 'Actuele dekkingsgraad',
+                    'nominale_dekkingsgraad_pct': 'Nominale dekkingsgraad',
+                    'beleidsdekkingsgraad_pct': 'Beleidsdekkingsgraad',
+                    'reele_dekkingsgraad_pct': 'Reële dekkingsgraad',
+                    'beleggingsrendement_pct': 'Totaal rendement',
+                    'indexatieverlening_pct': 'Indexatie (toeslag)',
+                    'cpi_pct': 'CPI (Prijsinflatie)'
+                }
+                
+                table_df = history_df.rename(columns=rename_map).set_index('year').T
+                table_df = table_df[sorted(table_df.columns, reverse=True)]
+                
+                for col in table_df.columns:
+                    table_df[col] = table_df[col].apply(lambda x: f"{x:.1f}%" if pd.notnull(x) else "-")
+                    
+                table_df.columns = [str(int(c)) for c in table_df.columns]
+                
+                st.dataframe(table_df, use_container_width=True)
             else:
                 st.info("No historical metrics available for this fund.")
                 
