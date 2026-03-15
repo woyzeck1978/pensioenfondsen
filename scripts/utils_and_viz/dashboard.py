@@ -554,6 +554,9 @@ elif st.session_state.page == "Begrippenlijst":
     * **Dekkingsgraad:** De financiële gezondheid van een pensioenfonds, uitgedrukt in een percentage. Het is de verhouding tussen het beschikbare vermogen en de pensioenverplichtingen (nu en in de toekomst). Ligt het onder 100%, dan is er een tekort.
     * **Beleidsdekkingsgraad:** Het gemiddelde van de actuele dekkingsgraden van de afgelopen 12 maanden. Deze is stabieler en wordt vaak gebruikt als formele graadmeter voor besluiten over bijvoorbeeld indexatie.
     * **Wtp (Wet toekomst pensioenen):** De nieuwe pensioenwet die in 2023 is ingegaan. Alle fondsen moeten in 2028 definitief overgestapt zijn op het nieuwe stelsel (premieregeling).
+    * **Contract types Wtp:** Onder de nieuwe pensioenwet kiezen werkgevers/fondsen grofweg tussen twee nieuwe smaken pensioencontracten:
+        * **1. Solidaire premieregeling (SPR):** Het beleggingsrisico wordt collectief (samen) gedeeld. Er is sprake van een 'solidariteitsreserve' om grote klappen op te vangen en het pensioen zo stabiel mogelijk te houden. Jong en oud beleggen samen.
+        * **2. Flexibele premieregeling (FPR):** Er is een individueler pensioenpotje en deelnemers hebben vaak zelf meer keuze (bijvoorbeeld hoeveel beleggingsrisico ze willen nemen). Er is geen of een minder grote collectieve buffer.
     * **Invaren:** Het omzetten (omrekenen) van de in het verleden opgebouwde pensioenaanspraken naar persoonlijke pensioenvermogens in het nieuwe Wtp-stelsel.
     * **Rekenrente:** De rentevoet (door DNB vastgesteld) waarmee pensioenfondsen hun toekomstige verplichtingen contant moeten maken. Een lage rekenrente zorgt voor enorme (papieren) verplichtingen.
     * **UPO (Uniform Pensioenoverzicht):** Het jaarlijkse overzicht dat iedere werknemer ontvangt met daarin de status van het opgebouwde pensioen.
