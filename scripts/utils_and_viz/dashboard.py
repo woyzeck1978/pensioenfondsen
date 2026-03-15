@@ -191,7 +191,10 @@ elif page == "Fund Deep-Dive":
                     'cpi_pct': 'CPI (Prijsinflatie)'
                 }
                 
-                table_df = history_df.rename(columns=rename_map).set_index('year').T
+                table_df = history_df.rename(columns=rename_map)
+                
+                # Group by year to handle any duplicate database entries for the same year
+                table_df = table_df.groupby('year').last().T
                 table_df = table_df[sorted(table_df.columns, reverse=True)]
                 
                 for col in table_df.columns:
