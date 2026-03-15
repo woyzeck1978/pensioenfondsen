@@ -43,6 +43,22 @@ def get_all_funds():
     """
     return load_data(query)
 
+@st.cache_data(ttl=3600)
+def get_latest_news():
+    query = """
+    SELECT 
+        n.published_date as "Date", 
+        f.name as "Pension Fund", 
+        n.title as "Headline", 
+        n.url, 
+        f.category as "Category"
+    FROM news_articles n
+    JOIN funds f ON n.fund_id = f.id
+    ORDER BY n.published_date DESC
+    LIMIT 300
+    """
+    return load_data(query)
+
 def get_metrics_history(fund_id):
     query = f"""
     SELECT year, economische_dekkingsgraad_pct, nominale_dekkingsgraad_pct, 
@@ -118,7 +134,7 @@ if "page" not in st.session_state:
 if "selected_fund" not in st.session_state:
     st.session_state.selected_fund = None
 
-pages = ["Sector Overview", "Fund Deep-Dive", "Asset Managers Exposure", "WTP Tracker", "Dekkingsgraad Analysis", "ESG & SFDR Tracker"]
+pages = ["Sector Overview", "Fund Deep-Dive", "Asset Managers Exposure", "WTP Tracker", "Dekkingsgraad Analysis", "ESG & SFDR Tracker", "Industry News Feed"]
 
 # Sidebar Navigation
 st.sidebar.title("Navigation")
@@ -456,3 +472,39 @@ elif st.session_state.page == "ESG & SFDR Tracker":
         st.dataframe(sfdr_df[['name', 'category', 'aum_euro_bn', 'sfdr_article', 'eu_taxonomy_pct']].sort_values(by='eu_taxonomy_pct', ascending=False), use_container_width=True)
     else:
         st.info("No SFDR data has been extracted yet. The background LLM processing job is currently running.")
+
+# ==========================================
+# PAGE 7: INDUSTRY NEWS FEED
+# ==========================================
+elif st.session_state.page == "Industry News Feed":
+    st.header("Industry News Feed")
+    st.markdown("Latest news headlines scraped directly from the official websites of Dutch pension funds. Use the filters below to find specific announcements like indexations, premiums, or sustainability changes.")
+    
+    df_news = get_latest_news()
+    
+    if not df_news.empty:
+        c1, c2 = st.columns([1, 2])
+        with c1:
+            cat_filter = st.multiselect("Filter by Fund Category:", df_news["Category"].dropna().unique())
+        with c2:
+            search_query = st.text_input("Search Headlines (e.g., 'indexatie', 'premie'):")
+            
+        filtered_news = df_news.copy()
+        if cat_filter:
+            filtered_news = filtered_news[filtered_news["Category"].isin(cat_filter)]
+        if search_query:
+            filtered_news = filtered_news[filtered_news["Headline"].str.contains(search_query, case=False, na=False)]
+            
+        st.dataframe(
+            filtered_news,
+            use_container_width=True,
+            column_config={
+                "url": st.column_config.LinkColumn("Read Original", display_text="Open Link \u2192"),
+                "Date": st.column_config.TextColumn("Date"),
+                "Pension Fund": st.column_config.TextColumn("Fund"),
+                "Headline": st.column_config.TextColumn("Headline"),
+            },
+            hide_index=True
+        )
+    else:
+        st.info("No news articles found in the database. Ensure the `scrape_fund_news.py` crawler has run.")
