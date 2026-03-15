@@ -177,6 +177,7 @@ elif page == "Fund Deep-Dive":
                 fig_line = px.line(history_df, x="year", y=["beleidsdekkingsgraad_pct", "beleggingsrendement_pct"], 
                                    labels={"value": "Percentage (%)", "year": "Year", "variable": "Metric"},
                                    title="Funding Ratio & Investment Return History")
+                fig_line.update_xaxes(dtick=1, tickformat="d")
                 st.plotly_chart(fig_line, use_container_width=True)
                 
                 st.markdown("#### Meerjarenoverzicht (Multi-Year Overview)")
@@ -202,7 +203,9 @@ elif page == "Fund Deep-Dive":
                     
                 table_df.columns = [str(int(c)) for c in table_df.columns]
                 
-                st.dataframe(table_df, use_container_width=True)
+                styled_table = table_df.style.set_properties(subset=table_df.columns, **{'text-align': 'center'})
+                
+                st.dataframe(styled_table, use_container_width=True)
             else:
                 st.info("No historical metrics available for this fund.")
                 
