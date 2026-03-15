@@ -90,6 +90,6 @@ def export_to_excel(db_path, excel_path):
     print(f"Successfully exported {len(tables)} tables to {excel_path} with clickable hyperlinks.")
 
 if __name__ == "__main__":
-    db = '../../data/processed/pension_funds.db'
-    out = '../../data/processed/pension_funds.xlsx'
+    db = "data/processed/pension_funds.db"
+    out = "data/processed/pension_funds.xlsx"
     export_to_excel(db, out)
