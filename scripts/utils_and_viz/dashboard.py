@@ -61,6 +61,24 @@ def get_fund_news(fund_id):
     """
     return load_data(query)
 
+def get_fund_reports(fund_id):
+    query = f"""
+    SELECT year_extracted, title, url
+    FROM (
+        SELECT 
+            title, 
+            url,
+            CAST(SUBSTR(title, -4) AS INTEGER) as year_extracted
+        FROM scraped_documents
+        WHERE fund_id = {fund_id} 
+          AND doc_type = 'document' 
+          AND (lower(title) LIKE '%jaarverslag%' OR lower(title) LIKE '%jaarrapport%' OR lower(title) LIKE '%annual report%')
+    )
+    ORDER BY year_extracted DESC NULLS LAST, title DESC
+    LIMIT 5
+    """
+    return load_data(query)
+
 # --- MAIN APP LAYOUT ---
 st.title("🇳🇱 Dutch Pension Funds Dashboard")
 st.markdown("Interactive exploration of the Dutch pension sector (AUM, Allocations, ESG, and WTP Transitions).")
@@ -180,8 +198,13 @@ elif page == "Fund Deep-Dive":
             if not managers_df.empty:
                 for mgr in managers_df['manager'].tolist():
                     st.markdown(f"- {mgr}")
+            st.markdown("### Historical Annual Reports")
+            reports_df = get_fund_reports(fund_id)
+            if not reports_df.empty:
+                for _, row in reports_df.iterrows():
+                    st.markdown(f"- [{row['title']}]({row['url']})")
             else:
-                st.write("No external managers extracted yet.")
+                st.write("No annual report links found in the database.")
 
 # ==========================================
 # PAGE 3: ASSET MANAGERS EXPOSURE
