@@ -4,6 +4,7 @@ import pandas as pd
 import plotly.express as px
 import os
 import urllib.parse
+import re
 
 # --- PAGE CONFIGURATION ---
 st.set_page_config(
@@ -491,14 +492,24 @@ elif st.session_state.page == "Industry News Feed":
         }
         
         def parse_dutch_date(d_str):
-            if not isinstance(d_str, str): return pd.NaT
+            if not isinstance(d_str, str) or not d_str: return pd.NaT
             d_lower = d_str.lower().strip()
+            
+            # If it looks like a clean ISO fallback string (YYYY-MM-DD)
+            if '-' in d_lower and len(d_lower) == 10 and d_lower.startswith('202'):
+                try:
+                    return pd.to_datetime(d_lower, errors='coerce')
+                except:
+                    pass
+            
             for dut, num in months.items():
                 if dut in d_lower:
                     d_lower = d_lower.replace(dut, f"-{num}-").replace(' ', '')
                     break
+                    
             try:
-                return pd.to_datetime(d_lower, format="%d-%m-%Y", errors='coerce')
+                d_clean = re.sub(r'[^\d\-]', '', d_lower)  # Strip loose text
+                return pd.to_datetime(d_clean, dayfirst=True, errors='coerce')
             except:
                 return pd.NaT
                 
