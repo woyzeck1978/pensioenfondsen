@@ -16,7 +16,6 @@ st.set_page_config(
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DB_PATH = os.path.join(BASE_DIR, "data", "processed", "pension_funds.db")
 
-@st.cache_data
 def load_data(query):
     conn = sqlite3.connect(DB_PATH)
     df = pd.read_sql_query(query, conn)
