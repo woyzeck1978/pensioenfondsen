@@ -29,6 +29,7 @@ def get_all_funds():
         f.id, f.name, f.category, f.aum_euro_bn, f.dekkingsgraad_pct, 
         f.equity_allocation_pct, f.uitvoerder, f.deelnemers_totaal, f.website,
         f.deelnemers_actief, f.deelnemers_slapers, f.deelnemers_gepensioneerd,
+        f.sfdr_article, f.eu_taxonomy_pct,
         e.co2_reduction_goal, e.sfdr_classification
     FROM funds f
     LEFT JOIN fund_esg_metrics e ON f.id = e.fund_id
@@ -105,7 +106,7 @@ df_funds = get_all_funds()
 
 # Sidebar Navigation
 st.sidebar.title("Navigation")
-page = st.sidebar.radio("Go to", ["Sector Overview", "Fund Deep-Dive", "Asset Managers Exposure", "WTP Tracker", "Dekkingsgraad Analysis"])
+page = st.sidebar.radio("Go to", ["Sector Overview", "Fund Deep-Dive", "Asset Managers Exposure", "WTP Tracker", "Dekkingsgraad Analysis", "ESG & SFDR Tracker"])
 
 st.sidebar.markdown("---")
 st.sidebar.info(f"**Database Stats:**\\nTracking **{len(df_funds)}** Pension Funds.\\nTotal AUM: **€{df_funds['aum_euro_bn'].sum():,.1f} Billion**")
@@ -242,7 +243,15 @@ elif page == "Fund Deep-Dive":
             
             st.markdown("### Operations & ESG")
             st.markdown(f"**Administrator (Uitvoerder):** {fund_data['uitvoerder'] if pd.notnull(fund_data['uitvoerder']) else 'Unknown'}")
-            st.markdown(f"**SFDR Classification:** {fund_data['sfdr_classification'] if pd.notnull(fund_data['sfdr_classification']) else 'Not Specified'}")
+            
+            # Show extracted SFDR metrics if available
+            article = str(int(fund_data['sfdr_article'])) if pd.notnull(fund_data['sfdr_article']) else "Not extracted"
+            tax_pct = f"{fund_data['eu_taxonomy_pct']}%" if pd.notnull(fund_data['eu_taxonomy_pct']) else "Not extracted"
+            
+            st.markdown(f"**Extracted SFDR Article (2024):** {article}")
+            st.markdown(f"**Extracted EU Taxonomy %:** {tax_pct}")
+            
+            st.markdown(f"**Reported SFDR Classification:** {fund_data['sfdr_classification'] if pd.notnull(fund_data['sfdr_classification']) else 'Not Specified'}")
             st.markdown(f"**CO2 Goal:** {fund_data['co2_reduction_goal'] if pd.notnull(fund_data['co2_reduction_goal']) else 'Not Specified'}")
             
             st.markdown("### Equity Portfolio Managers")
@@ -365,5 +374,36 @@ elif page == "Dekkingsgraad Analysis":
         fig_cat.update_layout(xaxis_title="Category", yaxis_title="Average Funding Ratio (%)")
         st.plotly_chart(fig_cat, use_container_width=True)
         
-    st.subheader("Complete Dekkingsgraad Table")
-    st.dataframe(valid_df[['name', 'category', 'aum_euro_bn', 'dekkingsgraad_pct']].reset_index(drop=True), use_container_width=True)
+        st.subheader("Complete Dekkingsgraad Table")
+        st.dataframe(valid_df[['name', 'category', 'aum_euro_bn', 'dekkingsgraad_pct']].reset_index(drop=True), use_container_width=True)
+
+# ==========================================
+# PAGE 6: ESG & SFDR Tracker
+# ==========================================
+elif page == "ESG & SFDR Tracker":
+    st.header("ESG & SFDR Analysis")
+    st.markdown("Analysis of Sustainable Finance Disclosure Regulation (SFDR) Article classifications and EU Taxonomy alignment across the pension sector. This data is extracted via LLM from recently published 2024 annual reports (Phase 22).")
+    
+    sfdr_df = df_funds.dropna(subset=['sfdr_article']).copy()
+    
+    if not sfdr_df.empty:
+        c1, c2 = st.columns(2)
+        with c1:
+            article_counts = sfdr_df['sfdr_article'].value_counts().reset_index()
+            article_counts.columns = ['SFDR Article', 'Fund Count']
+            article_counts['SFDR Article'] = 'Article ' + article_counts['SFDR Article'].astype(int).astype(str)
+            fig_pie = px.pie(article_counts, names='SFDR Article', values='Fund Count', title="SFDR Classifications (2024 Extract)")
+            st.plotly_chart(fig_pie, use_container_width=True)
+            
+        with c2:
+            tax_df = sfdr_df.dropna(subset=['eu_taxonomy_pct']).copy()
+            if not tax_df.empty:
+                fig_hist = px.histogram(tax_df, x="eu_taxonomy_pct", nbins=20, title="EU Taxonomy Alignment (%) Distribution", color="category")
+                st.plotly_chart(fig_hist, use_container_width=True)
+            else:
+                st.info("No EU Taxonomy percentages extracted yet.")
+                
+        st.subheader("Extracted Regulatory Data")
+        st.dataframe(sfdr_df[['name', 'category', 'aum_euro_bn', 'sfdr_article', 'eu_taxonomy_pct']].sort_values(by='eu_taxonomy_pct', ascending=False), use_container_width=True)
+    else:
+        st.info("No SFDR data has been extracted yet. The background LLM processing job is currently running.")

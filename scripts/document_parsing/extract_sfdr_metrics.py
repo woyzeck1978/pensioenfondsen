@@ -3,7 +3,9 @@ import sqlite3
 import pandas as pd
 import pdfplumber
 import fitz  # PyMuPDF
-import google.generativeai as genai
+from google import genai
+from google.genai import types
+import google.auth
 import json
 import time
 
@@ -13,7 +15,12 @@ DB_PATH = os.path.join(BASE_DIR, "data", "processed", "pension_funds.db")
 PDF_DIR = os.path.join(BASE_DIR, "data", "historical_reports")
 MODEL_NAME = 'gemini-2.5-flash'  # Use flash for speed as task is relatively straightforward
 
-genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
+from dotenv import load_dotenv
+load_dotenv(os.path.join(BASE_DIR, "scripts", ".env"))
+
+# Use Vertex AI backend with Google Cloud Default Application Credentials
+credentials, project = google.auth.default()
+client = genai.Client(vertexai=True, project=project, location='us-central1')
 
 def setup_database():
     conn = sqlite3.connect(DB_PATH)
@@ -111,9 +118,14 @@ def process_sfdr_with_llm(context_text, fund_name):
     }}
     """
     
-    model = genai.GenerativeModel(MODEL_NAME)
     try:
-        response = model.generate_content(prompt)
+        response = client.models.generate_content(
+            model=MODEL_NAME,
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                temperature=0.0
+            )
+        )
         result_text = response.text.strip()
         if result_text.startswith('```json'):
             result_text = result_text.replace('```json\n', '').replace('\n```', '')
@@ -136,7 +148,7 @@ def main():
     JOIN scraped_documents s ON f.id = s.fund_id
     WHERE f.status = 'Open' 
       AND s.doc_type = 'document'
-      AND s.year_extracted = 2024
+      AND s.title LIKE '%2024%'
       AND f.sfdr_article IS NULL
     """
     funds_to_process = pd.read_sql_query(query, conn)
@@ -152,13 +164,31 @@ def main():
         
         # Determine local filename convention as saved by scrape_historical_annual_reports.py
         import re
+        import requests
         clean_name = re.sub(r'[^a-zA-Z0-9\s]', '', fund_name).strip()
         filename = f"{fund_id}_{clean_name}_2024.pdf"
         filepath = os.path.join(PDF_DIR, filename)
         
+        url = row['url']
+        
         if not os.path.exists(filepath):
-            print(f"  -> Local PDF not found at {filepath}")
-            continue
+            print(f"  -> Local PDF not found at {filepath}, attempting to download from {url} ...")
+            try:
+                # Add headers to avoid 403 Forbidden errors
+                headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'}
+                # Try downloading the PDF
+                resp = requests.get(url, headers=headers, stream=True, timeout=10, verify=False)
+                if resp.status_code == 200 and 'pdf' in resp.headers.get('Content-Type', '').lower() or url.endswith('.pdf'):
+                    with open(filepath, 'wb') as f:
+                        for chunk in resp.iter_content(chunk_size=8192):
+                            f.write(chunk)
+                    print(f"  -> Downloaded 2024 PDF successfully.")
+                else:
+                    print(f"  -> Download failed (Status {resp.status_code}) or URL is not a direct PDF.")
+                    continue
+            except Exception as e:
+                print(f"  -> Failed to download PDF: {e}")
+                continue
             
         print("  -> Extracting SFDR context from PDF annexes...")
         context = extract_sfdr_context(filepath)
