@@ -26,8 +26,8 @@ There are currently **58** active funds missing either AUM or Equity Allocation 
 | 169 | Kring DB-A (De Nationale) | 0.56 | NaN | https://www.denationaleapf.nl/ |
 | 170 | Kring Douwe Egberts (Stap) | NaN | NaN | https://www.stappensioen.nl/hoeveel-pensioen-krijg-ik |
 | 171 | Kring Eastman (Stap) | NaN | NaN | https://www.stappensioen.nl/ |
-| 172 | Kring Forward (Unilever) | NaN | NaN | https://www.unileverpensioenfonds.nl/ |
-| 174 | Kring Progress (Unilever) | NaN | NaN | https://www.unileverpensioenfonds.nl/progress/klachten/ |
+| 172 | Kring Forward (Unilever) | 0.68 | NaN | https://www.unileverpensioenfonds.nl/ |
+| 174 | Kring Progress (Unilever) | 0.68 | NaN | https://www.unileverpensioenfonds.nl/progress/klachten/ |
 | 175 | Kring Roba (Hnp) | NaN | NaN | https://mijnpensioenkringroba.hnpf.nl/ |
 | 176 | Kring SVG (Stap) | NaN | NaN | https://www.stappensioen.nl/financiele-situatie |
 | 177 | Kring TotalEnergies NL (Stap) | NaN | NaN | https://www.pensioenfondsstaples.nl/mijn-pensioenslotje |
