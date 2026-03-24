@@ -138,7 +138,7 @@ if "page" not in st.session_state:
 if "selected_fund" not in st.session_state:
     st.session_state.selected_fund = None
 
-pages = ["Sector Overview", "Fund Deep-Dive", "Asset Managers Exposure", "WTP Tracker", "Dekkingsgraad Analysis", "ESG & SFDR Tracker", "Industry News Feed", "Begrippenlijst"]
+pages = ["Sector Overview", "Fund Deep-Dive", "Equity Strategy Deep-Dive", "Asset Managers Exposure", "WTP Tracker", "Dekkingsgraad Analysis", "ESG & SFDR Tracker", "Industry News Feed", "Begrippenlijst"]
 
 # Sidebar Navigation
 st.sidebar.title("Navigation")
@@ -374,6 +374,60 @@ elif st.session_state.page == "Fund Deep-Dive":
                 
             if 'investment_beliefs' in fund_data and pd.notnull(fund_data['investment_beliefs']) and fund_data['investment_beliefs'] != "":
                 st.markdown(f"#### Investment Beliefs\n> {fund_data['investment_beliefs']}")
+
+# ==========================================
+# PAGE 2B: EQUITY STRATEGY DEEP-DIVE
+# ==========================================
+elif st.session_state.page == "Equity Strategy Deep-Dive":
+    st.header("📈 Equity Strategy Deep-Dive")
+    st.markdown("Detailed breakdown of a pension fund's equity allocation and external managers.")
+    
+    fund_names = df_funds['name'].dropna().sort_values().unique().tolist()
+    default_index = fund_names.index(st.session_state.selected_fund) if st.session_state.selected_fund in fund_names else 0
+    
+    def update_eq_fund():
+        st.session_state.selected_fund = st.session_state.eq_fund_selector_ui
+        
+    selected_fund_name = st.selectbox(
+        "Select a Pension Fund:", 
+        fund_names, 
+        index=default_index,
+        key="eq_fund_selector_ui",
+        on_change=update_eq_fund
+    )
+    
+    if selected_fund_name:
+        fund_data = df_funds[df_funds['name'] == selected_fund_name].iloc[0]
+        fund_id = fund_data['id']
+        
+        st.subheader(f"{fund_data['name']} - Equity Profile")
+        
+        col1, col2, col3 = st.columns(3)
+        col1.metric("Total AUM", f"€{fund_data['aum_euro_bn']} Bn" if pd.notnull(fund_data['aum_euro_bn']) else "N/A")
+        col2.metric("Equity Allocation", f"{fund_data['equity_allocation_pct']}%" if pd.notnull(fund_data['equity_allocation_pct']) else "N/A")
+        
+        # Calculate Sector Average Equity Allocation
+        sector_avg = df_funds['equity_allocation_pct'].mean()
+        col3.metric("Sector Average (Equity)", f"{sector_avg:.1f}%" if pd.notnull(sector_avg) else "N/A")
+        
+        st.divider()
+        
+        col_main, col_side = st.columns([2, 1])
+        with col_main:
+            st.markdown("### Equity Strategy Notes")
+            notes = fund_data.get('equity_strategy_notes', None)
+            if pd.notnull(notes) and notes != "":
+                st.info(notes)
+            else:
+                st.write("No specific equity strategy notes listed for this fund.")
+                
+        with col_side:
+            st.markdown("### External Equity Managers")
+            managers_df = get_fund_managers(fund_id)
+            if not managers_df.empty:
+                st.dataframe(managers_df.rename(columns={'manager': 'Manager Name'}), use_container_width=True, hide_index=True)
+            else:
+                st.write("No external equity managers found in database.")
 
 # ==========================================
 # PAGE 3: ASSET MANAGERS EXPOSURE
