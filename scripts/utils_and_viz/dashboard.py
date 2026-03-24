@@ -579,4 +579,6 @@ elif st.session_state.page == "Begrippenlijst":
     * **Waardeoverdracht:** Het meenemen van je opgebouwde pensioenwaarde als je van werkgever wisselt en daardoor bij een ander pensioenfonds terechtkomt.
     * **OFP (Organisme voor de Financiering van Pensioenen):** Een Belgisch pensioenvehikel, vaak gebruikt door multinationals voor grensoverschrijdende pensioenuitvoering vanwege flexibele wetgeving. Het valt onder de Belgische toezichthouder (FSMA) in plaats van DNB.
     * **PPI (Premiepensioeninstelling):** Een pensioeninstelling die beschikbare premieregelingen uitvoert maar zélf geen risico's mag dragen (zoals langleven- of arbeidsongeschiktheidsrisico). Bij een PPI bouwt elke deelnemer een eigen pensioenkapitaal op via beleggingen.
+    * **CPC (Certified Pension Consultant):** Een academisch opgeleide en gecertificeerde pensioenadviseur. Dit is een wettelijk beschermde titel in Nederland voor specialisten die werkgevers, ondernemingsraden en fondsen adviseren over complexe pensioenvraagstukken en pensioenrecht.
+    * **CDC (Collective Defined Contribution):** Een collectieve premieregeling waarbij de werkgever een vaste premie betaalt en het beleggings- en renterisico volledig bij het collectief van de werknemers ligt (bijv. ING CDC, NN CDC).
     """)
