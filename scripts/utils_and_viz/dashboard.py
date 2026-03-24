@@ -387,9 +387,9 @@ elif st.session_state.page == "Equity Strategy Deep-Dive":
         f.name as "Pension Fund", 
         f.aum_euro_bn as "AUM (€ Bn)", 
         f.equity_allocation_pct as "Equity %", 
-        f.vermogensbeheerkosten_pct as "Beheerkosten %",
-        f.transactiekosten_pct as "Transactie %",
-        f.performance_fee_miljoenen as "Perf. Fee (€ Mln)",
+        f.equity_beheerkosten_pct as "Aandelen Beheerkosten %",
+        f.equity_transactiekosten_pct as "Aandelen Transactie %",
+        f.equity_performance_fee_mln as "Aandelen Perf. Fee (€ Mln)",
         f.equity_strategy_notes as "Strategy Notes",
         GROUP_CONCAT(e.fund_name, ', ') as "External Managers"
     FROM funds f
