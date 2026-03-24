@@ -215,10 +215,10 @@ if st.session_state.page == "Sector Overview":
 # ==========================================
 elif st.session_state.page == "Fund Deep-Dive":
     st.header("Fund Profile Deep-Dive")
-    st.markdown("Explore detailed metrics, historical performance, and recent news for major Dutch pension funds (AUM > €500 Million).")
+    st.markdown("Explore detailed metrics, historical performance, and recent news for Dutch pension funds.")
     
-    # Fund Selector (Filtered to > 0.5 Billion AUM and Exclude APG as it is an asset manager)
-    deep_dive_funds = df_funds[(df_funds['aum_euro_bn'] > 0.5) & (~df_funds['name'].isin(['APG', 'ASR', 'ASR PPI', 'Allianz', 'Allianz PPI', 'A.S. Watson Nederland']))]
+    # Fund Selector (Exclude APG as it is an asset manager)
+    deep_dive_funds = df_funds[~df_funds['name'].isin(['APG', 'ASR', 'ASR PPI', 'Allianz', 'Allianz PPI', 'A.S. Watson Nederland'])]
     fund_names = deep_dive_funds['name'].sort_values().tolist()
     
     # Try to initialize the selectbox with the globally selected fund
