@@ -395,22 +395,43 @@ elif st.session_state.page == "WTP Tracker":
     wtp_df = load_data(query)
     
     if not wtp_df.empty:
-        c1, c2 = st.columns(2)
+        # Helper to determine if a transition date is in the past (before March 2026)
+        def is_past(d_str):
+            if not isinstance(d_str, str) or not d_str: return False
+            d = d_str.lower()
+            if any(y in d for y in ['2023', '2024', '2025']): return True
+            if any(m in d for m in ['jan-26', 'januari 2026', '2026-01']): return True
+            return False
+            
+        wtp_df['is_past'] = wtp_df['wtp_transitie_datum'].apply(is_past)
+        past_df = wtp_df[wtp_df['is_past']].drop(columns=['is_past'])
+        future_df = wtp_df[~wtp_df['is_past']].drop(columns=['is_past'])
         
+        c1, c2 = st.columns(2)
         with c1:
-            timeline_counts = wtp_df['wtp_transitie_datum'].value_counts().reset_index()
+            timeline_counts = future_df['wtp_transitie_datum'].value_counts().reset_index()
             timeline_counts.columns = ['Transition Date', 'Number of Funds']
             timeline_counts = timeline_counts.sort_values('Transition Date')
-            fig_bar = px.bar(timeline_counts, x='Transition Date', y='Number of Funds', title="Funds Transitioning per Date")
+            fig_bar = px.bar(timeline_counts, x='Transition Date', y='Number of Funds', title="Planned Transitions per Date")
             st.plotly_chart(fig_bar, use_container_width=True)
             
         with c2:
             contract_counts = wtp_df['wtp_contract_type'].value_counts().reset_index()
             contract_counts.columns = ['Contract Type', 'Count']
-            fig_pie = px.pie(contract_counts, names='Contract Type', values='Count', title="Planned Contract Types (SPR vs FPR)")
+            fig_pie = px.pie(contract_counts, names='Contract Type', values='Count', title="All Contract Types (SPR vs FPR)")
             st.plotly_chart(fig_pie, use_container_width=True)
             
-        st.dataframe(wtp_df, use_container_width=True)
+        st.subheader("🚀 Reeds Ingevaren (Transitie Voltooid)")
+        if not past_df.empty:
+            st.dataframe(past_df.sort_values('wtp_transitie_datum'), use_container_width=True, hide_index=True)
+        else:
+            st.info("Nog geen fondsen geregistreerd als ingevaren.")
+            
+        st.subheader("📅 Geplande Transities (Toekomst)")
+        if not future_df.empty:
+            st.dataframe(future_df.sort_values('wtp_transitie_datum'), use_container_width=True, hide_index=True)
+        else:
+            st.info("Alle fondsen zijn ingevaren.")
     else:
         st.info("No WTP transition data available in the database yet.")
 
@@ -473,7 +494,7 @@ elif st.session_state.page == "ESG & SFDR Tracker":
         with c1:
             article_counts = sfdr_df['sfdr_article'].value_counts().reset_index()
             article_counts.columns = ['SFDR Article', 'Fund Count']
-            article_counts['SFDR Article'] = 'Article ' + article_counts['SFDR Article'].astype(int).astype(str)
+            article_counts['SFDR Article'] = 'Article ' + article_counts['SFDR Article'].astype(str).str.extract(r'(\d+)', expand=False)
             fig_pie = px.pie(article_counts, names='SFDR Article', values='Fund Count', title="SFDR Classifications (2024 Extract)")
             st.plotly_chart(fig_pie, use_container_width=True)
             
