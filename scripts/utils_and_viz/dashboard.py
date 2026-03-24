@@ -34,7 +34,9 @@ def load_data(query):
 def get_all_funds():
     query = """
     SELECT 
-        f.id, f.name, f.category, f.aum_euro_bn, f.dekkingsgraad_pct, 
+        f.id, f.name, f.category, f.aum_euro_bn, 
+        COALESCE(f.maanddekkingsgraad_pct, f.dekkingsgraad_pct) AS dekkingsgraad_pct, 
+        f.beleidsdekkingsgraad_pct,
         f.equity_allocation_pct, f.uitvoerder, f.deelnemers_totaal, f.website,
         f.deelnemers_actief, f.deelnemers_slapers, f.deelnemers_gepensioneerd,
         f.sfdr_article, f.eu_taxonomy_pct, f.investment_beliefs,
@@ -158,7 +160,7 @@ if st.session_state.page == "Sector Overview":
     valid_ratio = df_funds.dropna(subset=['dekkingsgraad_pct'])
     
     col1.metric("Total AUM Tracked", f"€{valid_aum['aum_euro_bn'].sum():,.1f} Bn")
-    col2.metric("Average Funding Ratio", f"{valid_ratio['dekkingsgraad_pct'].mean():.1f}%")
+    col2.metric("Gemiddelde Dekkingsgraad (Site)", f"{valid_ratio['dekkingsgraad_pct'].mean():.1f}%")
     col3.metric("Largest Fund", valid_aum.loc[valid_aum['aum_euro_bn'].idxmax()]['name'])
     col4.metric("Funds Tracked", len(df_funds))
     
@@ -174,9 +176,9 @@ if st.session_state.page == "Sector Overview":
             df_funds.dropna(subset=['aum_euro_bn', 'dekkingsgraad_pct']), 
             x="dekkingsgraad_pct", y="aum_euro_bn", 
             color="category", hover_name="name",
-            labels={"dekkingsgraad_pct": "Funding Ratio (%)", "aum_euro_bn": "AUM (Billion €)"},
+            labels={"dekkingsgraad_pct": "Actuele Dekkingsgraad (Site %)", "aum_euro_bn": "AUM (Billion €)"},
             log_y=True, # Log scale because ABP/PFZW skew the Y axis massively
-            title="Log(AUM) vs Funding Ratio"
+            title="Log(AUM) vs Actuele Dekkingsgraad (Site)"
         )
         st.plotly_chart(fig_scatter, use_container_width=True)
         
@@ -253,7 +255,7 @@ elif st.session_state.page == "Fund Deep-Dive":
         # Top KPIs
         kpi1, kpi2, kpi3, kpi4 = st.columns(4)
         kpi1.metric("AUM", f"€{fund_data['aum_euro_bn']} Bn" if pd.notnull(fund_data['aum_euro_bn']) else "N/A")
-        kpi2.metric("Funding Ratio", f"{fund_data['dekkingsgraad_pct']}%" if pd.notnull(fund_data['dekkingsgraad_pct']) else "N/A")
+        kpi2.metric("Actuele Dekkingsgraad (Site)", f"{fund_data['dekkingsgraad_pct']}%" if pd.notnull(fund_data['dekkingsgraad_pct']) else "N/A")
         kpi3.metric("Equity Allocation", f"{fund_data['equity_allocation_pct']}%" if pd.notnull(fund_data['equity_allocation_pct']) else "N/A")
         kpi4.metric("Participants", f"{fund_data['deelnemers_totaal']:,.0f}" if pd.notnull(fund_data['deelnemers_totaal']) else "N/A")
         
@@ -271,12 +273,12 @@ elif st.session_state.page == "Fund Deep-Dive":
                         history_df[col] = pd.to_numeric(history_df[col], errors='coerce')
                         
                 fig_line = px.line(history_df, x="year", y=["beleidsdekkingsgraad_pct", "beleggingsrendement_pct"], 
-                                   labels={"value": "Percentage (%)", "year": "Year", "variable": "Metric"},
-                                   title="Funding Ratio & Investment Return History")
+                                   labels={"value": "Percentage (%)", "year": "Jaarverslag", "variable": "Metric"},
+                                   title="Meerjarenoverzicht: Dekkingsgraad & Rendement (Jaarrapportages)")
                 fig_line.update_xaxes(dtick=1, tickformat="d")
                 st.plotly_chart(fig_line, use_container_width=True)
                 
-                st.markdown("#### Meerjarenoverzicht (Multi-Year Overview)")
+                st.markdown("#### Meerjarenoverzicht (Jaarrapportages)")
                 
                 rename_map = {
                     'economische_dekkingsgraad_pct': 'Actuele dekkingsgraad',
