@@ -412,6 +412,28 @@ elif st.session_state.page == "WTP Tracker":
     wtp_df = load_data(query)
     
     if not wtp_df.empty:
+        # Helper to convert Dutch string dates to sortable format YYYY-MM-DD
+        def to_sortable_date(d_str):
+            if not isinstance(d_str, str) or not d_str: 
+                return "2099-12-31"  # Default to far future for empty values
+            d = d_str.lower().strip()
+            month_map = {
+                'jan': '01', 'feb': '02', 'mrt': '03', 'apr': '04', 'mei': '05', 'jun': '06',
+                'jul': '07', 'aug': '08', 'sep': '09', 'okt': '10', 'nov': '11', 'dec': '12'
+            }
+            parts = d.split('-')
+            if len(parts) >= 3:
+                day = parts[0].zfill(2)
+                month = month_map.get(parts[1][:3], '01')
+                year = "20" + parts[2] if len(parts[2]) == 2 else parts[2]
+                return f"{year}-{month}-{day}"
+            elif "20" in d: # e.g., "januari 2026"
+                words = d.split()
+                if len(words) == 2:
+                    month = month_map.get(words[0][:3], '01')
+                    return f"{words[1]}-{month}-01"
+            return d_str
+
         # Helper to determine if a transition date is in the past (before March 2026)
         def is_past(d_str):
             if not isinstance(d_str, str) or not d_str: return False
@@ -420,7 +442,9 @@ elif st.session_state.page == "WTP Tracker":
             if any(m in d for m in ['jan-26', 'januari 2026', '2026-01']): return True
             return False
             
+        wtp_df['sort_date'] = wtp_df['wtp_transitie_datum'].apply(to_sortable_date)
         wtp_df['is_past'] = wtp_df['wtp_transitie_datum'].apply(is_past)
+        
         past_df = wtp_df[wtp_df['is_past']].drop(columns=['is_past'])
         future_df = wtp_df[~wtp_df['is_past']].drop(columns=['is_past'])
         
@@ -428,7 +452,8 @@ elif st.session_state.page == "WTP Tracker":
         with c1:
             timeline_counts = future_df['wtp_transitie_datum'].value_counts().reset_index()
             timeline_counts.columns = ['Transition Date', 'Number of Funds']
-            timeline_counts = timeline_counts.sort_values('Transition Date')
+            timeline_counts['Sort Key'] = timeline_counts['Transition Date'].apply(to_sortable_date)
+            timeline_counts = timeline_counts.sort_values('Sort Key').drop(columns=['Sort Key'])
             fig_bar = px.bar(timeline_counts, x='Transition Date', y='Number of Funds', title="Planned Transitions per Date")
             st.plotly_chart(fig_bar, use_container_width=True)
             
@@ -440,13 +465,15 @@ elif st.session_state.page == "WTP Tracker":
             
         st.subheader("🚀 Reeds Ingevaren (Transitie Voltooid)")
         if not past_df.empty:
-            st.dataframe(past_df.sort_values('wtp_transitie_datum'), use_container_width=True, hide_index=True)
+            sorted_past = past_df.sort_values('sort_date', ascending=True).drop(columns=['sort_date'])
+            st.dataframe(sorted_past, use_container_width=True, hide_index=True)
         else:
             st.info("Nog geen fondsen geregistreerd als ingevaren.")
             
         st.subheader("📅 Geplande Transities (Toekomst)")
         if not future_df.empty:
-            st.dataframe(future_df.sort_values('wtp_transitie_datum'), use_container_width=True, hide_index=True)
+            sorted_future = future_df.sort_values('sort_date', ascending=True).drop(columns=['sort_date'])
+            st.dataframe(sorted_future, use_container_width=True, hide_index=True)
         else:
             st.info("Alle fondsen zijn ingevaren.")
     else:
