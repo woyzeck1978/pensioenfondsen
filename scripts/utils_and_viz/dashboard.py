@@ -64,9 +64,10 @@ def get_latest_news():
 
 def get_metrics_history(fund_id):
     query = f"""
-    SELECT year, economische_dekkingsgraad_pct, nominale_dekkingsgraad_pct, 
+    SELECT year, aum_euro_bn, economische_dekkingsgraad_pct, nominale_dekkingsgraad_pct, 
            beleidsdekkingsgraad_pct, reele_dekkingsgraad_pct, 
-           beleggingsrendement_pct, indexatieverlening_pct, cpi_pct
+           beleggingsrendement_pct, indexatieverlening_pct, cpi_pct,
+           deelnemers_actief, deelnemers_slapers, deelnemers_pensioengerechtigd, deelnemers_totaal
     FROM historical_metrics
     WHERE fund_id = {fund_id}
     ORDER BY year ASC
@@ -281,13 +282,18 @@ elif st.session_state.page == "Fund Deep-Dive":
                 st.markdown("#### Meerjarenoverzicht (Jaarrapportages)")
                 
                 rename_map = {
+                    'aum_euro_bn': 'Belegd vermogen (€ mrd)',
                     'economische_dekkingsgraad_pct': 'Actuele dekkingsgraad',
                     'nominale_dekkingsgraad_pct': 'Nominale dekkingsgraad',
                     'beleidsdekkingsgraad_pct': 'Beleidsdekkingsgraad',
                     'reele_dekkingsgraad_pct': 'Reële dekkingsgraad',
                     'beleggingsrendement_pct': 'Totaal rendement',
                     'indexatieverlening_pct': 'Indexatie (toeslag)',
-                    'cpi_pct': 'CPI (Prijsinflatie)'
+                    'cpi_pct': 'CPI (Prijsinflatie)',
+                    'deelnemers_actief': 'Actieve deelnemers',
+                    'deelnemers_slapers': 'Gewezen deelnemers',
+                    'deelnemers_pensioengerechtigd': 'Pensioengerechtigden',
+                    'deelnemers_totaal': 'Totaal deelnemers'
                 }
                 
                 table_df = history_df.rename(columns=rename_map)
@@ -296,8 +302,19 @@ elif st.session_state.page == "Fund Deep-Dive":
                 table_df = table_df.groupby('year').last().T
                 table_df = table_df[sorted(table_df.columns, reverse=True)]
                 
-                for col in table_df.columns:
-                    table_df[col] = table_df[col].apply(lambda x: f"{x:.1f}%" if pd.notnull(x) else "-")
+                for row_name in table_df.index:
+                    is_pct = any(kw in str(row_name).lower() for kw in ['dekkingsgraad', 'rendement', 'indexatie', 'cpi'])
+                    for col in table_df.columns:
+                        val = table_df.at[row_name, col]
+                        if pd.notnull(val):
+                            if is_pct:
+                                table_df.at[row_name, col] = f"{val:.1f}%"
+                            elif 'vermogen' in str(row_name).lower():
+                                table_df.at[row_name, col] = f"€{val:,.2f} mrd".replace('.', 'X').replace(',', '.').replace('X', ',')
+                            else:
+                                table_df.at[row_name, col] = f"{int(float(val)):,}".replace(',', '.')
+                        else:
+                            table_df.at[row_name, col] = "-"
                     
                 table_df.columns = [str(int(c)) for c in table_df.columns]
                 
