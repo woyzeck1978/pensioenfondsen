@@ -37,7 +37,7 @@ def get_all_funds():
         f.id, f.name, f.category, f.aum_euro_bn, f.dekkingsgraad_pct, 
         f.equity_allocation_pct, f.uitvoerder, f.deelnemers_totaal, f.website,
         f.deelnemers_actief, f.deelnemers_slapers, f.deelnemers_gepensioneerd,
-        f.sfdr_article, f.eu_taxonomy_pct,
+        f.sfdr_article, f.eu_taxonomy_pct, f.investment_beliefs,
         e.co2_reduction_goal, e.sfdr_classification
     FROM funds f
     LEFT JOIN fund_esg_metrics e ON f.id = e.fund_id
@@ -213,9 +213,11 @@ if st.session_state.page == "Sector Overview":
 # ==========================================
 elif st.session_state.page == "Fund Deep-Dive":
     st.header("Fund Profile Deep-Dive")
+    st.markdown("Explore detailed metrics, historical performance, and recent news for major Dutch pension funds (AUM > €500 Million).")
     
-    # Fund Selector
-    fund_names = df_funds['name'].sort_values().tolist()
+    # Fund Selector (Filtered to > 0.5 Billion AUM and Exclude APG as it is an asset manager)
+    deep_dive_funds = df_funds[(df_funds['aum_euro_bn'] > 0.5) & (~df_funds['name'].isin(['APG', 'ASR', 'ASR PPI', 'Allianz', 'Allianz PPI', 'A.S. Watson Nederland']))]
+    fund_names = deep_dive_funds['name'].sort_values().tolist()
     
     # Try to initialize the selectbox with the globally selected fund
     default_index = 0
@@ -238,8 +240,15 @@ elif st.session_state.page == "Fund Deep-Dive":
         fund_id = fund_data['id']
         
         st.subheader(fund_data['name'])
+        
+        if 'description' in fund_data and pd.notnull(fund_data['description']) and fund_data['description'] != "":
+            st.info(fund_data['description'])
+            
         if pd.notnull(fund_data['website']) and fund_data['website'] != "":
             st.markdown(f"🌐 **Website:** [{fund_data['website']}]({fund_data['website']})")
+            
+        if 'investment_beliefs' in fund_data and pd.notnull(fund_data['investment_beliefs']) and fund_data['investment_beliefs'] != "":
+            st.markdown(f"#### Investment Beliefs\n> {fund_data['investment_beliefs']}")
         
         # Top KPIs
         kpi1, kpi2, kpi3, kpi4 = st.columns(4)
@@ -256,6 +265,11 @@ elif st.session_state.page == "Fund Deep-Dive":
             st.markdown("### Historical Performance")
             history_df = get_metrics_history(fund_id)
             if not history_df.empty:
+                # Ensure columns are numeric to prevent Plotly Express wide-form data error
+                for col in ["beleidsdekkingsgraad_pct", "beleggingsrendement_pct"]:
+                    if col in history_df.columns:
+                        history_df[col] = pd.to_numeric(history_df[col], errors='coerce')
+                        
                 fig_line = px.line(history_df, x="year", y=["beleidsdekkingsgraad_pct", "beleggingsrendement_pct"], 
                                    labels={"value": "Percentage (%)", "year": "Year", "variable": "Metric"},
                                    title="Funding Ratio & Investment Return History")
@@ -558,7 +572,9 @@ elif st.session_state.page == "Begrippenlijst":
         * **1. Solidaire premieregeling (SPR):** Het beleggingsrisico wordt collectief (samen) gedeeld. Er is sprake van een 'solidariteitsreserve' om grote klappen op te vangen en het pensioen zo stabiel mogelijk te houden. Jong en oud beleggen samen.
         * **2. Flexibele premieregeling (FPR):** Er is een individueler pensioenpotje en deelnemers hebben vaak zelf meer keuze (bijvoorbeeld hoeveel beleggingsrisico ze willen nemen). Er is geen of een minder grote collectieve buffer.
     * **Invaren:** Het omzetten (omrekenen) van de in het verleden opgebouwde pensioenaanspraken naar persoonlijke pensioenvermogens in het nieuwe Wtp-stelsel.
-    * **Rekenrente:** De rentevoet (door DNB vastgesteld) waarmee pensioenfondsen hun toekomstige verplichtingen contant moeten maken. Een lage rekenrente zorgt voor enorme (papieren) verplichtingen.
+    * **Rekenrente:** De rentevoet (door DNB vastgesteld) waarmee pensioenfondsen hun toekomstige verplichtingen contant moeten maken. Een lage rekenrente zorgt voor enorme (papieren) verplichtingen. ([Bekijk huidige DNB Rentetermijnstructuur (RTS)](https://www.dnb.nl/statistieken/dashboards/pensioenen/rentetermijnstructuur-rts/))
     * **UPO (Uniform Pensioenoverzicht):** Het jaarlijkse overzicht dat iedere werknemer ontvangt met daarin de status van het opgebouwde pensioen.
     * **Waardeoverdracht:** Het meenemen van je opgebouwde pensioenwaarde als je van werkgever wisselt en daardoor bij een ander pensioenfonds terechtkomt.
+    * **OFP (Organisme voor de Financiering van Pensioenen):** Een Belgisch pensioenvehikel, vaak gebruikt door multinationals voor grensoverschrijdende pensioenuitvoering vanwege flexibele wetgeving. Het valt onder de Belgische toezichthouder (FSMA) in plaats van DNB.
+    * **PPI (Premiepensioeninstelling):** Een pensioeninstelling die beschikbare premieregelingen uitvoert maar zélf geen risico's mag dragen (zoals langleven- of arbeidsongeschiktheidsrisico). Bij een PPI bouwt elke deelnemer een eigen pensioenkapitaal op via beleggingen.
     """)
