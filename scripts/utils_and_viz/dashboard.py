@@ -250,9 +250,7 @@ elif st.session_state.page == "Fund Deep-Dive":
         if pd.notnull(fund_data['website']) and fund_data['website'] != "":
             st.markdown(f"🌐 **Website:** [{fund_data['website']}]({fund_data['website']})")
             
-        if 'investment_beliefs' in fund_data and pd.notnull(fund_data['investment_beliefs']) and fund_data['investment_beliefs'] != "":
-            st.markdown(f"#### Investment Beliefs\n> {fund_data['investment_beliefs']}")
-        
+        # Investment Beliefs moved to ESG section
         # Top KPIs
         kpi1, kpi2, kpi3, kpi4 = st.columns(4)
         kpi1.metric("AUM", f"€{fund_data['aum_euro_bn']} Bn" if pd.notnull(fund_data['aum_euro_bn']) else "N/A")
@@ -373,6 +371,9 @@ elif st.session_state.page == "Fund Deep-Dive":
                     st.markdown(f"- [{row['title']}]({row['url']})")
             else:
                 st.write("No specific sustainability reports extracted.")
+                
+            if 'investment_beliefs' in fund_data and pd.notnull(fund_data['investment_beliefs']) and fund_data['investment_beliefs'] != "":
+                st.markdown(f"#### Investment Beliefs\n> {fund_data['investment_beliefs']}")
 
 # ==========================================
 # PAGE 3: ASSET MANAGERS EXPOSURE
