@@ -33,7 +33,7 @@ There are currently **58** active funds missing either AUM or Equity Allocation 
 | 177 | Kring TotalEnergies NL (Stap) | NaN | NaN | https://www.pensioenfondsstaples.nl/mijn-pensioenslotje |
 | 5 | Medisch Specialisten (SPMS - Medical Specialists) | 12.46 | NaN | https://www.spms.nl/ |
 | 24 | Metaal & Techniek / PMT (Metal & Technique) | 90.60 | NaN | https://www.pmt.nl/over-pmt/organisatie/voor-metaal-techniek/ |
-| 26 | Molenaars (Millers) | 0.01 | NaN | https://www.molenaarspensioenfonds.nl/ |
+| 26 | Molenaars (Millers) | 0.57 | NaN | https://www.molenaarspensioenfonds.nl/ |
 | 28 | Notariaat (Notaries) | 3.17 | NaN | https://www.pensioenfondsnotariaat.nl/ |
 | 59 | OAK (Furniture, Organ Building, Exhibition Building, and Timber Trade) | 5.44 | NaN | https://www.oakpensioenfonds.nl/ |
 | 181 | Oak | NaN | NaN | https://www.oakpensioenfonds.nl/ |
@@ -55,7 +55,7 @@ There are currently **58** active funds missing either AUM or Equity Allocation 
 | 52 | Pension Insurers (Pensioenverzekeraars)These are traditional insurance companies that administer pension plans 6: | 0.01 | NaN | https://pensioenfondsen.nl/ |
 | 34 | Recreatie (Recreation) | 36.00 | NaN | https://kikk-recreatie.nl/ |
 | 7 | Roeiers (SPRH - Rowers) | 0.10 | NaN | https://sprh.nl/ |
-| 35 | Slagersbedrijf (Butchers) | 0.01 | NaN | https://www.pensioenslagers.nl/ |
+| 35 | Slagersbedrijf (Butchers) | 2.81 | NaN | https://www.pensioenslagers.nl/ |
 | 134 | Tobacon Offshore Marine Consultancy B.V. | NaN | NaN | https://pensioenvoldoen.nl/ |
 | 37 | Waterbouw (Hydraulic Engineering) | NaN | NaN | https://bpfwaterbouw.nl/ |
 | 39 | Woningcorporaties / SPW (Housing Corporations) | 15.00 | NaN | https://www.spw.nl/ |
