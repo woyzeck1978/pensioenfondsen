@@ -120,16 +120,54 @@ def get_latest_news():
     return load_data(query)
 
 def get_metrics_history(fund_id):
-    query = f"""
-    SELECT year, aum_euro_bn, economische_dekkingsgraad_pct, nominale_dekkingsgraad_pct, 
-           beleidsdekkingsgraad_pct, reele_dekkingsgraad_pct, 
+    """Multi-year metrics for a fund.
+
+    Primary source is historical_metrics (rich, curated). Falls back to
+    fy_annual_metrics for fiscal years that aren't yet in historical_metrics
+    — so freshly-parsed jaarverslag values (e.g. FY2025 for KPN) appear on
+    the chart without needing a separate backfill step.
+    """
+    query_main = f"""
+    SELECT year, aum_euro_bn, economische_dekkingsgraad_pct, nominale_dekkingsgraad_pct,
+           beleidsdekkingsgraad_pct, reele_dekkingsgraad_pct,
            beleggingsrendement_pct, indexatieverlening_pct, cpi_pct,
            deelnemers_actief, deelnemers_slapers, deelnemers_pensioengerechtigd, deelnemers_totaal
     FROM historical_metrics
     WHERE fund_id = {fund_id}
-    ORDER BY year ASC
     """
-    return load_data(query)
+    df_hist = load_data(query_main)
+
+    # Pivot fy_annual_metrics for years not yet present
+    query_fy = f"""
+    SELECT fiscal_year AS year, metric_name, value
+    FROM fy_annual_metrics
+    WHERE fund_id = {fund_id}
+      AND value IS NOT NULL
+    """
+    try:
+        df_fy = load_data(query_fy)
+    except Exception:
+        df_fy = pd.DataFrame()
+
+    if not df_fy.empty:
+        present_years = set(df_hist['year'].tolist()) if not df_hist.empty else set()
+        df_fy = df_fy[~df_fy['year'].isin(present_years)]
+        if not df_fy.empty:
+            metric_to_col = {
+                "aum_eur_bn": "aum_euro_bn",
+                "actuele_dekkingsgraad_pct": "economische_dekkingsgraad_pct",
+                "beleidsdekkingsgraad_pct": "beleidsdekkingsgraad_pct",
+                "reele_dekkingsgraad_pct": "reele_dekkingsgraad_pct",
+                "beleggingsrendement_pct": "beleggingsrendement_pct",
+            }
+            df_fy = df_fy[df_fy['metric_name'].isin(metric_to_col)].copy()
+            df_fy['col'] = df_fy['metric_name'].map(metric_to_col)
+            wide = df_fy.pivot_table(index='year', columns='col', values='value', aggfunc='first').reset_index()
+            wide.columns.name = None
+            df_hist = pd.concat([df_hist, wide], ignore_index=True)
+
+    df_hist = df_hist.sort_values('year').reset_index(drop=True)
+    return df_hist
 
 def get_fund_managers(fund_id):
     query = f"""
