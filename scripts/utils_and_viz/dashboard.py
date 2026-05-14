@@ -149,25 +149,50 @@ def get_fund_news(fund_id):
     return load_data(query)
 
 def get_fund_reports(fund_id):
-    query = f"""
-    SELECT year_extracted, title, url
-    FROM (
-        SELECT 
-            title, 
-            url,
-            CAST(SUBSTR(title, -4) AS INTEGER) as year_extracted
-        FROM scraped_documents
-        WHERE fund_id = {fund_id} 
-          AND doc_type = 'document' 
-          AND (lower(title) LIKE '%jaarverslag%' OR lower(title) LIKE '%jaarrapport%' OR lower(title) LIKE '%annual report%')
-          AND lower(title) NOT LIKE '%maatschappelijk%'
-          AND lower(title) NOT LIKE '%duurzaam%'
-          AND lower(title) NOT LIKE '%esg%'
-    )
-    ORDER BY year_extracted DESC NULLS LAST, title DESC
-    LIMIT 5
+    """Top-5 annual report PDFs for a fund, newest fiscal year first.
+
+    Year is extracted via regex on the title (e.g. 'Jaarverslag 2025.pdf'
+    -> 2025) rather than slicing the last 4 chars, which produced '5.pd' and
+    broke the sort.
     """
-    return load_data(query)
+    query = f"""
+    SELECT title, url
+    FROM scraped_documents
+    WHERE fund_id = {fund_id}
+      AND doc_type = 'document'
+      AND (lower(title) LIKE '%jaarverslag%'
+           OR lower(title) LIKE '%jaarrapport%'
+           OR lower(title) LIKE '%annual report%')
+      AND lower(title) NOT LIKE '%maatschappelijk%'
+      AND lower(title) NOT LIKE '%duurzaam%'
+      AND lower(title) NOT LIKE '%esg%'
+    """
+    df = load_data(query)
+    if df.empty:
+        return df
+    df['year_extracted'] = df['title'].str.extract(r'(20\d{2})').astype('Int64')
+    df['is_verkort'] = df['title'].str.lower().str.contains('verkort', na=False)
+    # Sort: newest year first; within a year, full report (not 'verkort') first
+    df = df.sort_values(
+        ['year_extracted', 'is_verkort', 'title'],
+        ascending=[False, True, False],
+        na_position='last',
+    ).drop(columns=['is_verkort'])
+    return df.head(5)
+
+
+def get_fund_annual_metrics(fund_id):
+    """Parsed metrics from annual-report PDFs (fy_annual_metrics)."""
+    query = f"""
+    SELECT fiscal_year, metric_name, value, source_url, notes
+    FROM fy_annual_metrics
+    WHERE fund_id = {fund_id}
+    ORDER BY fiscal_year DESC, metric_name
+    """
+    try:
+        return load_data(query)
+    except Exception:
+        return pd.DataFrame()
 
 def get_fund_esg_reports(fund_id):
     query = f"""
@@ -411,8 +436,58 @@ elif st.session_state.page == "Fund Deep-Dive":
                      f"{fund_data['deelnemers_totaal']:,.0f}".replace(",", ".") if pd.notnull(fund_data['deelnemers_totaal']) else "—",
                      sub="actief + slapers + gepensioneerd"),
         ])
+
+        # --- Latest annual report (FY) — surfaces fy_annual_metrics when present ---
+        fy_df = get_fund_annual_metrics(fund_id)
+        if not fy_df.empty:
+            latest_fy = int(fy_df['fiscal_year'].max())
+            latest = fy_df[fy_df['fiscal_year'] == latest_fy]
+            metrics = {row['metric_name']: row for _, row in latest.iterrows()}
+            source_url = next(iter(latest['source_url'].dropna()), None)
+
+            fy_aum = metrics.get('aum_eur_bn', {}).get('value') if 'aum_eur_bn' in metrics else None
+            fy_actu = metrics.get('actuele_dekkingsgraad_pct', {}).get('value') if 'actuele_dekkingsgraad_pct' in metrics else None
+            fy_beleid = metrics.get('beleidsdekkingsgraad_pct', {}).get('value') if 'beleidsdekkingsgraad_pct' in metrics else None
+            fy_eq = metrics.get('equity_allocation_pct', {}).get('value') if 'equity_allocation_pct' in metrics else None
+
+            link_html = (
+                f'<a href="{_html.escape(source_url)}" target="_blank" '
+                f'style="color:var(--accent);text-decoration:none;font-size:12px;">Source PDF →</a>'
+                if source_url else ''
+            )
+            st.markdown(
+                f"""
+<div class="section-card" style="margin-top:8px;">
+  <div class="section-card-title">Latest annual report · FY {latest_fy} &nbsp; {link_html}</div>
+</div>
+""",
+                unsafe_allow_html=True,
+            )
+            render_kpi_row([
+                kpi_card("AUM (FY)",
+                         f"€{fy_aum:,.1f} Bn" if fy_aum is not None else "—",
+                         sub=f"from jaarverslag {latest_fy}"),
+                kpi_card("Actuele Dekkingsgraad (FY)",
+                         f"{fy_actu:.1f}%" if fy_actu is not None else "—",
+                         sub=f"year-end {latest_fy}"),
+                kpi_card("Beleidsdekkingsgraad (FY)",
+                         f"{fy_beleid:.1f}%" if fy_beleid is not None else "—",
+                         sub=f"year-end {latest_fy}"),
+                kpi_card("Equity Allocation (FY)",
+                         f"{fy_eq:.1f}%" if fy_eq is not None else "—",
+                         sub=f"per jaarverslag {latest_fy}"),
+            ])
+            # Highlight values that disagree with the funds-table KPIs above
+            mismatches = []
+            if fy_aum is not None and pd.notnull(fund_data['aum_euro_bn']) and abs(fy_aum - fund_data['aum_euro_bn']) > 0.5:
+                mismatches.append(f"AUM (funds table {fund_data['aum_euro_bn']:.1f} vs jaarverslag {fy_aum:.1f})")
+            if fy_actu is not None and pd.notnull(fund_data['dekkingsgraad_pct']) and abs(fy_actu - fund_data['dekkingsgraad_pct']) > 1.0:
+                mismatches.append(f"dekkingsgraad ({fund_data['dekkingsgraad_pct']:.1f}% vs {fy_actu:.1f}%)")
+            if mismatches:
+                st.caption("⚠ funds-table values differ from the annual report: " + "; ".join(mismatches))
+
         st.divider()
-        
+
         col_main, col_side = st.columns([2, 1])
         
         with col_main:

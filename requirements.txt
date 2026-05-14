@@ -1,3 +1,8 @@
-streamlit==1.32.0
-pandas==2.2.0
-plotly==5.19.0
+# Dashboard runtime deps only — these get installed by Streamlit Cloud.
+# Scraper/loader scripts (parse_news_articles.py, fetch_dnb_quarterly.py, etc.)
+# have additional deps (requests, beautifulsoup4, playwright, pymupdf) used
+# only during local data refreshes; they don't run inside the dashboard.
+
+streamlit>=1.40,<2
+pandas>=2.2,<3
+plotly>=5.19,<7
