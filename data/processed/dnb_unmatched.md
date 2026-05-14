@@ -1,0 +1,228 @@
+# DNB ↔ pension_funds.db name mismatches
+
+Generated 2026-05-13T20:40:37
+
+DB funds: 179 | DNB rapporteurs: 186 | matched: 153
+
+## DNB rapporteurs without a DB match
+
+- `CRH`
+- `Calpam`
+- `Coram`
+- `Flexsecurity`
+- `Grolsche bierbrouwerij`
+- `Honeywell`
+- `ING Bank CDC fonds`
+- `Kring 1 - DC (Achmea)`
+- `Kring 2 - DB premie (Achmea)`
+- `Kring 3 - Stabiliteit (Achmea)`
+- `Kring 4 - Koopkracht (Achmea)`
+- `Kring Bavaria (Achmea)`
+- `Kring Chemours (Achmea)`
+- `Kring DB evenwicht (Achmea)`
+- `Kring Deutche Bank NL (Achmea)`
+- `Kring ES Nederland (Achmea)`
+- `Kring Grolsch (Achmea)`
+- `Kring HP Nederland (Achmea)`
+- `Kring HPE (Achmea)`
+- `Kring RBS (Achmea)`
+- `Kring Sligro (Achmea)`
+- `Kring equensWorldline (Achmea)`
+- `Kring flexible regeling (Hnp)`
+- `Nedlloyd`
+- `Pensioenkring Cargill (Hnp)`
+- `Pensioenkring IFF (Stap)`
+- `Pensioenkring Van Lanschot (Hnp)`
+- `Pensura`
+- `Schoonmaak- en Glazenwassersbedrijf`
+- `Shell Nederland`
+- `Staples`
+- `Tandartsen en Tandarts-Specialisten`
+- `Wolters Kluwer Nederland`
+- `YARA Nederland`
+
+## DB funds without a DNB match
+
+- [69] `A.S. Watson Nederland`
+- [64] `APF Het Nederlandse Pensioenfonds`
+- [144] `ASR`
+- [139] `ASR PPI`
+- [143] `Allianz`
+- [138] `Allianz PPI`
+- [53] `Athora (Zwitserleven)`
+- [44] `BP / Pensioenfonds BP`
+- [54] `BPFBouw`
+- [140] `Be Frank PPI`
+- [65] `Centraal Beheer APF`
+- [141] `Centraal Beheer PPI`
+- [94] `Exxonmobil`
+- [99] `GE Artesia Bank`
+- [101] `Gomacon`
+- [109] `J&J`
+- [22] `Levensmiddelen / BPFL (Food Industry)`
+- [145] `Nationale-Nederlanden`
+- [27] `Nederlandse Groothandel / SPNG (Dutch Wholesale)`
+- [59] `OAK (Furniture, Organ Building, Exhibition Building, and Timber Trade)`
+- [55] `PME`
+- [206] `Pensioenfonds Ernst & Young`
+- [52] `Pension Insurers (Pensioenverzekeraars)These are traditional insurance companies that administer pension plans 6:`
+- [36] `StiPP (Temp Agency and Seconded Workers)`
+- [134] `Tobacon Offshore Marine Consultancy B.V.`
+- [68] `Unilever APF`
+- [142] `Zwitserleven PPI`
+
+## Auto-matched (review for false positives)
+
+- [substr] fid=71 `ABN AMRO` ⇄ DNB `ABN AMRO Bank`
+- [manual] fid=9 `ABP (Government and Education)` ⇄ DNB `ABP`
+- [substr] fid=73 `Ahold Delhaize` ⇄ DNB `AHOLD`
+- [manual] fid=75 `APF (AkzoNobel, Nouryon, Nobian, Salt)` ⇄ DNB `APF`
+- [manual] fid=76 `APG` ⇄ DNB `APG`
+- [exact] fid=77 `AT&T Nederland` ⇄ DNB `AT&T Nederland`
+- [exact] fid=79 `Avebe` ⇄ DNB `AVEBE`
+- [substr] fid=70 `Abbott / Abbott Nederland` ⇄ DNB `Abbott Nederland`
+- [exact] fid=72 `Achmea` ⇄ DNB `Achmea`
+- [exact] fid=74 `Alliance` ⇄ DNB `Alliance`
+- [substr] fid=6 `Openbare Apothekers (SPOA - Public Pharmacists)` ⇄ DNB `Apothekers`
+- [substr] fid=10 `Architectenbureaus (Architecture Firms)` ⇄ DNB `Architectenbureaus`
+- [substr] fid=78 `Atos` ⇄ DNB `Atos Origin`
+- [exact] fid=80 `Avery Dennison` ⇄ DNB `Avery Dennison`
+- [exact] fid=152 `BPF Foodservice` ⇄ DNB `BPF Foodservice`
+- [manual] fid=16 `BPL Pensioen (Agriculture)` ⇄ DNB `BPL`
+- [substr] fid=11 `Bakkersbedrijf (Bakeries)` ⇄ DNB `Bakkersbedrijf BPF`
+- [substr] fid=12 `Banden- en Wielenbranche (Tire and Wheel Branch)` ⇄ DNB `Banden- en Wielenbranche`
+- [substr] fid=13 `Beroepsvervoer over de Weg (Commercial Road Transport)` ⇄ DNB `Beroepsvervoer over de Weg`
+- [manual] fid=14 `Beton / Betonproductenindustrie (Concrete Industry)` ⇄ DNB `Betonproduktenindustrie`
+- [manual] fid=29 `Openbare Bibliotheken / POB (Public Libraries)` ⇄ DNB `Bibliotheken openbare`
+- [substr] fid=117 `Nederlandse Bisdommen` ⇄ DNB `Bisdommen`
+- [manual] fid=18 `HiBiN (Building Materials Trade)` ⇄ DNB `Bouwmaterialen`
+- [substr] fid=15 `Bouw / Bouwnijverheid (Construction)` ⇄ DNB `Bouwnijverheid`
+- [exact] fid=207 `Pensioenfonds British American Tobacco` ⇄ DNB `British American Tobacco`
+- [exact] fid=81 `Brocacef` ⇄ DNB `Brocacef`
+- [exact] fid=82 `Campina` ⇄ DNB `Campina`
+- [manual] fid=83 `Capgemini / Capgemini Nederland` ⇄ DNB `Cap Gemini Nederland`
+- [exact] fid=84 `Cargill` ⇄ DNB `Cargill`
+- [substr] fid=85 `Citigroup` ⇄ DNB `Citigroup Nederland`
+- [substr] fid=86 `Cosun / Koninklijke Cosun` ⇄ DNB `Cosun`
+- [exact] fid=89 `DHL Nederland` ⇄ DNB `DHL Nederland`
+- [exact] fid=88 `Delta Lloyd` ⇄ DNB `Delta Lloyd`
+- [substr] fid=17 `Detailhandel (Retail)` ⇄ DNB `Detailhandel`
+- [substr] fid=1 `Dierenartsen (SPD - Veterinarians)` ⇄ DNB `Dierenartsen`
+- [exact] fid=90 `DOW` ⇄ DNB `Dow`
+- [exact] fid=92 `Ecolab` ⇄ DNB `Ecolab`
+- [exact] fid=93 `Essity` ⇄ DNB `Essity`
+- [exact] fid=96 `Forbo` ⇄ DNB `Forbo`
+- [substr] fid=2 `Fysiotherapeuten (SPF - Physiotherapists)` ⇄ DNB `Fysiotherapeuten`
+- [exact] fid=97 `Gasunie` ⇄ DNB `Gasunie`
+- [substr] fid=98 `Gazelle` ⇄ DNB `Gazelle psf`
+- [exact] fid=100 `Geveke` ⇄ DNB `Geveke`
+- [substr] fid=56 `Foodservice & Groothandel in Levensmiddelen (Foodservice & Wholesale)` ⇄ DNB `Groothandel`
+- [exact] fid=103 `HAL` ⇄ DNB `HAL`
+- [exact] fid=102 `Hagee` ⇄ DNB `Hagee`
+- [manual] fid=104 `Haskoning DHV` ⇄ DNB `HaskoningDHV`
+- [exact] fid=105 `Heineken` ⇄ DNB `Heineken`
+- [exact] fid=106 `Hoogovens` ⇄ DNB `Hoogovens`
+- [substr] fid=19 `Horeca & Catering (Hospitality)` ⇄ DNB `Horecabedrijf`
+- [substr] fid=3 `Huisartsen (SPH - General Practitioners)` ⇄ DNB `Huisartsen`
+- [exact] fid=107 `Huntsman Rozenburg` ⇄ DNB `Huntsman Rozenburg`
+- [substr] fid=45 `IBM (SPIN) / IBM Nederland` ⇄ DNB `IBM Nederland`
+- [exact] fid=158 `IFF` ⇄ DNB `IFF`
+- [substr] fid=46 `IKEA (STIP)` ⇄ DNB `IKEA`
+- [manual] fid=108 `ING / ING CDC` ⇄ DNB `ING`
+- [substr] fid=47 `KLM Algemeen (Ground Staff)` ⇄ DNB `KLM Algemeen`
+- [substr] fid=49 `KLM Vliegend Personeel (Flight Crew)` ⇄ DNB `KLM Vliegend Personeel`
+- [manual] fid=48 `KLM Cabinepersoneel (Cabin Crew)` ⇄ DNB `KLM-Cabinepersoneel`
+- [exact] fid=111 `KPN` ⇄ DNB `KPN`
+- [substr] fid=20 `Kappersbedrijf (Hairdressers)` ⇄ DNB `Kappersbedrijf`
+- [exact] fid=110 `KAS BANK` ⇄ DNB `Kas Bank`
+- [substr] fid=21 `Koopvaardij (Merchant Navy)` ⇄ DNB `Koopvaardij`
+- [exact] fid=163 `Kring AFM (De Nationale)` ⇄ DNB `Kring AFM (De Nationale)`
+- [exact] fid=164 `Kring ANWB (De Nationale)` ⇄ DNB `Kring ANWB (De Nationale)`
+- [exact] fid=165 `Kring Arcadis (Hnp)` ⇄ DNB `Kring Arcadis (Hnp)`
+- [exact] fid=166 `Kring B (De Nationale)` ⇄ DNB `Kring B (De Nationale)`
+- [exact] fid=167 `Kring CK1 (Hnp)` ⇄ DNB `Kring CK1 (Hnp)`
+- [exact] fid=168 `Kring D (De Nationale)` ⇄ DNB `Kring D (De Nationale)`
+- [exact] fid=169 `Kring DB-A (De Nationale)` ⇄ DNB `Kring DB-A (De Nationale)`
+- [substr] fid=66 `De Nationale APF` ⇄ DNB `Kring DC (De Nationale)`
+- [exact] fid=170 `Kring Douwe Egberts (Stap)` ⇄ DNB `Kring Douwe Egberts (Stap)`
+- [exact] fid=171 `Kring Eastman (Stap)` ⇄ DNB `Kring Eastman (Stap)`
+- [exact] fid=172 `Kring Forward (Unilever)` ⇄ DNB `Kring Forward (Unilever)`
+- [substr] fid=67 `Stap APF` ⇄ DNB `Kring Holland Casino (Stap)`
+- [exact] fid=173 `Kring McCain (De Nationale)` ⇄ DNB `Kring McCain (De Nationale)`
+- [exact] fid=174 `Kring Progress (Unilever)` ⇄ DNB `Kring Progress (Unilever)`
+- [exact] fid=175 `Kring Roba (Hnp)` ⇄ DNB `Kring Roba (Hnp)`
+- [exact] fid=176 `Kring SVG (Stap)` ⇄ DNB `Kring SVG (Stap)`
+- [exact] fid=177 `Kring TotalEnergies NL (Stap)` ⇄ DNB `Kring TotalEnergies NL (Stap)`
+- [substr] fid=193 `Kring Van Lanschot (HNPF)` ⇄ DNB `Lanschot`
+- [exact] fid=178 `Levensmiddelenbedrijf` ⇄ DNB `Levensmiddelenbedrijf`
+- [exact] fid=112 `Lloyd's Register Nederland` ⇄ DNB `Lloyd's Register Nederland`
+- [substr] fid=4 `Loodsen (Pilots)` ⇄ DNB `Loodsen`
+- [exact] fid=116 `MSD` ⇄ DNB `MSD`
+- [exact] fid=113 `Mars` ⇄ DNB `Mars`
+- [substr] fid=23 `Medewerkers Apotheken / PMA (Pharmacy Employees)` ⇄ DNB `Medewerkers Apotheken`
+- [substr] fid=57 `Media PNO (Creative and Digital Sector)` ⇄ DNB `Media PNO`
+- [substr] fid=50 `Mediahuis Nederland (Mhpf)` ⇄ DNB `Mediahuis Nederland`
+- [manual] fid=5 `Medisch Specialisten (SPMS - Medical Specialists)` ⇄ DNB `Medische Specialisten`
+- [exact] fid=114 `Mercer` ⇄ DNB `Mercer`
+- [manual] fid=24 `Metaal & Techniek / PMT (Metal & Technique)` ⇄ DNB `Metaal en Techniek`
+- [manual] fid=58 `Metalektro / PME` ⇄ DNB `Metalektro, bedrijfstakpensioenfonds`
+- [exact] fid=115 `Metro` ⇄ DNB `Metro`
+- [manual] fid=25 `MITT (Fashion, Interior, Carpet, and Textile Industry)` ⇄ DNB `Mode-, Interieur-, Tapijt- en Textielindustrie`
+- [substr] fid=26 `Molenaars (Millers)` ⇄ DNB `Molenaarspensioenfonds`
+- [exact] fid=118 `NN CDC` ⇄ DNB `NN CDC fonds`
+- [substr] fid=87 `De Nederlandsche Bank` ⇄ DNB `Nederlandsche Bank`
+- [substr] fid=28 `Notariaat (Notaries)` ⇄ DNB `Notariaat`
+- [exact] fid=181 `Oak` ⇄ DNB `Oak`
+- [manual] fid=91 `DSM Nederland` ⇄ DNB `PDN`
+- [manual] fid=32 `PGB (Various Industries)` ⇄ DNB `PGB`
+- [substr] fid=30 `Particuliere Beveiliging (Private Security)` ⇄ DNB `Particuliere Beveiliging`
+- [exact] fid=183 `Pensioenkring 2 (Stap)` ⇄ DNB `Pensioenkring 2 (Stap)`
+- [exact] fid=184 `Pensioenkring AON (Stap)` ⇄ DNB `Pensioenkring AON (Stap)`
+- [exact] fid=185 `Pensioenkring Astellas (Stap)` ⇄ DNB `Pensioenkring Astellas (Stap)`
+- [exact] fid=186 `Pensioenkring Ballast Nedam (Stap)` ⇄ DNB `Pensioenkring Ballast Nedam (Stap)`
+- [exact] fid=187 `Pensioenkring CRH (Hnp)` ⇄ DNB `Pensioenkring CRH (Hnp)`
+- [exact] fid=188 `Pensioenkring GE Nederland (Stap)` ⇄ DNB `Pensioenkring GE Nederland (Stap)`
+- [exact] fid=189 `Pensioenkring OWASE (Hnp)` ⇄ DNB `Pensioenkring OWASE (Hnp)`
+- [exact] fid=190 `Pensioenkring PepsiCo (Hnp)` ⇄ DNB `Pensioenkring PepsiCo (Hnp)`
+- [exact] fid=191 `Pensioenkring Randstad (Hnp)` ⇄ DNB `Pensioenkring Randstad (Hnp)`
+- [exact] fid=192 `Pensioenkring Sweco (Hnp)` ⇄ DNB `Pensioenkring Sweco (Hnp)`
+- [exact] fid=194 `Pensioenkring Wolters Kluwer NL (Hnp)` ⇄ DNB `Pensioenkring Wolters Kluwer NL (Hnp)`
+- [exact] fid=195 `Pensioenkring Xerox (Hnp)` ⇄ DNB `Pensioenkring Xerox (Hnp)`
+- [substr] fid=31 `Personeelsdiensten (Personnel Services)` ⇄ DNB `Personeelsdiensten`
+- [manual] fid=76 `APG` ⇄ DNB `Personeelspensioenfonds APG`
+- [exact] fid=119 `Philips` ⇄ DNB `Philips`
+- [exact] fid=120 `Pon` ⇄ DNB `Pon`
+- [exact] fid=121 `PostNL` ⇄ DNB `PostNL`
+- [exact] fid=122 `Provisum` ⇄ DNB `Provisum`
+- [substr] fid=123 `Rabobank` ⇄ DNB `Rabobankorganisatie`
+- [substr] fid=33 `Rail & Openbaar Vervoer (Rail & Public Transport)` ⇄ DNB `Rail & Openbaar Vervoer`
+- [manual] fid=34 `Recreatie (Recreation)` ⇄ DNB `Recreatie (SPR)`
+- [exact] fid=198 `Rijn- en Binnenvaart` ⇄ DNB `Rijn- en Binnenvaart`
+- [exact] fid=124 `Robeco` ⇄ DNB `Robeco`
+- [exact] fid=125 `Rockwool` ⇄ DNB `Rockwool`
+- [manual] fid=7 `Roeiers (SPRH - Rowers)` ⇄ DNB `Roeiers in het Rotterdamse havengebied`
+- [exact] fid=126 `SABIC` ⇄ DNB `SABIC`
+- [substr] fid=129 `SNS REAAL` ⇄ DNB `SNS Reaal Groep`
+- [exact] fid=127 `Sagittarius` ⇄ DNB `Sagittarius`
+- [manual] fid=35 `Slagersbedrijf (Butchers)` ⇄ DNB `Samenwerking / Slagersbedrijf`
+- [substr] fid=60 `Schilders-, Afwerkings- en Glaszetbedrijf (Painters and Glaziers)` ⇄ DNB `Schilders-, Afwerkings- en Glaszetbedrijf`
+- [substr] fid=51 `Shell (SSPF and SNPS schemes)` ⇄ DNB `Shell`
+- [substr] fid=128 `Smurfit Kappa` ⇄ DNB `Smurfit Kappa Nederland`
+- [exact] fid=130 `Sportfondsen` ⇄ DNB `Sportfondsen`
+- [exact] fid=131 `TDV` ⇄ DNB `TDV`
+- [exact] fid=133 `TNO` ⇄ DNB `TNO`
+- [substr] fid=132 `Thales Nederland` ⇄ DNB `Thales`
+- [exact] fid=208 `Pensioenfonds Trespa` ⇄ DNB `Trespa`
+- [exact] fid=135 `UWV` ⇄ DNB `UWV`
+- [substr] fid=8 `Verloskundigen (SPV - Midwives)` ⇄ DNB `Verloskundigen`
+- [manual] fid=62 `Vlakglas, Verf, Glasbewerking- en het Glazeniersbedrijf / BPFV (Flat Glass, Paint, and Glazing)` ⇄ DNB `Vlakglas, Verf, het Glasbewerkings- en het Glazeniersbedrijf`
+- [manual] fid=63 `Vlees, Vleeswaren, Gemaksvoeding en Pluimveevlees / VLEP (Meat and Poultry)` ⇄ DNB `Vlees- en Vleeswarenindustrie en de Gemaksvoedingindustrie`
+- [exact] fid=136 `Vopak` ⇄ DNB `Vopak`
+- [substr] fid=37 `Waterbouw (Hydraulic Engineering)` ⇄ DNB `Waterbouw BPF`
+- [manual] fid=38 `Werk- en (re)Integratie / PWRI (Work and Reintegration)` ⇄ DNB `Werk en (re)Integratie`
+- [manual] fid=137 `Witteveen+Bos` ⇄ DNB `Witteveen & Bos`
+- [substr] fid=39 `Woningcorporaties / SPW (Housing Corporations)` ⇄ DNB `Woningcorporaties`
+- [substr] fid=40 `Zoetwarenindustrie (Confectionery Industry)` ⇄ DNB `Zoetwarenindustrie`
+- [substr] fid=41 `Zorg en Welzijn / PFZW (Healthcare and Welfare)` ⇄ DNB `Zorg en Welzijn`
+- [substr] fid=42 `Zorgverzekeraars / SBZ (Health Insurers)` ⇄ DNB `Zorgverzekeraars`
+- [manual] fid=43 `Zuivel- en aanverwante industrie / BPZ (Dairy Industry)` ⇄ DNB `Zuivel en aanverwante industrie`

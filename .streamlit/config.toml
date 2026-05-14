@@ -1,0 +1,16 @@
+# Theme derived from csuriskdashboard.netlify.app (visual reference).
+# Tokens captured via DOM inspection.
+
+[theme]
+base = "light"
+primaryColor = "#6554A3"            # accent purple from CSU
+backgroundColor = "#F6F7F9"         # body bg
+secondaryBackgroundColor = "#FFFFFF"# sidebar / card bg
+textColor = "#17202A"               # primary text (dark navy)
+font = "sans serif"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false

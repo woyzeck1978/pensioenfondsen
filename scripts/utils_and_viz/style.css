@@ -1,0 +1,169 @@
+/* Visual style for the Dutch Pension Funds dashboard.
+   Reference: csuriskdashboard.netlify.app — tokens captured via DOM inspection. */
+
+:root {
+  --bg-page:      #F6F7F9;
+  --bg-card:      #FFFFFF;
+  --bg-soft:      #ECF0F3;
+  --bg-table-hd:  #EEF2F5;
+  --border:       #D9DEE5;
+  --border-soft:  #E8ECF1;
+  --text:         #17202A;
+  --text-mid:     #2F3A45;
+  --text-mute:    #5C6875;
+  --accent:       #6554A3;   /* CSU purple */
+  --green:        #2F7D57;
+  --teal:         #17756B;
+  --blue:         #1F6FB2;
+  --red:          #B13B3B;
+  --orange:       #C66B16;
+}
+
+/* ── Global typography ─────────────────────────────────────────── */
+html, body, [class*="stApp"] {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, sans-serif !important;
+  color: var(--text);
+}
+
+/* tighten Streamlit's oversized headings to CSU scale */
+h1, .stMarkdown h1 { font-size: 22px !important; font-weight: 700 !important; margin-bottom: 4px !important; }
+h2, .stMarkdown h2 { font-size: 18px !important; font-weight: 700 !important; margin-top: 24px !important; margin-bottom: 8px !important; }
+h3, .stMarkdown h3 { font-size: 15px !important; font-weight: 700 !important; color: var(--text-mid); }
+.stMarkdown p, .stMarkdown li { font-size: 14px; color: var(--text-mid); }
+
+/* ── Main page padding ─────────────────────────────────────────── */
+.main .block-container { padding-top: 1.4rem !important; padding-bottom: 2rem !important; max-width: 1380px; }
+
+/* ── Sidebar ───────────────────────────────────────────────────── */
+section[data-testid="stSidebar"] {
+  background: var(--bg-card) !important;
+  border-right: 1px solid var(--border) !important;
+}
+section[data-testid="stSidebar"] h1,
+section[data-testid="stSidebar"] h2,
+section[data-testid="stSidebar"] h3 { font-size: 12px !important; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-mute) !important; }
+
+/* Radio-based nav: subtle, no dot circles, left-accent for active item */
+section[data-testid="stSidebar"] [data-testid="stRadio"] > div { gap: 0 !important; }
+section[data-testid="stSidebar"] [data-testid="stRadio"] label {
+  padding: 7px 14px 7px 12px !important;
+  margin: 0 !important;
+  border-left: 3px solid transparent;
+  cursor: pointer;
+  transition: background-color 80ms ease, color 80ms ease, border-color 80ms ease;
+}
+section[data-testid="stSidebar"] [data-testid="stRadio"] label:hover {
+  background: var(--bg-soft);
+  color: var(--text);
+}
+/* Hide the actual radio dot — we use the left border + weight instead */
+section[data-testid="stSidebar"] [data-testid="stRadio"] label > div:first-child {
+  display: none !important;
+}
+section[data-testid="stSidebar"] [data-testid="stRadio"] label p {
+  font-size: 13px !important;
+  color: var(--text-mid) !important;
+  margin: 0 !important;
+  line-height: 1.45 !important;
+}
+/* Active item — has aria-checked="true" on Streamlit's radio */
+section[data-testid="stSidebar"] [data-testid="stRadio"] label[data-baseweb="radio"]:has(input:checked),
+section[data-testid="stSidebar"] [data-testid="stRadio"] label:has(input:checked) {
+  border-left-color: var(--accent);
+  background: var(--bg-soft);
+}
+section[data-testid="stSidebar"] [data-testid="stRadio"] label:has(input:checked) p {
+  color: var(--text) !important;
+  font-weight: 600 !important;
+}
+
+/* sidebar info box compact */
+section[data-testid="stSidebar"] [data-testid="stAlert"] {
+  background: var(--bg-soft) !important;
+  border: 1px solid var(--border-soft) !important;
+  border-radius: 6px !important;
+  padding: 8px 10px !important;
+  font-size: 12px !important;
+}
+
+/* ── KPI tile (custom HTML helper) ─────────────────────────────── */
+.kpi-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 12px 0 24px 0;
+}
+.kpi-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  min-height: 92px;
+}
+.kpi-card .kpi-label  { font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-mute); margin-bottom: 4px; }
+.kpi-card .kpi-value  { font-size: 24px; font-weight: 700; color: var(--text); line-height: 1.1; }
+.kpi-card .kpi-sub    { font-size: 12px; color: var(--text-mute); margin-top: 4px; }
+.kpi-card .kpi-delta-up   { color: var(--green); font-weight: 600; }
+.kpi-card .kpi-delta-down { color: var(--red);   font-weight: 600; }
+
+/* ── Section card wrapper ──────────────────────────────────────── */
+.section-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+}
+.section-card-title {
+  font-size: 13px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.04em; color: var(--text-mute);
+  margin-bottom: 10px;
+}
+
+/* ── Badge / pill ──────────────────────────────────────────────── */
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #FFFFFF;
+}
+.badge-green   { background: var(--green); }
+.badge-teal    { background: var(--teal);  }
+.badge-blue    { background: var(--blue);  }
+.badge-purple  { background: var(--accent);}
+.badge-orange  { background: var(--orange);}
+.badge-red     { background: var(--red);   }
+.badge-gray    { background: #8F9BA8;      }
+.badge-outline { background: #FFFFFF; color: var(--text-mid); border: 1px solid var(--border); }
+
+/* ── Streamlit metric (when used) — tighter ────────────────────── */
+[data-testid="stMetric"]       { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 10px 14px; }
+[data-testid="stMetricLabel"]  { font-size: 11px !important; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-mute) !important; }
+[data-testid="stMetricValue"]  { font-size: 22px !important; font-weight: 700 !important; color: var(--text) !important; }
+[data-testid="stMetricDelta"]  { font-size: 12px !important; }
+
+/* ── Dataframes ────────────────────────────────────────────────── */
+[data-testid="stDataFrame"]    { font-size: 12px; }
+[data-testid="stDataFrame"] thead tr { background: var(--bg-table-hd); }
+
+/* ── Buttons / links inside main area ──────────────────────────── */
+.stButton > button {
+  background: var(--bg-card); color: var(--text);
+  border: 1px solid var(--border); border-radius: 4px;
+  padding: 6px 10px; font-size: 13px;
+}
+.stButton > button:hover { border-color: var(--accent); color: var(--accent); }
+
+/* ── Plotly chart card ─────────────────────────────────────────── */
+[data-testid="stPlotlyChart"] {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px;
+}
