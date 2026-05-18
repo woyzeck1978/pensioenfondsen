@@ -65,32 +65,68 @@ Before running any script, check the `sqlite3.connect(...)` line and `cd` accord
 
 PDFs in `data/reports/` and `data/annual_reports/` are typically named `<fund_id>_<FundName>.pdf` (e.g. `106_Hoogovens.pdf`, `73_Ahold_Delhaize.pdf`); the leading integer matches `funds.id` and parsers rely on that mapping.
 
-## Automated bi-daily scrape (launchd)
+## Automated bi-daily scrape (launchd + .app bundle)
 
 A launchd agent re-scrapes all fund websites every 2 days, parses the new
 news URLs, and pushes the updated `pension_funds.db` to `origin/main`. The
 Streamlit Cloud app rebuilds from main automatically.
 
+The call chain has three hops to work around macOS TCC restrictions:
+
+```
+launchd
+  → ~/Applications/PensioenfondsenScraper.app/Contents/MacOS/applet
+  → /Users/webkowuite/bin/pensioenfondsen_scrape.sh
+  → scripts/automation/scrape_push.sh (here, in the repo)
+```
+
+Why so many hops:
+
+1. **launchd cannot run shell scripts that live in Google Drive's
+   `CloudStorage` mount** — macOS TCC denies "operation not permitted" on
+   ordinary `read` of Drive files for launchd-spawned processes.
+2. **An AppleScript .app bundle** at `~/Applications/PensioenfondsenScraper.app`
+   gets a distinct TCC identifier and can be granted **Full Disk Access**
+   via System Settings → Privacy & Security → Full Disk Access. The app's
+   `do shell script` invokes the local launcher inheriting that TCC right.
+3. **The thin wrapper at `~/bin/pensioenfondsen_scrape.sh`** sits outside
+   Drive (so it loads even before FDA propagates) and exec's the real
+   worker via `zsh -s < <drive-path>`.
+
 Files:
-- `scripts/automation/scrape_push.sh` — the runner. Pre/post counts,
-  abort on script failure, skip commit if DB byte-identical, push retry
-  3× with 30s back-off (handles Google Drive sync locks).
+- `scripts/automation/scrape_push.sh` — the actual worker (in repo). Pre/post
+  counts, abort on script failure, skip commit if DB byte-identical, push
+  retry 3× with 30s back-off.
+- `~/bin/pensioenfondsen_scrape.sh` — local launcher outside Drive (not in
+  repo; recreate with the snippet documented in this file).
+- `~/Applications/PensioenfondsenScraper.app` — AppleScript bundle (not in
+  repo; recreate via `osacompile -e 'do shell script
+  "/Users/webkowuite/bin/pensioenfondsen_scrape.sh"'` then add
+  `CFBundleIdentifier=nl.wuite.pensioenfondsenscraper` and
+  `LSUIElement=true` to its `Contents/Info.plist`, then ad-hoc resign with
+  `codesign --force --sign -`).
 - `~/Library/LaunchAgents/nl.wuite.pensioenfondsen.scrape.plist` — the
   launchd job spec. `StartInterval=172800`, logs to `logs/cron/`.
+
+One-time setup on a new Mac:
+1. Build the .app bundle (see osacompile command above).
+2. Open System Settings → Privacy & Security → Full Disk Access.
+3. Trigger the prompt by running the .app once: `open -a "PensioenfondsenScraper"`.
+4. Click Allow on the macOS prompt — the app now appears in the FDA list
+   with a green toggle.
+5. Drop the launchd plist into `~/Library/LaunchAgents/` and bootstrap.
 
 Managing:
 
 ```bash
-# Status (will show PID if running, last exit code if not)
+# Status (PID if running, last exit code if not)
 launchctl list | grep pensioen
 
-# Fire it now (smoke test) — does NOT change the schedule
+# Fire it now — does NOT change the schedule
 launchctl kickstart -p gui/$(id -u)/nl.wuite.pensioenfondsen.scrape
 
-# Stop the recurring job
-launchctl bootout gui/$(id -u) ~/Library/LaunchAgents/nl.wuite.pensioenfondsen.scrape.plist
-
-# Re-arm
+# Pause / resume the recurring job
+launchctl bootout   gui/$(id -u) ~/Library/LaunchAgents/nl.wuite.pensioenfondsen.scrape.plist
 launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/nl.wuite.pensioenfondsen.scrape.plist
 
 # Inspect last run
@@ -101,12 +137,14 @@ tail logs/cron/launchd.out logs/cron/launchd.err
 
 Caveats:
 - Mac must be awake at the fire time (or wake before the next interval).
-  `launchd` will run a missed job the moment the Mac wakes up.
-- Auto-commits land as `Webko Wuite <webkowuite@mac.home>`. To attribute
-  them to a real email, run `git config user.email …` once in the repo.
+  launchd runs a missed job the moment the Mac wakes up.
+- Auto-commits land as `Webko Wuite <webkowuite@mac.home>`. Run
+  `git config user.email …` once in the repo to fix attribution.
 - Two fund sites (`pensioencg.nl`, `pnb.nl`) sit behind Cloudflare and
   return a "Challenge Validation" page — the script catalogues those
   URLs but can't parse real titles. Acceptable noise for now.
+- If `~/Applications/PensioenfondsenScraper.app` is rebuilt or moved,
+  the FDA grant may need to be re-confirmed via the same prompt flow.
 
 ## Quirks to keep in mind
 
