@@ -780,6 +780,111 @@ elif st.session_state.page == "WTP Tracker":
                  sub="among funds with WTP plan"),
     ])
     st.divider()
+
+    # --- Recente WTP-updates (news headlines mentioning invaren/transitie) ---
+    st.markdown(
+        '<div class="section-card-title">🔄 Recente WTP-updates uit het nieuws</div>',
+        unsafe_allow_html=True,
+    )
+    wtp_news = load_data("""
+        SELECT n.published_date AS "Date",
+               f.name AS "Fund",
+               n.title AS "Headline",
+               n.url,
+               f.category AS "Category"
+        FROM news_articles n JOIN funds f ON n.fund_id = f.id
+        WHERE n.title IS NOT NULL AND n.published_date IS NOT NULL
+          AND date(n.published_date) >= date('now', '-180 days')
+          AND (
+                lower(n.title) LIKE '%invar%'
+             OR lower(n.title) LIKE '%nieuwe pensioenregeling%'
+             OR lower(n.title) LIKE '%nieuw pensioenstelsel%'
+             OR lower(n.title) LIKE '%nieuwe regels%pensioen%'
+             OR lower(n.title) LIKE '%nieuwe regels voor%'
+             OR lower(n.title) LIKE '%transitie%'
+             OR lower(n.title) LIKE '%overstap%pensioen%'
+             OR lower(n.title) LIKE '%mag over%'
+             OR lower(n.title) LIKE '%wtp%'
+          )
+        ORDER BY date(n.published_date) DESC, n.id DESC
+        LIMIT 60
+    """)
+
+    if wtp_news.empty:
+        st.info("Geen WTP-gerelateerde nieuwsartikelen gevonden in de laatste 180 dagen.")
+    else:
+        # Tag each headline with a signal badge
+        STRONG = ("mag over", "is ingevaren", "ingevaren", "stemt voor", "gaat de nieuwe", "gaat over op", "overgegaan")
+        PLAN   = ("implementatieplan", "transitieplan", "stap op weg", "besluit", "klaar", "overstap")
+        def tag(title: str) -> str:
+            t = (title or "").lower()
+            if any(s in t for s in STRONG):
+                return badge("✓ Goedgekeurd / ingevaren", "green")
+            if any(s in t for s in PLAN):
+                return badge("Planning / voorbereiding", "blue")
+            return badge("Communicatie", "outline")
+
+        wtp_news = wtp_news.copy()
+        wtp_news["Signal"] = wtp_news["Headline"].apply(tag)
+
+        # Filters
+        f1, f2 = st.columns([2, 3])
+        with f1:
+            fund_filter = st.multiselect(
+                "Filter op fonds",
+                sorted(wtp_news["Fund"].unique().tolist()),
+                placeholder="alle fondsen",
+            )
+        with f2:
+            kw = st.text_input("Zoek in titels", placeholder="bv. ingevaren, beton, implementatieplan")
+
+        view = wtp_news.copy()
+        if fund_filter:
+            view = view[view["Fund"].isin(fund_filter)]
+        if kw:
+            view = view[view["Headline"].str.contains(kw, case=False, na=False)]
+
+        st.caption(
+            f"**{len(view)}** van **{len(wtp_news)}** WTP-updates getoond "
+            f"(periode {wtp_news['Date'].min()} → {wtp_news['Date'].max()})"
+        )
+
+        # Counts per signal in current filter
+        sig_strong = view["Headline"].apply(lambda t: any(s in (t or '').lower() for s in STRONG)).sum()
+        sig_plan = view["Headline"].apply(lambda t: any(s in (t or '').lower() for s in PLAN)).sum()
+        st.markdown(
+            " ".join([
+                badge(f"✓ Goedgekeurd / ingevaren: {int(sig_strong)}", "green"),
+                badge(f"Planning / voorbereiding: {int(sig_plan)}", "blue"),
+                badge(f"Overige communicatie: {len(view) - int(sig_strong) - int(sig_plan)}", "outline"),
+            ]),
+            unsafe_allow_html=True,
+        )
+
+        st.dataframe(
+            view[["Date", "Fund", "Headline", "url", "Category"]],
+            use_container_width=True,
+            hide_index=True,
+            column_config={
+                "Date": st.column_config.TextColumn("Datum"),
+                "Fund": st.column_config.TextColumn("Fonds"),
+                "Headline": st.column_config.TextColumn("Kop", width="large"),
+                "url": st.column_config.LinkColumn("Bron", display_text="Open →"),
+                "Category": st.column_config.TextColumn("Categorie"),
+            },
+        )
+
+        # Per-fund counts: which funds had the most WTP coverage recently
+        per_fund = (
+            view.groupby("Fund")
+                .size().reset_index(name="updates")
+                .sort_values("updates", ascending=False).head(12)
+        )
+        if len(per_fund) > 1:
+            with st.expander("Top 12 fondsen op aantal WTP-updates in de selectie", expanded=False):
+                st.dataframe(per_fund, use_container_width=True, hide_index=True)
+
+    st.divider()
     
     if not wtp_df.empty:
         # Helper to convert Dutch string dates to sortable format YYYY-MM-DD
@@ -804,13 +909,12 @@ elif st.session_state.page == "WTP Tracker":
                     return f"{words[1]}-{month}-01"
             return d_str
 
-        # Helper to determine if a transition date is in the past (before March 2026)
+        # Helper to determine if a transition date is in the past (compared to today)
+        _today_iso = pd.Timestamp.now(tz='UTC').tz_localize(None).date().isoformat()
         def is_past(d_str):
             if not isinstance(d_str, str) or not d_str: return False
-            d = d_str.lower()
-            if any(y in d for y in ['2023', '2024', '2025']): return True
-            if any(m in d for m in ['jan-26', 'januari 2026', '2026-01']): return True
-            return False
+            sortable = to_sortable_date(d_str)
+            return isinstance(sortable, str) and sortable <= _today_iso
             
         wtp_df['sort_date'] = wtp_df['wtp_transitie_datum'].apply(to_sortable_date)
         wtp_df['is_past'] = wtp_df['wtp_transitie_datum'].apply(is_past)
