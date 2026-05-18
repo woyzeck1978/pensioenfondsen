@@ -756,23 +756,31 @@ elif st.session_state.page == "WTP Tracker":
     st.header("WTP Transition Tracker")
     st.markdown("Tracking the planned transition dates to the new pension system (Wet Toekomst Pensioenen).")
 
+    # After normalize_wtp_fields.py: wtp_invaren ∈ {'ja','nee','uitgesteld',NULL},
+    # wtp_transitie_datum is ISO YYYY-MM-DD or NULL. The "WTP plan known"
+    # criterion is now "has either a planned date or an invaren status".
     query = """
     SELECT name, aum_euro_bn, wtp_transitie_datum, wtp_contract_type, wtp_invaren
     FROM funds
-    WHERE wtp_transitie_datum IS NOT NULL
+    WHERE wtp_transitie_datum IS NOT NULL OR wtp_invaren IS NOT NULL
     """
     wtp_df = load_data(query)
     total_funds_in_db = len(df_funds)
     wtp_known = len(wtp_df)
     spr_count = (wtp_df['wtp_contract_type'].astype(str).str.upper().str.contains('SPR|SOLIDAIR', na=False)).sum() if not wtp_df.empty else 0
     fpr_count = (wtp_df['wtp_contract_type'].astype(str).str.upper().str.contains('FPR|FLEXIB', na=False)).sum() if not wtp_df.empty else 0
-    invaren_done = (wtp_df['wtp_invaren'].astype(str).str.lower().isin(['ja','yes','true','ingevaren','done'])).sum() if not wtp_df.empty else 0
+    invaren_done = (wtp_df['wtp_invaren'] == 'ja').sum() if not wtp_df.empty else 0
+    invaren_uitgesteld = (wtp_df['wtp_invaren'] == 'uitgesteld').sum() if not wtp_df.empty else 0
+    today_iso = pd.Timestamp.now(tz='UTC').tz_localize(None).date().isoformat()
+    past_dates = (wtp_df['wtp_transitie_datum'].fillna('').astype(str) <= today_iso) & wtp_df['wtp_transitie_datum'].notna()
+    transitie_passed = int(past_dates.sum())
 
     render_kpi_row([
         kpi_card("WTP Plans Known", f"{wtp_known}",
                  sub=f"of {total_funds_in_db} tracked funds ({wtp_known/max(total_funds_in_db,1)*100:.0f}%)"),
-        kpi_card("Already Ingevaren", f"{invaren_done}",
-                 sub="funds with completed invaren"),
+        kpi_card("Ingevaren (status = ja)", f"{invaren_done}",
+                 sub=f"+ {transitie_passed} met datum in het verleden"
+                     + (f" · {invaren_uitgesteld} uitgesteld" if invaren_uitgesteld else "")),
         kpi_card("Solidair (SPR)", f"{spr_count}",
                  sub=f"vs FPR: {fpr_count}"),
         kpi_card("Avg AUM in Scope",
@@ -887,63 +895,54 @@ elif st.session_state.page == "WTP Tracker":
     st.divider()
     
     if not wtp_df.empty:
-        # Helper to convert Dutch string dates to sortable format YYYY-MM-DD
-        def to_sortable_date(d_str):
-            if not isinstance(d_str, str) or not d_str: 
-                return "2099-12-31"  # Default to far future for empty values
-            d = d_str.lower().strip()
-            month_map = {
-                'jan': '01', 'feb': '02', 'mrt': '03', 'apr': '04', 'mei': '05', 'jun': '06',
-                'jul': '07', 'aug': '08', 'sep': '09', 'okt': '10', 'nov': '11', 'dec': '12'
-            }
-            parts = d.split('-')
-            if len(parts) >= 3:
-                day = parts[0].zfill(2)
-                month = month_map.get(parts[1][:3], '01')
-                year = "20" + parts[2] if len(parts[2]) == 2 else parts[2]
-                return f"{year}-{month}-{day}"
-            elif "20" in d: # e.g., "januari 2026"
-                words = d.split()
-                if len(words) == 2:
-                    month = month_map.get(words[0][:3], '01')
-                    return f"{words[1]}-{month}-01"
-            return d_str
+        # wtp_transitie_datum is ISO YYYY-MM-DD after normalize_wtp_fields.py.
+        # Split into past (transitie voltooid) vs future (gepland).
+        today_iso = pd.Timestamp.now(tz='UTC').tz_localize(None).date().isoformat()
+        wtp_df = wtp_df.copy()
+        wtp_df['sort_date'] = wtp_df['wtp_transitie_datum'].fillna('2099-12-31')
+        wtp_df['is_past'] = (
+            wtp_df['wtp_transitie_datum'].notna()
+            & (wtp_df['wtp_transitie_datum'] <= today_iso)
+        )
+        # 'Ingevaren = ja' overrides: treat as past even if datum is missing
+        wtp_df.loc[wtp_df['wtp_invaren'] == 'ja', 'is_past'] = True
 
-        # Helper to determine if a transition date is in the past (compared to today)
-        _today_iso = pd.Timestamp.now(tz='UTC').tz_localize(None).date().isoformat()
-        def is_past(d_str):
-            if not isinstance(d_str, str) or not d_str: return False
-            sortable = to_sortable_date(d_str)
-            return isinstance(sortable, str) and sortable <= _today_iso
-            
-        wtp_df['sort_date'] = wtp_df['wtp_transitie_datum'].apply(to_sortable_date)
-        wtp_df['is_past'] = wtp_df['wtp_transitie_datum'].apply(is_past)
-        
         past_df = wtp_df[wtp_df['is_past']].drop(columns=['is_past'])
         future_df = wtp_df[~wtp_df['is_past']].drop(columns=['is_past'])
-        
+
         c1, c2 = st.columns(2)
         with c1:
-            timeline_counts = future_df['wtp_transitie_datum'].value_counts().reset_index()
-            timeline_counts.columns = ['Transition Date', 'Number of Funds']
-            timeline_counts['Sort Key'] = timeline_counts['Transition Date'].apply(to_sortable_date)
-            timeline_counts = timeline_counts.sort_values('Sort Key').drop(columns=['Sort Key'])
-            fig_bar = px.bar(timeline_counts, x='Transition Date', y='Number of Funds', title="Planned Transitions per Date")
-            st.plotly_chart(fig_bar, use_container_width=True)
-            
+            timeline = (
+                future_df.dropna(subset=['wtp_transitie_datum'])
+                         .groupby('wtp_transitie_datum').size()
+                         .reset_index(name='Number of Funds')
+                         .rename(columns={'wtp_transitie_datum': 'Transition Date'})
+                         .sort_values('Transition Date')
+            )
+            if not timeline.empty:
+                fig_bar = px.bar(
+                    timeline, x='Transition Date', y='Number of Funds',
+                    title="Planned Transitions per Date",
+                )
+                fig_bar.update_xaxes(type='category')
+                st.plotly_chart(fig_bar, use_container_width=True)
+            else:
+                st.info("Geen geplande transities meer — alles is voltooid of zonder datum.")
+
         with c2:
             contract_counts = wtp_df['wtp_contract_type'].value_counts().reset_index()
             contract_counts.columns = ['Contract Type', 'Count']
-            fig_pie = px.pie(contract_counts, names='Contract Type', values='Count', title="All Contract Types (SPR vs FPR)")
+            fig_pie = px.pie(contract_counts, names='Contract Type', values='Count',
+                             title="All Contract Types (SPR vs FPR)")
             st.plotly_chart(fig_pie, use_container_width=True)
-            
+
         st.subheader("🚀 Reeds Ingevaren (Transitie Voltooid)")
         if not past_df.empty:
-            sorted_past = past_df.sort_values('sort_date', ascending=True).drop(columns=['sort_date'])
+            sorted_past = past_df.sort_values('sort_date', ascending=False).drop(columns=['sort_date'])
             st.dataframe(sorted_past, use_container_width=True, hide_index=True)
         else:
             st.info("Nog geen fondsen geregistreerd als ingevaren.")
-            
+
         st.subheader("📅 Geplande Transities (Toekomst)")
         if not future_df.empty:
             sorted_future = future_df.sort_values('sort_date', ascending=True).drop(columns=['sort_date'])
