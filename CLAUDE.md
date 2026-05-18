@@ -65,6 +65,49 @@ Before running any script, check the `sqlite3.connect(...)` line and `cd` accord
 
 PDFs in `data/reports/` and `data/annual_reports/` are typically named `<fund_id>_<FundName>.pdf` (e.g. `106_Hoogovens.pdf`, `73_Ahold_Delhaize.pdf`); the leading integer matches `funds.id` and parsers rely on that mapping.
 
+## Automated bi-daily scrape (launchd)
+
+A launchd agent re-scrapes all fund websites every 2 days, parses the new
+news URLs, and pushes the updated `pension_funds.db` to `origin/main`. The
+Streamlit Cloud app rebuilds from main automatically.
+
+Files:
+- `scripts/automation/scrape_push.sh` — the runner. Pre/post counts,
+  abort on script failure, skip commit if DB byte-identical, push retry
+  3× with 30s back-off (handles Google Drive sync locks).
+- `~/Library/LaunchAgents/nl.wuite.pensioenfondsen.scrape.plist` — the
+  launchd job spec. `StartInterval=172800`, logs to `logs/cron/`.
+
+Managing:
+
+```bash
+# Status (will show PID if running, last exit code if not)
+launchctl list | grep pensioen
+
+# Fire it now (smoke test) — does NOT change the schedule
+launchctl kickstart -p gui/$(id -u)/nl.wuite.pensioenfondsen.scrape
+
+# Stop the recurring job
+launchctl bootout gui/$(id -u) ~/Library/LaunchAgents/nl.wuite.pensioenfondsen.scrape.plist
+
+# Re-arm
+launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/nl.wuite.pensioenfondsen.scrape.plist
+
+# Inspect last run
+ls -t logs/cron/*.log | head -1 | xargs tail -50
+# Or via launchd's combined stream:
+tail logs/cron/launchd.out logs/cron/launchd.err
+```
+
+Caveats:
+- Mac must be awake at the fire time (or wake before the next interval).
+  `launchd` will run a missed job the moment the Mac wakes up.
+- Auto-commits land as `Webko Wuite <webkowuite@mac.home>`. To attribute
+  them to a real email, run `git config user.email …` once in the repo.
+- Two fund sites (`pensioencg.nl`, `pnb.nl`) sit behind Cloudflare and
+  return a "Challenge Validation" page — the script catalogues those
+  URLs but can't parse real titles. Acceptable noise for now.
+
 ## Quirks to keep in mind
 
 - All domain terms are Dutch — `dekkingsgraad` (funding ratio), `beleidsdekkingsgraad` (policy funding ratio), `deelnemers` (participants: actief / slapers / gepensioneerd), `toeslag` (indexation), `uitvoerder` (admin provider), `fiduciair_beheerder` (fiduciary manager), `transitieplan`/`invaren`/`Wtp` (the 2024-2027 pension-system transition). Preserve Dutch column names when adding fields.
