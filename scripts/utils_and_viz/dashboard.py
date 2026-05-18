@@ -92,9 +92,10 @@ def get_all_funds():
 @st.cache_data(ttl=3600)
 def get_latest_news():
     query = """
-    -- Combine parsed news_articles (have Dutch published_date) with fresh
-    -- scraped_documents URLs (no parsed date, fall back to discovered_at).
-    -- Prefer news_articles when same URL appears in both.
+    -- Only show articles with a real publication date. The scraped_documents
+    -- fallback used discovered_at (=scrape date), which conflated "added to
+    -- DB today" with "published today". Items without a parsed publication
+    -- date are filtered out rather than shown with a misleading scrape date.
     SELECT
         n.published_date as "Date",
         f.name as "Pension Fund",
@@ -103,18 +104,9 @@ def get_latest_news():
         f.category as "Category"
     FROM news_articles n
     JOIN funds f ON n.fund_id = f.id
-    UNION ALL
-    SELECT
-        date(s.discovered_at) as "Date",
-        f.name as "Pension Fund",
-        COALESCE(s.title, s.url) as "Headline",
-        s.url,
-        f.category as "Category"
-    FROM scraped_documents s
-    JOIN funds f ON s.fund_id = f.id
-    WHERE s.doc_type = 'news'
-      AND s.url NOT IN (SELECT url FROM news_articles)
-    ORDER BY 1 DESC
+    WHERE n.published_date IS NOT NULL
+      AND n.title IS NOT NULL
+    ORDER BY date(n.published_date) DESC, n.id DESC
     LIMIT 500
     """
     return load_data(query)
