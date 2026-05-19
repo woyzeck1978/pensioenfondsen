@@ -38,12 +38,52 @@ DB_PATH = "../../data/processed/pension_funds.db"
 DIRS = ["../../data/annual_reports", "../../data/reports"]
 LOG_DIR = "../../logs/llm_extract"
 
-# Pages with these keywords are candidates per concept
-KW = {
-    "sfdr": re.compile(r"sfdr|duurzaam(?:heid)?|artikel\s*[689]\b", re.I),
-    "deelnemers": re.compile(r"kerncijfers|aantal\s+deelnemers|deelnemers,\s+actief|gewezen\s+deelnemers|pensioengerechtig", re.I),
-    "taxonomy": re.compile(r"taxonomie|taxonomy|sustainable\s+investment", re.I),
-}
+# Page-scoring patterns per concept. Score-based selection picks pages
+# with concentrated, data-rich content — not pages that just mention a
+# keyword in passing. A page with the table "12.345 actieve deelnemers
+# 9.876 gewezen deelnemers" scores high; a paragraph saying "de
+# deelnemers zijn belangrijk" scores low.
+
+# Deelnemers: number-noun pairs are gold; "Kerncijfers" header is gold-plus.
+RE_DEELN_NUMERIC = re.compile(
+    r"\b\d{2,3}(?:[.\s]\d{3})+\s+(?:actieve?|gewezen|gepens(?:ione)?|pensioengerecht|verzekerd|deelnemer)\b"
+    r"|\b(?:actieve?|gewezen|gepens(?:ione)?|pensioengerecht|verzekerd|deelnemer)s?\s*[:\-]?\s*\d{2,3}(?:[.\s]\d{3})+",
+    re.I,
+)
+RE_DEELN_HEADER = re.compile(
+    r"\b(?:kerncijfers|kerngegevens|aantal\s+(?:actieve?\s+)?(?:deelnemers|verzekerden|pensioengerechtig|werknemers))\b",
+    re.I,
+)
+
+# SFDR: classification statements (artikel 8 SFDR-product, valt onder artikel 8, etc.)
+RE_SFDR_NUMERIC = re.compile(
+    r"\b(?:artikel|article)\s*[689]\b[\s\S]{0,40}sfdr|sfdr[\s\S]{0,40}\b(?:artikel|article)\s*[689]\b",
+    re.I,
+)
+RE_SFDR_HEADER = re.compile(
+    r"\b(?:sfdr|disclosure\s+regulation|duurzaamheidsrapport|esg-rapportage|annex.*?sfdr)\b",
+    re.I,
+)
+
+# EU Taxonomy: numeric percentages near 'taxonomie'
+RE_TAX_NUMERIC = re.compile(
+    r"\d{1,3}(?:[,.]\d{1,2})?\s*%[\s\S]{0,60}?(?:taxonomie|taxonomy)|"
+    r"(?:taxonomie|taxonomy)[\s\S]{0,80}?\d{1,3}(?:[,.]\d{1,2})?\s*%",
+    re.I,
+)
+RE_TAX_HEADER = re.compile(
+    r"\b(?:eu[\s\-]?taxonomie|eu[\s\-]?taxonomy|taxonomie-?verordening|taxonomy.*?regulation)\b",
+    re.I,
+)
+
+
+def score_page_per_concept(text: str) -> dict[str, int]:
+    """Score a page per concept; higher = more data-rich."""
+    return {
+        "deelnemers": 5 * len(RE_DEELN_HEADER.findall(text)) + len(RE_DEELN_NUMERIC.findall(text)),
+        "sfdr":      5 * len(RE_SFDR_HEADER.findall(text))   + 3 * len(RE_SFDR_NUMERIC.findall(text)),
+        "taxonomy":  5 * len(RE_TAX_HEADER.findall(text))    + 3 * len(RE_TAX_NUMERIC.findall(text)),
+    }
 
 PROMPT = """Je krijgt fragmenten uit een Nederlands pensioenfonds-jaarverslag. \
 Lever ALLEEN JSON terug — geen toelichting, geen markdown.
@@ -87,22 +127,41 @@ def build_inventory() -> dict[int, str]:
 
 
 def build_context(pdf_path: str, max_pages: int = 10) -> tuple[str, list[int]]:
-    """Find pages matching any of the concept keywords, return concatenated context."""
+    """Pick the highest-scoring pages per concept, union top-K, send to LLM.
+
+    Score = 5×header-matches + 3×numeric-matches (per concept). A 'kerncijfers'
+    page with several '12.345 actieve deelnemers' lines scores far higher
+    than a page that just mentions 'deelnemers' in passing.
+
+    For each concept, take top-4 pages by score (must be score > 0).
+    Union, sort, dedupe → max_pages total.
+    """
     doc = fitz.open(pdf_path)
-    candidates: dict[int, str] = {}
+    per_concept: dict[str, list[tuple[int, int]]] = {"deelnemers": [], "sfdr": [], "taxonomy": []}
+    page_text: dict[int, str] = {}
     for i, p in enumerate(doc):
         if i >= 250:
             break
         text = p.get_text()
-        if any(rx.search(text) for rx in KW.values()):
-            candidates[i + 1] = text
+        scores = score_page_per_concept(text)
+        for concept, sc in scores.items():
+            if sc > 0:
+                per_concept[concept].append((sc, i + 1))
+        page_text[i + 1] = text
     doc.close()
-    if not candidates:
+
+    selected_pages: set[int] = set()
+    for concept, items in per_concept.items():
+        items.sort(reverse=True)  # high score first
+        for _, pi in items[:4]:
+            selected_pages.add(pi)
+
+    if not selected_pages:
         return "", []
-    selected = sorted(candidates.items())[:max_pages]
-    pages = [n for n, _ in selected]
+
+    pages = sorted(selected_pages)[:max_pages]
     ctx = "\n\n--- BREAK ---\n\n".join(
-        f"[page {n}]\n{t.strip()[:1500]}" for n, t in selected
+        f"[page {n}]\n{page_text[n].strip()[:1500]}" for n in pages
     )
     return ctx, pages
 
