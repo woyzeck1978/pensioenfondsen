@@ -123,6 +123,7 @@ def get_metrics_history(fund_id):
     SELECT year, aum_euro_bn, economische_dekkingsgraad_pct, nominale_dekkingsgraad_pct,
            beleidsdekkingsgraad_pct, vereiste_dekkingsgraad_pct, reele_dekkingsgraad_pct,
            beleggingsrendement_pct, indexatieverlening_pct, cpi_pct,
+           zakelijke_waarden_pct, rente_afdekking_pct, rente_afdekking_rendement_pct,
            deelnemers_actief, deelnemers_slapers, deelnemers_pensioengerechtigd, deelnemers_totaal
     FROM historical_metrics
     WHERE fund_id = {fund_id}
@@ -545,6 +546,9 @@ elif st.session_state.page == "Fund Deep-Dive":
                     'vereiste_dekkingsgraad_pct': 'Vereiste dekkingsgraad',
                     'reele_dekkingsgraad_pct': 'Reële dekkingsgraad',
                     'beleggingsrendement_pct': 'Totaal rendement',
+                    'zakelijke_waarden_pct': '% Zakelijke waarden',
+                    'rente_afdekking_pct': '% Renteafdekking',
+                    'rente_afdekking_rendement_pct': 'Rendement renteafdekking',
                     'indexatieverlening_pct': 'Indexatie (toeslag)',
                     'cpi_pct': 'CPI (Prijsinflatie)',
                     'deelnemers_actief': 'Actieve deelnemers',
