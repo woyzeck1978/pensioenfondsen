@@ -2,6 +2,11 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+> **New here?** Read `ROADMAP.md` first — it's the project state at the
+> end of the May 2026 sessions: what's been done, what's open, and
+> concrete first steps for each open item. This file describes *how*
+> to work on the code; ROADMAP describes *what* to work on next.
+
 ## Project purpose
 
 Research dataset of Dutch pension funds (`pensioenfondsen`). The pipeline scrapes fund websites, downloads annual reports / `transitieplannen` PDFs, parses metrics out of them, and stores everything in a single SQLite database that drives a Streamlit dashboard and an Excel export. The repo is a personal research tool, not a deployed product — scripts are run ad-hoc and frequently rewritten per fund.
