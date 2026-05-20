@@ -37,13 +37,20 @@ DB_PATH = "../../data/processed/pension_funds.db"
 DIRS = ["../../data/annual_reports", "../../data/reports"]
 LOG_DIR = "../../logs/llm_extract"
 
-# Page selection: must have a strong "kerncijfers" header AND numeric deelnemer pattern
+# Page selection: header is required; numeric pattern is a scoring bonus.
+# Including small funds (Lloyd's-style: 351 actief) means the numeric regex
+# also matches plain 3-7 digit numbers — but only on pages that already
+# have a strong kerncijfers/meerjarenoverzicht header.
 RE_KERNCIJFER_HEADER = re.compile(
-    r"\b(?:kerncijfers|kerngegevens|meerjarenoverzicht|meerjaren-?overzicht)\b", re.I,
+    r"\b(?:kerncijfers|kerngegevens|meerjarenoverzicht|meerjaren-?overzicht|aantal\s+deelnemers)\b",
+    re.I,
 )
 RE_DEELN_NUMERIC = re.compile(
-    r"\b\d{2,3}(?:[.\s]\d{3})+\s+(?:actieve?|gewezen|gepens(?:ione)?|pensioengerecht|verzekerd|deelnemer)\b"
-    r"|\b(?:actieve?|gewezen|gepens(?:ione)?|pensioengerecht|verzekerd|deelnemer)s?\s*[:\-]?\s*\d{2,3}(?:[.\s]\d{3})+",
+    # number-then-label: '12.345 actieve' or '351 actieve' (thousand sep optional)
+    r"\b\d{2,3}(?:[.\s]\d{3})*\s+(?:actieve?|gewezen|gepens(?:ione)?|pensioengerecht|verzekerd|deelnemer)\b"
+    r"|"
+    # label-then-numbers: 'actieve deelnemers 351 386 414' (multiple year columns)
+    r"\b(?:actieve?|gewezen|gepens(?:ione)?|pensioengerecht|verzekerd)\s+(?:deelnemers?\s+)?\d{2,7}",
     re.I,
 )
 
@@ -87,7 +94,13 @@ def build_inventory() -> dict[int, str]:
 
 
 def find_meerjaren_pages(pdf_path: str, max_pages: int = 3) -> tuple[str, list[int]]:
-    """Pages must have BOTH a kerncijfers-header AND a deelnemer-numeric hit."""
+    """Header is required; numeric pattern is a scoring bonus.
+
+    Pages with a kerncijfers/meerjarenoverzicht header are always
+    candidates. Numeric matches push them up the ranking so the actual
+    data tables outrank the table-of-contents page that just mentions
+    "Kerncijfers" once.
+    """
     doc = fitz.open(pdf_path)
     scored: list[tuple[int, int, str]] = []  # (score, page, text)
     for i, p in enumerate(doc):
@@ -95,9 +108,9 @@ def find_meerjaren_pages(pdf_path: str, max_pages: int = 3) -> tuple[str, list[i
             break
         text = p.get_text()
         header = len(RE_KERNCIJFER_HEADER.findall(text))
-        numeric = len(RE_DEELN_NUMERIC.findall(text))
-        if header == 0 or numeric == 0:
+        if header == 0:
             continue
+        numeric = len(RE_DEELN_NUMERIC.findall(text))
         scored.append((header * 5 + numeric, i + 1, text))
     doc.close()
     if not scored:
