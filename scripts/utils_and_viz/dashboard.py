@@ -7,6 +7,11 @@ import os
 import urllib.parse
 import re
 import html as _html
+import io
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_pdf import PdfPages
 
 # --- PAGE CONFIGURATION ---
 st.set_page_config(
@@ -110,6 +115,131 @@ def get_latest_news():
     LIMIT 500
     """
     return load_data(query)
+
+def build_fund_factsheet_pdf(fund_row, history_df) -> bytes:
+    """Return a 1-page PDF factsheet as bytes. Uses matplotlib only."""
+    buf = io.BytesIO()
+    with PdfPages(buf) as pdf:
+        fig = plt.figure(figsize=(8.27, 11.69), dpi=120)  # A4 portrait
+        gs = fig.add_gridspec(6, 2, hspace=0.55, wspace=0.25)
+
+        # Header
+        ax_head = fig.add_subplot(gs[0, :]); ax_head.axis("off")
+        ax_head.text(0.0, 0.85, str(fund_row.get('name') or 'Fund'),
+                     fontsize=18, fontweight='bold', color='#17202A')
+        cat = fund_row.get('category') or '—'
+        ax_head.text(0.0, 0.55, f"Category: {cat}", fontsize=10, color='#5C6875')
+        ax_head.text(1.0, 0.85, "Pension Fund Factsheet", fontsize=10,
+                     color='#5C6875', ha='right')
+        ax_head.text(1.0, 0.55, f"Generated {pd.Timestamp.now(tz='UTC').tz_localize(None).date()}",
+                     fontsize=8, color='#8F9BA8', ha='right')
+
+        # KPI tiles
+        ax_kpi = fig.add_subplot(gs[1, :]); ax_kpi.axis("off")
+        def _fmt(v, fmt):
+            if v is None or pd.isna(v):
+                return "—"
+            return fmt.format(v)
+        kpis = [
+            ("AUM",                _fmt(fund_row.get('aum_euro_bn'),         "€{:,.1f} Bn")),
+            ("Dekkingsgraad",      _fmt(fund_row.get('dekkingsgraad_pct'),   "{:.1f}%")),
+            ("Beleidsdekkingsgr.", _fmt(fund_row.get('beleidsdekkingsgraad_pct'), "{:.1f}%")),
+            ("Equity allocation",  _fmt(fund_row.get('equity_allocation_pct'), "{:.1f}%")),
+            ("Deelnemers totaal",  _fmt(fund_row.get('deelnemers_totaal'),   "{:,.0f}").replace(",", ".")),
+        ]
+        for i, (label, value) in enumerate(kpis):
+            x = 0.02 + i * 0.196
+            ax_kpi.text(x, 0.70, label.upper(), fontsize=7.5,
+                        color='#5C6875', transform=ax_kpi.transAxes)
+            ax_kpi.text(x, 0.30, value, fontsize=14, fontweight='bold',
+                        color='#17202A', transform=ax_kpi.transAxes)
+
+        # Beleidsdekkingsgraad over time
+        ax_dekk = fig.add_subplot(gs[2:4, :])
+        if not history_df.empty and history_df['beleidsdekkingsgraad_pct'].notna().any():
+            d = history_df.sort_values('year')
+            ax_dekk.plot(d['year'], d['beleidsdekkingsgraad_pct'],
+                         marker='o', color='#6554A3', linewidth=1.8)
+            ax_dekk.axhline(100, linestyle='--', color='#B13B3B', linewidth=0.8)
+            ax_dekk.set_title("Beleidsdekkingsgraad (%)", fontsize=11, loc='left', color='#2F3A45')
+            ax_dekk.set_xlabel(""); ax_dekk.set_ylabel("")
+            ax_dekk.spines[['top', 'right']].set_visible(False)
+            ax_dekk.grid(True, axis='y', linestyle=':', linewidth=0.5, color='#D9DEE5')
+        else:
+            ax_dekk.axis("off")
+            ax_dekk.text(0.5, 0.5, "No history available", ha='center', color='#8F9BA8')
+
+        # AUM evolution
+        ax_aum = fig.add_subplot(gs[4, 0])
+        if not history_df.empty and history_df['aum_euro_bn'].notna().any():
+            d = history_df.sort_values('year')
+            ax_aum.bar(d['year'], d['aum_euro_bn'].fillna(0), color='#1F6FB2', width=0.7)
+            ax_aum.set_title("AUM (€ Bn)", fontsize=10, loc='left', color='#2F3A45')
+            ax_aum.spines[['top', 'right']].set_visible(False)
+            ax_aum.grid(True, axis='y', linestyle=':', linewidth=0.5, color='#D9DEE5')
+        else:
+            ax_aum.axis("off")
+
+        # Deelnemers stacked
+        ax_dln = fig.add_subplot(gs[4, 1])
+        cols = ['deelnemers_actief', 'deelnemers_slapers', 'deelnemers_pensioengerechtigd']
+        if not history_df.empty and any(c in history_df.columns and history_df[c].notna().any() for c in cols):
+            d = history_df.sort_values('year').copy()
+            for c in cols:
+                if c not in d.columns:
+                    d[c] = 0
+            d[cols] = d[cols].fillna(0)
+            ax_dln.stackplot(d['year'],
+                             d['deelnemers_actief'], d['deelnemers_slapers'],
+                             d['deelnemers_pensioengerechtigd'],
+                             labels=['actief', 'slapers', 'gepens.'],
+                             colors=['#2F7D57', '#C66B16', '#6554A3'], alpha=0.85)
+            ax_dln.set_title("Deelnemers", fontsize=10, loc='left', color='#2F3A45')
+            ax_dln.legend(loc='upper left', fontsize=7, frameon=False)
+            ax_dln.spines[['top', 'right']].set_visible(False)
+        else:
+            ax_dln.axis("off")
+
+        # Footer
+        ax_foot = fig.add_subplot(gs[5, :]); ax_foot.axis("off")
+        uitv = fund_row.get('uitvoerder') or '—'
+        sfdr_raw = fund_row.get('sfdr_article')
+        sfdr = f"Article {int(sfdr_raw)}" if pd.notnull(sfdr_raw) else "—"
+        site = fund_row.get('website') or '—'
+        ax_foot.text(0.0, 0.85, f"Uitvoerder: {uitv}", fontsize=9, color='#2F3A45')
+        ax_foot.text(0.0, 0.55, f"SFDR: {sfdr}", fontsize=9, color='#2F3A45')
+        ax_foot.text(0.0, 0.25, f"Website: {site}", fontsize=8, color='#5C6875')
+        ax_foot.text(1.0, 0.10, "Source: DNB statpub + funds' annual reports",
+                     fontsize=7, color='#8F9BA8', ha='right')
+
+        pdf.savefig(fig, bbox_inches='tight')
+        plt.close(fig)
+    buf.seek(0)
+    return buf.getvalue()
+
+
+def get_peer_history(category: str, exclude_fund_id: int):
+    """Per-year sector average for funds in the same category, excluding self.
+
+    Returns columns: year, peer_beleidsdg, peer_rendement, peer_count.
+    """
+    if not category:
+        return pd.DataFrame()
+    q = f"""
+    SELECT h.year,
+           AVG(h.beleidsdekkingsgraad_pct) AS peer_beleidsdg,
+           AVG(h.beleggingsrendement_pct)  AS peer_rendement,
+           COUNT(DISTINCT h.fund_id)       AS peer_count
+    FROM historical_metrics h JOIN funds f ON f.id = h.fund_id
+    WHERE f.category = ? AND h.fund_id != ?
+    GROUP BY h.year
+    ORDER BY h.year
+    """
+    con = sqlite3.connect(DB_PATH)
+    df = pd.read_sql_query(q, con, params=(category, exclude_fund_id))
+    con.close()
+    return df
+
 
 def get_metrics_history(fund_id):
     """Multi-year metrics for a fund.
@@ -332,11 +462,43 @@ if st.session_state.page == "Sector Overview":
         st.plotly_chart(fig_pie, use_container_width=True)
         
     st.divider()
-    st.subheader("Fund Directory")
-    st.markdown("Select a row to preview the fund inline, or use the link column to jump to its Deep-Dive page.")
+    head_col, dl_col = st.columns([5, 1])
+    with head_col:
+        st.subheader("Fund Directory")
+        st.markdown("Select a row to preview the fund inline, or use the link column to jump to its Deep-Dive page.")
 
     df_display = df_funds[['name', 'category', 'aum_euro_bn', 'dekkingsgraad_pct', 'equity_allocation_pct', 'uitvoerder']].copy()
     df_display.insert(0, 'Profile Link', df_display['name'].apply(lambda x: f"/?fund={urllib.parse.quote_plus(x)}"))
+
+    # Excel export of the current directory (whatever the user has filtered/sorted)
+    with dl_col:
+        try:
+            _xlsx_buf = io.BytesIO()
+            _export_df = df_display.drop(columns=['Profile Link']).rename(columns={
+                'name': 'Fund',
+                'category': 'Category',
+                'aum_euro_bn': 'AUM (€ Bn)',
+                'dekkingsgraad_pct': 'Dekkingsgraad %',
+                'equity_allocation_pct': 'Equity %',
+                'uitvoerder': 'Uitvoerder',
+            })
+            with pd.ExcelWriter(_xlsx_buf, engine='xlsxwriter') as writer:
+                _export_df.to_excel(writer, sheet_name='Fund Directory', index=False)
+                ws = writer.sheets['Fund Directory']
+                ws.set_column(0, 0, 36)  # Fund name
+                ws.set_column(1, 1, 18)  # Category
+                ws.set_column(2, 4, 14, writer.book.add_format({'num_format': '#,##0.00'}))
+                ws.set_column(5, 5, 28)
+                ws.freeze_panes(1, 0)
+            st.download_button(
+                label="📥 Excel",
+                data=_xlsx_buf.getvalue(),
+                file_name=f"fund_directory_{pd.Timestamp.now(tz='UTC').tz_localize(None).date()}.xlsx",
+                mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                use_container_width=True,
+            )
+        except Exception as e:
+            st.caption(f"Excel unavailable ({e})")
 
     selection = st.dataframe(
         df_display,
@@ -449,9 +611,25 @@ elif st.session_state.page == "Fund Deep-Dive":
         if 'description' in fund_data and pd.notnull(fund_data['description']) and fund_data['description'] != "":
             st.info(fund_data['description'])
             
-        if pd.notnull(fund_data['website']) and fund_data['website'] != "":
-            st.markdown(f"🌐 **Website:** [{fund_data['website']}]({fund_data['website']})")
-            
+        link_col, dl_col = st.columns([4, 1])
+        with link_col:
+            if pd.notnull(fund_data['website']) and fund_data['website'] != "":
+                st.markdown(f"🌐 **Website:** [{fund_data['website']}]({fund_data['website']})")
+        with dl_col:
+            try:
+                _hist = get_metrics_history(int(fund_id))
+                pdf_bytes = build_fund_factsheet_pdf(fund_data, _hist)
+                _safe_name = re.sub(r'[^A-Za-z0-9]+', '_', str(fund_data['name'])).strip('_')
+                st.download_button(
+                    label="📄 PDF Factsheet",
+                    data=pdf_bytes,
+                    file_name=f"factsheet_{fund_id}_{_safe_name}.pdf",
+                    mime="application/pdf",
+                    use_container_width=True,
+                )
+            except Exception as e:
+                st.caption(f"PDF unavailable ({e})")
+
         # Investment Beliefs moved to ESG section
         render_kpi_row([
             kpi_card("AUM",
@@ -529,11 +707,38 @@ elif st.session_state.page == "Fund Deep-Dive":
                 for col in ["beleidsdekkingsgraad_pct", "beleggingsrendement_pct"]:
                     if col in history_df.columns:
                         history_df[col] = pd.to_numeric(history_df[col], errors='coerce')
-                        
-                fig_line = px.line(history_df, x="year", y=["beleidsdekkingsgraad_pct", "beleggingsrendement_pct"], 
+
+                show_peer = st.toggle(
+                    "Vergelijk met categorie-gemiddelde",
+                    value=False,
+                    help=f"Toon het gemiddelde over alle {fund_data.get('category') or 'overige'} fondsen op dezelfde grafiek.",
+                )
+
+                fig_line = px.line(history_df, x="year", y=["beleidsdekkingsgraad_pct", "beleggingsrendement_pct"],
                                    labels={"value": "Percentage (%)", "year": "Jaarverslag", "variable": "Metric"},
                                    title="Meerjarenoverzicht: Dekkingsgraad & Rendement (Jaarrapportages)")
                 fig_line.update_xaxes(dtick=1, tickformat="d")
+
+                if show_peer:
+                    peer_df = get_peer_history(fund_data.get('category'), int(fund_id))
+                    if not peer_df.empty:
+                        # Add peer averages as dashed lines on the same axis
+                        fig_line.add_scatter(
+                            x=peer_df['year'], y=peer_df['peer_beleidsdg'],
+                            mode='lines+markers', name='peer beleidsdg',
+                            line=dict(dash='dot', color='#8F9BA8'),
+                        )
+                        fig_line.add_scatter(
+                            x=peer_df['year'], y=peer_df['peer_rendement'],
+                            mode='lines+markers', name='peer rendement',
+                            line=dict(dash='dot', color='#C66B16'),
+                        )
+                        cat = fund_data.get('category') or 'Unknown'
+                        peer_n = int(peer_df['peer_count'].max()) if not peer_df.empty else 0
+                        st.caption(f"Peer-overlay: gemiddelde van **{peer_n}** fondsen in categorie '{cat}' (exclusief dit fonds).")
+                    else:
+                        st.caption("Geen peer-data beschikbaar voor deze categorie.")
+
                 st.plotly_chart(fig_line, use_container_width=True)
                 
                 st.markdown("#### Meerjarenoverzicht (Jaarrapportages)")
