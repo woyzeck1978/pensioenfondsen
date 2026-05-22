@@ -381,6 +381,20 @@ if "page" not in st.session_state:
 if "selected_fund" not in st.session_state:
     st.session_state.selected_fund = None
 
+if "recent_funds" not in st.session_state:
+    st.session_state.recent_funds = []  # most-recent first, max 5
+
+
+def _push_recent(fund_name: str | None) -> None:
+    """Add to the front of recent_funds, dedupe, cap at 5."""
+    if not fund_name:
+        return
+    rf = st.session_state.recent_funds
+    if rf and rf[0] == fund_name:
+        return
+    rf = [fund_name] + [n for n in rf if n != fund_name]
+    st.session_state.recent_funds = rf[:5]
+
 pages = ["Sector Overview", "Fund Deep-Dive", "Fund Comparison", "Equity Strategy Deep-Dive", "Asset Managers Exposure", "WTP Tracker", "Dekkingsgraad Analysis", "ESG & SFDR Tracker", "Industry News Feed", "Begrippenlijst"]
 
 # Sidebar Navigation — subtle, no loud titles
@@ -414,6 +428,29 @@ st.sidebar.markdown(
 """,
     unsafe_allow_html=True,
 )
+
+# Recent fondsen — quick jump
+if st.session_state.recent_funds:
+    st.sidebar.markdown("<br>", unsafe_allow_html=True)
+
+    def _jump_recent(name: str):
+        def cb():
+            st.session_state.selected_fund = name
+            st.session_state.page = "Fund Deep-Dive"
+        return cb
+
+    with st.sidebar.container():
+        st.markdown(
+            '<div class="section-card-title">Recent bekeken</div>',
+            unsafe_allow_html=True,
+        )
+        for _name in st.session_state.recent_funds:
+            st.button(
+                _name[:30] + ("…" if len(_name) > 30 else ""),
+                key=f"recent_{_name}",
+                on_click=_jump_recent(_name),
+                use_container_width=True,
+            )
 
 
 # ==========================================
@@ -603,6 +640,7 @@ elif st.session_state.page == "Fund Deep-Dive":
     )
     
     if selected_fund_name:
+        _push_recent(selected_fund_name)
         fund_data = df_funds[df_funds['name'] == selected_fund_name].iloc[0]
         fund_id = fund_data['id']
         

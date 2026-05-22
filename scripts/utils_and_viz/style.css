@@ -167,3 +167,75 @@ section[data-testid="stSidebar"] [data-testid="stAlert"] {
   border-radius: 6px;
   padding: 8px;
 }
+
+/* ── Responsive: ≤768px (tablet portrait) ──────────────────────── */
+@media (max-width: 768px) {
+  /* KPI tiles stack on narrow screens */
+  .kpi-row {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px;
+  }
+  .kpi-card {
+    padding: 10px 12px;
+    min-height: auto;
+  }
+  .kpi-card .kpi-value { font-size: 20px; }
+  .kpi-card .kpi-label { font-size: 10px; }
+
+  /* Headings tighter */
+  h1, .stMarkdown h1 { font-size: 19px !important; }
+  h2, .stMarkdown h2 { font-size: 16px !important; }
+
+  /* Main padding tighter */
+  .main .block-container { padding-top: 0.8rem !important; }
+}
+
+/* ── Responsive: ≤480px (phones) ───────────────────────────────── */
+@media (max-width: 480px) {
+  .kpi-row {
+    grid-template-columns: 1fr !important;  /* one column */
+  }
+  /* Hide the dashboard subtitle text on phones (header alone is enough) */
+  .stMarkdown p:first-of-type { font-size: 13px; }
+}
+
+/* ── Print mode ────────────────────────────────────────────────── */
+@media print {
+  /* Hide chrome */
+  section[data-testid="stSidebar"],
+  [data-testid="stToolbar"],
+  [data-testid="stHeader"],
+  [data-testid="stStatusWidget"],
+  .stButton,
+  [data-testid="stDownloadButton"] { display: none !important; }
+
+  /* Full-width content */
+  .main .block-container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  /* Pure white background, black text */
+  body, [class*="stApp"] {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+  }
+
+  /* Avoid page breaks inside cards and charts */
+  .kpi-card,
+  .section-card,
+  [data-testid="stPlotlyChart"],
+  [data-testid="stDataFrame"] {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    box-shadow: none !important;
+  }
+
+  /* Keep colours readable on print */
+  .kpi-card .kpi-value,
+  h1, h2, h3 { color: #000 !important; }
+  .kpi-card .kpi-label { color: #444 !important; }
+
+  /* Drop borders on cards — they reproduce poorly on print */
+  .kpi-card, .section-card { border: 1px solid #ccc !important; }
+}
