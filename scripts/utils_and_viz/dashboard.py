@@ -251,7 +251,7 @@ if "page" not in st.session_state:
 if "selected_fund" not in st.session_state:
     st.session_state.selected_fund = None
 
-pages = ["Sector Overview", "Fund Deep-Dive", "Equity Strategy Deep-Dive", "Asset Managers Exposure", "WTP Tracker", "Dekkingsgraad Analysis", "ESG & SFDR Tracker", "Industry News Feed", "Begrippenlijst"]
+pages = ["Sector Overview", "Fund Deep-Dive", "Fund Comparison", "Equity Strategy Deep-Dive", "Asset Managers Exposure", "WTP Tracker", "Dekkingsgraad Analysis", "ESG & SFDR Tracker", "Industry News Feed", "Begrippenlijst"]
 
 # Sidebar Navigation — subtle, no loud titles
 st.sidebar.radio(" ", pages, key="page", label_visibility="collapsed")
@@ -642,6 +642,134 @@ elif st.session_state.page == "Fund Deep-Dive":
                 
             if 'investment_beliefs' in fund_data and pd.notnull(fund_data['investment_beliefs']) and fund_data['investment_beliefs'] != "":
                 st.markdown(f"#### Investment Beliefs\n> {fund_data['investment_beliefs']}")
+
+# ==========================================
+# PAGE 2C: FUND COMPARISON (side-by-side, up to 3 funds)
+# ==========================================
+elif st.session_state.page == "Fund Comparison":
+    st.header("Fund Comparison")
+    st.markdown(
+        "Selecteer 2 of 3 fondsen om de kerncijfers en historische ontwikkeling naast elkaar te zien."
+    )
+
+    comparable = df_funds[~df_funds['name'].isin(
+        ['APG', 'ASR', 'ASR PPI', 'Allianz', 'Allianz PPI', 'A.S. Watson Nederland']
+    )]
+    fund_options = comparable['name'].sort_values().tolist()
+
+    selected = st.multiselect(
+        "Te vergelijken fondsen (max 3)",
+        fund_options,
+        default=[],
+        max_selections=3,
+        placeholder="Begin typen om te zoeken…",
+    )
+
+    if len(selected) < 2:
+        st.info("Kies minimaal 2 fondsen om de vergelijking te tonen.")
+    else:
+        # Per-fund snapshot
+        snapshot_cols = ['name', 'category', 'aum_euro_bn', 'dekkingsgraad_pct',
+                         'beleidsdekkingsgraad_pct', 'equity_allocation_pct',
+                         'deelnemers_totaal', 'uitvoerder', 'sfdr_article']
+        snap = df_funds[df_funds['name'].isin(selected)][snapshot_cols].set_index('name').reindex(selected)
+
+        # Snapshot card row
+        cards = []
+        for name in selected:
+            row = snap.loc[name]
+            cat = str(row.get('category') or 'Unknown')
+            cat_color = {
+                "Tak": "purple", "Bedrijf": "blue", "Beroep": "teal",
+                "Verzekeraar": "orange", "APF": "gray", "PPI": "outline",
+                "Algemeen Pensioenfonds (Kring)": "blue",
+            }.get(cat, "gray")
+            badge_html = badge(cat, cat_color)
+            if pd.notnull(row.get('sfdr_article')):
+                a = str(int(row['sfdr_article']))
+                badge_html += " " + badge(f"SFDR Art {a}",
+                                          {"6": "gray", "8": "blue", "9": "green"}.get(a, "purple"))
+            aum = f"€{row['aum_euro_bn']:,.1f} Bn" if pd.notnull(row['aum_euro_bn']) else "—"
+            dekk = f"{row['dekkingsgraad_pct']:.1f}%" if pd.notnull(row['dekkingsgraad_pct']) else "—"
+            beleids = f"{row['beleidsdekkingsgraad_pct']:.1f}%" if pd.notnull(row['beleidsdekkingsgraad_pct']) else "—"
+            deeln = f"{row['deelnemers_totaal']:,.0f}".replace(",", ".") if pd.notnull(row['deelnemers_totaal']) else "—"
+            uitv = row.get('uitvoerder') or '—'
+            cards.append(
+                '<div class="kpi-card">'
+                f'<div class="kpi-label">{_html.escape(str(name))}</div>'
+                f'<div style="margin-bottom:8px;">{badge_html}</div>'
+                f'<div style="font-size:13px;color:var(--text-mid);line-height:1.8;">'
+                f'  <strong>AUM</strong> {aum}<br>'
+                f'  <strong>Dekkingsgraad</strong> {dekk}<br>'
+                f'  <strong>Beleidsdg</strong> {beleids}<br>'
+                f'  <strong>Deelnemers</strong> {deeln}<br>'
+                f'  <strong>Uitvoerder</strong> {_html.escape(str(uitv))}<br>'
+                f'</div></div>'
+            )
+        render_kpi_row(cards)
+        st.divider()
+
+        # Combined history
+        st.subheader("Historische Beleidsdekkingsgraad")
+        ids = [int(df_funds[df_funds['name'] == n]['id'].iloc[0]) for n in selected]
+        history_q = f"""
+            SELECT f.name AS fund, h.year, h.beleidsdekkingsgraad_pct, h.aum_euro_bn,
+                   h.beleggingsrendement_pct, h.deelnemers_totaal
+            FROM historical_metrics h JOIN funds f ON h.fund_id = f.id
+            WHERE h.fund_id IN ({','.join(map(str, ids))})
+            ORDER BY h.year
+        """
+        hist = load_data(history_q)
+        # Dedupe duplicate rows per (fund, year)
+        hist = hist.groupby(['fund', 'year'], as_index=False).last()
+
+        if not hist.empty:
+            fig_dekk = px.line(
+                hist.dropna(subset=['beleidsdekkingsgraad_pct']),
+                x='year', y='beleidsdekkingsgraad_pct', color='fund',
+                markers=True, labels={'beleidsdekkingsgraad_pct': 'Beleidsdekkingsgraad (%)', 'year': 'Jaar'},
+            )
+            fig_dekk.add_hline(y=100, line_dash='dot', line_color='#B13B3B',
+                               annotation_text='100% minimum', annotation_position='bottom right')
+            st.plotly_chart(fig_dekk, use_container_width=True)
+
+            c1, c2 = st.columns(2)
+            with c1:
+                st.subheader("AUM-ontwikkeling")
+                fig_aum = px.line(
+                    hist.dropna(subset=['aum_euro_bn']),
+                    x='year', y='aum_euro_bn', color='fund', markers=True,
+                    labels={'aum_euro_bn': 'AUM (€ Bn)', 'year': 'Jaar'}, log_y=True,
+                )
+                st.plotly_chart(fig_aum, use_container_width=True)
+            with c2:
+                st.subheader("Totaal rendement per jaar")
+                rend = hist.dropna(subset=['beleggingsrendement_pct'])
+                if not rend.empty:
+                    fig_rend = px.bar(
+                        rend, x='year', y='beleggingsrendement_pct', color='fund',
+                        barmode='group',
+                        labels={'beleggingsrendement_pct': 'Rendement (%)', 'year': 'Jaar'},
+                    )
+                    fig_rend.add_hline(y=0, line_color='#5C6875')
+                    st.plotly_chart(fig_rend, use_container_width=True)
+                else:
+                    st.info("Geen rendement-data beschikbaar voor deze selectie.")
+
+            st.subheader("Deelnemers-ontwikkeling")
+            dln = hist.dropna(subset=['deelnemers_totaal'])
+            if not dln.empty:
+                fig_dln = px.line(
+                    dln, x='year', y='deelnemers_totaal', color='fund', markers=True,
+                    labels={'deelnemers_totaal': 'Totaal aantal deelnemers', 'year': 'Jaar'},
+                    log_y=True,
+                )
+                st.plotly_chart(fig_dln, use_container_width=True)
+            else:
+                st.info("Geen deelnemers-tijdreeks beschikbaar voor deze selectie.")
+        else:
+            st.info("Geen historische data voor de geselecteerde fondsen.")
+
 
 # ==========================================
 # PAGE 2B: EQUITY STRATEGY DEEP-DIVE
