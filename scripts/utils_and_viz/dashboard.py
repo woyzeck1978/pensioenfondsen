@@ -395,7 +395,7 @@ def _push_recent(fund_name: str | None) -> None:
     rf = [fund_name] + [n for n in rf if n != fund_name]
     st.session_state.recent_funds = rf[:5]
 
-pages = ["Sector Overview", "Fund Deep-Dive", "Fund Comparison", "Equity Strategy Deep-Dive", "Asset Managers Exposure", "WTP Tracker", "Dekkingsgraad Analysis", "ESG & SFDR Tracker", "Industry News Feed", "Begrippenlijst"]
+pages = ["Sector Overview", "Fund Deep-Dive", "Fund Comparison", "Trends", "Equity Strategy Deep-Dive", "Asset Managers Exposure", "WTP Tracker", "Dekkingsgraad Analysis", "ESG & SFDR Tracker", "Industry News Feed", "Begrippenlijst"]
 
 # Sidebar Navigation — subtle, no loud titles
 st.sidebar.radio(" ", pages, key="page", label_visibility="collapsed")
@@ -778,7 +778,57 @@ elif st.session_state.page == "Fund Deep-Dive":
                         st.caption("Geen peer-data beschikbaar voor deze categorie.")
 
                 st.plotly_chart(fig_line, use_container_width=True)
-                
+
+                # --- Indexatie vs CPI ---
+                idx_df = history_df[['year', 'indexatieverlening_pct', 'cpi_pct']].dropna(how='all', subset=['indexatieverlening_pct', 'cpi_pct']).copy()
+                if idx_df['indexatieverlening_pct'].notna().any():
+                    st.markdown("##### Indexatie vs CPI")
+                    idx_df = idx_df.sort_values('year')
+                    fig_idx = px.bar(
+                        idx_df, x='year', y='indexatieverlening_pct',
+                        labels={'indexatieverlening_pct': 'Toeslag (%)', 'year': 'Jaar'},
+                    )
+                    fig_idx.update_traces(marker_color='#2F7D57', name='Toeslag', showlegend=True)
+                    # CPI overlay as line
+                    cpi_line = idx_df.dropna(subset=['cpi_pct'])
+                    if not cpi_line.empty:
+                        fig_idx.add_scatter(
+                            x=cpi_line['year'], y=cpi_line['cpi_pct'],
+                            mode='lines+markers', name='CPI',
+                            line=dict(color='#B13B3B', width=2),
+                        )
+                    fig_idx.update_layout(height=300, showlegend=True)
+                    st.plotly_chart(fig_idx, use_container_width=True)
+
+                    # Cumulative koopkracht: (∏(1+indexatie) / ∏(1+CPI) - 1) ×100
+                    cum = idx_df.dropna(subset=['indexatieverlening_pct', 'cpi_pct']).sort_values('year').copy()
+                    if len(cum) >= 2:
+                        prod_idx = (1 + cum['indexatieverlening_pct']/100).prod()
+                        prod_cpi = (1 + cum['cpi_pct']/100).prod()
+                        delta_pct = (prod_idx / prod_cpi - 1) * 100
+                        n_yrs = len(cum)
+                        label = "koopkracht behouden" if delta_pct >= 0 else "koopkracht verloren"
+                        st.caption(
+                            f"Cumulatief over **{n_yrs} jaar** ({int(cum['year'].min())}–{int(cum['year'].max())}): "
+                            f"**{delta_pct:+.1f}%** {label} t.o.v. CPI."
+                        )
+
+                # --- Asset allocation evolutie ---
+                aa_df = history_df[['year', 'zakelijke_waarden_pct', 'rente_afdekking_pct']].dropna(
+                    how='all', subset=['zakelijke_waarden_pct', 'rente_afdekking_pct']
+                ).copy()
+                if not aa_df.empty:
+                    st.markdown("##### Beleggingsprofiel & rente-afdekking")
+                    aa_df = aa_df.sort_values('year')
+                    fig_aa = px.line(
+                        aa_df, x='year',
+                        y=[c for c in ['zakelijke_waarden_pct', 'rente_afdekking_pct'] if c in aa_df.columns],
+                        markers=True,
+                        labels={'value': '%', 'year': 'Jaar', 'variable': 'Metric'},
+                    )
+                    fig_aa.update_layout(height=300)
+                    st.plotly_chart(fig_aa, use_container_width=True)
+
                 st.markdown("#### Meerjarenoverzicht (Jaarrapportages)")
                 
                 rename_map = {
@@ -1012,6 +1062,142 @@ elif st.session_state.page == "Fund Comparison":
                 st.info("Geen deelnemers-tijdreeks beschikbaar voor deze selectie.")
         else:
             st.info("Geen historische data voor de geselecteerde fondsen.")
+
+
+# ==========================================
+# PAGE 2D: TRENDS — biggest movers
+# ==========================================
+elif st.session_state.page == "Trends":
+    st.header("Trends — Grootste mutaties")
+    st.markdown(
+        "Fondsen met de grootste verandering in beleidsdekkingsgraad, AUM "
+        "en rendement op DNB-data. Kies een tijdvenster en zie wie het "
+        "afgelopen jaar het sterkst is bewogen."
+    )
+
+    window = st.radio(
+        "Tijdvenster",
+        options=[1, 4, 8, 12],
+        format_func=lambda q: {1: "1 kwartaal", 4: "1 jaar (4Q)", 8: "2 jaar", 12: "3 jaar"}[q],
+        index=1,
+        horizontal=True,
+    )
+
+    # Latest period in DNB data
+    latest = load_data("""
+        SELECT MAX(year * 10 + quarter) AS key, year, quarter
+        FROM dnb_quarterly_metrics
+        WHERE metric_name='Beleidsdekkingsgraad' AND value IS NOT NULL
+    """)
+    if latest.empty or latest['key'].iloc[0] is None:
+        st.info("Geen DNB-data beschikbaar.")
+    else:
+        cur_y = int(latest['year'].iloc[0])
+        cur_q = int(latest['quarter'].iloc[0])
+        # earlier period
+        ago_quarters = cur_q - window
+        prev_y = cur_y
+        while ago_quarters <= 0:
+            prev_y -= 1
+            ago_quarters += 4
+        prev_q = ago_quarters
+
+        st.caption(f"Huidig: **{cur_y}Q{cur_q}** vergeleken met **{prev_y}Q{prev_q}**")
+
+        def movers(metric: str, label: str, unit_format: str = "{:+.1f} pp"):
+            df = load_data(f"""
+                WITH now AS (
+                    SELECT fund_id, value FROM dnb_quarterly_metrics
+                    WHERE metric_name = '{metric}' AND year = {cur_y} AND quarter = {cur_q}
+                      AND value IS NOT NULL
+                ),
+                then_ AS (
+                    SELECT fund_id, value FROM dnb_quarterly_metrics
+                    WHERE metric_name = '{metric}' AND year = {prev_y} AND quarter = {prev_q}
+                      AND value IS NOT NULL
+                )
+                SELECT f.id AS fund_id, f.name AS fund, f.category,
+                       n.value AS now_val, t.value AS then_val,
+                       (n.value - t.value) AS delta
+                FROM now n JOIN then_ t ON t.fund_id = n.fund_id
+                JOIN funds f ON f.id = n.fund_id
+                ORDER BY delta DESC
+            """)
+            if df.empty:
+                st.info(f"Geen data voor {label}.")
+                return
+            top = df.head(10).copy()
+            bot = df.tail(10).copy().sort_values('delta')
+            st.markdown(f"### {label}")
+            c1, c2 = st.columns(2)
+            with c1:
+                st.markdown("**Top 10 stijgers**")
+                top_show = top[['fund', 'category', 'now_val', 'then_val', 'delta']].rename(
+                    columns={'fund': 'Fonds', 'category': 'Categorie',
+                             'now_val': f'{cur_y}Q{cur_q}', 'then_val': f'{prev_y}Q{prev_q}',
+                             'delta': 'Δ'}
+                )
+                st.dataframe(top_show, use_container_width=True, hide_index=True,
+                             column_config={
+                                 f'{cur_y}Q{cur_q}': st.column_config.NumberColumn(format="%.1f"),
+                                 f'{prev_y}Q{prev_q}': st.column_config.NumberColumn(format="%.1f"),
+                                 'Δ': st.column_config.NumberColumn(format=unit_format.replace("{:", "").replace("}", "")),
+                             })
+            with c2:
+                st.markdown("**Top 10 dalers**")
+                bot_show = bot[['fund', 'category', 'now_val', 'then_val', 'delta']].rename(
+                    columns={'fund': 'Fonds', 'category': 'Categorie',
+                             'now_val': f'{cur_y}Q{cur_q}', 'then_val': f'{prev_y}Q{prev_q}',
+                             'delta': 'Δ'}
+                )
+                st.dataframe(bot_show, use_container_width=True, hide_index=True,
+                             column_config={
+                                 f'{cur_y}Q{cur_q}': st.column_config.NumberColumn(format="%.1f"),
+                                 f'{prev_y}Q{prev_q}': st.column_config.NumberColumn(format="%.1f"),
+                                 'Δ': st.column_config.NumberColumn(format=unit_format.replace("{:", "").replace("}", "")),
+                             })
+
+        movers('Beleidsdekkingsgraad', 'Beleidsdekkingsgraad (Δ in pp)')
+        st.divider()
+
+        # AUM in mln EUR (DNB unit) — convert delta to Bn
+        df_aum = load_data(f"""
+            WITH now AS (
+                SELECT fund_id, value/1e6 AS bn FROM dnb_quarterly_metrics
+                WHERE metric_name = 'Beleggingen voor risico fonds' AND year={cur_y} AND quarter={cur_q}
+                  AND value IS NOT NULL
+            ),
+            then_ AS (
+                SELECT fund_id, value/1e6 AS bn FROM dnb_quarterly_metrics
+                WHERE metric_name = 'Beleggingen voor risico fonds' AND year={prev_y} AND quarter={prev_q}
+                  AND value IS NOT NULL
+            )
+            SELECT f.name AS fund, f.category,
+                   ROUND(n.bn, 2) AS now_bn, ROUND(t.bn, 2) AS then_bn,
+                   ROUND(n.bn - t.bn, 2) AS delta_bn,
+                   ROUND((n.bn - t.bn)/t.bn*100, 1) AS pct
+            FROM now n JOIN then_ t ON t.fund_id = n.fund_id
+            JOIN funds f ON f.id = n.fund_id
+            WHERE t.bn > 0
+            ORDER BY pct DESC
+        """)
+        if not df_aum.empty:
+            st.markdown("### AUM (Δ relatief)")
+            c1, c2 = st.columns(2)
+            with c1:
+                st.markdown("**Top 10 AUM-groeiers (%)**")
+                st.dataframe(df_aum.head(10).rename(columns={
+                    'fund': 'Fonds', 'category': 'Categorie',
+                    'now_bn': f'{cur_y}Q{cur_q} (€ Bn)', 'then_bn': f'{prev_y}Q{prev_q} (€ Bn)',
+                    'delta_bn': 'Δ Bn', 'pct': 'Δ %'
+                }), use_container_width=True, hide_index=True)
+            with c2:
+                st.markdown("**Top 10 AUM-krimpers (%)**")
+                st.dataframe(df_aum.tail(10).sort_values('pct').rename(columns={
+                    'fund': 'Fonds', 'category': 'Categorie',
+                    'now_bn': f'{cur_y}Q{cur_q} (€ Bn)', 'then_bn': f'{prev_y}Q{prev_q} (€ Bn)',
+                    'delta_bn': 'Δ Bn', 'pct': 'Δ %'
+                }), use_container_width=True, hide_index=True)
 
 
 # ==========================================
@@ -1311,6 +1497,41 @@ elif st.session_state.page == "WTP Tracker":
             fig_pie = px.pie(contract_counts, names='Contract Type', values='Count',
                              title="All Contract Types (SPR vs FPR)")
             st.plotly_chart(fig_pie, use_container_width=True)
+
+        # --- Invaren timeline: who when, sized by AUM ---
+        timeline_df = wtp_df.dropna(subset=['wtp_transitie_datum']).copy()
+        timeline_df['date'] = pd.to_datetime(timeline_df['wtp_transitie_datum'], errors='coerce')
+        timeline_df = timeline_df.dropna(subset=['date']).copy()
+        if not timeline_df.empty:
+            timeline_df['is_past'] = timeline_df['date'].dt.date <= pd.Timestamp.now(tz='UTC').tz_localize(None).date()
+            timeline_df['status'] = timeline_df.apply(
+                lambda r: 'Ingevaren' if r['is_past'] or str(r.get('wtp_invaren') or '').lower() == 'ja'
+                          else ('Uitgesteld' if str(r.get('wtp_invaren') or '').lower() == 'uitgesteld' else 'Gepland'),
+                axis=1,
+            )
+            timeline_df['aum_safe'] = timeline_df['aum_euro_bn'].fillna(0.5)  # for marker-size
+            timeline_df = timeline_df.sort_values('date')
+
+            st.markdown("### Invaren-tijdlijn")
+            fig_tl = px.scatter(
+                timeline_df, x='date', y='status', color='status',
+                size='aum_safe', hover_name='name',
+                hover_data={
+                    'aum_euro_bn': ':.1f', 'wtp_contract_type': True,
+                    'aum_safe': False, 'date': '|%d %b %Y', 'status': False,
+                },
+                color_discrete_map={'Ingevaren': '#2F7D57', 'Gepland': '#6554A3', 'Uitgesteld': '#C66B16'},
+                labels={'date': '', 'aum_euro_bn': 'AUM (€ Bn)', 'status': '',
+                        'wtp_contract_type': 'Contract'},
+            )
+            # Today line
+            today = pd.Timestamp.now(tz='UTC').tz_localize(None)
+            fig_tl.add_vline(x=today, line_dash='dot', line_color='#5C6875',
+                             annotation_text='vandaag', annotation_position='top')
+            fig_tl.update_layout(height=320, showlegend=True)
+            st.plotly_chart(fig_tl, use_container_width=True)
+        else:
+            st.info("Geen geldige transitiedatums voor de tijdlijn.")
 
         st.subheader("🚀 Reeds Ingevaren (Transitie Voltooid)")
         if not past_df.empty:
