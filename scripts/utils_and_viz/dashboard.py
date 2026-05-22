@@ -384,6 +384,18 @@ if "selected_fund" not in st.session_state:
 if "recent_funds" not in st.session_state:
     st.session_state.recent_funds = []  # most-recent first, max 5
 
+if "watchlist" not in st.session_state:
+    st.session_state.watchlist = []  # pinned fund names, max 10
+
+
+def _toggle_watch(fund_name: str) -> None:
+    """Add or remove from watchlist."""
+    wl = st.session_state.watchlist
+    if fund_name in wl:
+        st.session_state.watchlist = [n for n in wl if n != fund_name]
+    elif len(wl) < 10:
+        st.session_state.watchlist = wl + [fund_name]
+
 
 def _push_recent(fund_name: str | None) -> None:
     """Add to the front of recent_funds, dedupe, cap at 5."""
@@ -474,6 +486,56 @@ if st.session_state.page == "Sector Overview":
         kpi_card("Funds Tracked", f"{len(df_funds)}",
                  sub=f"{df_funds['category'].nunique()} categories"),
     ])
+
+    # --- Recent WTP news (top 5 from last 30 days) ---
+    wtp_recent = load_data("""
+        SELECT n.published_date AS date, f.name AS fund, n.title, n.url
+        FROM news_articles n JOIN funds f ON n.fund_id = f.id
+        WHERE n.title IS NOT NULL AND n.published_date IS NOT NULL
+          AND date(n.published_date) >= date('now', '-60 days')
+          AND (
+                lower(n.title) LIKE '%invar%'
+             OR lower(n.title) LIKE '%nieuwe pensioenregeling%'
+             OR lower(n.title) LIKE '%transitie%'
+             OR lower(n.title) LIKE '%mag over%'
+             OR lower(n.title) LIKE '%wtp%'
+          )
+        ORDER BY date(n.published_date) DESC LIMIT 5
+    """)
+    if not wtp_recent.empty:
+        st.markdown(
+            '<div class="section-card-title">🔄 Recente WTP-headlines</div>',
+            unsafe_allow_html=True,
+        )
+        for _, r in wtp_recent.iterrows():
+            st.markdown(
+                f"- **{r['date']}** · [{r['fund']}] [{r['title']}]({r['url']})"
+            )
+
+    # --- Watchlist quick-view ---
+    if st.session_state.watchlist:
+        watched = df_funds[df_funds['name'].isin(st.session_state.watchlist)].copy()
+        if not watched.empty:
+            st.markdown(
+                '<div class="section-card-title">⭐ Watchlist</div>',
+                unsafe_allow_html=True,
+            )
+            wl_view = watched[['name', 'category', 'aum_euro_bn', 'dekkingsgraad_pct',
+                               'beleidsdekkingsgraad_pct']].rename(columns={
+                'name': 'Fonds', 'category': 'Categorie',
+                'aum_euro_bn': 'AUM (€ Bn)',
+                'dekkingsgraad_pct': 'Dekkingsgraad %',
+                'beleidsdekkingsgraad_pct': 'Beleidsdg %',
+            })
+            st.dataframe(
+                wl_view, use_container_width=True, hide_index=True,
+                column_config={
+                    'AUM (€ Bn)': st.column_config.NumberColumn(format="%.1f"),
+                    'Dekkingsgraad %': st.column_config.NumberColumn(format="%.1f%%"),
+                    'Beleidsdg %': st.column_config.NumberColumn(format="%.1f%%"),
+                },
+            )
+
     st.divider()
     
     # Charts Row
@@ -649,10 +711,20 @@ elif st.session_state.page == "Fund Deep-Dive":
         if 'description' in fund_data and pd.notnull(fund_data['description']) and fund_data['description'] != "":
             st.info(fund_data['description'])
             
-        link_col, dl_col = st.columns([4, 1])
+        link_col, watch_col, dl_col = st.columns([4, 1, 1])
         with link_col:
             if pd.notnull(fund_data['website']) and fund_data['website'] != "":
                 st.markdown(f"🌐 **Website:** [{fund_data['website']}]({fund_data['website']})")
+        with watch_col:
+            is_watched = fund_data['name'] in st.session_state.watchlist
+            st.button(
+                "★ Unpin" if is_watched else "☆ Pin",
+                key=f"watch_toggle_{fund_id}",
+                on_click=_toggle_watch, args=(str(fund_data['name']),),
+                use_container_width=True,
+                help=("Verwijder van watchlist" if is_watched
+                      else "Voeg toe aan watchlist (max 10)"),
+            )
         with dl_col:
             try:
                 _hist = get_metrics_history(int(fund_id))
@@ -1751,8 +1823,46 @@ elif st.session_state.page == "Industry News Feed":
             _dt_disp = filtered_news['Date'].apply(parse_dutch_date)
             filtered_news = filtered_news[_dt_disp.fillna(pd.Timestamp(0)) >= cutoff_disp]
 
-        st.caption(f"Showing **{len(filtered_news):,}** of **{len(df_news):,}** headlines".replace(',', '.'))
-            
+        cap_col, rss_col = st.columns([5, 1])
+        with cap_col:
+            st.caption(f"Showing **{len(filtered_news):,}** of **{len(df_news):,}** headlines".replace(',', '.'))
+        with rss_col:
+            # RSS 2.0 export of current filter
+            try:
+                from xml.sax.saxutils import escape as _xesc
+                items_xml = []
+                for _, r in filtered_news.head(100).iterrows():
+                    items_xml.append(
+                        "<item>"
+                        f"<title>{_xesc(str(r.get('Headline') or ''))}</title>"
+                        f"<link>{_xesc(str(r.get('url') or ''))}</link>"
+                        f"<pubDate>{_xesc(str(r.get('Date') or ''))}</pubDate>"
+                        f"<category>{_xesc(str(r.get('Category') or ''))}</category>"
+                        f"<dc:creator>{_xesc(str(r.get('Pension Fund') or ''))}</dc:creator>"
+                        "</item>"
+                    )
+                rss_xml = (
+                    '<?xml version="1.0" encoding="UTF-8"?>'
+                    '<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">'
+                    '<channel>'
+                    '<title>Dutch Pension Funds — News</title>'
+                    '<link>https://pensioenfondsen.streamlit.app</link>'
+                    '<description>Recent news headlines from Dutch pension fund websites</description>'
+                    f'<lastBuildDate>{pd.Timestamp.now(tz="UTC").strftime("%a, %d %b %Y %H:%M:%S +0000")}</lastBuildDate>'
+                    + "".join(items_xml)
+                    + '</channel></rss>'
+                ).encode("utf-8")
+                st.download_button(
+                    label="📰 RSS",
+                    data=rss_xml,
+                    file_name=f"pension_news_{pd.Timestamp.now(tz='UTC').tz_localize(None).date()}.xml",
+                    mime="application/rss+xml",
+                    use_container_width=True,
+                    help="Download current filter as RSS 2.0 XML (max 100 items).",
+                )
+            except Exception as e:
+                st.caption(f"RSS unavailable ({e})")
+
         st.dataframe(
             filtered_news,
             use_container_width=True,
