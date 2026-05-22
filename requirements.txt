@@ -6,3 +6,5 @@
 streamlit>=1.40,<2
 pandas>=2.2,<3
 plotly>=5.19,<7
+matplotlib>=3.7,<4    # A3: PDF factsheet via PdfPages
+xlsxwriter>=3.0,<4    # A4: Excel export engine for pd.ExcelWriter
