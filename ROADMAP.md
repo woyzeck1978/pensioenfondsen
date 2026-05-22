@@ -134,6 +134,62 @@ logs/llm_extract/                 LLM run logs — gitignored
 
 ---
 
+## Sessie 2026-05-20..22 — features A–F shipped
+
+Six-category enhancement pass; all but a handful of skipped items done.
+
+**A. Vergelijken & exporteren**
+- ✅ **A1** Fund Comparison page (new in sidebar) — multi-select up to 3
+  funds, side-by-side KPI cards + 4 overlay charts (beleidsdg / AUM /
+  rendement / deelnemers).
+- ✅ **A2** Peer-group overlay on Fund Deep-Dive's Historical Performance —
+  toggle adds dotted category-average lines for beleidsdg and rendement.
+- ✅ **A3** PDF Factsheet download per fund (matplotlib + PdfPages, no
+  new deps). 1-page A4 with header, 5 KPI tiles, beleidsdg chart,
+  AUM bars, deelnemers stacked area, footer.
+- ✅ **A4** Excel export of Fund Directory on Sector Overview (xlsxwriter,
+  formatted columns + frozen header).
+
+**B. UX polish**
+- ✅ **B1** Typeahead — already built into st.selectbox; no change needed.
+- ✅ **B2** Recent-viewed funds — sidebar buttons (max 5), session-state-backed.
+- ✅ **B3** Mobile responsive CSS — @media (max-width: 768px) and 480px;
+  KPI tiles drop to 2-col then 1-col, headings shrink.
+- ✅ **B4** Print CSS — @media print hides chrome, white bg, break-inside:avoid.
+
+**C. New analytics pages**
+- ✅ **C1** Trends page — biggest movers in beleidsdg + AUM over 1/4/8/12 quarters.
+- ✅ **C2** Invaren timeline on WTP Tracker — scatter chart, status-colored,
+  AUM-sized, with today reference line.
+- ✅ **C3** Indexatie vs CPI on Fund Deep-Dive — bars + line + cumulative
+  koopkracht caption.
+- ✅ **C4** Beleggingsprofiel/rente-afdekking line chart on Fund Deep-Dive
+  using the new zakelijke_waarden_pct + rente_afdekking_pct columns.
+
+**D. Engagement / live data**
+- ✅ **D1** Watchlist — pin/unpin button on Deep-Dive, '⭐ Watchlist'
+  quick-view block on Sector Overview. Session-scoped state.
+- ✅ **D2** Recent WTP news digest on Sector Overview landing.
+- ⏭ **D3** Email/Slack alerts — skipped intentionally; needs a separate
+  server-side service (FastAPI or GitHub Actions) outside Streamlit Cloud.
+- ✅ **D4** RSS export of Industry News Feed filter — RSS 2.0 XML download.
+
+**E. Data quality**
+- ✅ **E1** Smart dedupe of historical_metrics — 2159 rows → 1543. For each
+  duplicate (fund_id, year) pair, kept the row with the most non-NULL cells.
+- ✅ **E2** KPN AUM 1.1 → 10.0 (the FY2025 jaarverslag's DB-regeling number).
+  The Deep-Dive page's mismatch warning disappears.
+- ✅ **E3** ABN AMRO actief 44 → NULL (was a stub; let a future LLM pass refill).
+- ⏭ **E4** Retry the 66 LLM-error funds — needs MBP to stay awake. Documented.
+
+**F. Infrastructure**
+- ✅ **F1** Database indexes — added idx_hist_fund_year, idx_hist_year,
+  idx_dnbq_fund_year, idx_dnbq_metric, idx_news_pub, idx_news_fund,
+  idx_scrapdoc_fund_type. ANALYZE run.
+- ⏭ **F2** REST/GraphQL API endpoint — out of scope without a concrete
+  consumer. Documented as future option requiring a separate FastAPI service.
+- ✅ **F3** ROADMAP updated (this section).
+
 ## Open items, ranked by ROI
 
 ### 1. Per-year deelnemers via LLM (HIGH value, MEDIUM effort)
