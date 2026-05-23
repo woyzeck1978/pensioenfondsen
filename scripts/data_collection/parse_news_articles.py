@@ -89,15 +89,22 @@ GENERIC_TITLES = {
 }
 
 
-def parse_published_date(text: str, *, limit_chars: int = 1500) -> str | None:
+def parse_published_date(
+    text: str, *, limit_chars: int = 1500, trust_today: bool = False
+) -> str | None:
     """Find the publication date near the article's start.
 
     Articles typically print the byline date in the first paragraph. Sites
     also stamp the article header with the publish date — but the page
     footer often contains today's "last updated" timestamp that pollutes
     a naive search. Strategy: scan only the first `limit_chars` of text
-    (header/byline zone) and pick the FIRST plausible past date. Skip
-    today's date — that's almost always a footer/cache stamp.
+    (header/byline zone) and pick the FIRST plausible past date.
+
+    `trust_today=True` is for structured sources (<time datetime>,
+    <meta article:published_time>) where finding today's date almost
+    certainly means the article was actually published today. For free
+    body text, default `trust_today=False` — finding only today is more
+    often a "last updated" footer than a real byline.
     """
     if not text:
         return None
@@ -122,9 +129,7 @@ def parse_published_date(text: str, *, limit_chars: int = 1500) -> str | None:
             seen_today = True; continue
         if d < today:
             return d
-    # If the only plausible date we saw was today, accept it as a weaker
-    # signal — at least it's not in the future.
-    return today if seen_today else None
+    return today if (seen_today and trust_today) else None
 
 
 def looks_generic(title: str | None) -> bool:
@@ -173,17 +178,18 @@ def fetch_article(url: str, session: requests.Session) -> tuple[str | None, str 
     pub_date = None
     # 1) Date encoded in the URL — highest confidence
     pub_date = date_from_url(url)
-    # 2) <time datetime="...">
+    # 2) <time datetime="..."> — structured source, trust today
     if not pub_date:
         time_el = soup.find("time", attrs={"datetime": True})
         if time_el and time_el.get("datetime"):
-            pub_date = parse_published_date(time_el["datetime"])
-    # 3) <meta property="article:published_time">
+            pub_date = parse_published_date(time_el["datetime"], trust_today=True)
+    # 3) <meta property="article:published_time"> — structured, trust today
     if not pub_date:
         meta_pub = soup.find("meta", attrs={"property": "article:published_time"})
         if meta_pub and meta_pub.get("content"):
-            pub_date = parse_published_date(meta_pub["content"])
-    # 4) body text — scan only the byline zone (first 1500 chars)
+            pub_date = parse_published_date(meta_pub["content"], trust_today=True)
+    # 4) body text — scan only the byline zone (first 1500 chars).
+    # trust_today=False: a lone "today" here is usually a footer cache stamp.
     if not pub_date:
         text = soup.get_text(" ", strip=True)
         pub_date = parse_published_date(text)
