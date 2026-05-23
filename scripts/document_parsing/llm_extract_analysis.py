@@ -79,6 +79,15 @@ def pick_pdf_for_year(items, prefer_year: int | None):
     return sorted(items, reverse=True)[0]
 
 
+def _is_toc_page(text: str) -> bool:
+    # TOC = many lines that are bare page numbers
+    lines = [ln.strip() for ln in text.split("\n") if ln.strip()]
+    if len(lines) < 8:
+        return False
+    bare_nums = sum(1 for ln in lines if re.fullmatch(r"\d{1,3}", ln))
+    return bare_nums / len(lines) > 0.30
+
+
 def find_narrative_pages(pdf_path: str, max_pages: int = 5) -> tuple[str, list[int], int]:
     doc = fitz.open(pdf_path)
     scored = []  # (score, page_no, text)
@@ -86,11 +95,12 @@ def find_narrative_pages(pdf_path: str, max_pages: int = 5) -> tuple[str, list[i
         if i >= 200:
             break
         text = page.get_text()
-        header_score = sum(len(p.findall(text)) for p in HEADER_PATTERNS)
-        # Sentence-ish density (skip tables/numeric-only)
-        sentence_score = min(5, len(re.findall(r"\.\s+[A-Z]", text)))
-        if header_score == 0 and sentence_score < 2:
+        if _is_toc_page(text):
             continue
+        sentence_score = min(5, len(re.findall(r"\.\s+[A-Z]", text)))
+        if sentence_score < 2:
+            continue
+        header_score = sum(len(p.findall(text)) for p in HEADER_PATTERNS)
         score = header_score * 8 + sentence_score
         scored.append((score, i + 1, text))
     n_pages = len(doc)
