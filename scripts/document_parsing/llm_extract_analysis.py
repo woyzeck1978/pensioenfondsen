@@ -57,11 +57,21 @@ HEADER_PATTERNS = [
 ]
 
 
+# Filenames containing these tokens are NOT jaarverslagen and must be skipped:
+# transition plans, ESG/sustainability reports, SFDR disclosures, infographics.
+_NON_JAARVERSLAG = re.compile(
+    r"(transitieplan|_esg|_sfdr|infographic|beleggingsmix|samenvatting)",
+    re.I,
+)
+
+
 def build_inventory() -> dict[int, list[tuple[int, str]]]:
     by_fund = defaultdict(list)
     for d in DIRS:
         for path in glob.glob(f"{d}/*.pdf"):
             base = os.path.basename(path)
+            if _NON_JAARVERSLAG.search(base):
+                continue
             m = re.match(r"^(\d+)[_\s]", base)
             if not m:
                 continue

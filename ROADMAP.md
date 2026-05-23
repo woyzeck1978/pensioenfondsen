@@ -190,6 +190,26 @@ Six-category enhancement pass; all but a handful of skipped items done.
   consumer. Documented as future option requiring a separate FastAPI service.
 - ✅ **F3** ROADMAP updated (this section).
 
+## Sessie 2026-05-22..23 — jaarverslag-analyse via LLM bootstrapped
+
+- ✅ Tabel `fund_analysis` (commit `d682258`): summary + highlights /
+  lowlights / risks (JSON-arrays) + transitie_status per fund × FY.
+- ✅ `scripts/document_parsing/llm_extract_analysis.py` driver: scores
+  pagina's op header-keywords + zinsdichtheid, sendt top-5 als JSON-
+  mode prompt naar Ollama `mistral-small` (Tailscale).
+- ✅ Page-selector v2 (commit `b011291`): TOC-detector +
+  `sentence_score>=2`. Fund 13 ging van "raad-van-toezicht-goedgekeurd"
+  boilerplate naar concrete risicotaxonomie + dekkingsgraad-uitspraken.
+- ✅ Inventory-filter (this commit): skip `*_Transitieplan.pdf`,
+  `*_ESG.pdf`, `*_SFDR.pdf`, infographics — anders kiest de inventory
+  alphabetisch het verkeerde document (Hoogovens kreeg het transitieplan
+  i.p.v. het jaarverslag).
+- ✅ Top-30 run gedraaid: 22 nieuwe rijen in `fund_analysis`. 12 FY2024,
+  3 FY2025, 1 FY2023, 8 FY0 (oude PDFs zonder jaartal — zie open item
+  #9 voor herstelplan).
+- ✅ Dashboard rendert het blok onder Fund Deep-Dive's KPI-card al
+  (commit `d682258`).
+
 ## Open items, ranked by ROI
 
 ### 1. Per-year deelnemers via LLM (HIGH value, MEDIUM effort)
@@ -289,6 +309,43 @@ Sector Overview's Fund Directory uses Streamlit's native dataframe with
 row selection. A nicer UX would be inline cell badges (category color,
 status pill) which native dataframe can't render. `streamlit-aggrid` would
 fix this but adds a dependency. Not done because the current UX works fine.
+
+### 9. Jaarverslag-analyse: top-30 done, ~10 funds need newer PDF (MEDIUM value, MEDIUM effort)
+
+`fund_analysis` table now holds 24 LLM-generated summaries:
+- FY2025: 3 (13 Beroepsvervoer, 32 PGB, 111 KPN)
+- FY2024: 12 (incl. 24 PMT, 71 ABN, 76 APG, 119 Philips, 123 Rabobank, 145 NN, …)
+- FY2023: 1 (38 PWRI)
+- FY0 (jaartal onbekend, PDF noemt geen `Jaarverslag YYYY`): 8 funds (3, 5, 9, 16, 17, 34, 41, 72)
+
+The FY0 group is the problem set. Their PDFs in `data/reports/` predate
+the introduction of yearly download (PFZW's content references "€216B
+eind 2022" → dat is FY2022). The analyses themselves render correctly in
+the dashboard but reflect data 2–3 years out of date.
+
+**First steps:**
+1. For each of the 8 FY0 funds, find the public download URL of the
+   FY2024 jaarverslag on the fund's website (most have an "annual
+   report" page).
+2. Save as `data/annual_reports/<fid>_<Name>_2024.pdf` — the naming
+   pattern that `build_inventory` parses for the year.
+3. Re-run `python3 llm_extract_analysis.py --funds <id> --force` to
+   overwrite the FY0 row with a FY2024 analysis. With force on, the old
+   row is updated in-place (composite PK is fund_id+fiscal_year, so the
+   new FY2024 row is technically new and the FY0 row should also be
+   deleted manually — `DELETE FROM fund_analysis WHERE fund_id=<id>
+   AND fiscal_year=0` before the re-run).
+4. Once the 8 FY0 rows are replaced, broaden to `--top 50` or beyond
+   (currently 24 rows; the inventory has ~100 PDFs available).
+
+**Known guardrails already in code (commit b011291 + this session):**
+- `_is_toc_page` filter — skip pages where >30% of lines are bare
+  digits (TOC signature).
+- `sentence_score >= 2` required to enter the candidate pool.
+- `_NON_JAARVERSLAG` filter — `build_inventory` excludes
+  `*_Transitieplan.pdf`, `*_ESG.pdf`, `*_SFDR.pdf`, infographics. Without
+  this filter the top-30 run picked `106_Hoogovens_Transitieplan.pdf`
+  alphabetically over `106_Hoogovens.pdf`.
 
 ---
 
