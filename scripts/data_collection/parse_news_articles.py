@@ -59,6 +59,8 @@ RE_URL_DUTCH = re.compile(
 RE_URL_YYYYMMDD = re.compile(r"/(20\d{2})(\d{2})(\d{2})[/-]")
 #   /2025/11/05/...  or  /nieuws/2025-11-05-...
 RE_URL_ISO_PATH = re.compile(r"[/-](20\d{2})[/-](\d{2})[/-](\d{2})")
+#   /11-05-2026-update-... (Dutch DD-MM-YYYY)
+RE_URL_DUTCH_DMY = re.compile(r"/(\d{2})-(\d{2})-(20\d{2})[-/]")
 
 
 def date_from_url(url: str) -> str | None:
@@ -74,6 +76,17 @@ def date_from_url(url: str) -> str | None:
         candidate = f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
         if candidate <= today:
             return candidate
+    # Dutch DD-MM-YYYY is checked BEFORE ISO_PATH because URLs sometimes
+    # contain both (e.g. /nieuws-2026/11-05-2026-…) and the Dutch form
+    # is the explicit publication date while the year segment is just a
+    # collection bucket.
+    m = RE_URL_DUTCH_DMY.search(url)
+    if m:
+        dd, mo, yy = m.group(1), m.group(2), m.group(3)
+        if 1 <= int(mo) <= 12 and 1 <= int(dd) <= 31:
+            candidate = f"{yy}-{mo}-{dd}"
+            if candidate <= today:
+                return candidate
     m = RE_URL_ISO_PATH.search(url)
     if m:
         candidate = f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
