@@ -435,29 +435,25 @@ row selection. A nicer UX would be inline cell badges (category color,
 status pill) which native dataframe can't render. `streamlit-aggrid` would
 fix this but adds a dependency. Not done because the current UX works fine.
 
-### 9. Jaarverslag-analyse: top-30 done, ~4 funds need newer PDF (MEDIUM value, MEDIUM effort)
+### 9. Jaarverslag-analyse: top-30 done (CLOSED — 0 FY0 remaining)
 
-`fund_analysis` table now holds 24 LLM-generated summaries:
+`fund_analysis` table holds 24 LLM-generated summaries:
 - FY2025: 5 (9 ABP, 13 Beroepsvervoer, 32 PGB, 41 PFZW, 111 KPN)
-- FY2024: 14 (incl. 16 BPL, 24 PMT, 71 ABN, 72 Achmea, 76 APG, 119 Philips, 123 Rabobank, 145 NN, …)
+- FY2024: 18 (incl. 3 Huisartsen, 5 SPMS, 16 BPL, 17 Detailhandel, 24 PMT,
+  34 Recreatie, 71 ABN, 72 Achmea, 76 APG, 119 Philips, 123 Rabobank,
+  145 NN, …)
 - FY2023: 1 (38 PWRI)
-- FY0 (jaartal onbekend, PDF noemt geen `Jaarverslag YYYY`): 4 funds (3 Huisartsen, 5 Med. Specialisten, 17 Detailhandel, 34 Recreatie)
+- FY0: 0 ✅
 
-These 4 have no news-announcement of a recent jaarverslag AND no
-PDF URL in `scraped_documents`. Either their homepages link via JS,
-they put the annual report in a hard-to-reach archive page, or they
-have no published annual report on the public site at all. Manual
-website inspection is the next step.
+All historical FY0 rows resolved on 2026-05-25 (commits `7cb2267`,
+`3f09895`, `5dab47f`). Two funds had wrongly-set `funds.website`
+(fid=3 sphn.nl → Haskoning DHV; fid=34 kikk-recreatie.nl → CAO-org)
+which got fixed in the same pass.
 
-The FY0 group is the problem set. Their PDFs in `data/reports/` predate
-the introduction of yearly download (PFZW's content references "€216B
-eind 2022" → dat is FY2022). The analyses themselves render correctly in
-the dashboard but reflect data 2–3 years out of date.
-
-**Per-fund workflow** (ABP volgde dit op 2026-05-25, commit `7cb2267`):
+**Reusable per-fund workflow** (template for future top-50 broadening):
 1. Find the public PDF URL — start from the news-radar query in the
-   "Sessie 2026-05-25" section above; otherwise visit the fund's
-   "annual reports" page.
+   "Sessie 2026-05-25" section; otherwise visit the fund's
+   "annual reports" page; for JS-rendered sites use Playwright.
 2. Save as `data/annual_reports/<fid>_<Name>_<YYYY>.pdf` — the naming
    pattern that `build_inventory` parses for the year.
 3. `DELETE FROM fund_analysis WHERE fund_id=<id> AND fiscal_year=0;`
@@ -465,8 +461,9 @@ the dashboard but reflect data 2–3 years out of date.
    overwritten by a new FY2024/FY2025 row — must drop manually).
 4. `python3 scripts/document_parsing/llm_extract_analysis.py --funds <id>`
    (no --force needed after the delete).
-5. Once the 7 FY0 rows are replaced, broaden to `--top 50` or beyond
-   (currently 24 rows; the inventory has ~100 PDFs available).
+
+Broaden to `--top 50` or beyond when bandwidth allows (currently 24
+rows; the inventory has ~100 PDFs available).
 
 **Known guardrails already in code (commit b011291 + this session):**
 - `_is_toc_page` filter — skip pages where >30% of lines are bare
@@ -476,6 +473,58 @@ the dashboard but reflect data 2–3 years out of date.
   `*_Transitieplan.pdf`, `*_ESG.pdf`, `*_SFDR.pdf`, infographics. Without
   this filter the top-30 run picked `106_Hoogovens_Transitieplan.pdf`
   alphabetically over `106_Hoogovens.pdf`.
+
+### 10. Post-invaren reporting template (HIGH value, blocked by FY2025 publication)
+
+Eenmaal een fonds is ingevaren onder Wtp **verdwijnt de dekkingsgraad
+uit het jaarverslag**. Onze huidige `historical_metrics`-schema is
+volledig dekkingsgraad-georiënteerd en zal NULL-rijen produceren voor
+invaarders vanaf hun FY2025. Voor de 6 fondsen die per 1-1-2025 zijn
+ingevaren (4 Loodsen, 29 POB, 30 Particuliere Beveiliging, 38 PWRI,
+76 APG, 193 Kring Van Lanschot HNPF) is FY2025 = eerste post-invaren
+jaarverslag; verwacht in zomer/herfst 2026.
+
+**Template afgeleid uit PWRI + Loodsen FY2024** (laatste pre-invaren
+year — bevat forward-looking sectie over wat FY2025+ rapporteert):
+
+| Oud (DB, t/m FY2024) | Nieuw (Wtp, vanaf FY2025) |
+|---|---|
+| Actuele / beleids / reële / vereiste / minimaal vereiste dekkingsgraad | **Persoonlijk pensioenvermogen** per deelnemer |
+| Voorziening pensioenverplichtingen | **Collectief belegd pensioenvermogen** |
+| Toeslagverlening (jaarlijks bij beleidsdg ≥ 110%) | Pensioen beweegt direct mee met economie / **beleggingsrendement** |
+| Premiedekkingsgraad (voor herstelplannen) | **Beleggingsrendement per cohort / leeftijdsfase** |
+| Vermogen - Voorziening = Buffer | **Solidariteitsreserve** (solidair contract; Loodsen start 7,5%) of **Risicodelingsreserve** (flexibel contract) |
+| — | **Netto profijt** per leeftijdscohort (evenwichtigheidsmetric) |
+| — | **Invaardekkingsgraad** (Loodsen: 119%) — eenmalig bij overgang |
+
+Contract-types in `funds.wtp_contract_type` bepalen welke variant:
+`solidair` / `SPR` → solidariteitsreserve;
+`flexibel` / `FPR` / `flexibel + rdr` → individuele beleggingsmix +
+risicodelingsreserve.
+
+**Schema-implicaties voor `historical_metrics`** (te beslissen vóór de
+eerste FY2025 verschijnt):
+- `dekkingsgraad_*`-kolommen krijgen NULL voor invaarders vanaf hun
+  FY-invaren — niet als bug behandelen, gewoon legitiem NULL.
+- Nieuwe kolommen voorstel: `solidariteitsreserve_pct`,
+  `invaardekkingsgraad_pct` (eenmalig per fund, zou óók in `funds`
+  kunnen), `collectief_pensioenvermogen_eur_bn`.
+- `beleggingsrendement_per_cohort` past niet in een wide table —
+  vermoedelijk een nieuwe `cohort_metrics(fund_id, year, cohort_label,
+  rendement_pct)` tabel.
+- Dashboard moet een toggle krijgen: voor ingevaren funds toon je
+  beleggingsrendement-grafiek; voor niet-ingevaren toon je
+  dekkingsgraad-grafiek.
+
+**First steps when first FY2025 invaarder-jaarverslag landt:**
+1. News-radar query (zie sessie 2026-05-25) sweepen op `jaarverslag 2025`
+   wekelijks vanaf juni 2026.
+2. Bij eerste hit: PDF downloaden + handmatig inspecteren wat er
+   feitelijk in de kerncijfers-tabel staat.
+3. Bevestigt het template hierboven? Zo ja: schema-migratie schrijven.
+4. LLM-extractor `llm_extract_analysis.py` aanvullen met patroon-
+   herkenning voor de nieuwe metrics (vooral solidariteitsreserve %
+   en invaardekkingsgraad zijn relatief vast format).
 
 ---
 
