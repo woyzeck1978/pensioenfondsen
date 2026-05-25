@@ -256,6 +256,45 @@ gefixt, in volgorde:
   datum in URL-slug — LLM-extractie op pagina-tekst zou kunnen werken
   maar staat niet op de roadmap.
 
+## Sessie 2026-05-25 — ABP FY2025 + dashboard-fix
+
+Per-fund workflow voor het ophalen van een net-verschenen FY2025
+jaarverslag uitgewerkt, met ABP als template. Plus een latente
+dashboard-bug ontdekt en gefixt.
+
+- ✅ **News-radar query** — om te detecteren welke fondsen recent een
+  FY2025-jaarverslag hebben aangekondigd:
+  ```sql
+  SELECT f.id, f.name, n.published_date, n.title
+  FROM news_articles n JOIN funds f ON n.fund_id=f.id
+  WHERE n.title LIKE '%jaarverslag%2025%'
+    AND n.published_date IS NOT NULL
+    AND date(n.published_date) >= '2026-01-01';
+  ```
+  Bevestigd op 2026-05-25: ABP (24 april), Beroepsvervoer (28 april),
+  KPN (13 mei) hebben FY2025 uitgebracht. Werkt alleen sinds de
+  news-publicatiedatums in deze week zijn schoongemaakt (zie vorige
+  sessie).
+- ✅ **ABP FY2025 verwerkt** (commit `7cb2267`). PDF gedownload van
+  `https://jaarverslag.abp.nl/abp-jaarverslag-2025.pdf` (6.6 MB, 221p),
+  opgeslagen als `data/annual_reports/9_ABP_2025.pdf` (gitignored).
+  FY0-rij verwijderd, `llm_extract_analysis.py --funds 9` produceerde
+  nieuwe FY2025-samenvatting met concrete content (beleidsdekkingsgraad
+  118,3%, invaarbesluit ontvangen). Tijd: ~2.5 min op MBP via
+  Tailscale.
+- ✅ **Dashboard-bug gefixt** (commit `391a384`). Het Analyse-jaarverslag
+  expander-block in `scripts/utils_and_viz/dashboard.py` zat genest in
+  `if not fy_df.empty:` — gekoppeld aan presence van
+  `fy_annual_metrics`-rijen. ABP heeft geen rijen in die tabel
+  (alleen `fund_analysis`), dus de freshly-extracted samenvatting was
+  onzichtbaar in de UI. Block losgekoppeld; titel haalt fiscal_year nu
+  uit `fund_analysis` zelf.
+- ✅ **Visueel geverifieerd** via Playwright voor alle 4 FY2025-funds
+  (ABP, Beroepsvervoer, PGB, KPN). Alle 4 expanders renderen.
+
+**FY2025-stand:** 4 fondsen verwerkt. Volgende publicatie-golf
+verwacht in juni/juli wanneer meeste pensioenfondsen FY2025 uitbrengen.
+
 ## Open items, ranked by ROI
 
 ### 1. Per-year deelnemers via LLM (HIGH value, MEDIUM effort)
@@ -356,32 +395,31 @@ row selection. A nicer UX would be inline cell badges (category color,
 status pill) which native dataframe can't render. `streamlit-aggrid` would
 fix this but adds a dependency. Not done because the current UX works fine.
 
-### 9. Jaarverslag-analyse: top-30 done, ~10 funds need newer PDF (MEDIUM value, MEDIUM effort)
+### 9. Jaarverslag-analyse: top-30 done, ~7 funds need newer PDF (MEDIUM value, MEDIUM effort)
 
 `fund_analysis` table now holds 24 LLM-generated summaries:
-- FY2025: 3 (13 Beroepsvervoer, 32 PGB, 111 KPN)
+- FY2025: 4 (9 ABP, 13 Beroepsvervoer, 32 PGB, 111 KPN)
 - FY2024: 12 (incl. 24 PMT, 71 ABN, 76 APG, 119 Philips, 123 Rabobank, 145 NN, …)
 - FY2023: 1 (38 PWRI)
-- FY0 (jaartal onbekend, PDF noemt geen `Jaarverslag YYYY`): 8 funds (3, 5, 9, 16, 17, 34, 41, 72)
+- FY0 (jaartal onbekend, PDF noemt geen `Jaarverslag YYYY`): 7 funds (3, 5, 16, 17, 34, 41, 72)
 
 The FY0 group is the problem set. Their PDFs in `data/reports/` predate
 the introduction of yearly download (PFZW's content references "€216B
 eind 2022" → dat is FY2022). The analyses themselves render correctly in
 the dashboard but reflect data 2–3 years out of date.
 
-**First steps:**
-1. For each of the 8 FY0 funds, find the public download URL of the
-   FY2024 jaarverslag on the fund's website (most have an "annual
-   report" page).
-2. Save as `data/annual_reports/<fid>_<Name>_2024.pdf` — the naming
+**Per-fund workflow** (ABP volgde dit op 2026-05-25, commit `7cb2267`):
+1. Find the public PDF URL — start from the news-radar query in the
+   "Sessie 2026-05-25" section above; otherwise visit the fund's
+   "annual reports" page.
+2. Save as `data/annual_reports/<fid>_<Name>_<YYYY>.pdf` — the naming
    pattern that `build_inventory` parses for the year.
-3. Re-run `python3 llm_extract_analysis.py --funds <id> --force` to
-   overwrite the FY0 row with a FY2024 analysis. With force on, the old
-   row is updated in-place (composite PK is fund_id+fiscal_year, so the
-   new FY2024 row is technically new and the FY0 row should also be
-   deleted manually — `DELETE FROM fund_analysis WHERE fund_id=<id>
-   AND fiscal_year=0` before the re-run).
-4. Once the 8 FY0 rows are replaced, broaden to `--top 50` or beyond
+3. `DELETE FROM fund_analysis WHERE fund_id=<id> AND fiscal_year=0;`
+   (composite PK is fund_id+fiscal_year, so the FY0 row won't be
+   overwritten by a new FY2024/FY2025 row — must drop manually).
+4. `python3 scripts/document_parsing/llm_extract_analysis.py --funds <id>`
+   (no --force needed after the delete).
+5. Once the 7 FY0 rows are replaced, broaden to `--top 50` or beyond
    (currently 24 rows; the inventory has ~100 PDFs available).
 
 **Known guardrails already in code (commit b011291 + this session):**
