@@ -210,6 +210,52 @@ Six-category enhancement pass; all but a handful of skipped items done.
 - ✅ Dashboard rendert het blok onder Fund Deep-Dive's KPI-card al
   (commit `d682258`).
 
+## Sessie 2026-05-24..25 — news_articles publicatiedatum-cleanup
+
+Het news-feed in de dashboard toonde voor veel rijen de **crawl-datum**
+in plaats van de **publicatiedatum** van het artikel. Drie oorzaken
+gefixt, in volgorde:
+
+- ✅ **Parser-fallback gestopt** (commit `b71bc42`). `parse_published_date`
+  in `scripts/data_collection/parse_news_articles.py` accepteerde
+  voorheen vandaag's datum als "weaker signal" wanneer de body-text-
+  scan geen oudere datum vond. Resultaat: voor login-walls, JS-gated
+  pagina's, landing-pages en profiel-pickers werd de crawl-datum
+  opgeslagen als publicatiedatum. Toegevoegd: `trust_today=True`-param,
+  alleen gezet door structured-source callers (`<time>`, `<meta
+  article:published_time>`). Body-text caller default `False` —
+  vandaag-only in body is bijna altijd een "laatst bijgewerkt" footer.
+- ✅ **URL-slug backfill** (commit `ff75562`). 673 rijen achteraf gefixt
+  door de publicatiedatum uit de URL-slug te halen waar die er als
+  YYYYMMDD, ISO `/YYYY/MM/DD/` of Dutch `/DD-MM-YYYY/` instaat. De
+  Dutch-DMY pattern is nieuw — toegevoegd aan zowel parser als
+  backfill-script omdat bpfschilders een URL had met zowel
+  `/nieuws-2026/` als `/11-05-2026-…` en de ISO-matcher die laatste
+  als 2026-11-05 interpreteerde i.p.v. 11 mei.
+- ✅ **HTTP-fetch tier** (commit `c429aa1`). `fix_news_dates.py`
+  herschreven: concurrent (12 workers, 10s timeout), alleen op
+  NULL-rijen, skipt garbage-titels up-front, valideert dat een
+  gefetcht datum niet ná de scrape-datum ligt. 317 URLs gefetcht,
+  66 nieuwe datums uit `<meta>`/`<time>`/JSON-LD.
+
+**Eindstand `news_articles`:**
+
+| State | Vóór | Na |
+|---|---|---|
+| Met echte publicatiedatum | 1932 (deels nep) | 1974 |
+| NULL (verborgen in dashboard) | 475 | 433 |
+| Future-date (logisch onmogelijk) | 3 | 0 |
+| Garbage-titel met datum | 114 | 0 |
+| Fallback-misfires (= scrape-date) | 178 | 0 |
+
+**Onfixbaar zonder zwaardere middelen** (verklaart de 433 NULL):
+- ~179 Cloudflare "Challenge Validation" (`pensioencg.nl`, `pnb.nl`)
+  — site geeft geen content terug, scraper ziet alleen het JS-puzzle
+- ~50 garbage landing-pages (`Nieuws`, `Sign in`, etc.)
+- ~200 echte artikelen zonder `<meta>`/`<time>`/JSON-LD-datum én zonder
+  datum in URL-slug — LLM-extractie op pagina-tekst zou kunnen werken
+  maar staat niet op de roadmap.
+
 ## Open items, ranked by ROI
 
 ### 1. Per-year deelnemers via LLM (HIGH value, MEDIUM effort)
