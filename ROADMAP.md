@@ -291,9 +291,49 @@ dashboard-bug ontdekt en gefixt.
   uit `fund_analysis` zelf.
 - ✅ **Visueel geverifieerd** via Playwright voor alle 4 FY2025-funds
   (ABP, Beroepsvervoer, PGB, KPN). Alle 4 expanders renderen.
+- ✅ **BPL + Achmea FY2024 verwerkt** (commit `3f09895`). Via een
+  bredere lookup op `scraped_documents` (waar de scraper al PDF-URLs
+  had ontdekt) gevonden:
+  - 16 BPL: `https://www.bplpensioen.nl/sites/default/files/documenten/bpl-pensioen-jaarverslag-2024.pdf`
+  - 72 Achmea: `https://www.pensioenfondsachmea.nl/-/media/Files/Achmea/Pensioen-123-laag-3-algemeen/Pensioenfonds-Achmea-Jaarverslag-2024.pdf`
+    (Achmea: `--http1.1` flag bij curl nodig, hun server gaf HTTP/2
+    stream-error onder default config — exit 92.)
+- ✅ **PFZW scraper-fix** (commit `fa0fd7e`). Drie aaneenschakelende
+  problemen die PFZW's nieuwere PDFs onzichtbaar maakten:
+  - `funds.website` stond op `pfzw.nl/en/about-us.html` — Engelse
+    subboom, geen link naar Nederlandse jaarverslag-index. Geüpdatet
+    naar `pfzw.nl/`.
+  - URL-pattern was veranderd: oude PDFs onder
+    `/content/dam/pfzw/over-ons/jaarverslag/pdf/`, nieuwe (FY2024+)
+    onder `/content/dam/pfzw/web/over-ons/jaarverslagen/`. Direct-
+    URL-guesses op het oude pattern returnden allemaal 404.
+  - Scraper-`paths_to_check` lijst was statisch (`/`, `/nieuws`,
+    `/actueel`, `/documenten`, `/downloads`, `/over-ons/nieuws`,
+    `/over-het-fonds/documenten`) en bereikte
+    `/over-pfzw/dit-presteren-we/jaarverslagen.html` nooit.
 
-**FY2025-stand:** 4 fondsen verwerkt. Volgende publicatie-golf
-verwacht in juni/juli wanneer meeste pensioenfondsen FY2025 uitbrengen.
+  Fixes in `scripts/data_collection/monitor_websites_concurrent.py`:
+  - **One-hop deep-crawl**: na de 7 vaste paths scant de scraper de
+    homepage-links op `/jaarverslag|annual.?report|publicatie/i` en
+    volgt die één hop dieper (cap 5 per fund). Levert nu alle 12
+    PFZW-jaarverslagen FY2015–FY2025 op in `scraped_documents`
+    (was 5).
+  - **`--funds <ids>` flag**: targeted re-scrape zonder op de bi-daily
+    launchd te wachten.
+- ✅ **5 andere funds met `/en/` URL** geüpdatet naar Dutch homepage
+  (32 PGB, 36 StiPP, 43 BPZ, 45 IBM, 142 Zwitserleven PPI). Volgende
+  bi-daily picks-up nieuwe FY2025-PDFs bij deze 5 automatisch.
+  Twee funds blijven uit scope: 69 ASW (DNB-register als URL),
+  144 ASR (one-off persrelease als URL) — beide al uitgesloten van
+  Fund Deep-Dive in `dashboard.py:685`.
+- ✅ **PFZW FY2025 verwerkt** (commit `88e4f6a`). 33 MB / 219 pages.
+  Output: invaardatum 1 januari 2026, geen AVG-incidenten,
+  waarderings-risico op subjectieve inputs.
+
+**FY2025-stand einde sessie:** 5 fondsen verwerkt (9 ABP, 13 Beroeps-
+vervoer, 32 PGB, 41 PFZW, 111 KPN). Volgende publicatie-golf in
+juni/juli; bi-daily scraper zal nieuwe PDFs nu automatisch oppikken
+voor de 6 fondsen met gefixte website-URLs.
 
 ## Open items, ranked by ROI
 
@@ -395,13 +435,19 @@ row selection. A nicer UX would be inline cell badges (category color,
 status pill) which native dataframe can't render. `streamlit-aggrid` would
 fix this but adds a dependency. Not done because the current UX works fine.
 
-### 9. Jaarverslag-analyse: top-30 done, ~5 funds need newer PDF (MEDIUM value, MEDIUM effort)
+### 9. Jaarverslag-analyse: top-30 done, ~4 funds need newer PDF (MEDIUM value, MEDIUM effort)
 
 `fund_analysis` table now holds 24 LLM-generated summaries:
-- FY2025: 4 (9 ABP, 13 Beroepsvervoer, 32 PGB, 111 KPN)
+- FY2025: 5 (9 ABP, 13 Beroepsvervoer, 32 PGB, 41 PFZW, 111 KPN)
 - FY2024: 14 (incl. 16 BPL, 24 PMT, 71 ABN, 72 Achmea, 76 APG, 119 Philips, 123 Rabobank, 145 NN, …)
 - FY2023: 1 (38 PWRI)
-- FY0 (jaartal onbekend, PDF noemt geen `Jaarverslag YYYY`): 5 funds (3 Huisartsen, 5 Med. Specialisten, 17 Detailhandel, 34 Recreatie, 41 PFZW)
+- FY0 (jaartal onbekend, PDF noemt geen `Jaarverslag YYYY`): 4 funds (3 Huisartsen, 5 Med. Specialisten, 17 Detailhandel, 34 Recreatie)
+
+These 4 have no news-announcement of a recent jaarverslag AND no
+PDF URL in `scraped_documents`. Either their homepages link via JS,
+they put the annual report in a hard-to-reach archive page, or they
+have no published annual report on the public site at all. Manual
+website inspection is the next step.
 
 The FY0 group is the problem set. Their PDFs in `data/reports/` predate
 the introduction of yearly download (PFZW's content references "€216B
