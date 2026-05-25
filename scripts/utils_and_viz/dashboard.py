@@ -805,49 +805,56 @@ elif st.session_state.page == "Fund Deep-Dive":
             if mismatches:
                 st.caption("⚠ funds-table values differ from the annual report: " + "; ".join(mismatches))
 
-            # --- Analyse jaarverslag (from fund_analysis table, LLM-generated) ---
-            analysis = load_data(f"""
-                SELECT fiscal_year, summary, highlights_json, lowlights_json,
-                       key_risks_json, transitie_status, source_pdf, generated_at
-                FROM fund_analysis
-                WHERE fund_id = {int(fund_id)}
-                ORDER BY fiscal_year DESC LIMIT 1
-            """)
-            with st.expander(f"📋 Analyse jaarverslag {latest_fy}", expanded=False):
-                if analysis.empty:
-                    st.markdown(
-                        "Nog geen analyse beschikbaar. "
-                        "Genereer met de lokale LLM-extractor:"
+        # --- Analyse jaarverslag (from fund_analysis table, LLM-generated) ---
+        # Rendered independently of fy_annual_metrics presence — many funds
+        # (incl. ABP) have an LLM-generated analysis without parsed numerics.
+        analysis = load_data(f"""
+            SELECT fiscal_year, summary, highlights_json, lowlights_json,
+                   key_risks_json, transitie_status, source_pdf, generated_at
+            FROM fund_analysis
+            WHERE fund_id = {int(fund_id)}
+            ORDER BY fiscal_year DESC LIMIT 1
+        """)
+        analysis_fy = int(analysis.iloc[0]['fiscal_year']) if not analysis.empty else None
+        expander_label = (
+            f"📋 Analyse jaarverslag {analysis_fy}" if analysis_fy
+            else "📋 Analyse jaarverslag"
+        )
+        with st.expander(expander_label, expanded=False):
+            if analysis.empty:
+                st.markdown(
+                    "Nog geen analyse beschikbaar. "
+                    "Genereer met de lokale LLM-extractor:"
+                )
+                st.code(
+                    f"cd scripts/document_parsing\n"
+                    f"python3 llm_extract_analysis.py --funds {int(fund_id)}",
+                    language="bash",
+                )
+            else:
+                a = analysis.iloc[0]
+                if a['summary']:
+                    st.markdown(f"**Samenvatting**  \n{a['summary']}")
+                import json as _json
+                def _render_bullets(label, raw):
+                    if not raw: return
+                    try:
+                        items = _json.loads(raw)
+                    except Exception:
+                        return
+                    if not items: return
+                    st.markdown(f"**{label}**")
+                    for b in items:
+                        st.markdown(f"- {b}")
+                _render_bullets("Highlights", a['highlights_json'])
+                _render_bullets("Aandachtspunten", a['lowlights_json'])
+                _render_bullets("Belangrijkste risico's", a['key_risks_json'])
+                if a['transitie_status']:
+                    st.markdown(f"**WTP-transitie**  \n{a['transitie_status']}")
+                if a['source_pdf']:
+                    st.caption(
+                        f"Bron: `{a['source_pdf']}` · gegenereerd {a['generated_at']}"
                     )
-                    st.code(
-                        f"cd scripts/document_parsing\n"
-                        f"python3 llm_extract_analysis.py --funds {int(fund_id)}",
-                        language="bash",
-                    )
-                else:
-                    a = analysis.iloc[0]
-                    if a['summary']:
-                        st.markdown(f"**Samenvatting**  \n{a['summary']}")
-                    import json as _json
-                    def _render_bullets(label, raw):
-                        if not raw: return
-                        try:
-                            items = _json.loads(raw)
-                        except Exception:
-                            return
-                        if not items: return
-                        st.markdown(f"**{label}**")
-                        for b in items:
-                            st.markdown(f"- {b}")
-                    _render_bullets("Highlights", a['highlights_json'])
-                    _render_bullets("Aandachtspunten", a['lowlights_json'])
-                    _render_bullets("Belangrijkste risico's", a['key_risks_json'])
-                    if a['transitie_status']:
-                        st.markdown(f"**WTP-transitie**  \n{a['transitie_status']}")
-                    if a['source_pdf']:
-                        st.caption(
-                            f"Bron: `{a['source_pdf']}` · gegenereerd {a['generated_at']}"
-                        )
 
         st.divider()
 
