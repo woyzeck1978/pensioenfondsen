@@ -1,10 +1,15 @@
 import sqlite3
 import requests
+import re
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin, urlparse
 import time
 import argparse
 import concurrent.futures
+
+# Pages whose href is followed one extra hop (e.g. /over-pfzw/dit-presteren-we/
+# jaarverslagen.html) so we don't miss PDFs reachable only via a deep nav link.
+RE_FOLLOW_HOMEPAGE_LINK = re.compile(r"jaarverslag|annual.?report|publicatie", re.I)
 
 def get_db_connection():
     conn = sqlite3.connect('../../data/processed/pension_funds.db')
@@ -75,21 +80,46 @@ def scan_fund_worker(fund_tuple):
     all_discovered = []
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
     visited = set()
-    
+    homepage_soup = None
+
     for path in paths_to_check:
         target_url = urljoin(website_url, path)
         if target_url in visited: continue
         visited.add(target_url)
-        
+
         try:
             response = requests.get(target_url, headers=headers, timeout=10)
             if response.status_code == 200:
                 soup = BeautifulSoup(response.text, 'html.parser')
+                if path == '/':
+                    homepage_soup = soup
                 links = extract_links_from_page(target_url, soup, base_domain)
                 all_discovered.extend(links)
         except Exception:
             pass # Suppress thread errors to keep console clean
-            
+
+    # One-hop deep crawl: from the homepage, follow any link whose href or
+    # anchor text matches RE_FOLLOW_HOMEPAGE_LINK (jaarverslag/publicatie/etc).
+    # Catches landing pages like /over-pfzw/dit-presteren-we/jaarverslagen.html
+    # that the fixed paths_to_check list would never reach.
+    if homepage_soup is not None:
+        candidates = set()
+        for a in homepage_soup.find_all('a', href=True):
+            txt = a.get_text(' ', strip=True)
+            if RE_FOLLOW_HOMEPAGE_LINK.search(a['href']) or RE_FOLLOW_HOMEPAGE_LINK.search(txt):
+                full = urljoin(website_url, a['href'])
+                if base_domain in urlparse(full).netloc and full not in visited:
+                    candidates.add(full)
+        for jurl in list(candidates)[:5]:  # cap to avoid runaway
+            visited.add(jurl)
+            try:
+                rj = requests.get(jurl, headers=headers, timeout=10)
+                if rj.status_code == 200:
+                    soup_j = BeautifulSoup(rj.text, 'html.parser')
+                    all_discovered.extend(extract_links_from_page(jurl, soup_j, base_domain))
+            except Exception:
+                pass
+
     # Deduplicate within this single run
     unique_discovered = {}
     for item in all_discovered:
@@ -100,16 +130,24 @@ def scan_fund_worker(fund_tuple):
 def main():
     parser = argparse.ArgumentParser(description="Pension Fund Web Scraper / Monitor")
     parser.add_argument('--test', action='store_true', help="Run in test mode on just 3 funds")
+    parser.add_argument('--funds', type=str, default="",
+                        help="Comma-separated fund IDs to scrape (default: all)")
     args = parser.parse_args()
 
     conn = get_db_connection()
     cursor = conn.cursor()
-    
+
     query = "SELECT id, name, website FROM funds WHERE website IS NOT NULL AND website != '' AND website != 'None'"
-    if args.test:
+    params: tuple = ()
+    if args.funds:
+        ids = tuple(int(x) for x in args.funds.split(",") if x.strip())
+        placeholders = ",".join("?" for _ in ids)
+        query += f" AND id IN ({placeholders})"
+        params = ids
+    elif args.test:
         query += " LIMIT 3"
-        
-    cursor.execute(query)
+
+    cursor.execute(query, params)
     funds = cursor.fetchall()
     conn.close() # Close DB before threading
     
