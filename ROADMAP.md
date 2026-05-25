@@ -395,13 +395,13 @@ row selection. A nicer UX would be inline cell badges (category color,
 status pill) which native dataframe can't render. `streamlit-aggrid` would
 fix this but adds a dependency. Not done because the current UX works fine.
 
-### 9. Jaarverslag-analyse: top-30 done, ~7 funds need newer PDF (MEDIUM value, MEDIUM effort)
+### 9. Jaarverslag-analyse: top-30 done, ~5 funds need newer PDF (MEDIUM value, MEDIUM effort)
 
 `fund_analysis` table now holds 24 LLM-generated summaries:
 - FY2025: 4 (9 ABP, 13 Beroepsvervoer, 32 PGB, 111 KPN)
-- FY2024: 12 (incl. 24 PMT, 71 ABN, 76 APG, 119 Philips, 123 Rabobank, 145 NN, …)
+- FY2024: 14 (incl. 16 BPL, 24 PMT, 71 ABN, 72 Achmea, 76 APG, 119 Philips, 123 Rabobank, 145 NN, …)
 - FY2023: 1 (38 PWRI)
-- FY0 (jaartal onbekend, PDF noemt geen `Jaarverslag YYYY`): 7 funds (3, 5, 16, 17, 34, 41, 72)
+- FY0 (jaartal onbekend, PDF noemt geen `Jaarverslag YYYY`): 5 funds (3 Huisartsen, 5 Med. Specialisten, 17 Detailhandel, 34 Recreatie, 41 PFZW)
 
 The FY0 group is the problem set. Their PDFs in `data/reports/` predate
 the introduction of yearly download (PFZW's content references "€216B
