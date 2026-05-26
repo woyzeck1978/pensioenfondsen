@@ -516,9 +516,29 @@ eerste FY2025 verschijnt):
   beleggingsrendement-grafiek; voor niet-ingevaren toon je
   dekkingsgraad-grafiek.
 
+**Monitoring (sessie 2026-05-26):** Een scheduled remote agent
+`trig_014uegtLHMZLJ55qVy4PuGPm` ("FY2025 invaarder jaarverslag radar")
+draait one-shot op 2026-06-15 06:00 UTC. Hij gebruikt **drie parallelle
+signalen** — news-only bleek onbetrouwbaar nadat audit liet zien dat
+4 van de 6 invaarders (Loodsen, POB, Particuliere Beveiliging, APG)
+nooit jaarverslag-aankondigingen via news plaatsen.
+
+De drie signalen:
+1. `news_articles` titel matched `%jaarverslag%2025%`/`%2025 is klaar%`
+   etc., gepubliceerd ná 2026-05-25, voor fund_id IN (4,29,30,38,76,193).
+2. `scraped_documents` URL of titel matched `%jaarverslag-2025%` /
+   `%jaarverslag_2025%` etc., voor dezelfde fund_ids. Robuuster — de
+   bi-daily scraper kent al de URL-patronen voor Loodsen/PWRI/APG.
+3. Direct HEAD-check op drie bekende URL-patronen:
+   - `pwri.nl/.../jaarverslag-2025-pwri.pdf`
+   - `bploodsen.nl/.../jaarverslag-2025.pdf` (+ verkort-variant)
+
+Status op 2026-05-26 (alle drie lokaal getest): allemaal leeg / 404.
+
 **First steps when first FY2025 invaarder-jaarverslag landt:**
-1. News-radar query (zie sessie 2026-05-25) sweepen op `jaarverslag 2025`
-   wekelijks vanaf juni 2026.
+1. Routine fires automatisch 2026-06-15; output op
+   `https://claude.ai/code/routines/trig_014uegtLHMZLJ55qVy4PuGPm`.
+   Niets gevonden → routine re-armen voor +3 weken.
 2. Bij eerste hit: PDF downloaden + handmatig inspecteren wat er
    feitelijk in de kerncijfers-tabel staat.
 3. Bevestigt het template hierboven? Zo ja: schema-migratie schrijven.
