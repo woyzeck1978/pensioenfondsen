@@ -1647,10 +1647,14 @@ elif st.session_state.page == "WTP Tracker":
                 labels={'date': '', 'aum_euro_bn': 'AUM (€ Bn)', 'status': '',
                         'wtp_contract_type': 'Contract'},
             )
-            # Today line
-            today = pd.Timestamp.now(tz='UTC').tz_localize(None)
-            fig_tl.add_vline(x=today, line_dash='dot', line_color='#5C6875',
-                             annotation_text='vandaag', annotation_position='top')
+            # Today line — annotation added separately because plotly's
+            # add_vline annotation path calls sum(x) with int start, which
+            # rejects both pd.Timestamp and date strings on current versions.
+            today = pd.Timestamp.now(tz='UTC').tz_localize(None).strftime('%Y-%m-%d')
+            fig_tl.add_vline(x=today, line_dash='dot', line_color='#5C6875')
+            fig_tl.add_annotation(x=today, y=1, yref='paper', showarrow=False,
+                                  text='vandaag', font=dict(color='#5C6875'),
+                                  yanchor='bottom')
             fig_tl.update_layout(height=320, showlegend=True)
             st.plotly_chart(fig_tl, use_container_width=True)
         else:
