@@ -1664,14 +1664,19 @@ elif st.session_state.page == "WTP Tracker":
         # --- Invaren timeline: who when, sized by AUM ---
         timeline_df = wtp_df.dropna(subset=['wtp_transitie_datum']).copy()
         timeline_df['date'] = pd.to_datetime(timeline_df['wtp_transitie_datum'], errors='coerce')
+        timeline_df['oorspr'] = pd.to_datetime(timeline_df['wtp_oorspr_datum'], errors='coerce')
         timeline_df = timeline_df.dropna(subset=['date']).copy()
         if not timeline_df.empty:
-            timeline_df['is_past'] = timeline_df['date'].dt.date <= pd.Timestamp.now(tz='UTC').tz_localize(None).date()
-            timeline_df['status'] = timeline_df.apply(
-                lambda r: 'Ingevaren' if r['is_past'] or str(r.get('wtp_invaren') or '').lower() == 'ja'
-                          else ('Uitgesteld' if str(r.get('wtp_invaren') or '').lower() == 'uitgesteld' else 'Gepland'),
-                axis=1,
-            )
+            today_dt = pd.Timestamp.now(tz='UTC').tz_localize(None).normalize()
+            timeline_df['is_past'] = timeline_df['date'] <= today_dt
+            # Uitgesteld = oorspr. datum bekend en eerder dan huidige (positieve
+            # verschuiving). 'Ingevaren' (datum <= vandaag) wint van 'Uitgesteld'.
+            timeline_df['status'] = 'Gepland'
+            timeline_df.loc[
+                timeline_df['oorspr'].notna() & (timeline_df['oorspr'] < timeline_df['date']),
+                'status'
+            ] = 'Uitgesteld'
+            timeline_df.loc[timeline_df['is_past'], 'status'] = 'Ingevaren'
             timeline_df['aum_safe'] = timeline_df['aum_euro_bn'].fillna(0.5)  # for marker-size
             timeline_df = timeline_df.sort_values('date')
 
