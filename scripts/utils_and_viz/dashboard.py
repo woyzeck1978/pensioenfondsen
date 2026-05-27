@@ -1454,22 +1454,34 @@ elif st.session_state.page == "WTP Tracker":
     wtp_df = load_data(query)
     total_funds_in_db = len(df_funds)
     wtp_known = len(wtp_df)
-    spr_count = (wtp_df['wtp_contract_type'].astype(str).str.upper().str.contains('SPR|SOLIDAIR', na=False)).sum() if not wtp_df.empty else 0
-    fpr_count = (wtp_df['wtp_contract_type'].astype(str).str.upper().str.contains('FPR|FLEXIB', na=False)).sum() if not wtp_df.empty else 0
-    invaren_done = (wtp_df['wtp_invaren'] == 'ja').sum() if not wtp_df.empty else 0
-    invaren_uitgesteld = (wtp_df['wtp_invaren'] == 'uitgesteld').sum() if not wtp_df.empty else 0
     today_iso = pd.Timestamp.now(tz='UTC').tz_localize(None).date().isoformat()
-    past_dates = (wtp_df['wtp_transitie_datum'].fillna('').astype(str) <= today_iso) & wtp_df['wtp_transitie_datum'].notna()
-    transitie_passed = int(past_dates.sum())
+    if not wtp_df.empty:
+        contract_upper = wtp_df['wtp_contract_type'].astype(str).str.lower()
+        solidair_count = int(contract_upper.str.startswith('solidair').sum()
+                             + contract_upper.eq('spr').sum())
+        flexibel_count = int(contract_upper.str.startswith('flex').sum()
+                             + contract_upper.eq('fpr').sum())
+        past_mask = (wtp_df['wtp_transitie_datum'].notna()
+                     & (wtp_df['wtp_transitie_datum'] <= today_iso))
+        future_mask = (wtp_df['wtp_transitie_datum'].notna()
+                       & (wtp_df['wtp_transitie_datum'] > today_iso))
+        reeds_ingevaren = int(past_mask.sum())
+        nog_te_komen = int(future_mask.sum())
+        uitgesteld_count = int((
+            future_mask
+            & wtp_df['wtp_oorspr_datum'].notna()
+            & (wtp_df['wtp_oorspr_datum'] < wtp_df['wtp_transitie_datum'])
+        ).sum())
+    else:
+        solidair_count = flexibel_count = reeds_ingevaren = nog_te_komen = uitgesteld_count = 0
 
     render_kpi_row([
         kpi_card("WTP Plans Known", f"{wtp_known}",
                  sub=f"of {total_funds_in_db} tracked funds ({wtp_known/max(total_funds_in_db,1)*100:.0f}%)"),
-        kpi_card("Ingevaren (status = ja)", f"{invaren_done}",
-                 sub=f"+ {transitie_passed} met datum in het verleden"
-                     + (f" · {invaren_uitgesteld} uitgesteld" if invaren_uitgesteld else "")),
-        kpi_card("Solidair (SPR)", f"{spr_count}",
-                 sub=f"vs FPR: {fpr_count}"),
+        kpi_card("Reeds ingevaren", f"{reeds_ingevaren}",
+                 sub=f"{nog_te_komen} nog te komen · {uitgesteld_count} uitgesteld"),
+        kpi_card("Solidair", f"{solidair_count}",
+                 sub=f"Flexibel: {flexibel_count}"),
         kpi_card("Avg AUM in Scope",
                  f"€{wtp_df['aum_euro_bn'].mean():,.1f} Bn" if not wtp_df.empty and wtp_df['aum_euro_bn'].notna().any() else "—",
                  sub="among funds with WTP plan"),
