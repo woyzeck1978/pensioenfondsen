@@ -1,6 +1,7 @@
 import streamlit as st
 import sqlite3
 import pandas as pd
+import numpy as np
 import plotly.express as px
 import plotly.io as pio
 import os
@@ -1688,20 +1689,37 @@ elif st.session_state.page == "WTP Tracker":
                 'status'
             ] = 'Uitgesteld'
             timeline_df.loc[timeline_df['is_past'], 'status'] = 'Ingevaren'
-            timeline_df['aum_safe'] = timeline_df['aum_euro_bn'].fillna(0.5)  # for marker-size
+            # Marker size: sqrt-scaling demt de ABP/PFZW-bias. Onbekende AUM krijgt
+            # een vaste kleine waarde maar wordt apart benoemd in de hover.
+            timeline_df['aum_known'] = timeline_df['aum_euro_bn'].notna()
+            timeline_df['aum_marker'] = np.sqrt(timeline_df['aum_euro_bn'].fillna(1.0))
+            timeline_df['AUM (€ Bn)'] = timeline_df['aum_euro_bn'].apply(
+                lambda v: f"{v:.1f}" if pd.notna(v) else "?"
+            )
+            timeline_df['Oorspr. datum'] = timeline_df['oorspr'].dt.strftime('%d %b %Y').fillna('—')
+            timeline_df['Uitvoerder'] = timeline_df['uitvoerder'].fillna('—')
+            timeline_df['Contract'] = timeline_df['wtp_contract_type'].fillna('—')
             timeline_df = timeline_df.sort_values('date')
 
-            st.markdown("### Invaren-tijdlijn")
+            counts = timeline_df['status'].value_counts()
+            st.markdown(
+                f"### Invaren-tijdlijn — "
+                f"{counts.get('Ingevaren', 0)} ingevaren · "
+                f"{counts.get('Uitgesteld', 0)} uitgesteld · "
+                f"{counts.get('Gepland', 0)} origineel gepland"
+            )
             fig_tl = px.scatter(
                 timeline_df, x='date', y='status', color='status',
-                size='aum_safe', hover_name='name',
+                size='aum_marker', hover_name='name',
+                category_orders={'status': ['Ingevaren', 'Uitgesteld', 'Gepland']},
                 hover_data={
-                    'aum_euro_bn': ':.1f', 'wtp_contract_type': True,
-                    'aum_safe': False, 'date': '|%d %b %Y', 'status': False,
+                    'AUM (€ Bn)': True, 'Contract': True,
+                    'Oorspr. datum': True, 'Uitvoerder': True,
+                    'aum_marker': False, 'date': '|%d %b %Y', 'status': False,
                 },
                 color_discrete_map={'Ingevaren': '#2F7D57', 'Gepland': '#6554A3', 'Uitgesteld': '#C66B16'},
-                labels={'date': '', 'aum_euro_bn': 'AUM (€ Bn)', 'status': '',
-                        'wtp_contract_type': 'Contract'},
+                labels={'date': '', 'status': ''},
+                size_max=28,
             )
             # Today line — annotation added separately because plotly's
             # add_vline annotation path calls sum(x) with int start, which
