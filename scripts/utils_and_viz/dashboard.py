@@ -1602,17 +1602,24 @@ elif st.session_state.page == "WTP Tracker":
 
         c1, c2 = st.columns(2)
         with c1:
-            timeline = (
-                future_df.dropna(subset=['wtp_transitie_datum'])
-                         .groupby('wtp_transitie_datum').size()
-                         .reset_index(name='Number of Funds')
-                         .rename(columns={'wtp_transitie_datum': 'Transition Date'})
-                         .sort_values('Transition Date')
-            )
-            if not timeline.empty:
+            timeline_src = future_df.dropna(subset=['wtp_transitie_datum']).copy()
+            if not timeline_src.empty:
+                timeline_src['Status'] = 'Origineel gepland'
+                mask_uitg = (
+                    timeline_src['wtp_oorspr_datum'].notna()
+                    & (timeline_src['wtp_oorspr_datum'] < timeline_src['wtp_transitie_datum'])
+                )
+                timeline_src.loc[mask_uitg, 'Status'] = 'Uitgesteld'
+                timeline = (
+                    timeline_src.groupby(['wtp_transitie_datum', 'Status']).size()
+                                .reset_index(name='Aantal fondsen')
+                                .rename(columns={'wtp_transitie_datum': 'Transitiedatum'})
+                                .sort_values('Transitiedatum')
+                )
                 fig_bar = px.bar(
-                    timeline, x='Transition Date', y='Number of Funds',
-                    title="Planned Transitions per Date",
+                    timeline, x='Transitiedatum', y='Aantal fondsen', color='Status',
+                    title="Geplande transities per datum",
+                    color_discrete_map={'Origineel gepland': '#6554A3', 'Uitgesteld': '#C66B16'},
                 )
                 fig_bar.update_xaxes(type='category')
                 st.plotly_chart(fig_bar, use_container_width=True)
@@ -1620,10 +1627,14 @@ elif st.session_state.page == "WTP Tracker":
                 st.info("Geen geplande transities meer — alles is voltooid of zonder datum.")
 
         with c2:
-            contract_counts = wtp_df['wtp_contract_type'].value_counts().reset_index()
-            contract_counts.columns = ['Contract Type', 'Count']
-            fig_pie = px.pie(contract_counts, names='Contract Type', values='Count',
-                             title="All Contract Types (SPR vs FPR)")
+            contract_counts = (
+                wtp_df['wtp_contract_type']
+                    .dropna().loc[lambda s: s.str.strip() != '']
+                    .value_counts().reset_index()
+            )
+            contract_counts.columns = ['Contracttype', 'Aantal']
+            fig_pie = px.pie(contract_counts, names='Contracttype', values='Aantal',
+                             title="Contracttypes")
             st.plotly_chart(fig_pie, use_container_width=True)
 
         # --- Uitgestelde transities (bron: PensioenPro 27-4-2026 PDF) ---
