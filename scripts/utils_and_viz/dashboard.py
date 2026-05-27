@@ -1445,7 +1445,8 @@ elif st.session_state.page == "WTP Tracker":
     # wtp_transitie_datum is ISO YYYY-MM-DD or NULL. The "WTP plan known"
     # criterion is now "has either a planned date or an invaren status".
     query = """
-    SELECT name, aum_euro_bn, wtp_transitie_datum, wtp_contract_type, wtp_invaren
+    SELECT name, aum_euro_bn, wtp_transitie_datum, wtp_contract_type,
+           wtp_invaren, wtp_oorspr_datum, uitvoerder
     FROM funds
     WHERE wtp_transitie_datum IS NOT NULL OR wtp_invaren IS NOT NULL
     """
@@ -1620,6 +1621,41 @@ elif st.session_state.page == "WTP Tracker":
             fig_pie = px.pie(contract_counts, names='Contract Type', values='Count',
                              title="All Contract Types (SPR vs FPR)")
             st.plotly_chart(fig_pie, use_container_width=True)
+
+        # --- Uitgestelde transities (bron: PensioenPro 27-4-2026 PDF) ---
+        if 'wtp_oorspr_datum' in wtp_df.columns:
+            uitstel_df = wtp_df.dropna(subset=['wtp_oorspr_datum', 'wtp_transitie_datum']).copy()
+            uitstel_df = uitstel_df[uitstel_df['wtp_oorspr_datum'] != uitstel_df['wtp_transitie_datum']]
+            if not uitstel_df.empty:
+                uitstel_df['oud'] = pd.to_datetime(uitstel_df['wtp_oorspr_datum'], errors='coerce')
+                uitstel_df['nieuw'] = pd.to_datetime(uitstel_df['wtp_transitie_datum'], errors='coerce')
+                uitstel_df['Verschuiving (mnd)'] = (
+                    (uitstel_df['nieuw'].dt.year - uitstel_df['oud'].dt.year) * 12
+                    + (uitstel_df['nieuw'].dt.month - uitstel_df['oud'].dt.month)
+                )
+                vooruit = (uitstel_df['Verschuiving (mnd)'] > 0).sum()
+                achteruit = (uitstel_df['Verschuiving (mnd)'] < 0).sum()
+
+                st.markdown(f"### Fondsen met uitgestelde transitie ({vooruit} verschoven, {achteruit} vervroegd)")
+                st.caption("Bron: PensioenPro transitieoverzicht 27 april 2026. "
+                           "Negatieve verschuiving = invaardatum vervroegd.")
+
+                tbl = uitstel_df[['name', 'oud', 'nieuw', 'Verschuiving (mnd)',
+                                   'aum_euro_bn', 'wtp_contract_type', 'uitvoerder']].copy()
+                tbl = tbl.rename(columns={
+                    'name': 'Fonds', 'oud': 'Oorspronkelijke datum', 'nieuw': 'Nieuwe datum',
+                    'aum_euro_bn': 'AUM (€ Bn)', 'wtp_contract_type': 'Contract',
+                    'uitvoerder': 'Uitvoerder',
+                })
+                tbl = tbl.sort_values(['Verschuiving (mnd)', 'Nieuwe datum'], ascending=[False, True])
+                st.dataframe(
+                    tbl, use_container_width=True, hide_index=True,
+                    column_config={
+                        'Oorspronkelijke datum': st.column_config.DateColumn('Oorspr. datum', format='D MMM YYYY'),
+                        'Nieuwe datum': st.column_config.DateColumn('Nieuwe datum', format='D MMM YYYY'),
+                        'AUM (€ Bn)': st.column_config.NumberColumn('AUM (€ Bn)', format='%.1f'),
+                    },
+                )
 
         # --- Invaren timeline: who when, sized by AUM ---
         timeline_df = wtp_df.dropna(subset=['wtp_transitie_datum']).copy()
