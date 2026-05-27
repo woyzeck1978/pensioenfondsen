@@ -1581,8 +1581,9 @@ elif st.session_state.page == "WTP Tracker":
     st.divider()
     
     if not wtp_df.empty:
-        # wtp_transitie_datum is ISO YYYY-MM-DD after normalize_wtp_fields.py.
-        # Split into past (transitie voltooid) vs future (gepland).
+        # Split into past (transitie voltooid), future (gepland) en geen-transitie.
+        # wtp_invaren='ja' is in de PensioenPro-bron een *intentie*, niet een
+        # voltooiingssignaal — classificeren dus puur op datum.
         today_iso = pd.Timestamp.now(tz='UTC').tz_localize(None).date().isoformat()
         wtp_df = wtp_df.copy()
         wtp_df['sort_date'] = wtp_df['wtp_transitie_datum'].fillna('2099-12-31')
@@ -1590,11 +1591,14 @@ elif st.session_state.page == "WTP Tracker":
             wtp_df['wtp_transitie_datum'].notna()
             & (wtp_df['wtp_transitie_datum'] <= today_iso)
         )
-        # 'Ingevaren = ja' overrides: treat as past even if datum is missing
-        wtp_df.loc[wtp_df['wtp_invaren'] == 'ja', 'is_past'] = True
+        wtp_df['is_future'] = (
+            wtp_df['wtp_transitie_datum'].notna()
+            & (wtp_df['wtp_transitie_datum'] > today_iso)
+        )
 
-        past_df = wtp_df[wtp_df['is_past']].drop(columns=['is_past'])
-        future_df = wtp_df[~wtp_df['is_past']].drop(columns=['is_past'])
+        past_df = wtp_df[wtp_df['is_past']].drop(columns=['is_past', 'is_future'])
+        future_df = wtp_df[wtp_df['is_future']].drop(columns=['is_past', 'is_future'])
+        no_transition_df = wtp_df[~wtp_df['is_past'] & ~wtp_df['is_future']].drop(columns=['is_past', 'is_future'])
 
         c1, c2 = st.columns(2)
         with c1:
@@ -1696,19 +1700,55 @@ elif st.session_state.page == "WTP Tracker":
         else:
             st.info("Geen geldige transitiedatums voor de tijdlijn.")
 
-        st.subheader("🚀 Reeds Ingevaren (Transitie Voltooid)")
+        def _format_wtp_table(df, asc):
+            t = df.sort_values('sort_date', ascending=asc).drop(columns=['sort_date']).copy()
+            t['wtp_transitie_datum'] = pd.to_datetime(t['wtp_transitie_datum'], errors='coerce')
+            t['wtp_oorspr_datum'] = pd.to_datetime(t['wtp_oorspr_datum'], errors='coerce')
+            return t.rename(columns={
+                'name': 'Fonds',
+                'wtp_transitie_datum': 'Transitiedatum',
+                'wtp_oorspr_datum': 'Oorspr. datum',
+                'wtp_contract_type': 'Contract',
+                'wtp_invaren': 'Invaren',
+                'aum_euro_bn': 'AUM (€ Bn)',
+                'uitvoerder': 'Uitvoerder',
+            })[['Fonds', 'Transitiedatum', 'Oorspr. datum', 'Contract',
+                'Invaren', 'AUM (€ Bn)', 'Uitvoerder']]
+
+        _date_cfg = {
+            'Transitiedatum': st.column_config.DateColumn('Transitiedatum', format='D MMM YYYY'),
+            'Oorspr. datum': st.column_config.DateColumn('Oorspr. datum', format='D MMM YYYY'),
+            'AUM (€ Bn)': st.column_config.NumberColumn('AUM (€ Bn)', format='%.1f'),
+        }
+
+        st.subheader(f"🚀 Reeds Ingevaren ({len(past_df)} fondsen)")
         if not past_df.empty:
-            sorted_past = past_df.sort_values('sort_date', ascending=False).drop(columns=['sort_date'])
-            st.dataframe(sorted_past, use_container_width=True, hide_index=True)
+            st.dataframe(_format_wtp_table(past_df, asc=False),
+                         use_container_width=True, hide_index=True,
+                         column_config=_date_cfg)
         else:
             st.info("Nog geen fondsen geregistreerd als ingevaren.")
 
-        st.subheader("📅 Geplande Transities (Toekomst)")
+        st.subheader(f"📅 Geplande Transities ({len(future_df)} fondsen)")
         if not future_df.empty:
-            sorted_future = future_df.sort_values('sort_date', ascending=True).drop(columns=['sort_date'])
-            st.dataframe(sorted_future, use_container_width=True, hide_index=True)
+            st.dataframe(_format_wtp_table(future_df, asc=True),
+                         use_container_width=True, hide_index=True,
+                         column_config=_date_cfg)
         else:
             st.info("Alle fondsen zijn ingevaren.")
+
+        if not no_transition_df.empty:
+            st.subheader(f"🛑 Geen transitie / blijft in oude regeling ({len(no_transition_df)} fondsen)")
+            st.caption("Fondsen die naar verzekeraar gaan, in ftk blijven of nog geen transitiedatum hebben.")
+            st.dataframe(
+                no_transition_df.drop(columns=['sort_date']).rename(columns={
+                    'name': 'Fonds', 'wtp_contract_type': 'Contract',
+                    'wtp_invaren': 'Invaren', 'aum_euro_bn': 'AUM (€ Bn)',
+                    'uitvoerder': 'Uitvoerder',
+                })[['Fonds', 'Contract', 'Invaren', 'AUM (€ Bn)', 'Uitvoerder']],
+                use_container_width=True, hide_index=True,
+                column_config={'AUM (€ Bn)': st.column_config.NumberColumn('AUM (€ Bn)', format='%.1f')},
+            )
     else:
         st.info("No WTP transition data available in the database yet.")
 
