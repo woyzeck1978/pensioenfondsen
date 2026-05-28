@@ -1439,8 +1439,8 @@ elif st.session_state.page == "Asset Managers Exposure":
 # PAGE 4: WTP TRACKER
 # ==========================================
 elif st.session_state.page == "WTP Tracker":
-    st.header("WTP Transition Tracker")
-    st.markdown("Tracking the planned transition dates to the new pension system (Wet Toekomst Pensioenen).")
+    st.header("WTP-transitietracker")
+    st.markdown("Overzicht van geplande transitiedata naar het nieuwe pensioenstelsel (Wet Toekomst Pensioenen).")
 
     # After normalize_wtp_fields.py: wtp_invaren ∈ {'ja','nee','uitgesteld',NULL},
     # wtp_transitie_datum is ISO YYYY-MM-DD or NULL. The "WTP plan known"
@@ -1476,15 +1476,15 @@ elif st.session_state.page == "WTP Tracker":
         solidair_count = flexibel_count = reeds_ingevaren = nog_te_komen = uitgesteld_count = 0
 
     render_kpi_row([
-        kpi_card("WTP Plans Known", f"{wtp_known}",
-                 sub=f"of {total_funds_in_db} tracked funds ({wtp_known/max(total_funds_in_db,1)*100:.0f}%)"),
+        kpi_card("WTP-plan bekend", f"{wtp_known}",
+                 sub=f"van {total_funds_in_db} gevolgde fondsen ({wtp_known/max(total_funds_in_db,1)*100:.0f}%)"),
         kpi_card("Reeds ingevaren", f"{reeds_ingevaren}",
                  sub=f"{nog_te_komen} nog te komen · {uitgesteld_count} uitgesteld"),
         kpi_card("Solidair", f"{solidair_count}",
                  sub=f"Flexibel: {flexibel_count}"),
-        kpi_card("Avg AUM in Scope",
+        kpi_card("Gem. AUM in scope",
                  f"€{wtp_df['aum_euro_bn'].mean():,.1f} Bn" if not wtp_df.empty and wtp_df['aum_euro_bn'].notna().any() else "—",
-                 sub="among funds with WTP plan"),
+                 sub="onder fondsen met WTP-plan"),
     ])
     st.divider()
 
@@ -1796,7 +1796,7 @@ elif st.session_state.page == "WTP Tracker":
                 column_config={'AUM (€ Bn)': st.column_config.NumberColumn('AUM (€ Bn)', format='%.1f')},
             )
     else:
-        st.info("No WTP transition data available in the database yet.")
+        st.info("Nog geen WTP-transitiedata in de database beschikbaar.")
 
 # ==========================================
 # PAGE 5: DEKKINGSGRAAD ANALYSIS
