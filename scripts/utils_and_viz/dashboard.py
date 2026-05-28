@@ -369,8 +369,8 @@ def get_fund_esg_reports(fund_id):
     return load_data(query)
 
 # --- MAIN APP LAYOUT ---
-st.title("🇳🇱 Dutch Pension Funds Dashboard")
-st.markdown("Interactive exploration of the Dutch pension sector (AUM, Allocations, ESG, and WTP Transitions).")
+st.title("🇳🇱 Dashboard Nederlandse Pensioenfondsen")
+st.markdown("Interactieve verkenning van de Nederlandse pensioensector (AUM, allocaties, ESG en WTP-transities).")
 
 # Retrieve core dataset
 df_funds = get_all_funds()
@@ -410,8 +410,25 @@ def _push_recent(fund_name: str | None) -> None:
 
 pages = ["Sector Overview", "Fund Deep-Dive", "Fund Comparison", "Trends", "Equity Strategy Deep-Dive", "Asset Managers Exposure", "WTP Tracker", "Dekkingsgraad Analysis", "ESG & SFDR Tracker", "Industry News Feed", "Begrippenlijst"]
 
+# NL-labels voor de zijbalk; interne keys (session_state.page) blijven Engels
+# om alle bestaande elif-vergelijkingen ongemoeid te laten.
+PAGE_LABELS_NL = {
+    "Sector Overview": "Sectoroverzicht",
+    "Fund Deep-Dive": "Fonds-diepteanalyse",
+    "Fund Comparison": "Fondsvergelijking",
+    "Trends": "Trends",
+    "Equity Strategy Deep-Dive": "Aandelenstrategie",
+    "Asset Managers Exposure": "Vermogensbeheerders",
+    "WTP Tracker": "WTP-tracker",
+    "Dekkingsgraad Analysis": "Dekkingsgraad-analyse",
+    "ESG & SFDR Tracker": "ESG- en SFDR-tracker",
+    "Industry News Feed": "Sectornieuws",
+    "Begrippenlijst": "Begrippenlijst",
+}
+
 # Sidebar Navigation — subtle, no loud titles
-st.sidebar.radio(" ", pages, key="page", label_visibility="collapsed")
+st.sidebar.radio(" ", pages, key="page", label_visibility="collapsed",
+                 format_func=lambda k: PAGE_LABELS_NL.get(k, k))
 
 st.sidebar.markdown("---")
 _dnb_count = 0
@@ -432,10 +449,10 @@ st.sidebar.markdown(
 <div class="section-card" style="margin-bottom:0;">
   <div class="section-card-title">Database</div>
   <div style="font-size:12px;color:var(--text-mid);line-height:1.7;">
-    <div><strong>{len(df_funds)}</strong> funds tracked</div>
-    <div>Total AUM <strong>€{df_funds['aum_euro_bn'].sum():,.1f} Bn</strong></div>
-    <div>DNB coverage <strong>{_dnb_count}</strong> funds</div>
-    <div>Latest DNB quarter <strong>{_dnb_quarter}</strong></div>
+    <div><strong>{len(df_funds)}</strong> fondsen gevolgd</div>
+    <div>Totaal AUM <strong>€{df_funds['aum_euro_bn'].sum():,.1f} Bn</strong></div>
+    <div>DNB-dekking <strong>{_dnb_count}</strong> fondsen</div>
+    <div>Laatste DNB-kwartaal <strong>{_dnb_quarter}</strong></div>
   </div>
 </div>
 """,
@@ -470,22 +487,22 @@ if st.session_state.recent_funds:
 # PAGE 1: SECTOR OVERVIEW
 # ==========================================
 if st.session_state.page == "Sector Overview":
-    st.header("Sector Overview")
-    
+    st.header("Sectoroverzicht")
+
     valid_aum = df_funds.dropna(subset=['aum_euro_bn'])
     valid_ratio = df_funds.dropna(subset=['dekkingsgraad_pct'])
     largest_row = valid_aum.loc[valid_aum['aum_euro_bn'].idxmax()]
     pct_aum_coverage = len(valid_aum) / len(df_funds) * 100
 
     render_kpi_row([
-        kpi_card("Total AUM Tracked", f"€{valid_aum['aum_euro_bn'].sum():,.1f} Bn",
-                 sub=f"across {len(valid_aum)} funds ({pct_aum_coverage:.0f}%)"),
-        kpi_card("Avg. Dekkingsgraad", f"{valid_ratio['dekkingsgraad_pct'].mean():.1f}%",
-                 sub=f"site-reported, {len(valid_ratio)} funds"),
-        kpi_card("Largest Fund", str(largest_row['name'])[:24],
+        kpi_card("Totaal gevolgd AUM", f"€{valid_aum['aum_euro_bn'].sum():,.1f} Bn",
+                 sub=f"over {len(valid_aum)} fondsen ({pct_aum_coverage:.0f}%)"),
+        kpi_card("Gem. dekkingsgraad", f"{valid_ratio['dekkingsgraad_pct'].mean():.1f}%",
+                 sub=f"door fondsen zelf gerapporteerd, {len(valid_ratio)} fondsen"),
+        kpi_card("Grootste fonds", str(largest_row['name'])[:24],
                  sub=f"€{largest_row['aum_euro_bn']:,.1f} Bn"),
-        kpi_card("Funds Tracked", f"{len(df_funds)}",
-                 sub=f"{df_funds['category'].nunique()} categories"),
+        kpi_card("Fondsen gevolgd", f"{len(df_funds)}",
+                 sub=f"{df_funds['category'].nunique()} categorieën"),
     ])
 
     # --- Recent WTP news (top 5 from last 30 days) ---
@@ -543,62 +560,62 @@ if st.session_state.page == "Sector Overview":
     c1, c2 = st.columns(2)
     
     with c1:
-        st.subheader("AUM vs Funding Ratio")
+        st.subheader("AUM vs. dekkingsgraad")
         # Scatter Plot
         fig_scatter = px.scatter(
-            df_funds.dropna(subset=['aum_euro_bn', 'dekkingsgraad_pct']), 
-            x="dekkingsgraad_pct", y="aum_euro_bn", 
+            df_funds.dropna(subset=['aum_euro_bn', 'dekkingsgraad_pct']),
+            x="dekkingsgraad_pct", y="aum_euro_bn",
             color="category", hover_name="name",
-            labels={"dekkingsgraad_pct": "Actuele Dekkingsgraad (Site %)", "aum_euro_bn": "AUM (Billion €)"},
-            log_y=True, # Log scale because ABP/PFZW skew the Y axis massively
-            title="Log(AUM) vs Actuele Dekkingsgraad (Site)"
+            labels={"dekkingsgraad_pct": "Actuele dekkingsgraad (site %)", "aum_euro_bn": "AUM (miljard €)"},
+            log_y=True,  # Log-schaal omdat ABP/PFZW de y-as anders volledig domineren
+            title="Log(AUM) vs. actuele dekkingsgraad (site)"
         )
         st.plotly_chart(fig_scatter, use_container_width=True)
-        
+
     with c2:
-        st.subheader("Market Share by Category")
+        st.subheader("Marktaandeel per categorie")
         market_share = df_funds.groupby('category')['aum_euro_bn'].sum().reset_index()
-        fig_pie = px.pie(market_share, values='aum_euro_bn', names='category', title="Total AUM Distribution")
+        fig_pie = px.pie(market_share, values='aum_euro_bn', names='category', title="Verdeling totaal AUM")
         st.plotly_chart(fig_pie, use_container_width=True)
-        
+
     st.divider()
     head_col, dl_col = st.columns([5, 1])
     with head_col:
-        st.subheader("Fund Directory")
-        st.markdown("Select a row to preview the fund inline, or use the link column to jump to its Deep-Dive page.")
+        st.subheader("Fondsenoverzicht")
+        st.markdown("Selecteer een rij voor een inline preview, of klik in de linkkolom om naar de diepteanalyse te gaan.")
 
     df_display = df_funds[['name', 'category', 'aum_euro_bn', 'dekkingsgraad_pct', 'equity_allocation_pct', 'uitvoerder']].copy()
     df_display.insert(0, 'Profile Link', df_display['name'].apply(lambda x: f"/?fund={urllib.parse.quote_plus(x)}"))
 
-    # Excel export of the current directory (whatever the user has filtered/sorted)
+    # Excel-export van het huidige overzicht (zoals de gebruiker filtert/sorteert)
     with dl_col:
         try:
             _xlsx_buf = io.BytesIO()
             _export_df = df_display.drop(columns=['Profile Link']).rename(columns={
-                'name': 'Fund',
-                'category': 'Category',
+                'name': 'Fonds',
+                'category': 'Categorie',
                 'aum_euro_bn': 'AUM (€ Bn)',
                 'dekkingsgraad_pct': 'Dekkingsgraad %',
-                'equity_allocation_pct': 'Equity %',
+                'equity_allocation_pct': 'Aandelen %',
                 'uitvoerder': 'Uitvoerder',
             })
             with pd.ExcelWriter(_xlsx_buf, engine='xlsxwriter') as writer:
-                _export_df.to_excel(writer, sheet_name='Fund Directory', index=False)
-                ws = writer.sheets['Fund Directory']
-                ws.set_column(0, 0, 36)  # Fund name
-                ws.set_column(1, 1, 18)  # Category
+                _export_df.to_excel(writer, sheet_name='Fondsenoverzicht', index=False)
+                ws = writer.sheets['Fondsenoverzicht']
+                ws.set_column(0, 0, 36)  # Fondsnaam
+                ws.set_column(1, 1, 18)  # Categorie
                 ws.set_column(2, 4, 14, writer.book.add_format({'num_format': '#,##0.00'}))
                 ws.set_column(5, 5, 28)
                 ws.freeze_panes(1, 0)
             st.download_button(
                 label="📥 Excel",
                 data=_xlsx_buf.getvalue(),
-                file_name=f"fund_directory_{pd.Timestamp.now(tz='UTC').tz_localize(None).date()}.xlsx",
+                file_name=f"fondsenoverzicht_{pd.Timestamp.now(tz='UTC').tz_localize(None).date()}.xlsx",
                 mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
                 use_container_width=True,
             )
         except Exception as e:
-            st.caption(f"Excel unavailable ({e})")
+            st.caption(f"Excel niet beschikbaar ({e})")
 
     selection = st.dataframe(
         df_display,
@@ -609,15 +626,15 @@ if st.session_state.page == "Sector Overview":
         key="fund_directory_table",
         column_config={
             "Profile Link": st.column_config.LinkColumn(
-                "Action",
-                help="Click to view the Deep-Dive profile.",
-                display_text="Deep-Dive →",
+                "Actie",
+                help="Klik om de diepteanalyse te openen.",
+                display_text="Diepteanalyse →",
             ),
-            "name": st.column_config.TextColumn("Fund"),
-            "category": st.column_config.TextColumn("Category"),
+            "name": st.column_config.TextColumn("Fonds"),
+            "category": st.column_config.TextColumn("Categorie"),
             "aum_euro_bn": st.column_config.NumberColumn("AUM (€ Bn)", format="%.1f"),
             "dekkingsgraad_pct": st.column_config.NumberColumn("Dekkingsgraad", format="%.1f%%"),
-            "equity_allocation_pct": st.column_config.NumberColumn("Equity %", format="%.1f%%"),
+            "equity_allocation_pct": st.column_config.NumberColumn("Aandelen %", format="%.1f%%"),
             "uitvoerder": st.column_config.TextColumn("Uitvoerder"),
         },
     )
@@ -627,14 +644,14 @@ if st.session_state.page == "Sector Overview":
         row = df_display.iloc[sel_rows[0]]
         fund_row = df_funds[df_funds['name'] == row['name']].iloc[0]
 
-        cat = str(fund_row.get('category') or 'Unknown')
+        cat = str(fund_row.get('category') or 'Onbekend')
         cat_color = {
             "Tak": "purple", "Bedrijf": "blue", "Beroep": "teal",
             "Verzekeraar": "orange", "APF": "gray", "PPI": "outline",
             "Algemeen Pensioenfonds (Kring)": "blue",
         }.get(cat, "gray")
 
-        sfdr_html = badge("SFDR not extracted", "outline")
+        sfdr_html = badge("SFDR niet gevonden", "outline")
         if pd.notnull(fund_row.get('sfdr_article')):
             a = str(int(fund_row['sfdr_article']))
             sfdr_html = badge(f"SFDR Art {a}", {"6": "gray", "8": "blue", "9": "green"}.get(a, "purple"))
@@ -646,7 +663,7 @@ if st.session_state.page == "Sector Overview":
   <div style="margin-bottom:10px;">
     {badge(cat, cat_color)}
     {sfdr_html}
-    {badge(f"Uitvoerder: {fund_row.get('uitvoerder') or 'Unknown'}", "outline")}
+    {badge(f"Uitvoerder: {fund_row.get('uitvoerder') or 'Onbekend'}", "outline")}
   </div>
 </div>
 """,
@@ -660,7 +677,7 @@ if st.session_state.page == "Sector Overview":
                      f"{fund_row['dekkingsgraad_pct']:.1f}%" if pd.notnull(fund_row['dekkingsgraad_pct']) else "—"),
             kpi_card("Beleidsdekkingsgraad",
                      f"{fund_row['beleidsdekkingsgraad_pct']:.1f}%" if pd.notnull(fund_row['beleidsdekkingsgraad_pct']) else "—"),
-            kpi_card("Equity Allocation",
+            kpi_card("Aandelenallocatie",
                      f"{fund_row['equity_allocation_pct']:.1f}%" if pd.notnull(fund_row['equity_allocation_pct']) else "—"),
         ])
 
@@ -679,8 +696,8 @@ if st.session_state.page == "Sector Overview":
 # PAGE 2: FUND DEEP-DIVE
 # ==========================================
 elif st.session_state.page == "Fund Deep-Dive":
-    st.header("Fund Profile Deep-Dive")
-    st.markdown("Explore detailed metrics, historical performance, and recent news for Dutch pension funds.")
+    st.header("Fondsprofiel — diepteanalyse")
+    st.markdown("Verken gedetailleerde metrics, historische rendementen en recent nieuws van Nederlandse pensioenfondsen.")
     
     # Fund Selector (Exclude APG as it is an asset manager)
     deep_dive_funds = df_funds[~df_funds['name'].isin(['APG', 'ASR', 'ASR PPI', 'Allianz', 'Allianz PPI', 'A.S. Watson Nederland'])]
@@ -695,8 +712,8 @@ elif st.session_state.page == "Fund Deep-Dive":
         st.session_state.selected_fund = st.session_state.fund_selector_ui
         
     selected_fund_name = st.selectbox(
-        "Search for a Pension Fund:", 
-        fund_names, 
+        "Zoek een pensioenfonds:",
+        fund_names,
         index=default_index,
         key="fund_selector_ui",
         on_change=update_selected_fund
@@ -719,7 +736,7 @@ elif st.session_state.page == "Fund Deep-Dive":
         with watch_col:
             is_watched = fund_data['name'] in st.session_state.watchlist
             st.button(
-                "★ Unpin" if is_watched else "☆ Pin",
+                "★ Losmaken" if is_watched else "☆ Pin",
                 key=f"watch_toggle_{fund_id}",
                 on_click=_toggle_watch, args=(str(fund_data['name']),),
                 use_container_width=True,
@@ -739,20 +756,20 @@ elif st.session_state.page == "Fund Deep-Dive":
                     use_container_width=True,
                 )
             except Exception as e:
-                st.caption(f"PDF unavailable ({e})")
+                st.caption(f"PDF niet beschikbaar ({e})")
 
-        # Investment Beliefs moved to ESG section
+        # Investment Beliefs verplaatst naar ESG-sectie
         render_kpi_row([
             kpi_card("AUM",
                      f"€{fund_data['aum_euro_bn']:,.1f} Bn" if pd.notnull(fund_data['aum_euro_bn']) else "—",
                      sub=str(fund_data.get('category') or '')),
-            kpi_card("Actuele Dekkingsgraad",
+            kpi_card("Actuele dekkingsgraad",
                      f"{fund_data['dekkingsgraad_pct']:.1f}%" if pd.notnull(fund_data['dekkingsgraad_pct']) else "—",
-                     sub="site-reported"),
-            kpi_card("Equity Allocation",
+                     sub="door fonds zelf gerapporteerd"),
+            kpi_card("Aandelenallocatie",
                      f"{fund_data['equity_allocation_pct']:.1f}%" if pd.notnull(fund_data['equity_allocation_pct']) else "—",
-                     sub="of total portfolio"),
-            kpi_card("Participants",
+                     sub="van totale portefeuille"),
+            kpi_card("Deelnemers",
                      f"{fund_data['deelnemers_totaal']:,.0f}".replace(",", ".") if pd.notnull(fund_data['deelnemers_totaal']) else "—",
                      sub="actief + slapers + gepensioneerd"),
         ])
@@ -778,7 +795,7 @@ elif st.session_state.page == "Fund Deep-Dive":
             st.markdown(
                 f"""
 <div class="section-card" style="margin-top:8px;">
-  <div class="section-card-title">Latest annual report · FY {latest_fy} &nbsp; {link_html}</div>
+  <div class="section-card-title">Laatste jaarverslag · FY {latest_fy} &nbsp; {link_html}</div>
 </div>
 """,
                 unsafe_allow_html=True,
@@ -786,25 +803,25 @@ elif st.session_state.page == "Fund Deep-Dive":
             render_kpi_row([
                 kpi_card("AUM (FY)",
                          f"€{fy_aum:,.1f} Bn" if fy_aum is not None else "—",
-                         sub=f"from jaarverslag {latest_fy}"),
-                kpi_card("Actuele Dekkingsgraad (FY)",
+                         sub=f"uit jaarverslag {latest_fy}"),
+                kpi_card("Actuele dekkingsgraad (FY)",
                          f"{fy_actu:.1f}%" if fy_actu is not None else "—",
-                         sub=f"year-end {latest_fy}"),
+                         sub=f"per eind {latest_fy}"),
                 kpi_card("Beleidsdekkingsgraad (FY)",
                          f"{fy_beleid:.1f}%" if fy_beleid is not None else "—",
-                         sub=f"year-end {latest_fy}"),
-                kpi_card("Equity Allocation (FY)",
+                         sub=f"per eind {latest_fy}"),
+                kpi_card("Aandelenallocatie (FY)",
                          f"{fy_eq:.1f}%" if fy_eq is not None else "—",
                          sub=f"per jaarverslag {latest_fy}"),
             ])
-            # Highlight values that disagree with the funds-table KPIs above
+            # Markeer waarden die afwijken van de funds-tabel KPI's hierboven
             mismatches = []
             if fy_aum is not None and pd.notnull(fund_data['aum_euro_bn']) and abs(fy_aum - fund_data['aum_euro_bn']) > 0.5:
-                mismatches.append(f"AUM (funds table {fund_data['aum_euro_bn']:.1f} vs jaarverslag {fy_aum:.1f})")
+                mismatches.append(f"AUM (fondsentabel {fund_data['aum_euro_bn']:.1f} vs jaarverslag {fy_aum:.1f})")
             if fy_actu is not None and pd.notnull(fund_data['dekkingsgraad_pct']) and abs(fy_actu - fund_data['dekkingsgraad_pct']) > 1.0:
                 mismatches.append(f"dekkingsgraad ({fund_data['dekkingsgraad_pct']:.1f}% vs {fy_actu:.1f}%)")
             if mismatches:
-                st.caption("⚠ funds-table values differ from the annual report: " + "; ".join(mismatches))
+                st.caption("⚠ fondsentabel-waarden wijken af van het jaarverslag: " + "; ".join(mismatches))
 
         # --- Analyse jaarverslag (from fund_analysis table, LLM-generated) ---
         # Rendered independently of fy_annual_metrics presence — many funds
@@ -862,10 +879,10 @@ elif st.session_state.page == "Fund Deep-Dive":
         col_main, col_side = st.columns([2, 1])
         
         with col_main:
-            st.markdown("### Historical Performance")
+            st.markdown("### Historisch verloop")
             history_df = get_metrics_history(fund_id)
             if not history_df.empty:
-                # Ensure columns are numeric to prevent Plotly Express wide-form data error
+                # Numeriek maken om Plotly Express wide-form error te vermijden
                 for col in ["beleidsdekkingsgraad_pct", "beleggingsrendement_pct"]:
                     if col in history_df.columns:
                         history_df[col] = pd.to_numeric(history_df[col], errors='coerce')
@@ -878,7 +895,7 @@ elif st.session_state.page == "Fund Deep-Dive":
 
                 fig_line = px.line(history_df, x="year", y=["beleidsdekkingsgraad_pct", "beleggingsrendement_pct"],
                                    labels={"value": "Percentage (%)", "year": "Jaarverslag", "variable": "Metric"},
-                                   title="Meerjarenoverzicht: Dekkingsgraad & Rendement (Jaarrapportages)")
+                                   title="Meerjarenoverzicht: dekkingsgraad & rendement (jaarrapportages)")
                 fig_line.update_xaxes(dtick=1, tickformat="d")
 
                 if show_peer:
@@ -1000,62 +1017,62 @@ elif st.session_state.page == "Fund Deep-Dive":
                 
                 st.dataframe(styled_table, use_container_width=True)
             else:
-                st.info("No historical metrics available for this fund.")
-                
-            st.markdown("### Recent News Articles")
+                st.info("Geen historische metrics beschikbaar voor dit fonds.")
+
+            st.markdown("### Recente nieuwsartikelen")
             news_df = get_fund_news(fund_id)
             if not news_df.empty:
                 for _, row in news_df.head(5).iterrows():
                     st.markdown(f"**{row['published_date']}** - [{row['title']}]({row['url']})")
             else:
-                st.info("No recent news articles scraped.")
-                
+                st.info("Geen recente nieuwsartikelen gescraped.")
+
         with col_side:
-            st.markdown("### Key Metrics")
+            st.markdown("### Kerngegevens")
             if pd.notnull(fund_data['deelnemers_totaal']):
-                st.markdown(f"**Total Participants:** {fund_data['deelnemers_totaal']:,.0f}")
-                st.markdown(f"- **Active:** {fund_data['deelnemers_actief']:,.0f}" if pd.notnull(fund_data['deelnemers_actief']) else "- **Active:** N/A")
-                st.markdown(f"- **Sleepers:** {fund_data['deelnemers_slapers']:,.0f}" if pd.notnull(fund_data['deelnemers_slapers']) else "- **Sleepers:** N/A")
-                st.markdown(f"- **Retired:** {fund_data['deelnemers_gepensioneerd']:,.0f}" if pd.notnull(fund_data['deelnemers_gepensioneerd']) else "- **Retired:** N/A")
-            
-            st.markdown("### Operations & ESG")
-            st.markdown(f"**Administrator (Uitvoerder):** {fund_data['uitvoerder'] if pd.notnull(fund_data['uitvoerder']) else 'Unknown'}")
-            
-            # Show extracted SFDR metrics if available
+                st.markdown(f"**Totaal deelnemers:** {fund_data['deelnemers_totaal']:,.0f}")
+                st.markdown(f"- **Actief:** {fund_data['deelnemers_actief']:,.0f}" if pd.notnull(fund_data['deelnemers_actief']) else "- **Actief:** n.b.")
+                st.markdown(f"- **Slapers:** {fund_data['deelnemers_slapers']:,.0f}" if pd.notnull(fund_data['deelnemers_slapers']) else "- **Slapers:** n.b.")
+                st.markdown(f"- **Gepensioneerden:** {fund_data['deelnemers_gepensioneerd']:,.0f}" if pd.notnull(fund_data['deelnemers_gepensioneerd']) else "- **Gepensioneerden:** n.b.")
+
+            st.markdown("### Uitvoering & ESG")
+            st.markdown(f"**Uitvoerder:** {fund_data['uitvoerder'] if pd.notnull(fund_data['uitvoerder']) else 'Onbekend'}")
+
+            # Toon geëxtraheerde SFDR-metrics indien beschikbaar
             if pd.notnull(fund_data['sfdr_article']):
                 article_num = str(int(fund_data['sfdr_article']))
                 article_color = {"6": "gray", "8": "blue", "9": "green"}.get(article_num, "purple")
-                article_html = badge(f"Article {article_num}", article_color)
+                article_html = badge(f"Artikel {article_num}", article_color)
             else:
-                article_html = badge("Not extracted", "outline")
-            tax_pct = f"{fund_data['eu_taxonomy_pct']}%" if pd.notnull(fund_data['eu_taxonomy_pct']) else "Not extracted"
+                article_html = badge("Niet gevonden", "outline")
+            tax_pct = f"{fund_data['eu_taxonomy_pct']}%" if pd.notnull(fund_data['eu_taxonomy_pct']) else "Niet gevonden"
 
-            st.markdown(f"**Extracted SFDR Article (2024):** {article_html}", unsafe_allow_html=True)
-            st.markdown(f"**Extracted EU Taxonomy %:** {tax_pct}")
-            
-            st.markdown(f"**Reported SFDR Classification:** {fund_data['sfdr_classification'] if pd.notnull(fund_data['sfdr_classification']) else 'Not Specified'}")
-            st.markdown(f"**CO2 Goal:** {fund_data['co2_reduction_goal'] if pd.notnull(fund_data['co2_reduction_goal']) else 'Not Specified'}")
-            
-            st.markdown("### Equity Portfolio Managers")
+            st.markdown(f"**SFDR-artikel (2024):** {article_html}", unsafe_allow_html=True)
+            st.markdown(f"**EU-taxonomie %:** {tax_pct}")
+
+            st.markdown(f"**Gerapporteerde SFDR-classificatie:** {fund_data['sfdr_classification'] if pd.notnull(fund_data['sfdr_classification']) else 'Niet vermeld'}")
+            st.markdown(f"**CO₂-doelstelling:** {fund_data['co2_reduction_goal'] if pd.notnull(fund_data['co2_reduction_goal']) else 'Niet vermeld'}")
+
+            st.markdown("### Aandelenportefeuille-beheerders")
             managers_df = get_fund_managers(fund_id)
             if not managers_df.empty:
                 for mgr in managers_df['manager'].tolist():
                     st.markdown(f"- {mgr}")
-            st.markdown("### Historical Annual Reports")
+            st.markdown("### Historische jaarverslagen")
             reports_df = get_fund_reports(fund_id)
             if not reports_df.empty:
                 for _, row in reports_df.iterrows():
                     st.markdown(f"- [{row['title']}]({row['url']})")
             else:
-                st.write("No annual report links found in the database.")
-                
-            st.markdown("### ESG & Sustainability Reports")
+                st.write("Geen jaarverslagen gevonden in de database.")
+
+            st.markdown("### ESG- en duurzaamheidsrapporten")
             esg_reports_df = get_fund_esg_reports(fund_id)
             if not esg_reports_df.empty:
                 for _, row in esg_reports_df.iterrows():
                     st.markdown(f"- [{row['title']}]({row['url']})")
             else:
-                st.write("No specific sustainability reports extracted.")
+                st.write("Geen specifieke duurzaamheidsrapporten gevonden.")
                 
             if 'investment_beliefs' in fund_data and pd.notnull(fund_data['investment_beliefs']) and fund_data['investment_beliefs'] != "":
                 st.markdown(f"#### Investment Beliefs\n> {fund_data['investment_beliefs']}")
@@ -1064,7 +1081,7 @@ elif st.session_state.page == "Fund Deep-Dive":
 # PAGE 2C: FUND COMPARISON (side-by-side, up to 3 funds)
 # ==========================================
 elif st.session_state.page == "Fund Comparison":
-    st.header("Fund Comparison")
+    st.header("Fondsvergelijking")
     st.markdown(
         "Selecteer 2 of 3 fondsen om de kerncijfers en historische ontwikkeling naast elkaar te zien."
     )
@@ -1095,7 +1112,7 @@ elif st.session_state.page == "Fund Comparison":
         cards = []
         for name in selected:
             row = snap.loc[name]
-            cat = str(row.get('category') or 'Unknown')
+            cat = str(row.get('category') or 'Onbekend')
             cat_color = {
                 "Tak": "purple", "Bedrijf": "blue", "Beroep": "teal",
                 "Verzekeraar": "orange", "APF": "gray", "PPI": "outline",
@@ -1127,7 +1144,7 @@ elif st.session_state.page == "Fund Comparison":
         st.divider()
 
         # Combined history
-        st.subheader("Historische Beleidsdekkingsgraad")
+        st.subheader("Historische beleidsdekkingsgraad")
         ids = [int(df_funds[df_funds['name'] == n]['id'].iloc[0]) for n in selected]
         history_q = f"""
             SELECT f.name AS fund, h.year, h.beleidsdekkingsgraad_pct, h.aum_euro_bn,
@@ -1328,19 +1345,19 @@ elif st.session_state.page == "Trends":
 # PAGE 2B: EQUITY STRATEGY DEEP-DIVE
 # ==========================================
 elif st.session_state.page == "Equity Strategy Deep-Dive":
-    st.header("📈 Equity Strategy: Mid-Market (1-5 Bn)")
-    st.markdown("Overview of the specific equity (stock) investments, strategy notes, and external managers for mid-sized pension funds (1 to 5 Billion AUM).")
-    
+    st.header("📈 Aandelenstrategie: mid-market (1–5 Bn)")
+    st.markdown("Overzicht van de aandelenbeleggingen, strategie-notities en externe beheerders voor middelgrote pensioenfondsen (1 tot 5 miljard AUM).")
+
     query_eq = """
-    SELECT 
-        f.name as "Pension Fund", 
-        f.aum_euro_bn as "AUM (€ Bn)", 
-        f.equity_allocation_pct as "Equity %", 
+    SELECT
+        f.name as "Pensioenfonds",
+        f.aum_euro_bn as "AUM (€ Bn)",
+        f.equity_allocation_pct as "Aandelen %",
         f.equity_beheerkosten_pct as "Aandelen Beheerkosten %",
         f.equity_transactiekosten_pct as "Aandelen Transactie %",
         f.equity_performance_fee_mln as "Aandelen Perf. Fee (€ Mln)",
-        f.equity_strategy_notes as "Strategy Notes",
-        GROUP_CONCAT(e.fund_name, ', ') as "External Managers"
+        f.equity_strategy_notes as "Strategie-notities",
+        GROUP_CONCAT(e.fund_name, ', ') as "Externe beheerders"
     FROM funds f
     LEFT JOIN equity_portfolio_funds e ON f.id = e.fund_id
     WHERE f.aum_euro_bn >= 1.0 AND f.aum_euro_bn <= 5.0
@@ -1350,30 +1367,30 @@ elif st.session_state.page == "Equity Strategy Deep-Dive":
     eq_df = load_data(query_eq)
 
     if not eq_df.empty:
-        # KPI tiles for the cohort
-        valid_eq = eq_df.dropna(subset=['Equity %'])
+        # KPI-tegels voor het cohort
+        valid_eq = eq_df.dropna(subset=['Aandelen %'])
         valid_kosten = eq_df.dropna(subset=['Aandelen Beheerkosten %'])
-        with_notes = eq_df['Strategy Notes'].notna() & (eq_df['Strategy Notes'].astype(str).str.strip() != '')
-        with_managers = eq_df['External Managers'].notna() & (eq_df['External Managers'].astype(str).str.strip() != '')
+        with_notes = eq_df['Strategie-notities'].notna() & (eq_df['Strategie-notities'].astype(str).str.strip() != '')
+        with_managers = eq_df['Externe beheerders'].notna() & (eq_df['Externe beheerders'].astype(str).str.strip() != '')
 
         render_kpi_row([
-            kpi_card("Funds in Cohort", f"{len(eq_df)}",
-                     sub="€1–5 Bn AUM range"),
-            kpi_card("Total AUM in Cohort",
+            kpi_card("Fondsen in cohort", f"{len(eq_df)}",
+                     sub="€1–5 Bn AUM-range"),
+            kpi_card("Totaal AUM in cohort",
                      f"€{eq_df['AUM (€ Bn)'].sum():,.1f} Bn",
-                     sub=f"avg €{eq_df['AUM (€ Bn)'].mean():,.1f} Bn / fund"),
-            kpi_card("Avg Equity Allocation",
-                     f"{valid_eq['Equity %'].mean():.1f}%" if not valid_eq.empty else "—",
-                     sub=f"{len(valid_eq)}/{len(eq_df)} disclose"),
-            kpi_card("Avg Beheerkosten",
+                     sub=f"gem. €{eq_df['AUM (€ Bn)'].mean():,.1f} Bn / fonds"),
+            kpi_card("Gem. aandelenallocatie",
+                     f"{valid_eq['Aandelen %'].mean():.1f}%" if not valid_eq.empty else "—",
+                     sub=f"{len(valid_eq)}/{len(eq_df)} rapporteren"),
+            kpi_card("Gem. beheerkosten",
                      f"{valid_kosten['Aandelen Beheerkosten %'].mean():.3f}%" if not valid_kosten.empty else "—",
-                     sub=f"{len(valid_kosten)}/{len(eq_df)} disclose"),
+                     sub=f"{len(valid_kosten)}/{len(eq_df)} rapporteren"),
         ])
         st.markdown(
             " ".join([
-                badge(f"With strategy notes: {int(with_notes.sum())}", "blue"),
-                badge(f"With external managers: {int(with_managers.sum())}", "purple"),
-                badge(f"Missing data: {len(eq_df) - int((with_notes | with_managers).sum())}", "outline"),
+                badge(f"Met strategie-notities: {int(with_notes.sum())}", "blue"),
+                badge(f"Met externe beheerders: {int(with_managers.sum())}", "purple"),
+                badge(f"Ontbrekende data: {len(eq_df) - int((with_notes | with_managers).sum())}", "outline"),
             ]),
             unsafe_allow_html=True,
         )
@@ -1385,29 +1402,29 @@ elif st.session_state.page == "Equity Strategy Deep-Dive":
             hide_index=True,
             column_config={
                 "AUM (€ Bn)": st.column_config.NumberColumn("AUM (€ Bn)", format="%.2f"),
-                "Equity %": st.column_config.NumberColumn("Equity %", format="%.1f%%"),
+                "Aandelen %": st.column_config.NumberColumn("Aandelen %", format="%.1f%%"),
                 "Aandelen Beheerkosten %": st.column_config.NumberColumn("Beheerkosten", format="%.3f%%"),
                 "Aandelen Transactie %": st.column_config.NumberColumn("Transactiekosten", format="%.3f%%"),
-                "Aandelen Perf. Fee (€ Mln)": st.column_config.NumberColumn("Perf. Fee (€ Mln)", format="%.2f"),
-                "Strategy Notes": st.column_config.TextColumn("Strategy Notes", width="large"),
-                "External Managers": st.column_config.TextColumn("External Managers", width="medium"),
+                "Aandelen Perf. Fee (€ Mln)": st.column_config.NumberColumn("Perf. fee (€ mln)", format="%.2f"),
+                "Strategie-notities": st.column_config.TextColumn("Strategie-notities", width="large"),
+                "Externe beheerders": st.column_config.TextColumn("Externe beheerders", width="medium"),
             },
         )
     else:
-        st.info("No funds found in the 1-5 Bn AUM range.")
+        st.info("Geen fondsen gevonden in de 1–5 Bn AUM-range.")
 
 # ==========================================
 # PAGE 3: ASSET MANAGERS EXPOSURE
 # ==========================================
 elif st.session_state.page == "Asset Managers Exposure":
-    st.header("External Asset Managers (Equity Portfolios)")
-    st.markdown("Tracking which external investment firms manage the equity portfolios of Dutch pension funds.")
+    st.header("Externe vermogensbeheerders (aandelenportefeuilles)")
+    st.markdown("Welke externe beleggingshuizen de aandelenportefeuilles van Nederlandse pensioenfondsen beheren.")
 
     query = """
-    SELECT e.fund_name as Manager, COUNT(e.fund_id) as Number_Of_Pension_Clients
+    SELECT e.fund_name as Beheerder, COUNT(e.fund_id) as Aantal_pensioenfondsen
     FROM equity_portfolio_funds e
     GROUP BY e.fund_name
-    ORDER BY Number_Of_Pension_Clients DESC
+    ORDER BY Aantal_pensioenfondsen DESC
     LIMIT 20
     """
     managers_df = load_data(query)
@@ -1416,21 +1433,21 @@ elif st.session_state.page == "Asset Managers Exposure":
     top_mgr = managers_df.iloc[0] if not managers_df.empty else None
 
     render_kpi_row([
-        kpi_card("Managers Tracked", f"{total_managers:,}".replace(',', '.'),
-                 sub="distinct equity-portfolio manager names"),
-        kpi_card("Total Relationships", f"{total_relations:,}".replace(',', '.'),
-                 sub="manager × fund mandate rows"),
-        kpi_card("Most-Used Manager", str(top_mgr['Manager'])[:24] if top_mgr is not None else "—",
-                 sub=f"{int(top_mgr['Number_Of_Pension_Clients'])} pension clients" if top_mgr is not None else ""),
-        kpi_card("Top-20 Coverage",
-                 f"{managers_df['Number_Of_Pension_Clients'].sum() / max(total_relations,1) * 100:.0f}%" if total_relations else "—",
-                 sub="share of all relationships in top 20"),
+        kpi_card("Beheerders gevolgd", f"{total_managers:,}".replace(',', '.'),
+                 sub="unieke beheerder-namen"),
+        kpi_card("Totaal relaties", f"{total_relations:,}".replace(',', '.'),
+                 sub="beheerder × fonds-mandaten"),
+        kpi_card("Meest ingezette beheerder", str(top_mgr['Beheerder'])[:24] if top_mgr is not None else "—",
+                 sub=f"{int(top_mgr['Aantal_pensioenfondsen'])} pensioenfondsen" if top_mgr is not None else ""),
+        kpi_card("Top-20 dekking",
+                 f"{managers_df['Aantal_pensioenfondsen'].sum() / max(total_relations,1) * 100:.0f}%" if total_relations else "—",
+                 sub="aandeel van alle relaties in top 20"),
     ])
     st.divider()
 
-    fig_bar = px.bar(managers_df, x="Manager", y="Number_Of_Pension_Clients",
-                     title="Top 20 Asset Managers by Number of Dutch Pension Fund Clients",
-                     labels={"Number_Of_Pension_Clients": "Client Count"})
+    fig_bar = px.bar(managers_df, x="Beheerder", y="Aantal_pensioenfondsen",
+                     title="Top 20 vermogensbeheerders naar aantal Nederlandse pensioenfonds-cliënten",
+                     labels={"Aantal_pensioenfondsen": "Aantal fondsen"})
     st.plotly_chart(fig_bar, use_container_width=True)
 
     st.dataframe(managers_df, use_container_width=True)
@@ -1802,8 +1819,8 @@ elif st.session_state.page == "WTP Tracker":
 # PAGE 5: DEKKINGSGRAAD ANALYSIS
 # ==========================================
 elif st.session_state.page == "Dekkingsgraad Analysis":
-    st.header("Funding Ratios (Dekkingsgraad)")
-    st.markdown("Analysis of the financial health and funding ratios of Dutch pension funds.")
+    st.header("Dekkingsgraden")
+    st.markdown("Analyse van de financiële gezondheid en dekkingsgraden van Nederlandse pensioenfondsen.")
 
     valid_df = df_funds.dropna(subset=['dekkingsgraad_pct']).copy()
     if not valid_df.empty:
@@ -1812,59 +1829,59 @@ elif st.session_state.page == "Dekkingsgraad Analysis":
         idx_top = valid_df['dekkingsgraad_pct'].idxmax()
         idx_bot = valid_df['dekkingsgraad_pct'].idxmin()
         render_kpi_row([
-            kpi_card("Funds Above 100%", f"{above_100}",
-                     sub=f"of {len(valid_df)} ({above_100/len(valid_df)*100:.0f}%)"),
-            kpi_card("Funds Above 120%", f"{above_120}",
-                     sub="indexatie-ready territory"),
-            kpi_card("Highest Ratio", f"{valid_df.loc[idx_top, 'dekkingsgraad_pct']:.1f}%",
+            kpi_card("Fondsen boven 100%", f"{above_100}",
+                     sub=f"van {len(valid_df)} ({above_100/len(valid_df)*100:.0f}%)"),
+            kpi_card("Fondsen boven 120%", f"{above_120}",
+                     sub="indexatie-ready"),
+            kpi_card("Hoogste dekkingsgraad", f"{valid_df.loc[idx_top, 'dekkingsgraad_pct']:.1f}%",
                      sub=str(valid_df.loc[idx_top, 'name'])[:28]),
-            kpi_card("Lowest Ratio", f"{valid_df.loc[idx_bot, 'dekkingsgraad_pct']:.1f}%",
+            kpi_card("Laagste dekkingsgraad", f"{valid_df.loc[idx_bot, 'dekkingsgraad_pct']:.1f}%",
                      sub=str(valid_df.loc[idx_bot, 'name'])[:28]),
         ])
         st.divider()
     valid_df = valid_df.sort_values(by='dekkingsgraad_pct', ascending=False)
-    
+
     col1, col2 = st.columns(2)
     with col1:
-        st.subheader("Top 10 Healthiest Funds")
-        fig_top = px.bar(valid_df.head(10), x="name", y="dekkingsgraad_pct", title="Highest Funding Ratios", color="category")
-        fig_top.update_layout(yaxis_title="Funding Ratio (%)", xaxis_title="Fund")
-        fig_top.add_hline(y=100, line_dash="dash", line_color="red", annotation_text="100% Minimum")
+        st.subheader("Top 10 gezondste fondsen")
+        fig_top = px.bar(valid_df.head(10), x="name", y="dekkingsgraad_pct", title="Hoogste dekkingsgraden", color="category")
+        fig_top.update_layout(yaxis_title="Dekkingsgraad (%)", xaxis_title="Fonds")
+        fig_top.add_hline(y=100, line_dash="dash", line_color="red", annotation_text="100% minimum")
         st.plotly_chart(fig_top, use_container_width=True)
-        
+
     with col2:
-        st.subheader("Bottom 10 Funds")
-        fig_bottom = px.bar(valid_df.tail(10).sort_values(by='dekkingsgraad_pct', ascending=True), 
-                            x="name", y="dekkingsgraad_pct", title="Lowest Funding Ratios", color="category")
-        fig_bottom.update_layout(yaxis_title="Funding Ratio (%)", xaxis_title="Fund")
-        fig_bottom.add_hline(y=100, line_dash="dash", line_color="red", annotation_text="100% Minimum")
+        st.subheader("Onderste 10 fondsen")
+        fig_bottom = px.bar(valid_df.tail(10).sort_values(by='dekkingsgraad_pct', ascending=True),
+                            x="name", y="dekkingsgraad_pct", title="Laagste dekkingsgraden", color="category")
+        fig_bottom.update_layout(yaxis_title="Dekkingsgraad (%)", xaxis_title="Fonds")
+        fig_bottom.add_hline(y=100, line_dash="dash", line_color="red", annotation_text="100% minimum")
         st.plotly_chart(fig_bottom, use_container_width=True)
-        
+
     st.divider()
-    
+
     c1, c2 = st.columns(2)
     with c1:
-        st.subheader("Distribution")
-        fig_hist = px.histogram(valid_df, x="dekkingsgraad_pct", nbins=20, title="Distribution of Funding Ratios", color="category")
-        fig_hist.update_layout(xaxis_title="Funding Ratio (%)", yaxis_title="Count of Funds")
+        st.subheader("Verdeling")
+        fig_hist = px.histogram(valid_df, x="dekkingsgraad_pct", nbins=20, title="Verdeling van dekkingsgraden", color="category")
+        fig_hist.update_layout(xaxis_title="Dekkingsgraad (%)", yaxis_title="Aantal fondsen")
         fig_hist.add_vline(x=100, line_dash="dash", line_color="red")
         st.plotly_chart(fig_hist, use_container_width=True)
     with c2:
-        st.subheader("Average by Category")
+        st.subheader("Gemiddelde per categorie")
         cat_avg = valid_df.groupby('category')['dekkingsgraad_pct'].mean().reset_index().sort_values('dekkingsgraad_pct', ascending=False)
-        fig_cat = px.bar(cat_avg, x="category", y="dekkingsgraad_pct", title="Average Funding Ratio by Sector Category", color="category")
-        fig_cat.update_layout(xaxis_title="Category", yaxis_title="Average Funding Ratio (%)")
+        fig_cat = px.bar(cat_avg, x="category", y="dekkingsgraad_pct", title="Gemiddelde dekkingsgraad per categorie", color="category")
+        fig_cat.update_layout(xaxis_title="Categorie", yaxis_title="Gem. dekkingsgraad (%)")
         st.plotly_chart(fig_cat, use_container_width=True)
-        
-        st.subheader("Complete Dekkingsgraad Table")
+
+        st.subheader("Volledige dekkingsgraad-tabel")
         st.dataframe(valid_df[['name', 'category', 'aum_euro_bn', 'dekkingsgraad_pct']].reset_index(drop=True), use_container_width=True)
 
 # ==========================================
 # PAGE 6: ESG & SFDR Tracker
 # ==========================================
 elif st.session_state.page == "ESG & SFDR Tracker":
-    st.header("ESG & SFDR Analysis")
-    st.markdown("Analysis of Sustainable Finance Disclosure Regulation (SFDR) Article classifications and EU Taxonomy alignment across the pension sector. This data is extracted via LLM from recently published 2024 annual reports (Phase 22).")
+    st.header("ESG- en SFDR-analyse")
+    st.markdown("Analyse van SFDR-artikelclassificaties (Sustainable Finance Disclosure Regulation) en EU-taxonomie binnen de pensioensector. Deze data is via LLM geëxtraheerd uit recent gepubliceerde jaarverslagen 2024.")
 
     sfdr_df = df_funds.dropna(subset=['sfdr_article']).copy()
     if not sfdr_df.empty:
@@ -1875,7 +1892,7 @@ elif st.session_state.page == "ESG & SFDR Tracker":
         a9 = int(art_counts.get('9', 0))
         tax_mean = sfdr_df['eu_taxonomy_pct'].dropna().mean() if 'eu_taxonomy_pct' in sfdr_df else None
 
-        # Article distribution as inline badges in the subtitle
+        # Artikel-verdeling als inline-badges onder de titel
         article_badges = " ".join([
             badge(f"Art 6: {a6}", "gray"),
             badge(f"Art 8: {a8}", "blue"),
@@ -1884,48 +1901,48 @@ elif st.session_state.page == "ESG & SFDR Tracker":
         st.markdown(article_badges, unsafe_allow_html=True)
 
         render_kpi_row([
-            kpi_card("Funds Classified", f"{len(sfdr_df)}",
-                     sub=f"of {len(df_funds)} tracked"),
-            kpi_card("Article 8 Share",
+            kpi_card("Fondsen geclassificeerd", f"{len(sfdr_df)}",
+                     sub=f"van {len(df_funds)} gevolgd"),
+            kpi_card("Aandeel Artikel 8",
                      f"{a8/len(sfdr_df)*100:.0f}%",
-                     sub=f"{a8} funds — promotes E/S characteristics"),
-            kpi_card("Article 9 Share",
+                     sub=f"{a8} fondsen — promoot E/S-kenmerken"),
+            kpi_card("Aandeel Artikel 9",
                      f"{a9/len(sfdr_df)*100:.0f}%",
-                     sub=f"{a9} funds — sustainable investment objective"),
-            kpi_card("Avg EU Taxonomy",
+                     sub=f"{a9} fondsen — duurzaam beleggingsdoel"),
+            kpi_card("Gem. EU-taxonomie",
                      f"{tax_mean:.1f}%" if tax_mean is not None else "—",
-                     sub="alignment across classified funds"),
+                     sub="aligned over geclassificeerde fondsen"),
         ])
         st.divider()
-    
+
     if not sfdr_df.empty:
         c1, c2 = st.columns(2)
         with c1:
             article_counts = sfdr_df['sfdr_article'].value_counts().reset_index()
-            article_counts.columns = ['SFDR Article', 'Fund Count']
-            article_counts['SFDR Article'] = 'Article ' + article_counts['SFDR Article'].astype(str).str.extract(r'(\d+)', expand=False)
-            fig_pie = px.pie(article_counts, names='SFDR Article', values='Fund Count', title="SFDR Classifications (2024 Extract)")
+            article_counts.columns = ['SFDR-artikel', 'Aantal fondsen']
+            article_counts['SFDR-artikel'] = 'Artikel ' + article_counts['SFDR-artikel'].astype(str).str.extract(r'(\d+)', expand=False)
+            fig_pie = px.pie(article_counts, names='SFDR-artikel', values='Aantal fondsen', title="SFDR-classificaties (2024)")
             st.plotly_chart(fig_pie, use_container_width=True)
-            
+
         with c2:
             tax_df = sfdr_df.dropna(subset=['eu_taxonomy_pct']).copy()
             if not tax_df.empty:
-                fig_hist = px.histogram(tax_df, x="eu_taxonomy_pct", nbins=20, title="EU Taxonomy Alignment (%) Distribution", color="category")
+                fig_hist = px.histogram(tax_df, x="eu_taxonomy_pct", nbins=20, title="Verdeling EU-taxonomie alignment (%)", color="category")
                 st.plotly_chart(fig_hist, use_container_width=True)
             else:
-                st.info("No EU Taxonomy percentages extracted yet.")
-                
-        st.subheader("Extracted Regulatory Data")
+                st.info("Nog geen EU-taxonomie-percentages geëxtraheerd.")
+
+        st.subheader("Geëxtraheerde regelgevingsdata")
         st.dataframe(sfdr_df[['name', 'category', 'aum_euro_bn', 'sfdr_article', 'eu_taxonomy_pct']].sort_values(by='eu_taxonomy_pct', ascending=False), use_container_width=True)
     else:
-        st.info("No SFDR data has been extracted yet. The background LLM processing job is currently running.")
+        st.info("Nog geen SFDR-data geëxtraheerd. De LLM-extractie loopt op de achtergrond.")
 
 # ==========================================
 # PAGE 7: INDUSTRY NEWS FEED
 # ==========================================
 elif st.session_state.page == "Industry News Feed":
-    st.header("Industry News Feed")
-    st.markdown("Latest news headlines scraped directly from the official websites of Dutch pension funds. Use the filters below to find specific announcements like indexations, premiums, or sustainability changes.")
+    st.header("Sectornieuws")
+    st.markdown("Nieuwsberichten direct gescraped van de websites van Nederlandse pensioenfondsen. Gebruik de filters om gericht te zoeken op aankondigingen als indexatie, premies of duurzaamheidswijzigingen.")
     
     df_news = get_latest_news()
     
@@ -1969,26 +1986,26 @@ elif st.session_state.page == "Industry News Feed":
         n_funds = df_news['Pension Fund'].nunique() if 'Pension Fund' in df_news.columns else 0
         n_cats = df_news['Category'].nunique() if 'Category' in df_news.columns else 0
         render_kpi_row([
-            kpi_card("Headlines", f"{len(df_news):,}".replace(',', '.'),
-                     sub="scraped from fund websites"),
-            kpi_card("Last 30 Days", f"{n_recent:,}".replace(',', '.'),
-                     sub=f"{n_recent/max(len(df_news),1)*100:.0f}% of total"),
-            kpi_card("Funds Covered", f"{n_funds}",
-                     sub="distinct fund sources"),
-            kpi_card("Categories", f"{n_cats}",
-                     sub="of pension fund types"),
+            kpi_card("Koppen", f"{len(df_news):,}".replace(',', '.'),
+                     sub="gescraped van fondswebsites"),
+            kpi_card("Laatste 30 dagen", f"{n_recent:,}".replace(',', '.'),
+                     sub=f"{n_recent/max(len(df_news),1)*100:.0f}% van totaal"),
+            kpi_card("Fondsen gedekt", f"{n_funds}",
+                     sub="unieke fondsbronnen"),
+            kpi_card("Categorieën", f"{n_cats}",
+                     sub="soorten pensioenfondsen"),
         ])
 
         df_news = df_news.drop(columns=['_dt'])
 
-        # Horizontal filter bar
+        # Horizontale filterbalk
         f1, f2, f3 = st.columns([2, 3, 1])
         with f1:
-            cat_filter = st.multiselect("Category", df_news["Category"].dropna().unique(), placeholder="All categories")
+            cat_filter = st.multiselect("Categorie", df_news["Category"].dropna().unique(), placeholder="Alle categorieën")
         with f2:
-            search_query = st.text_input("Search headlines", placeholder="indexatie, premie, MVB, ...")
+            search_query = st.text_input("Zoek in koppen", placeholder="indexatie, premie, MVB, ...")
         with f3:
-            recent_only = st.checkbox("Last 30d only", value=False)
+            recent_only = st.checkbox("Alleen laatste 30 dagen", value=False)
 
         filtered_news = df_news.copy()
         if cat_filter:
@@ -2002,7 +2019,7 @@ elif st.session_state.page == "Industry News Feed":
 
         cap_col, rss_col = st.columns([5, 1])
         with cap_col:
-            st.caption(f"Showing **{len(filtered_news):,}** of **{len(df_news):,}** headlines".replace(',', '.'))
+            st.caption(f"**{len(filtered_news):,}** van **{len(df_news):,}** koppen getoond".replace(',', '.'))
         with rss_col:
             # RSS 2.0 export of current filter
             try:
@@ -2035,30 +2052,30 @@ elif st.session_state.page == "Industry News Feed":
                     file_name=f"pension_news_{pd.Timestamp.now(tz='UTC').tz_localize(None).date()}.xml",
                     mime="application/rss+xml",
                     use_container_width=True,
-                    help="Download current filter as RSS 2.0 XML (max 100 items).",
+                    help="Download de huidige filter als RSS 2.0 XML (max 100 items).",
                 )
             except Exception as e:
-                st.caption(f"RSS unavailable ({e})")
+                st.caption(f"RSS niet beschikbaar ({e})")
 
         st.dataframe(
             filtered_news,
             use_container_width=True,
             column_config={
-                "url": st.column_config.LinkColumn("Read Original", display_text="Open Link \u2192"),
-                "Date": st.column_config.TextColumn("Date"),
-                "Pension Fund": st.column_config.TextColumn("Fund"),
-                "Headline": st.column_config.TextColumn("Headline"),
+                "url": st.column_config.LinkColumn("Bron", display_text="Open link \u2192"),
+                "Date": st.column_config.TextColumn("Datum"),
+                "Pension Fund": st.column_config.TextColumn("Fonds"),
+                "Headline": st.column_config.TextColumn("Kop"),
             },
             hide_index=True
         )
     else:
-        st.info("No news articles found in the database. Ensure the `scrape_fund_news.py` crawler has run.")
+        st.info("Geen nieuwsartikelen in de database. Controleer dat de scraper heeft gedraaid.")
         
 # ==========================================
 # PAGE 8: GLOSSARY (BEGRIPPENLIJST)
 # ==========================================
 elif st.session_state.page == "Begrippenlijst":
-    st.header("📖 Begrippenlijst (Glossary)")
+    st.header("📖 Begrippenlijst")
     st.markdown("Een handig overzicht van veelvoorkomende pensioentermen en concepten die in deze database (en in het dagelijkse nieuws) worden gebruikt.")
     
     st.markdown("""
