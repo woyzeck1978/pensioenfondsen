@@ -1,0 +1,6 @@
+# Deps for the read-only REST sidecar (scripts/api/main.py). Installed into the
+# Mac-mini deploy venv (~/pensioenfondsen-app/.venv, Python 3.9). pandas is
+# already present via the dashboard. Kept separate from the dashboard's
+# requirements.txt — the API is its own launchd service.
+fastapi>=0.110,<0.116
+uvicorn>=0.27,<0.32

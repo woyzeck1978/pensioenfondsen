@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Read-only REST API sidecar (Fase 4). Install on the Mac mini:
+    cp scripts/automation/nl.wuite.pensioenfondsen.api.plist ~/Library/LaunchAgents/
+    launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/nl.wuite.pensioenfondsen.api.plist
+  Reachable over Tailscale at 100.107.33.80:8503 ; docs at /api/docs.
+  Bound to 0.0.0.0 for tailnet access; NOT routed through the Cloudflare tunnel.
+-->
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>nl.wuite.pensioenfondsen.api</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/caffeinate</string>
+    <string>-i</string>
+    <string>/Users/webkowuite/pensioenfondsen-app/.venv/bin/python3</string>
+    <string>-m</string><string>uvicorn</string>
+    <string>main:app</string>
+    <string>--host</string><string>0.0.0.0</string>
+    <string>--port</string><string>8503</string>
+  </array>
+  <key>WorkingDirectory</key><string>/Users/webkowuite/pensioenfondsen-app/scripts/api</string>
+  <key>RunAtLoad</key><true/>
+  <key>KeepAlive</key><true/>
+  <key>ProcessType</key><string>Background</string>
+  <key>StandardOutPath</key><string>/Users/webkowuite/pensioenfondsen-app/logs/server/api.out.log</string>
+  <key>StandardErrorPath</key><string>/Users/webkowuite/pensioenfondsen-app/logs/server/api.err.log</string>
+</dict>
+</plist>
