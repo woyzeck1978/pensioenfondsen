@@ -401,12 +401,31 @@ if "selected_fund" not in st.session_state:
 if "recent_funds" not in st.session_state:
     st.session_state.recent_funds = []  # most-recent first, max 5
 
-if "watchlist" not in st.session_state:
+# Watchlist (Fase 2): persisted in app_state.db, keyed on stable fund_id. The
+# UI still works in fund *names*, so we keep name<->id maps and sync the
+# session copy from the DB on every run. On a non-self-hosted deploy it falls
+# back to the old session-only behaviour.
+_NAME_TO_ID = dict(zip(df_funds["name"], df_funds["id"]))
+_ID_TO_NAME = dict(zip(df_funds["id"], df_funds["name"]))
+
+if _LOCAL_STATE_OK:
+    _watch_ids = local_state.list_watchlist()
+    st.session_state.watchlist = [
+        _ID_TO_NAME[i] for i in _watch_ids if i in _ID_TO_NAME
+    ]
+elif "watchlist" not in st.session_state:
     st.session_state.watchlist = []  # pinned fund names, max 10
 
 
 def _toggle_watch(fund_name: str) -> None:
-    """Add or remove from watchlist."""
+    """Add or remove from watchlist (persisted when self-hosted)."""
+    if _LOCAL_STATE_OK and fund_name in _NAME_TO_ID:
+        local_state.toggle_watch(int(_NAME_TO_ID[fund_name]))
+        st.session_state.watchlist = [
+            _ID_TO_NAME[i] for i in local_state.list_watchlist()
+            if i in _ID_TO_NAME
+        ]
+        return
     wl = st.session_state.watchlist
     if fund_name in wl:
         st.session_state.watchlist = [n for n in wl if n != fund_name]
@@ -478,6 +497,38 @@ st.sidebar.markdown(
 """,
     unsafe_allow_html=True,
 )
+
+# Meldingen (Fase 2) — alerts feed from app_state.db, written by
+# scripts/automation/generate_alerts.py after each bi-daily scrape.
+if _LOCAL_STATE_OK:
+    _n_unread = local_state.unread_alert_count()
+    _badge = f" ({_n_unread})" if _n_unread else ""
+    with st.sidebar.expander(f"🔔 Meldingen{_badge}", expanded=bool(_n_unread)):
+        _alerts = local_state.get_alerts(limit=15)
+        if _alerts.empty:
+            st.caption("Geen meldingen. Voeg fondsen toe aan je watchlist; de "
+                       "scraper genereert daarna meldingen.")
+        else:
+            _ICONS = {"news": "📰", "jaarverslag": "📑", "dekkingsgraad": "📉"}
+            for _, _a in _alerts.iterrows():
+                _ic = _ICONS.get(_a["kind"], "•")
+                _unread_dot = "🟣 " if not _a["is_read"] else ""
+                _fn = _a.get("fund_name") or "—"
+                _title = _a["title"]
+                if _a["ref_url"]:
+                    _title = f"[{_title}]({_a['ref_url']})"
+                st.markdown(
+                    f"{_unread_dot}{_ic} **{_fn}**<br>"
+                    f"<span style='font-size:12px;'>{_title}</span>"
+                    f"<br><span style='font-size:10px;color:#8F9BA8;'>"
+                    f"{_a['detail'] or ''} · {_a['created_ts'][:10]}</span>",
+                    unsafe_allow_html=True,
+                )
+            if _n_unread and st.button("Markeer alles gelezen",
+                                       key="mark_alerts_read",
+                                       use_container_width=True):
+                local_state.mark_alerts_read()
+                st.rerun()
 
 # Recent fondsen — quick jump
 if st.session_state.recent_funds:

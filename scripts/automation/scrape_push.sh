@@ -58,6 +58,15 @@ if ! "$PYTHON" -u parse_news_articles.py --workers 12; then
 fi
 cd "$PROJECT_DIR"
 
+# Generate dashboard alerts from the freshly-parsed data (Fase 2). Writes to
+# the gitignored app_state.db, so it never affects the commit/push below.
+# Non-fatal: an alert failure must not abort the scrape.
+echo
+echo "[alerts] generate_alerts.py"
+if ! "$PYTHON" -u scripts/automation/generate_alerts.py --all-funds; then
+    echo "[warn] generate_alerts.py faalde — meldingen overgeslagen (niet fataal)" >&2
+fi
+
 after=$(sqlite3 "$DB_REL" "
     SELECT
       (SELECT COUNT(*) FROM scraped_documents),
