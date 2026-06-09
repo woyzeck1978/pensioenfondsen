@@ -1,3 +1,4 @@
+from __future__ import annotations  # 3.9-deploy safe: defer `str | None` etc.
 import streamlit as st
 import sqlite3
 import pandas as pd
