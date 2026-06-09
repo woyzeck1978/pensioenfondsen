@@ -2219,7 +2219,12 @@ elif st.session_state.page == "Ask Data" and _TEXT2SQL_OK:
 
         if st.button("Vraag het", type="primary") and question.strip():
             with st.spinner("Genereren + uitvoeren…"):
-                res = text2sql.ask(question.strip())
+                # Persist in session_state so the result survives reruns
+                # (rendering only on the click-run is fragile).
+                st.session_state.ask_result = text2sql.ask(question.strip())
+
+        res = st.session_state.get("ask_result")
+        if res:
             if res["sql"]:
                 st.markdown("**Gegenereerde SQL:**")
                 st.code(res["sql"], language="sql")
@@ -2235,7 +2240,7 @@ elif st.session_state.page == "Ask Data" and _TEXT2SQL_OK:
                         st.bar_chart(_df.set_index(_cat[0])[_num[0]])
                 except Exception:
                     pass
-            else:
+            elif res["error"]:
                 st.error(res["error"])
 
         st.caption(
