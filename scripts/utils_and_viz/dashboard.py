@@ -26,6 +26,15 @@ except Exception as _ls_err:  # pragma: no cover - defensive
     local_state = None
     _LOCAL_STATE_OK = False
 
+# Live text-to-SQL via local Ollama (Fase 3). Defensive import — absence just
+# hides the "Vraag het de data" page.
+try:
+    import text2sql
+    _TEXT2SQL_OK = True
+except Exception:  # pragma: no cover - defensive
+    text2sql = None
+    _TEXT2SQL_OK = False
+
 # --- PAGE CONFIGURATION ---
 st.set_page_config(
     page_title="Dutch Pension Funds Explorer",
@@ -445,7 +454,9 @@ def _push_recent(fund_name: str | None) -> None:
     st.session_state.recent_funds = rf[:5]
 
 pages = ["Sector Overview", "Fund Deep-Dive", "Fund Comparison", "Trends", "Equity Strategy Deep-Dive", "Asset Managers Exposure", "WTP Tracker", "Dekkingsgraad Analysis", "ESG & SFDR Tracker", "Industry News Feed", "Begrippenlijst"]
-# Datacuratie is only available on a self-hosted deployment (writable DB).
+# Self-hosted-only pages.
+if _TEXT2SQL_OK:
+    pages.append("Ask Data")
 if _LOCAL_STATE_OK:
     pages.append("Datacuratie")
 
@@ -463,6 +474,7 @@ PAGE_LABELS_NL = {
     "ESG & SFDR Tracker": "ESG- en SFDR-tracker",
     "Industry News Feed": "Sectornieuws",
     "Begrippenlijst": "Begrippenlijst",
+    "Ask Data": "Vraag het de data",
     "Datacuratie": "Datacuratie",
 }
 
@@ -2168,6 +2180,68 @@ elif st.session_state.page == "Begrippenlijst":
     * **CDC (Collective Defined Contribution):** Een collectieve premieregeling waarbij de werkgever een vaste premie betaalt en het beleggings- en renterisico volledig bij het collectief van de werknemers ligt (bijv. ING CDC, NN CDC).
     * **BPF (Bedrijfstakpensioenfonds):** Een pensioenfonds voor een gehele sector of specifieke bedrijfstak (zoals de bouw, zorg, of horeca). Deelname is voor werkgevers binnen die sector vaak wettelijk verplicht (verplichtstelling) om concurrentie op arbeidsvoorwaarden te voorkomen en zodoende schaalvoordelen te kunnen behalen.
     """)
+
+
+# ==========================================
+# PAGE: VRAAG HET DE DATA (text-to-SQL, self-hosted only)
+# ==========================================
+elif st.session_state.page == "Ask Data" and _TEXT2SQL_OK:
+    st.header("Vraag het de data")
+    st.markdown(
+        "Stel een vraag in gewone taal. Een lokaal taalmodel (Ollama op de "
+        "mini) vertaalt 'm naar SQL en draait die **alleen-lezen** op de "
+        "database. De gegenereerde query wordt altijd getoond, zodat je kunt "
+        "controleren wat er gebeurde."
+    )
+
+    if not text2sql.ollama_available():
+        st.warning(
+            "Het taalmodel is nu niet bereikbaar (Ollama op de mini draait "
+            "niet of is opgestart). Probeer het zo opnieuw."
+        )
+    else:
+        _examples = [
+            "Top 10 fondsen met de hoogste AUM",
+            "Welke fondsen zijn nog niet ingevaren, gesorteerd op AUM?",
+            "Gemiddelde beleidsdekkingsgraad per categorie",
+            "Welke 5 fondsen hadden in 2024 het hoogste beleggingsrendement?",
+        ]
+        st.caption("Voorbeelden (klik om in te vullen):")
+        _ecols = st.columns(len(_examples))
+        for _i, _ex in enumerate(_examples):
+            if _ecols[_i].button(_ex, key=f"ask_ex_{_i}", use_container_width=True):
+                st.session_state.ask_q = _ex
+
+        question = st.text_input(
+            "Je vraag", key="ask_q",
+            placeholder="bv. Welke fondsen beheren meer dan 10 miljard euro?",
+        )
+
+        if st.button("Vraag het", type="primary") and question.strip():
+            with st.spinner("Genereren + uitvoeren…"):
+                res = text2sql.ask(question.strip())
+            if res["sql"]:
+                st.markdown("**Gegenereerde SQL:**")
+                st.code(res["sql"], language="sql")
+            if res["ok"]:
+                _df = res["df"]
+                st.caption(f"{len(_df)} rij(en)")
+                st.dataframe(_df, use_container_width=True, hide_index=True)
+                # Auto-grafiek bij een label-kolom + numerieke kolom, modest aantal rijen.
+                try:
+                    _num = _df.select_dtypes("number").columns.tolist()
+                    _cat = [c for c in _df.columns if c not in _num]
+                    if 0 < len(_df) <= 50 and _num and _cat:
+                        st.bar_chart(_df.set_index(_cat[0])[_num[0]])
+                except Exception:
+                    pass
+            else:
+                st.error(res["error"])
+
+        st.caption(
+            "⚠ Antwoorden zijn machine-gegenereerd uit één SQL-query — "
+            "controleer de getoonde SQL bij twijfel."
+        )
 
 
 # ==========================================
