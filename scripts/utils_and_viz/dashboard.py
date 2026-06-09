@@ -425,6 +425,9 @@ def _push_recent(fund_name: str | None) -> None:
     st.session_state.recent_funds = rf[:5]
 
 pages = ["Sector Overview", "Fund Deep-Dive", "Fund Comparison", "Trends", "Equity Strategy Deep-Dive", "Asset Managers Exposure", "WTP Tracker", "Dekkingsgraad Analysis", "ESG & SFDR Tracker", "Industry News Feed", "Begrippenlijst"]
+# Datacuratie is only available on a self-hosted deployment (writable DB).
+if _LOCAL_STATE_OK:
+    pages.append("Datacuratie")
 
 # NL-labels voor de zijbalk; interne keys (session_state.page) blijven Engels
 # om alle bestaande elif-vergelijkingen ongemoeid te laten.
@@ -440,6 +443,7 @@ PAGE_LABELS_NL = {
     "ESG & SFDR Tracker": "ESG- en SFDR-tracker",
     "Industry News Feed": "Sectornieuws",
     "Begrippenlijst": "Begrippenlijst",
+    "Datacuratie": "Datacuratie",
 }
 
 # Sidebar Navigation — subtle, no loud titles
@@ -2112,3 +2116,155 @@ elif st.session_state.page == "Begrippenlijst":
     * **CDC (Collective Defined Contribution):** Een collectieve premieregeling waarbij de werkgever een vaste premie betaalt en het beleggings- en renterisico volledig bij het collectief van de werknemers ligt (bijv. ING CDC, NN CDC).
     * **BPF (Bedrijfstakpensioenfonds):** Een pensioenfonds voor een gehele sector of specifieke bedrijfstak (zoals de bouw, zorg, of horeca). Deelname is voor werkgevers binnen die sector vaak wettelijk verplicht (verplichtstelling) om concurrentie op arbeidsvoorwaarden te voorkomen en zodoende schaalvoordelen te kunnen behalen.
     """)
+
+
+# ==========================================
+# PAGE 9: DATACURATIE (self-hosted only)
+# ==========================================
+elif st.session_state.page == "Datacuratie" and _LOCAL_STATE_OK:
+    st.header("Datacuratie")
+    st.markdown(
+        "Handmatige correcties op de fondsentabel. Een correctie wordt als "
+        "**override** opgeslagen in een aparte, lokale database "
+        "(`app_state.db`) — de bron-DB `pension_funds.db` wordt **niet** "
+        "aangepast. Zo overleeft je correctie elke scraper-run en `git pull`, "
+        "zonder merge-conflicten. De override wordt bij het inladen over de "
+        "bron-waarde heen gelegd."
+    )
+
+    # Friendly NL labels for the most-edited columns; unlisted columns fall
+    # back to their raw name. (Keys must match funds.<column>.)
+    _CURATIE_LABELS = {
+        "aum_euro_bn": "AUM (€ mld)",
+        "beleidsdekkingsgraad_pct": "Beleidsdekkingsgraad (%)",
+        "dekkingsgraad_pct": "Actuele dekkingsgraad (%)",
+        "maanddekkingsgraad_pct": "Maanddekkingsgraad (%)",
+        "vereiste_dekkingsgraad_pct": "Vereiste dekkingsgraad (%)",
+        "deelnemers_totaal": "Deelnemers totaal",
+        "deelnemers_actief": "Deelnemers actief",
+        "deelnemers_slapers": "Deelnemers slapers",
+        "deelnemers_gepensioneerd": "Deelnemers gepensioneerd",
+        "uitvoerder": "Uitvoerder",
+        "fiduciair_beheerder": "Fiduciair beheerder",
+        "sfdr_article": "SFDR-artikel",
+        "eu_taxonomy_pct": "EU-taxonomie (%)",
+        "wtp_contract_type": "Wtp-contracttype",
+        "wtp_invaren": "Wtp invaren",
+        "wtp_transitie_datum": "Wtp-transitiedatum",
+        "website": "Website",
+        "category": "Categorie",
+    }
+    _editable = local_state.editable_columns()
+
+    def _col_label(c: str) -> str:
+        return f"{_CURATIE_LABELS.get(c, c)}  ·  {c}"
+
+    df_sorted = df_funds.sort_values("name")
+    fund_name = st.selectbox(
+        "Fonds",
+        df_sorted["name"].tolist(),
+        key="curatie_fund",
+    )
+    fund_row = df_sorted[df_sorted["name"] == fund_name].iloc[0]
+    fund_id = int(fund_row["id"])
+
+    # Pull the raw bron-DB row so "huidige waarde" reflects the source, not the
+    # override-merged df_funds.
+    bron_row = load_data(
+        "SELECT * FROM funds WHERE id = " + str(fund_id)
+    )
+    bron = bron_row.iloc[0] if not bron_row.empty else None
+
+    col_l, col_r = st.columns([1, 1])
+
+    with col_l:
+        st.markdown("##### Veld bewerken")
+        # Order the dropdown so the friendly-labelled columns come first.
+        _ordered = [c for c in _CURATIE_LABELS if c in _editable] + \
+                   [c for c in _editable if c not in _CURATIE_LABELS]
+        chosen_col = st.selectbox(
+            "Veld", _ordered, format_func=_col_label, key="curatie_col"
+        )
+
+        bron_val = None if bron is None else bron.get(chosen_col)
+        bron_disp = "—" if (bron_val is None or pd.isna(bron_val)) else bron_val
+        st.caption(f"Huidige bron-waarde: **{bron_disp}**")
+
+        # Show any existing override on this field.
+        _ov = local_state.get_overrides()
+        _ov_here = _ov[(_ov.fund_id == fund_id) & (_ov.column_name == chosen_col)]
+        if not _ov_here.empty:
+            _r = _ov_here.iloc[0]
+            _ovd = "NULL" if int(_r["is_null"]) else _r["new_value"]
+            st.info(f"Actieve override: **{_ovd}**")
+
+        with st.form("curatie_form", clear_on_submit=False):
+            set_null = st.checkbox("Zet op NULL (leegmaken)", value=False)
+            new_val = st.text_input(
+                "Nieuwe waarde",
+                value="" if (bron_val is None or pd.isna(bron_val)) else str(bron_val),
+                disabled=set_null,
+            )
+            null_only = st.checkbox(
+                "NULL-only-guard (alleen lege bron-velden invullen)",
+                value=True,
+                help="Aan: weigert overschrijven van een bestaande bron-waarde. "
+                     "Zet uit om bewust te corrigeren (bv. KPN AUM 1,1 → 10,0).",
+            )
+            note = st.text_input("Notitie (optioneel)", value="")
+            submitted = st.form_submit_button("Override opslaan", type="primary")
+
+        if submitted:
+            ok, msg = local_state.set_override(
+                fund_id,
+                chosen_col,
+                None if set_null else new_val,
+                is_null=set_null,
+                note=note,
+                null_only=null_only,
+            )
+            if ok:
+                st.success(msg)
+                st.rerun()
+            else:
+                st.error(msg)
+
+    with col_r:
+        st.markdown("##### Actieve overrides")
+        ov_all = local_state.list_overrides_with_names()
+        if ov_all.empty:
+            st.caption("Nog geen overrides.")
+        else:
+            for _, r in ov_all.iterrows():
+                disp = "NULL" if int(r["is_null"]) else r["new_value"]
+                c1, c2, c3 = st.columns([3, 1, 1])
+                c1.markdown(
+                    f"**{r['name']}** · `{r['column_name']}` → {disp}"
+                    f"<br><span style='font-size:11px;color:#8F9BA8;'>"
+                    f"{r['updated_ts']}"
+                    f"{(' · ' + r['note']) if r['note'] else ''}</span>",
+                    unsafe_allow_html=True,
+                )
+                if c2.button("Wis", key=f"clr_{r['fund_id']}_{r['column_name']}"):
+                    _ok, _m = local_state.clear_override(
+                        int(r["fund_id"]), r["column_name"]
+                    )
+                    st.toast(_m)
+                    st.rerun()
+                if c3.button(
+                    "Promoot", key=f"prm_{r['fund_id']}_{r['column_name']}",
+                    help="Schrijf permanent naar pension_funds.db (alleen als de "
+                         "pipeline deze kolom niet meer overschrijft).",
+                ):
+                    _ok, _m = local_state.promote_override(
+                        int(r["fund_id"]), r["column_name"]
+                    )
+                    (st.success if _ok else st.error)(_m)
+                    st.rerun()
+
+    with st.expander("Wijzigingslog (laatste 50)"):
+        audit = local_state.get_audit(limit=50)
+        if audit.empty:
+            st.caption("Nog geen wijzigingen geregistreerd.")
+        else:
+            st.dataframe(audit, use_container_width=True, hide_index=True)
