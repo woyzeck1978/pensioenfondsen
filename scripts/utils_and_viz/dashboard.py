@@ -14,6 +14,17 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
 
+# Writable companion state (overrides / watchlist / audit). Only meaningful on
+# the self-hosted deployment; see local_state.py. Import is defensive so the
+# dashboard still loads if the module is ever absent.
+try:
+    import local_state
+    local_state.init_state_db()
+    _LOCAL_STATE_OK = True
+except Exception as _ls_err:  # pragma: no cover - defensive
+    local_state = None
+    _LOCAL_STATE_OK = False
+
 # --- PAGE CONFIGURATION ---
 st.set_page_config(
     page_title="Dutch Pension Funds Explorer",
@@ -374,6 +385,11 @@ st.markdown("Interactieve verkenning van de Nederlandse pensioensector (AUM, all
 
 # Retrieve core dataset
 df_funds = get_all_funds()
+# Layer manual corrections on top of the bron-DB at read time (Fase 0). The
+# bron-DB itself is never mutated by the dashboard, so the bi-daily scraper and
+# git push stay conflict-free.
+if _LOCAL_STATE_OK:
+    df_funds = local_state.apply_overrides(df_funds, id_col="id")
 
 # Session State Initialization
 if "page" not in st.session_state:

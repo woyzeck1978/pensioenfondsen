@@ -39,3 +39,10 @@ logs/
 # Do NOT ignore the processed database and excel exports
 !data/processed/pension_funds.db
 !data/processed/pension_funds.xlsx
+
+# Self-hosted dashboard's writable companion state (overrides, watchlist,
+# audit). Local to the host (Mac mini); must NOT be committed — see
+# scripts/utils_and_viz/local_state.py.
+data/processed/app_state.db
+data/processed/app_state.db-wal
+data/processed/app_state.db-shm
