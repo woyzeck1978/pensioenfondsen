@@ -14,8 +14,11 @@
 set -u
 set -o pipefail
 
-PROJECT_DIR="/Users/webkowuite/Library/CloudStorage/GoogleDrive-webko@wuitepartners.nl/My Drive/03_Reference/Investing/Pensioenfondsen/Nederlandse-pensioenfondsen"
-PYTHON="/Library/Frameworks/Python.framework/Versions/3.14/bin/python3"
+# Portable across hosts. The Mac mini (always-on, repo is a plain clone — no
+# Drive/TCC) sets these via env in its launchd wrapper; otherwise self-locate
+# from the script path and use python3 on PATH.
+PROJECT_DIR="${PENSIOEN_PROJECT_DIR:-$(cd "$(dirname "$0")/../.." 2>/dev/null && pwd)}"
+PYTHON="${PENSIOEN_PYTHON:-python3}"
 GIT="/usr/bin/git"
 DB_REL="data/processed/pension_funds.db"
 
