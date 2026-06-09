@@ -335,14 +335,24 @@ vervoer, 32 PGB, 41 PFZW, 111 KPN). Volgende publicatie-golf in
 juni/juli; bi-daily scraper zal nieuwe PDFs nu automatisch oppikken
 voor de 6 fondsen met gefixte website-URLs.
 
-## Sessie 2026-06-09 — self-host enhancements Fase 0–2 (branch)
+## Sessie 2026-06-09 — self-host enhancements Fase 0–4 (live op main)
 
 Aanleiding: het dashboard draait nu **self-hosted** op de Mac mini achter
 Cloudflare Tunnel (`pensioenfondsen.webkowuite.nl`). Dat heft drie
 Streamlit-Cloud-plafonds op: geen persistente schijf, geen bereikbare
 Ollama/secrets, en RAM/sleep-limieten. Daardoor werden eerder geskipte
-items (D3 alerts, F2 API) plots haalbaar. Werk staat op branch
-**`feature/local-selfhost-enhancements`** (3 commits, nog niet gemerged).
+items (D3 alerts, F2 API) plots haalbaar. **Alle vijf fasen staan gemerged
+op `main` en draaien live** (eind-commit `eb4dd83`); de feature-branch is
+opgeruimd.
+
+**Deploy-realiteit (belangrijk voor de volgende agent).** De live app draait
+NIET uit deze Drive-repo maar uit een aparte clone **`~/pensioenfondsen-app`
+op de mini onder Python 3.9.6**. Nieuwe code moet 3.9-proof zijn:
+`from __future__ import annotations` bovenaan elk bestand met `X | None`-
+annotaties (FastAPI-routes hebben bovendien `Optional[...]` nodig i.p.v.
+`X | None`, want die hints worden runtime ge-evalueerd). De pull-job
+(`~/bin/pensioenfondsen_pull.sh`, dagelijks 06:30) doet `git pull --ff-only`
+op `main` en herstart het dashboard bij nieuwe commits.
 
 **Architectuurbeslissing — gescheiden writable DB.** Het dashboard schrijft
 NOOIT in `pension_funds.db` (die de bi-daily scraper schrijft én pusht).
@@ -375,19 +385,54 @@ scraper-run + `git pull` overleven zonder merge-conflict. Nieuwe module:
     env-var. Flags: `--dry-run`, `--days`, `--thresholds`, `--all-funds`.
   - Dashboard: sidebar-blok "🔔 Meldingen (n)" met ongelezen-badge, klikbare
     titels, type-iconen, markeer-als-gelezen.
-  - `scrape_push.sh` roept de engine **non-fataal** aan ná de news-parser;
-    schrijft naar de gitignored `app_state.db` dus raakt commit/push niet.
+  - **Alert-engine draait op de MINI, niet op de MBP-scraper** (commit
+    `69d2c09`). Reden: de scraper draait op de MBP met een eigen
+    `app_state.db`, maar de live app + watchlist + feed leven op de mini —
+    een hook in `scrape_push.sh` zou alerts in de verkeerde DB schrijven
+    (split-brain). Daarom roept `~/bin/pensioenfondsen_pull.sh` op de mini
+    ná de pull `generate_alerts.py --all-funds` aan met de deploy-venv. De
+    hook in `scrape_push.sh` is verwijderd.
+- ✅ **Fase 3 — live text-to-SQL** (commits `6e86b42`, `41f2197`). Pagina
+  "Vraag het de data": NL-vraag → `qwen2.5:7b-instruct` (Ollama draaide
+  **al** op de mini, localhost:11434 — geen verhuizing/installatie nodig) →
+  SQLite SELECT → alleen-lezen uitgevoerd → tabel + auto-grafiek. Module
+  `scripts/utils_and_viz/text2sql.py` met twee veiligheidslagen: statische
+  guard (één SELECT/WITH, geen DML/DDL, geen chaining) + uitvoering op een
+  `mode=ro`-connectie. Endpoint/model via env (`PENSIOEN_OLLAMA_URL/MODEL`).
+  Resultaat in `session_state` (rendering-only-op-klik bleek fragiel).
+- ✅ **Fase 4 — read-only REST API-sidecar** (commit `eb4dd83`). FastAPI
+  `scripts/api/main.py` op **0.0.0.0:8503**, **Tailscale-only**
+  (100.107.33.80:8503), NIET via de tunnel, geen auth. Endpoints
+  `/api/health|funds|funds/{id}|historical/{id}|news`, docs op `/api/docs`.
+  Read-only (`mode=ro`) + dashboard-overrides toegepast. launchd-job
+  `nl.wuite.pensioenfondsen.api` (plist-template in `scripts/automation/`),
+  deps in `scripts/api/requirements.txt` (3.9-venv). Leest live uit de DB →
+  hoeft niet herstart bij data-updates.
+
+**Operationele fixes deze sessie:**
+- **py39-deploy-blokkade** opgelost: `dashboard.py` had `str | None` zonder
+  future-import → crashte op de 3.9-mini. Future-import toegevoegd; de losse
+  `fix/dashboard-py39-annotations`-branch (die dit los fixte) is opgegaan in
+  `main` en verwijderd. Deploy-clone trackt nu `main`.
+- **Cloudflare-tunnel `http2` → `quic`**: de connector draaide met
+  `--protocol http2`, waardoor langlopende Streamlit-WebSocket-runs (knop-
+  submits, form-saves) hun resultaat NIET terugleverden over de publieke
+  URL — pagina rendert wel, interactie "doet niets". Diagnose: identieke
+  klik faalt publiek maar slaagt via SSH-port-forward (tunnel omzeild). Fix:
+  `--protocol http2` uit `~/Library/LaunchAgents/com.webkowuite.cloudflared.plist`
+  (= default quic) + job herladen; ook een dubbele wees-connector opgeruimd.
+  Herstelt app-brede interactiviteit. (Plist op de mini, niet in de repo;
+  `.bak` aanwezig.)
+- **Scrape-cadans** van 2-daags → **dagelijks** (MBP-plist 172800→86400).
 
 **Te beslissen / open:**
-- Branch mergen naar `main` na review.
-- **`app_state.db` ligt in de Drive-map** (gitignored). Eén host = prima;
-  bij meerdere machines wil je 'm host-lokaal buiten Drive zetten.
-- **Fase 3** (Ollama → mini + live text-to-SQL) en **Fase 4** (FastAPI
-  `/api`-sidecar achter dezelfde tunnel) zijn ontworpen maar nog niet
-  gebouwd. Fase 3 vereist eerst Ollama-verhuizing naar de mini (nu nog op
-  de MBP, 100.71.107.24 — slaap is de zwakke schakel voor live LLM).
-- Alert-engine notify() is feed-only gekozen; ntfy/webhook staan klaar maar
-  zijn niet geactiveerd.
+- **`app_state.db` ligt in de Drive-map** op de MBP-scrapekant (gitignored);
+  de mini-deploy heeft z'n eigen `app_state.db` in `~/pensioenfondsen-app`
+  (lokaal, niet in Drive — goed). Eén host = prima; let op bij multi-host.
+- Alert-engine `notify()` is feed-only gekozen; ntfy/webhook staan klaar
+  maar zijn niet geactiveerd.
+- Energie-dashboard deelt dezelfde cloudflared-connector; profiteert van de
+  quic-fix maar is niet apart op z'n publieke URL geverifieerd.
 
 ## Open items, ranked by ROI
 
