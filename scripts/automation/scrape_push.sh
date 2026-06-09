@@ -87,15 +87,19 @@ echo "[3/3] commit + push"
 "$GIT" add "$DB_REL"
 "$GIT" commit -m "auto: bi-daily scrape ($(date '+%Y-%m-%d %H:%M'))" || { echo "[FATAL] commit faalde" >&2; exit 5; }
 
-# Push with a short retry — Google Drive sync occasionally locks files
+# Push with a short retry — Google Drive sync occasionally locks files, en op
+# de mini kan origin/main intussen vooruit zijn gelopen door een code-push.
+# Bij afwijzing eerst rebasen (de DB-commit raakt alleen pension_funds.db, dus
+# botst niet met code-commits), dan opnieuw pushen.
 for attempt in 1 2 3; do
     if "$GIT" push origin main; then
         echo "[ok] push gelukt op poging $attempt"
         echo "done $(date '+%Y-%m-%d %H:%M:%S %Z')"
         exit 0
     fi
-    echo "[warn] push poging $attempt mislukt, opnieuw over 30s..."
-    sleep 30
+    echo "[warn] push poging $attempt mislukt — rebase op origin/main + opnieuw..."
+    "$GIT" pull --rebase origin main || true
+    sleep 5
 done
 
 echo "[FATAL] push faalde na 3 pogingen" >&2
