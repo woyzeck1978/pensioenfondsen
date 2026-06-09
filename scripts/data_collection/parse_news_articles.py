@@ -17,6 +17,8 @@ Usage:
     python3 parse_news_articles.py --limit 50  # smoke test
 """
 
+from __future__ import annotations  # 3.9-deploy safe: defer `str | None` hints
+
 import argparse
 import re
 import sqlite3
