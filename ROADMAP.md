@@ -1,7 +1,7 @@
 # ROADMAP / Project State — Dutch Pension Funds Dashboard
 
 Handoff document for the next agent (Antigravity, Claude Code, or a human).
-Last updated: 2026-05-20.
+Last updated: 2026-06-09.
 
 This is a sibling to `CLAUDE.md`. CLAUDE.md tells an agent **how to work on
 this codebase**. This file tells an agent **what's been done and what's
@@ -334,6 +334,60 @@ dashboard-bug ontdekt en gefixt.
 vervoer, 32 PGB, 41 PFZW, 111 KPN). Volgende publicatie-golf in
 juni/juli; bi-daily scraper zal nieuwe PDFs nu automatisch oppikken
 voor de 6 fondsen met gefixte website-URLs.
+
+## Sessie 2026-06-09 — self-host enhancements Fase 0–2 (branch)
+
+Aanleiding: het dashboard draait nu **self-hosted** op de Mac mini achter
+Cloudflare Tunnel (`pensioenfondsen.webkowuite.nl`). Dat heft drie
+Streamlit-Cloud-plafonds op: geen persistente schijf, geen bereikbare
+Ollama/secrets, en RAM/sleep-limieten. Daardoor werden eerder geskipte
+items (D3 alerts, F2 API) plots haalbaar. Werk staat op branch
+**`feature/local-selfhost-enhancements`** (3 commits, nog niet gemerged).
+
+**Architectuurbeslissing — gescheiden writable DB.** Het dashboard schrijft
+NOOIT in `pension_funds.db` (die de bi-daily scraper schrijft én pusht).
+Alle dashboard-state gaat naar een aparte, gitignored
+**`data/processed/app_state.db`** (WAL-mode), zodat handmatige edits elke
+scraper-run + `git pull` overleven zonder merge-conflict. Nieuwe module:
+`scripts/utils_and_viz/local_state.py`.
+
+- ✅ **Fase 0 — overrides-fundering** (commit `7caba2a`). `local_state.py`
+  met tabellen `overrides`, `edit_audit`, `watchlist`, `alerts`. Correcties
+  op `funds.<kolom>` worden bij het lezen over de bron-waarde gelegd via
+  `apply_overrides(df)` (aangeroepen direct na `get_all_funds()`). Promotie
+  naar de bron-DB is een aparte, expliciete stap (`promote_override`).
+- ✅ **Fase 1 — Datacuratie-pagina** (commit `7b7ea57`). Nieuwe dashboard-
+  pagina (alleen zichtbaar als de write-laag laadt). Veld bewerken met
+  zichtbare bron-waarde, **NULL-only-guard standaard aan** (gevulde waarde
+  overschrijven = guard bewust uit), Wis/Promoot, en wijzigingslog uit
+  `edit_audit`. Vervangt wegwerp-scripts voor ROADMAP #3/#4. Visueel
+  geverifieerd via Playwright (guard-block + opslaan + feed-update).
+- ✅ **Fase 2 — watchlist + alerts** (commit `629aa88`). Realiseert het in
+  D3 overgeslagen alert-idee.
+  - Watchlist van `session_state` → `app_state.db` (op stabiel `fund_id`);
+    overleeft refresh. UI blijft naam-gebaseerd.
+  - `scripts/automation/generate_alerts.py`: scant de net-gescrapete DB op
+    drie signalen — **nieuws** (gevolgd fonds), **jaarverslag** (FY-radar,
+    `--all-funds`), **beleidsdekkingsgraad-drempelkruising** (110/105/100 op
+    de laatste twee maandpunten uit `monthly_funding_ratios`). Idempotent
+    via `dedup_key` (INSERT OR IGNORE). Levering via pluggable `notify()`,
+    standaard **uit** — feed-only; outbound (ntfy/webhook) alleen bij gezette
+    env-var. Flags: `--dry-run`, `--days`, `--thresholds`, `--all-funds`.
+  - Dashboard: sidebar-blok "🔔 Meldingen (n)" met ongelezen-badge, klikbare
+    titels, type-iconen, markeer-als-gelezen.
+  - `scrape_push.sh` roept de engine **non-fataal** aan ná de news-parser;
+    schrijft naar de gitignored `app_state.db` dus raakt commit/push niet.
+
+**Te beslissen / open:**
+- Branch mergen naar `main` na review.
+- **`app_state.db` ligt in de Drive-map** (gitignored). Eén host = prima;
+  bij meerdere machines wil je 'm host-lokaal buiten Drive zetten.
+- **Fase 3** (Ollama → mini + live text-to-SQL) en **Fase 4** (FastAPI
+  `/api`-sidecar achter dezelfde tunnel) zijn ontworpen maar nog niet
+  gebouwd. Fase 3 vereist eerst Ollama-verhuizing naar de mini (nu nog op
+  de MBP, 100.71.107.24 — slaap is de zwakke schakel voor live LLM).
+- Alert-engine notify() is feed-only gekozen; ntfy/webhook staan klaar maar
+  zijn niet geactiveerd.
 
 ## Open items, ranked by ROI
 
