@@ -1,5 +1,9 @@
 /* Visual style for the Dutch Pension Funds dashboard.
-   Reference: csuriskdashboard.netlify.app — tokens captured via DOM inspection. */
+   Reference: csuriskdashboard.netlify.app — tokens captured via DOM inspection.
+   Typografie: IBM Plex Sans (UI) + Source Serif 4 (display) + IBM Plex Mono
+   (cijfers/KPI's) — geladen via Google Fonts, met systeem-fallbacks. */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap');
 
 :root {
   --bg-page:      #F6F7F9;
@@ -12,28 +16,43 @@
   --text-mid:     #2F3A45;
   --text-mute:    #5C6875;
   --accent:       #6554A3;   /* CSU purple */
+  --accent-soft:  #EFEBFA;
   --green:        #2F7D57;
   --teal:         #17756B;
   --blue:         #1F6FB2;
   --red:          #B13B3B;
   --orange:       #C66B16;
+
+  --font-ui:      "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+                  "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-num:     "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
 }
 
 /* ── Global typography ─────────────────────────────────────────── */
 html, body, [class*="stApp"] {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-               "Helvetica Neue", Arial, sans-serif !important;
+  font-family: var(--font-ui) !important;
   color: var(--text);
 }
 
-/* tighten Streamlit's oversized headings to CSU scale */
-h1, .stMarkdown h1 { font-size: 22px !important; font-weight: 700 !important; margin-bottom: 4px !important; }
-h2, .stMarkdown h2 { font-size: 18px !important; font-weight: 700 !important; margin-top: 24px !important; margin-bottom: 8px !important; }
-h3, .stMarkdown h3 { font-size: 15px !important; font-weight: 700 !important; color: var(--text-mid); }
+/* display-serif voor paginatitels, plex sans voor subkoppen */
+h1, .stMarkdown h1 {
+  font-family: var(--font-display) !important;
+  font-size: 26px !important; font-weight: 700 !important;
+  letter-spacing: -0.01em; margin-bottom: 4px !important;
+}
+h2, .stMarkdown h2 {
+  font-family: var(--font-display) !important;
+  font-size: 19px !important; font-weight: 700 !important;
+  margin-top: 24px !important; margin-bottom: 8px !important;
+}
+h3, .stMarkdown h3 { font-size: 15px !important; font-weight: 600 !important; color: var(--text-mid); }
+h4, .stMarkdown h4, h5, .stMarkdown h5 { font-weight: 600 !important; color: var(--text-mid); }
 .stMarkdown p, .stMarkdown li { font-size: 14px; color: var(--text-mid); }
 
 /* ── Main page padding ─────────────────────────────────────────── */
-.main .block-container { padding-top: 1.4rem !important; padding-bottom: 2rem !important; max-width: 1380px; }
+.main .block-container,
+[data-testid="stMain"] .block-container { padding-top: 1.4rem !important; padding-bottom: 2rem !important; max-width: 1380px; }
 
 /* ── Sidebar ───────────────────────────────────────────────────── */
 section[data-testid="stSidebar"] {
@@ -42,38 +61,51 @@ section[data-testid="stSidebar"] {
 }
 section[data-testid="stSidebar"] h1,
 section[data-testid="stSidebar"] h2,
-section[data-testid="stSidebar"] h3 { font-size: 12px !important; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-mute) !important; }
+section[data-testid="stSidebar"] h3 { font-size: 12px !important; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-mute) !important; font-family: var(--font-ui) !important; }
 
-/* Radio-based nav: subtle, no dot circles, left-accent for active item */
-section[data-testid="stSidebar"] [data-testid="stRadio"] > div { gap: 0 !important; }
-section[data-testid="stSidebar"] [data-testid="stRadio"] label {
-  padding: 7px 14px 7px 12px !important;
+/* ── st.navigation: merkregel boven de nav ─────────────────────── */
+[data-testid="stSidebarNav"]::before {
+  content: "Pensioenfondsen · NL";
+  display: block;
+  padding: 14px 14px 10px 14px;
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  border-bottom: 1px solid var(--border-soft);
+  margin-bottom: 6px;
+}
+
+/* sectiekoppen in de nav (Overzicht / Fondsen / Analyse / …) */
+[data-testid="stSidebarNav"] [data-testid="stNavSectionHeader"] {
+  font-size: 10.5px !important;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-mute) !important;
+  padding-left: 14px;
+  margin-top: 10px;
+}
+
+/* nav-links: subtiel, left-accent voor actieve pagina */
+[data-testid="stSidebarNav"] a {
+  padding: 6px 14px 6px 11px !important;
   margin: 0 !important;
   border-left: 3px solid transparent;
-  cursor: pointer;
+  border-radius: 0 !important;
   transition: background-color 80ms ease, color 80ms ease, border-color 80ms ease;
 }
-section[data-testid="stSidebar"] [data-testid="stRadio"] label:hover {
-  background: var(--bg-soft);
-  color: var(--text);
+[data-testid="stSidebarNav"] a:hover {
+  background: var(--bg-soft) !important;
 }
-/* Hide the actual radio dot — we use the left border + weight instead */
-section[data-testid="stSidebar"] [data-testid="stRadio"] label > div:first-child {
-  display: none !important;
-}
-section[data-testid="stSidebar"] [data-testid="stRadio"] label p {
+[data-testid="stSidebarNav"] a span {
   font-size: 13px !important;
   color: var(--text-mid) !important;
-  margin: 0 !important;
-  line-height: 1.45 !important;
 }
-/* Active item — has aria-checked="true" on Streamlit's radio */
-section[data-testid="stSidebar"] [data-testid="stRadio"] label[data-baseweb="radio"]:has(input:checked),
-section[data-testid="stSidebar"] [data-testid="stRadio"] label:has(input:checked) {
+[data-testid="stSidebarNav"] a[aria-current="page"] {
   border-left-color: var(--accent);
-  background: var(--bg-soft);
+  background: var(--bg-soft) !important;
 }
-section[data-testid="stSidebar"] [data-testid="stRadio"] label:has(input:checked) p {
+[data-testid="stSidebarNav"] a[aria-current="page"] span {
   color: var(--text) !important;
   font-weight: 600 !important;
 }
@@ -97,23 +129,38 @@ section[data-testid="stSidebar"] [data-testid="stAlert"] {
 .kpi-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: 8px;
+  border-top: 2px solid var(--accent);
   padding: 14px 16px;
   display: flex;
   flex-direction: column;
   min-height: 92px;
 }
 .kpi-card .kpi-label  { font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-mute); margin-bottom: 4px; }
-.kpi-card .kpi-value  { font-size: 24px; font-weight: 700; color: var(--text); line-height: 1.1; }
+.kpi-card .kpi-value  {
+  font-family: var(--font-num);
+  font-variant-numeric: tabular-nums;
+  font-size: 22px; font-weight: 600; color: var(--text); line-height: 1.15;
+}
 .kpi-card .kpi-sub    { font-size: 12px; color: var(--text-mute); margin-top: 4px; }
 .kpi-card .kpi-delta-up   { color: var(--green); font-weight: 600; }
 .kpi-card .kpi-delta-down { color: var(--red);   font-weight: 600; }
+
+/* ── Fund header (diepteanalyse) ───────────────────────────────── */
+.fund-header { margin: 4px 0 8px 0; }
+.fund-header-name {
+  font-family: var(--font-display);
+  font-size: 28px; font-weight: 700; line-height: 1.15;
+  letter-spacing: -0.01em; color: var(--text);
+  margin-bottom: 8px;
+}
+.fund-header-badges { margin-bottom: 4px; }
 
 /* ── Section card wrapper ──────────────────────────────────────── */
 .section-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: 8px;
   padding: 14px 16px;
   margin-bottom: 16px;
 }
@@ -140,22 +187,38 @@ section[data-testid="stSidebar"] [data-testid="stAlert"] {
 .badge-orange  { background: var(--orange);}
 .badge-red     { background: var(--red);   }
 .badge-gray    { background: #8F9BA8;      }
-.badge-outline { background: #FFFFFF; color: var(--text-mid); border: 1px solid var(--border); }
+.badge-outline { background: var(--bg-card); color: var(--text-mid); border: 1px solid var(--border); }
+
+/* ── Tabs (diepteanalyse) ──────────────────────────────────────── */
+.stTabs [data-baseweb="tab-list"] {
+  gap: 2px;
+  border-bottom: 1px solid var(--border);
+}
+.stTabs [data-baseweb="tab"] {
+  font-size: 13.5px;
+  padding: 8px 14px;
+  color: var(--text-mute);
+}
+.stTabs [aria-selected="true"] {
+  color: var(--accent) !important;
+  font-weight: 600;
+}
+.stTabs [data-baseweb="tab-highlight"] { background-color: var(--accent); }
 
 /* ── Streamlit metric (when used) — tighter ────────────────────── */
 [data-testid="stMetric"]       { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 10px 14px; }
 [data-testid="stMetricLabel"]  { font-size: 11px !important; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-mute) !important; }
-[data-testid="stMetricValue"]  { font-size: 22px !important; font-weight: 700 !important; color: var(--text) !important; }
+[data-testid="stMetricValue"]  { font-size: 22px !important; font-weight: 700 !important; color: var(--text) !important; font-family: var(--font-num) !important; }
 [data-testid="stMetricDelta"]  { font-size: 12px !important; }
 
 /* ── Dataframes ────────────────────────────────────────────────── */
-[data-testid="stDataFrame"]    { font-size: 12px; }
+[data-testid="stDataFrame"]    { font-size: 12px; font-variant-numeric: tabular-nums; }
 [data-testid="stDataFrame"] thead tr { background: var(--bg-table-hd); }
 
 /* ── Buttons / links inside main area ──────────────────────────── */
 .stButton > button {
   background: var(--bg-card); color: var(--text);
-  border: 1px solid var(--border); border-radius: 4px;
+  border: 1px solid var(--border); border-radius: 6px;
   padding: 6px 10px; font-size: 13px;
 }
 .stButton > button:hover { border-color: var(--accent); color: var(--accent); }
@@ -164,7 +227,7 @@ section[data-testid="stSidebar"] [data-testid="stAlert"] {
 [data-testid="stPlotlyChart"] {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: 8px;
   padding: 8px;
 }
 
@@ -179,12 +242,13 @@ section[data-testid="stSidebar"] [data-testid="stAlert"] {
     padding: 10px 12px;
     min-height: auto;
   }
-  .kpi-card .kpi-value { font-size: 20px; }
+  .kpi-card .kpi-value { font-size: 19px; }
   .kpi-card .kpi-label { font-size: 10px; }
 
   /* Headings tighter */
-  h1, .stMarkdown h1 { font-size: 19px !important; }
-  h2, .stMarkdown h2 { font-size: 16px !important; }
+  h1, .stMarkdown h1 { font-size: 21px !important; }
+  h2, .stMarkdown h2 { font-size: 17px !important; }
+  .fund-header-name { font-size: 22px; }
 
   /* Main padding tighter */
   .main .block-container { padding-top: 0.8rem !important; }

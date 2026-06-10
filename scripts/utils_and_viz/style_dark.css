@@ -1,0 +1,42 @@
+/* Dark-mode overrides — geladen NA style.css wanneer de kijker dark mode
+   draait (st.context.theme, Streamlit ≥1.46). Zelfde structuur, donkere
+   tokens: diep blauwgrijs i.p.v. zwart, opgelichte accenten. */
+
+:root {
+  --bg-page:      #0F1318;
+  --bg-card:      #171C24;
+  --bg-soft:      #1F2630;
+  --bg-table-hd:  #1F2630;
+  --border:       #2A323D;
+  --border-soft:  #232B35;
+  --text:         #E4E7EC;
+  --text-mid:     #C3CAD4;
+  --text-mute:    #9AA7B5;
+  --accent:       #9D8FD9;
+  --accent-soft:  #2A2540;
+  --green:        #6FBF8F;
+  --teal:         #5BB8AC;
+  --blue:         #6FA8DC;
+  --red:          #D97070;
+  --orange:       #E09A4C;
+}
+
+/* Streamlit's eigen chrome meekleuren */
+[class*="stApp"] { background: var(--bg-page) !important; }
+[data-testid="stHeader"] { background: var(--bg-page) !important; }
+
+/* Badges: gekleurde vlakken iets gedimd, tekst donker voor contrast */
+.badge { color: #11161D; }
+.badge-gray { background: #6B7684; color: #E4E7EC; }
+.badge-outline { background: var(--bg-card); color: var(--text-mid); border-color: var(--border); }
+
+/* Sidebar-alerts en inputs op donkere kaartkleur */
+section[data-testid="stSidebar"] [data-testid="stAlert"] {
+  background: var(--bg-soft) !important;
+  border-color: var(--border-soft) !important;
+}
+
+/* Dataframe-koppen */
+[data-testid="stDataFrame"] thead tr { background: var(--bg-table-hd); }
+
+/* Print blijft licht — geen overrides nodig (style.css print-blok wint) */

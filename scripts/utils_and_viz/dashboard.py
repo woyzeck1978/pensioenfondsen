@@ -43,11 +43,31 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-# --- VISUAL STYLE (inject style.css next to this file) ---
-_STYLE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "style.css")
-if os.path.exists(_STYLE_PATH):
-    with open(_STYLE_PATH) as _f:
-        st.markdown(f"<style>{_f.read()}</style>", unsafe_allow_html=True)
+# --- THEME DETECTION ---
+def _is_dark_theme() -> bool:
+    """True wanneer de kijker de app in dark mode draait.
+
+    st.context.theme bestaat pas sinds Streamlit 1.46; op oudere runtimes
+    (zoals de Python 3.9-deploy op de mini) valt dit terug op licht.
+    """
+    try:
+        return st.context.theme.type == "dark"
+    except Exception:
+        return False
+
+IS_DARK = _is_dark_theme()
+
+# --- VISUAL STYLE (inject style.css [+ style_dark.css] next to this file) ---
+_STYLE_DIR = os.path.dirname(os.path.abspath(__file__))
+_css_files = ["style.css", "style_dark.css"] if IS_DARK else ["style.css"]
+_css = ""
+for _name in _css_files:
+    _p = os.path.join(_STYLE_DIR, _name)
+    if os.path.exists(_p):
+        with open(_p) as _f:
+            _css += _f.read() + "\n"
+if _css:
+    st.markdown(f"<style>{_css}</style>", unsafe_allow_html=True)
 
 def kpi_card(label: str, value: str, sub: str = "", delta: str | None = None, delta_dir: str = "up") -> str:
     """Return HTML for a CSU-style KPI tile. Use inside a kpi-row grid."""
@@ -71,24 +91,71 @@ def badge(text: str, color: str = "gray") -> str:
     """Return HTML for a pill badge. color in {green,teal,blue,purple,orange,red,gray,outline}."""
     return f'<span class="badge badge-{color}">{_html.escape(text)}</span>'
 
-# Plotly defaults aligned with the CSU palette
-pio.templates["csu_light"] = pio.templates["simple_white"]
+# Plotly defaults aligned with the CSU palette (licht + donker)
+import copy as _copy
+
+_PLOT_FONT = ('"IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", '
+              '"Helvetica Neue", Arial, sans-serif')
+
+pio.templates["csu_light"] = _copy.deepcopy(pio.templates["simple_white"])
 pio.templates["csu_light"].layout.update(
-    font=dict(family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif",
-              color="#17202A", size=12),
+    font=dict(family=_PLOT_FONT, color="#17202A", size=12),
     colorway=["#6554A3", "#1F6FB2", "#17756B", "#2F7D57", "#C66B16", "#B13B3B", "#8F9BA8"],
     paper_bgcolor="#FFFFFF",
     plot_bgcolor="#FFFFFF",
     margin=dict(l=10, r=10, t=40, b=10),
     title=dict(font=dict(size=13, color="#5C6875")),
+    legend=dict(font=dict(size=11)),
 )
-pio.templates.default = "csu_light"
 
-# Process cross-page URL query parameters
-if "fund" in st.query_params:
-    st.session_state.selected_fund = st.query_params["fund"]
-    st.session_state.page = "Fund Deep-Dive"
-    st.query_params.clear()
+pio.templates["csu_dark"] = _copy.deepcopy(pio.templates["simple_white"])
+pio.templates["csu_dark"].layout.update(
+    font=dict(family=_PLOT_FONT, color="#E4E7EC", size=12),
+    colorway=["#9D8FD9", "#6FA8DC", "#5BB8AC", "#6FBF8F", "#E09A4C", "#D97070", "#9AA7B5"],
+    paper_bgcolor="#171C24",
+    plot_bgcolor="#171C24",
+    margin=dict(l=10, r=10, t=40, b=10),
+    title=dict(font=dict(size=13, color="#9AA7B5")),
+    legend=dict(font=dict(size=11)),
+    xaxis=dict(gridcolor="#2A323D", linecolor="#3A4452", zerolinecolor="#3A4452"),
+    yaxis=dict(gridcolor="#2A323D", linecolor="#3A4452", zerolinecolor="#3A4452"),
+)
+pio.templates.default = "csu_dark" if IS_DARK else "csu_light"
+
+# Vaste kleuren per fondscategorie — identiek op elke pagina, zodat 'Bedrijf'
+# overal dezelfde kleur heeft. Sleutels = funds.category in de DB.
+if IS_DARK:
+    CATEGORY_COLORS = {
+        "Bedrijf": "#6FA8DC", "Tak": "#9D8FD9", "APF": "#5BB8AC",
+        "Beroep": "#6FBF8F", "Verzekeraar": "#E09A4C", "PPI": "#9AA7B5",
+        "Algemeen Pensioenfonds (Kring)": "#5BB8AC",
+        "APF (AkzoNobel, Nouryon, Nobian, Salt)": "#5BB8AC",
+        "Onbekend": "#6B7684",
+    }
+else:
+    CATEGORY_COLORS = {
+        "Bedrijf": "#1F6FB2", "Tak": "#6554A3", "APF": "#17756B",
+        "Beroep": "#2F7D57", "Verzekeraar": "#C66B16", "PPI": "#8F9BA8",
+        "Algemeen Pensioenfonds (Kring)": "#17756B",
+        "APF (AkzoNobel, Nouryon, Nobian, Salt)": "#17756B",
+        "Onbekend": "#B8C0CA",
+    }
+
+# Badge-kleurnaam per categorie (voor de pill-badges in previews/vergelijking)
+CATEGORY_BADGE = {
+    "Tak": "purple", "Bedrijf": "blue", "Beroep": "green",
+    "Verzekeraar": "orange", "APF": "teal", "PPI": "gray",
+    "Algemeen Pensioenfonds (Kring)": "teal",
+    "APF (AkzoNobel, Nouryon, Nobian, Salt)": "teal",
+}
+
+GRID_LINE = "#2A323D" if IS_DARK else "#D9DEE5"
+MUTE_LINE = "#9AA7B5" if IS_DARK else "#5C6875"
+RED_LINE = "#D97070" if IS_DARK else "#B13B3B"
+ACCENT = "#9D8FD9" if IS_DARK else "#6554A3"
+GREEN_FILL = "#6FBF8F" if IS_DARK else "#2F7D57"
+ORANGE_FILL = "#E09A4C" if IS_DARK else "#C66B16"
+BLUE_FILL = "#6FA8DC" if IS_DARK else "#1F6FB2"
 
 # --- DATABASE CONNECTION ---
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -101,6 +168,7 @@ def load_data(query):
     return df
 
 # --- DATA FETCHING ---
+@st.cache_data(ttl=300)
 def get_all_funds():
     query = """
     SELECT 
@@ -115,6 +183,26 @@ def get_all_funds():
     LEFT JOIN fund_esg_metrics e ON f.id = e.fund_id
     """
     return load_data(query)
+
+@st.cache_data(ttl=3600)
+def get_dnb_sector_bdg():
+    """Sectorgemiddelde DNB-beleidsdekkingsgraad, laatste twee kwartalen.
+
+    Voedt het delta-pijltje op de KPI-card van het sectoroverzicht.
+    """
+    q = """
+    SELECT year, quarter, AVG(value) AS avg_bdg, COUNT(*) AS n
+    FROM dnb_quarterly_metrics
+    WHERE metric_name = 'Beleidsdekkingsgraad' AND value IS NOT NULL
+    GROUP BY year, quarter
+    ORDER BY year DESC, quarter DESC
+    LIMIT 2
+    """
+    try:
+        return load_data(q)
+    except Exception:
+        return pd.DataFrame()
+
 
 @st.cache_data(ttl=3600)
 def get_latest_news():
@@ -390,9 +478,6 @@ def get_fund_esg_reports(fund_id):
     return load_data(query)
 
 # --- MAIN APP LAYOUT ---
-st.title("🇳🇱 Dashboard Nederlandse Pensioenfondsen")
-st.markdown("Interactieve verkenning van de Nederlandse pensioensector (AUM, allocaties, ESG en WTP-transities).")
-
 # Retrieve core dataset
 df_funds = get_all_funds()
 # Layer manual corrections on top of the bron-DB at read time (Fase 0). The
@@ -402,9 +487,6 @@ if _LOCAL_STATE_OK:
     df_funds = local_state.apply_overrides(df_funds, id_col="id")
 
 # Session State Initialization
-if "page" not in st.session_state:
-    st.session_state.page = "Sector Overview"
-
 if "selected_fund" not in st.session_state:
     st.session_state.selected_fund = None
 
@@ -453,34 +535,34 @@ def _push_recent(fund_name: str | None) -> None:
     rf = [fund_name] + [n for n in rf if n != fund_name]
     st.session_state.recent_funds = rf[:5]
 
-pages = ["Sector Overview", "Fund Deep-Dive", "Fund Comparison", "Trends", "Equity Strategy Deep-Dive", "Asset Managers Exposure", "WTP Tracker", "Dekkingsgraad Analysis", "ESG & SFDR Tracker", "Industry News Feed", "Begrippenlijst"]
-# Self-hosted-only pages.
-if _TEXT2SQL_OK:
-    pages.append("Ask Data")
-if _LOCAL_STATE_OK:
-    pages.append("Datacuratie")
+# Niet-pensioenfondsen (vermogensbeheerders e.d.) — uitgesloten van
+# fonds-selectors en de globale zoeker.
+NON_FUNDS = ['APG', 'ASR', 'ASR PPI', 'Allianz', 'Allianz PPI', 'A.S. Watson Nederland']
 
-# NL-labels voor de zijbalk; interne keys (session_state.page) blijven Engels
-# om alle bestaande elif-vergelijkingen ongemoeid te laten.
-PAGE_LABELS_NL = {
-    "Sector Overview": "Sectoroverzicht",
-    "Fund Deep-Dive": "Fonds-diepteanalyse",
-    "Fund Comparison": "Fondsvergelijking",
-    "Trends": "Trends",
-    "Equity Strategy Deep-Dive": "Aandelenstrategie",
-    "Asset Managers Exposure": "Vermogensbeheerders",
-    "WTP Tracker": "WTP-tracker",
-    "Dekkingsgraad Analysis": "Dekkingsgraad-analyse",
-    "ESG & SFDR Tracker": "ESG- en SFDR-tracker",
-    "Industry News Feed": "Sectornieuws",
-    "Begrippenlijst": "Begrippenlijst",
-    "Ask Data": "Vraag het de data",
-    "Datacuratie": "Datacuratie",
-}
+# Cross-page navigatie: callbacks zetten een pending jump die net vóór
+# nav.run() (onderaan dit bestand) wordt afgehandeld met st.switch_page.
+# st.switch_page zelf mag niet vanuit een widget-callback worden aangeroepen.
+def _queue_fund_jump(fund_name: str) -> None:
+    st.session_state._jump_fund = fund_name
 
-# Sidebar Navigation — subtle, no loud titles
-st.sidebar.radio(" ", pages, key="page", label_visibility="collapsed",
-                 format_func=lambda k: PAGE_LABELS_NL.get(k, k))
+
+def _on_global_search():
+    sel = st.session_state.get("global_fund_search")
+    if sel:
+        _queue_fund_jump(sel)
+        st.session_state.global_fund_search = None  # reset voor volgende zoek
+
+
+# Globale fondszoeker — springt vanaf elke pagina naar de diepteanalyse
+st.sidebar.selectbox(
+    "Zoek fonds",
+    df_funds[~df_funds["name"].isin(NON_FUNDS)]["name"].sort_values().tolist(),
+    index=None,
+    key="global_fund_search",
+    on_change=_on_global_search,
+    placeholder="🔎 Spring naar fonds…",
+    label_visibility="collapsed",
+)
 
 st.sidebar.markdown("---")
 _dnb_count = 0
@@ -549,8 +631,7 @@ if st.session_state.recent_funds:
 
     def _jump_recent(name: str):
         def cb():
-            st.session_state.selected_fund = name
-            st.session_state.page = "Fund Deep-Dive"
+            _queue_fund_jump(name)
         return cb
 
     with st.sidebar.container():
@@ -570,19 +651,31 @@ if st.session_state.recent_funds:
 # ==========================================
 # PAGE 1: SECTOR OVERVIEW
 # ==========================================
-if st.session_state.page == "Sector Overview":
-    st.header("Sectoroverzicht")
+def page_sector_overview():
+    st.title("🇳🇱 Nederlandse pensioenfondsen")
+    st.markdown("Interactieve verkenning van de Nederlandse pensioensector — "
+                "AUM, dekkingsgraden, allocaties, ESG en de WTP-transitie.")
 
     valid_aum = df_funds.dropna(subset=['aum_euro_bn'])
     valid_ratio = df_funds.dropna(subset=['dekkingsgraad_pct'])
     largest_row = valid_aum.loc[valid_aum['aum_euro_bn'].idxmax()]
     pct_aum_coverage = len(valid_aum) / len(df_funds) * 100
 
+    # DNB-sectordelta voor het KPI-pijltje (laatste vs vorig kwartaal)
+    _bdg = get_dnb_sector_bdg()
+    _bdg_delta = None
+    _bdg_dir = "up"
+    if len(_bdg) == 2:
+        _d = float(_bdg['avg_bdg'].iloc[0] - _bdg['avg_bdg'].iloc[1])
+        _bdg_delta = f"{_d:+.1f} pp t.o.v. {int(_bdg['year'].iloc[1])}Q{int(_bdg['quarter'].iloc[1])}"
+        _bdg_dir = "up" if _d >= 0 else "down"
+
     render_kpi_row([
         kpi_card("Totaal gevolgd AUM", f"€{valid_aum['aum_euro_bn'].sum():,.1f} Bn",
                  sub=f"over {len(valid_aum)} fondsen ({pct_aum_coverage:.0f}%)"),
         kpi_card("Gem. dekkingsgraad", f"{valid_ratio['dekkingsgraad_pct'].mean():.1f}%",
-                 sub=f"door fondsen zelf gerapporteerd, {len(valid_ratio)} fondsen"),
+                 sub=f"{len(valid_ratio)} fondsen",
+                 delta=_bdg_delta, delta_dir=_bdg_dir),
         kpi_card("Grootste fonds", str(largest_row['name'])[:24],
                  sub=f"€{largest_row['aum_euro_bn']:,.1f} Bn"),
         kpi_card("Fondsen gevolgd", f"{len(df_funds)}",
@@ -649,18 +742,31 @@ if st.session_state.page == "Sector Overview":
         fig_scatter = px.scatter(
             df_funds.dropna(subset=['aum_euro_bn', 'dekkingsgraad_pct']),
             x="dekkingsgraad_pct", y="aum_euro_bn",
-            color="category", hover_name="name",
+            color="category", color_discrete_map=CATEGORY_COLORS,
+            hover_name="name",
             labels={"dekkingsgraad_pct": "Actuele dekkingsgraad (site %)", "aum_euro_bn": "AUM (miljard €)"},
             log_y=True,  # Log-schaal omdat ABP/PFZW de y-as anders volledig domineren
             title="Log(AUM) vs. actuele dekkingsgraad (site)"
         )
+        fig_scatter.update_layout(height=420)
         st.plotly_chart(fig_scatter, use_container_width=True)
 
     with c2:
         st.subheader("Marktaandeel per categorie")
-        market_share = df_funds.groupby('category')['aum_euro_bn'].sum().reset_index()
-        fig_pie = px.pie(market_share, values='aum_euro_bn', names='category', title="Verdeling totaal AUM")
-        st.plotly_chart(fig_pie, use_container_width=True)
+        tree_src = df_funds.dropna(subset=['aum_euro_bn']).copy()
+        tree_src['category'] = tree_src['category'].fillna('Onbekend')
+        fig_tree = px.treemap(
+            tree_src, path=[px.Constant("Sector"), 'category', 'name'],
+            values='aum_euro_bn',
+            color='category', color_discrete_map={**CATEGORY_COLORS, "(?)": GRID_LINE},
+            title="Totaal AUM per categorie → fonds (€ Bn)",
+        )
+        fig_tree.update_traces(
+            hovertemplate="<b>%{label}</b><br>€%{value:,.1f} Bn<extra></extra>",
+            marker=dict(cornerradius=3),
+        )
+        fig_tree.update_layout(height=420, margin=dict(l=4, r=4, t=40, b=4))
+        st.plotly_chart(fig_tree, use_container_width=True)
 
     st.divider()
     head_col, dl_col = st.columns([5, 1])
@@ -669,7 +775,7 @@ if st.session_state.page == "Sector Overview":
         st.markdown("Selecteer een rij voor een inline preview, of klik in de linkkolom om naar de diepteanalyse te gaan.")
 
     df_display = df_funds[['name', 'category', 'aum_euro_bn', 'dekkingsgraad_pct', 'equity_allocation_pct', 'uitvoerder']].copy()
-    df_display.insert(0, 'Profile Link', df_display['name'].apply(lambda x: f"/?fund={urllib.parse.quote_plus(x)}"))
+    df_display.insert(0, 'Profile Link', df_display['name'].apply(lambda x: f"/fonds?fund={urllib.parse.quote_plus(x)}"))
 
     # Excel-export van het huidige overzicht (zoals de gebruiker filtert/sorteert)
     with dl_col:
@@ -729,11 +835,7 @@ if st.session_state.page == "Sector Overview":
         fund_row = df_funds[df_funds['name'] == row['name']].iloc[0]
 
         cat = str(fund_row.get('category') or 'Onbekend')
-        cat_color = {
-            "Tak": "purple", "Bedrijf": "blue", "Beroep": "teal",
-            "Verzekeraar": "orange", "APF": "gray", "PPI": "outline",
-            "Algemeen Pensioenfonds (Kring)": "blue",
-        }.get(cat, "gray")
+        cat_color = CATEGORY_BADGE.get(cat, "gray")
 
         sfdr_html = badge("SFDR niet gevonden", "outline")
         if pd.notnull(fund_row.get('sfdr_article')):
@@ -765,13 +867,10 @@ if st.session_state.page == "Sector Overview":
                      f"{fund_row['equity_allocation_pct']:.1f}%" if pd.notnull(fund_row['equity_allocation_pct']) else "—"),
         ])
 
-        def _open_deep_dive():
-            st.session_state.selected_fund = str(row['name'])
-            st.session_state.page = "Fund Deep-Dive"
-
         b1, b2 = st.columns([1, 5])
         with b1:
-            st.button("Open Deep-Dive →", on_click=_open_deep_dive, key="open_dd_from_directory")
+            st.button("Open diepteanalyse →", on_click=_queue_fund_jump,
+                      args=(str(row['name']),), key="open_dd_from_directory")
         with b2:
             if pd.notnull(fund_row.get('website')) and fund_row['website']:
                 st.markdown(f"🌐 [{fund_row['website']}]({fund_row['website']})")
@@ -779,22 +878,21 @@ if st.session_state.page == "Sector Overview":
 # ==========================================
 # PAGE 2: FUND DEEP-DIVE
 # ==========================================
-elif st.session_state.page == "Fund Deep-Dive":
+def page_fund_deep_dive():
     st.header("Fondsprofiel — diepteanalyse")
-    st.markdown("Verken gedetailleerde metrics, historische rendementen en recent nieuws van Nederlandse pensioenfondsen.")
-    
+
     # Fund Selector (Exclude APG as it is an asset manager)
-    deep_dive_funds = df_funds[~df_funds['name'].isin(['APG', 'ASR', 'ASR PPI', 'Allianz', 'Allianz PPI', 'A.S. Watson Nederland'])]
+    deep_dive_funds = df_funds[~df_funds['name'].isin(NON_FUNDS)]
     fund_names = deep_dive_funds['name'].sort_values().tolist()
-    
+
     # Try to initialize the selectbox with the globally selected fund
     default_index = 0
     if st.session_state.selected_fund and st.session_state.selected_fund in fund_names:
         default_index = fund_names.index(st.session_state.selected_fund)
-        
+
     def update_selected_fund():
         st.session_state.selected_fund = st.session_state.fund_selector_ui
-        
+
     selected_fund_name = st.selectbox(
         "Zoek een pensioenfonds:",
         fund_names,
@@ -802,62 +900,85 @@ elif st.session_state.page == "Fund Deep-Dive":
         key="fund_selector_ui",
         on_change=update_selected_fund
     )
-    
-    if selected_fund_name:
-        _push_recent(selected_fund_name)
-        fund_data = df_funds[df_funds['name'] == selected_fund_name].iloc[0]
-        fund_id = fund_data['id']
-        
-        st.subheader(fund_data['name'])
-        
-        if 'description' in fund_data and pd.notnull(fund_data['description']) and fund_data['description'] != "":
-            st.info(fund_data['description'])
-            
-        link_col, watch_col, dl_col = st.columns([4, 1, 1])
-        with link_col:
-            if pd.notnull(fund_data['website']) and fund_data['website'] != "":
-                st.markdown(f"🌐 **Website:** [{fund_data['website']}]({fund_data['website']})")
-        with watch_col:
-            is_watched = fund_data['name'] in st.session_state.watchlist
-            st.button(
-                "★ Losmaken" if is_watched else "☆ Pin",
-                key=f"watch_toggle_{fund_id}",
-                on_click=_toggle_watch, args=(str(fund_data['name']),),
+
+    if not selected_fund_name:
+        return
+
+    _push_recent(selected_fund_name)
+    fund_data = df_funds[df_funds['name'] == selected_fund_name].iloc[0]
+    fund_id = fund_data['id']
+
+    # --- Fondsheader: naam + badges links, acties rechts ---
+    cat = str(fund_data.get('category') or 'Onbekend')
+    badges_html = badge(cat, CATEGORY_BADGE.get(cat, "gray"))
+    if pd.notnull(fund_data.get('sfdr_article')):
+        _a = str(int(fund_data['sfdr_article']))
+        badges_html += " " + badge(f"SFDR Art {_a}",
+                                   {"6": "gray", "8": "blue", "9": "green"}.get(_a, "purple"))
+    else:
+        badges_html += " " + badge("SFDR onbekend", "outline")
+    if pd.notnull(fund_data.get('uitvoerder')) and str(fund_data['uitvoerder']).strip():
+        badges_html += " " + badge(f"Uitvoerder: {fund_data['uitvoerder']}", "outline")
+
+    head_l, head_r = st.columns([4, 1.3])
+    with head_l:
+        st.markdown(
+            f'<div class="fund-header">'
+            f'<div class="fund-header-name">{_html.escape(str(fund_data["name"]))}</div>'
+            f'<div class="fund-header-badges">{badges_html}</div>'
+            f'</div>',
+            unsafe_allow_html=True,
+        )
+        if pd.notnull(fund_data['website']) and fund_data['website'] != "":
+            st.markdown(f"🌐 [{fund_data['website']}]({fund_data['website']})")
+    with head_r:
+        is_watched = fund_data['name'] in st.session_state.watchlist
+        st.button(
+            "★ Losmaken" if is_watched else "☆ Pin op watchlist",
+            key=f"watch_toggle_{fund_id}",
+            on_click=_toggle_watch, args=(str(fund_data['name']),),
+            use_container_width=True,
+            help=("Verwijder van watchlist" if is_watched
+                  else "Voeg toe aan watchlist (max 10)"),
+        )
+        try:
+            _hist = get_metrics_history(int(fund_id))
+            pdf_bytes = build_fund_factsheet_pdf(fund_data, _hist)
+            _safe_name = re.sub(r'[^A-Za-z0-9]+', '_', str(fund_data['name'])).strip('_')
+            st.download_button(
+                label="📄 PDF Factsheet",
+                data=pdf_bytes,
+                file_name=f"factsheet_{fund_id}_{_safe_name}.pdf",
+                mime="application/pdf",
                 use_container_width=True,
-                help=("Verwijder van watchlist" if is_watched
-                      else "Voeg toe aan watchlist (max 10)"),
             )
-        with dl_col:
-            try:
-                _hist = get_metrics_history(int(fund_id))
-                pdf_bytes = build_fund_factsheet_pdf(fund_data, _hist)
-                _safe_name = re.sub(r'[^A-Za-z0-9]+', '_', str(fund_data['name'])).strip('_')
-                st.download_button(
-                    label="📄 PDF Factsheet",
-                    data=pdf_bytes,
-                    file_name=f"factsheet_{fund_id}_{_safe_name}.pdf",
-                    mime="application/pdf",
-                    use_container_width=True,
-                )
-            except Exception as e:
-                st.caption(f"PDF niet beschikbaar ({e})")
+        except Exception as e:
+            st.caption(f"PDF niet beschikbaar ({e})")
 
-        # Investment Beliefs verplaatst naar ESG-sectie
-        render_kpi_row([
-            kpi_card("AUM",
-                     f"€{fund_data['aum_euro_bn']:,.1f} Bn" if pd.notnull(fund_data['aum_euro_bn']) else "—",
-                     sub=str(fund_data.get('category') or '')),
-            kpi_card("Actuele dekkingsgraad",
-                     f"{fund_data['dekkingsgraad_pct']:.1f}%" if pd.notnull(fund_data['dekkingsgraad_pct']) else "—",
-                     sub="door fonds zelf gerapporteerd"),
-            kpi_card("Aandelenallocatie",
-                     f"{fund_data['equity_allocation_pct']:.1f}%" if pd.notnull(fund_data['equity_allocation_pct']) else "—",
-                     sub="van totale portefeuille"),
-            kpi_card("Deelnemers",
-                     f"{fund_data['deelnemers_totaal']:,.0f}".replace(",", ".") if pd.notnull(fund_data['deelnemers_totaal']) else "—",
-                     sub="actief + slapers + gepensioneerd"),
-        ])
+    if 'description' in fund_data and pd.notnull(fund_data['description']) and fund_data['description'] != "":
+        st.info(fund_data['description'])
 
+    render_kpi_row([
+        kpi_card("AUM",
+                 f"€{fund_data['aum_euro_bn']:,.1f} Bn" if pd.notnull(fund_data['aum_euro_bn']) else "—",
+                 sub=str(fund_data.get('category') or '')),
+        kpi_card("Actuele dekkingsgraad",
+                 f"{fund_data['dekkingsgraad_pct']:.1f}%" if pd.notnull(fund_data['dekkingsgraad_pct']) else "—",
+                 sub="door fonds zelf gerapporteerd"),
+        kpi_card("Aandelenallocatie",
+                 f"{fund_data['equity_allocation_pct']:.1f}%" if pd.notnull(fund_data['equity_allocation_pct']) else "—",
+                 sub="van totale portefeuille"),
+        kpi_card("Deelnemers",
+                 f"{fund_data['deelnemers_totaal']:,.0f}".replace(",", ".") if pd.notnull(fund_data['deelnemers_totaal']) else "—",
+                 sub="actief + slapers + gepensioneerd"),
+    ])
+
+    tab_kern, tab_hist, tab_esg, tab_docs = st.tabs([
+        "📊 Kerncijfers", "📈 Historie", "🌱 ESG & duurzaamheid", "📄 Documenten & nieuws",
+    ])
+
+    # ---------------- TAB 1: KERNCIJFERS ----------------
+    with tab_kern:
         # --- Latest annual report (FY) — surfaces fy_annual_metrics when present ---
         fy_df = get_fund_annual_metrics(fund_id)
         if not fy_df.empty:
@@ -958,170 +1079,196 @@ elif st.session_state.page == "Fund Deep-Dive":
                         f"Bron: `{a['source_pdf']}` · gegenereerd {a['generated_at']}"
                     )
 
-        st.divider()
-
-        col_main, col_side = st.columns([2, 1])
-        
-        with col_main:
-            st.markdown("### Historisch verloop")
-            history_df = get_metrics_history(fund_id)
-            if not history_df.empty:
-                # Numeriek maken om Plotly Express wide-form error te vermijden
-                for col in ["beleidsdekkingsgraad_pct", "beleggingsrendement_pct"]:
-                    if col in history_df.columns:
-                        history_df[col] = pd.to_numeric(history_df[col], errors='coerce')
-
-                show_peer = st.toggle(
-                    "Vergelijk met categorie-gemiddelde",
-                    value=False,
-                    help=f"Toon het gemiddelde over alle {fund_data.get('category') or 'overige'} fondsen op dezelfde grafiek.",
+        # --- Deelnemers: donut + breakdown ---
+        deel_l, deel_r = st.columns([1, 1])
+        with deel_l:
+            st.markdown("##### Deelnemersopbouw")
+            _parts = [
+                ("Actief", fund_data.get('deelnemers_actief'), GREEN_FILL),
+                ("Slapers", fund_data.get('deelnemers_slapers'), ORANGE_FILL),
+                ("Gepensioneerd", fund_data.get('deelnemers_gepensioneerd'), ACCENT),
+            ]
+            _known = [(lbl, float(v), c) for lbl, v, c in _parts if pd.notnull(v) and v > 0]
+            if _known:
+                _ddf = pd.DataFrame(_known, columns=['Groep', 'Aantal', 'Kleur'])
+                fig_deel = px.pie(
+                    _ddf, names='Groep', values='Aantal', hole=0.58,
+                    color='Groep',
+                    color_discrete_map={lbl: c for lbl, _, c in _known},
                 )
-
-                fig_line = px.line(history_df, x="year", y=["beleidsdekkingsgraad_pct", "beleggingsrendement_pct"],
-                                   labels={"value": "Percentage (%)", "year": "Jaarverslag", "variable": "Metric"},
-                                   title="Meerjarenoverzicht: dekkingsgraad & rendement (jaarrapportages)")
-                fig_line.update_xaxes(dtick=1, tickformat="d")
-
-                if show_peer:
-                    peer_df = get_peer_history(fund_data.get('category'), int(fund_id))
-                    if not peer_df.empty:
-                        # Add peer averages as dashed lines on the same axis
-                        fig_line.add_scatter(
-                            x=peer_df['year'], y=peer_df['peer_beleidsdg'],
-                            mode='lines+markers', name='peer beleidsdg',
-                            line=dict(dash='dot', color='#8F9BA8'),
-                        )
-                        fig_line.add_scatter(
-                            x=peer_df['year'], y=peer_df['peer_rendement'],
-                            mode='lines+markers', name='peer rendement',
-                            line=dict(dash='dot', color='#C66B16'),
-                        )
-                        cat = fund_data.get('category') or 'Unknown'
-                        peer_n = int(peer_df['peer_count'].max()) if not peer_df.empty else 0
-                        st.caption(f"Peer-overlay: gemiddelde van **{peer_n}** fondsen in categorie '{cat}' (exclusief dit fonds).")
-                    else:
-                        st.caption("Geen peer-data beschikbaar voor deze categorie.")
-
-                st.plotly_chart(fig_line, use_container_width=True)
-
-                # --- Indexatie vs CPI ---
-                idx_df = history_df[['year', 'indexatieverlening_pct', 'cpi_pct']].dropna(how='all', subset=['indexatieverlening_pct', 'cpi_pct']).copy()
-                if idx_df['indexatieverlening_pct'].notna().any():
-                    st.markdown("##### Indexatie vs CPI")
-                    idx_df = idx_df.sort_values('year')
-                    fig_idx = px.bar(
-                        idx_df, x='year', y='indexatieverlening_pct',
-                        labels={'indexatieverlening_pct': 'Toeslag (%)', 'year': 'Jaar'},
+                fig_deel.update_traces(
+                    textinfo='percent',
+                    hovertemplate="<b>%{label}</b><br>%{value:,.0f} deelnemers<extra></extra>",
+                )
+                _tot = fund_data.get('deelnemers_totaal')
+                if pd.notnull(_tot):
+                    fig_deel.add_annotation(
+                        text=f"<b>{_tot:,.0f}</b><br>totaal".replace(",", "."),
+                        showarrow=False, font=dict(size=13),
                     )
-                    fig_idx.update_traces(marker_color='#2F7D57', name='Toeslag', showlegend=True)
-                    # CPI overlay as line
-                    cpi_line = idx_df.dropna(subset=['cpi_pct'])
-                    if not cpi_line.empty:
-                        fig_idx.add_scatter(
-                            x=cpi_line['year'], y=cpi_line['cpi_pct'],
-                            mode='lines+markers', name='CPI',
-                            line=dict(color='#B13B3B', width=2),
-                        )
-                    fig_idx.update_layout(height=300, showlegend=True)
-                    st.plotly_chart(fig_idx, use_container_width=True)
-
-                    # Cumulative koopkracht: (∏(1+indexatie) / ∏(1+CPI) - 1) ×100
-                    cum = idx_df.dropna(subset=['indexatieverlening_pct', 'cpi_pct']).sort_values('year').copy()
-                    if len(cum) >= 2:
-                        prod_idx = (1 + cum['indexatieverlening_pct']/100).prod()
-                        prod_cpi = (1 + cum['cpi_pct']/100).prod()
-                        delta_pct = (prod_idx / prod_cpi - 1) * 100
-                        n_yrs = len(cum)
-                        label = "koopkracht behouden" if delta_pct >= 0 else "koopkracht verloren"
-                        st.caption(
-                            f"Cumulatief over **{n_yrs} jaar** ({int(cum['year'].min())}–{int(cum['year'].max())}): "
-                            f"**{delta_pct:+.1f}%** {label} t.o.v. CPI."
-                        )
-
-                # --- Asset allocation evolutie ---
-                aa_df = history_df[['year', 'zakelijke_waarden_pct', 'rente_afdekking_pct']].dropna(
-                    how='all', subset=['zakelijke_waarden_pct', 'rente_afdekking_pct']
-                ).copy()
-                if not aa_df.empty:
-                    st.markdown("##### Beleggingsprofiel & rente-afdekking")
-                    aa_df = aa_df.sort_values('year')
-                    fig_aa = px.line(
-                        aa_df, x='year',
-                        y=[c for c in ['zakelijke_waarden_pct', 'rente_afdekking_pct'] if c in aa_df.columns],
-                        markers=True,
-                        labels={'value': '%', 'year': 'Jaar', 'variable': 'Metric'},
-                    )
-                    fig_aa.update_layout(height=300)
-                    st.plotly_chart(fig_aa, use_container_width=True)
-
-                st.markdown("#### Meerjarenoverzicht (Jaarrapportages)")
-                
-                rename_map = {
-                    'aum_euro_bn': 'Belegd vermogen (€ mrd)',
-                    'economische_dekkingsgraad_pct': 'Actuele dekkingsgraad',
-                    'nominale_dekkingsgraad_pct': 'Nominale dekkingsgraad',
-                    'beleidsdekkingsgraad_pct': 'Beleidsdekkingsgraad',
-                    'vereiste_dekkingsgraad_pct': 'Vereiste dekkingsgraad',
-                    'reele_dekkingsgraad_pct': 'Reële dekkingsgraad',
-                    'beleggingsrendement_pct': 'Totaal rendement',
-                    'zakelijke_waarden_pct': '% Zakelijke waarden',
-                    'rente_afdekking_pct': '% Renteafdekking',
-                    'rente_afdekking_rendement_pct': 'Rendement renteafdekking',
-                    'indexatieverlening_pct': 'Indexatie (toeslag)',
-                    'cpi_pct': 'CPI (Prijsinflatie)',
-                    'deelnemers_actief': 'Actieve deelnemers',
-                    'deelnemers_slapers': 'Gewezen deelnemers',
-                    'deelnemers_pensioengerechtigd': 'Pensioengerechtigden',
-                    'deelnemers_totaal': 'Totaal deelnemers'
-                }
-                
-                table_df = history_df.rename(columns=rename_map)
-                
-                # Group by year to handle any duplicate database entries for the same year
-                table_df = table_df.groupby('year').last().T
-                table_df = table_df[sorted(table_df.columns, reverse=True)]
-                
-                for row_name in table_df.index:
-                    is_pct = any(kw in str(row_name).lower() for kw in ['dekkingsgraad', 'rendement', 'indexatie', 'cpi'])
-                    for col in table_df.columns:
-                        val = table_df.at[row_name, col]
-                        if pd.notnull(val):
-                            if is_pct:
-                                table_df.at[row_name, col] = f"{val:.1f}%"
-                            elif 'vermogen' in str(row_name).lower():
-                                table_df.at[row_name, col] = f"€{val:,.2f} mrd".replace('.', 'X').replace(',', '.').replace('X', ',')
-                            else:
-                                table_df.at[row_name, col] = f"{int(float(val)):,}".replace(',', '.')
-                        else:
-                            table_df.at[row_name, col] = "-"
-                    
-                table_df.columns = [str(int(c)) for c in table_df.columns]
-                
-                styled_table = table_df.style.set_properties(subset=table_df.columns, **{'text-align': 'center'})
-                
-                st.dataframe(styled_table, use_container_width=True)
+                fig_deel.update_layout(height=280, showlegend=True,
+                                       margin=dict(l=10, r=10, t=10, b=10))
+                st.plotly_chart(fig_deel, use_container_width=True)
             else:
-                st.info("Geen historische metrics beschikbaar voor dit fonds.")
-
-            st.markdown("### Recente nieuwsartikelen")
-            news_df = get_fund_news(fund_id)
-            if not news_df.empty:
-                for _, row in news_df.head(5).iterrows():
-                    st.markdown(f"**{row['published_date']}** - [{row['title']}]({row['url']})")
-            else:
-                st.info("Geen recente nieuwsartikelen gescraped.")
-
-        with col_side:
-            st.markdown("### Kerngegevens")
+                st.info("Geen deelnemers-uitsplitsing beschikbaar.")
+        with deel_r:
+            st.markdown("##### Kerngegevens")
             if pd.notnull(fund_data['deelnemers_totaal']):
                 st.markdown(f"**Totaal deelnemers:** {fund_data['deelnemers_totaal']:,.0f}")
                 st.markdown(f"- **Actief:** {fund_data['deelnemers_actief']:,.0f}" if pd.notnull(fund_data['deelnemers_actief']) else "- **Actief:** n.b.")
                 st.markdown(f"- **Slapers:** {fund_data['deelnemers_slapers']:,.0f}" if pd.notnull(fund_data['deelnemers_slapers']) else "- **Slapers:** n.b.")
                 st.markdown(f"- **Gepensioneerden:** {fund_data['deelnemers_gepensioneerd']:,.0f}" if pd.notnull(fund_data['deelnemers_gepensioneerd']) else "- **Gepensioneerden:** n.b.")
-
-            st.markdown("### Uitvoering & ESG")
             st.markdown(f"**Uitvoerder:** {fund_data['uitvoerder'] if pd.notnull(fund_data['uitvoerder']) else 'Onbekend'}")
+            if pd.notnull(fund_data['beleidsdekkingsgraad_pct']):
+                st.markdown(f"**Beleidsdekkingsgraad:** {fund_data['beleidsdekkingsgraad_pct']:.1f}%")
 
+    # ---------------- TAB 2: HISTORIE ----------------
+    with tab_hist:
+        history_df = get_metrics_history(fund_id)
+        if not history_df.empty:
+            # Numeriek maken om Plotly Express wide-form error te vermijden
+            for col in ["beleidsdekkingsgraad_pct", "beleggingsrendement_pct"]:
+                if col in history_df.columns:
+                    history_df[col] = pd.to_numeric(history_df[col], errors='coerce')
+
+            show_peer = st.toggle(
+                "Vergelijk met categorie-gemiddelde",
+                value=False,
+                help=f"Toon het gemiddelde over alle {fund_data.get('category') or 'overige'} fondsen op dezelfde grafiek.",
+            )
+
+            fig_line = px.line(history_df, x="year", y=["beleidsdekkingsgraad_pct", "beleggingsrendement_pct"],
+                               labels={"value": "Percentage (%)", "year": "Jaarverslag", "variable": "Metric"},
+                               title="Meerjarenoverzicht: dekkingsgraad & rendement (jaarrapportages)")
+            fig_line.update_xaxes(dtick=1, tickformat="d")
+
+            if show_peer:
+                peer_df = get_peer_history(fund_data.get('category'), int(fund_id))
+                if not peer_df.empty:
+                    # Add peer averages as dashed lines on the same axis
+                    fig_line.add_scatter(
+                        x=peer_df['year'], y=peer_df['peer_beleidsdg'],
+                        mode='lines+markers', name='peer beleidsdg',
+                        line=dict(dash='dot', color=MUTE_LINE),
+                    )
+                    fig_line.add_scatter(
+                        x=peer_df['year'], y=peer_df['peer_rendement'],
+                        mode='lines+markers', name='peer rendement',
+                        line=dict(dash='dot', color=ORANGE_FILL),
+                    )
+                    cat_p = fund_data.get('category') or 'Unknown'
+                    peer_n = int(peer_df['peer_count'].max()) if not peer_df.empty else 0
+                    st.caption(f"Peer-overlay: gemiddelde van **{peer_n}** fondsen in categorie '{cat_p}' (exclusief dit fonds).")
+                else:
+                    st.caption("Geen peer-data beschikbaar voor deze categorie.")
+
+            st.plotly_chart(fig_line, use_container_width=True)
+
+            # --- Indexatie vs CPI ---
+            idx_df = history_df[['year', 'indexatieverlening_pct', 'cpi_pct']].dropna(how='all', subset=['indexatieverlening_pct', 'cpi_pct']).copy()
+            if idx_df['indexatieverlening_pct'].notna().any():
+                st.markdown("##### Indexatie vs CPI")
+                idx_df = idx_df.sort_values('year')
+                fig_idx = px.bar(
+                    idx_df, x='year', y='indexatieverlening_pct',
+                    labels={'indexatieverlening_pct': 'Toeslag (%)', 'year': 'Jaar'},
+                )
+                fig_idx.update_traces(marker_color=GREEN_FILL, name='Toeslag', showlegend=True)
+                # CPI overlay as line
+                cpi_line = idx_df.dropna(subset=['cpi_pct'])
+                if not cpi_line.empty:
+                    fig_idx.add_scatter(
+                        x=cpi_line['year'], y=cpi_line['cpi_pct'],
+                        mode='lines+markers', name='CPI',
+                        line=dict(color=RED_LINE, width=2),
+                    )
+                fig_idx.update_layout(height=300, showlegend=True)
+                st.plotly_chart(fig_idx, use_container_width=True)
+
+                # Cumulative koopkracht: (∏(1+indexatie) / ∏(1+CPI) - 1) ×100
+                cum = idx_df.dropna(subset=['indexatieverlening_pct', 'cpi_pct']).sort_values('year').copy()
+                if len(cum) >= 2:
+                    prod_idx = (1 + cum['indexatieverlening_pct']/100).prod()
+                    prod_cpi = (1 + cum['cpi_pct']/100).prod()
+                    delta_pct = (prod_idx / prod_cpi - 1) * 100
+                    n_yrs = len(cum)
+                    label = "koopkracht behouden" if delta_pct >= 0 else "koopkracht verloren"
+                    st.caption(
+                        f"Cumulatief over **{n_yrs} jaar** ({int(cum['year'].min())}–{int(cum['year'].max())}): "
+                        f"**{delta_pct:+.1f}%** {label} t.o.v. CPI."
+                    )
+
+            # --- Asset allocation evolutie ---
+            aa_df = history_df[['year', 'zakelijke_waarden_pct', 'rente_afdekking_pct']].dropna(
+                how='all', subset=['zakelijke_waarden_pct', 'rente_afdekking_pct']
+            ).copy()
+            if not aa_df.empty:
+                st.markdown("##### Beleggingsprofiel & rente-afdekking")
+                aa_df = aa_df.sort_values('year')
+                fig_aa = px.line(
+                    aa_df, x='year',
+                    y=[c for c in ['zakelijke_waarden_pct', 'rente_afdekking_pct'] if c in aa_df.columns],
+                    markers=True,
+                    labels={'value': '%', 'year': 'Jaar', 'variable': 'Metric'},
+                )
+                fig_aa.update_layout(height=300)
+                st.plotly_chart(fig_aa, use_container_width=True)
+
+            st.markdown("#### Meerjarenoverzicht (Jaarrapportages)")
+
+            rename_map = {
+                'aum_euro_bn': 'Belegd vermogen (€ mrd)',
+                'economische_dekkingsgraad_pct': 'Actuele dekkingsgraad',
+                'nominale_dekkingsgraad_pct': 'Nominale dekkingsgraad',
+                'beleidsdekkingsgraad_pct': 'Beleidsdekkingsgraad',
+                'vereiste_dekkingsgraad_pct': 'Vereiste dekkingsgraad',
+                'reele_dekkingsgraad_pct': 'Reële dekkingsgraad',
+                'beleggingsrendement_pct': 'Totaal rendement',
+                'zakelijke_waarden_pct': '% Zakelijke waarden',
+                'rente_afdekking_pct': '% Renteafdekking',
+                'rente_afdekking_rendement_pct': 'Rendement renteafdekking',
+                'indexatieverlening_pct': 'Indexatie (toeslag)',
+                'cpi_pct': 'CPI (Prijsinflatie)',
+                'deelnemers_actief': 'Actieve deelnemers',
+                'deelnemers_slapers': 'Gewezen deelnemers',
+                'deelnemers_pensioengerechtigd': 'Pensioengerechtigden',
+                'deelnemers_totaal': 'Totaal deelnemers'
+            }
+
+            table_df = history_df.rename(columns=rename_map)
+
+            # Group by year to handle any duplicate database entries for the same year
+            table_df = table_df.groupby('year').last().T
+            table_df = table_df[sorted(table_df.columns, reverse=True)]
+            table_df = table_df.astype(object)  # cellen worden hieronder strings
+
+            for row_name in table_df.index:
+                is_pct = any(kw in str(row_name).lower() for kw in ['dekkingsgraad', 'rendement', 'indexatie', 'cpi'])
+                for col in table_df.columns:
+                    val = table_df.at[row_name, col]
+                    if pd.notnull(val):
+                        if is_pct:
+                            table_df.at[row_name, col] = f"{val:.1f}%"
+                        elif 'vermogen' in str(row_name).lower():
+                            table_df.at[row_name, col] = f"€{val:,.2f} mrd".replace('.', 'X').replace(',', '.').replace('X', ',')
+                        else:
+                            table_df.at[row_name, col] = f"{int(float(val)):,}".replace(',', '.')
+                    else:
+                        table_df.at[row_name, col] = "-"
+
+            table_df.columns = [str(int(c)) for c in table_df.columns]
+
+            styled_table = table_df.style.set_properties(subset=table_df.columns, **{'text-align': 'center'})
+
+            st.dataframe(styled_table, use_container_width=True)
+        else:
+            st.info("Geen historische metrics beschikbaar voor dit fonds.")
+
+    # ---------------- TAB 3: ESG & DUURZAAMHEID ----------------
+    with tab_esg:
+        esg_l, esg_r = st.columns([1, 1])
+        with esg_l:
+            st.markdown("##### SFDR & EU-taxonomie")
             # Toon geëxtraheerde SFDR-metrics indien beschikbaar
             if pd.notnull(fund_data['sfdr_article']):
                 article_num = str(int(fund_data['sfdr_article']))
@@ -1133,46 +1280,58 @@ elif st.session_state.page == "Fund Deep-Dive":
 
             st.markdown(f"**SFDR-artikel (2024):** {article_html}", unsafe_allow_html=True)
             st.markdown(f"**EU-taxonomie %:** {tax_pct}")
-
             st.markdown(f"**Gerapporteerde SFDR-classificatie:** {fund_data['sfdr_classification'] if pd.notnull(fund_data['sfdr_classification']) else 'Niet vermeld'}")
             st.markdown(f"**CO₂-doelstelling:** {fund_data['co2_reduction_goal'] if pd.notnull(fund_data['co2_reduction_goal']) else 'Niet vermeld'}")
-
-            st.markdown("### Aandelenportefeuille-beheerders")
-            managers_df = get_fund_managers(fund_id)
-            if not managers_df.empty:
-                for mgr in managers_df['manager'].tolist():
-                    st.markdown(f"- {mgr}")
-            st.markdown("### Historische jaarverslagen")
-            reports_df = get_fund_reports(fund_id)
-            if not reports_df.empty:
-                for _, row in reports_df.iterrows():
-                    st.markdown(f"- [{row['title']}]({row['url']})")
-            else:
-                st.write("Geen jaarverslagen gevonden in de database.")
-
-            st.markdown("### ESG- en duurzaamheidsrapporten")
+        with esg_r:
+            st.markdown("##### ESG- en duurzaamheidsrapporten")
             esg_reports_df = get_fund_esg_reports(fund_id)
             if not esg_reports_df.empty:
                 for _, row in esg_reports_df.iterrows():
                     st.markdown(f"- [{row['title']}]({row['url']})")
             else:
-                st.write("Geen specifieke duurzaamheidsrapporten gevonden.")
-                
-            if 'investment_beliefs' in fund_data and pd.notnull(fund_data['investment_beliefs']) and fund_data['investment_beliefs'] != "":
-                st.markdown(f"#### Investment Beliefs\n> {fund_data['investment_beliefs']}")
+                st.caption("Geen specifieke duurzaamheidsrapporten gevonden.")
+
+        if 'investment_beliefs' in fund_data and pd.notnull(fund_data['investment_beliefs']) and fund_data['investment_beliefs'] != "":
+            st.markdown(f"##### Investment Beliefs\n> {fund_data['investment_beliefs']}")
+
+    # ---------------- TAB 4: DOCUMENTEN & NIEUWS ----------------
+    with tab_docs:
+        doc_l, doc_r = st.columns([1, 1])
+        with doc_l:
+            st.markdown("##### Historische jaarverslagen")
+            reports_df = get_fund_reports(fund_id)
+            if not reports_df.empty:
+                for _, row in reports_df.iterrows():
+                    st.markdown(f"- [{row['title']}]({row['url']})")
+            else:
+                st.caption("Geen jaarverslagen gevonden in de database.")
+
+            st.markdown("##### Aandelenportefeuille-beheerders")
+            managers_df = get_fund_managers(fund_id)
+            if not managers_df.empty:
+                for mgr in managers_df['manager'].tolist():
+                    st.markdown(f"- {mgr}")
+            else:
+                st.caption("Geen externe beheerders bekend.")
+        with doc_r:
+            st.markdown("##### Recente nieuwsartikelen")
+            news_df = get_fund_news(fund_id)
+            if not news_df.empty:
+                for _, row in news_df.head(8).iterrows():
+                    st.markdown(f"**{row['published_date']}** — [{row['title']}]({row['url']})")
+            else:
+                st.caption("Geen recente nieuwsartikelen gescraped.")
 
 # ==========================================
 # PAGE 2C: FUND COMPARISON (side-by-side, up to 3 funds)
 # ==========================================
-elif st.session_state.page == "Fund Comparison":
+def page_fund_comparison():
     st.header("Fondsvergelijking")
     st.markdown(
         "Selecteer 2 of 3 fondsen om de kerncijfers en historische ontwikkeling naast elkaar te zien."
     )
 
-    comparable = df_funds[~df_funds['name'].isin(
-        ['APG', 'ASR', 'ASR PPI', 'Allianz', 'Allianz PPI', 'A.S. Watson Nederland']
-    )]
+    comparable = df_funds[~df_funds['name'].isin(NON_FUNDS)]
     fund_options = comparable['name'].sort_values().tolist()
 
     selected = st.multiselect(
@@ -1197,11 +1356,7 @@ elif st.session_state.page == "Fund Comparison":
         for name in selected:
             row = snap.loc[name]
             cat = str(row.get('category') or 'Onbekend')
-            cat_color = {
-                "Tak": "purple", "Bedrijf": "blue", "Beroep": "teal",
-                "Verzekeraar": "orange", "APF": "gray", "PPI": "outline",
-                "Algemeen Pensioenfonds (Kring)": "blue",
-            }.get(cat, "gray")
+            cat_color = CATEGORY_BADGE.get(cat, "gray")
             badge_html = badge(cat, cat_color)
             if pd.notnull(row.get('sfdr_article')):
                 a = str(int(row['sfdr_article']))
@@ -1247,7 +1402,7 @@ elif st.session_state.page == "Fund Comparison":
                 x='year', y='beleidsdekkingsgraad_pct', color='fund',
                 markers=True, labels={'beleidsdekkingsgraad_pct': 'Beleidsdekkingsgraad (%)', 'year': 'Jaar'},
             )
-            fig_dekk.add_hline(y=100, line_dash='dot', line_color='#B13B3B',
+            fig_dekk.add_hline(y=100, line_dash='dot', line_color=RED_LINE,
                                annotation_text='100% minimum', annotation_position='bottom right')
             st.plotly_chart(fig_dekk, use_container_width=True)
 
@@ -1269,7 +1424,7 @@ elif st.session_state.page == "Fund Comparison":
                         barmode='group',
                         labels={'beleggingsrendement_pct': 'Rendement (%)', 'year': 'Jaar'},
                     )
-                    fig_rend.add_hline(y=0, line_color='#5C6875')
+                    fig_rend.add_hline(y=0, line_color=MUTE_LINE)
                     st.plotly_chart(fig_rend, use_container_width=True)
                 else:
                     st.info("Geen rendement-data beschikbaar voor deze selectie.")
@@ -1292,7 +1447,7 @@ elif st.session_state.page == "Fund Comparison":
 # ==========================================
 # PAGE 2D: TRENDS — biggest movers
 # ==========================================
-elif st.session_state.page == "Trends":
+def page_trends():
     st.header("Trends — Grootste mutaties")
     st.markdown(
         "Fondsen met de grootste verandering in beleidsdekkingsgraad, AUM "
@@ -1300,13 +1455,17 @@ elif st.session_state.page == "Trends":
         "afgelopen jaar het sterkst is bewogen."
     )
 
-    window = st.radio(
-        "Tijdvenster",
-        options=[1, 4, 8, 12],
-        format_func=lambda q: {1: "1 kwartaal", 4: "1 jaar (4Q)", 8: "2 jaar", 12: "3 jaar"}[q],
-        index=1,
-        horizontal=True,
-    )
+    _window_labels = {1: "1 kwartaal", 4: "1 jaar (4Q)", 8: "2 jaar", 12: "3 jaar"}
+    if hasattr(st, "segmented_control"):
+        window = st.segmented_control(
+            "Tijdvenster", options=[1, 4, 8, 12],
+            format_func=lambda q: _window_labels[q], default=4,
+        ) or 4
+    else:  # fallback voor oudere Streamlit (Python 3.9-deploy)
+        window = st.radio(
+            "Tijdvenster", options=[1, 4, 8, 12],
+            format_func=lambda q: _window_labels[q], index=1, horizontal=True,
+        )
 
     # Latest period in DNB data
     latest = load_data("""
@@ -1428,7 +1587,7 @@ elif st.session_state.page == "Trends":
 # ==========================================
 # PAGE 2B: EQUITY STRATEGY DEEP-DIVE
 # ==========================================
-elif st.session_state.page == "Equity Strategy Deep-Dive":
+def page_equity_strategy():
     st.header("📈 Aandelenstrategie: mid-market (1–5 Bn)")
     st.markdown("Overzicht van de aandelenbeleggingen, strategie-notities en externe beheerders voor middelgrote pensioenfondsen (1 tot 5 miljard AUM).")
 
@@ -1500,7 +1659,7 @@ elif st.session_state.page == "Equity Strategy Deep-Dive":
 # ==========================================
 # PAGE 3: ASSET MANAGERS EXPOSURE
 # ==========================================
-elif st.session_state.page == "Asset Managers Exposure":
+def page_asset_managers():
     st.header("Externe vermogensbeheerders (aandelenportefeuilles)")
     st.markdown("Welke externe beleggingshuizen de aandelenportefeuilles van Nederlandse pensioenfondsen beheren.")
 
@@ -1529,9 +1688,13 @@ elif st.session_state.page == "Asset Managers Exposure":
     ])
     st.divider()
 
-    fig_bar = px.bar(managers_df, x="Beheerder", y="Aantal_pensioenfondsen",
+    fig_bar = px.bar(managers_df.sort_values("Aantal_pensioenfondsen"),
+                     y="Beheerder", x="Aantal_pensioenfondsen", orientation="h",
                      title="Top 20 vermogensbeheerders naar aantal Nederlandse pensioenfonds-cliënten",
                      labels={"Aantal_pensioenfondsen": "Aantal fondsen"})
+    fig_bar.update_traces(marker_color=ACCENT,
+                          hovertemplate="<b>%{y}</b><br>%{x} fondsen<extra></extra>")
+    fig_bar.update_layout(height=560)
     st.plotly_chart(fig_bar, use_container_width=True)
 
     st.dataframe(managers_df, use_container_width=True)
@@ -1539,7 +1702,7 @@ elif st.session_state.page == "Asset Managers Exposure":
 # ==========================================
 # PAGE 4: WTP TRACKER
 # ==========================================
-elif st.session_state.page == "WTP Tracker":
+def page_wtp_tracker():
     st.header("WTP-transitietracker")
     st.markdown("Overzicht van geplande transitiedata naar het nieuwe pensioenstelsel (Wet Toekomst Pensioenen).")
 
@@ -1733,7 +1896,7 @@ elif st.session_state.page == "WTP Tracker":
                 fig_bar = px.bar(
                     timeline, x='Transitiedatum', y='Aantal fondsen', color='Status',
                     title="Geplande transities per datum",
-                    color_discrete_map={'Origineel gepland': '#6554A3', 'Uitgesteld': '#C66B16'},
+                    color_discrete_map={'Origineel gepland': ACCENT, 'Uitgesteld': ORANGE_FILL},
                 )
                 fig_bar.update_xaxes(type='category')
                 st.plotly_chart(fig_bar, use_container_width=True)
@@ -1747,9 +1910,13 @@ elif st.session_state.page == "WTP Tracker":
                     .value_counts().reset_index()
             )
             contract_counts.columns = ['Contracttype', 'Aantal']
-            fig_pie = px.pie(contract_counts, names='Contracttype', values='Aantal',
-                             title="Contracttypes")
-            st.plotly_chart(fig_pie, use_container_width=True)
+            fig_ct = px.bar(contract_counts.sort_values('Aantal'),
+                            y='Contracttype', x='Aantal', orientation='h',
+                            title="Contracttypes")
+            fig_ct.update_traces(marker_color=ACCENT,
+                                 hovertemplate="<b>%{y}</b><br>%{x} fondsen<extra></extra>")
+            fig_ct.update_layout(height=340)
+            st.plotly_chart(fig_ct, use_container_width=True)
 
         # --- Uitgestelde transities (bron: PensioenPro 27-4-2026 PDF) ---
         if 'wtp_oorspr_datum' in wtp_df.columns:
@@ -1830,7 +1997,7 @@ elif st.session_state.page == "WTP Tracker":
                     'Oorspr. datum': True, 'Uitvoerder': True,
                     'aum_marker': False, 'date': '|%d %b %Y', 'status': False,
                 },
-                color_discrete_map={'Ingevaren': '#2F7D57', 'Gepland': '#6554A3', 'Uitgesteld': '#C66B16'},
+                color_discrete_map={'Ingevaren': GREEN_FILL, 'Gepland': ACCENT, 'Uitgesteld': ORANGE_FILL},
                 labels={'date': '', 'status': ''},
                 size_max=28,
             )
@@ -1838,9 +2005,9 @@ elif st.session_state.page == "WTP Tracker":
             # add_vline annotation path calls sum(x) with int start, which
             # rejects both pd.Timestamp and date strings on current versions.
             today = pd.Timestamp.now(tz='UTC').tz_localize(None).strftime('%Y-%m-%d')
-            fig_tl.add_vline(x=today, line_dash='dot', line_color='#5C6875')
+            fig_tl.add_vline(x=today, line_dash='dot', line_color=MUTE_LINE)
             fig_tl.add_annotation(x=today, y=1, yref='paper', showarrow=False,
-                                  text='vandaag', font=dict(color='#5C6875'),
+                                  text='vandaag', font=dict(color=MUTE_LINE),
                                   yanchor='bottom')
             fig_tl.update_layout(height=320, showlegend=True)
             st.plotly_chart(fig_tl, use_container_width=True)
@@ -1902,7 +2069,7 @@ elif st.session_state.page == "WTP Tracker":
 # ==========================================
 # PAGE 5: DEKKINGSGRAAD ANALYSIS
 # ==========================================
-elif st.session_state.page == "Dekkingsgraad Analysis":
+def page_dekkingsgraad():
     st.header("Dekkingsgraden")
     st.markdown("Analyse van de financiële gezondheid en dekkingsgraden van Nederlandse pensioenfondsen.")
 
@@ -1928,17 +2095,19 @@ elif st.session_state.page == "Dekkingsgraad Analysis":
     col1, col2 = st.columns(2)
     with col1:
         st.subheader("Top 10 gezondste fondsen")
-        fig_top = px.bar(valid_df.head(10), x="name", y="dekkingsgraad_pct", title="Hoogste dekkingsgraden", color="category")
-        fig_top.update_layout(yaxis_title="Dekkingsgraad (%)", xaxis_title="Fonds")
-        fig_top.add_hline(y=100, line_dash="dash", line_color="red", annotation_text="100% minimum")
+        fig_top = px.bar(valid_df.head(10), x="name", y="dekkingsgraad_pct", title="Hoogste dekkingsgraden",
+                         color="category", color_discrete_map=CATEGORY_COLORS)
+        fig_top.update_layout(yaxis_title="Dekkingsgraad (%)", xaxis_title="Fonds", height=380)
+        fig_top.add_hline(y=100, line_dash="dash", line_color=RED_LINE, annotation_text="100% minimum")
         st.plotly_chart(fig_top, use_container_width=True)
 
     with col2:
         st.subheader("Onderste 10 fondsen")
         fig_bottom = px.bar(valid_df.tail(10).sort_values(by='dekkingsgraad_pct', ascending=True),
-                            x="name", y="dekkingsgraad_pct", title="Laagste dekkingsgraden", color="category")
-        fig_bottom.update_layout(yaxis_title="Dekkingsgraad (%)", xaxis_title="Fonds")
-        fig_bottom.add_hline(y=100, line_dash="dash", line_color="red", annotation_text="100% minimum")
+                            x="name", y="dekkingsgraad_pct", title="Laagste dekkingsgraden",
+                            color="category", color_discrete_map=CATEGORY_COLORS)
+        fig_bottom.update_layout(yaxis_title="Dekkingsgraad (%)", xaxis_title="Fonds", height=380)
+        fig_bottom.add_hline(y=100, line_dash="dash", line_color=RED_LINE, annotation_text="100% minimum")
         st.plotly_chart(fig_bottom, use_container_width=True)
 
     st.divider()
@@ -1946,15 +2115,17 @@ elif st.session_state.page == "Dekkingsgraad Analysis":
     c1, c2 = st.columns(2)
     with c1:
         st.subheader("Verdeling")
-        fig_hist = px.histogram(valid_df, x="dekkingsgraad_pct", nbins=20, title="Verdeling van dekkingsgraden", color="category")
-        fig_hist.update_layout(xaxis_title="Dekkingsgraad (%)", yaxis_title="Aantal fondsen")
-        fig_hist.add_vline(x=100, line_dash="dash", line_color="red")
+        fig_hist = px.histogram(valid_df, x="dekkingsgraad_pct", nbins=20, title="Verdeling van dekkingsgraden",
+                                color="category", color_discrete_map=CATEGORY_COLORS)
+        fig_hist.update_layout(xaxis_title="Dekkingsgraad (%)", yaxis_title="Aantal fondsen", height=380)
+        fig_hist.add_vline(x=100, line_dash="dash", line_color=RED_LINE)
         st.plotly_chart(fig_hist, use_container_width=True)
     with c2:
         st.subheader("Gemiddelde per categorie")
         cat_avg = valid_df.groupby('category')['dekkingsgraad_pct'].mean().reset_index().sort_values('dekkingsgraad_pct', ascending=False)
-        fig_cat = px.bar(cat_avg, x="category", y="dekkingsgraad_pct", title="Gemiddelde dekkingsgraad per categorie", color="category")
-        fig_cat.update_layout(xaxis_title="Categorie", yaxis_title="Gem. dekkingsgraad (%)")
+        fig_cat = px.bar(cat_avg, x="category", y="dekkingsgraad_pct", title="Gemiddelde dekkingsgraad per categorie",
+                         color="category", color_discrete_map=CATEGORY_COLORS)
+        fig_cat.update_layout(xaxis_title="Categorie", yaxis_title="Gem. dekkingsgraad (%)", height=380, showlegend=False)
         st.plotly_chart(fig_cat, use_container_width=True)
 
         st.subheader("Volledige dekkingsgraad-tabel")
@@ -1963,7 +2134,7 @@ elif st.session_state.page == "Dekkingsgraad Analysis":
 # ==========================================
 # PAGE 6: ESG & SFDR Tracker
 # ==========================================
-elif st.session_state.page == "ESG & SFDR Tracker":
+def page_esg_sfdr():
     st.header("ESG- en SFDR-analyse")
     st.markdown("Analyse van SFDR-artikelclassificaties (Sustainable Finance Disclosure Regulation) en EU-taxonomie binnen de pensioensector. Deze data is via LLM geëxtraheerd uit recent gepubliceerde jaarverslagen 2024.")
 
@@ -2005,13 +2176,26 @@ elif st.session_state.page == "ESG & SFDR Tracker":
             article_counts = sfdr_df['sfdr_article'].value_counts().reset_index()
             article_counts.columns = ['SFDR-artikel', 'Aantal fondsen']
             article_counts['SFDR-artikel'] = 'Artikel ' + article_counts['SFDR-artikel'].astype(str).str.extract(r'(\d+)', expand=False)
-            fig_pie = px.pie(article_counts, names='SFDR-artikel', values='Aantal fondsen', title="SFDR-classificaties (2024)")
+            fig_pie = px.pie(
+                article_counts, names='SFDR-artikel', values='Aantal fondsen',
+                title="SFDR-classificaties (2024)", hole=0.55,
+                color='SFDR-artikel',
+                color_discrete_map={"Artikel 6": MUTE_LINE, "Artikel 8": BLUE_FILL, "Artikel 9": GREEN_FILL},
+            )
+            fig_pie.update_traces(
+                textinfo='value+percent',
+                hovertemplate="<b>%{label}</b><br>%{value} fondsen<extra></extra>",
+            )
+            fig_pie.update_layout(height=380)
             st.plotly_chart(fig_pie, use_container_width=True)
 
         with c2:
             tax_df = sfdr_df.dropna(subset=['eu_taxonomy_pct']).copy()
             if not tax_df.empty:
-                fig_hist = px.histogram(tax_df, x="eu_taxonomy_pct", nbins=20, title="Verdeling EU-taxonomie alignment (%)", color="category")
+                fig_hist = px.histogram(tax_df, x="eu_taxonomy_pct", nbins=20,
+                                        title="Verdeling EU-taxonomie alignment (%)",
+                                        color="category", color_discrete_map=CATEGORY_COLORS)
+                fig_hist.update_layout(height=380)
                 st.plotly_chart(fig_hist, use_container_width=True)
             else:
                 st.info("Nog geen EU-taxonomie-percentages geëxtraheerd.")
@@ -2024,7 +2208,7 @@ elif st.session_state.page == "ESG & SFDR Tracker":
 # ==========================================
 # PAGE 7: INDUSTRY NEWS FEED
 # ==========================================
-elif st.session_state.page == "Industry News Feed":
+def page_news():
     st.header("Sectornieuws")
     st.markdown("Nieuwsberichten direct gescraped van de websites van Nederlandse pensioenfondsen. Gebruik de filters om gericht te zoeken op aankondigingen als indexatie, premies of duurzaamheidswijzigingen.")
     
@@ -2089,7 +2273,7 @@ elif st.session_state.page == "Industry News Feed":
         with f2:
             search_query = st.text_input("Zoek in koppen", placeholder="indexatie, premie, MVB, ...")
         with f3:
-            recent_only = st.checkbox("Alleen laatste 30 dagen", value=False)
+            recent_only = st.toggle("Alleen laatste 30 dagen", value=False)
 
         filtered_news = df_news.copy()
         if cat_filter:
@@ -2158,7 +2342,7 @@ elif st.session_state.page == "Industry News Feed":
 # ==========================================
 # PAGE 8: GLOSSARY (BEGRIPPENLIJST)
 # ==========================================
-elif st.session_state.page == "Begrippenlijst":
+def page_begrippenlijst():
     st.header("📖 Begrippenlijst")
     st.markdown("Een handig overzicht van veelvoorkomende pensioentermen en concepten die in deze database (en in het dagelijkse nieuws) worden gebruikt.")
     
@@ -2185,7 +2369,7 @@ elif st.session_state.page == "Begrippenlijst":
 # ==========================================
 # PAGE: VRAAG HET DE DATA (text-to-SQL, self-hosted only)
 # ==========================================
-elif st.session_state.page == "Ask Data" and _TEXT2SQL_OK:
+def page_ask_data():
     st.header("Vraag het de data")
     st.markdown(
         "Stel een vraag in gewone taal. Een lokaal taalmodel (Ollama op de "
@@ -2252,7 +2436,7 @@ elif st.session_state.page == "Ask Data" and _TEXT2SQL_OK:
 # ==========================================
 # PAGE 9: DATACURATIE (self-hosted only)
 # ==========================================
-elif st.session_state.page == "Datacuratie" and _LOCAL_STATE_OK:
+def page_datacuratie():
     st.header("Datacuratie")
     st.markdown(
         "Handmatige correcties op de fondsentabel. Een correctie wordt als "
@@ -2390,6 +2574,7 @@ elif st.session_state.page == "Datacuratie" and _LOCAL_STATE_OK:
                     _ok, _m = local_state.promote_override(
                         int(r["fund_id"]), r["column_name"]
                     )
+                    st.cache_data.clear()  # bron-DB gewijzigd → cache verversen
                     (st.success if _ok else st.error)(_m)
                     st.rerun()
 
@@ -2399,3 +2584,60 @@ elif st.session_state.page == "Datacuratie" and _LOCAL_STATE_OK:
             st.caption("Nog geen wijzigingen geregistreerd.")
         else:
             st.dataframe(audit, use_container_width=True, hide_index=True)
+
+
+# ==========================================
+# NAVIGATIE (st.navigation — echte URL's per pagina, gegroepeerde sidebar)
+# ==========================================
+_PG_OVERVIEW = st.Page(page_sector_overview, title="Sectoroverzicht",
+                       icon="🏠", default=True)
+_PG_DEEP_DIVE = st.Page(page_fund_deep_dive, title="Fonds-diepteanalyse",
+                        icon="🔍", url_path="fonds")
+_PG_COMPARE = st.Page(page_fund_comparison, title="Fondsvergelijking",
+                      icon="⚖️", url_path="vergelijk")
+_PG_TRENDS = st.Page(page_trends, title="Trends", icon="📈", url_path="trends")
+_PG_NEWS = st.Page(page_news, title="Sectornieuws", icon="📰", url_path="nieuws")
+_PG_DEKKING = st.Page(page_dekkingsgraad, title="Dekkingsgraad-analyse",
+                      icon="📊", url_path="dekkingsgraad")
+_PG_EQUITY = st.Page(page_equity_strategy, title="Aandelenstrategie",
+                     icon="🎯", url_path="aandelenstrategie")
+_PG_MANAGERS = st.Page(page_asset_managers, title="Vermogensbeheerders",
+                       icon="🏛️", url_path="beheerders")
+_PG_WTP = st.Page(page_wtp_tracker, title="WTP-tracker", icon="🔄", url_path="wtp")
+_PG_ESG = st.Page(page_esg_sfdr, title="ESG- en SFDR-tracker",
+                  icon="🌱", url_path="esg")
+_PG_BEGRIPPEN = st.Page(page_begrippenlijst, title="Begrippenlijst",
+                        icon="📖", url_path="begrippen")
+
+_NAV = {
+    "Overzicht": [_PG_OVERVIEW, _PG_TRENDS, _PG_NEWS],
+    "Fondsen": [_PG_DEEP_DIVE, _PG_COMPARE],
+    "Analyse": [_PG_DEKKING, _PG_EQUITY, _PG_MANAGERS],
+    "Transitie & ESG": [_PG_WTP, _PG_ESG],
+    "Hulpmiddelen": [_PG_BEGRIPPEN],
+}
+# Self-hosted-only pagina's
+if _TEXT2SQL_OK:
+    _NAV["Hulpmiddelen"].append(
+        st.Page(page_ask_data, title="Vraag het de data", icon="💬", url_path="vraag"))
+if _LOCAL_STATE_OK:
+    _NAV["Hulpmiddelen"].append(
+        st.Page(page_datacuratie, title="Datacuratie", icon="🛠️", url_path="curatie"))
+
+_nav = st.navigation(_NAV)
+
+# Deep-links: /fonds?fund=X (en oude /?fund=X-links) openen de diepteanalyse.
+if "fund" in st.query_params:
+    _qp_fund = st.query_params["fund"]
+    st.query_params.clear()
+    if _qp_fund in set(df_funds["name"]):
+        st.session_state.selected_fund = _qp_fund
+        st.switch_page(_PG_DEEP_DIVE)
+
+# Pending jump uit widget-callbacks (globale zoeker, recente fondsen, preview)
+_jump = st.session_state.pop("_jump_fund", None)
+if _jump:
+    st.session_state.selected_fund = _jump
+    st.switch_page(_PG_DEEP_DIVE)
+
+_nav.run()
