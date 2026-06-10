@@ -79,8 +79,7 @@ git -C ~/pensioenfondsen-app pull --ff-only                      # handmatig ver
 ```
 
 ## Setup-script (idempotent, herbruikbaar)
-`scripts/automation/setup_server.sh` (in de repo via Google Drive; nog niet naar
-GitHub gepusht). Detecteert vrije poort + bestaande tunnel, bindt `0.0.0.0`,
+`scripts/automation/setup_server.sh` (sinds 2026-06-10 ook op GitHub, commit `ff3c675`). Detecteert vrije poort + bestaande tunnel, bindt `0.0.0.0`,
 schrijft de launchd-services + pull-timer, en print de juiste CF-instructie
 (met tailnet-IP). Voor een **HA-replica op de M1 MBP**: zelfde script daar draaien
 en in CF een tweede origin/replica toevoegen.
@@ -89,6 +88,6 @@ en in CF een tweede origin/replica toevoegen.
 - [x] CF Public Hostname op `100.107.33.80:8502` — gedaan 2026-06-05, extern 200.
 - [x] Streamlit-gedrag achter proxy — opgelost 2026-06-09 (http2 → quic).
 - [x] UI-facelift uitgerold en op alle drie de deployments geverifieerd (2026-06-10).
-- [ ] Optioneel: `setup_server.sh` + dit document naar GitHub committen (vraagt expliciete go).
+- [x] `setup_server.sh` + dit document naar GitHub gecommit (`ff3c675`, 2026-06-10).
 - [ ] Optioneel: HA-replica op M1 MBP.
 - [ ] cloudflared is verouderd (2026.3.0 → 2026.5.2); upgrade raakt álle sites, dus apart inplannen.
