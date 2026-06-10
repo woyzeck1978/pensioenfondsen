@@ -423,7 +423,19 @@ scraper-run + `git pull` overleven zonder merge-conflict. Nieuwe module:
   (= default quic) + job herladen; ook een dubbele wees-connector opgeruimd.
   Herstelt app-brede interactiviteit. (Plist op de mini, niet in de repo;
   `.bak` aanwezig.)
-- **Scrape-cadans** van 2-daags → **dagelijks** (MBP-plist 172800→86400).
+- **Scrape-cadans** van 2-daags → **dagelijks**.
+- **Scrape VERPLAATST van MBP → mini** (10 juni). Symptoom: nieuws liep 2
+  weken achter (laatste run 26 mei). Oorzaak: de MBP-keten (launchd → .app
+  met Full-Disk-Access → wrapper → `scrape_push.sh`, nodig wegens TCC op de
+  Drive-mount) faalde stil — vermoedelijk FDA vervallen, plus MBP-slaap. De
+  mini draait altijd en heeft de repo als gewone clone (geen Drive/TCC), dus
+  de hele hack vervalt. Nieuw: `scripts/automation/scrape_mini.sh`
+  (orchestrator) + launchd `nl.wuite.pensioenfondsen.scrape` op de mini
+  (06:00 dagelijks). `scrape_push.sh` portabel gemaakt
+  (`PENSIOEN_PROJECT_DIR`/`PENSIOEN_PYTHON`) + rebase-op-push-afwijzing.
+  `parse_news_articles.py` had óók de py39-`X | None`-bug → future-import.
+  bs4+lxml in de mini-venv (pipeline gebruikt GEEN Playwright). MBP-job
+  uitgezet (`.plist.disabled-20260610`). End-to-end via launchd geverifieerd.
 
 **Te beslissen / open:**
 - **`app_state.db` ligt in de Drive-map** op de MBP-scrapekant (gitignored);
