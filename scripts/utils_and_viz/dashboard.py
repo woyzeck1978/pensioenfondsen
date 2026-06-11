@@ -141,6 +141,17 @@ else:
         "Onbekend": "#B8C0CA",
     }
 
+# Badge-kleurnaam per benchmark-provider (funds.benchmark_providers,
+# afgeleid door db_management/derive_benchmark_providers.py)
+PROVIDER_BADGE = {
+    "MSCI": "purple",
+    "Bloomberg (Barclays)": "blue",
+    "FTSE Russell": "teal",
+    "GRESB (vastgoed-ESG)": "green",
+    "J.P. Morgan": "orange",
+    "S&P Dow Jones (incl. iBoxx)": "gray",
+}
+
 # Badge-kleurnaam per categorie (voor de pill-badges in previews/vergelijking)
 CATEGORY_BADGE = {
     "Tak": "purple", "Bedrijf": "blue", "Beroep": "green",
@@ -178,6 +189,7 @@ def get_all_funds():
         f.equity_allocation_pct, f.uitvoerder, f.deelnemers_totaal, f.website,
         f.deelnemers_actief, f.deelnemers_slapers, f.deelnemers_gepensioneerd,
         f.sfdr_article, f.eu_taxonomy_pct, f.investment_beliefs,
+        f.benchmark_providers,
         e.co2_reduction_goal, e.sfdr_classification
     FROM funds f
     LEFT JOIN fund_esg_metrics e ON f.id = e.fund_id
@@ -1121,6 +1133,16 @@ def page_fund_deep_dive():
             st.markdown(f"**Uitvoerder:** {fund_data['uitvoerder'] if pd.notnull(fund_data['uitvoerder']) else 'Onbekend'}")
             if pd.notnull(fund_data['beleidsdekkingsgraad_pct']):
                 st.markdown(f"**Beleidsdekkingsgraad:** {fund_data['beleidsdekkingsgraad_pct']:.1f}%")
+            _bp_raw = fund_data.get('benchmark_providers')
+            if pd.notnull(_bp_raw) and str(_bp_raw).strip():
+                _bp_badges = " ".join(
+                    badge(p.strip(), PROVIDER_BADGE.get(p.strip(), "outline"))
+                    for p in str(_bp_raw).split(", ")
+                )
+                st.markdown(f"**Benchmark-providers:** {_bp_badges}",
+                            unsafe_allow_html=True)
+                st.caption("Uit het jaarverslag geëxtraheerd; AEX-treffers "
+                           "kunnen ruis zijn.")
 
     # ---------------- TAB 2: HISTORIE ----------------
     with tab_hist:
@@ -1698,6 +1720,53 @@ def page_asset_managers():
     st.plotly_chart(fig_bar, use_container_width=True)
 
     st.dataframe(managers_df, use_container_width=True)
+
+    # --- Benchmark-providers (afgeleid uit jaarverslagen) ---
+    st.divider()
+    st.subheader("Benchmark-providers")
+    st.markdown(
+        "Tegen welke indexproviders de fondsen hun portefeuille afmeten, "
+        "geëxtraheerd uit de jaarverslagen (kolom `benchmark_providers`)."
+    )
+    bp_df = df_funds.dropna(subset=['benchmark_providers']).copy()
+    bp_df = bp_df[bp_df['benchmark_providers'].astype(str).str.strip() != '']
+    if bp_df.empty:
+        st.info("Nog geen benchmark-providers afgeleid. Draai "
+                "`db_management/derive_benchmark_providers.py --apply`.")
+    else:
+        bp_long = (
+            bp_df.assign(provider=bp_df['benchmark_providers'].str.split(', '))
+                 .explode('provider')
+        )
+        bp_counts = (
+            bp_long.groupby('provider').size()
+                   .reset_index(name='Aantal fondsen')
+                   .sort_values('Aantal fondsen')
+        )
+        st.caption(
+            f"Dekking: **{len(bp_df)}** van **{len(df_funds)}** fondsen "
+            f"({len(bp_df)/max(len(df_funds),1)*100:.0f}%) — bron: jaarverslag-PDF's."
+        )
+        fig_bp = px.bar(
+            bp_counts, y='provider', x='Aantal fondsen', orientation='h',
+            labels={'provider': ''},
+            title="Aantal fondsen per benchmark-provider",
+        )
+        fig_bp.update_traces(marker_color=BLUE_FILL,
+                             hovertemplate="<b>%{y}</b><br>%{x} fondsen<extra></extra>")
+        fig_bp.update_layout(height=360)
+        st.plotly_chart(fig_bp, use_container_width=True)
+
+        with st.expander("Per fonds: gebruikte benchmark-providers", expanded=False):
+            bp_view = bp_df[['name', 'category', 'aum_euro_bn', 'benchmark_providers']].rename(
+                columns={'name': 'Fonds', 'category': 'Categorie',
+                         'aum_euro_bn': 'AUM (€ Bn)',
+                         'benchmark_providers': 'Benchmark-providers'}
+            ).sort_values('Fonds')
+            st.dataframe(
+                bp_view, use_container_width=True, hide_index=True,
+                column_config={'AUM (€ Bn)': st.column_config.NumberColumn(format="%.1f")},
+            )
 
 # ==========================================
 # PAGE 4: WTP TRACKER
