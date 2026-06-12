@@ -43,9 +43,9 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-# --- THEME DETECTION ---
-def _is_dark_theme() -> bool:
-    """True wanneer de kijker de app in dark mode draait.
+# --- THEME DETECTION + IN-APP DARK MODE SWITCH ---
+def _system_dark() -> bool:
+    """True wanneer Streamlit zelf (instellingenmenu/OS) in dark mode staat.
 
     st.context.theme bestaat pas sinds Streamlit 1.46; op oudere runtimes
     (zoals de Python 3.9-deploy op de mini) valt dit terug op licht.
@@ -55,11 +55,23 @@ def _is_dark_theme() -> bool:
     except Exception:
         return False
 
-IS_DARK = _is_dark_theme()
+_SYSTEM_DARK = _system_dark()
+# Eerste bezoek volgt het Streamlit/OS-thema; daarna is de sidebar-toggle
+# (key="dark_mode", gerenderd verderop) leidend voor deze sessie.
+if "dark_mode" not in st.session_state:
+    st.session_state.dark_mode = _SYSTEM_DARK
+IS_DARK = bool(st.session_state.dark_mode)
 
-# --- VISUAL STYLE (inject style.css [+ style_dark.css] next to this file) ---
+# --- VISUAL STYLE (inject style.css [+ dark overrides] next to this file) ---
+# style_dark_native.css dekt native widgets (inputs, dropdowns, canvas-
+# tabellen) en is alleen nodig als de toggle donker staat terwijl Streamlit
+# zelf licht gethemed is — anders themed Streamlit die al zelf.
 _STYLE_DIR = os.path.dirname(os.path.abspath(__file__))
-_css_files = ["style.css", "style_dark.css"] if IS_DARK else ["style.css"]
+_css_files = ["style.css"]
+if IS_DARK:
+    _css_files.append("style_dark.css")
+    if not _SYSTEM_DARK:
+        _css_files.append("style_dark_native.css")
 _css = ""
 for _name in _css_files:
     _p = os.path.join(_STYLE_DIR, _name)
@@ -167,6 +179,23 @@ ACCENT = "#9D8FD9" if IS_DARK else "#6554A3"
 GREEN_FILL = "#6FBF8F" if IS_DARK else "#2F7D57"
 ORANGE_FILL = "#E09A4C" if IS_DARK else "#C66B16"
 BLUE_FILL = "#6FA8DC" if IS_DARK else "#1F6FB2"
+CHART_BG = "#171C24" if IS_DARK else "#FFFFFF"
+CHART_FG = "#E4E7EC" if IS_DARK else "#17202A"
+
+
+def show_chart(fig, **kwargs):
+    """st.plotly_chart-wrapper met expliciete achtergrond-/tekstkleuren.
+
+    Streamlit's frontend synchroniseert chart-achtergronden met het eigen
+    (lichte) app-thema, óók bij theme=None — maar alleen voor waarden die
+    de figuur niet expliciet zet. Expliciet zetten laat de csu-templates
+    dus winnen, en daarmee werkt de in-app dark-mode-toggle ook op charts.
+    """
+    fig.update_layout(paper_bgcolor=CHART_BG, plot_bgcolor=CHART_BG,
+                      font_color=CHART_FG)
+    kwargs.setdefault("use_container_width", True)
+    kwargs.setdefault("theme", None)
+    st.plotly_chart(fig, **kwargs)
 
 # --- DATABASE CONNECTION ---
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -576,6 +605,9 @@ st.sidebar.selectbox(
     label_visibility="collapsed",
 )
 
+# Dark mode switch — per sessie; default volgt het Streamlit/OS-thema
+st.sidebar.toggle("🌙 Donkere modus", key="dark_mode")
+
 st.sidebar.markdown("---")
 _dnb_count = 0
 _dnb_quarter = "—"
@@ -761,7 +793,7 @@ def page_sector_overview():
             title="Log(AUM) vs. actuele dekkingsgraad (site)"
         )
         fig_scatter.update_layout(height=420)
-        st.plotly_chart(fig_scatter, use_container_width=True)
+        show_chart(fig_scatter)
 
     with c2:
         st.subheader("Marktaandeel per categorie")
@@ -778,7 +810,7 @@ def page_sector_overview():
             marker=dict(cornerradius=3),
         )
         fig_tree.update_layout(height=420, margin=dict(l=4, r=4, t=40, b=4))
-        st.plotly_chart(fig_tree, use_container_width=True)
+        show_chart(fig_tree)
 
     st.divider()
     head_col, dl_col = st.columns([5, 1])
@@ -1120,7 +1152,7 @@ def page_fund_deep_dive():
                     )
                 fig_deel.update_layout(height=280, showlegend=True,
                                        margin=dict(l=10, r=10, t=10, b=10))
-                st.plotly_chart(fig_deel, use_container_width=True)
+                show_chart(fig_deel)
             else:
                 st.info("Geen deelnemers-uitsplitsing beschikbaar.")
         with deel_r:
@@ -1184,7 +1216,7 @@ def page_fund_deep_dive():
                 else:
                     st.caption("Geen peer-data beschikbaar voor deze categorie.")
 
-            st.plotly_chart(fig_line, use_container_width=True)
+            show_chart(fig_line)
 
             # --- Indexatie vs CPI ---
             idx_df = history_df[['year', 'indexatieverlening_pct', 'cpi_pct']].dropna(how='all', subset=['indexatieverlening_pct', 'cpi_pct']).copy()
@@ -1205,7 +1237,7 @@ def page_fund_deep_dive():
                         line=dict(color=RED_LINE, width=2),
                     )
                 fig_idx.update_layout(height=300, showlegend=True)
-                st.plotly_chart(fig_idx, use_container_width=True)
+                show_chart(fig_idx)
 
                 # Cumulative koopkracht: (∏(1+indexatie) / ∏(1+CPI) - 1) ×100
                 cum = idx_df.dropna(subset=['indexatieverlening_pct', 'cpi_pct']).sort_values('year').copy()
@@ -1234,7 +1266,7 @@ def page_fund_deep_dive():
                     labels={'value': '%', 'year': 'Jaar', 'variable': 'Metric'},
                 )
                 fig_aa.update_layout(height=300)
-                st.plotly_chart(fig_aa, use_container_width=True)
+                show_chart(fig_aa)
 
             st.markdown("#### Meerjarenoverzicht (Jaarrapportages)")
 
@@ -1426,7 +1458,7 @@ def page_fund_comparison():
             )
             fig_dekk.add_hline(y=100, line_dash='dot', line_color=RED_LINE,
                                annotation_text='100% minimum', annotation_position='bottom right')
-            st.plotly_chart(fig_dekk, use_container_width=True)
+            show_chart(fig_dekk)
 
             c1, c2 = st.columns(2)
             with c1:
@@ -1436,7 +1468,7 @@ def page_fund_comparison():
                     x='year', y='aum_euro_bn', color='fund', markers=True,
                     labels={'aum_euro_bn': 'AUM (€ Bn)', 'year': 'Jaar'}, log_y=True,
                 )
-                st.plotly_chart(fig_aum, use_container_width=True)
+                show_chart(fig_aum)
             with c2:
                 st.subheader("Totaal rendement per jaar")
                 rend = hist.dropna(subset=['beleggingsrendement_pct'])
@@ -1447,7 +1479,7 @@ def page_fund_comparison():
                         labels={'beleggingsrendement_pct': 'Rendement (%)', 'year': 'Jaar'},
                     )
                     fig_rend.add_hline(y=0, line_color=MUTE_LINE)
-                    st.plotly_chart(fig_rend, use_container_width=True)
+                    show_chart(fig_rend)
                 else:
                     st.info("Geen rendement-data beschikbaar voor deze selectie.")
 
@@ -1459,7 +1491,7 @@ def page_fund_comparison():
                     labels={'deelnemers_totaal': 'Totaal aantal deelnemers', 'year': 'Jaar'},
                     log_y=True,
                 )
-                st.plotly_chart(fig_dln, use_container_width=True)
+                show_chart(fig_dln)
             else:
                 st.info("Geen deelnemers-tijdreeks beschikbaar voor deze selectie.")
         else:
@@ -1717,7 +1749,7 @@ def page_asset_managers():
     fig_bar.update_traces(marker_color=ACCENT,
                           hovertemplate="<b>%{y}</b><br>%{x} fondsen<extra></extra>")
     fig_bar.update_layout(height=560)
-    st.plotly_chart(fig_bar, use_container_width=True)
+    show_chart(fig_bar)
 
     st.dataframe(managers_df, use_container_width=True)
 
@@ -1755,7 +1787,7 @@ def page_asset_managers():
         fig_bp.update_traces(marker_color=BLUE_FILL,
                              hovertemplate="<b>%{y}</b><br>%{x} fondsen<extra></extra>")
         fig_bp.update_layout(height=360)
-        st.plotly_chart(fig_bp, use_container_width=True)
+        show_chart(fig_bp)
 
         with st.expander("Per fonds: gebruikte benchmark-providers", expanded=False):
             bp_view = bp_df[['name', 'category', 'aum_euro_bn', 'benchmark_providers']].rename(
@@ -1968,7 +2000,7 @@ def page_wtp_tracker():
                     color_discrete_map={'Origineel gepland': ACCENT, 'Uitgesteld': ORANGE_FILL},
                 )
                 fig_bar.update_xaxes(type='category')
-                st.plotly_chart(fig_bar, use_container_width=True)
+                show_chart(fig_bar)
             else:
                 st.info("Geen geplande transities meer — alles is voltooid of zonder datum.")
 
@@ -1985,7 +2017,7 @@ def page_wtp_tracker():
             fig_ct.update_traces(marker_color=ACCENT,
                                  hovertemplate="<b>%{y}</b><br>%{x} fondsen<extra></extra>")
             fig_ct.update_layout(height=340)
-            st.plotly_chart(fig_ct, use_container_width=True)
+            show_chart(fig_ct)
 
         # --- Uitgestelde transities (bron: PensioenPro 27-4-2026 PDF) ---
         if 'wtp_oorspr_datum' in wtp_df.columns:
@@ -2079,7 +2111,7 @@ def page_wtp_tracker():
                                   text='vandaag', font=dict(color=MUTE_LINE),
                                   yanchor='bottom')
             fig_tl.update_layout(height=320, showlegend=True)
-            st.plotly_chart(fig_tl, use_container_width=True)
+            show_chart(fig_tl)
         else:
             st.info("Geen geldige transitiedatums voor de tijdlijn.")
 
@@ -2168,7 +2200,7 @@ def page_dekkingsgraad():
                          color="category", color_discrete_map=CATEGORY_COLORS)
         fig_top.update_layout(yaxis_title="Dekkingsgraad (%)", xaxis_title="Fonds", height=380)
         fig_top.add_hline(y=100, line_dash="dash", line_color=RED_LINE, annotation_text="100% minimum")
-        st.plotly_chart(fig_top, use_container_width=True)
+        show_chart(fig_top)
 
     with col2:
         st.subheader("Onderste 10 fondsen")
@@ -2177,7 +2209,7 @@ def page_dekkingsgraad():
                             color="category", color_discrete_map=CATEGORY_COLORS)
         fig_bottom.update_layout(yaxis_title="Dekkingsgraad (%)", xaxis_title="Fonds", height=380)
         fig_bottom.add_hline(y=100, line_dash="dash", line_color=RED_LINE, annotation_text="100% minimum")
-        st.plotly_chart(fig_bottom, use_container_width=True)
+        show_chart(fig_bottom)
 
     st.divider()
 
@@ -2188,14 +2220,14 @@ def page_dekkingsgraad():
                                 color="category", color_discrete_map=CATEGORY_COLORS)
         fig_hist.update_layout(xaxis_title="Dekkingsgraad (%)", yaxis_title="Aantal fondsen", height=380)
         fig_hist.add_vline(x=100, line_dash="dash", line_color=RED_LINE)
-        st.plotly_chart(fig_hist, use_container_width=True)
+        show_chart(fig_hist)
     with c2:
         st.subheader("Gemiddelde per categorie")
         cat_avg = valid_df.groupby('category')['dekkingsgraad_pct'].mean().reset_index().sort_values('dekkingsgraad_pct', ascending=False)
         fig_cat = px.bar(cat_avg, x="category", y="dekkingsgraad_pct", title="Gemiddelde dekkingsgraad per categorie",
                          color="category", color_discrete_map=CATEGORY_COLORS)
         fig_cat.update_layout(xaxis_title="Categorie", yaxis_title="Gem. dekkingsgraad (%)", height=380, showlegend=False)
-        st.plotly_chart(fig_cat, use_container_width=True)
+        show_chart(fig_cat)
 
         st.subheader("Volledige dekkingsgraad-tabel")
         st.dataframe(valid_df[['name', 'category', 'aum_euro_bn', 'dekkingsgraad_pct']].reset_index(drop=True), use_container_width=True)
@@ -2256,7 +2288,7 @@ def page_esg_sfdr():
                 hovertemplate="<b>%{label}</b><br>%{value} fondsen<extra></extra>",
             )
             fig_pie.update_layout(height=380)
-            st.plotly_chart(fig_pie, use_container_width=True)
+            show_chart(fig_pie)
 
         with c2:
             tax_df = sfdr_df.dropna(subset=['eu_taxonomy_pct']).copy()
@@ -2265,7 +2297,7 @@ def page_esg_sfdr():
                                         title="Verdeling EU-taxonomie alignment (%)",
                                         color="category", color_discrete_map=CATEGORY_COLORS)
                 fig_hist.update_layout(height=380)
-                st.plotly_chart(fig_hist, use_container_width=True)
+                show_chart(fig_hist)
             else:
                 st.info("Nog geen EU-taxonomie-percentages geëxtraheerd.")
 

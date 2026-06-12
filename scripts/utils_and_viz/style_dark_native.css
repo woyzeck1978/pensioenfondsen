@@ -1,0 +1,85 @@
+/* Native-widget dark overrides — alleen geladen wanneer de in-app
+   dark-mode-toggle AAN staat terwijl Streamlit's eigen thema licht is.
+   (Staat Streamlit zelf op donker, dan themed het deze widgets al.)
+   Geladen NA style.css + style_dark.css. */
+
+/* ── Tekstinputs & selectboxen (BaseWeb) ───────────────────────── */
+[data-baseweb="input"],
+[data-baseweb="input"] input,
+[data-baseweb="textarea"] textarea,
+[data-baseweb="select"] > div {
+  background: var(--bg-soft) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+[data-baseweb="input"] input::placeholder,
+[data-baseweb="select"] [data-baseweb="placeholder"] {
+  color: var(--text-mute) !important;
+}
+[data-baseweb="select"] svg { fill: var(--text-mute) !important; }
+
+/* ── Dropdown-menu's / popovers (renderen in een body-portal) ──── */
+[data-baseweb="popover"] [data-baseweb="menu"],
+[data-baseweb="popover"] ul[role="listbox"],
+[data-baseweb="menu"] {
+  background: var(--bg-card) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+}
+[data-baseweb="menu"] li,
+ul[role="listbox"] li {
+  background: var(--bg-card) !important;
+  color: var(--text) !important;
+}
+[data-baseweb="menu"] li:hover,
+ul[role="listbox"] li:hover,
+ul[role="listbox"] li[aria-selected="true"] {
+  background: var(--bg-soft) !important;
+}
+
+/* ── Expanders ─────────────────────────────────────────────────── */
+[data-testid="stExpander"] details {
+  background: var(--bg-card) !important;
+  border-color: var(--border) !important;
+}
+[data-testid="stExpander"] summary,
+[data-testid="stExpander"] summary p {
+  color: var(--text-mid) !important;
+}
+
+/* ── Alerts (st.info / st.warning) ─────────────────────────────── */
+[data-testid="stAlert"] {
+  background: var(--bg-soft) !important;
+  color: var(--text-mid) !important;
+  border: 1px solid var(--border-soft) !important;
+}
+[data-testid="stAlert"] p { color: var(--text-mid) !important; }
+
+/* ── Dataframes: glide-grid is canvas-gerenderd en volgt het native
+      Streamlit-thema. CSS kan de celkleuren niet bereiken; invert +
+      hue-rotate maakt de tabel donker en houdt kleuren ~correct. ── */
+[data-testid="stDataFrame"] canvas {
+  filter: invert(0.92) hue-rotate(180deg);
+}
+
+/* ── Toolbar/decoratie bovenin ─────────────────────────────────── */
+[data-testid="stDecoration"] { background: var(--bg-page) !important; }
+[data-testid="stToolbar"] button { color: var(--text-mute) !important; }
+
+/* ── Captions / kleine tekst ───────────────────────────────────── */
+[data-testid="stCaptionContainer"], .stCaption, small {
+  color: var(--text-mute) !important;
+}
+
+/* ── Download-/formulierknoppen ────────────────────────────────── */
+[data-testid="stDownloadButton"] > button,
+[data-testid="stFormSubmitButton"] > button {
+  background: var(--bg-card) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+}
+
+/* ── Checkbox/toggle-labels ────────────────────────────────────── */
+[data-testid="stCheckbox"] p, [data-testid="stToggle"] p {
+  color: var(--text-mid) !important;
+}
