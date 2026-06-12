@@ -218,7 +218,7 @@ def get_all_funds():
         f.equity_allocation_pct, f.uitvoerder, f.deelnemers_totaal, f.website,
         f.deelnemers_actief, f.deelnemers_slapers, f.deelnemers_gepensioneerd,
         f.sfdr_article, f.eu_taxonomy_pct, f.investment_beliefs,
-        f.benchmark_providers,
+        f.benchmark_providers, f.benchmark_providers_bron, f.benchmarks,
         e.co2_reduction_goal, e.sfdr_classification
     FROM funds f
     LEFT JOIN fund_esg_metrics e ON f.id = e.fund_id
@@ -1753,52 +1753,164 @@ def page_asset_managers():
 
     st.dataframe(managers_df, use_container_width=True)
 
-    # --- Benchmark-providers (afgeleid uit jaarverslagen) ---
-    st.divider()
-    st.subheader("Benchmark-providers")
+    st.caption("Benchmark-providers per fonds staan op de aparte pagina "
+               "**Benchmarks** (groep Analyse).")
+
+# ==========================================
+# PAGE 3B: BENCHMARKS PER FONDS
+# ==========================================
+def page_benchmarks():
+    st.header("Benchmarks per pensioenfonds")
     st.markdown(
-        "Tegen welke indexproviders de fondsen hun portefeuille afmeten, "
-        "geëxtraheerd uit de jaarverslagen (kolom `benchmark_providers`)."
+        "Tegen welke indices en indexproviders de fondsen hun portefeuille "
+        "afmeten. Geëxtraheerd uit jaarverslagen en ABTN's; voor APF-kringen "
+        "zonder eigen verslag geërfd van zusterkringen of het moederfonds "
+        "(herkenbaar aan de bron-kolom)."
     )
+
     bp_df = df_funds.dropna(subset=['benchmark_providers']).copy()
     bp_df = bp_df[bp_df['benchmark_providers'].astype(str).str.strip() != '']
     if bp_df.empty:
         st.info("Nog geen benchmark-providers afgeleid. Draai "
                 "`db_management/derive_benchmark_providers.py --apply`.")
-    else:
-        bp_long = (
-            bp_df.assign(provider=bp_df['benchmark_providers'].str.split(', '))
-                 .explode('provider')
-        )
-        bp_counts = (
-            bp_long.groupby('provider').size()
-                   .reset_index(name='Aantal fondsen')
-                   .sort_values('Aantal fondsen')
-        )
-        st.caption(
-            f"Dekking: **{len(bp_df)}** van **{len(df_funds)}** fondsen "
-            f"({len(bp_df)/max(len(df_funds),1)*100:.0f}%) — bron: jaarverslag-PDF's."
-        )
+        return
+
+    bp_long = (
+        bp_df.assign(provider=bp_df['benchmark_providers'].str.split(', '))
+             .explode('provider')
+    )
+    top = bp_long.groupby('provider').size().sort_values(ascending=False)
+    n_inherited = int(bp_df['benchmark_providers_bron'].notna().sum())
+
+    render_kpi_row([
+        kpi_card("Fondsen met benchmark-data", f"{len(bp_df)}",
+                 sub=f"van {len(df_funds)} ({len(bp_df)/max(len(df_funds),1)*100:.0f}%)"),
+        kpi_card("Meest gebruikt", str(top.index[0]),
+                 sub=f"{int(top.iloc[0])} fondsen"),
+        kpi_card("Unieke providers", f"{bp_long['provider'].nunique()}",
+                 sub="canonieke namen"),
+        kpi_card("Geërfd (APF-kringen)", f"{n_inherited}",
+                 sub="providerset van zusterkring/moeder"),
+    ])
+    st.divider()
+
+    # --- Totaaloverzicht ---
+    c1, c2 = st.columns(2)
+    with c1:
+        st.subheader("Fondsen per provider")
+        bp_counts = top.reset_index()
+        bp_counts.columns = ['provider', 'Aantal fondsen']
         fig_bp = px.bar(
-            bp_counts, y='provider', x='Aantal fondsen', orientation='h',
+            bp_counts.sort_values('Aantal fondsen'),
+            y='provider', x='Aantal fondsen', orientation='h',
             labels={'provider': ''},
-            title="Aantal fondsen per benchmark-provider",
         )
         fig_bp.update_traces(marker_color=BLUE_FILL,
                              hovertemplate="<b>%{y}</b><br>%{x} fondsen<extra></extra>")
-        fig_bp.update_layout(height=360)
+        fig_bp.update_layout(height=420)
         show_chart(fig_bp)
+    with c2:
+        st.subheader("Provider × categorie")
+        ct = pd.crosstab(bp_long['provider'],
+                         bp_long['category'].fillna('Onbekend'))
+        ct = ct.loc[top.index]  # zelfde volgorde als de bar
+        fig_hm = px.imshow(
+            ct, text_auto=True, aspect='auto',
+            color_continuous_scale=[[0, CHART_BG], [1, ACCENT]],
+            labels=dict(x='Categorie', y='', color='Fondsen'),
+        )
+        fig_hm.update_coloraxes(showscale=False)
+        fig_hm.update_layout(height=420)
+        show_chart(fig_hm)
 
-        with st.expander("Per fonds: gebruikte benchmark-providers", expanded=False):
-            bp_view = bp_df[['name', 'category', 'aum_euro_bn', 'benchmark_providers']].rename(
-                columns={'name': 'Fonds', 'category': 'Categorie',
-                         'aum_euro_bn': 'AUM (€ Bn)',
-                         'benchmark_providers': 'Benchmark-providers'}
-            ).sort_values('Fonds')
-            st.dataframe(
-                bp_view, use_container_width=True, hide_index=True,
-                column_config={'AUM (€ Bn)': st.column_config.NumberColumn(format="%.1f")},
-            )
+    st.divider()
+
+    # --- Per fonds ---
+    st.subheader("Per fonds")
+    f1, f2, f3 = st.columns([2, 2, 2])
+    with f1:
+        prov_filter = st.multiselect(
+            "Provider", sorted(bp_long['provider'].unique().tolist()),
+            placeholder="alle providers")
+    with f2:
+        cat_filter = st.multiselect(
+            "Categorie", sorted(bp_df['category'].dropna().unique().tolist()),
+            placeholder="alle categorieën")
+    with f3:
+        kw = st.text_input("Zoek in fonds of benchmarknaam",
+                           placeholder="bv. MSCI World, ABP")
+    show_missing = st.toggle("Toon ook fondsen zonder benchmark-data", value=False)
+
+    view = (df_funds.copy() if show_missing else bp_df.copy())
+    view['benchmark_providers'] = view['benchmark_providers'].fillna('—')
+    raw = view['benchmarks'].astype(str)
+    view['benchmarks_raw'] = raw.where(
+        view['benchmarks'].notna()
+        & ~raw.str.contains('None explicitly', na=False), '—')
+    view['bron'] = view['benchmark_providers_bron'].fillna('jaarverslag-extractie')
+    view.loc[view['benchmark_providers'] == '—', 'bron'] = '—'
+
+    if prov_filter:
+        view = view[view['benchmark_providers'].apply(
+            lambda s: any(p in str(s) for p in prov_filter))]
+    if cat_filter:
+        view = view[view['category'].isin(cat_filter)]
+    if kw:
+        mask = (view['name'].str.contains(kw, case=False, na=False)
+                | view['benchmarks_raw'].str.contains(kw, case=False, na=False)
+                | view['benchmark_providers'].str.contains(kw, case=False, na=False))
+        view = view[mask]
+
+    st.caption(f"**{len(view)}** fondsen getoond")
+
+    tbl = view[['name', 'category', 'aum_euro_bn', 'benchmark_providers',
+                'bron', 'benchmarks_raw']].sort_values('name').copy()
+    tbl.insert(0, 'link', view.sort_values('name')['name'].apply(
+        lambda x: f"/fonds?fund={urllib.parse.quote_plus(str(x))}"))
+
+    dl_col, _ = st.columns([1, 5])
+    with dl_col:
+        try:
+            _buf = io.BytesIO()
+            _exp = tbl.drop(columns=['link']).rename(columns={
+                'name': 'Fonds', 'category': 'Categorie',
+                'aum_euro_bn': 'AUM (€ Bn)',
+                'benchmark_providers': 'Benchmark-providers',
+                'bron': 'Bron', 'benchmarks_raw': 'Benchmarks (ruw)'})
+            with pd.ExcelWriter(_buf, engine='xlsxwriter') as writer:
+                _exp.to_excel(writer, sheet_name='Benchmarks', index=False)
+                ws = writer.sheets['Benchmarks']
+                ws.set_column(0, 0, 36); ws.set_column(1, 2, 14)
+                ws.set_column(3, 3, 50); ws.set_column(4, 4, 32)
+                ws.set_column(5, 5, 70); ws.freeze_panes(1, 0)
+            st.download_button(
+                "📥 Excel", data=_buf.getvalue(),
+                file_name=f"benchmarks_{pd.Timestamp.now(tz='UTC').tz_localize(None).date()}.xlsx",
+                mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                use_container_width=True)
+        except Exception as e:
+            st.caption(f"Excel niet beschikbaar ({e})")
+
+    st.dataframe(
+        tbl, use_container_width=True, hide_index=True,
+        column_config={
+            'link': st.column_config.LinkColumn(
+                "Actie", display_text="Diepteanalyse →",
+                help="Open de fonds-diepteanalyse."),
+            'name': st.column_config.TextColumn("Fonds"),
+            'category': st.column_config.TextColumn("Categorie"),
+            'aum_euro_bn': st.column_config.NumberColumn("AUM (€ Bn)", format="%.1f"),
+            'benchmark_providers': st.column_config.TextColumn("Benchmark-providers", width="medium"),
+            'bron': st.column_config.TextColumn("Bron", width="small"),
+            'benchmarks_raw': st.column_config.TextColumn("Benchmarks (ruw, uit jaarverslag)", width="large"),
+        },
+    )
+    st.caption(
+        "⚠ Ruwe benchmarknamen zijn regex-extracties en kunnen afgekapt zijn; "
+        "AEX-treffers kunnen ruis zijn. Geërfde kringen-waarden zijn een "
+        "aanname op basis van het APF-platform, geen eigen verslaglegging."
+    )
+
 
 # ==========================================
 # PAGE 4: WTP TRACKER
@@ -2704,6 +2816,8 @@ _PG_EQUITY = st.Page(page_equity_strategy, title="Aandelenstrategie",
                      icon="🎯", url_path="aandelenstrategie")
 _PG_MANAGERS = st.Page(page_asset_managers, title="Vermogensbeheerders",
                        icon="🏛️", url_path="beheerders")
+_PG_BENCHMARKS = st.Page(page_benchmarks, title="Benchmarks",
+                         icon="📏", url_path="benchmarks")
 _PG_WTP = st.Page(page_wtp_tracker, title="WTP-tracker", icon="🔄", url_path="wtp")
 _PG_ESG = st.Page(page_esg_sfdr, title="ESG- en SFDR-tracker",
                   icon="🌱", url_path="esg")
@@ -2713,7 +2827,7 @@ _PG_BEGRIPPEN = st.Page(page_begrippenlijst, title="Begrippenlijst",
 _NAV = {
     "Overzicht": [_PG_OVERVIEW, _PG_TRENDS, _PG_NEWS],
     "Fondsen": [_PG_DEEP_DIVE, _PG_COMPARE],
-    "Analyse": [_PG_DEKKING, _PG_EQUITY, _PG_MANAGERS],
+    "Analyse": [_PG_DEKKING, _PG_EQUITY, _PG_MANAGERS, _PG_BENCHMARKS],
     "Transitie & ESG": [_PG_WTP, _PG_ESG],
     "Hulpmiddelen": [_PG_BEGRIPPEN],
 }
