@@ -71,7 +71,11 @@ def export_to_excel(db_path, excel_path):
                 for row_idx, url_val in enumerate(df[url_col]):
                     if pd.notna(url_val):
                         # +1 because Excel rows are 1-indexed, and +1 again to skip the header row
-                        worksheet.write_url(row_idx + 1, col_idx, str(url_val), url_format, str(url_val))
+                        # Some rows contain local file paths instead of URLs; write those as plain text
+                        if str(url_val).startswith(('http://', 'https://')):
+                            worksheet.write_url(row_idx + 1, col_idx, str(url_val), url_format, str(url_val))
+                        else:
+                            worksheet.write_string(row_idx + 1, col_idx, str(url_val))
                         
         # Optional: auto-adjust column widths for readability based on header length
         for i, col in enumerate(df.columns):

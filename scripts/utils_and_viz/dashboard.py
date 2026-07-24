@@ -2580,6 +2580,92 @@ def page_begrippenlijst():
 
 
 # ==========================================
+# PAGE: JAARVERSLAG-ANALYSES (overzicht van fund_analysis)
+# ==========================================
+def page_jaarverslag_analyses():
+    st.header("📋 Jaarverslag-analyses")
+    st.markdown(
+        "Beknopte, per fonds samengevatte analyses van de meest recente jaarverslagen — "
+        "samenvatting, highlights, aandachtspunten, risico's en de status van de Wtp-transitie. "
+        "De analyses zijn LLM-gegenereerd uit de jaarverslag-PDF's (en waar nodig handmatig aangevuld)."
+    )
+
+    df = load_data("""
+        SELECT fa.fund_id, f.name AS fund_name, f.category, fa.fiscal_year,
+               fa.summary, fa.highlights_json, fa.lowlights_json,
+               fa.key_risks_json, fa.transitie_status, fa.source_pdf, fa.generated_at
+        FROM fund_analysis fa
+        JOIN funds f ON f.id = fa.fund_id
+        ORDER BY fa.fiscal_year DESC, f.name ASC
+    """)
+    if df.empty:
+        st.info(
+            "Nog geen jaarverslag-analyses beschikbaar. Genereer ze met de lokale "
+            "LLM-extractor: `python3 scripts/document_parsing/llm_extract_analysis.py`."
+        )
+        return
+
+    years = sorted(df['fiscal_year'].dropna().astype(int).unique(), reverse=True)
+    c1, c2 = st.columns([1, 2])
+    with c1:
+        year_sel = st.multiselect("Boekjaar", years, default=years)
+    with c2:
+        q = st.text_input("Zoek in fondsnaam of samenvatting", "")
+
+    view = df[df['fiscal_year'].isin(year_sel)] if year_sel else df.iloc[0:0]
+    if q:
+        ql = q.lower()
+        view = view[view.apply(
+            lambda r: ql in str(r['fund_name']).lower()
+            or ql in str(r['summary'] or '').lower(), axis=1)]
+
+    st.caption(f"{len(view)} van {len(df)} analyses "
+               f"({df['fund_id'].nunique()} fondsen, boekjaren {min(years)}–{max(years)})")
+
+    import json as _json
+
+    def _bullets(label, raw):
+        if not raw:
+            return
+        try:
+            items = _json.loads(raw)
+        except Exception:
+            return
+        if not items:
+            return
+        st.markdown(f"**{label}**")
+        for b in items:
+            st.markdown(f"- {b}")
+
+    for _, r in view.iterrows():
+        with st.container(border=True):
+            top_l, top_r = st.columns([4, 1])
+            with top_l:
+                st.markdown(f"#### {r['fund_name']}")
+                meta = badge(f"FY {int(r['fiscal_year'])}", "blue")
+                if pd.notnull(r['category']) and r['category']:
+                    meta += " " + badge(str(r['category']), "outline")
+                st.markdown(meta, unsafe_allow_html=True)
+            with top_r:
+                st.button(
+                    "🔍 Diepteanalyse",
+                    key=f"jv_jump_{r['fund_id']}_{int(r['fiscal_year'])}",
+                    on_click=_queue_fund_jump, args=(r['fund_name'],),
+                    use_container_width=True,
+                )
+            if r['summary']:
+                st.markdown(r['summary'])
+            with st.expander("Details — highlights, aandachtspunten, risico's"):
+                _bullets("Highlights", r['highlights_json'])
+                _bullets("Aandachtspunten", r['lowlights_json'])
+                _bullets("Belangrijkste risico's", r['key_risks_json'])
+                if r['transitie_status']:
+                    st.markdown(f"**Wtp-transitie**  \n{r['transitie_status']}")
+                if r['source_pdf']:
+                    st.caption(f"Bron: `{r['source_pdf']}` · gegenereerd {r['generated_at']}")
+
+
+# ==========================================
 # PAGE: VRAAG HET DE DATA (text-to-SQL, self-hosted only)
 # ==========================================
 def page_ask_data():
@@ -2808,6 +2894,8 @@ _PG_DEEP_DIVE = st.Page(page_fund_deep_dive, title="Fonds-diepteanalyse",
                         icon="🔍", url_path="fonds")
 _PG_COMPARE = st.Page(page_fund_comparison, title="Fondsvergelijking",
                       icon="⚖️", url_path="vergelijk")
+_PG_ANALYSES = st.Page(page_jaarverslag_analyses, title="Jaarverslag-analyses",
+                       icon="📋", url_path="jaarverslag-analyses")
 _PG_TRENDS = st.Page(page_trends, title="Trends", icon="📈", url_path="trends")
 _PG_NEWS = st.Page(page_news, title="Sectornieuws", icon="📰", url_path="nieuws")
 _PG_DEKKING = st.Page(page_dekkingsgraad, title="Dekkingsgraad-analyse",
@@ -2826,7 +2914,7 @@ _PG_BEGRIPPEN = st.Page(page_begrippenlijst, title="Begrippenlijst",
 
 _NAV = {
     "Overzicht": [_PG_OVERVIEW, _PG_TRENDS, _PG_NEWS],
-    "Fondsen": [_PG_DEEP_DIVE, _PG_COMPARE],
+    "Fondsen": [_PG_DEEP_DIVE, _PG_COMPARE, _PG_ANALYSES],
     "Analyse": [_PG_DEKKING, _PG_EQUITY, _PG_MANAGERS, _PG_BENCHMARKS],
     "Transitie & ESG": [_PG_WTP, _PG_ESG],
     "Hulpmiddelen": [_PG_BEGRIPPEN],
