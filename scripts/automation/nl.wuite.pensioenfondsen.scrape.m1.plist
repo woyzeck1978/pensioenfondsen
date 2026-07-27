@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Dagelijkse scrape op de MacBook Pro M1. Install:
+    cp scripts/automation/nl.wuite.pensioenfondsen.scrape.plist ~/Library/LaunchAgents/
+    launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/nl.wuite.pensioenfondsen.scrape.plist
+  Runs scrape_m1.sh daily at 06:00 (before the 06:30 pull-job). The mini's
+  clone is a normal dir (not Drive), so NO .app/Full-Disk-Access hack is needed
+  — this replaces the old MBP launchd+.app chain.
+-->
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>nl.wuite.pensioenfondsen.scrape</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/zsh</string>
+    <string>/Users/webkowuite/pensioenfondsen-app/scripts/automation/scrape_m1.sh</string>
+  </array>
+  <key>StartCalendarInterval</key>
+  <dict><key>Hour</key><integer>6</integer><key>Minute</key><integer>0</integer></dict>
+  <key>RunAtLoad</key><false/>
+  <key>ProcessType</key><string>Background</string>
+  <key>StandardOutPath</key><string>/Users/webkowuite/pensioenfondsen-app/logs/server/scrape.launchd.out.log</string>
+  <key>StandardErrorPath</key><string>/Users/webkowuite/pensioenfondsen-app/logs/server/scrape.launchd.err.log</string>
+</dict>
+</plist>
