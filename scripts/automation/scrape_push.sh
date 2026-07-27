@@ -75,15 +75,25 @@ after=$(sqlite3 "$DB_REL" "
 echo
 echo "[post] scraped_documents=$(echo $after | cut -d'|' -f1)  news_articles=$(echo $after | cut -d'|' -f2)"
 
+# De scraper heeft in het verleden cijfers van het ene fonds in het record van
+# het andere gezet — deelnemersaantallen die niet optelden, identieke
+# uitsplitsingen bij ongerelateerde fondsen, hetzelfde fonds twee keer onder een
+# andere naam. Zulke fouten vallen in het dashboard niet op, dus we sporen ze
+# hier op. Bewust NIET blokkerend: een datafout mag de dataverzameling niet
+# stilleggen, het gaat erom dat het in het log staat.
+echo
+echo "[3/4] datakwaliteitscontrole"
+"$PYTHON" -u scripts/db_management/check_data_quality.py || echo "[warn] controle gaf een foutcode — zie hierboven"
+
 # Skip commit if DB is byte-identical to HEAD (rare but possible)
 if "$GIT" diff --quiet -- "$DB_REL"; then
-    echo "[3/3] geen DB-verandering — niets te committen."
+    echo "[4/4] geen DB-verandering — niets te committen."
     echo "done $(date '+%Y-%m-%d %H:%M:%S %Z')"
     exit 0
 fi
 
 echo
-echo "[3/3] commit + push"
+echo "[4/4] commit + push"
 "$GIT" add "$DB_REL"
 "$GIT" commit -m "auto: bi-daily scrape ($(date '+%Y-%m-%d %H:%M'))" || { echo "[FATAL] commit faalde" >&2; exit 5; }
 
