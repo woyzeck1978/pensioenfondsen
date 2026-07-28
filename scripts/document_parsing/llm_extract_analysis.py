@@ -80,6 +80,33 @@ def build_inventory() -> dict[int, list[tuple[int, str]]]:
     return by_fund
 
 
+def parse_pages(spec: str) -> list[int]:
+    """'6-10' of '6,7,8' -> [6,7,8,9,10]. Voor als de automatische paginakeuze
+    ernaast zit en je zelf wilt aanwijzen welk hoofdstuk het narratief bevat."""
+    uit: list[int] = []
+    for deel in spec.split(","):
+        deel = deel.strip()
+        if not deel:
+            continue
+        if "-" in deel:
+            a, b = deel.split("-", 1)
+            uit.extend(range(int(a), int(b) + 1))
+        else:
+            uit.append(int(deel))
+    return sorted(set(uit))
+
+
+def pages_as_context(pdf_path: str, pages: list[int]) -> tuple[str, list[int], int]:
+    doc = fitz.open(pdf_path)
+    n_pages = len(doc)
+    geldig = [p for p in pages if 1 <= p <= n_pages]
+    ctx = "\n\n--- BREAK ---\n\n".join(
+        f"[page {p}]\n{doc[p - 1].get_text().strip()[:2400]}" for p in geldig
+    )
+    doc.close()
+    return ctx, geldig, n_pages
+
+
 def pick_pdf_for_year(items, prefer_year: int | None):
     """Return (year, path). If prefer_year given and present, use that. Else newest."""
     if prefer_year is not None:
@@ -95,30 +122,72 @@ def _is_toc_page(text: str) -> bool:
     if len(lines) < 8:
         return False
     bare_nums = sum(1 for ln in lines if re.fullmatch(r"\d{1,3}", ln))
-    return bare_nums / len(lines) > 0.30
+    # Ook de variant met stippellijnen: "Voorwoord .......... 6"
+    leaders = sum(1 for ln in lines if re.search(r"\.{4,}\s*\d{1,3}$", ln))
+    return (bare_nums + leaders) / len(lines) > 0.30
+
+
+# Bijlagen die vol staan met dezelfde trefwoorden als het bestuursverslag, maar
+# geen narratief bevatten: de nalevingstabellen achterin het jaarverslag.
+RE_BIJLAGE = re.compile(
+    r"checklist\s+code\s+pensioenfondsen|normen\s+uit\s+de\s+code|"
+    r"naleving\s+code\s+pensioenfondsen",
+    re.I,
+)
+KOP_ZONE = 200  # tekens vanaf de bovenkant die als paginakop gelden
+
+
+def _pagina_scores(text: str) -> tuple[int, int, int]:
+    """(kop, vermelding, zinnen). Elk patroon telt hooguit één keer mee.
+
+    Tellen hoe váák een trefwoord voorkomt werkt averechts: een nalevingstabel
+    die 'bestuursverslag' acht keer noemt wint het dan van het hoofdstuk dat
+    zichzelf één keer zo noemt. Wat telt is of het woord er staat, en vooral of
+    het bovenaan de pagina staat — dan is het een hoofdstuktitel.
+    """
+    kop_tekst = text[:KOP_ZONE]
+    kop = sum(1 for p in HEADER_PATTERNS if p.search(kop_tekst))
+    vermelding = sum(1 for p in HEADER_PATTERNS if p.search(text))
+    zinnen = min(5, len(re.findall(r"\.\s+[A-Z]", text)))
+    return kop, vermelding, zinnen
 
 
 def find_narrative_pages(pdf_path: str, max_pages: int = 5) -> tuple[str, list[int], int]:
     doc = fitz.open(pdf_path)
-    scored = []  # (score, page_no, text)
+    kandidaten = []  # (paginanummer, kop, vermelding, zinnen, tekst)
+    koppen: set[int] = set()
     for i, page in enumerate(doc):
         if i >= 200:
             break
         text = page.get_text()
-        if _is_toc_page(text):
+        if _is_toc_page(text) or RE_BIJLAGE.search(text[:400]):
             continue
-        sentence_score = min(5, len(re.findall(r"\.\s+[A-Z]", text)))
-        if sentence_score < 2:
+        kop, vermelding, zinnen = _pagina_scores(text)
+        # Titelpagina's bevatten vaak nauwelijks lopende tekst. Ze zijn zelf geen
+        # goede context, maar markeren wel waar een hoofdstuk begint -- dus
+        # noteren we ze los van het zinnenfilter, anders krijgt de pagina erna
+        # nooit zijn vervolgbonus.
+        if kop:
+            koppen.add(i + 1)
+        if zinnen < 2:
             continue
-        header_score = sum(len(p.findall(text)) for p in HEADER_PATTERNS)
-        score = header_score * 8 + sentence_score
-        scored.append((score, i + 1, text))
+        kandidaten.append((i + 1, kop, vermelding, zinnen, text))
     n_pages = len(doc)
     doc.close()
-    if not scored:
+    if not kandidaten:
         return "", [], n_pages
-    scored.sort(reverse=True)
-    chosen = sorted(scored[:max_pages], key=lambda x: x[1])  # original order
+
+    # Een pagina hoort bij het hoofdstuk dat hooguit twee pagina's eerder begon.
+    # Dat signaal moet even zwaar wegen als een kop op de pagina zelf: de
+    # titelpagina bevat meestal alleen de titel, het verhaal staat erna.
+    scored = []
+    for pagina, kop, vermelding, zinnen, text in kandidaten:
+        hoort_bij_hoofdstuk = kop or (pagina - 1) in koppen or (pagina - 2) in koppen
+        score = (20 if hoort_bij_hoofdstuk else 0) + vermelding * 3 + zinnen
+        scored.append((score, pagina, text))
+
+    scored.sort(key=lambda x: (-x[0], x[1]))
+    chosen = sorted(scored[:max_pages], key=lambda x: x[1])  # weer op paginavolgorde
     pages = [c[1] for c in chosen]
     ctx = "\n\n--- BREAK ---\n\n".join(
         f"[page {n}]\n{t.strip()[:2400]}" for _, n, t in chosen
@@ -194,6 +263,8 @@ def main():
     ap.add_argument("--top", type=int, default=0, help="top-N by AUM")
     ap.add_argument("--fiscal-year", type=int, default=None,
                     help="prefer this fiscal year (default: newest PDF)")
+    ap.add_argument("--pages", type=str, default="",
+                    help="paginas handmatig aanwijzen, bv. 6-10 (alleen zinvol bij 1 fonds)")
     ap.add_argument("--force", action="store_true",
                     help="overwrite existing fund_analysis rows")
     args = ap.parse_args()
@@ -240,7 +311,10 @@ def main():
                 log(f"[{i}/{n}] fid={fid} {year} already done — skip")
                 skips += 1
                 continue
-            ctx, pages, n_pdf = find_narrative_pages(pdf)
+            if args.pages:
+                ctx, pages, n_pdf = pages_as_context(pdf, parse_pages(args.pages))
+            else:
+                ctx, pages, n_pdf = find_narrative_pages(pdf)
             if not ctx:
                 log(f"[{i}/{n}] fid={fid} {year} {os.path.basename(pdf)[:50]} SKIP no narrative pages")
                 skips += 1

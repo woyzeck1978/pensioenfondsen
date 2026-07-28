@@ -103,6 +103,44 @@ def apf_dubbeltelling(con):
     return uit
 
 
+def dnb_koppeling(con):
+    """Rapporteurs in de verse DNB-feed die aan geen enkel fonds gekoppeld zijn.
+
+    Hernoemen of samenvoegen van fondsen is veilig binnen de database, maar
+    breekt de brug naar externe bronnen die op naam matchen. Dat viel in juli
+    2026 pas op toen BPFBouw met 69,5 mld stilletjes uit de DNB-reeks verdween.
+    Alleen rapporteurs met data in de nieuwste periode tellen mee: wie al jaren
+    niets meer aanlevert is opgeheven, niet losgeraakt.
+    """
+    import json
+    pad = os.path.join(BASE_DIR, "data", "processed", "dnb_per_fund_quarterly_raw.json")
+    if not os.path.exists(pad):
+        return []
+    with open(pad) as f:
+        feed = json.load(f)
+    rijen = feed.get("data", [])
+    if not rijen:
+        return []
+    laatste = max(r[2] for r in rijen)
+    actief = {r[0] for r in rijen if r[2] == laatste}
+
+    # De loader matcht in drie stappen (handmatig, exact, deelstring). Die logica
+    # hier nabouwen zou vals alarm geven, dus we gebruiken zijn eigen functie.
+    try:
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        from load_dnb_quarterly import build_name_map, MANUAL_MAP
+    except Exception as e:
+        return [f"kon load_dnb_quarterly niet importeren om de koppeling te toetsen: {e}"]
+
+    db_names = con.execute(f"SELECT id, name FROM funds WHERE {LEVEND}").fetchall()
+    mapping = build_name_map([(r["id"], r["name"]) for r in db_names], sorted(actief))
+    # Op None gezette namen zijn bewust uitgesloten — DNB heeft soms twee
+    # rapporteurs waar wij één fonds voeren; die mogen niet dubbel tellen.
+    bewust = {k for k, v in MANUAL_MAP.items() if v is None}
+    return [f"{n} — levert nog aan maar wordt door de loader overgeslagen"
+            for n in sorted(actief) if n not in mapping and n not in bewust]
+
+
 CONTROLES = [
     ("Deelnemers tellen niet op tot het totaal", deelnemers_inconsistent),
     ("Zelfde deelnemersuitsplitsing bij meerdere fondsen",
@@ -111,6 +149,7 @@ CONTROLES = [
      lambda c: gedeelde_waarden(c, ["deelnemers_totaal"], "", drempel=1000)),
     ("Meerdere fondsen op dezelfde website", dubbele_fondsen),
     ("APF-moeder telt dubbel met zijn kringen", apf_dubbeltelling),
+    ("DNB-rapporteurs zonder koppeling aan een fonds", dnb_koppeling),
 ]
 
 

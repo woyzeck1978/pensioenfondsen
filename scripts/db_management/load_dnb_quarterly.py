@@ -30,15 +30,17 @@ MANUAL_MAP: dict[str, int] = {
     # gebruikt eigen kringnummers; daarnaast brak het hernoemen van BPFBouw en
     # het toevoegen van twintig APF-kringen de automatische naamkoppeling.
     "Bouwnijverheid": 15,
+    "Kring flexible regeling (Hnp)": 229,
+    "Pensioenkring Cargill (Hnp)": 230,
+    "BPF Foodservice": 56,
     "Pensioenkring CRH (Hnp)": 187,
     "CRH": 187,
-    "ING Bank CDC fonds": 108,
     "Wolters Kluwer Nederland": 194,
     "Pensioenkring Van Lanschot (Hnp)": 193,
     "Shell Nederland": 51,
     # Centraal Beheer APF — DNB noemt dit APF "Achmea"
     "Kring 1 - DC (Achmea)": 209,
-    "Kring D-B evenwicht (Achmea)": 210,
+    "Kring DB evenwicht (Achmea)": 210,
     "Kring 4 - Koopkracht (Achmea)": 211,
     "Kring 2 - DB premie (Achmea)": 212,
     "Kring 3 - Stabiliteit (Achmea)": 213,

@@ -1,8 +1,8 @@
 # DNB ↔ pension_funds.db name mismatches
 
-Generated 2026-07-28T10:10:06
+Generated 2026-07-28T10:20:30
 
-DB funds: 199 | DNB rapporteurs: 188 | matched: 172
+DB funds: 201 | DNB rapporteurs: 188 | matched: 174
 
 ## DNB rapporteurs without a DB match
 
@@ -13,11 +13,8 @@ DB funds: 199 | DNB rapporteurs: 188 | matched: 172
 - `Grolsche bierbrouwerij`
 - `Honeywell`
 - `ING Bank CDC fonds`
-- `Kring DB evenwicht (Achmea)`
-- `Kring flexible regeling (Hnp)`
 - `Lanschot`
 - `Nedlloyd`
-- `Pensioenkring Cargill (Hnp)`
 - `Pensura`
 - `Schoonmaak- en Glazenwassersbedrijf`
 - `Shell Nederland`
@@ -35,6 +32,7 @@ DB funds: 199 | DNB rapporteurs: 188 | matched: 172
 - [138] `Allianz PPI`
 - [53] `Athora (Zwitserleven)`
 - [44] `BP / Pensioenfonds BP`
+- [152] `BPF Foodservice`
 - [54] `BPFBouw`
 - [140] `Be Frank PPI`
 - [65] `Centraal Beheer APF`
@@ -46,7 +44,6 @@ DB funds: 199 | DNB rapporteurs: 188 | matched: 172
 - [169] `Kring A / AZL en Unisys (De Nationale)`
 - [22] `Levensmiddelen / BPFL (Food Industry)`
 - [145] `Nationale-Nederlanden`
-- [27] `Nederlandse Groothandel / SPNG (Dutch Wholesale)`
 - [59] `OAK (Furniture, Organ Building, Exhibition Building, and Timber Trade)`
 - [55] `PME`
 - [206] `Pensioenfonds Ernst & Young`
@@ -72,7 +69,7 @@ DB funds: 199 | DNB rapporteurs: 188 | matched: 172
 - [substr] fid=10 `Architectenbureaus (Architecture Firms)` ⇄ DNB `Architectenbureaus`
 - [substr] fid=78 `Atos` ⇄ DNB `Atos Origin`
 - [exact] fid=80 `Avery Dennison` ⇄ DNB `Avery Dennison`
-- [exact] fid=152 `BPF Foodservice` ⇄ DNB `BPF Foodservice`
+- [manual] fid=56 `Foodservice & Groothandel in Levensmiddelen (Foodservice & Wholesale)` ⇄ DNB `BPF Foodservice`
 - [manual] fid=16 `BPL Pensioen (Agriculture)` ⇄ DNB `BPL`
 - [substr] fid=11 `Bakkersbedrijf (Bakeries)` ⇄ DNB `Bakkersbedrijf BPF`
 - [substr] fid=12 `Banden- en Wielenbranche (Tire and Wheel Branch)` ⇄ DNB `Banden- en Wielenbranche`
@@ -101,7 +98,7 @@ DB funds: 199 | DNB rapporteurs: 188 | matched: 172
 - [exact] fid=97 `Gasunie` ⇄ DNB `Gasunie`
 - [substr] fid=98 `Gazelle` ⇄ DNB `Gazelle psf`
 - [exact] fid=100 `Geveke` ⇄ DNB `Geveke`
-- [substr] fid=56 `Foodservice & Groothandel in Levensmiddelen (Foodservice & Wholesale)` ⇄ DNB `Groothandel`
+- [substr] fid=27 `Nederlandse Groothandel / SPNG (Dutch Wholesale)` ⇄ DNB `Groothandel`
 - [exact] fid=103 `HAL` ⇄ DNB `HAL`
 - [exact] fid=102 `Hagee` ⇄ DNB `Hagee`
 - [manual] fid=104 `Haskoning DHV` ⇄ DNB `HaskoningDHV`
@@ -133,7 +130,7 @@ DB funds: 199 | DNB rapporteurs: 188 | matched: 172
 - [exact] fid=167 `Kring CK1 (Hnp)` ⇄ DNB `Kring CK1 (Hnp)`
 - [manual] fid=220 `Kring Chemours (Centraal Beheer)` ⇄ DNB `Kring Chemours (Achmea)`
 - [exact] fid=168 `Kring D (De Nationale)` ⇄ DNB `Kring D (De Nationale)`
-- [manual] fid=210 `Kring DB Evenwicht (Centraal Beheer)` ⇄ DNB `Kring D-B evenwicht (Achmea)`
+- [manual] fid=210 `Kring DB Evenwicht (Centraal Beheer)` ⇄ DNB `Kring DB evenwicht (Achmea)`
 - [substr] fid=66 `De Nationale APF` ⇄ DNB `Kring DB-A (De Nationale)`
 - [manual] fid=224 `Kring E-DC (De Nationale)` ⇄ DNB `Kring DC (De Nationale)`
 - [manual] fid=218 `Kring Deutsche Bank Nederland (Centraal Beheer)` ⇄ DNB `Kring Deutche Bank NL (Achmea)`
@@ -155,6 +152,7 @@ DB funds: 199 | DNB rapporteurs: 188 | matched: 172
 - [manual] fid=217 `Kring Sligro Food Group (Centraal Beheer)` ⇄ DNB `Kring Sligro (Achmea)`
 - [exact] fid=177 `Kring TotalEnergies NL (Stap)` ⇄ DNB `Kring TotalEnergies NL (Stap)`
 - [manual] fid=216 `Kring equensWorldline (Centraal Beheer)` ⇄ DNB `Kring equensWorldline (Achmea)`
+- [manual] fid=229 `Kring Flexibele Regeling (HNPF)` ⇄ DNB `Kring flexible regeling (Hnp)`
 - [exact] fid=178 `Levensmiddelenbedrijf` ⇄ DNB `Levensmiddelenbedrijf`
 - [exact] fid=112 `Lloyd's Register Nederland` ⇄ DNB `Lloyd's Register Nederland`
 - [substr] fid=4 `Loodsen (Pilots)` ⇄ DNB `Loodsen`
@@ -182,6 +180,7 @@ DB funds: 199 | DNB rapporteurs: 188 | matched: 172
 - [exact] fid=185 `Pensioenkring Astellas (Stap)` ⇄ DNB `Pensioenkring Astellas (Stap)`
 - [exact] fid=186 `Pensioenkring Ballast Nedam (Stap)` ⇄ DNB `Pensioenkring Ballast Nedam (Stap)`
 - [manual] fid=187 `Pensioenkring CRH (Hnp)` ⇄ DNB `Pensioenkring CRH (Hnp)`
+- [manual] fid=230 `Pensioenkring Cargill (HNPF)` ⇄ DNB `Pensioenkring Cargill (Hnp)`
 - [exact] fid=188 `Pensioenkring GE Nederland (Stap)` ⇄ DNB `Pensioenkring GE Nederland (Stap)`
 - [substr] fid=228 `Kring IFF (Stap)` ⇄ DNB `Pensioenkring IFF (Stap)`
 - [exact] fid=189 `Pensioenkring OWASE (Hnp)` ⇄ DNB `Pensioenkring OWASE (Hnp)`
