@@ -11,6 +11,36 @@ import concurrent.futures
 # jaarverslagen.html) so we don't miss PDFs reachable only via a deep nav link.
 RE_FOLLOW_HOMEPAGE_LINK = re.compile(r"jaarverslag|annual.?report|publicatie", re.I)
 
+# Steeds meer fondsen zetten hun documenten op een extern documentplatform. De
+# link wijst dan naar een ander domein en heeft geen .pdf-extensie, maar een
+# download-endpoint met een id — PDN publiceerde het jaarverslag 2025 als
+# pdn.clients.aws.decisiontool.nl/api/downloadFile?uuid=... terwijl de jaren
+# ervoor gewoon .../jaarverslagen/nl/PDN NL Jaarverslag 2024.pdf waren. Zonder
+# deze uitzondering vallen juist de nieuwste verslagen buiten de scrape.
+DOC_PLATFORM_HOSTS = ("decisiontool.nl",)
+RE_DOC_ENDPOINT = re.compile(r"/(?:api/)?(?:download|getfile|geturl|document)", re.I)
+RE_DOC_TEXT = re.compile(
+    r"jaarverslag|annual.?report|bestuursverslag|jaarbericht|transitieplan|"
+    r"reglement|abtn|nieuwsbrief|factsheet",
+    re.I,
+)
+DOC_EXTENSIONS = ('.pdf', '.docx', '.xlsx', '.doc')
+
+
+def _op_documentplatform(netloc):
+    return any(host in netloc for host in DOC_PLATFORM_HOSTS)
+
+
+def _is_document_link(parsed, text):
+    """Documenten met een extensie, plus download-endpoints op een documentplatform."""
+    # Splitsen op de query, anders mist een link als rapport.pdf?download=1.
+    if parsed.path.lower().endswith(DOC_EXTENSIONS):
+        return True
+    if _op_documentplatform(parsed.netloc):
+        return bool(RE_DOC_ENDPOINT.search(parsed.path) or RE_DOC_TEXT.search(text or ""))
+    return False
+
+
 def get_db_connection():
     conn = sqlite3.connect('../../data/processed/pension_funds.db')
     conn.row_factory = sqlite3.Row
@@ -32,12 +62,14 @@ def extract_links_from_page(url, soup, base_domain):
         full_url = urljoin(url, href)
         parsed = urlparse(full_url)
         
-        if base_domain not in parsed.netloc:
+        # Buiten het eigen domein volgen we niets, behalve documentplatforms:
+        # daar staan de PDF's die het fonds zelf publiceert.
+        if base_domain not in parsed.netloc and not _op_documentplatform(parsed.netloc):
             continue
-            
+
         doc_type = None
-        
-        if full_url.lower().endswith(('.pdf', '.docx', '.xlsx', '.doc')):
+
+        if _is_document_link(parsed, text):
             doc_type = 'document'
         elif ('/nieuws/' in full_url.lower() or '/actueel/' in full_url.lower()) and full_url != url:
             path_parts = [p for p in parsed.path.split('/') if p]
