@@ -1,8 +1,8 @@
 # DNB ↔ pension_funds.db name mismatches
 
-Generated 2026-05-13T20:40:37
+Generated 2026-07-28T10:10:06
 
-DB funds: 179 | DNB rapporteurs: 186 | matched: 153
+DB funds: 199 | DNB rapporteurs: 188 | matched: 172
 
 ## DNB rapporteurs without a DB match
 
@@ -13,30 +13,14 @@ DB funds: 179 | DNB rapporteurs: 186 | matched: 153
 - `Grolsche bierbrouwerij`
 - `Honeywell`
 - `ING Bank CDC fonds`
-- `Kring 1 - DC (Achmea)`
-- `Kring 2 - DB premie (Achmea)`
-- `Kring 3 - Stabiliteit (Achmea)`
-- `Kring 4 - Koopkracht (Achmea)`
-- `Kring Bavaria (Achmea)`
-- `Kring Chemours (Achmea)`
 - `Kring DB evenwicht (Achmea)`
-- `Kring Deutche Bank NL (Achmea)`
-- `Kring ES Nederland (Achmea)`
-- `Kring Grolsch (Achmea)`
-- `Kring HP Nederland (Achmea)`
-- `Kring HPE (Achmea)`
-- `Kring RBS (Achmea)`
-- `Kring Sligro (Achmea)`
-- `Kring equensWorldline (Achmea)`
 - `Kring flexible regeling (Hnp)`
+- `Lanschot`
 - `Nedlloyd`
 - `Pensioenkring Cargill (Hnp)`
-- `Pensioenkring IFF (Stap)`
-- `Pensioenkring Van Lanschot (Hnp)`
 - `Pensura`
 - `Schoonmaak- en Glazenwassersbedrijf`
 - `Shell Nederland`
-- `Staples`
 - `Tandartsen en Tandarts-Specialisten`
 - `Wolters Kluwer Nederland`
 - `YARA Nederland`
@@ -59,6 +43,7 @@ DB funds: 179 | DNB rapporteurs: 186 | matched: 153
 - [99] `GE Artesia Bank`
 - [101] `Gomacon`
 - [109] `J&J`
+- [169] `Kring A / AZL en Unisys (De Nationale)`
 - [22] `Levensmiddelen / BPFL (Food Industry)`
 - [145] `Nationale-Nederlanden`
 - [27] `Nederlandse Groothandel / SPNG (Dutch Wholesale)`
@@ -96,7 +81,7 @@ DB funds: 179 | DNB rapporteurs: 186 | matched: 153
 - [manual] fid=29 `Openbare Bibliotheken / POB (Public Libraries)` ⇄ DNB `Bibliotheken openbare`
 - [substr] fid=117 `Nederlandse Bisdommen` ⇄ DNB `Bisdommen`
 - [manual] fid=18 `HiBiN (Building Materials Trade)` ⇄ DNB `Bouwmaterialen`
-- [substr] fid=15 `Bouw / Bouwnijverheid (Construction)` ⇄ DNB `Bouwnijverheid`
+- [manual] fid=15 `Bouw / BPFBouw (Construction)` ⇄ DNB `Bouwnijverheid`
 - [exact] fid=207 `Pensioenfonds British American Tobacco` ⇄ DNB `British American Tobacco`
 - [exact] fid=81 `Brocacef` ⇄ DNB `Brocacef`
 - [exact] fid=82 `Campina` ⇄ DNB `Campina`
@@ -136,24 +121,40 @@ DB funds: 179 | DNB rapporteurs: 186 | matched: 153
 - [substr] fid=20 `Kappersbedrijf (Hairdressers)` ⇄ DNB `Kappersbedrijf`
 - [exact] fid=110 `KAS BANK` ⇄ DNB `Kas Bank`
 - [substr] fid=21 `Koopvaardij (Merchant Navy)` ⇄ DNB `Koopvaardij`
+- [manual] fid=209 `Kring DC (Centraal Beheer)` ⇄ DNB `Kring 1 - DC (Achmea)`
+- [manual] fid=212 `Kring DB Premie (Centraal Beheer)` ⇄ DNB `Kring 2 - DB premie (Achmea)`
+- [manual] fid=213 `Kring DB Stabiliteit (Centraal Beheer)` ⇄ DNB `Kring 3 - Stabiliteit (Achmea)`
+- [manual] fid=211 `Kring DB Koopkracht (Centraal Beheer)` ⇄ DNB `Kring 4 - Koopkracht (Achmea)`
 - [exact] fid=163 `Kring AFM (De Nationale)` ⇄ DNB `Kring AFM (De Nationale)`
-- [exact] fid=164 `Kring ANWB (De Nationale)` ⇄ DNB `Kring ANWB (De Nationale)`
+- [exact] fid=164 `Kring ANWB (De Nationale)` ⇄ DNB `Kring ANWB (De nationale)`
 - [exact] fid=165 `Kring Arcadis (Hnp)` ⇄ DNB `Kring Arcadis (Hnp)`
 - [exact] fid=166 `Kring B (De Nationale)` ⇄ DNB `Kring B (De Nationale)`
+- [manual] fid=223 `Kring Bavaria (Centraal Beheer)` ⇄ DNB `Kring Bavaria (Achmea)`
 - [exact] fid=167 `Kring CK1 (Hnp)` ⇄ DNB `Kring CK1 (Hnp)`
+- [manual] fid=220 `Kring Chemours (Centraal Beheer)` ⇄ DNB `Kring Chemours (Achmea)`
 - [exact] fid=168 `Kring D (De Nationale)` ⇄ DNB `Kring D (De Nationale)`
-- [exact] fid=169 `Kring DB-A (De Nationale)` ⇄ DNB `Kring DB-A (De Nationale)`
-- [substr] fid=66 `De Nationale APF` ⇄ DNB `Kring DC (De Nationale)`
+- [manual] fid=210 `Kring DB Evenwicht (Centraal Beheer)` ⇄ DNB `Kring D-B evenwicht (Achmea)`
+- [substr] fid=66 `De Nationale APF` ⇄ DNB `Kring DB-A (De Nationale)`
+- [manual] fid=224 `Kring E-DC (De Nationale)` ⇄ DNB `Kring DC (De Nationale)`
+- [manual] fid=218 `Kring Deutsche Bank Nederland (Centraal Beheer)` ⇄ DNB `Kring Deutche Bank NL (Achmea)`
 - [exact] fid=170 `Kring Douwe Egberts (Stap)` ⇄ DNB `Kring Douwe Egberts (Stap)`
+- [manual] fid=221 `Kring ESN (Centraal Beheer)` ⇄ DNB `Kring ES Nederland (Achmea)`
 - [exact] fid=171 `Kring Eastman (Stap)` ⇄ DNB `Kring Eastman (Stap)`
 - [exact] fid=172 `Kring Forward (Unilever)` ⇄ DNB `Kring Forward (Unilever)`
-- [substr] fid=67 `Stap APF` ⇄ DNB `Kring Holland Casino (Stap)`
+- [manual] fid=225 `Kring G-Cargill (De Nationale)` ⇄ DNB `Kring G (De Nationale)`
+- [manual] fid=219 `Kring Grolsch (Centraal Beheer)` ⇄ DNB `Kring Grolsch (Achmea)`
+- [manual] fid=226 `Kring H NN CDC (De Nationale)` ⇄ DNB `Kring H (De Nationale)`
+- [manual] fid=222 `Kring HP Nederland (Centraal Beheer)` ⇄ DNB `Kring HP Nederland (Achmea)`
+- [manual] fid=214 `Kring HPE (Centraal Beheer)` ⇄ DNB `Kring HPE (Achmea)`
+- [exact] fid=227 `Kring Holland Casino (Stap)` ⇄ DNB `Kring Holland Casino (Stap)`
 - [exact] fid=173 `Kring McCain (De Nationale)` ⇄ DNB `Kring McCain (De Nationale)`
 - [exact] fid=174 `Kring Progress (Unilever)` ⇄ DNB `Kring Progress (Unilever)`
+- [manual] fid=215 `Kring RBS / NatWest (Centraal Beheer)` ⇄ DNB `Kring RBS (Achmea)`
 - [exact] fid=175 `Kring Roba (Hnp)` ⇄ DNB `Kring Roba (Hnp)`
 - [exact] fid=176 `Kring SVG (Stap)` ⇄ DNB `Kring SVG (Stap)`
+- [manual] fid=217 `Kring Sligro Food Group (Centraal Beheer)` ⇄ DNB `Kring Sligro (Achmea)`
 - [exact] fid=177 `Kring TotalEnergies NL (Stap)` ⇄ DNB `Kring TotalEnergies NL (Stap)`
-- [substr] fid=193 `Kring Van Lanschot (HNPF)` ⇄ DNB `Lanschot`
+- [manual] fid=216 `Kring equensWorldline (Centraal Beheer)` ⇄ DNB `Kring equensWorldline (Achmea)`
 - [exact] fid=178 `Levensmiddelenbedrijf` ⇄ DNB `Levensmiddelenbedrijf`
 - [exact] fid=112 `Lloyd's Register Nederland` ⇄ DNB `Lloyd's Register Nederland`
 - [substr] fid=4 `Loodsen (Pilots)` ⇄ DNB `Loodsen`
@@ -180,12 +181,14 @@ DB funds: 179 | DNB rapporteurs: 186 | matched: 153
 - [exact] fid=184 `Pensioenkring AON (Stap)` ⇄ DNB `Pensioenkring AON (Stap)`
 - [exact] fid=185 `Pensioenkring Astellas (Stap)` ⇄ DNB `Pensioenkring Astellas (Stap)`
 - [exact] fid=186 `Pensioenkring Ballast Nedam (Stap)` ⇄ DNB `Pensioenkring Ballast Nedam (Stap)`
-- [exact] fid=187 `Pensioenkring CRH (Hnp)` ⇄ DNB `Pensioenkring CRH (Hnp)`
+- [manual] fid=187 `Pensioenkring CRH (Hnp)` ⇄ DNB `Pensioenkring CRH (Hnp)`
 - [exact] fid=188 `Pensioenkring GE Nederland (Stap)` ⇄ DNB `Pensioenkring GE Nederland (Stap)`
+- [substr] fid=228 `Kring IFF (Stap)` ⇄ DNB `Pensioenkring IFF (Stap)`
 - [exact] fid=189 `Pensioenkring OWASE (Hnp)` ⇄ DNB `Pensioenkring OWASE (Hnp)`
 - [exact] fid=190 `Pensioenkring PepsiCo (Hnp)` ⇄ DNB `Pensioenkring PepsiCo (Hnp)`
 - [exact] fid=191 `Pensioenkring Randstad (Hnp)` ⇄ DNB `Pensioenkring Randstad (Hnp)`
 - [exact] fid=192 `Pensioenkring Sweco (Hnp)` ⇄ DNB `Pensioenkring Sweco (Hnp)`
+- [manual] fid=193 `Kring Van Lanschot (HNPF)` ⇄ DNB `Pensioenkring Van Lanschot (Hnp)`
 - [exact] fid=194 `Pensioenkring Wolters Kluwer NL (Hnp)` ⇄ DNB `Pensioenkring Wolters Kluwer NL (Hnp)`
 - [exact] fid=195 `Pensioenkring Xerox (Hnp)` ⇄ DNB `Pensioenkring Xerox (Hnp)`
 - [substr] fid=31 `Personeelsdiensten (Personnel Services)` ⇄ DNB `Personeelsdiensten`
@@ -209,6 +212,7 @@ DB funds: 179 | DNB rapporteurs: 186 | matched: 153
 - [substr] fid=51 `Shell (SSPF and SNPS schemes)` ⇄ DNB `Shell`
 - [substr] fid=128 `Smurfit Kappa` ⇄ DNB `Smurfit Kappa Nederland`
 - [exact] fid=130 `Sportfondsen` ⇄ DNB `Sportfondsen`
+- [substr] fid=67 `Stap APF` ⇄ DNB `Staples`
 - [exact] fid=131 `TDV` ⇄ DNB `TDV`
 - [exact] fid=133 `TNO` ⇄ DNB `TNO`
 - [substr] fid=132 `Thales Nederland` ⇄ DNB `Thales`

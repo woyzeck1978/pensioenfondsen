@@ -25,6 +25,38 @@ UNMATCHED_PATH = "../../data/processed/dnb_unmatched.md"
 # Manual overrides where automatic normalisation can't reconcile names.
 # Extend over time. Format: DNB rapporteur (exact, .strip()) -> funds.id.
 MANUAL_MAP: dict[str, int] = {
+    # --- Toegevoegd na de opschoning van juli 2026 -------------------------
+    # DNB hanteert voor de Centraal Beheer-kringen consequent "(Achmea)" en
+    # gebruikt eigen kringnummers; daarnaast brak het hernoemen van BPFBouw en
+    # het toevoegen van twintig APF-kringen de automatische naamkoppeling.
+    "Bouwnijverheid": 15,
+    "Pensioenkring CRH (Hnp)": 187,
+    "CRH": 187,
+    "ING Bank CDC fonds": 108,
+    "Wolters Kluwer Nederland": 194,
+    "Pensioenkring Van Lanschot (Hnp)": 193,
+    "Shell Nederland": 51,
+    # Centraal Beheer APF — DNB noemt dit APF "Achmea"
+    "Kring 1 - DC (Achmea)": 209,
+    "Kring D-B evenwicht (Achmea)": 210,
+    "Kring 4 - Koopkracht (Achmea)": 211,
+    "Kring 2 - DB premie (Achmea)": 212,
+    "Kring 3 - Stabiliteit (Achmea)": 213,
+    "Kring HPE (Achmea)": 214,
+    "Kring RBS (Achmea)": 215,
+    "Kring equensWorldline (Achmea)": 216,
+    "Kring Sligro (Achmea)": 217,
+    "Kring Deutche Bank NL (Achmea)": 218,
+    "Kring Grolsch (Achmea)": 219,
+    "Kring Chemours (Achmea)": 220,
+    "Kring ES Nederland (Achmea)": 221,
+    "Kring HP Nederland (Achmea)": 222,
+    "Kring Bavaria (Achmea)": 223,
+    # De Nationale APF — DNB gebruikt alleen de kringletter
+    "Kring DC (De Nationale)": 224,
+    "Kring G (De Nationale)": 225,
+    "Kring H (De Nationale)": 226,
+
     "ABP": 9,
     "APG": 76,            # DNB "APG" (if it appears) maps to APG asset manager pension fund
     "Personeelspensioenfonds APG": 76,
