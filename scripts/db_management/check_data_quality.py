@@ -165,6 +165,33 @@ def schrijfwijzen(con):
     return uit
 
 
+def regiogewichten(con):
+    """Geografische gewichten die niet kunnen kloppen.
+
+    De regiotabel bleek herschaald: waar een jaarverslag alleen 'Emerging
+    Markets: 7,0' meldde, stond er 100%. Bij ABP en PFZW leidde dat tot
+    'Nederland 100%', wat voor een wereldwijd beleggend fonds onmogelijk is.
+    Twee signalen verraden zulke vervuiling: één regio die precies honderd
+    procent claimt, en fondsen waarvan de regio's samen boven de honderd
+    uitkomen.
+    """
+    uit = []
+    try:
+        rijen = con.execute("""
+            SELECT e.fund_id, f.name, COUNT(*) n, SUM(e.weight_pct) som,
+                   MIN(e.region) regio, MAX(e.weight_pct) maxw
+            FROM equity_strategies e JOIN funds f ON f.id = e.fund_id
+            GROUP BY e.fund_id""").fetchall()
+    except sqlite3.Error:
+        return []
+    for r in rijen:
+        if r["n"] == 1 and r["maxw"] >= 100:
+            uit.append(f"{r['name'][:34]:36s} één regio ({r['regio']}) op {r['maxw']:.0f}%")
+        elif r["som"] and r["som"] > 105:
+            uit.append(f"{r['name'][:34]:36s} regio's tellen op tot {r['som']:.0f}%")
+    return uit
+
+
 CONTROLES = [
     ("Deelnemers tellen niet op tot het totaal", deelnemers_inconsistent),
     ("Zelfde deelnemersuitsplitsing bij meerdere fondsen",
@@ -175,6 +202,7 @@ CONTROLES = [
     ("APF-moeder telt dubbel met zijn kringen", apf_dubbeltelling),
     ("DNB-rapporteurs zonder koppeling aan een fonds", dnb_koppeling),
     ("Dezelfde partij onder meerdere schrijfwijzen", schrijfwijzen),
+    ("Geografische gewichten die niet kunnen kloppen", regiogewichten),
 ]
 
 
