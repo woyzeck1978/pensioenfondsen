@@ -20,6 +20,25 @@ Usage:
   python3 llm_extract_analysis.py --funds 13,111,32     # 3 FY2025 PDFs
   python3 llm_extract_analysis.py --top 30
   python3 llm_extract_analysis.py --funds 111 --force   # overschrijf
+  python3 llm_extract_analysis.py --funds 91 --pages 6-10 --force
+
+Twee dingen om te weten voor je opnieuw genereert:
+
+1. --fiscal-year is een VOORKEUR voor welke PDF gekozen wordt, geen filter op
+   welke rij wordt weggeschreven. Heeft een fonds geen PDF met dat jaartal in de
+   bestandsnaam, dan pakt het script de nieuwste PDF en schrijft de analyse weg
+   onder HET JAAR VAN DIE PDF. Een run met --fiscal-year 2025 over 24 fondsen
+   leverde zo 6 FY2025-rijen op, 4 overschreven FY2024-rijen en 8 rijen met
+   fiscal_year = 0. Controleer na een batch dus of de rijen onder het bedoelde
+   boekjaar staan.
+
+2. De paginakeuze is verbeterd (nalevingsbijlagen worden overgeslagen, een
+   trefwoord telt hooguit één keer, en een pagina erft het hoofdstuksignaal van
+   maximaal twee pagina's terug). Dat haalde bij PDN het voorwoord binnen in
+   plaats van de compliance-checklist. Maar het is een defectreparatie, geen
+   garantie op betere teksten: bij een steekproef van vijf fondsen werd de
+   samenvatting soms juist vager. Regenereer dus per fonds en kijk naar de
+   uitkomst; wijkt de automatische keuze af, gebruik dan --pages.
 """
 
 import argparse
