@@ -144,7 +144,28 @@ DION = "DION Pensioen Services"
 # de kring van NN CDC bij De Nationale APF (een AZL-initiatief).
 UITVOERDER_HERSTEL = {
     118: "AZL",
+    # Rijn- en Binnenvaart stond op TKP. Het fonds schrijft op zijn eigen site
+    # "AZL voor de administratie, Montae & Partners voor advies en ondersteuning",
+    # en het postadres is Postbus 4471 in Heerlen — de vestigingsplaats van AZL.
+    # TKP is vermoedelijk overgewaaid van Beroepsvervoer over de Weg (id 13),
+    # het bedrijfstakfonds waar Rijn- en Binnenvaart zijn pensioenen aan overdraagt
+    # en dat wél bij TKP zit.
+    198: "AZL",
+    # Ecolab stond leeg. Het jaarverslag 2025 is expliciet: "De uitvoeringsorganisatie
+    # voor de pensioenadministratie is Ecolab B.V." — de werkgever doet het zelf,
+    # met alleen een deelbewerking bij ADP.
+    92: "Zelfadministrerend",
 }
+
+# Twee verschillen met het overzicht bleken geen fouten maar een tijdsverschil:
+# het overzicht noemt alvast de opvolger. Hier hoort de huidige uitvoerder te
+# staan, dus die blijven ongemoeid — de aanstaande wissel staat in deze notitie.
+#   IKEA/STIP (46)  Achmea Pensioenservices; het overzicht zegt PGGM. Het
+#                   jaarverslag 2025 bevestigt Achmea en meldt dat het contract
+#                   per ultimo 2027 is opgezegd; de opvolger wordt niet genoemd.
+#   Avebe    (79)   Visma Idella; het overzicht zegt Dion. Het fonds meldde zelf
+#                   op 3 mei 2026 de overgang naar DION Pensioen Services per
+#                   1 januari 2027 — en stelt daarom het invaren uit naar 2028.
 
 # Twee deelnemersaantallen zijn aantoonbaar fout: Rockwool staat op 877.542 bij
 # €0,45 mld vermogen (€515 per deelnemer) en Exxonmobil op 107,9 miljoen — meer
