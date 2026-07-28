@@ -25,12 +25,16 @@ Usage:
 Twee dingen om te weten voor je opnieuw genereert:
 
 1. --fiscal-year is een VOORKEUR voor welke PDF gekozen wordt, geen filter op
-   welke rij wordt weggeschreven. Heeft een fonds geen PDF met dat jaartal in de
-   bestandsnaam, dan pakt het script de nieuwste PDF en schrijft de analyse weg
-   onder HET JAAR VAN DIE PDF. Een run met --fiscal-year 2025 over 24 fondsen
-   leverde zo 6 FY2025-rijen op, 4 overschreven FY2024-rijen en 8 rijen met
-   fiscal_year = 0. Controleer na een batch dus of de rijen onder het bedoelde
-   boekjaar staan.
+   welke rij wordt weggeschreven. Heeft een fonds geen PDF van dat jaar, dan pakt
+   het script de nieuwste PDF en schrijft de analyse weg onder HET JAAR VAN DIE
+   PDF. Een run met --fiscal-year 2025 over 24 fondsen leverde zo 6 FY2025-rijen
+   op en 4 overschreven FY2024-rijen. Controleer na een batch dus of de rijen
+   onder het bedoelde boekjaar staan.
+
+   Het boekjaar komt uit de bestandsnaam, en staat dat er niet in (`73_Ahold_
+   Delhaize.pdf` — dat geldt voor de meeste PDF's) dan wordt het van de omslag
+   gelezen. Lukt ook dat niet, dan wordt het fonds overgeslagen in plaats van
+   onder FY0 weggeschreven; met --fiscal-year dwing je het jaar dan zelf af.
 
 2. De paginakeuze is verbeterd (nalevingsbijlagen worden overgeslagen, een
    trefwoord telt hooguit één keer, en een pagina erft het hoofdstuksignaal van
@@ -99,6 +103,55 @@ def build_inventory() -> dict[int, list[tuple[int, str]]]:
     return by_fund
 
 
+# Het boekjaar staat maar bij een handjevol PDF's in de bestandsnaam; de meeste
+# heten `73_Ahold_Delhaize.pdf`. Die belandden op fiscal_year = 0. Op de omslag of
+# de titelpagina staat het jaar vrijwel altijd wel, gekoppeld aan een verslag-woord.
+_VERSLAG = (r"(?:jaarverslag|jaarbericht|jaarrapport|jaarrekening|verslagjaar|"
+            r"bestuursverslag|annual\s+report)")
+JAAR_IN_TEKST = [
+    re.compile(rf"\b{_VERSLAG}\b.{{0,30}}?\b(20\d{{2}})\b", re.I),
+    re.compile(rf"\b(20\d{{2}})\b.{{0,20}}?\b{_VERSLAG}\b", re.I),
+    re.compile(r"\bboekjaar\b.{0,30}?\b(20\d{2})\b", re.I),
+    re.compile(r"\bover\s+het\s+(?:boek)?jaar\b.{0,10}?\b(20\d{2})\b", re.I),
+]
+JAAR_MIN = 2015
+JAAR_MAX = datetime.now().year
+
+_boekjaar_cache: dict[str, int] = {}
+
+
+def boekjaar_uit_inhoud(pdf_path: str, max_pages: int = 4) -> int:
+    """Boekjaar van de omslag/titelpagina lezen; 0 als er niets bruikbaars staat.
+
+    Alleen jaartallen die vlak bij een verslag-woord staan tellen mee, anders pikt
+    het regelnummers en bedragen op. Van de treffers wint de vroegste, niet de
+    hoogste: het boekjaar staat op de omslag, en wat daarna komt is de datum van
+    ondertekening ('Rijswijk, 13 juni 2025') of een vooruitblik op het jaar erna.
+
+    De witruimte wordt eerst platgeslagen, want op een omslag staan 'Jaarverslag'
+    en het jaartal vrijwel altijd op aparte regels.
+    """
+    if pdf_path in _boekjaar_cache:
+        return _boekjaar_cache[pdf_path]
+    jaar = 0
+    try:
+        doc = fitz.open(pdf_path)
+        tekst = " ".join(doc[i].get_text() for i in range(min(max_pages, len(doc))))
+        doc.close()
+        tekst = re.sub(r"\s+", " ", tekst)
+        treffers = [
+            (m.start(), int(m.group(1)))
+            for p in JAAR_IN_TEKST for m in p.finditer(tekst)
+            if JAAR_MIN <= int(m.group(1)) <= JAAR_MAX
+        ]
+        if treffers:
+            jaar = min(treffers)[1]
+    except Exception:
+        jaar = 0
+    _boekjaar_cache[pdf_path] = jaar
+    return jaar
+
+
 def parse_pages(spec: str) -> list[int]:
     """'6-10' of '6,7,8' -> [6,7,8,9,10]. Voor als de automatische paginakeuze
     ernaast zit en je zelf wilt aanwijzen welk hoofdstuk het narratief bevat."""
@@ -127,12 +180,17 @@ def pages_as_context(pdf_path: str, pages: list[int]) -> tuple[str, list[int], i
 
 
 def pick_pdf_for_year(items, prefer_year: int | None):
-    """Return (year, path). If prefer_year given and present, use that. Else newest."""
+    """Return (year, path). If prefer_year given and present, use that. Else newest.
+
+    Staat er geen jaartal in de bestandsnaam, dan wordt het uit de omslag gelezen;
+    dat scheelt een rij op fiscal_year 0.
+    """
+    opgelost = [(y or boekjaar_uit_inhoud(p), p) for y, p in items]
     if prefer_year is not None:
-        for y, p in items:
+        for y, p in opgelost:
             if y == prefer_year:
                 return y, p
-    return sorted(items, reverse=True)[0]
+    return sorted(opgelost, reverse=True)[0]
 
 
 def _is_toc_page(text: str) -> bool:
@@ -326,6 +384,17 @@ def main():
     for i, fid in enumerate(targets, 1):
         try:
             year, pdf = pick_pdf_for_year(inv[fid], args.fiscal_year)
+            if not year:
+                # Liever geen rij dan een rij op FY0: die is op het dashboard niet
+                # van een echt boekjaar te onderscheiden en moet met de hand weg.
+                # Wie het toch wil, geeft het jaar mee met --fiscal-year.
+                if args.fiscal_year:
+                    year = args.fiscal_year
+                else:
+                    log(f"[{i}/{n}] fid={fid} {os.path.basename(pdf)[:50]} "
+                        f"SKIP geen boekjaar herkend (geef --fiscal-year mee)")
+                    skips += 1
+                    continue
             if not args.force and (fid, year) in done:
                 log(f"[{i}/{n}] fid={fid} {year} already done — skip")
                 skips += 1
