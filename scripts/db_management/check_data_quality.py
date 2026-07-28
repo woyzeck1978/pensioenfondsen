@@ -141,6 +141,30 @@ def dnb_koppeling(con):
             for n in sorted(actief) if n not in mapping and n not in bewust]
 
 
+def schrijfwijzen(con):
+    """Waarden die alleen in hoofdletters of spaties verschillen.
+
+    'Achmea', 'ACHMEA' en 'Achmea Pensioenservices N.V.' stonden als vier
+    verschillende uitvoerders in de database en splitsten daarmee elke
+    concentratiegrafiek op. Zulke varianten zijn met het oog nauwelijks te
+    zien in een lange lijst, maar wel automatisch te vinden.
+    """
+    uit = []
+    for kolom in ("uitvoerder", "fiduciair_beheerder", "category"):
+        groepen = defaultdict(set)
+        try:
+            rijen = con.execute(
+                f"SELECT {kolom} FROM funds WHERE {LEVEND} AND COALESCE({kolom},'') <> ''")
+        except sqlite3.Error:
+            continue
+        for (v,) in rijen:
+            groepen["".join(ch for ch in v.lower() if ch.isalnum())].add(v)
+        for _, varianten in groepen.items():
+            if len(varianten) > 1:
+                uit.append(f"{kolom}: " + " | ".join(sorted(varianten)))
+    return uit
+
+
 CONTROLES = [
     ("Deelnemers tellen niet op tot het totaal", deelnemers_inconsistent),
     ("Zelfde deelnemersuitsplitsing bij meerdere fondsen",
@@ -150,6 +174,7 @@ CONTROLES = [
     ("Meerdere fondsen op dezelfde website", dubbele_fondsen),
     ("APF-moeder telt dubbel met zijn kringen", apf_dubbeltelling),
     ("DNB-rapporteurs zonder koppeling aan een fonds", dnb_koppeling),
+    ("Dezelfde partij onder meerdere schrijfwijzen", schrijfwijzen),
 ]
 
 
