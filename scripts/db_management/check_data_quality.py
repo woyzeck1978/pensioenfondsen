@@ -192,8 +192,55 @@ def regiogewichten(con):
     return uit
 
 
+def deelnemers_gedupliceerd_binnen_fonds(con):
+    """Twee deelnemerskolommen met exact hetzelfde getal.
+
+    Dit is het patroon dat bij Rockwool, Vopak en Avery Dennison bleek te zitten:
+    de extractie vindt één getal en schrijft dat in twee velden. Dat een fonds
+    toevallig precies evenveel slapers als gepensioneerden heeft komt voor, maar
+    boven de honderd wordt het onwaarschijnlijk genoeg om naar te kijken.
+    """
+    uit = []
+    for r in con.execute(f"""
+        SELECT id, name, deelnemers_actief a, deelnemers_slapers s, deelnemers_gepensioneerd g
+        FROM funds WHERE {LEVEND}
+    """):
+        paren = (("actief", "slapers", r["a"], r["s"]),
+                 ("actief", "gepensioneerd", r["a"], r["g"]),
+                 ("slapers", "gepensioneerd", r["s"], r["g"]))
+        for k1, k2, v1, v2 in paren:
+            if v1 is not None and v1 == v2 and v1 > 100:
+                uit.append(f"{r['name'][:40]:42s} {k1} en {k2} allebei {v1:,}")
+    return uit
+
+
+def vermogen_per_deelnemer(con):
+    """Een pensioenvermogen dat niet in verhouding staat tot het deelnemersaantal.
+
+    Exxonmobil stond op 107,9 miljoen deelnemers bij €2,9 mld — €27 per hoofd.
+    De ondergrens is bewust ruim: bij een premiepensioeninstelling of een
+    uitzendfonds met jonge deelnemers is een paar duizend euro per hoofd normaal,
+    dus die vallen er niet in. Onder de duizend euro kán het gewoon niet.
+    """
+    uit = []
+    for r in con.execute(f"""
+        SELECT name, deelnemers_totaal t, aum_euro_bn aum FROM funds
+        WHERE {LEVEND} AND deelnemers_totaal > 0 AND aum_euro_bn > 0
+    """):
+        per = r["aum"] * 1e9 / r["t"]
+        if per < 1000:
+            uit.append(f"{r['name'][:40]:42s} {r['t']:,} deelnemers bij "
+                       f"EUR {r['aum']:.2f} mld = EUR {per:,.0f} per deelnemer")
+        elif per > 3_000_000:
+            uit.append(f"{r['name'][:40]:42s} {r['t']:,} deelnemers bij "
+                       f"EUR {r['aum']:.2f} mld = EUR {per:,.0f} per deelnemer")
+    return uit
+
+
 CONTROLES = [
     ("Deelnemers tellen niet op tot het totaal", deelnemers_inconsistent),
+    ("Hetzelfde getal in twee deelnemerskolommen", deelnemers_gedupliceerd_binnen_fonds),
+    ("Vermogen per deelnemer buiten elke verhouding", vermogen_per_deelnemer),
     ("Zelfde deelnemersuitsplitsing bij meerdere fondsen",
      lambda c: gedeelde_waarden(c, ["deelnemers_actief", "deelnemers_slapers", "deelnemers_gepensioneerd"], "")),
     ("Zelfde deelnemerstotaal bij meerdere fondsen",
