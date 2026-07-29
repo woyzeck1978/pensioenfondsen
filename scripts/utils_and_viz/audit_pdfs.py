@@ -43,14 +43,17 @@ BLOKKADE = re.compile(
 
 
 def keur(pad: str):
-    """(ok, reden). ok=False betekent: dit bestand is geen bruikbaar document."""
+    """(ok, reden). ok=False betekent: dit bestand is geen bruikbaar document.
+
+    Grootte alleen is geen bewijs: een infographic van 12 kB kan prima kloppen.
+    Daarom telt de ondergrens pas mee als het document ook nog uit één pagina
+    bestaat — dat is de vorm van een foutpagina, niet van een verslag.
+    """
     grootte = os.path.getsize(pad)
     with open(pad, "rb") as f:
         kop = f.read(4)
     if kop != b"%PDF":
         return False, f"geen PDF-header ({kop!r})"
-    if grootte < MIN_BYTES:
-        return False, f"te klein ({grootte:,} bytes)"
     try:
         doc = fitz.open(pad)
         n = len(doc)
@@ -58,10 +61,12 @@ def keur(pad: str):
         doc.close()
     except Exception as e:
         return False, f"onleesbaar ({type(e).__name__})"
-    if n <= 1 and BLOKKADE.search(tekst):
-        return False, "blokkeerpagina (1 pagina)"
     if n == 0:
         return False, "nul pagina's"
+    if BLOKKADE.search(tekst) and n <= 1:
+        return False, "blokkeerpagina (1 pagina)"
+    if grootte < MIN_BYTES and n <= 1:
+        return False, f"1 pagina en maar {grootte:,} bytes"
     return True, ""
 
 
