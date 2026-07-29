@@ -493,6 +493,35 @@ def get_fund_reports(fund_id):
     return df.head(5)
 
 
+@st.cache_data(ttl=300)
+def get_aum_peiljaren():
+    """Per fonds het historische jaar waar de AUM in de fondsentabel bij hoort.
+
+    funds.aum_euro_bn heeft geen vast peiljaar: bij ongeveer de helft van de
+    fondsen komt de waarde overeen met FY2024, bij de andere helft met FY2025.
+    Zonder dat erbij te zetten lijkt het verschil met het jaarverslag onderin
+    een fout, terwijl het gewoon een ander jaar is. annual_report_year is geen
+    alternatief — dat veld is bij 82 fondsen leeg en klopt bij de rest maar in
+    iets meer dan de helft van de gevallen.
+    """
+    conn = sqlite3.connect(DB_PATH)
+    f = pd.read_sql_query(
+        "SELECT id, aum_euro_bn FROM funds WHERE aum_euro_bn IS NOT NULL AND aum_euro_bn > 0", conn)
+    h = pd.read_sql_query(
+        "SELECT fund_id, year, aum_euro_bn FROM historical_metrics "
+        "WHERE aum_euro_bn IS NOT NULL AND aum_euro_bn > 0", conn)
+    conn.close()
+    peiljaar = {}
+    for fid, aum in zip(f["id"], f["aum_euro_bn"]):
+        rijen = h[h["fund_id"] == fid]
+        if rijen.empty:
+            continue
+        dicht = rijen[((rijen["aum_euro_bn"] - aum).abs() / aum) < 0.02]
+        if not dicht.empty:
+            peiljaar[int(fid)] = int(dicht["year"].max())
+    return peiljaar
+
+
 def get_fund_annual_metrics(fund_id):
     """Parsed metrics from annual-report PDFs (fy_annual_metrics)."""
     query = f"""
@@ -1103,10 +1132,14 @@ def page_fund_deep_dive():
     if 'description' in fund_data and pd.notnull(fund_data['description']) and fund_data['description'] != "":
         st.info(fund_data['description'])
 
+    _categorie = str(fund_data.get('category') or '')
+    _peiljaar = get_aum_peiljaren().get(int(fund_id))
+    _aum_sub = f"{_categorie} · peiljaar FY{_peiljaar}" if _peiljaar else _categorie
+
     render_kpi_row([
         kpi_card("AUM",
                  f"€{fund_data['aum_euro_bn']:,.1f} Bn" if pd.notnull(fund_data['aum_euro_bn']) else "—",
-                 sub=str(fund_data.get('category') or '')),
+                 sub=_aum_sub),
         kpi_card("Actuele dekkingsgraad",
                  f"{fund_data['dekkingsgraad_pct']:.1f}%" if pd.notnull(fund_data['dekkingsgraad_pct']) else "—",
                  sub="door fonds zelf gerapporteerd"),
