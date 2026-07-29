@@ -3,6 +3,34 @@ from playwright.async_api import async_playwright
 import urllib.request
 import os
 
+MIN_PDF_BYTES = 20_000  # een echt jaarverslag is honderden kB; 206 bytes is een 403-pagina
+
+
+def _keur_pdf(pad):
+    """True als er een plausibele PDF staat; anders opruimen en melden.
+
+    Zonder deze controle schrijft de fetch-fallback hieronder gewoon weg wat de
+    server teruggaf — en dat was bij vijf fondsen een 'Access Denied'-pagina van
+    één pagina, die daarna jarenlang als jaarverslag in data/ stond.
+    """
+    try:
+        with open(pad, "rb") as f:
+            kop = f.read(4)
+        grootte = os.path.getsize(pad)
+    except OSError as e:
+        print(f"  Kan {pad} niet lezen: {e}")
+        return False
+    if kop != b"%PDF":
+        print(f"  GEEN PDF (begint met {kop!r}) — verwijderd: {pad}")
+        os.remove(pad)
+        return False
+    if grootte < MIN_PDF_BYTES:
+        print(f"  Verdacht klein ({grootte} bytes) — verwijderd: {pad}")
+        os.remove(pad)
+        return False
+    return True
+
+
 async def download_playwright(url, output_path):
     print(f"Downloading (Playwright): {url}")
     async with async_playwright() as p:
@@ -18,7 +46,11 @@ async def download_playwright(url, output_path):
                 await page.evaluate(f"window.location.href = '{url}'")
             download = await download_info.value
             await download.save_as(output_path)
-            print(f"Saved to {output_path}")
+            if _keur_pdf(output_path):
+                print(f"Saved to {output_path}")
+                return
+            # Geen bruikbare PDF: doorschakelen naar de fetch-fallback hieronder.
+            raise RuntimeError("download leverde geen bruikbare PDF op")
         except Exception as e:
             print(f"Error downloading {url}: {e}")
             # Try fetching with requests via page.evaluate
@@ -30,7 +62,10 @@ async def download_playwright(url, output_path):
                 }}()''')
                 with open(output_path, 'wb') as f:
                     f.write(bytes(content))
-                print(f"Saved via fetch to {output_path}")
+                if _keur_pdf(output_path):
+                    print(f"Saved via fetch to {output_path}")
+                else:
+                    print(f"Fetch gaf geen PDF terug voor {url}")
             except Exception as e2:
                 print(f"Fallback fetch failed: {e2}")
         finally:
