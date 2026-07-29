@@ -587,23 +587,124 @@ def _queue_fund_jump(fund_name: str) -> None:
     st.session_state._jump_fund = fund_name
 
 
-def _on_global_search():
-    sel = st.session_state.get("global_fund_search")
-    if sel:
-        _queue_fund_jump(sel)
-        st.session_state.global_fund_search = None  # reset voor volgende zoek
+@st.cache_data(ttl=300)
+def get_search_corpus():
+    """Doorzoekbare tekst voor de globale zoekbalk: analyses en nieuwstitels.
+
+    Fondsnamen komen uit df_funds en hoeven hier niet bij. De analyse-velden
+    worden tot één blob geplakt zodat een term ook een treffer geeft als hij
+    alleen in de highlights of de risico's staat, niet in de samenvatting.
+    """
+    conn = sqlite3.connect(DB_PATH)
+    analyses = pd.read_sql_query(
+        """
+        SELECT fa.fund_id, f.name AS fund_name, fa.fiscal_year,
+               COALESCE(fa.summary, '') AS summary,
+               COALESCE(fa.summary, '') || ' ' || COALESCE(fa.highlights_json, '') || ' '
+               || COALESCE(fa.lowlights_json, '') || ' ' || COALESCE(fa.key_risks_json, '')
+               || ' ' || COALESCE(fa.transitie_status, '') AS blob
+        FROM fund_analysis fa JOIN funds f ON f.id = fa.fund_id
+        """, conn)
+    nieuws = pd.read_sql_query(
+        """
+        SELECT n.fund_id, f.name AS fund_name, n.title, n.url,
+               COALESCE(n.published_date, '') AS published_date
+        FROM news_articles n JOIN funds f ON f.id = n.fund_id
+        WHERE n.title IS NOT NULL AND TRIM(n.title) <> ''
+        ORDER BY n.published_date DESC
+        """, conn)
+    conn.close()
+    return analyses, nieuws
 
 
-# Globale fondszoeker — springt vanaf elke pagina naar de diepteanalyse
-st.sidebar.selectbox(
-    "Zoek fonds",
-    df_funds[~df_funds["name"].isin(NON_FUNDS)]["name"].sort_values().tolist(),
-    index=None,
-    key="global_fund_search",
-    on_change=_on_global_search,
-    placeholder="🔎 Spring naar fonds…",
+def _zoek_fragment(tekst: str, term: str, breedte: int = 55) -> str:
+    """Stukje tekst rond de treffer, met de term gemarkeerd. HTML-veilig."""
+    if not tekst:
+        return ""
+    pos = tekst.lower().find(term.lower())
+    if pos < 0:  # treffer zat in een veld dat we hier niet tonen
+        kort = tekst[:2 * breedte]
+        return _html.escape(kort) + ("…" if len(tekst) > len(kort) else "")
+    start, eind = max(0, pos - breedte), min(len(tekst), pos + len(term) + breedte)
+    stuk, rel = tekst[start:eind], pos - start
+    return (("…" if start else "")
+            + _html.escape(stuk[:rel])
+            + "<mark>" + _html.escape(stuk[rel:rel + len(term)]) + "</mark>"
+            + _html.escape(stuk[rel + len(term):])
+            + ("…" if eind < len(tekst) else ""))
+
+
+def _render_global_search(term: str) -> None:
+    """Resultaten van de globale zoekbalk, gegroepeerd, in de sidebar."""
+    tl = term.lower()
+    fondsen = df_funds[~df_funds["name"].isin(NON_FUNDS)]
+    f_hits = fondsen[fondsen["name"].str.lower().str.contains(tl, regex=False, na=False)]
+
+    try:
+        analyses, nieuws = get_search_corpus()
+    except Exception:  # DB onbereikbaar — dan alleen fondsnamen
+        analyses = nieuws = pd.DataFrame()
+
+    a_hits = (analyses[analyses["blob"].str.lower().str.contains(tl, regex=False, na=False)]
+              if not analyses.empty else analyses)
+    n_hits = (nieuws[nieuws["title"].str.lower().str.contains(tl, regex=False, na=False)]
+              if not nieuws.empty else nieuws)
+
+    totaal = len(f_hits) + len(a_hits) + len(n_hits)
+    if not totaal:
+        st.sidebar.caption(f"Geen treffers voor “{term}”.")
+        return
+    st.sidebar.caption(
+        f"{totaal} treffers · {len(f_hits)} fondsen · {len(a_hits)} analyses · {len(n_hits)} nieuws")
+
+    with st.sidebar.container():
+        if len(f_hits):
+            st.markdown('<div class="section-card-title">Fondsen</div>', unsafe_allow_html=True)
+            for _, r in f_hits.head(6).iterrows():
+                st.button(r["name"][:34] + ("…" if len(r["name"]) > 34 else ""),
+                          key=f"zk_f_{r['id']}", use_container_width=True,
+                          on_click=_queue_fund_jump, args=(r["name"],))
+
+        if len(a_hits):
+            st.markdown('<div class="section-card-title">Jaarverslag-analyses</div>',
+                        unsafe_allow_html=True)
+            for _, r in a_hits.head(5).iterrows():
+                st.markdown(
+                    f"<div style='font-size:12px;line-height:1.5;margin-bottom:2px;'>"
+                    f"<strong>{_html.escape(str(r['fund_name']))}</strong> "
+                    f"<span style='color:var(--text-mid);'>FY{int(r['fiscal_year'])}</span><br>"
+                    f"<span style='color:var(--text-mid);'>"
+                    f"{_zoek_fragment(str(r['summary']), term)}</span></div>",
+                    unsafe_allow_html=True)
+                st.button("→ diepteanalyse", key=f"zk_a_{r['fund_id']}_{int(r['fiscal_year'])}",
+                          use_container_width=True,
+                          on_click=_queue_fund_jump, args=(r["fund_name"],))
+
+        if len(n_hits):
+            st.markdown('<div class="section-card-title">Nieuws</div>', unsafe_allow_html=True)
+            for _, r in n_hits.head(5).iterrows():
+                datum = str(r["published_date"])[:10]
+                st.markdown(
+                    f"<div style='font-size:12px;line-height:1.5;margin-bottom:6px;'>"
+                    f"<a href='{_html.escape(str(r['url']))}' target='_blank'>"
+                    f"{_zoek_fragment(str(r['title']), term)}</a><br>"
+                    f"<span style='font-size:10px;color:var(--text-mid);'>"
+                    f"{_html.escape(str(r['fund_name']))}{' · ' + datum if datum else ''}"
+                    f"</span></div>",
+                    unsafe_allow_html=True)
+
+
+# Globale zoekbalk — fondsen, jaarverslag-analyses en nieuws, vanaf elke pagina
+_zoekterm = st.sidebar.text_input(
+    "Zoeken",
+    key="global_search",
+    placeholder="🔎 Zoek fonds, analyse of nieuws…",
     label_visibility="collapsed",
-)
+).strip()
+if len(_zoekterm) >= 2:
+    _render_global_search(_zoekterm)
+elif _zoekterm:
+    st.sidebar.caption("Typ minstens twee tekens.")
 
 # Dark mode switch — per sessie; default volgt het Streamlit/OS-thema
 st.sidebar.toggle("🌙 Donkere modus", key="dark_mode")
