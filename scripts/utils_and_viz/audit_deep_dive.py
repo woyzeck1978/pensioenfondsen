@@ -78,11 +78,15 @@ def controleer(con) -> pd.DataFrame:
         alloc = {"aandelen": f["equity_allocation_pct"], "vastrentend": f["fixed_income_pct"],
                  "vastgoed": f["real_estate_pct"], "alternatives": f["alternatives_pct"]}
         gevuld = {k: v for k, v in alloc.items() if pd.notnull(v)}
-        if len(gevuld) == 4:
-            som = sum(gevuld.values())
-            if abs(som - 100.0) > DREMPEL_ALLOCATIE_PP:
-                _bevinding(uit, naam, "hoog", "allocatie telt niet op tot 100%",
-                           f"{som:.1f}% — " + ", ".join(f"{k} {v:.1f}" for k, v in gevuld.items()))
+        som = sum(gevuld.values()) if gevuld else 0.0
+        if len(gevuld) == 4 and abs(som - 100.0) > DREMPEL_ALLOCATIE_PP:
+            _bevinding(uit, naam, "hoog", "allocatie telt niet op tot 100%",
+                       f"{som:.1f}% — " + ", ".join(f"{k} {v:.1f}" for k, v in gevuld.items()))
+        elif len(gevuld) < 4 and som > 100.0 + DREMPEL_ALLOCATIE_PP:
+            # Ook met een half ingevulde reeks kun je al te hoog uitkomen; IBM stond
+            # op aandelen 24,2 plus vastrentend 87,6 en dus op 111,8 procent.
+            _bevinding(uit, naam, "hoog", "allocatie overschrijdt 100% met lege velden",
+                       f"{som:.1f}% — " + ", ".join(f"{k} {v:.1f}" for k, v in gevuld.items()))
 
         # --- 3. Dekkingsgraden binnen een mogelijk bereik?
         for kol, label in [("dekkingsgraad_pct", "actuele dekkingsgraad"),
@@ -122,17 +126,20 @@ def controleer(con) -> pd.DataFrame:
                 _bevinding(uit, naam, "midden", f"actuele dekkingsgraad wijkt af van FY{jr}",
                            f"fondsentabel {wf:.1f}% vs jaarverslag {wh:.1f}%")
 
-            # zakelijke_waarden_pct is de DNB-noemer: aandelen plus vastgoed plus
-            # alternatives. Rechtstreeks tegen equity_allocation_pct leggen
-            # vergelijkt appels met peren — dat gaf bij bijna elk fonds vals alarm.
+            # zakelijke_waarden_pct is de DNB-noemer en is bréder dan aandelen plus
+            # vastgoed plus alternatives: DNB telt ook de risicodragende vastrentende
+            # waarden mee (high yield, EMD, credits). Bij alle zeventien fondsen die
+            # een tweezijdige vergelijking opleverde lag onze som stelselmatig 6 tot
+            # 15 punten lager — dat is de definitie, geen fout. Wat wél onmogelijk is:
+            # onze som die bóven de DNB-noemer uitkomt.
             zw = laatste["zakelijke_waarden_pct"]
             delen_zw = [f["equity_allocation_pct"], f["real_estate_pct"], f["alternatives_pct"]]
             if pd.notnull(zw) and all(pd.notnull(d) for d in delen_zw):
                 som_zw = sum(delen_zw)
-                if abs(som_zw - zw) > DREMPEL_ZW_PP:
-                    _bevinding(uit, naam, "midden", f"zakelijke waarden wijken af van FY{jr}",
-                               f"aandelen+vastgoed+alternatives {som_zw:.1f}% vs "
-                               f"jaarverslag {zw:.1f}%")
+                if som_zw - zw > DREMPEL_ZW_PP:
+                    _bevinding(uit, naam, "hoog", f"zakelijke waarden overschrijden FY{jr}",
+                               f"aandelen+vastgoed+alternatives {som_zw:.1f}% ligt boven de "
+                               f"bredere DNB-noemer van {zw:.1f}%")
 
             # Sprongen tussen opeenvolgende jaren die op een tikfout wijzen.
             reeks = fh.sort_values("year")
