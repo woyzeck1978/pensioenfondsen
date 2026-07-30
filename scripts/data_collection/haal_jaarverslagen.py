@@ -17,8 +17,16 @@ Elke download moet door vier controles:
 
 Zakt een bestand daarop af, dan wordt het niet opgeslagen maar gemeld.
 
+Staat er geen URL in scraped_documents, dan wordt met --via-site de eigen
+documentenpagina van het fonds doorlopen. Dat is nodig omdat de scrape vooral
+nieuwsberichten catalogiseert: bij 16 van 22 fondsen ontbrak de 2025-link
+terwijl het verslag gewoon online stond. Die route gaat via een echte browser,
+en haalt de PDF op met fetch() binnen de pagina — daarmee komt hij ook langs de
+botblokkering die curl bij Vlakglas, TNO en MSD een 403 opleverde.
+
   python3 scripts/data_collection/haal_jaarverslagen.py --jaar 2025 --max 10
   python3 scripts/data_collection/haal_jaarverslagen.py --jaar 2025 --fondsen 51,72
+  python3 scripts/data_collection/haal_jaarverslagen.py --jaar 2025 --via-site --max 8
 """
 
 from __future__ import annotations
@@ -107,11 +115,101 @@ def keur(pad: str, jaar: int, naam: str, van_eigen_site: bool = False) -> str | 
     return None
 
 
+# Rangschikking van kandidaatpagina's: een documentenpagina eerst. Zonder deze
+# volgorde bleef de crawl hangen op 'over-pensioen'-pagina's en bereikte hij
+# /documenten nooit, terwijl het verslag daar gewoon stond.
+PAGINA_SCORE = [
+    (re.compile(r"/documenten|/publicaties|/downloads", re.I), 0),
+    (re.compile(r"document|publicat|download", re.I), 1),
+    (re.compile(r"jaarverslag|jaarbericht", re.I), 2),
+    (re.compile(r"financ|over-ons|over_ons", re.I), 3),
+]
+# Paden die veel fondssites hebben maar niet altijd vanaf de homepage linken.
+VASTE_PADEN = ["documenten", "over-ons/documenten", "publicaties", "downloads",
+               "over-ons/publicaties", "over-ons/jaarverslagen", "jaarverslagen"]
+NIET_HET_VERSLAG = re.compile(r"verkort|mvb|verantwoord|populair|infograph|in.?beeld|beleid", re.I)
+
+FETCH_JS = """async (u) => {
+  const r = await fetch(u, {credentials: 'include'});
+  const b = new Uint8Array(await r.arrayBuffer());
+  let s = '', CH = 8192;
+  for (let i = 0; i < b.length; i += CH) s += String.fromCharCode.apply(null, b.subarray(i, i + CH));
+  return [r.status, btoa(s)];
+}"""
+
+
+def zoek_en_haal_via_site(pg, home: str, jaar: int) -> tuple[str, bytes] | None:
+    """Loop de documentenpagina van het fonds af en haal het jaarverslag op.
+
+    De download gaat met fetch() binnen de pagina in plaats van via een losse
+    request: die draagt de cookies en de fingerprint van een echte browser, en
+    komt daarmee langs de WAF die curl afwijst.
+    """
+    try:
+        pg.goto(home, wait_until="domcontentloaded", timeout=45000)
+        pg.wait_for_timeout(1800)
+        links = [h for h in dict.fromkeys(pg.eval_on_selector_all("a[href]", "e=>e.map(x=>x.href)")) if h]
+    except Exception:
+        return None
+
+    def score(u: str) -> int:
+        for patroon, punten in PAGINA_SCORE:
+            if patroon.search(u):
+                return punten
+        return 9
+
+    te_bezoeken = sorted([h for h in links if score(h) < 9], key=score)[:6]
+    te_bezoeken += [home.rstrip("/") + "/" + pad for pad in VASTE_PADEN]
+
+    kandidaten: set[str] = set()
+    gezien: set[str] = set()
+    for pagina in te_bezoeken:
+        if pagina in gezien:
+            continue
+        gezien.add(pagina)
+        try:
+            r = pg.goto(pagina, wait_until="domcontentloaded", timeout=30000)
+            if not r or r.status >= 400:
+                continue
+            pg.wait_for_timeout(1200)
+            for h in pg.eval_on_selector_all("a[href]", "e=>e.map(x=>x.href)"):
+                if (h and ".pdf" in h.lower()
+                        and re.search(r"jaarverslag|jaarbericht|jaarrapport|jv_", h, re.I)
+                        and not NIET_HET_VERSLAG.search(h)):
+                    kandidaten.add(h)
+            if kandidaten:
+                break
+        except Exception:
+            continue
+    if not kandidaten:
+        return None
+
+    def jaartal(u: str) -> int:
+        gevonden = re.findall(r"(20[12]\d)", u.rsplit("/", 1)[-1])
+        return max(int(x) for x in gevonden) if gevonden else 0
+
+    # Voorkeur voor het gevraagde boekjaar; anders het nieuwste dat er is.
+    volgorde = sorted(kandidaten, key=lambda u: (jaartal(u) != jaar, -jaartal(u)))
+    for url in volgorde[:2]:
+        try:
+            status, b64 = pg.evaluate(FETCH_JS, url)
+            if status == 200:
+                import base64
+                data = base64.b64decode(b64)
+                if data[:4] == b"%PDF":
+                    return url, data
+        except Exception:
+            continue
+    return None
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--jaar", type=int, default=2025)
     ap.add_argument("--max", type=int, default=10, help="hoeveel fondsen deze run")
     ap.add_argument("--fondsen", type=str, default="", help="komma-gescheiden fonds-ids")
+    ap.add_argument("--via-site", action="store_true",
+                    help="doorloop de eigen site als scraped_documents geen URL heeft")
     args = ap.parse_args()
 
     con = sqlite3.connect(DB_PATH)
@@ -130,22 +228,41 @@ def main() -> int:
 
     os.makedirs(DOEL_MAP, exist_ok=True)
     goed = afgekeurd = geen_url = 0
+    browser = context = pg = None
+    if args.via_site:
+        from playwright.sync_api import sync_playwright
+        pw = sync_playwright().start()
+        browser = pw.chromium.launch(headless=True)
+        context = browser.new_context(user_agent=UA, locale="nl-NL")
+        pg = context.new_page()
+
     for fid, naam, aum, website in doelen:
-        url = kies_url(con, fid, args.jaar)
-        if not url:
-            print(f"  {fid:>4} {naam[:34]:<35} geen {args.jaar}-URL bekend")
-            geen_url += 1
-            continue
         kort = re.sub(r"[^A-Za-z0-9]+", "_", naam.split("(")[0].strip())[:24].strip("_")
         pad = os.path.join(DOEL_MAP, f"{fid}_{kort}_{args.jaar}.pdf")
-        try:
-            req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/pdf,*/*"})
-            with urllib.request.urlopen(req, timeout=120) as r, open(pad, "wb") as f:
-                f.write(r.read())
-        except Exception as e:
-            print(f"  {fid:>4} {naam[:34]:<35} download mislukt: {type(e).__name__}")
-            afgekeurd += 1
+        url = kies_url(con, fid, args.jaar)
+        data = None
+
+        if url:
+            try:
+                req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/pdf,*/*"})
+                with urllib.request.urlopen(req, timeout=120) as r:
+                    data = r.read()
+            except Exception as e:
+                print(f"  {fid:>4} {naam[:34]:<35} directe download faalde ({type(e).__name__})"
+                      + (" — via de site proberen" if pg else ""))
+
+        if data is None and pg and website:
+            gevonden = zoek_en_haal_via_site(pg, website, args.jaar)
+            if gevonden:
+                url, data = gevonden
+
+        if data is None:
+            print(f"  {fid:>4} {naam[:34]:<35} geen {args.jaar}-verslag gevonden")
+            geen_url += 1
             continue
+
+        with open(pad, "wb") as f:
+            f.write(data)
         reden = keur(pad, args.jaar, naam, zelfde_domein(url, website))
         if reden:
             os.remove(pad)
@@ -154,6 +271,9 @@ def main() -> int:
         else:
             print(f"  {fid:>4} {naam[:34]:<35} ok  {os.path.getsize(pad)//1024} kB  {os.path.basename(pad)}")
             goed += 1
+
+    if browser:
+        browser.close()
     print(f"\n{goed} opgehaald, {afgekeurd} afgekeurd, {geen_url} zonder bekende URL")
     con.close()
     return 0
