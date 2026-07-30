@@ -70,86 +70,76 @@ Before running any script, check the `sqlite3.connect(...)` line and `cd` accord
 
 PDFs in `data/reports/` and `data/annual_reports/` are typically named `<fund_id>_<FundName>.pdf` (e.g. `106_Hoogovens.pdf`, `73_Ahold_Delhaize.pdf`); the leading integer matches `funds.id` and parsers rely on that mapping.
 
-## Automated bi-daily scrape (launchd + .app bundle)
+## Waar de app draait (bijgewerkt 2026-07-30)
 
-A launchd agent re-scrapes all fund websites every 2 days, parses the new
-news URLs, and pushes the updated `pension_funds.db` to `origin/main`. The
-Streamlit Cloud app rebuilds from main automatically.
+Er draaien **twee** frontends op dezelfde database, en dat is de val waar je
+anders in trapt:
 
-The call chain has three hops to work around macOS TCC restrictions:
+| | |
+|---|---|
+| `https://pensioenfondsen.webkowuite.nl` | **R/Shiny-app** op de Mac mini, poort 3852 |
+| `http://100.107.33.80:8502` (tailnet) | het Streamlit-dashboard uit deze repo |
+
+De publieke site is dus **niet** het dashboard in `scripts/utils_and_viz/`. Wie
+`pension_funds.db` bijwerkt en daarna op het domein kijkt, ziet niets veranderen
+tot de Shiny-keten is doorlopen.
+
+**De keten naar de publieke site**, drie schakels die elk stil kunnen falen:
 
 ```
-launchd
-  → ~/Applications/PensioenfondsenScraper.app/Contents/MacOS/applet
-  → /Users/webkowuite/bin/pensioenfondsen_scrape.sh
-  → scripts/automation/scrape_push.sh (here, in the repo)
+git push origin main
+  → mini: ~/pensioenfondsen-app          git pull (launchd, dagelijks 06:30)
+  → mini: refresh_db.sh                  kopieert de DB naar de Shiny-app (elke 6 uur)
+  → Shiny-app                            herleest data/ elke 30 minuten
 ```
 
-Why so many hops:
-
-1. **launchd cannot run shell scripts that live in Google Drive's
-   `CloudStorage` mount** — macOS TCC denies "operation not permitted" on
-   ordinary `read` of Drive files for launchd-spawned processes.
-2. **An AppleScript .app bundle** at `~/Applications/PensioenfondsenScraper.app`
-   gets a distinct TCC identifier and can be granted **Full Disk Access**
-   via System Settings → Privacy & Security → Full Disk Access. The app's
-   `do shell script` invokes the local launcher inheriting that TCC right.
-3. **The thin wrapper at `~/bin/pensioenfondsen_scrape.sh`** sits outside
-   Drive (so it loads even before FDA propagates) and exec's the real
-   worker via `zsh -s < <drive-path>`.
-
-Files:
-- `scripts/automation/scrape_push.sh` — the actual worker (in repo). Pre/post
-  counts, abort on script failure, skip commit if DB byte-identical, push
-  retry 3× with 30s back-off.
-- `~/bin/pensioenfondsen_scrape.sh` — local launcher outside Drive (not in
-  repo; recreate with the snippet documented in this file).
-- `~/Applications/PensioenfondsenScraper.app` — AppleScript bundle (not in
-  repo; recreate via `osacompile -e 'do shell script
-  "/Users/webkowuite/bin/pensioenfondsen_scrape.sh"'` then add
-  `CFBundleIdentifier=nl.wuite.pensioenfondsenscraper` and
-  `LSUIElement=true` to its `Contents/Info.plist`, then ad-hoc resign with
-  `codesign --force --sign -`).
-- `~/Library/LaunchAgents/nl.wuite.pensioenfondsen.scrape.plist` — the
-  launchd job spec. `StartInterval=172800`, logs to `logs/cron/`.
-
-One-time setup on a new Mac:
-1. Build the .app bundle (see osacompile command above).
-2. Open System Settings → Privacy & Security → Full Disk Access.
-3. Trigger the prompt by running the .app once: `open -a "PensioenfondsenScraper"`.
-4. Click Allow on the macOS prompt — the app now appears in the FDA list
-   with a green toggle.
-5. Drop the launchd plist into `~/Library/LaunchAgents/` and bootstrap.
-
-Managing:
+Tussentijds bijwerken met één commando:
 
 ```bash
-# Status (PID if running, last exit code if not)
-launchctl list | grep pensioen
-
-# Fire it now — does NOT change the schedule
-launchctl kickstart -p gui/$(id -u)/nl.wuite.pensioenfondsen.scrape
-
-# Pause / resume the recurring job
-launchctl bootout   gui/$(id -u) ~/Library/LaunchAgents/nl.wuite.pensioenfondsen.scrape.plist
-launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/nl.wuite.pensioenfondsen.scrape.plist
-
-# Inspect last run
-ls -t logs/cron/*.log | head -1 | xargs tail -50
-# Or via launchd's combined stream:
-tail logs/cron/launchd.out logs/cron/launchd.err
+ssh webkowuite@100.107.33.80 'cd ~/pensioenfondsen-app && git pull -q && \
+  "$HOME/Library/Mobile Documents/com~apple~CloudDocs/R/pensioen_dashboard/refresh_db.sh"'
 ```
 
-Caveats:
-- Mac must be awake at the fire time (or wake before the next interval).
-  launchd runs a missed job the moment the Mac wakes up.
-- Auto-commits land as `Webko Wuite <webkowuite@mac.home>`. Run
-  `git config user.email …` once in the repo to fix attribution.
-- Two fund sites (`pensioencg.nl`, `pnb.nl`) sit behind Cloudflare and
-  return a "Challenge Validation" page — the script catalogues those
-  URLs but can't parse real titles. Acceptable noise for now.
-- If `~/Applications/PensioenfondsenScraper.app` is rebuilt or moved,
-  the FDA grant may need to be re-confirmed via the same prompt flow.
+De R-app zelf staat in `~/Library/Mobile Documents/.../R/pensioen_dashboard/`
+(iCloud, buiten deze repo) en heeft een eigen `DEPLOY.md`. Let op: `refresh_db.sh`
+wees oorspronkelijk naar een iCloud-clone die op de mini nooit werd
+gematerialiseerd — het script eindigde maandenlang op "bron niet gevonden"
+zonder dat iemand het merkte. Het wijst nu naar `~/pensioenfondsen-app`.
+
+**De scrape** draait op de mini via launchd `nl.wuite.pensioenfondsen.scrape`
+(dagelijks 06:00) → `scripts/automation/scrape_mini.sh` → `scrape_push.sh`:
+monitor + nieuws-parser + datakwaliteitscontrole + commit + push. Bij een nieuwe
+commit herstart het dashboard en draaien de alerts. De oude MBP-keten met
+launchd, een AppleScript-.app en Full Disk Access is sinds 10 juni 2026 uit;
+`~/Library/LaunchAgents/nl.wuite.pensioenfondsen.scrape.plist.disabled-20260610`
+is wat daarvan over is.
+
+Volledige beschrijving met poorten, tunnel-details en healthchecks:
+`scripts/automation/DEPLOY_STATUS.md`. Dat bestand is leidend bij twijfel.
+
+## Controles op de datakwaliteit
+
+Vier scripts, waarvan er één automatisch meedraait:
+
+| script | wanneer | wat |
+|---|---|---|
+| `db_management/check_data_quality.py` | **elke scrape** | veertien DB-controles, o.a. analyses bij een niet-bestaand of duplicaat fonds |
+| `utils_and_viz/audit_deep_dive.py` | met de hand | de cijfers achter de diepteanalyse: optellingen, bereiken, DNB-vergelijking |
+| `utils_and_viz/audit_analysis_bronnen.py` | met de hand | hoort de bron-PDF bij het fonds? Vond twaalf analyses over een ander bedrijf |
+| `utils_and_viz/audit_pdfs.py` | met de hand | is elk bestand een echte PDF? `--quarantine` verplaatst naar `data/_broken/` |
+
+De laatste drie lezen de PDF's en horen dus **op deze Mac** thuis: de mini heeft
+alleen `data/reports/` (die zit in git), niet `data/annual_reports/`.
+
+Twee valkuilen die dat opleverde en die zich zullen herhalen:
+
+- **Een bestandsnaam met het juiste fonds-id zegt niets over de inhoud.** Er
+  stonden analyses in de tabel over het Nederlands Filmfonds, FrieslandCampina
+  en een tbs-kliniek. Draai `audit_analysis_bronnen.py` na elke download.
+- **Vergelijk nooit twee velden zonder hun definitie na te lopen.** DNB's
+  `zakelijke_waarden_pct` is breder dan aandelen + vastgoed + alternatives, en
+  `equity_allocation_pct` is weer iets anders. Beide keren leverde dat tientallen
+  valse meldingen op voordat het kwartje viel.
 
 ## Quirks to keep in mind
 

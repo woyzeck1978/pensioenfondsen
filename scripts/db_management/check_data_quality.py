@@ -237,6 +237,55 @@ def vermogen_per_deelnemer(con):
     return uit
 
 
+
+def analyses_zonder_fonds(con):
+    """Analyses die aan een fonds-id hangen dat niet (meer) in funds staat.
+
+    Die zijn onzichtbaar op de site, want de dashboardquery joint op funds. Ze
+    ontstaan als een fonds wordt samengevoegd of verwijderd terwijl de analyse
+    blijft staan; er stonden er drie zo in de tabel.
+    """
+    return [f"fonds-id {fid} (boekjaar {jr}) bestaat niet in funds — bron: {os.path.basename(src or '?')}"
+            for fid, jr, src in con.execute("""
+                SELECT a.fund_id, a.fiscal_year, a.source_pdf FROM fund_analysis a
+                LEFT JOIN funds f ON f.id = a.fund_id WHERE f.id IS NULL""")]
+
+
+def analyses_op_duplicaatfonds(con):
+    """Analyses bij een fonds dat als duplicaat is samengevoegd.
+
+    Die verschijnen op de site als een apart fonds terwijl het dezelfde
+    organisatie is; StiPP en PME stonden er zo dubbel in.
+    """
+    return [f"{naam} (id {fid}, boekjaar {jr}) — {status}"
+            for fid, naam, jr, status in con.execute("""
+                SELECT f.id, f.name, a.fiscal_year, f.status FROM fund_analysis a
+                JOIN funds f ON f.id = a.fund_id
+                WHERE COALESCE(f.status,'') LIKE 'Duplicaat%'""")]
+
+
+def analyses_met_onmogelijk_boekjaar(con):
+    """Boekjaar 0 of buiten een geloofwaardig bereik.
+
+    Boekjaar 0 ontstond doordat het jaartal uit de bestandsnaam werd gehaald en
+    de meeste PDF's dat niet in hun naam hebben.
+    """
+    return [f"fonds-id {fid}: boekjaar {jr}"
+            for fid, jr in con.execute(
+                "SELECT fund_id, fiscal_year FROM fund_analysis WHERE fiscal_year < 2010 OR fiscal_year > 2030")]
+
+
+def analyses_uit_quarantaine(con):
+    """Analyses die verwijzen naar een bestand in data/_broken/.
+
+    Daar staan PDF's die geen jaarverslag bleken; een analyse mag daar niet meer
+    op leunen.
+    """
+    return [f"fonds-id {fid} (boekjaar {jr}): {src}"
+            for fid, jr, src in con.execute(
+                "SELECT fund_id, fiscal_year, source_pdf FROM fund_analysis WHERE source_pdf LIKE '%_broken%'")]
+
+
 CONTROLES = [
     ("Deelnemers tellen niet op tot het totaal", deelnemers_inconsistent),
     ("Hetzelfde getal in twee deelnemerskolommen", deelnemers_gedupliceerd_binnen_fonds),
@@ -250,6 +299,10 @@ CONTROLES = [
     ("DNB-rapporteurs zonder koppeling aan een fonds", dnb_koppeling),
     ("Dezelfde partij onder meerdere schrijfwijzen", schrijfwijzen),
     ("Geografische gewichten die niet kunnen kloppen", regiogewichten),
+    ("Analyses bij een fonds dat niet in funds staat", analyses_zonder_fonds),
+    ("Analyses bij een als duplicaat samengevoegd fonds", analyses_op_duplicaatfonds),
+    ("Analyses met een onmogelijk boekjaar", analyses_met_onmogelijk_boekjaar),
+    ("Analyses die leunen op een bestand in quarantaine", analyses_uit_quarantaine),
 ]
 
 
