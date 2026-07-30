@@ -103,6 +103,22 @@ def badge(text: str, color: str = "gray") -> str:
     """Return HTML for a pill badge. color in {green,teal,blue,purple,orange,red,gray,outline}."""
     return f'<span class="badge badge-{color}">{_html.escape(text)}</span>'
 
+def nl(waarde, decimalen: int = 1) -> str:
+    """Getal in Nederlandse notatie: punt als duizendtal, komma als decimaal.
+
+    Python's format geeft 542,235.7 — hier moet 542.235,7 staan. Via een
+    tussenteken omdat een directe vervanging de scheidingstekens door elkaar
+    haalt. Geeft een streepje bij een lege waarde, net als de rest van de app.
+    """
+    if waarde is None or (isinstance(waarde, float) and pd.isna(waarde)):
+        return "—"
+    try:
+        tekst = f"{waarde:,.{decimalen}f}"
+    except (TypeError, ValueError):
+        return str(waarde)
+    return tekst.replace(",", "\x00").replace(".", ",").replace("\x00", ".")
+
+
 # Plotly defaults aligned with the CSU palette (licht + donker)
 import copy as _copy
 
@@ -111,6 +127,7 @@ _PLOT_FONT = ('"IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", '
 
 pio.templates["csu_light"] = _copy.deepcopy(pio.templates["simple_white"])
 pio.templates["csu_light"].layout.update(
+    separators=",.",
     font=dict(family=_PLOT_FONT, color="#17202A", size=12),
     colorway=["#6554A3", "#1F6FB2", "#17756B", "#2F7D57", "#C66B16", "#B13B3B", "#8F9BA8"],
     paper_bgcolor="#FFFFFF",
@@ -122,6 +139,7 @@ pio.templates["csu_light"].layout.update(
 
 pio.templates["csu_dark"] = _copy.deepcopy(pio.templates["simple_white"])
 pio.templates["csu_dark"].layout.update(
+    separators=",.",
     font=dict(family=_PLOT_FONT, color="#E4E7EC", size=12),
     colorway=["#9D8FD9", "#6FA8DC", "#5BB8AC", "#6FBF8F", "#E09A4C", "#D97070", "#9AA7B5"],
     paper_bgcolor="#171C24",
@@ -287,16 +305,12 @@ def build_fund_factsheet_pdf(fund_row, history_df) -> bytes:
 
         # KPI tiles
         ax_kpi = fig.add_subplot(gs[1, :]); ax_kpi.axis("off")
-        def _fmt(v, fmt):
-            if v is None or pd.isna(v):
-                return "—"
-            return fmt.format(v)
         kpis = [
-            ("AUM",                _fmt(fund_row.get('aum_euro_bn'),         "€{:,.1f} Bn")),
-            ("Dekkingsgraad",      _fmt(fund_row.get('dekkingsgraad_pct'),   "{:.1f}%")),
-            ("Beleidsdekkingsgr.", _fmt(fund_row.get('beleidsdekkingsgraad_pct'), "{:.1f}%")),
-            ("Equity allocation",  _fmt(fund_row.get('equity_allocation_pct'), "{:.1f}%")),
-            ("Deelnemers totaal",  _fmt(fund_row.get('deelnemers_totaal'),   "{:,.0f}").replace(",", ".")),
+            ("AUM",                f"€{nl(fund_row.get('aum_euro_bn'), 1)} Bn"),
+            ("Dekkingsgraad",      f"{nl(fund_row.get('dekkingsgraad_pct'), 1)}%"),
+            ("Beleidsdekkingsgr.", f"{nl(fund_row.get('beleidsdekkingsgraad_pct'), 1)}%"),
+            ("Equity allocation",  f"{nl(fund_row.get('equity_allocation_pct'), 1)}%"),
+            ("Deelnemers totaal",  nl(fund_row.get('deelnemers_totaal'), 0)),
         ]
         for i, (label, value) in enumerate(kpis):
             x = 0.02 + i * 0.196
@@ -758,7 +772,7 @@ st.sidebar.markdown(
   <div class="section-card-title">Database</div>
   <div style="font-size:12px;color:var(--text-mid);line-height:1.7;">
     <div><strong>{len(df_funds)}</strong> fondsen gevolgd</div>
-    <div>Totaal AUM <strong>€{df_funds['aum_euro_bn'].sum():,.1f} Bn</strong></div>
+    <div>Totaal AUM <strong>€{nl(df_funds['aum_euro_bn'].sum(), 1)} Bn</strong></div>
     <div>DNB-dekking <strong>{_dnb_count}</strong> fondsen</div>
     <div>Laatste DNB-kwartaal <strong>{_dnb_quarter}</strong></div>
   </div>
@@ -845,13 +859,13 @@ def page_sector_overview():
         _bdg_dir = "up" if _d >= 0 else "down"
 
     render_kpi_row([
-        kpi_card("Totaal gevolgd AUM", f"€{valid_aum['aum_euro_bn'].sum():,.1f} Bn",
-                 sub=f"over {len(valid_aum)} fondsen ({pct_aum_coverage:.0f}%)"),
-        kpi_card("Gem. dekkingsgraad", f"{valid_ratio['dekkingsgraad_pct'].mean():.1f}%",
+        kpi_card("Totaal gevolgd AUM", f"€{nl(valid_aum['aum_euro_bn'].sum(), 1)} Bn",
+                 sub=f"over {len(valid_aum)} fondsen ({nl(pct_aum_coverage, 0)}%)"),
+        kpi_card("Gem. dekkingsgraad", f"{nl(valid_ratio['dekkingsgraad_pct'].mean(), 1)}%",
                  sub=f"{len(valid_ratio)} fondsen",
                  delta=_bdg_delta, delta_dir=_bdg_dir),
         kpi_card("Grootste fonds", str(largest_row['name'])[:24],
-                 sub=f"€{largest_row['aum_euro_bn']:,.1f} Bn"),
+                 sub=f"€{nl(largest_row['aum_euro_bn'], 1)} Bn"),
         kpi_card("Fondsen gevolgd", f"{len(df_funds)}",
                  sub=f"{df_funds['category'].nunique()} categorieën"),
     ])
@@ -1032,13 +1046,13 @@ def page_sector_overview():
 
         render_kpi_row([
             kpi_card("AUM",
-                     f"€{fund_row['aum_euro_bn']:,.1f} Bn" if pd.notnull(fund_row['aum_euro_bn']) else "—"),
+                     f"€{nl(fund_row['aum_euro_bn'], 1)} Bn" if pd.notnull(fund_row['aum_euro_bn']) else "—"),
             kpi_card("Dekkingsgraad (site)",
-                     f"{fund_row['dekkingsgraad_pct']:.1f}%" if pd.notnull(fund_row['dekkingsgraad_pct']) else "—"),
+                     f"{nl(fund_row['dekkingsgraad_pct'], 1)}%" if pd.notnull(fund_row['dekkingsgraad_pct']) else "—"),
             kpi_card("Beleidsdekkingsgraad",
-                     f"{fund_row['beleidsdekkingsgraad_pct']:.1f}%" if pd.notnull(fund_row['beleidsdekkingsgraad_pct']) else "—"),
+                     f"{nl(fund_row['beleidsdekkingsgraad_pct'], 1)}%" if pd.notnull(fund_row['beleidsdekkingsgraad_pct']) else "—"),
             kpi_card("Aandelenallocatie",
-                     f"{fund_row['equity_allocation_pct']:.1f}%" if pd.notnull(fund_row['equity_allocation_pct']) else "—"),
+                     f"{nl(fund_row['equity_allocation_pct'], 1)}%" if pd.notnull(fund_row['equity_allocation_pct']) else "—"),
         ])
 
         b1, b2 = st.columns([1, 5])
@@ -1138,16 +1152,16 @@ def page_fund_deep_dive():
 
     render_kpi_row([
         kpi_card("AUM",
-                 f"€{fund_data['aum_euro_bn']:,.1f} Bn" if pd.notnull(fund_data['aum_euro_bn']) else "—",
+                 f"€{nl(fund_data['aum_euro_bn'], 1)} Bn" if pd.notnull(fund_data['aum_euro_bn']) else "—",
                  sub=_aum_sub),
         kpi_card("Actuele dekkingsgraad",
-                 f"{fund_data['dekkingsgraad_pct']:.1f}%" if pd.notnull(fund_data['dekkingsgraad_pct']) else "—",
+                 f"{nl(fund_data['dekkingsgraad_pct'], 1)}%" if pd.notnull(fund_data['dekkingsgraad_pct']) else "—",
                  sub="door fonds zelf gerapporteerd"),
         kpi_card("Aandelenallocatie",
-                 f"{fund_data['equity_allocation_pct']:.1f}%" if pd.notnull(fund_data['equity_allocation_pct']) else "—",
+                 f"{nl(fund_data['equity_allocation_pct'], 1)}%" if pd.notnull(fund_data['equity_allocation_pct']) else "—",
                  sub="van totale portefeuille"),
         kpi_card("Deelnemers",
-                 f"{fund_data['deelnemers_totaal']:,.0f}".replace(",", ".") if pd.notnull(fund_data['deelnemers_totaal']) else "—",
+                 f"{nl(fund_data['deelnemers_totaal'], 0)}" if pd.notnull(fund_data['deelnemers_totaal']) else "—",
                  sub="actief + slapers + gepensioneerd"),
     ])
 
@@ -1185,24 +1199,24 @@ def page_fund_deep_dive():
             )
             render_kpi_row([
                 kpi_card("AUM (FY)",
-                         f"€{fy_aum:,.1f} Bn" if fy_aum is not None else "—",
+                         f"€{nl(fy_aum, 1)} Bn" if fy_aum is not None else "—",
                          sub=f"uit jaarverslag {latest_fy}"),
                 kpi_card("Actuele dekkingsgraad (FY)",
-                         f"{fy_actu:.1f}%" if fy_actu is not None else "—",
+                         f"{nl(fy_actu, 1)}%" if fy_actu is not None else "—",
                          sub=f"per eind {latest_fy}"),
                 kpi_card("Beleidsdekkingsgraad (FY)",
-                         f"{fy_beleid:.1f}%" if fy_beleid is not None else "—",
+                         f"{nl(fy_beleid, 1)}%" if fy_beleid is not None else "—",
                          sub=f"per eind {latest_fy}"),
                 kpi_card("Aandelenallocatie (FY)",
-                         f"{fy_eq:.1f}%" if fy_eq is not None else "—",
+                         f"{nl(fy_eq, 1)}%" if fy_eq is not None else "—",
                          sub=f"per jaarverslag {latest_fy}"),
             ])
             # Markeer waarden die afwijken van de funds-tabel KPI's hierboven
             mismatches = []
             if fy_aum is not None and pd.notnull(fund_data['aum_euro_bn']) and abs(fy_aum - fund_data['aum_euro_bn']) > 0.5:
-                mismatches.append(f"AUM (fondsentabel {fund_data['aum_euro_bn']:.1f} vs jaarverslag {fy_aum:.1f})")
+                mismatches.append(f"AUM (fondsentabel {nl(fund_data['aum_euro_bn'], 1)} vs jaarverslag {nl(fy_aum, 1)})")
             if fy_actu is not None and pd.notnull(fund_data['dekkingsgraad_pct']) and abs(fy_actu - fund_data['dekkingsgraad_pct']) > 1.0:
-                mismatches.append(f"dekkingsgraad ({fund_data['dekkingsgraad_pct']:.1f}% vs {fy_actu:.1f}%)")
+                mismatches.append(f"dekkingsgraad ({nl(fund_data['dekkingsgraad_pct'], 1)}% vs {nl(fy_actu, 1)}%)")
             if mismatches:
                 st.caption("⚠ fondsentabel-waarden wijken af van het jaarverslag: " + "; ".join(mismatches))
 
@@ -1281,7 +1295,7 @@ def page_fund_deep_dive():
                 _tot = fund_data.get('deelnemers_totaal')
                 if pd.notnull(_tot):
                     fig_deel.add_annotation(
-                        text=f"<b>{_tot:,.0f}</b><br>totaal".replace(",", "."),
+                        text=f"<b>{nl(_tot, 0)}</b><br>totaal",
                         showarrow=False, font=dict(size=13),
                     )
                 fig_deel.update_layout(height=280, showlegend=True,
@@ -1292,13 +1306,13 @@ def page_fund_deep_dive():
         with deel_r:
             st.markdown("##### Kerngegevens")
             if pd.notnull(fund_data['deelnemers_totaal']):
-                st.markdown(f"**Totaal deelnemers:** {fund_data['deelnemers_totaal']:,.0f}")
-                st.markdown(f"- **Actief:** {fund_data['deelnemers_actief']:,.0f}" if pd.notnull(fund_data['deelnemers_actief']) else "- **Actief:** n.b.")
-                st.markdown(f"- **Slapers:** {fund_data['deelnemers_slapers']:,.0f}" if pd.notnull(fund_data['deelnemers_slapers']) else "- **Slapers:** n.b.")
-                st.markdown(f"- **Gepensioneerden:** {fund_data['deelnemers_gepensioneerd']:,.0f}" if pd.notnull(fund_data['deelnemers_gepensioneerd']) else "- **Gepensioneerden:** n.b.")
+                st.markdown(f"**Totaal deelnemers:** {nl(fund_data['deelnemers_totaal'], 0)}")
+                st.markdown(f"- **Actief:** {nl(fund_data['deelnemers_actief'], 0)}" if pd.notnull(fund_data['deelnemers_actief']) else "- **Actief:** n.b.")
+                st.markdown(f"- **Slapers:** {nl(fund_data['deelnemers_slapers'], 0)}" if pd.notnull(fund_data['deelnemers_slapers']) else "- **Slapers:** n.b.")
+                st.markdown(f"- **Gepensioneerden:** {nl(fund_data['deelnemers_gepensioneerd'], 0)}" if pd.notnull(fund_data['deelnemers_gepensioneerd']) else "- **Gepensioneerden:** n.b.")
             st.markdown(f"**Uitvoerder:** {fund_data['uitvoerder'] if pd.notnull(fund_data['uitvoerder']) else 'Onbekend'}")
             if pd.notnull(fund_data['beleidsdekkingsgraad_pct']):
-                st.markdown(f"**Beleidsdekkingsgraad:** {fund_data['beleidsdekkingsgraad_pct']:.1f}%")
+                st.markdown(f"**Beleidsdekkingsgraad:** {nl(fund_data['beleidsdekkingsgraad_pct'], 1)}%")
             _bp_raw = fund_data.get('benchmark_providers')
             if pd.notnull(_bp_raw) and str(_bp_raw).strip():
                 _bp_badges = " ".join(
@@ -1436,9 +1450,9 @@ def page_fund_deep_dive():
                     val = table_df.at[row_name, col]
                     if pd.notnull(val):
                         if is_pct:
-                            table_df.at[row_name, col] = f"{val:.1f}%"
+                            table_df.at[row_name, col] = f"{nl(val, 1)}%"
                         elif 'vermogen' in str(row_name).lower():
-                            table_df.at[row_name, col] = f"€{val:,.2f} mrd".replace('.', 'X').replace(',', '.').replace('X', ',')
+                            table_df.at[row_name, col] = f"€{nl(val, 2)} mrd".replace('.', 'X').replace(',', '.').replace('X', ',')
                         else:
                             table_df.at[row_name, col] = f"{int(float(val)):,}".replace(',', '.')
                     else:
@@ -1550,10 +1564,10 @@ def page_fund_comparison():
                 a = str(int(row['sfdr_article']))
                 badge_html += " " + badge(f"SFDR Art {a}",
                                           {"6": "gray", "8": "blue", "9": "green"}.get(a, "purple"))
-            aum = f"€{row['aum_euro_bn']:,.1f} Bn" if pd.notnull(row['aum_euro_bn']) else "—"
-            dekk = f"{row['dekkingsgraad_pct']:.1f}%" if pd.notnull(row['dekkingsgraad_pct']) else "—"
-            beleids = f"{row['beleidsdekkingsgraad_pct']:.1f}%" if pd.notnull(row['beleidsdekkingsgraad_pct']) else "—"
-            deeln = f"{row['deelnemers_totaal']:,.0f}".replace(",", ".") if pd.notnull(row['deelnemers_totaal']) else "—"
+            aum = f"€{nl(row['aum_euro_bn'], 1)} Bn" if pd.notnull(row['aum_euro_bn']) else "—"
+            dekk = f"{nl(row['dekkingsgraad_pct'], 1)}%" if pd.notnull(row['dekkingsgraad_pct']) else "—"
+            beleids = f"{nl(row['beleidsdekkingsgraad_pct'], 1)}%" if pd.notnull(row['beleidsdekkingsgraad_pct']) else "—"
+            deeln = f"{nl(row['deelnemers_totaal'], 0)}" if pd.notnull(row['deelnemers_totaal']) else "—"
             uitv = row.get('uitvoerder') or '—'
             cards.append(
                 '<div class="kpi-card">'
@@ -1808,13 +1822,13 @@ def page_equity_strategy():
             kpi_card("Fondsen in cohort", f"{len(eq_df)}",
                      sub="€1–5 Bn AUM-range"),
             kpi_card("Totaal AUM in cohort",
-                     f"€{eq_df['AUM (€ Bn)'].sum():,.1f} Bn",
-                     sub=f"gem. €{eq_df['AUM (€ Bn)'].mean():,.1f} Bn / fonds"),
+                     f"€{nl(eq_df['AUM (€ Bn)'].sum(), 1)} Bn",
+                     sub=f"gem. €{nl(eq_df['AUM (€ Bn)'].mean(), 1)} Bn / fonds"),
             kpi_card("Gem. aandelenallocatie",
-                     f"{valid_eq['Aandelen %'].mean():.1f}%" if not valid_eq.empty else "—",
+                     f"{nl(valid_eq['Aandelen %'].mean(), 1)}%" if not valid_eq.empty else "—",
                      sub=f"{len(valid_eq)}/{len(eq_df)} rapporteren"),
             kpi_card("Gem. beheerkosten",
-                     f"{valid_kosten['Aandelen Beheerkosten %'].mean():.3f}%" if not valid_kosten.empty else "—",
+                     f"{nl(valid_kosten['Aandelen Beheerkosten %'].mean(), 3)}%" if not valid_kosten.empty else "—",
                      sub=f"{len(valid_kosten)}/{len(eq_df)} rapporteren"),
         ])
         st.markdown(
@@ -1871,7 +1885,7 @@ def page_asset_managers():
         kpi_card("Meest ingezette beheerder", str(top_mgr['Beheerder'])[:24] if top_mgr is not None else "—",
                  sub=f"{int(top_mgr['Aantal_pensioenfondsen'])} pensioenfondsen" if top_mgr is not None else ""),
         kpi_card("Top-20 dekking",
-                 f"{managers_df['Aantal_pensioenfondsen'].sum() / max(total_relations,1) * 100:.0f}%" if total_relations else "—",
+                 f"{nl(managers_df['Aantal_pensioenfondsen'].sum() / max(total_relations,1) * 100, 0)}%" if total_relations else "—",
                  sub="aandeel van alle relaties in top 20"),
     ])
     st.divider()
@@ -1918,7 +1932,7 @@ def page_benchmarks():
 
     render_kpi_row([
         kpi_card("Fondsen met benchmark-data", f"{len(bp_df)}",
-                 sub=f"van {len(df_funds)} ({len(bp_df)/max(len(df_funds),1)*100:.0f}%)"),
+                 sub=f"van {len(df_funds)} ({nl(len(bp_df)/max(len(df_funds),1)*100, 0)}%)"),
         kpi_card("Meest gebruikt", str(top.index[0]),
                  sub=f"{int(top.iloc[0])} fondsen"),
         kpi_card("Unieke providers", f"{bp_long['provider'].nunique()}",
@@ -2088,13 +2102,13 @@ def page_wtp_tracker():
 
     render_kpi_row([
         kpi_card("WTP-plan bekend", f"{wtp_known}",
-                 sub=f"van {total_funds_in_db} gevolgde fondsen ({wtp_known/max(total_funds_in_db,1)*100:.0f}%)"),
+                 sub=f"van {total_funds_in_db} gevolgde fondsen ({nl(wtp_known/max(total_funds_in_db,1)*100, 0)}%)"),
         kpi_card("Reeds ingevaren", f"{reeds_ingevaren}",
                  sub=f"{nog_te_komen} nog te komen · {uitgesteld_count} uitgesteld"),
         kpi_card("Solidair", f"{solidair_count}",
                  sub=f"Flexibel: {flexibel_count}"),
         kpi_card("Gem. AUM in scope",
-                 f"€{wtp_df['aum_euro_bn'].mean():,.1f} Bn" if not wtp_df.empty and wtp_df['aum_euro_bn'].notna().any() else "—",
+                 f"€{nl(wtp_df['aum_euro_bn'].mean(), 1)} Bn" if not wtp_df.empty and wtp_df['aum_euro_bn'].notna().any() else "—",
                  sub="onder fondsen met WTP-plan"),
     ])
     st.divider()
@@ -2321,7 +2335,7 @@ def page_wtp_tracker():
             timeline_df['aum_known'] = timeline_df['aum_euro_bn'].notna()
             timeline_df['aum_marker'] = np.sqrt(timeline_df['aum_euro_bn'].fillna(1.0))
             timeline_df['AUM (€ Bn)'] = timeline_df['aum_euro_bn'].apply(
-                lambda v: f"{v:.1f}" if pd.notna(v) else "?"
+                lambda v: f"{nl(v, 1)}" if pd.notna(v) else "?"
             )
             timeline_df['Oorspr. datum'] = timeline_df['oorspr'].dt.strftime('%d %b %Y').fillna('—')
             timeline_df['Uitvoerder'] = timeline_df['uitvoerder'].fillna('—')
@@ -2428,12 +2442,12 @@ def page_dekkingsgraad():
         idx_bot = valid_df['dekkingsgraad_pct'].idxmin()
         render_kpi_row([
             kpi_card("Fondsen boven 100%", f"{above_100}",
-                     sub=f"van {len(valid_df)} ({above_100/len(valid_df)*100:.0f}%)"),
+                     sub=f"van {len(valid_df)} ({nl(above_100/len(valid_df)*100, 0)}%)"),
             kpi_card("Fondsen boven 120%", f"{above_120}",
                      sub="indexatie-ready"),
-            kpi_card("Hoogste dekkingsgraad", f"{valid_df.loc[idx_top, 'dekkingsgraad_pct']:.1f}%",
+            kpi_card("Hoogste dekkingsgraad", f"{nl(valid_df.loc[idx_top, 'dekkingsgraad_pct'], 1)}%",
                      sub=str(valid_df.loc[idx_top, 'name'])[:28]),
-            kpi_card("Laagste dekkingsgraad", f"{valid_df.loc[idx_bot, 'dekkingsgraad_pct']:.1f}%",
+            kpi_card("Laagste dekkingsgraad", f"{nl(valid_df.loc[idx_bot, 'dekkingsgraad_pct'], 1)}%",
                      sub=str(valid_df.loc[idx_bot, 'name'])[:28]),
         ])
         st.divider()
@@ -2506,13 +2520,13 @@ def page_esg_sfdr():
             kpi_card("Fondsen geclassificeerd", f"{len(sfdr_df)}",
                      sub=f"van {len(df_funds)} gevolgd"),
             kpi_card("Aandeel Artikel 8",
-                     f"{a8/len(sfdr_df)*100:.0f}%",
+                     f"{nl(a8/len(sfdr_df)*100, 0)}%",
                      sub=f"{a8} fondsen — promoot E/S-kenmerken"),
             kpi_card("Aandeel Artikel 9",
-                     f"{a9/len(sfdr_df)*100:.0f}%",
+                     f"{nl(a9/len(sfdr_df)*100, 0)}%",
                      sub=f"{a9} fondsen — duurzaam beleggingsdoel"),
             kpi_card("Gem. EU-taxonomie",
-                     f"{tax_mean:.1f}%" if tax_mean is not None else "—",
+                     f"{nl(tax_mean, 1)}%" if tax_mean is not None else "—",
                      sub="aligned over geclassificeerde fondsen"),
         ])
         st.divider()
@@ -2604,7 +2618,7 @@ def page_news():
             kpi_card("Koppen", f"{len(df_news):,}".replace(',', '.'),
                      sub="gescraped van fondswebsites"),
             kpi_card("Laatste 30 dagen", f"{n_recent:,}".replace(',', '.'),
-                     sub=f"{n_recent/max(len(df_news),1)*100:.0f}% van totaal"),
+                     sub=f"{nl(n_recent/max(len(df_news),1)*100, 0)}% van totaal"),
             kpi_card("Fondsen gedekt", f"{n_funds}",
                      sub="unieke fondsbronnen"),
             kpi_card("Categorieën", f"{n_cats}",
