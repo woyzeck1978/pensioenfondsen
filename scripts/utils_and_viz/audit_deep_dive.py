@@ -39,7 +39,7 @@ DREMPEL_ZW_PP = 5.0
 DREMPEL_DNB_PP = 5.0
 DREMPEL_DEELNEMERS = 0.01      # 1% speling op de optelling
 DREMPEL_ALLOCATIE_PP = 5.0
-DGR_MIN, DGR_MAX = 60.0, 250.0
+DGR_MIN, DGR_MAX = 60.0, 300.0   # HAL staat volgens DNB op 257,6% en is echt
 AUM_MAX_BN = 600.0
 
 
