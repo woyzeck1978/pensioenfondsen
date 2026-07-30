@@ -619,9 +619,25 @@ def _push_recent(fund_name: str | None) -> None:
     rf = [fund_name] + [n for n in rf if n != fund_name]
     st.session_state.recent_funds = rf[:5]
 
-# Niet-pensioenfondsen (vermogensbeheerders e.d.) — uitgesloten van
-# fonds-selectors en de globale zoeker.
+# Niet-pensioenfondsen — uitgesloten van fonds-selectors, de globale zoeker én
+# van de sectortotalen. Twee regels naast elkaar, want geen van beide dekt alles:
+#
+#  - op categorie: verzekeraars en premiepensioeninstellingen zijn pensioen-
+#    uitvoerders, geen fondsen. Samen 82,8 miljard, bijna 5% van het totaal.
+#  - op naam: APG is een uitvoerder maar staat als 'Bedrijf' geboekt, net als de
+#    76 echte ondernemingsfondsen; die is alleen op naam te vangen.
+#
+# Dit stond eerder alleen als namenlijst en werd alleen bij de selectors
+# toegepast. Daardoor telde het sectortotaal Nationale-Nederlanden (36 miljard,
+# categorie Verzekeraar) en Allianz (15 miljard) gewoon mee als pensioenfonds.
+NON_FUND_CATEGORIES = ['Verzekeraar', 'PPI']
 NON_FUNDS = ['APG', 'ASR', 'ASR PPI', 'Allianz', 'Allianz PPI', 'A.S. Watson Nederland']
+
+
+def echte_fondsen(df):
+    """Alleen de rijen die daadwerkelijk een pensioenfonds zijn."""
+    return df[~df["name"].isin(NON_FUNDS)
+              & ~df["category"].isin(NON_FUND_CATEGORIES)]
 
 # Cross-page navigatie: callbacks zetten een pending jump die net vóór
 # nav.run() (onderaan dit bestand) wordt afgehandeld met st.switch_page.
@@ -680,7 +696,7 @@ def _zoek_fragment(tekst: str, term: str, breedte: int = 55) -> str:
 def _render_global_search(term: str) -> None:
     """Resultaten van de globale zoekbalk, gegroepeerd, in de sidebar."""
     tl = term.lower()
-    fondsen = df_funds[~df_funds["name"].isin(NON_FUNDS)]
+    fondsen = echte_fondsen(df_funds)
     f_hits = fondsen[fondsen["name"].str.lower().str.contains(tl, regex=False, na=False)]
 
     try:
@@ -771,8 +787,8 @@ st.sidebar.markdown(
 <div class="section-card" style="margin-bottom:0;">
   <div class="section-card-title">Database</div>
   <div style="font-size:12px;color:var(--text-mid);line-height:1.7;">
-    <div><strong>{len(df_funds)}</strong> fondsen gevolgd</div>
-    <div>Totaal AUM <strong>€{nl(df_funds['aum_euro_bn'].sum(), 1)} Bn</strong></div>
+    <div><strong>{len(echte_fondsen(df_funds))}</strong> fondsen gevolgd</div>
+    <div>Totaal AUM <strong>€{nl(echte_fondsen(df_funds)['aum_euro_bn'].sum(), 1)} Bn</strong></div>
     <div>DNB-dekking <strong>{_dnb_count}</strong> fondsen</div>
     <div>Laatste DNB-kwartaal <strong>{_dnb_quarter}</strong></div>
   </div>
@@ -844,10 +860,11 @@ def page_sector_overview():
     st.markdown("Interactieve verkenning van de Nederlandse pensioensector — "
                 "AUM, dekkingsgraden, allocaties, ESG en de WTP-transitie.")
 
-    valid_aum = df_funds.dropna(subset=['aum_euro_bn'])
-    valid_ratio = df_funds.dropna(subset=['dekkingsgraad_pct'])
+    _echte = echte_fondsen(df_funds)
+    valid_aum = _echte.dropna(subset=['aum_euro_bn'])
+    valid_ratio = _echte.dropna(subset=['dekkingsgraad_pct'])
     largest_row = valid_aum.loc[valid_aum['aum_euro_bn'].idxmax()]
-    pct_aum_coverage = len(valid_aum) / len(df_funds) * 100
+    pct_aum_coverage = len(valid_aum) / len(_echte) * 100
 
     # DNB-sectordelta voor het KPI-pijltje (laatste vs vorig kwartaal)
     _bdg = get_dnb_sector_bdg()
@@ -1070,7 +1087,7 @@ def page_fund_deep_dive():
     st.header("Fondsprofiel — diepteanalyse")
 
     # Fund Selector (Exclude APG as it is an asset manager)
-    deep_dive_funds = df_funds[~df_funds['name'].isin(NON_FUNDS)]
+    deep_dive_funds = echte_fondsen(df_funds)
     fund_names = deep_dive_funds['name'].sort_values().tolist()
 
     # Try to initialize the selectbox with the globally selected fund
@@ -1533,7 +1550,7 @@ def page_fund_comparison():
         "Selecteer 2 of 3 fondsen om de kerncijfers en historische ontwikkeling naast elkaar te zien."
     )
 
-    comparable = df_funds[~df_funds['name'].isin(NON_FUNDS)]
+    comparable = echte_fondsen(df_funds)
     fund_options = comparable['name'].sort_values().tolist()
 
     selected = st.multiselect(
