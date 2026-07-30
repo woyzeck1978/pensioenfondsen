@@ -49,3 +49,6 @@ data/processed/app_state.db-shm
 
 # Quarantaine van audit_pdfs.py — kapotte downloads, niet in de repo
 data/_broken/
+
+# Back-ups van de sync-scripts; de vorige staat zit in de git-historie
+data/processed/pension_funds.backup-*.db
