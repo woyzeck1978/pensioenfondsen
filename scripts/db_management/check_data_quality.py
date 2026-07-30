@@ -286,6 +286,26 @@ def analyses_uit_quarantaine(con):
                 "SELECT fund_id, fiscal_year, source_pdf FROM fund_analysis WHERE source_pdf LIKE '%_broken%'")]
 
 
+
+def afbakening_afwijkend(con):
+    """is_pensioenfonds wijkt af van wat de categorie zegt.
+
+    De kolom wordt gezet door add_is_pensioenfonds.py op basis van categorie en
+    een namenlijst. Wijkt hij later af, dan is er een categorie gewijzigd of een
+    rij toegevoegd zonder de afbakening bij te werken — en dan telt een
+    verzekeraar weer mee in het sectortotaal. Pensioenfonds Achmea stond zo als
+    'Verzekeraar' geboekt en zou ten onrechte zijn weggefilterd.
+    """
+    return [f"{naam}: categorie {cat!r} maar is_pensioenfonds={vlag}"
+            for naam, cat, vlag in con.execute("""
+                SELECT name, COALESCE(category,''), is_pensioenfonds FROM funds
+                WHERE is_pensioenfonds IS NOT NULL
+                  AND ((COALESCE(category,'') IN ('Verzekeraar','PPI') AND is_pensioenfonds = 1)
+                    OR (COALESCE(category,'') NOT IN ('Verzekeraar','PPI')
+                        AND is_pensioenfonds = 0
+                        AND name NOT IN ('APG','A.S. Watson Nederland')))""")]
+
+
 CONTROLES = [
     ("Deelnemers tellen niet op tot het totaal", deelnemers_inconsistent),
     ("Hetzelfde getal in twee deelnemerskolommen", deelnemers_gedupliceerd_binnen_fonds),
@@ -303,6 +323,7 @@ CONTROLES = [
     ("Analyses bij een als duplicaat samengevoegd fonds", analyses_op_duplicaatfonds),
     ("Analyses met een onmogelijk boekjaar", analyses_met_onmogelijk_boekjaar),
     ("Analyses die leunen op een bestand in quarantaine", analyses_uit_quarantaine),
+    ("Afbakening pensioenfonds wijkt af van de categorie", afbakening_afwijkend),
 ]
 
 

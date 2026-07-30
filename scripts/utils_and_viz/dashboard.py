@@ -235,7 +235,7 @@ def get_all_funds():
         f.beleidsdekkingsgraad_pct,
         f.equity_allocation_pct, f.uitvoerder, f.deelnemers_totaal, f.website,
         f.deelnemers_actief, f.deelnemers_slapers, f.deelnemers_gepensioneerd,
-        f.sfdr_article, f.eu_taxonomy_pct, f.investment_beliefs,
+        f.sfdr_article, f.eu_taxonomy_pct, f.investment_beliefs, f.is_pensioenfonds,
         f.benchmark_providers, f.benchmark_providers_bron, f.benchmarks,
         e.co2_reduction_goal, e.sfdr_classification
     FROM funds f
@@ -635,7 +635,15 @@ NON_FUNDS = ['APG', 'ASR', 'ASR PPI', 'Allianz', 'Allianz PPI', 'A.S. Watson Ned
 
 
 def echte_fondsen(df):
-    """Alleen de rijen die daadwerkelijk een pensioenfonds zijn."""
+    """Alleen de rijen die daadwerkelijk een pensioenfonds zijn.
+
+    Leest funds.is_pensioenfonds, zodat de afbakening in de data zit en niet in
+    deze pagina: wie de database rechtstreeks bevraagt of de Excel-export
+    gebruikt, krijgt dezelfde scheiding. Valt terug op de oude afleiding als de
+    kolom ontbreekt, bijvoorbeeld bij een oudere kopie van de database.
+    """
+    if "is_pensioenfonds" in df.columns:
+        return df[df["is_pensioenfonds"].fillna(1) == 1]
     return df[~df["name"].isin(NON_FUNDS)
               & ~df["category"].isin(NON_FUND_CATEGORIES)]
 
