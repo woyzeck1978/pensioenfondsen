@@ -558,7 +558,12 @@ After all our extraction passes:
 
 The remaining gaps need either bigger PDFs (download more FY2024 jaarverslagen from scraped_documents URLs) or a manual data entry pass.
 
-### 7. Data-quality outlier detection (MEDIUM value, LOW effort)
+### 7. Data-quality outlier detection (AFGEROND 2026-07-31)
+
+Ingebouwd in `check_data_quality.py` als `uitschieters_jaarreeks`, met grenzen op zeven kolommen. Vond meteen Gasunie: toeslagen van 121 tot 137 procent over 2020-2024, die in werkelijkheid nominale dekkingsgraden waren en een kolom waren opgeschoven. Verplaatst; de controle staat op OK.
+
+<details><summary>oorspronkelijke tekst</summary>
+
 
 The Hoogovens-style "162% rendement" issue was found by `ABS(value) > 50`.
 Add similar sanity sweeps periodically:
@@ -570,6 +575,8 @@ UNION SELECT 'beleidsdg outside 50..250', COUNT(*) FROM historical_metrics WHERE
 UNION SELECT 'aum <=0 or >1000 Bn', COUNT(*) FROM historical_metrics WHERE aum_euro_bn <=0 OR aum_euro_bn > 1000
 ;
 ```
+
+</details>
 
 ### 8. Streamlit-aggrid for true click-to-detail table (LOW value, MEDIUM effort)
 
@@ -617,7 +624,16 @@ rows; the inventory has ~100 PDFs available).
   this filter the top-30 run picked `106_Hoogovens_Transitieplan.pdf`
   alphabetically over `106_Hoogovens.pdf`.
 
-### 10. Post-invaren reporting template (HIGH value, blocked by FY2025 publication)
+### 10. Post-invaren reporting template (AFGEROND 2026-07-31)
+
+De blokkade is weg: de eerste postinvaren-jaarverslagen zijn verschenen. Het schema hieronder is doorgevoerd — `solidariteitsreserve_pct` en `collectief_pensioenvermogen_eur_bn` op `historical_metrics`, `invaardatum` en `invaardekkingsgraad_pct` op `funds`. PWRI staat op een solidariteitsreserve van 5,3 procent bij 11,06 miljard collectief vermogen, Loodsen op 7,5 procent.
+
+`funds.invaardatum` is voor 33 fondsen afgeleid uit hun eigen transitieparagraaf. Daarmee kan `check_data_quality.py` nu vaststellen of een lege dekkingsgraad een gat is of juist correct — voor een ingevaren fonds is die leegte de bedoeling.
+
+Wat nog open blijft: `cohort_metrics` voor rendement per leeftijdscohort, en de dashboard-toggle die voor ingevaren fondsen een rendementsgrafiek toont in plaats van een dekkingsgraadgrafiek.
+
+<details><summary>oorspronkelijk ontwerp</summary>
+
 
 Eenmaal een fonds is ingevaren onder Wtp **verdwijnt de dekkingsgraad
 uit het jaarverslag**. Onze huidige `historical_metrics`-schema is
@@ -728,3 +744,5 @@ See CLAUDE.md "Automated bi-daily scrape (launchd + .app bundle)" section for th
 - When committing, prefer multi-paragraph messages that explain *why*. The git log is the only persistent record of decisions.
 - The `--dry-run` pattern is used a lot — always offer a preview pass before bulk DB writes.
 - For PDF extraction: the regex route is fragile because of multi-year tables and table-text merging. LLM is more robust but local LLM stability (MBP sleep) is the main bottleneck.
+
+</details>
