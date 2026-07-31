@@ -12,9 +12,22 @@ def export_to_excel(db_path, excel_path):
     # Create a Pandas Excel writer using XlsxWriter as the engine.
     writer = pd.ExcelWriter(excel_path, engine='xlsxwriter')
     
+    # De tabel funds bevat naast pensioenfondsen ook verzekeraars, PPI's,
+    # uitvoerders en Nederlandse regelingen die bij een Belgische OFP lopen. In
+    # het dashboard worden die eruit gefilterd, maar wie deze export opende en de
+    # vermogenskolom optelde kreeg ze er gewoon bij — 81 miljard te veel. Daarom
+    # twee bladen: op 'funds' staan alleen pensioenfondsen, zodat een optelling
+    # daar per definitie klopt, en de rest staat met reden op 'funds_overig'.
     for table_name in tables:
         if table_name == 'funds':
-            df = pd.read_sql_query(f'SELECT * FROM {table_name} ORDER BY category ASC, aum_euro_bn DESC', conn)
+            df = pd.read_sql_query(
+                'SELECT * FROM funds WHERE COALESCE(is_pensioenfonds, 1) = 1 '
+                'ORDER BY category ASC, aum_euro_bn DESC', conn)
+            overig = pd.read_sql_query(
+                'SELECT * FROM funds WHERE COALESCE(is_pensioenfonds, 1) = 0 '
+                'ORDER BY aum_euro_bn DESC', conn)
+            if not overig.empty:
+                overig.to_excel(writer, sheet_name='funds_overig', index=False)
         elif table_name == 'historical_metrics':
             df = pd.read_sql_query(f'SELECT f.name as fund_name, h.* FROM historical_metrics h JOIN funds f ON h.fund_id = f.id ORDER BY h.fund_id, h.year DESC', conn)
         elif table_name == 'scraped_documents':
