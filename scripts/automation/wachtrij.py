@@ -120,7 +120,11 @@ def _kringnaam(naam: str) -> str | None:
         return None
     zonder = re.sub(r"\([^)]*\)", " ", naam)
     woorden = [w for w in re.findall(r"[A-Za-z0-9À-ÿ]{2,}", zonder) if not KRING_RUIS.match(w)]
-    return woorden[0] if woorden else None
+    if not woorden:
+        return None
+    # In de tabel heet hij 'CK1', in het verslag 'Collectiviteitkring 1'.
+    m = re.fullmatch(r"CK(\d+)", woorden[0], re.I)
+    return f"Collectiviteitkring {m.group(1)}" if m else woorden[0]
 
 
 def _hoort_bij_kring(pagina: str, kring: str) -> bool:

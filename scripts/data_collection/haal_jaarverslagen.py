@@ -157,6 +157,13 @@ def keur(pad: str, jaar: int, naam: str, van_eigen_site: bool = False) -> str | 
             return f"draagt boekjaar {draagt}, niet {jaar} ({dict(telling)})"
     elif str(jaar) not in heel:
         return f"boekjaar {jaar} komt in het document niet voor"
+    # Een kring binnen een algemeen pensioenfonds moet altijd op naam kloppen, ook
+    # als de PDF van het eigen domein komt: stappensioen.nl host de deelverslagen
+    # van tien kringen, en het domein zegt dus niets over wélke. Zo kwam onder
+    # 'Pensioenkring Randstad' het deel-jaarverslag van Pensioenkring Ballast
+    # Nedam binnen — een ander fonds in onze tabel, met eigen cijfers.
+    if re.search(r"\b(pensioen)?kring\b", naam, re.I):
+        van_eigen_site = False
     woorden = kenmerkend(naam)
     if not van_eigen_site and woorden and not any(
             re.search(rf"\b{re.escape(w)}\b", tekst) for w in woorden):
