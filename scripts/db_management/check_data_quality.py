@@ -306,8 +306,33 @@ def afbakening_afwijkend(con):
                         AND name NOT IN ('APG','A.S. Watson Nederland')))""")]
 
 
+def historische_deelnemers_inconsistent(con):
+    """Zelfde controle, maar op de jaarreeks in plaats van de fondsentabel.
+
+    Die reeks is nooit nagelopen en blijkt onbetrouwbaar: De Nationale APF staat
+    over 2025 op een totaal van 1.085 terwijl de eigen onderdelen optellen tot
+    34.558, en bij Vopak en UWV staan ronde placeholders als 400+400 en 90+90.
+    Wie dat veld gebruikt om de fondsentabel aan te vullen, schrijft die fouten
+    over — wat bij een poging daartoe ook precies gebeurde.
+    """
+    rijen = con.execute("""
+        SELECT h.fund_id, f.name, h.year, h.deelnemers_actief a, h.deelnemers_slapers s,
+               h.deelnemers_pensioengerechtigd g, h.deelnemers_totaal t
+        FROM historical_metrics h JOIN funds f ON f.id = h.fund_id
+        WHERE h.deelnemers_totaal > 0 AND h.deelnemers_actief IS NOT NULL
+    """).fetchall()
+    uit = []
+    for r in rijen:
+        som = (r["a"] or 0) + (r["s"] or 0) + (r["g"] or 0)
+        if som > 0 and abs(r["t"] - som) > 0.01 * r["t"]:
+            uit.append(f"{r['name'][:34]:36s} FY{r['year']}  "
+                       f"{r['a']}+{r['s']}+{r['g']} = {som}, maar totaal = {r['t']}")
+    return uit
+
+
 CONTROLES = [
     ("Deelnemers tellen niet op tot het totaal", deelnemers_inconsistent),
+    ("Deelnemers in de jaarreeks tellen niet op", historische_deelnemers_inconsistent),
     ("Hetzelfde getal in twee deelnemerskolommen", deelnemers_gedupliceerd_binnen_fonds),
     ("Vermogen per deelnemer buiten elke verhouding", vermogen_per_deelnemer),
     ("Zelfde deelnemersuitsplitsing bij meerdere fondsen",
