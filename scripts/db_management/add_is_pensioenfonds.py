@@ -35,6 +35,19 @@ DB_PATH = os.path.join(BASE_DIR, "data", "processed", "pension_funds.db")
 GEEN_FONDS_CATEGORIE = ("Verzekeraar", "PPI")
 GEEN_FONDS_NAAM = ("APG", "A.S. Watson Nederland")
 
+# Nederlandse regelingen die worden uitgevoerd door een buitenlandse instelling.
+# Dat zijn geen Nederlandse pensioenfondsen: het prudentieel toezicht ligt in
+# Belgie en ze komen niet voor in DNB's kwartaalstatistiek. Waar een gewoon fonds
+# vijfhonderd DNB-rijen heeft, hebben deze drie er nul. Hun 5,84 miljard telde
+# wel mee in het sectortotaal.
+GEEN_FONDS_OFP = {
+    44: "Nederlandse sectie binnen OFP BP Pensioenfonds (Belgie); geen DNB-toezicht",
+    94: "Nederlandse regeling binnen ExxonMobil OFP, Machelen (Belgie); geen DNB-toezicht",
+    109: "Nederlandse sectie binnen de Belgische OFP van J&J; jaarstukken bij de NBB gedeponeerd",
+}
+REDEN_CATEGORIE = "verzekeraar of PPI, geen pensioenfonds"
+REDEN_NAAM = "uitvoerder of registerrij, geen pensioenfonds"
+
 
 def main() -> int:
     ap = argparse.ArgumentParser()
@@ -47,9 +60,11 @@ def main() -> int:
 
     vragen = ",".join("?" * len(GEEN_FONDS_CATEGORIE))
     namen = ",".join("?" * len(GEEN_FONDS_NAAM))
+    ofp = ",".join(str(i) for i in GEEN_FONDS_OFP)
     geen = con.execute(
         f"""SELECT id, name, category, COALESCE(aum_euro_bn, 0) FROM funds
             WHERE COALESCE(category,'') IN ({vragen}) OR name IN ({namen})
+               OR id IN ({ofp})
             ORDER BY aum_euro_bn DESC""",
         (*GEEN_FONDS_CATEGORIE, *GEEN_FONDS_NAAM)).fetchall()
 
@@ -69,11 +84,21 @@ def main() -> int:
 
     if not bestaat:
         con.execute("ALTER TABLE funds ADD COLUMN is_pensioenfonds INTEGER DEFAULT 1")
-    con.execute("UPDATE funds SET is_pensioenfonds = 1")
+    if not any(r[1] == "afbakening_reden" for r in con.execute("PRAGMA table_info(funds)")):
+        # De reden hoort bij de uitkomst. Stond die alleen in dit script, dan is
+        # bij een rij met is_pensioenfonds=0 niet te zien waarom.
+        con.execute("ALTER TABLE funds ADD COLUMN afbakening_reden TEXT")
+    con.execute("UPDATE funds SET is_pensioenfonds = 1, afbakening_reden = NULL")
     con.execute(
-        f"""UPDATE funds SET is_pensioenfonds = 0
-            WHERE COALESCE(category,'') IN ({vragen}) OR name IN ({namen})""",
-        (*GEEN_FONDS_CATEGORIE, *GEEN_FONDS_NAAM))
+        f"""UPDATE funds SET is_pensioenfonds = 0, afbakening_reden = ?
+            WHERE COALESCE(category,'') IN ({vragen})""",
+        (REDEN_CATEGORIE, *GEEN_FONDS_CATEGORIE))
+    con.execute(
+        f"""UPDATE funds SET is_pensioenfonds = 0, afbakening_reden = ?
+            WHERE name IN ({namen})""", (REDEN_NAAM, *GEEN_FONDS_NAAM))
+    for fid, reden in GEEN_FONDS_OFP.items():
+        con.execute("UPDATE funds SET is_pensioenfonds = 0, afbakening_reden = ? WHERE id = ?",
+                    (reden, fid))
     con.commit()
     n0, n1 = con.execute(
         "SELECT SUM(is_pensioenfonds = 0), SUM(is_pensioenfonds = 1) FROM funds").fetchone()

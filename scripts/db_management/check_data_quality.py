@@ -358,6 +358,25 @@ def historische_deelnemers_gedeeld(con):
     return uit
 
 
+def pensioenfonds_zonder_dnb(con):
+    """Als pensioenfonds gemarkeerd, vermogen van betekenis, maar DNB kent het niet.
+
+    Elk Nederlands pensioenfonds rapporteert per kwartaal aan DNB; een gewoon
+    fonds heeft hier vijfhonderd rijen. Nul rijen bij een vermogen van honderden
+    miljoenen betekent dat het fonds ergens anders onder toezicht staat. Zo
+    kwamen BP, ExxonMobil en J&J boven water: Nederlandse regelingen binnen een
+    Belgische OFP, samen 5,8 miljard die meetelde in het sectortotaal.
+    """
+    rijen = con.execute(f"""
+        SELECT f.id, f.name, COALESCE(f.aum_euro_bn, 0) aum FROM funds f
+        WHERE {LEVEND} AND COALESCE(f.is_pensioenfonds, 1) = 1
+          AND COALESCE(f.aum_euro_bn, 0) > 0.1
+          AND NOT EXISTS (SELECT 1 FROM dnb_quarterly_metrics d WHERE d.fund_id = f.id)
+        ORDER BY f.aum_euro_bn DESC""").fetchall()
+    return [f"{r['name'][:38]:40s} {r['aum']:.2f} mrd, geen enkele DNB-kwartaalrij"
+            for r in rijen]
+
+
 CONTROLES = [
     ("Deelnemers tellen niet op tot het totaal", deelnemers_inconsistent),
     ("Deelnemers in de jaarreeks liggen boven het totaal", historische_deelnemers_inconsistent),
@@ -379,6 +398,7 @@ CONTROLES = [
     ("Analyses met een onmogelijk boekjaar", analyses_met_onmogelijk_boekjaar),
     ("Analyses die leunen op een bestand in quarantaine", analyses_uit_quarantaine),
     ("Afbakening pensioenfonds wijkt af van de categorie", afbakening_afwijkend),
+    ("Als pensioenfonds gemarkeerd maar onbekend bij DNB", pensioenfonds_zonder_dnb),
 ]
 
 
