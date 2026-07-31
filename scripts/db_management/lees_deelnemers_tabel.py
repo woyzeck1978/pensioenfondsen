@@ -265,10 +265,18 @@ def alle_jaren(args) -> int:
     """
     con = sqlite3.connect(DB_PATH)
     con.row_factory = sqlite3.Row
+    # Kringen overslaan. Hun 'eigen' verslag is het verzamelverslag van de koepel,
+    # met tien tot vijftien kringen erin, en deze lezer kent het hoofdstukfilter
+    # niet dat wachtrij.py daarvoor heeft. Zonder deze uitzondering kregen
+    # Arcadis, CK1, CRH en Randstad alle vier dezelfde uitsplitsing — precies de
+    # vervuiling die vanochtend was opgeruimd.
     fondsen = con.execute("""
         SELECT DISTINCT f.id, f.name, f.aum_euro_bn FROM funds f
         JOIN historical_metrics h ON h.fund_id = f.id
-        WHERE COALESCE(f.is_pensioenfonds, 1) = 1 ORDER BY f.name""").fetchall()
+        WHERE COALESCE(f.is_pensioenfonds, 1) = 1
+          AND f.name NOT LIKE 'Kring %' AND f.name NOT LIKE 'Pensioenkring %'
+          AND f.name NOT LIKE '% APF'
+        ORDER BY f.name""").fetchall()
 
     kolom = {"actief": "deelnemers_actief", "slapers": "deelnemers_slapers",
              "gepensioneerd": "deelnemers_pensioengerechtigd", "totaal": "deelnemers_totaal"}
