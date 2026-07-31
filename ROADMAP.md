@@ -7,6 +7,13 @@ This is a sibling to `CLAUDE.md`. CLAUDE.md tells an agent **how to work on
 this codebase**. This file tells an agent **what's been done and what's
 open**, with concrete first steps for each open item.
 
+> **Bijgewerkt 2026-07-31.** Van de tien openstaande punten zijn er acht
+> afgehandeld; punt 5 is verworpen met reden. Wat resteert is het
+> aggrid-tabelcomponent (punt 8, cosmetisch) en de acht kringen van De
+> Nationale, die achter een WAF zitten die elke browserpoging met 403 afwijst.
+> De datakwaliteitscontrole ging van 61 bevindingen naar 3, en die drie zijn
+> geen fout maar terechte signaleringen.
+
 ---
 
 ## What this project is, in one paragraph
@@ -105,32 +112,57 @@ logs/llm_extract/                 LLM run logs — gitignored
 - Industry News Feed — filterable, sorted by real publication date.
 - Begrippenlijst (Glossary).
 
-### NULL coverage on the funds table (snapshot 2026-05-20)
+### Dekking van de fondsentabel (stand 2026-07-31, 181 pensioenfondsen)
 
-| Field | Filled | NULL | Coverage |
+| Veld | Gevuld | Leeg | Dekking |
 |---|---:|---:|---:|
-| AUM | 177 | 2 | 99% |
-| Beleidsdekkingsgraad | 161 | 18 | 90% |
-| Deelnemers totaal | 130 | 49 | 73% |
-| Deelnemers actief | 124 | 55 | 69% |
-| Uitvoerder | 148 | 31 | 83% |
-| SFDR Article | 104 | 75 | 58% |
-| EU Taxonomy | 47 | 132 | 26% |
+| Uitvoerder | 178 | 3 | 98% |
+| Beleidsdekkingsgraad | 173 | 8 | 96% |
+| AUM | 168 | 13 | 93% |
+| Dekkingsgraad | 136 | 45 | 75% |
+| Deelnemers totaal | 119 | 62 | 66% |
+| SFDR-artikel | 92 | 89 | 51% |
+| Deelnemers actief | 81 | 100 | 45% |
+| EU-taxonomie | 44 | 137 | 24% |
+| Invaardatum | 32 | 149 | 18% |
 
-### NULL coverage on historical_metrics (2,170 rows across 2015-2025)
+**Let op: sommige percentages zijn gedáald sinds mei, en dat is winst.**
+Deelnemers actief stond op 124 gevuld en staat nu op 81. Er zijn geen gegevens
+verdwenen; er zijn verkeerde gegevens weggehaald. Philips stond op 30 deelnemers
+bij 17,65 miljard, HAL op 2,65 miljoen bij 166 miljoen, en zeven fondsen hadden
+twee identieke deelnemerskolommen doordat een parser een kolom was opgeschoven.
+Wie dekkingspercentages als voortgangsmaat gebruikt, wordt beloond voor het laten
+staan van onzin. De datakwaliteitscontrole is de betere maat: die ging van 61
+bevindingen naar 3, en die drie zijn geen fout.
 
-| Column | Filled |
+Het aantal fondsen daalde van 190 naar 181 doordat verzekeraars, PPI's,
+duplicaten en drie Nederlandse regelingen bij een Belgische OFP als
+`is_pensioenfonds = 0` zijn gemarkeerd, met de reden in `afbakening_reden`. Het
+sectortotaal staat daarmee op 1.617,1 miljard.
+
+### Dekking van historical_metrics (1.524 rijen, 2015-2025)
+
+| Kolom | Gevuld |
 |---|---:|
-| aum_euro_bn | 2,106 |
-| beleidsdekkingsgraad_pct | 2,133 |
-| vereiste_dekkingsgraad_pct | 1,513 |
-| beleggingsrendement_pct | 2,083 |
-| zakelijke_waarden_pct | 1,860 |
-| rente_afdekking_pct | 1,856 |
-| rente_afdekking_rendement_pct | 1,681 |
-| cpi_pct | 2,132 (every year × fund row) |
-| indexatieverlening_pct | ~60 |
-| deelnemers_* | ~120 each (last-year snapshot only) |
+| beleidsdekkingsgraad_pct | 1.500 |
+| aum_euro_bn | 1.496 |
+| beleggingsrendement_pct | 1.476 |
+| deelnemers_totaal | 313 |
+| deelnemers_actief | 288 |
+| indexatieverlening_pct | 187 |
+| nominale_dekkingsgraad_pct | 34 |
+| solidariteitsreserve_pct | 1 |
+
+De deelnemerskolommen zijn ruim verdubbeld doordat een kerncijfertabel vijf
+jaargangen naast elkaar toont: één verslag over 2025 vult ook 2021 tot 2024. Zie
+`scripts/db_management/lees_deelnemers_tabel.py --alle-jaren`.
+
+### Analyses
+
+204 analyses over 157 fondsen, waarvan 101 over boekjaar 2025. Daarnaast 65
+cohortwaarnemingen in `cohort_metrics` — rendement per leeftijdsgroep en
+risicoprofiel, de maatstaf die onder de Wtp in de plaats komt van een
+dekkingsgraad voor het hele fonds.
 
 ---
 
