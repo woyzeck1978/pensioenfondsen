@@ -377,6 +377,58 @@ def pensioenfonds_zonder_dnb(con):
             for r in rijen]
 
 
+# Grenzen waarbuiten een waarde geen meetfout meer is maar een verkeerde kolom.
+UITSCHIETERS = [
+    ("beleggingsrendement_pct", -50, 50, "rendement"),
+    ("beleidsdekkingsgraad_pct", 50, 250, "beleidsdekkingsgraad"),
+    ("nominale_dekkingsgraad_pct", 50, 300, "nominale dekkingsgraad"),
+    ("reele_dekkingsgraad_pct", 30, 200, "reële dekkingsgraad"),
+    ("indexatieverlening_pct", -25, 25, "indexatie"),
+    ("cpi_pct", -5, 25, "prijsindex"),
+    ("aum_euro_bn", 0.0001, 1000, "vermogen"),
+]
+
+
+def dekkingsgraad_na_invaren(con):
+    """Een ingevaren fonds dat tóch een dekkingsgraad rapporteert.
+
+    Onder de Wtp verdwijnt de dekkingsgraad; het vermogen staat op naam van de
+    deelnemer. Staat er na het invaarmoment alsnog een waarde, dan komt die uit
+    een oude bron of uit de verkeerde kolom. Andersom is een lege dekkingsgraad
+    bij zo'n fonds juist correct, en geen gat dat gevuld moet worden.
+    """
+    rijen = con.execute("""
+        SELECT f.name, h.year, h.nominale_dekkingsgraad_pct n, h.beleidsdekkingsgraad_pct b,
+               f.invaardatum
+        FROM historical_metrics h JOIN funds f ON f.id = h.fund_id
+        WHERE f.invaardatum IS NOT NULL
+          AND h.year > CAST(substr(f.invaardatum, 1, 4) AS INTEGER)
+          AND (h.nominale_dekkingsgraad_pct IS NOT NULL OR h.beleidsdekkingsgraad_pct IS NOT NULL)
+        ORDER BY f.name""").fetchall()
+    return [f"{r['name'][:32]:34s} FY{r['year']} heeft nog een dekkingsgraad "
+            f"({r['n'] or r['b']}) terwijl het fonds per {r['invaardatum']} is ingevaren"
+            for r in rijen]
+
+
+def uitschieters_jaarreeks(con):
+    """Waarden buiten elk redelijk bereik in de jaarreeks.
+
+    Zo kwam Gasunie boven water: vijf 'indexaties' van 121 tot 137 procent, die
+    in werkelijkheid nominale dekkingsgraden waren. De kolom ernaast stond leeg,
+    dus de parser had ze een plek opgeschoven. Een toeslag van 132 procent bestaat
+    niet, en dat is precies wat zo'n grens zichtbaar maakt.
+    """
+    uit = []
+    for kolom, onder, boven, label in UITSCHIETERS:
+        for r in con.execute(f"""
+                SELECT f.name, h.year, h.{kolom} w FROM historical_metrics h
+                JOIN funds f ON f.id = h.fund_id
+                WHERE h.{kolom} IS NOT NULL AND h.{kolom} NOT BETWEEN ? AND ?
+                ORDER BY f.name LIMIT 12""", (onder, boven)):
+            uit.append(f"{r['name'][:32]:34s} FY{r['year']}  {label} = {r['w']}")
+    return uit
+
+
 CONTROLES = [
     ("Deelnemers tellen niet op tot het totaal", deelnemers_inconsistent),
     ("Deelnemers in de jaarreeks liggen boven het totaal", historische_deelnemers_inconsistent),
@@ -399,6 +451,8 @@ CONTROLES = [
     ("Analyses die leunen op een bestand in quarantaine", analyses_uit_quarantaine),
     ("Afbakening pensioenfonds wijkt af van de categorie", afbakening_afwijkend),
     ("Als pensioenfonds gemarkeerd maar onbekend bij DNB", pensioenfonds_zonder_dnb),
+    ("Waarden buiten elk redelijk bereik in de jaarreeks", uitschieters_jaarreeks),
+    ("Dekkingsgraad gerapporteerd na het invaren", dekkingsgraad_na_invaren),
 ]
 
 
