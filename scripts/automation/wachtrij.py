@@ -275,7 +275,15 @@ def _tegenstrijdig(tekst: str) -> list[str]:
             sleutel = _datumsleutel(regel)
             if not sleutel:
                 continue
-            for w in re.findall(r"\b(\d{2,3},\d)\s?%", regel):
+            # Alleen het percentage dat bij dít begrip hoort: knip de regel af
+            # zodra een ánder dekkingsgraad-begrip begint. Zonder die knip gold
+            # "de beleidsdekkingsgraad gelijk aan 119,7% en de
+            # marktwaardedekkingsgraad 125,8%" als tegenstrijdig, terwijl het
+            # gewoon twee verschillende grootheden zijn.
+            na = regel[re.search(rf"\b{begrip}\b", regel, re.I).end():]
+            volgende = re.search(r"\b\w*dekkingsgraad\b", na, re.I)
+            stuk = na[:volgende.start()] if volgende else na
+            for w in re.findall(r"\b(\d{2,3},\d)\s?%", stuk):
                 gevonden.setdefault((begrip, sleutel), set()).add(w)
     return [f"{begrip} op {datum}: {', '.join(sorted(w))}%"
             for (begrip, datum), w in sorted(gevonden.items()) if len(w) > 1]
