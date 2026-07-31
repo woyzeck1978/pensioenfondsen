@@ -135,11 +135,18 @@ def _kringnaam(naam: str) -> str | None:
 
 
 def _hoort_bij_kring(pagina: str, kring: str) -> bool:
-    """Gaat deze pagina over déze kring en niet over een andere?
+    """Gaat deze pagina over déze kring, en overtuigend genoeg?
 
-    Eerst op de volledige naam; die onderscheidt DB Evenwicht van DB Premie.
-    Alleen als de volledige naam nergens voorkomt wordt op het eerste woord
-    teruggevallen, want sommige verslagen korten de kring af.
+    Niet "komt de naam voor" en ook niet "staan er minder dan drie kringen op".
+    Dat laatste leek logisch tegen vergelijkingstabellen, maar Centraal Beheer
+    zet op elke pagina een navigatiebalk met kringnamen, waardoor juist de goede
+    hoofdstukken sneuvelden en alleen de bijlagen overbleven.
+
+    Wat wel werkt: de eigen kring moet de pagina domineren. In een hoofdstuk over
+    één kring staat die naam tien keer en een andere hooguit een enkele keer in
+    de navigatie. In een vergelijkingstabel staan ze alle even vaak — en daar
+    stond onder Kring Deutsche Bank een beleidsdekkingsgraad van 130,3% die bij
+    ESN of Grolsch hoorde.
     """
     # Een kring die 'B' of '2' heet is als los teken overal raak. Voor zulke
     # namen telt alleen de volledige aanduiding 'Kring B'.
@@ -148,15 +155,81 @@ def _hoort_bij_kring(pagina: str, kring: str) -> bool:
     eigen = len(re.findall(zoek, pagina, re.I))
     if not eigen:
         return False
-    anderen = [m.group(1) for m in
-               re.finditer(r"(?:pensioen|collectiviteit)?kring\s+([A-Za-z0-9][A-Za-z0-9\- ]{0,24})",
-                           pagina, re.I)
-               if not m.group(1).lower().startswith(kring.lower())]
-    return eigen > len(anderen)
+
+    tellen: dict[str, int] = {}
+    for m in re.finditer(r"(?:pensioen|collectiviteit)?kring\s+([A-Za-z0-9][A-Za-z0-9\- ]{1,20})",
+                         pagina, re.I):
+        sleutel = m.group(1).strip().lower()[:10]
+        if sleutel.startswith(kring.lower()[:10]):
+            continue
+        tellen[sleutel] = tellen.get(sleutel, 0) + 1
+    grootste_ander = max(tellen.values(), default=0)
+    return eigen >= max(2, 2 * grootste_ander)
+
+
+# Een genummerde kop als "22. Verslag Kring Grolsch" markeert het begin van een
+# hoofdstuk. Dat is harder bewijs dan tellen hoe vaak een naam op een pagina staat.
+# 'HP Nederland' in de fondsentabel heet 'HPNL' in het verslag; vergelijken
+# gebeurt daarom op de samengetrokken vorm zonder spaties en leestekens.
+_ALIAS = {"hpnederland": "hpnl"}
+
+
+def _NORM(naam: str) -> str:
+    kaal = re.sub(r"[^a-z0-9]", "", naam.lower())
+    return _ALIAS.get(kaal, kaal)
+
+
+KOP = re.compile(r"\d{1,2}\.\s*(?:Verslag|Bestuursverslag)\s+(?:Pensioen|Collectiviteit)?[Kk]ring\s+"
+                 r"([A-Za-z0-9][A-Za-z0-9\-/ ]{1,28})")
+
+
+def _hoofdstuk_bereik(paginas: list[str], kring: str) -> list[str]:
+    """Pagina's tussen de kop van deze kring en de kop van de volgende.
+
+    Bij Centraal Beheer staat op elke pagina een navigatiestrip met de namen van
+    alle kringen, waardoor per pagina tellen niet werkt: onder Kring Deutsche
+    Bank belandde zo een dekkingsgraad die bij Grolsch hoorde. De hoofdstukgrens
+    lost dat op, want die is eenduidig.
+    """
+    ruw = []
+    for i, t in enumerate(paginas):
+        for m in KOP.finditer(t[:400]):
+            ruw.append((i, m.group(1).strip().lower()))
+            break
+    # Dezelfde kop op twee opeenvolgende pagina's is één hoofdstuk.
+    grenzen = [r for n, r in enumerate(ruw) if n == 0 or r[1] != ruw[n - 1][1]]
+    if len(grenzen) < 3:          # geen doorlopende hoofdstukindeling
+        return []
+
+    # Hoe lang is een gewoon hoofdstuk in dit verslag? Dat bepaalt wat een
+    # uitschieter is. Zonder die maat pakte ESN de inhoudsopgave erbij (99
+    # pagina's) en liep Grolsch als laatste hoofdstuk door tot het eind van het
+    # document (700 pagina's, inclusief de hele jaarrekening).
+    lengtes = sorted(grenzen[n + 1][0] - grenzen[n][0] for n in range(len(grenzen) - 1))
+    gewoon = lengtes[len(lengtes) // 2] or 20
+
+    doel = _NORM(kring)
+    uit = []
+    for n, (start, naam) in enumerate(grenzen):
+        gevonden = _NORM(naam)
+        if not (gevonden.startswith(doel[:8]) or doel.startswith(gevonden[:8])):
+            continue
+        eind = grenzen[n + 1][0] if n + 1 < len(grenzen) else len(paginas)
+        # Koppen vooraan zijn de inhoudsopgave, geen hoofdstuk. Het láátste
+        # hoofdstuk loopt door tot het eind van het document; dat wordt afgekapt
+        # op wat hier een gewone hoofdstuklengte is, anders krijgt Grolsch de
+        # complete jaarrekening van het APF erbij.
+        if start < 20 or eind - start < 5:
+            continue
+        uit.extend(paginas[start:min(eind, start + 2 * gewoon)])
+    return uit
 
 
 def _kies_paginas(paginas: list[str], kring: str) -> list[str]:
     """Pagina's van deze kring; valt terug op het eerste woord als de volle naam niets geeft."""
+    bereik = _hoofdstuk_bereik(paginas, kring)
+    if len(bereik) >= 3:
+        return bereik
     gehouden = [t for t in paginas if _hoort_bij_kring(t, kring)]
     if len(gehouden) >= 3:
         return gehouden
@@ -166,6 +239,46 @@ def _kies_paginas(paginas: list[str], kring: str) -> list[str]:
         if len(gehouden) >= 3:
             return gehouden
     return []
+
+
+MAANDEN = {"januari": 1, "februari": 2, "maart": 3, "april": 4, "mei": 5, "juni": 6,
+           "juli": 7, "augustus": 8, "september": 9, "oktober": 10, "november": 11,
+           "december": 12}
+
+
+def _datumsleutel(stuk: str) -> str | None:
+    """'31 oktober 2025' en '31.10.2025' zijn dezelfde dag en horen in hetzelfde bakje.
+
+    Zonder die gelijkschakeling bleef de tegenstrijdigheid bij Kring Deutsche Bank
+    onopgemerkt: 136,4% stond bij de ene schrijfwijze en 130,3% bij de andere.
+    """
+    m = re.search(r"(\d{1,2})[ .\-/](\d{1,2}|[a-z]+)[ .\-/](20\d{2})", stuk, re.I)
+    if not m:
+        return None
+    dag, maand, jaar = m.group(1), m.group(2).lower(), m.group(3)
+    nummer = MAANDEN.get(maand, maand if maand.isdigit() else None)
+    return f"{jaar}-{int(nummer):02d}-{int(dag):02d}" if nummer else None
+
+
+def _tegenstrijdig(tekst: str) -> list[str]:
+    """Twee verschillende percentages voor hetzelfde begrip op dezelfde peildatum."""
+    # Per regel, niet per zin: een zinsafbakening op de punt knipt '31.10.2025'
+    # doormidden, en juist die schrijfwijze verborg de botsing bij Kring Deutsche
+    # Bank tussen 136,4% en 130,3% op dezelfde dag.
+    gevonden: dict[tuple[str, str], set[str]] = {}
+    for regel in tekst.split("\n"):
+        if not regel.startswith("- "):
+            continue
+        for begrip in ("beleidsdekkingsgraad", "actuele dekkingsgraad"):
+            if not re.search(rf"\b{begrip}\b", regel, re.I):
+                continue
+            sleutel = _datumsleutel(regel)
+            if not sleutel:
+                continue
+            for w in re.findall(r"\b(\d{2,3},\d)\s?%", regel):
+                gevonden.setdefault((begrip, sleutel), set()).add(w)
+    return [f"{begrip} op {datum}: {', '.join(sorted(w))}%"
+            for (begrip, datum), w in sorted(gevonden.items()) if len(w) > 1]
 
 
 def snij_passages(pdf_pad: str, naam: str, jaar: int) -> str:
@@ -205,6 +318,15 @@ def snij_passages(pdf_pad: str, naam: str, jaar: int) -> str:
     regels = [f"# {naam} — boekjaar {jaar}",
               f"# bron: {os.path.basename(pdf_pad)} ({len(tekst):,} tekens)".replace(",", "."),
               ""]
+    # Tegenstrijdige waarden voor hetzelfde begrip wijzen erop dat er een tabel
+    # met andere kringen is meegesneden. Bij Kring Deutsche Bank stonden twee
+    # beleidsdekkingsgraden per 31 oktober 2025 in dezelfde briefing, 136,4% en
+    # 130,3%; één daarvan hoorde bij een buurkring. Zulke gevallen moeten
+    # opvallen voordat er een analyse uit geschreven wordt.
+    botsingen = _tegenstrijdig(tekst)
+    if botsingen:
+        regels.insert(2, "# LET OP: tegenstrijdige waarden gevonden — " + "; ".join(botsingen)
+                         + ". Controleer in de bron welke bij dit fonds hoort.")
     if verdakt := verdacht:
         regels.insert(2, f"# LET OP: {verdakt} woorden met kapotte ligaturen — dit verslag heeft "
                          "een lettertype dat 'ff' en 'fi' verkeerd afbeeldt. Niet letterlijk overnemen.")
