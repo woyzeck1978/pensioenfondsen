@@ -630,7 +630,11 @@ De blokkade is weg: de eerste postinvaren-jaarverslagen zijn verschenen. Het sch
 
 `funds.invaardatum` is voor 33 fondsen afgeleid uit hun eigen transitieparagraaf. Daarmee kan `check_data_quality.py` nu vaststellen of een lege dekkingsgraad een gat is of juist correct — voor een ingevaren fonds is die leegte de bedoeling.
 
-Wat nog open blijft: `cohort_metrics` voor rendement per leeftijdscohort, en de dashboard-toggle die voor ingevaren fondsen een rendementsgrafiek toont in plaats van een dekkingsgraadgrafiek.
+Beide resterende stukken zijn nu ook gedaan. De grafiek markeert het invaarjaar met een stippellijn en toont de solidariteitsreserve zodra die gevuld is. En `cohort_metrics(fund_id, year, cohort_label, profiel, rendement_pct, bron)` bestaat, gevuld met 65 waarnemingen van StiPP over 2021-2025.
+
+Die reeks laat zien waar het bij de Wtp om draait. Over 2025 haalde de groep 18-46 met een standaard profiel 7,8 procent en de groep 65-66 juist -2,4 procent; hetzelfde fonds, hetzelfde jaar. Opvallend is 2022: toen verloor de oudste groep 23,7 procent tegen 14,9 procent voor de jongste. Dat is de omgekeerde volgorde van wat je bij een lifecycle verwacht, en het komt doordat oudere cohorten meer rentegevoelig belegd zijn — precies het risico dat in dat jaar losbarstte.
+
+Wat niet lukt is automatisch uitlezen. StiPP zet deze reeks ook als staafdiagram op de pagina, en daar zweven de waarden los van hun labels; alleen doordat de platgeslagen tekst de reeks op volgorde bevat was het te herleiden. Bij een fonds dat het uitsluitend als grafiek publiceert, is handwerk nodig.
 
 <details><summary>oorspronkelijk ontwerp</summary>
 
