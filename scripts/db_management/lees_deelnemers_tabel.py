@@ -111,6 +111,66 @@ def uit_tabel(pdf_pad: str, jaar: int) -> dict[str, int] | None:
     return beste
 
 
+# Tweede route, voor verslagen die hun kerncijfers zonder tabellijnen zetten.
+# find_tables() ziet daar niets, maar get_text(sort=True) houdt de kolommen op
+# volgorde en dan is de kopregel met jaartallen genoeg om te weten welke waarde
+# bij welk jaar hoort.
+KOPJAREN = re.compile(r"(20\d\d)")
+# Percentages hebben een komma; aantallen niet. Zo blijft '7.497 41,4' te scheiden.
+AANTAL = re.compile(r"\b\d{1,3}(?:\.\d{3})+\b|\b\d{2,7}\b")
+REGELLABEL = {
+    "actief": re.compile(r"^\s*(deelnemers|actieve deelnemers|actieven)\b", re.I),
+    "slapers": re.compile(r"^\s*(gewezen )?deelnemers\b", re.I),
+    "gepensioneerd": re.compile(r"^\s*pensioengerechtigden\b", re.I),
+}
+
+
+def uit_kerncijfers(pdf_pad: str, jaar: int) -> dict[str, int] | None:
+    """Lees het kerncijferblok van een verslag zonder tabellijnen."""
+    import fitz
+
+    try:
+        fitz.TOOLS.mupdf_display_errors(False)
+    except Exception:
+        pass
+    pad = pdf_pad if os.path.isabs(pdf_pad) else os.path.join(BASE_DIR, pdf_pad)
+    if not os.path.exists(pad):
+        return None
+    doc = fitz.open(pad)
+    uit = None
+    for bladzijde in doc:
+        tekst = bladzijde.get_text()
+        if "ewezen deelnemers" not in tekst or "ensioengerechtigden" not in tekst:
+            continue
+        regels = bladzijde.get_text("text", sort=True).split("\n")
+        kolom = None
+        vondst: dict[str, int] = {}
+        for regel in regels:
+            jaren = KOPJAREN.findall(regel)
+            # Een kopregel is een rij van louter jaartallen.
+            if len(jaren) >= 3 and len(AANTAL.findall(regel)) == len(jaren):
+                kolom = jaren.index(str(jaar)) if str(jaar) in jaren else None
+                continue
+            if kolom is None:
+                continue
+            getallen = [int(g.replace(".", "")) for g in AANTAL.findall(regel)]
+            if len(getallen) <= kolom:
+                continue
+            for veld in ("gepensioneerd", "slapers", "actief"):
+                if veld in vondst or not REGELLABEL[veld].search(regel):
+                    continue
+                waarde = getallen[kolom]
+                if 10 <= waarde <= 3_000_000:
+                    vondst[veld] = waarde
+                break
+        if len(vondst) == 3:
+            uit = vondst
+            uit["totaal"] = sum(vondst.values())
+            break
+    doc.close()
+    return uit
+
+
 def bron_voor(con, fid: int, jaar: int) -> str | None:
     r = con.execute("""SELECT pad FROM ophaal_wachtrij WHERE fund_id=? AND jaar=?
                        AND pad IS NOT NULL""", (fid, jaar)).fetchone()
@@ -141,7 +201,7 @@ def main() -> int:
         if not bron:
             geen_bron += 1
             continue
-        gelezen = uit_tabel(bron, args.jaar)
+        gelezen = uit_tabel(bron, args.jaar) or uit_kerncijfers(bron, args.jaar)
         if not gelezen or "totaal" not in gelezen:
             continue
         oud = {"actief": r["a"], "slapers": r["s"], "gepensioneerd": r["g"], "totaal": r["t"]}
