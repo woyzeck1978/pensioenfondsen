@@ -15,6 +15,7 @@ Het script wijzigt niets; het rapporteert alleen.
 
 import argparse
 import os
+import re
 import sqlite3
 import sys
 from collections import defaultdict
@@ -447,6 +448,43 @@ def vermogen_per_deelnemer_jaarreeks(con):
     return uit
 
 
+SFDR_BIJLAGE = re.compile(
+    r"SFDR[- ]?(annex|bijlage)|periodieke informatieverschaffing"
+    r"|bijlage\s+[IVX]+\s*[:.]?\s*SFDR|template.{0,20}periodic disclosure", re.I)
+
+
+def sfdr_tegenstrijdig(con):
+    """Als artikel 6 geboekt, maar het verslag bevat een periodieke SFDR-bijlage.
+
+    De toets is bewust eenzijdig. Een bijlage aantreffen bij een fonds dat als
+    artikel 8 of 9 staat, bevestigt dat — 49 fondsen kwamen zo door. Maar geen
+    bijlage aantreffen bewijst niets, want veel fondsen publiceren die los van
+    het jaarverslag; dat zou negentien valse meldingen opleveren, waaronder ABP.
+    Andersom is wél sluitend: een artikel 6-product hoeft geen periodieke
+    informatieverschaffing te publiceren, dus wie dat doet is er geen.
+    """
+    import glob as _glob
+    uit = []
+    for r in con.execute(f"""SELECT id, name, sfdr_article FROM funds
+            WHERE {LEVEND} AND COALESCE(is_pensioenfonds, 1) = 1 AND sfdr_article = 6"""):
+        bestanden = sorted(_glob.glob(os.path.join(
+            BASE_DIR, "data", "annual_reports", f"{r['id']}_*.pdf")))
+        if not bestanden:
+            continue
+        try:
+            import fitz
+            fitz.TOOLS.mupdf_display_errors(False)
+            doc = fitz.open(bestanden[0])
+            tekst = re.sub(r"\s+", " ", " ".join(p.get_text() for p in doc))
+            doc.close()
+        except Exception:
+            continue
+        if SFDR_BIJLAGE.search(tekst):
+            uit.append(f"{r['name'][:38]:40s} staat als artikel 6 maar publiceert "
+                       f"een periodieke SFDR-bijlage")
+    return uit
+
+
 def uitschieters_jaarreeks(con):
     """Waarden buiten elk redelijk bereik in de jaarreeks.
 
@@ -492,6 +530,7 @@ CONTROLES = [
     ("Vermogen en deelnemers in de jaarreeks passen niet bij elkaar",
      vermogen_per_deelnemer_jaarreeks),
     ("Dekkingsgraad gerapporteerd na het invaren", dekkingsgraad_na_invaren),
+    ("SFDR-artikel spreekt het eigen verslag tegen", sfdr_tegenstrijdig),
 ]
 
 
