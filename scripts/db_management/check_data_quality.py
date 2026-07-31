@@ -296,15 +296,20 @@ def afbakening_afwijkend(con):
     rij toegevoegd zonder de afbakening bij te werken — en dan telt een
     verzekeraar weer mee in het sectortotaal. Pensioenfonds Achmea stond zo als
     'Verzekeraar' geboekt en zou ten onrechte zijn weggefilterd.
+
+    Een rij met een vastgelegde reden telt niet als afwijking. Sinds
+    afbakening_reden bestaat staat daar waarom een rij is uitgesloten — een
+    Belgische OFP-sectie, een duplicaat — en dat is geen slordigheid maar een
+    besluit. Zonder deze uitzondering meldde de controle negen zulke rijen.
     """
     return [f"{naam}: categorie {cat!r} maar is_pensioenfonds={vlag}"
             for naam, cat, vlag in con.execute("""
                 SELECT name, COALESCE(category,''), is_pensioenfonds FROM funds
                 WHERE is_pensioenfonds IS NOT NULL
+                  AND COALESCE(afbakening_reden,'') = ''
                   AND ((COALESCE(category,'') IN ('Verzekeraar','PPI') AND is_pensioenfonds = 1)
                     OR (COALESCE(category,'') NOT IN ('Verzekeraar','PPI')
-                        AND is_pensioenfonds = 0
-                        AND name NOT IN ('APG','A.S. Watson Nederland')))""")]
+                        AND is_pensioenfonds = 0))""")]
 
 
 def historische_deelnemers_inconsistent(con):
