@@ -47,6 +47,7 @@ DB_PATH = os.path.join(BASE_DIR, "data", "processed", "pension_funds.db")
 DOEL_MAP = os.path.join(BASE_DIR, "data", "annual_reports")
 MIN_BYTES = 200_000
 MIN_PAGINAS = 12
+MAX_PAGINAS_JAARSCAN = 150   # ruim genoeg voor elk jaarverslag, en begrensd qua tijd
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36")
 
@@ -103,6 +104,13 @@ def keur(pad: str, jaar: int, naam: str, van_eigen_site: bool = False) -> str | 
         doc = fitz.open(pad)
         n = len(doc)
         tekst = re.sub(r"\s+", " ", " ".join(doc[i].get_text() for i in range(min(6, n)))).lower()
+        # Voor het boekjaar het hele document lezen, niet alleen de omslag. Metro's
+        # verslag over 2024 kwam anders binnen als 2025: de eerste zes pagina's
+        # bevatten geen enkel verslag-woord met jaartal, waardoor de controle
+        # terugviel op "staat 2025 ergens" — en dat klopte, want het stuk is
+        # ondertekend op 20 juni 2025. Over het geheel noemt het negen keer 2024.
+        heel = re.sub(r"\s+", " ", " ".join(
+            doc[i].get_text() for i in range(min(MAX_PAGINAS_JAARSCAN, n)))).lower()
         doc.close()
     except Exception as e:
         return f"onleesbaar ({type(e).__name__})"
@@ -139,16 +147,16 @@ def keur(pad: str, jaar: int, naam: str, van_eigen_site: bool = False) -> str | 
     # daardoor kwam BP's verslag over 2024 binnen als 2025. De meerderheidstelling
     # hieronder vangt de ruis op die dit erbij haalt.
     treffers = [int(m.group(1)) for m in
-                re.finditer(rf"{verslag}.{{0,40}}?(20\d{{2}})", tekst)]
+                re.finditer(rf"{verslag}.{{0,40}}?(20\d{{2}})", heel)]
     treffers += [int(m.group(1)) for m in
-                 re.finditer(rf"(20\d{{2}}).{{0,25}}?{verslag}", tekst)]
+                 re.finditer(rf"(20\d{{2}}).{{0,25}}?{verslag}", heel)]
     if treffers:
         telling = Counter(treffers)
         draagt = max(telling, key=lambda j: (telling[j], j))
         if draagt != jaar:
             return f"draagt boekjaar {draagt}, niet {jaar} ({dict(telling)})"
-    elif str(jaar) not in tekst:
-        return f"boekjaar {jaar} staat niet op de eerste pagina's"
+    elif str(jaar) not in heel:
+        return f"boekjaar {jaar} komt in het document niet voor"
     woorden = kenmerkend(naam)
     if not van_eigen_site and woorden and not any(
             re.search(rf"\b{re.escape(w)}\b", tekst) for w in woorden):
