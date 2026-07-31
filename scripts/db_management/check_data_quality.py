@@ -307,32 +307,62 @@ def afbakening_afwijkend(con):
 
 
 def historische_deelnemers_inconsistent(con):
-    """Zelfde controle, maar op de jaarreeks in plaats van de fondsentabel.
+    """Onmogelijke deelnemersaantallen in de jaarreeks.
 
-    Die reeks is nooit nagelopen en blijkt onbetrouwbaar: De Nationale APF staat
-    over 2025 op een totaal van 1.085 terwijl de eigen onderdelen optellen tot
-    34.558, en bij Vopak en UWV staan ronde placeholders als 400+400 en 90+90.
-    Wie dat veld gebruikt om de fondsentabel aan te vullen, schrijft die fouten
-    over — wat bij een poging daartoe ook precies gebeurde.
+    Alleen wat écht niet kan: een uitsplitsing die samen bóven het totaal
+    uitkomt. Actief, slapers en gepensioneerden sluiten elkaar uit, dus dat is
+    onmogelijk. Andersom kan wél — PMT heeft een totaal dat 4,5% boven de som
+    ligt omdat arbeidsongeschikten buiten de drie kolommen vallen, en PGB heeft
+    over 2021 een totaal van 342.150 bij een som van 219.487 doordat een kolom
+    leeg is. Een eerdere versie meldde die dertig gevallen ook, en dan wordt een
+    controle iets dat je wegklikt.
     """
     rijen = con.execute("""
         SELECT h.fund_id, f.name, h.year, h.deelnemers_actief a, h.deelnemers_slapers s,
                h.deelnemers_pensioengerechtigd g, h.deelnemers_totaal t
         FROM historical_metrics h JOIN funds f ON f.id = h.fund_id
         WHERE h.deelnemers_totaal > 0 AND h.deelnemers_actief IS NOT NULL
+          AND h.deelnemers_slapers IS NOT NULL AND h.deelnemers_pensioengerechtigd IS NOT NULL
     """).fetchall()
     uit = []
     for r in rijen:
-        som = (r["a"] or 0) + (r["s"] or 0) + (r["g"] or 0)
-        if som > 0 and abs(r["t"] - som) > 0.01 * r["t"]:
+        som = r["a"] + r["s"] + r["g"]
+        if som > r["t"] * 1.10:
             uit.append(f"{r['name'][:34]:36s} FY{r['year']}  "
-                       f"{r['a']}+{r['s']}+{r['g']} = {som}, maar totaal = {r['t']}")
+                       f"{r['a']}+{r['s']}+{r['g']} = {som} ligt boven het totaal {r['t']}")
+    return uit
+
+
+def historische_deelnemers_gedeeld(con):
+    """Dezelfde uitsplitsing bij twee of meer fondsen — bij hooguit een ervan echt.
+
+    Arcadis, CK1 en CRH stonden alle drie op 2297/11142/533, en KLM Algemeen en
+    KLM Cabinepersoneel deelden hun drietal. Zulke kopieën ontstaan wanneer een
+    parser de tabel van het verkeerde hoofdstuk leest.
+    """
+    from collections import defaultdict
+    per = defaultdict(list)
+    for r in con.execute("""
+            SELECT h.fund_id, f.name, h.year, h.deelnemers_actief a, h.deelnemers_slapers s,
+                   h.deelnemers_pensioengerechtigd g
+            FROM historical_metrics h JOIN funds f ON f.id = h.fund_id
+            WHERE h.deelnemers_actief > 0 AND h.deelnemers_slapers > 0
+              AND h.deelnemers_pensioengerechtigd > 0"""):
+        per[(r["a"], r["s"], r["g"])].append((r["name"], r["year"]))
+    uit = []
+    for drietal, fondsen in per.items():
+        namen = {n for n, _ in fondsen}
+        if len(namen) > 1:
+            uit.append(f"{'/'.join(str(x) for x in drietal):28s} bij "
+                       + ", ".join(f"{n[:24]} FY{j}" for n, j in sorted(fondsen)))
     return uit
 
 
 CONTROLES = [
     ("Deelnemers tellen niet op tot het totaal", deelnemers_inconsistent),
-    ("Deelnemers in de jaarreeks tellen niet op", historische_deelnemers_inconsistent),
+    ("Deelnemers in de jaarreeks liggen boven het totaal", historische_deelnemers_inconsistent),
+    ("Zelfde deelnemersuitsplitsing in de jaarreeks bij meerdere fondsen",
+     historische_deelnemers_gedeeld),
     ("Hetzelfde getal in twee deelnemerskolommen", deelnemers_gedupliceerd_binnen_fonds),
     ("Vermogen per deelnemer buiten elke verhouding", vermogen_per_deelnemer),
     ("Zelfde deelnemersuitsplitsing bij meerdere fondsen",
