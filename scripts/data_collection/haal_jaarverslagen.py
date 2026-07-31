@@ -123,11 +123,20 @@ def keur(pad: str, jaar: int, naam: str, van_eigen_site: bool = False) -> str | 
     # 2024 als vergelijkingsjaar) en niet uit het eerste (bij SBZ won een regel
     # uit de inhoudsopgave, "opvolging aanbevelingen boekjaar 2024 in 2025", het
     # van de omslag). SBZ noemt "jaarverslag 2025" vier keer en 2024 één keer.
-    verslag = r"(?:jaarverslag|jaarbericht|jaarrapport|jaarrekening|verslagjaar|boekjaar)"
+    # Ook Engelse verslag-woorden: BP's fonds publiceert als Belgische OFP in het
+    # Engels, en zonder die termen vond de controle geen enkel boekjaar. Dat
+    # verslag ("annual report for the year ended 31 December 2024") kwam daardoor
+    # binnen als 2025.
+    verslag = (r"(?:jaarverslag|jaarbericht|jaarrapport|jaarrekening|verslagjaar|boekjaar"
+               r"|annual report|annual accounts|financial year|year ended)")
+    # Tussen het verslag-woord en het jaartal mogen cijfers staan: "annual report
+    # for the year ended 31 December 2024" liep stuk op een \D-begrenzing, en
+    # daardoor kwam BP's verslag over 2024 binnen als 2025. De meerderheidstelling
+    # hieronder vangt de ruis op die dit erbij haalt.
     treffers = [int(m.group(1)) for m in
-                re.finditer(rf"{verslag}\D{{0,30}}?(20\d{{2}})", tekst)]
+                re.finditer(rf"{verslag}.{{0,40}}?(20\d{{2}})", tekst)]
     treffers += [int(m.group(1)) for m in
-                 re.finditer(rf"(20\d{{2}})\D{{0,20}}?{verslag}", tekst)]
+                 re.finditer(rf"(20\d{{2}}).{{0,25}}?{verslag}", tekst)]
     if treffers:
         telling = Counter(treffers)
         draagt = max(telling, key=lambda j: (telling[j], j))

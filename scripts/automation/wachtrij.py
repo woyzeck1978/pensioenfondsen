@@ -68,15 +68,25 @@ CREATE TABLE IF NOT EXISTS ophaal_wachtrij (
 
 # Waar de analyse over gaat. Per onderwerp een patroon; zinnen eromheen worden
 # meegenomen zodat de context leesbaar blijft.
+# Een handvol fondsen — BP, en waarschijnlijk meer met een buitenlandse
+# moeder — publiceert in het Engels. Met alleen Nederlandse patronen leverde dat
+# een briefing op waarin elk onderwerp nul treffers had.
 ONDERWERPEN = [
-    ("dekkingsgraad", r"beleidsdekkingsgraad|actuele dekkingsgraad|vereiste dekkingsgraad|reële dekkingsgraad"),
-    ("rendement", r"\brendement\b|beleggingsresultaat|performance"),
-    ("toeslag", r"toeslag|indexatie|verhoging van de pensioenen|verlaging|korting"),
-    ("vermogen", r"belegd vermogen|pensioenvermogen|balanstotaal|voorziening pensioenverplichtingen"),
-    ("deelnemers", r"deelnemers|gepensioneerden|slapers|aangesloten werkgevers"),
-    ("transitie", r"\bWtp\b|invaren|transitieplan|solidariteitsreserve|flexibele premieregeling|nieuwe regeling"),
-    ("kosten", r"uitvoeringskosten|vermogensbeheerkosten|kosten per deelnemer|transactiekosten"),
-    ("beleggingen", r"aandelen|vastrentend|vastgoed|matchingportefeuille|returnportefeuille|alternatives"),
+    ("dekkingsgraad", r"beleidsdekkingsgraad|actuele dekkingsgraad|vereiste dekkingsgraad|reële dekkingsgraad"
+                      r"|funding (ratio|level)|coverage ratio|solvency"),
+    ("rendement", r"\brendement\b|beleggingsresultaat|performance|\breturn(s)?\b|yield"),
+    ("toeslag", r"toeslag|indexatie|verhoging van de pensioenen|verlaging|korting"
+                r"|indexation|pension increase"),
+    ("vermogen", r"belegd vermogen|pensioenvermogen|balanstotaal|voorziening pensioenverplichtingen"
+                 r"|net assets|total assets|technical provision"),
+    ("deelnemers", r"deelnemers|gepensioneerden|slapers|aangesloten werkgevers"
+                   r"|members|beneficiaries|participants"),
+    ("transitie", r"\bWtp\b|invaren|transitieplan|solidariteitsreserve|flexibele premieregeling|nieuwe regeling"
+                  r"|new pension (system|scheme)|transition"),
+    ("kosten", r"uitvoeringskosten|vermogensbeheerkosten|kosten per deelnemer|transactiekosten"
+               r"|administrative (cost|expense)|management fee|cost per member"),
+    ("beleggingen", r"aandelen|vastrentend|vastgoed|matchingportefeuille|returnportefeuille|alternatives"
+                    r"|equit(y|ies)|fixed income|real estate|asset allocation"),
 ]
 MAX_PER_ONDERWERP = 12
 
@@ -177,7 +187,8 @@ def vul(con, jaar: int, opnieuw: bool) -> None:
         if cur is None:
             con.execute("""INSERT INTO ophaal_wachtrij (fund_id, jaar, status, pad, bijgewerkt)
                            VALUES (?,?,?,?,?)""",
-                        (fid, jaar, "binnen" if bestaand else "open", bestaand, _nu()))
+                        (fid, jaar, "binnen" if bestaand else "open",
+                         os.path.relpath(bestaand, BASE_DIR) if bestaand else None, _nu()))
             nieuw += 1
             al_binnen += bool(bestaand)
         elif opnieuw and cur[0] in ("niet_gevonden", "afgekeurd"):
@@ -196,6 +207,7 @@ def vul(con, jaar: int, opnieuw: bool) -> None:
     gemaakt = 0
     for fid, pad in ontbreekt:
         kern = os.path.join(KERN_MAP, f"{fid}_{jaar}.md")
+        pad = os.path.join(BASE_DIR, pad) if pad and not os.path.isabs(pad) else pad
         if os.path.exists(kern) or not pad or not os.path.exists(pad):
             continue
         naam = con.execute("SELECT name FROM funds WHERE id=?", (fid,)).fetchone()[0]
@@ -294,7 +306,9 @@ def verwerk(con, jaar: int, minuten: int, maxpogingen: int) -> None:
                 tellers["afgekeurd"] += 1
                 continue
 
-            _zet(con, fid, jaar, "binnen", None, url, pad)
+            # Relatief pad opslaan: een absoluut pad van deze Mac zegt niets op de
+            # mini, waar de database via git terechtkomt.
+            _zet(con, fid, jaar, "binnen", None, url, os.path.relpath(pad, BASE_DIR))
             tellers["binnen"] += 1
             print(f"  {fid:>4} {naam[:32]:<33} binnen  {os.path.getsize(pad)//1024} kB", flush=True)
     finally:
