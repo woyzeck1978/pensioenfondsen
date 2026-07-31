@@ -33,7 +33,7 @@ Bedrijfstakfondsen zijn het verst. Kringen binnen een algemeen pensioenfonds het
 | 1 juli 2027 | 1 | Kring Eastman (Stap) |
 | 1 januari 2028 | 3 | Alliance, IKEA (STIP), J&J |
 
-De piek ligt op 1 januari 2026. De staart is opvallender: acht fondsen op 1 januari 2027 en drie op 1 januari 2028, en dat zijn niet de zwakke fondsen. IKEA vaart in 2028 in met een dekkingsgraad van 153,7% en Alliance met 131,7%.
+De piek ligt op 1 januari 2026. De staart is opvallender: zes fondsen op 1 januari 2027 en drie op 1 januari 2028, en dat zijn niet de zwakke fondsen. IKEA vaart in 2028 in met een dekkingsgraad van 153,7% en Alliance met 131,7%.
 
 ## Uitstel, en waarom
 
