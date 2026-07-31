@@ -476,7 +476,12 @@ Expected gain: 3-5 years of per-fund deelnemer history for ~30 funds = several h
 
 **Known issue with current filter**: the kerncijfers page-scorer requires both a header keyword AND a thousand-separator number pattern. Small funds (Lloyd's: 351 actief) don't match the numeric regex. Loosen `RE_DEELN_NUMERIC` in the script to accept 3-7 digit numbers without thousand separators if you want to catch them.
 
-### 2. Duplicate-row clean-up in historical_metrics (LOW value, LOW effort)
+### 2. Duplicate-row clean-up in historical_metrics (AFGEROND 2026-07-31)
+
+Geen enkele (fund_id, year) komt nog meer dan eens voor, op 1.524 rijen. Opgelost door eerdere opruimacties; de SQL hieronder is niet meer nodig.
+
+<details><summary>oorspronkelijke tekst</summary>
+
 
 Some funds have multiple rows for the same (fund_id, year). Hoogovens had 4 rows per year. Dashboard de-dupes for display via `groupby('year').last()`, so this is cosmetic — but a cleaner DB is nicer.
 
@@ -489,7 +494,14 @@ WHERE id NOT IN (
 
 Run with care: confirm no important non-NULL value exists in the non-MIN-id rows that doesn't exist in the kept row. Probably safe — historical_metrics has been filled mostly by row-level UPDATEs that touched all duplicates.
 
-### 3. KPN funds.aum_euro_bn anomaly (LOW value, LOW effort)
+</details>
+
+### 3. KPN funds.aum_euro_bn anomaly (AFGEROND)
+
+`funds.aum_euro_bn` staat op 10.0 en de jaarreeks geeft 10.0 over 2025 — gelijk aan DNB en het jaarverslag. De 1,1 is verdwenen.
+
+<details><summary>oorspronkelijke tekst</summary>
+
 
 `funds.aum_euro_bn = 1.1` for KPN, but DNB and the FY2025 jaarverslag both
 say €10.0 Bn. The 1.1 is plausibly the DC-lifecycle component only. The
@@ -501,14 +513,32 @@ Decision needed: is `funds.aum_euro_bn` supposed to be the total fund AUM
 (DB + DC + lifecycles), or only the DB-regeling component? Once decided,
 overwrite or split into separate columns.
 
-### 4. ABN actief deelnemers = 44 (LOW value, LOW effort)
+</details>
+
+### 4. ABN actief deelnemers = 44 (GEDEELTELIJK, 2026-07-31)
+
+De 44 is weg; het veld staat nu leeg. Automatisch bijvullen uit het jaarverslag lukte niet: de tabellezer vindt 6.517 slapers en 10.522 gepensioneerden, terwijl de fondsentabel 51.894 en 31.258 heeft. Dat is een factor acht verschil, dus de lezer heeft een tabel van één regeling binnen het fonds te pakken. Handmatig opzoeken blijft nodig; een leeg veld is beter dan een verkeerd veld.
+
+<details><summary>oorspronkelijke tekst</summary>
+
 
 ABN's `funds.deelnemers_actief = 44` is clearly a stub/typo. Slapers (51,894),
 gepens (31,258), and totaal (83,196) look correct. Either NULL the 44 so
 LLM can refill it next round, or look it up manually (likely around
 1,500-3,000).
 
-### 5. APF-kring → umbrella aggregation (MEDIUM value, MEDIUM effort)
+</details>
+
+### 5. APF-kring → umbrella aggregation (VERWORPEN 2026-07-31)
+
+Dit punt stelde voor het vermogen van de kringen op te tellen naar de koepelrij. Dat moet juist niet: dan telt elke euro twee keer mee in het sectortotaal, precies waar de controle 'APF-moeder telt dubbel met zijn kringen' voor bestaat. Stap APF liet het live zien met 0,13 miljard op de koepel naast 8,30 miljard aan kringen; die 0,13 is opgeruimd.
+
+De juiste modellering is de omgekeerde: de kringen dragen vermogen en deelnemers, de koepelrij blijft daarop leeg. Wie de omvang van een APF wil weten telt de kringen op — afgeleid, niet opgeslagen. De beleidsdekkingsgraad op de koepel mag wel blijven staan; een verhouding telt niet dubbel.
+
+Stand: Hnp 10 kringen (7,8 mrd), Stap 11 (8,3), Centraal Beheer 15 (7,7), De Nationale 9 (3,7), Unilever 2 (6,0).
+
+<details><summary>oorspronkelijke tekst</summary>
+
 
 DNB reports HNPF (fund_id 64), DeNAPF (145), Centraal Beheer APF (65),
 Stap APF (67), and Unilever APF (68) per-kring (e.g. "Kring Cargill (Hnp)").
@@ -517,6 +547,8 @@ remaining AUM/beleidsdg NULLs for those 5 funds.
 
 Approach: identify each umbrella's kringen via name pattern, sum kring
 AUM, weighted-average kring beleidsdg by AUM share, write to the umbrella row.
+
+</details>
 
 ### 6. SFDR / EU taxonomy gaps (MEDIUM value, HIGH effort)
 
