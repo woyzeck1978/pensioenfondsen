@@ -112,31 +112,60 @@ KRING_RUIS = re.compile(r"^(kring|pensioenkring|collectiviteitkring|stichting|pe
 def _kringnaam(naam: str) -> str | None:
     """De onderscheidende naam van de kring, of None als dit geen kring is.
 
-    'Kring Arcadis (Hnp)' -> 'Arcadis'; 'Pensioenkring CRH (Hnp)' -> 'CRH'.
-    Alleen fondsen die zelf als kring in de tabel staan; een gewoon fonds houdt
-    het hele document.
+    De hele staart achter 'Kring', niet het eerste woord: Centraal Beheer heeft
+    Kring DB Evenwicht, DB Koopkracht, DB Premie en DB Stabiliteit naast elkaar,
+    en die vallen alle vier samen op 'DB'. Dan snijdt het filter vier keer
+    dezelfde pagina's en krijgen vier fondsen dezelfde cijfers.
+
+    'Kring DB Evenwicht (Centraal Beheer)' -> 'DB Evenwicht'
+    'Pensioenkring CRH (Hnp)'              -> 'CRH'
+    'Kring B (De Nationale)'               -> 'B'
     """
     if not re.match(r"\s*(pensioen)?kring\b", naam, re.I):
         return None
     zonder = re.sub(r"\([^)]*\)", " ", naam)
-    woorden = [w for w in re.findall(r"[A-Za-z0-9À-ÿ]{2,}", zonder) if not KRING_RUIS.match(w)]
-    if not woorden:
-        return None
-    # In de tabel heet hij 'CK1', in het verslag 'Collectiviteitkring 1'.
-    m = re.fullmatch(r"CK(\d+)", woorden[0], re.I)
-    return f"Collectiviteitkring {m.group(1)}" if m else woorden[0]
+    staart = re.sub(r"^\s*(pensioen)?kring\b", "", zonder, flags=re.I).strip(" -/")
+    # 'RBS / NatWest' zoekt op 'RBS'; de tweede naam komt in het verslag zelden voor.
+    staart = staart.split("/")[0].strip()
+    # In de tabel 'CK1', in het verslag 'Collectiviteitkring 1'.
+    m = re.fullmatch(r"CK\s?(\d+)", staart, re.I)
+    if m:
+        return f"Collectiviteitkring {m.group(1)}"
+    return staart or None
 
 
 def _hoort_bij_kring(pagina: str, kring: str) -> bool:
-    """Gaat deze pagina over déze kring en niet over een andere?"""
-    eigen = len(re.findall(rf"\b{re.escape(kring)}\b", pagina, re.I))
+    """Gaat deze pagina over déze kring en niet over een andere?
+
+    Eerst op de volledige naam; die onderscheidt DB Evenwicht van DB Premie.
+    Alleen als de volledige naam nergens voorkomt wordt op het eerste woord
+    teruggevallen, want sommige verslagen korten de kring af.
+    """
+    # Een kring die 'B' of '2' heet is als los teken overal raak. Voor zulke
+    # namen telt alleen de volledige aanduiding 'Kring B'.
+    zoek = (rf"kring\s+{re.escape(kring)}\b" if len(kring) <= 2
+            else rf"\b{re.escape(kring)}\b")
+    eigen = len(re.findall(zoek, pagina, re.I))
     if not eigen:
         return False
-    # Andere kringen op dezelfde pagina: 'Pensioenkring X' of 'Collectiviteitkring N'.
     anderen = [m.group(1) for m in
-               re.finditer(r"(?:pensioen|collectiviteit)kring\s+([A-Za-z0-9]+)", pagina, re.I)
-               if m.group(1).lower() != kring.lower()]
+               re.finditer(r"(?:pensioen|collectiviteit)?kring\s+([A-Za-z0-9][A-Za-z0-9\- ]{0,24})",
+                           pagina, re.I)
+               if not m.group(1).lower().startswith(kring.lower())]
     return eigen > len(anderen)
+
+
+def _kies_paginas(paginas: list[str], kring: str) -> list[str]:
+    """Pagina's van deze kring; valt terug op het eerste woord als de volle naam niets geeft."""
+    gehouden = [t for t in paginas if _hoort_bij_kring(t, kring)]
+    if len(gehouden) >= 3:
+        return gehouden
+    kort = kring.split()[0]
+    if kort.lower() != kring.lower():
+        gehouden = [t for t in paginas if _hoort_bij_kring(t, kort)]
+        if len(gehouden) >= 3:
+            return gehouden
+    return []
 
 
 def snij_passages(pdf_pad: str, naam: str, jaar: int) -> str:
@@ -155,8 +184,8 @@ def snij_passages(pdf_pad: str, naam: str, jaar: int) -> str:
     # vaker genoemd wordt dan welke andere ook.
     kring = _kringnaam(naam)
     if kring:
-        gehouden = [t for t in paginas if _hoort_bij_kring(t, kring)]
-        if len(gehouden) >= 3:
+        gehouden = _kies_paginas(paginas, kring)
+        if gehouden:
             paginas = gehouden
 
     tekst = re.sub(r"\s+", " ", " ".join(paginas))
