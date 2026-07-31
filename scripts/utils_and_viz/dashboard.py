@@ -419,7 +419,8 @@ def get_metrics_history(fund_id):
            beleidsdekkingsgraad_pct, vereiste_dekkingsgraad_pct, reele_dekkingsgraad_pct,
            beleggingsrendement_pct, indexatieverlening_pct, cpi_pct,
            zakelijke_waarden_pct, rente_afdekking_pct, rente_afdekking_rendement_pct,
-           deelnemers_actief, deelnemers_slapers, deelnemers_pensioengerechtigd, deelnemers_totaal
+           deelnemers_actief, deelnemers_slapers, deelnemers_pensioengerechtigd, deelnemers_totaal,
+           solidariteitsreserve_pct, collectief_pensioenvermogen_eur_bn
     FROM historical_metrics
     WHERE fund_id = {fund_id}
     """
@@ -1364,10 +1365,32 @@ def page_fund_deep_dive():
                 help=f"Toon het gemiddelde over alle {fund_data.get('category') or 'overige'} fondsen op dezelfde grafiek.",
             )
 
-            fig_line = px.line(history_df, x="year", y=["beleidsdekkingsgraad_pct", "beleggingsrendement_pct"],
+            # Na het invaren verdwijnt de dekkingsgraad uit het jaarverslag: het
+            # vermogen staat dan op naam van de deelnemer. De reeks houdt daar dus
+            # op, en dat is geen ontbrekende data maar het einde van die grootheid.
+            # Zonder markering leest zo'n grafiek als een fonds dat is opgehouden
+            # te rapporteren.
+            invaarjaar = None
+            invaardatum = fund_data.get("invaardatum")
+            if invaardatum and str(invaardatum)[:4].isdigit():
+                invaarjaar = int(str(invaardatum)[:4])
+
+            reeksen = ["beleidsdekkingsgraad_pct", "beleggingsrendement_pct"]
+            if history_df.get("solidariteitsreserve_pct") is not None \
+                    and history_df["solidariteitsreserve_pct"].notna().any():
+                reeksen.append("solidariteitsreserve_pct")
+
+            titel = "Meerjarenoverzicht: dekkingsgraad & rendement (jaarrapportages)"
+            if invaarjaar and invaarjaar <= int(history_df["year"].max()):
+                titel = (f"Meerjarenoverzicht — dekkingsgraad loopt tot het invaren "
+                         f"in {invaarjaar}")
+            fig_line = px.line(history_df, x="year", y=reeksen,
                                labels={"value": "Percentage (%)", "year": "Jaarverslag", "variable": "Metric"},
-                               title="Meerjarenoverzicht: dekkingsgraad & rendement (jaarrapportages)")
+                               title=titel)
             fig_line.update_xaxes(dtick=1, tickformat="d")
+            if invaarjaar and history_df["year"].min() <= invaarjaar <= history_df["year"].max():
+                fig_line.add_vline(x=invaarjaar, line_dash="dash", line_color=MUTE_LINE,
+                                   annotation_text="ingevaren", annotation_position="top")
 
             if show_peer:
                 peer_df = get_peer_history(fund_data.get('category'), int(fund_id))

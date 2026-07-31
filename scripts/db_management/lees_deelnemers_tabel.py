@@ -180,12 +180,77 @@ def bron_voor(con, fid: int, jaar: int) -> str | None:
     return os.path.relpath(g[0], BASE_DIR) if g else None
 
 
+def alle_jaren(args) -> int:
+    """Vul meerdere jaargangen uit één verslag.
+
+    Een kerncijfertabel toont vijf jaren naast elkaar. Waar de jaarreeks over
+    2021 nog maar 24 fondsen met een deelnemersaantal had, staat dat cijfer
+    gewoon in het verslag over 2025 — een kolom verderop. Eén bestand lezen vult
+    dus vijf rijen, en de kolomkeuze gebeurt op het jaartal in de kopregel, niet
+    op volgorde.
+
+    Alleen lege velden worden gevuld; bestaande waarden blijven staan, ook als
+    ze afwijken. Wat afwijkt wordt gemeld.
+    """
+    con = sqlite3.connect(DB_PATH)
+    con.row_factory = sqlite3.Row
+    fondsen = con.execute("""
+        SELECT DISTINCT f.id, f.name FROM funds f JOIN historical_metrics h ON h.fund_id = f.id
+        WHERE COALESCE(f.is_pensioenfonds, 1) = 1 ORDER BY f.name""").fetchall()
+
+    kolom = {"actief": "deelnemers_actief", "slapers": "deelnemers_slapers",
+             "gepensioneerd": "deelnemers_pensioengerechtigd", "totaal": "deelnemers_totaal"}
+    gevuld, afwijkend, fondsen_geraakt = 0, [], 0
+    for f in fondsen[:args.max]:
+        bron = bron_voor(con, f["id"], args.jaar)
+        if not bron:
+            continue
+        raak = False
+        for jaar in range(args.jaar - 4, args.jaar + 1):
+            gelezen = uit_tabel(bron, jaar) or uit_kerncijfers(bron, jaar)
+            if not gelezen:
+                continue
+            rij = con.execute("""SELECT rowid AS rid, deelnemers_actief a, deelnemers_slapers s,
+                    deelnemers_pensioengerechtigd g, deelnemers_totaal t
+                    FROM historical_metrics WHERE fund_id=? AND year=?""",
+                              (f["id"], jaar)).fetchone()
+            if not rij:
+                continue
+            oud = {"actief": rij["a"], "slapers": rij["s"],
+                   "gepensioneerd": rij["g"], "totaal": rij["t"]}
+            for veld, waarde in gelezen.items():
+                if oud[veld] is None:
+                    con.execute(f"UPDATE historical_metrics SET {kolom[veld]} = ? WHERE rowid = ?",
+                                (waarde, rij["rid"]))
+                    gevuld += 1
+                    raak = True
+                elif oud[veld] != waarde:
+                    afwijkend.append(f"{f['name'][:28]:30s} FY{jaar} {veld}: "
+                                     f"tabel {oud[veld]} vs verslag {waarde}")
+        fondsen_geraakt += raak
+    con.commit()
+    print(f"{gevuld} lege velden gevuld bij {fondsen_geraakt} fondsen, "
+          f"uit verslagen over {args.jaar}")
+    if afwijkend:
+        print(f"\n{len(afwijkend)} bestaande waarden wijken af van het verslag "
+              f"(niet overschreven):")
+        for regel in afwijkend[:15]:
+            print("  " + regel)
+    con.close()
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--jaar", type=int, default=2025)
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--max", type=int, default=60)
+    ap.add_argument("--alle-jaren", action="store_true",
+                    help="lees uit hetzelfde verslag ook de eerdere jaargangen")
     args = ap.parse_args()
+
+    if args.alle_jaren:
+        return alle_jaren(args)
 
     con = sqlite3.connect(DB_PATH)
     con.row_factory = sqlite3.Row
