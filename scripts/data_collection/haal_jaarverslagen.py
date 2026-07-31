@@ -38,6 +38,7 @@ import sqlite3
 import sys
 import urllib.parse
 import urllib.request
+from collections import Counter
 
 import fitz
 
@@ -106,7 +107,33 @@ def keur(pad: str, jaar: int, naam: str, van_eigen_site: bool = False) -> str | 
         return f"onleesbaar ({type(e).__name__})"
     if n <= 1:
         return "maar één pagina"
-    if str(jaar) not in tekst:
+    # Waar het misgaat is een verslag dat een ánder boekjaar draagt dan gevraagd:
+    # TNO's verslag over 2024 kwam binnen als 2025 omdat de URL een uploaddatum
+    # bevatte en '2025' verderop in het document stond. Alleen kijken of het
+    # jaartal érgens voorkomt, is dus te zwak.
+    #
+    # Eisen dat het jaartal aan een verslag-woord op de omslag vastzit, is
+    # daarentegen te streng: BPL zet '20 25' als typografisch element over twee
+    # regels, Bakkersbedrijf opent met een stempel van de accountant en Achmea
+    # met 'PENSIOENFONDS ACHMEA 2025'. Alle drie deugen.
+    #
+    # Dus: een tegenstrijdig boekjaar is een afkeuring, een ontbrekend niet.
+    # Welk jaar het verslag draagt, blijkt uit hoe vaak een jaartal aan een
+    # verslag-woord vastzit — niet uit het laagste (elk verslag over 2025 noemt
+    # 2024 als vergelijkingsjaar) en niet uit het eerste (bij SBZ won een regel
+    # uit de inhoudsopgave, "opvolging aanbevelingen boekjaar 2024 in 2025", het
+    # van de omslag). SBZ noemt "jaarverslag 2025" vier keer en 2024 één keer.
+    verslag = r"(?:jaarverslag|jaarbericht|jaarrapport|jaarrekening|verslagjaar|boekjaar)"
+    treffers = [int(m.group(1)) for m in
+                re.finditer(rf"{verslag}\D{{0,30}}?(20\d{{2}})", tekst)]
+    treffers += [int(m.group(1)) for m in
+                 re.finditer(rf"(20\d{{2}})\D{{0,20}}?{verslag}", tekst)]
+    if treffers:
+        telling = Counter(treffers)
+        draagt = max(telling, key=lambda j: (telling[j], j))
+        if draagt != jaar:
+            return f"draagt boekjaar {draagt}, niet {jaar} ({dict(telling)})"
+    elif str(jaar) not in tekst:
         return f"boekjaar {jaar} staat niet op de eerste pagina's"
     woorden = kenmerkend(naam)
     if not van_eigen_site and woorden and not any(
