@@ -410,6 +410,43 @@ def dekkingsgraad_na_invaren(con):
             for r in rijen]
 
 
+# Een deelnemer vertegenwoordigt grofweg tussen de duizend en vijf miljoen euro
+# pensioenvermogen. ABP zit op ongeveer 175 duizend, een klein ondernemingsfonds
+# op twee ton. De ondergrens ligt bewust laag: StiPP heeft 1,55 miljoen potjes
+# van gemiddeld 2.838 euro, want uitzendkrachten bouwen kort op. Dat is echt en
+# mag geen melding opleveren.
+VERMOGEN_PER_DEELNEMER = (1_000, 5_000_000)
+
+
+def vermogen_per_deelnemer_jaarreeks(con):
+    """Vermogen en deelnemersaantal die niet bij elkaar kunnen horen.
+
+    Rockwool stond over 2025 op 871.000 actieve deelnemers bij 438 miljoen euro,
+    ofwel 499 euro per persoon, en HAL op 2,65 miljoen gepensioneerden bij 166
+    miljoen. Beide waren intern consistent genoeg om aan de andere controles te
+    ontsnappen: Rockwool telde netjes op tot zijn eigen totaal, en bij HAL was de
+    kolom actief leeg waardoor de optelcontrole hem oversloeg. De verhouding tot
+    het vermogen verraadt ze wel.
+    """
+    onder, boven = VERMOGEN_PER_DEELNEMER
+    uit = []
+    for r in con.execute(f"""
+            SELECT f.name, h.year, COALESCE(f.aum_euro_bn, h.aum_euro_bn) aum,
+                   MAX(COALESCE(h.deelnemers_totaal, 0),
+                       COALESCE(h.deelnemers_actief, 0) + COALESCE(h.deelnemers_slapers, 0)
+                       + COALESCE(h.deelnemers_pensioengerechtigd, 0)) n
+            FROM historical_metrics h JOIN funds f ON f.id = h.fund_id
+            WHERE {LEVEND} AND COALESCE(f.is_pensioenfonds, 1) = 1
+            ORDER BY f.name, h.year"""):
+        if not r["aum"] or not r["n"]:
+            continue
+        per = r["aum"] * 1e9 / r["n"]
+        if not (onder <= per <= boven):
+            uit.append(f"{r['name'][:30]:32s} FY{r['year']}  {r['aum']:.3f} mrd op {r['n']:,} "
+                       f"deelnemers = {per:,.0f} euro per persoon".replace(",", "."))
+    return uit
+
+
 def uitschieters_jaarreeks(con):
     """Waarden buiten elk redelijk bereik in de jaarreeks.
 
@@ -452,6 +489,8 @@ CONTROLES = [
     ("Afbakening pensioenfonds wijkt af van de categorie", afbakening_afwijkend),
     ("Als pensioenfonds gemarkeerd maar onbekend bij DNB", pensioenfonds_zonder_dnb),
     ("Waarden buiten elk redelijk bereik in de jaarreeks", uitschieters_jaarreeks),
+    ("Vermogen en deelnemers in de jaarreeks passen niet bij elkaar",
+     vermogen_per_deelnemer_jaarreeks),
     ("Dekkingsgraad gerapporteerd na het invaren", dekkingsgraad_na_invaren),
 ]
 

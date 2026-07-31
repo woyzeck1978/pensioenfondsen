@@ -171,6 +171,77 @@ def uit_kerncijfers(pdf_pad: str, jaar: int) -> dict[str, int] | None:
     return uit
 
 
+def lees_alle_jaren(pdf_pad: str, jaren: range) -> dict[int, dict[str, int]]:
+    """Alle gevraagde jaargangen in één keer uit hetzelfde verslag.
+
+    De eerste versie riep per jaar uit_tabel() aan, en die opent het document en
+    loopt alle pagina's af. Voor vijf jaargangen betekende dat vijf keer een
+    verslag van soms duizend pagina's lezen om er telkens één kolom uit te halen.
+    Een kerncijfertabel bevat die jaren naast elkaar, dus één doorloop volstaat.
+    """
+    import fitz
+
+    try:
+        fitz.TOOLS.mupdf_display_errors(False)
+    except Exception:
+        pass
+    pad = pdf_pad if os.path.isabs(pdf_pad) else os.path.join(BASE_DIR, pdf_pad)
+    if not os.path.exists(pad):
+        return {}
+
+    doc = fitz.open(pad)
+    bladzijden = []
+    for bladzijde in doc:
+        tekst = bladzijde.get_text()
+        if "deelnemer" in tekst.lower() or "ensioengerechtigden" in tekst:
+            bladzijden.append((bladzijde, tekst))
+    uit: dict[int, dict[str, int]] = {}
+    for jaar in jaren:
+        beste = None
+        for bladzijde, _tekst in bladzijden:
+            try:
+                tabellen = bladzijde.find_tables()
+            except Exception:
+                tabellen = []
+            for tb in tabellen:
+                vondst = _uit_rijen(tb.extract(), jaar)
+                if vondst and (beste is None or len(vondst) > len(beste)):
+                    beste = vondst
+        if beste:
+            uit[jaar] = beste
+    doc.close()
+    return uit
+
+
+def _uit_rijen(rijen: list, jaar: int) -> dict[str, int] | None:
+    """Zoek in een uitgepakte tabel de kolom van dit jaar en lees de labels."""
+    if len(rijen) < 3:
+        return None
+    kolom = None
+    for r in rijen[:3]:
+        for i, cel in enumerate(r):
+            if cel and re.search(rf"\b{jaar}\b", str(cel)):
+                kolom = i
+                break
+        if kolom is not None:
+            break
+    if kolom is None:
+        return None
+    vondst: dict[str, int] = {}
+    for r in rijen:
+        label = str(r[0] or "")
+        if SUBRIJ.search(label):
+            continue
+        for veld, patroon in LABELS.items():
+            if veld in vondst or not patroon.search(label):
+                continue
+            if kolom < len(r):
+                n = _getal(r[kolom])
+                if n is not None:
+                    vondst[veld] = n
+    return vondst or None
+
+
 def bron_voor(con, fid: int, jaar: int) -> str | None:
     r = con.execute("""SELECT pad FROM ophaal_wachtrij WHERE fund_id=? AND jaar=?
                        AND pad IS NOT NULL""", (fid, jaar)).fetchone()
@@ -195,19 +266,21 @@ def alle_jaren(args) -> int:
     con = sqlite3.connect(DB_PATH)
     con.row_factory = sqlite3.Row
     fondsen = con.execute("""
-        SELECT DISTINCT f.id, f.name FROM funds f JOIN historical_metrics h ON h.fund_id = f.id
+        SELECT DISTINCT f.id, f.name, f.aum_euro_bn FROM funds f
+        JOIN historical_metrics h ON h.fund_id = f.id
         WHERE COALESCE(f.is_pensioenfonds, 1) = 1 ORDER BY f.name""").fetchall()
 
     kolom = {"actief": "deelnemers_actief", "slapers": "deelnemers_slapers",
              "gepensioneerd": "deelnemers_pensioengerechtigd", "totaal": "deelnemers_totaal"}
-    gevuld, afwijkend, fondsen_geraakt = 0, [], 0
+    gevuld, afwijkend, onwaarschijnlijk, voorstel, fondsen_geraakt = 0, [], [], [], 0
     for f in fondsen[:args.max]:
         bron = bron_voor(con, f["id"], args.jaar)
         if not bron:
             continue
         raak = False
+        per_jaar = lees_alle_jaren(bron, range(args.jaar - 4, args.jaar + 1))
         for jaar in range(args.jaar - 4, args.jaar + 1):
-            gelezen = uit_tabel(bron, jaar) or uit_kerncijfers(bron, jaar)
+            gelezen = per_jaar.get(jaar) or uit_kerncijfers(bron, jaar)
             if not gelezen:
                 continue
             rij = con.execute("""SELECT rowid AS rid, deelnemers_actief a, deelnemers_slapers s,
@@ -218,19 +291,69 @@ def alle_jaren(args) -> int:
                 continue
             oud = {"actief": rij["a"], "slapers": rij["s"],
                    "gepensioneerd": rij["g"], "totaal": rij["t"]}
+            # Toets tegen het vermogen voordat er iets wordt weggeschreven. Zonder
+            # die toets kreeg Ahold Delhaize over 2024 twee miljoen actieve
+            # deelnemers: de lezer had een bedragentabel te pakken in plaats van
+            # een aantallentabel, en beide bestaan uit getallen van zes cijfers.
+            if f["aum_euro_bn"]:
+                grootste = max(gelezen.values())
+                per = f["aum_euro_bn"] * 1e9 / grootste if grootste else 0
+                if not (1_000 <= per <= 5_000_000):
+                    onwaarschijnlijk.append(
+                        f"{f['name'][:28]:30s} FY{jaar} {grootste:,} deelnemers bij "
+                        f"{f['aum_euro_bn']:.2f} mrd = {per:,.0f} euro per persoon".replace(",", "."))
+                    continue
+
+            # Toets tegen de buurjaren. Een deelnemersbestand kruipt; het
+            # verdrievoudigt niet en het krimpt niet met een factor dertig. Ahold
+            # Delhaize kwam anders op 2.004.310 actieven over 2024 te staan naast
+            # 61.885 over 2025 — de lezer had een bedragentabel te pakken, en die
+            # kwam ongeschonden door de vermogenstoets omdat het fonds groot is.
+            sprong = False
+            for veld, waarde in gelezen.items():
+                buur = con.execute(f"""SELECT {kolom[veld]} w FROM historical_metrics
+                    WHERE fund_id=? AND year BETWEEN ? AND ? AND year<>? AND {kolom[veld]} IS NOT NULL
+                    ORDER BY ABS(year-?) LIMIT 1""",
+                                   (f["id"], jaar - 2, jaar + 2, jaar, jaar)).fetchone()
+                if buur and buur["w"] and not (1/3 <= waarde / buur["w"] <= 3):
+                    onwaarschijnlijk.append(
+                        f"{f['name'][:28]:30s} FY{jaar} {veld} {waarde:,} naast {buur['w']:,} "
+                        f"in een buurjaar".replace(",", "."))
+                    sprong = True
+                    break
+            if sprong:
+                continue
+
             for veld, waarde in gelezen.items():
                 if oud[veld] is None:
                     con.execute(f"UPDATE historical_metrics SET {kolom[veld]} = ? WHERE rowid = ?",
                                 (waarde, rij["rid"]))
                     gevuld += 1
                     raak = True
+                    voorstel.append(f"{f['name'][:26]:28s} FY{jaar} {veld:<14} {waarde:>10,}"
+                                    .replace(",", "."))
                 elif oud[veld] != waarde:
                     afwijkend.append(f"{f['name'][:28]:30s} FY{jaar} {veld}: "
                                      f"tabel {oud[veld]} vs verslag {waarde}")
         fondsen_geraakt += raak
-    con.commit()
-    print(f"{gevuld} lege velden gevuld bij {fondsen_geraakt} fondsen, "
-          f"uit verslagen over {args.jaar}")
+    if not args.apply:
+        con.rollback()
+        print(f"DROOGLOOP — {gevuld} lege velden zouden worden gevuld bij "
+              f"{fondsen_geraakt} fondsen, uit verslagen over {args.jaar}\n")
+        for regel in voorstel:
+            print("  " + regel)
+    else:
+        kopie = DB_PATH.replace(".db", f".backup-{datetime.now().strftime('%Y%m%d_%H%M%S')}.db")
+        shutil.copy2(DB_PATH, kopie)
+        con.commit()
+        print(f"Back-up: {os.path.basename(kopie)}")
+        print(f"{gevuld} lege velden gevuld bij {fondsen_geraakt} fondsen, "
+              f"uit verslagen over {args.jaar}")
+    if onwaarschijnlijk:
+        print(f"\n{len(onwaarschijnlijk)} keer overgeslagen omdat het aantal niet bij het "
+              f"vermogen past:")
+        for regel in onwaarschijnlijk[:10]:
+            print("  " + regel)
     if afwijkend:
         print(f"\n{len(afwijkend)} bestaande waarden wijken af van het verslag "
               f"(niet overschreven):")
