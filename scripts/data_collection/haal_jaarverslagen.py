@@ -46,6 +46,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 DB_PATH = os.path.join(BASE_DIR, "data", "processed", "pension_funds.db")
 DOEL_MAP = os.path.join(BASE_DIR, "data", "annual_reports")
 MIN_BYTES = 200_000
+MIN_PAGINAS = 12
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36")
 
@@ -105,8 +106,12 @@ def keur(pad: str, jaar: int, naam: str, van_eigen_site: bool = False) -> str | 
         doc.close()
     except Exception as e:
         return f"onleesbaar ({type(e).__name__})"
-    if n <= 1:
-        return "maar één pagina"
+    # Een jaarverslag van een pensioenfonds loopt in de tientallen pagina's. Mars
+    # leverde een PDF van twee pagina's en 1.868 tekens — een verkorte
+    # samenvatting, groot genoeg om door de bytegrens te komen omdat er een
+    # paginavullende afbeelding in zat. Daar valt geen analyse uit te schrijven.
+    if n < MIN_PAGINAS:
+        return f"te kort voor een jaarverslag ({n} pagina's)"
     # Waar het misgaat is een verslag dat een ánder boekjaar draagt dan gevraagd:
     # TNO's verslag over 2024 kwam binnen als 2025 omdat de URL een uploaddatum
     # bevatte en '2025' verderop in het document stond. Alleen kijken of het
