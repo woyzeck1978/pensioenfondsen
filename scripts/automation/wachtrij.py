@@ -105,13 +105,57 @@ def _zet(con, fid: int, jaar: int, status: str, reden: str | None = None,
     con.commit()
 
 
+# Woorden die in een kringnaam staan maar niets onderscheiden.
+KRING_RUIS = re.compile(r"^(kring|pensioenkring|collectiviteitkring|stichting|pensioenfonds)$", re.I)
+
+
+def _kringnaam(naam: str) -> str | None:
+    """De onderscheidende naam van de kring, of None als dit geen kring is.
+
+    'Kring Arcadis (Hnp)' -> 'Arcadis'; 'Pensioenkring CRH (Hnp)' -> 'CRH'.
+    Alleen fondsen die zelf als kring in de tabel staan; een gewoon fonds houdt
+    het hele document.
+    """
+    if not re.match(r"\s*(pensioen)?kring\b", naam, re.I):
+        return None
+    zonder = re.sub(r"\([^)]*\)", " ", naam)
+    woorden = [w for w in re.findall(r"[A-Za-z0-9À-ÿ]{2,}", zonder) if not KRING_RUIS.match(w)]
+    return woorden[0] if woorden else None
+
+
+def _hoort_bij_kring(pagina: str, kring: str) -> bool:
+    """Gaat deze pagina over déze kring en niet over een andere?"""
+    eigen = len(re.findall(rf"\b{re.escape(kring)}\b", pagina, re.I))
+    if not eigen:
+        return False
+    # Andere kringen op dezelfde pagina: 'Pensioenkring X' of 'Collectiviteitkring N'.
+    anderen = [m.group(1) for m in
+               re.finditer(r"(?:pensioen|collectiviteit)kring\s+([A-Za-z0-9]+)", pagina, re.I)
+               if m.group(1).lower() != kring.lower()]
+    return eigen > len(anderen)
+
+
 def snij_passages(pdf_pad: str, naam: str, jaar: int) -> str:
     """Snijd uit het verslag de zinnen waar de analyse over gaat."""
     import fitz
 
     doc = fitz.open(pdf_pad)
-    tekst = re.sub(r"\s+", " ", " ".join(p.get_text() for p in doc))
+    paginas = [p.get_text() for p in doc]
     doc.close()
+
+    # Een algemeen pensioenfonds bundelt meerdere kringen in één verslag, elk met
+    # een eigen dekkingsgraad en een eigen invaardatum. Zonder filter haalde de
+    # briefing van Kring Arcadis de cijfers van Collectiviteitkring 1 uit
+    # hetzelfde document — twee verschillende kringen, en dus twee verschillende
+    # fondsen in onze tabel. Daarom alleen de pagina's houden waar deze kring
+    # vaker genoemd wordt dan welke andere ook.
+    kring = _kringnaam(naam)
+    if kring:
+        gehouden = [t for t in paginas if _hoort_bij_kring(t, kring)]
+        if len(gehouden) >= 3:
+            paginas = gehouden
+
+    tekst = re.sub(r"\s+", " ", " ".join(paginas))
 
     # Sommige verslagen hebben een lettertype waarin de ligaturen verkeerd op
     # unicode zijn afgebeeld: PostNL levert "}nanciële" en "ezect". Een accolade
