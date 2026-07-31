@@ -1,7 +1,7 @@
 # ROADMAP / Project State — Dutch Pension Funds Dashboard
 
 Handoff document for the next agent (Antigravity, Claude Code, or a human).
-Last updated: 2026-06-09.
+Last updated: 2026-07-31.
 
 This is a sibling to `CLAUDE.md`. CLAUDE.md tells an agent **how to work on
 this codebase**. This file tells an agent **what's been done and what's
