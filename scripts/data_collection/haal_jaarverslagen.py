@@ -162,12 +162,23 @@ def keur(pad: str, jaar: int, naam: str, van_eigen_site: bool = False) -> str | 
     # van tien kringen, en het domein zegt dus niets over wélke. Zo kwam onder
     # 'Pensioenkring Randstad' het deel-jaarverslag van Pensioenkring Ballast
     # Nedam binnen — een ander fonds in onze tabel, met eigen cijfers.
-    if re.search(r"\b(pensioen)?kring\b", naam, re.I):
+    is_kring = bool(re.search(r"\b(pensioen)?kring\b", naam, re.I))
+    if is_kring:
         van_eigen_site = False
+    # Waar de naam mag staan verschilt per soort fonds, en dat onderscheid is
+    # nodig. Bij een kring moet hij op de omslag staan: het koepelverslag noemt
+    # álle kringen, dus wie het hele document doorzoekt keurt het deelverslag van
+    # Ballast Nedam goed onder de naam Randstad. Bij een gewoon fonds is de
+    # omslag juist te weinig — ING CDC opent met niets dan "Jaarverslag 2024" en
+    # noemt zichzelf pas op pagina 8, waardoor een terecht verslag werd
+    # afgekeurd. Een verslag dat de naam nergens noemt, deugt sowieso niet; zo
+    # kwam het Staples-verslag boven water dat onder TotalEnergies stond.
+    waar = tekst if is_kring else heel
     woorden = kenmerkend(naam)
     if not van_eigen_site and woorden and not any(
-            re.search(rf"\b{re.escape(w)}\b", tekst) for w in woorden):
-        return f"fondsnaam komt niet voor (gezocht op {', '.join(woorden[:3])})"
+            re.search(rf"\b{re.escape(w)}\b", waar) for w in woorden):
+        bereik = "de eerste pagina's" if is_kring else "het document"
+        return f"fondsnaam komt niet voor in {bereik} (gezocht op {', '.join(woorden[:3])})"
     return None
 
 
@@ -247,15 +258,42 @@ def zoek_en_haal_via_site(pg, home: str, jaar: int) -> tuple[str, bytes] | None:
     # Voorkeur voor het gevraagde boekjaar; anders het nieuwste dat er is.
     volgorde = sorted(kandidaten, key=lambda u: (jaartal(u) != jaar, -jaartal(u)))
     for url in volgorde[:2]:
-        try:
-            status, b64 = pg.evaluate(FETCH_JS, url)
-            if status == 200:
-                import base64
-                data = base64.b64decode(b64)
-                if data[:4] == b"%PDF":
-                    return url, data
-        except Exception:
-            continue
+        data = download(pg, url)
+        if data:
+            return url, data
+    return None
+
+
+def download(pg, url: str) -> bytes | None:
+    """Haal een PDF op, eerst binnen de pagina en anders erbuiten.
+
+    De fetch() binnen de pagina komt langs een WAF omdat hij de cookies en de
+    fingerprint van de browser meedraagt. Maar hij ligt onder de CORS-regels van
+    de site, en steeds meer fondsen hangen hun documenten op een aparte
+    opslagdienst: ING CDC zet ze op prod1-plate-attachments.s3.amazonaws.com.
+    Die verzoeken worden geweigerd met "Failed to fetch", waarna de ophaler
+    meldde dat er geen verslag was terwijl er vier op de pagina stonden.
+
+    De request-context van Playwright deelt wel de cookies maar niet de
+    CORS-beperking, en is daarmee de juiste tweede poging.
+    """
+    import base64
+    try:
+        status, b64 = pg.evaluate(FETCH_JS, url)
+        if status == 200:
+            data = base64.b64decode(b64)
+            if data[:4] == b"%PDF":
+                return data
+    except Exception:
+        pass
+    try:
+        r = pg.request.get(url, timeout=90000)
+        if r.ok:
+            data = r.body()
+            if data[:4] == b"%PDF":
+                return data
+    except Exception:
+        pass
     return None
 
 
