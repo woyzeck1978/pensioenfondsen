@@ -1,7 +1,7 @@
 # ROADMAP / Project State — Dutch Pension Funds Dashboard
 
 Handoff document for the next agent (Antigravity, Claude Code, or a human).
-Last updated: 2026-07-31.
+Last updated: 2026-08-01.
 
 This is a sibling to `CLAUDE.md`. CLAUDE.md tells an agent **how to work on
 this codebase**. This file tells an agent **what's been done and what's
@@ -112,7 +112,7 @@ logs/llm_extract/                 LLM run logs — gitignored
 - Industry News Feed — filterable, sorted by real publication date.
 - Begrippenlijst (Glossary).
 
-### Dekking van de fondsentabel (stand 2026-07-31, 181 pensioenfondsen)
+### Dekking van de fondsentabel (stand 2026-08-01, 194 pensioenfondsen)
 
 | Veld | Gevuld | Leeg | Dekking |
 |---|---:|---:|---:|
@@ -135,10 +135,14 @@ Wie dekkingspercentages als voortgangsmaat gebruikt, wordt beloond voor het late
 staan van onzin. De datakwaliteitscontrole is de betere maat: die ging van 61
 bevindingen naar 3, en die drie zijn geen fout.
 
-Het aantal fondsen daalde van 190 naar 181 doordat verzekeraars, PPI's,
+Het aantal fondsen daalde eerst van 190 naar 181 doordat verzekeraars, PPI's,
 duplicaten en drie Nederlandse regelingen bij een Belgische OFP als
-`is_pensioenfonds = 0` zijn gemarkeerd, met de reden in `afbakening_reden`. Het
-sectortotaal staat daarmee op 1.617,1 miljard.
+`is_pensioenfonds = 0` zijn gemarkeerd, met de reden in `afbakening_reden`. Op
+1 augustus kwamen er twaalf bij die wel bij DNB rapporteerden maar nooit in de
+tabel stonden (zie punt 12), waaronder het schoonmaakfonds met 6,8 miljard. Het
+staat nu op 194 fondsen en een sectortotaal van 1.631,8 miljard. De percentages
+in de tabel hierboven dateren van 31 juli en zijn niet op die twaalf herrekend;
+die hebben voorlopig alleen vermogen en beleidsdekkingsgraad uit DNB.
 
 ### Dekking van historical_metrics (1.524 rijen, 2015-2025)
 
@@ -805,7 +809,7 @@ Fonds 177 heette Kring TotalEnergies NL. Twee onafhankelijke bronnen zeggen iets
 
 Het begon met zestien nieuwsberichten van `pensioenschoonmaak.nl` die hingen aan fonds-id 61, dat niet in `funds` staat. Bpf Schoonmaak- en Glazenwassersbedrijf heeft 6,8 miljard vermogen en 44 kwartalen DNB-historie; dat is geen randgeval. Het bleek per 1 januari 2026 ingevaren — "Het fondsvermogen is verdeeld", eigen nieuwsbericht.
 
-De oorzaak zat in `load_dnb_quarterly.MANUAL_MAP`: vijftien DNB-rapporteurs stonden daar op `None` met als toelichting "not in DB". Dat is een cirkelredenering — ze ontbraken juist omdat niemand ze had toegevoegd, en die aantekening maakte de omissie permanent en onzichtbaar. Negen ervan zijn nu toegevoegd via `herstel_ontbrekende_fondsen.py`, samen 10,4 miljard. Schoonmaak en Flexsecurity kregen hun oorspronkelijke id (61 en 95) terug, waardoor hun nieuws, documenten en jaarreeks vanzelf weer aanhaakten.
+De oorzaak zat in `load_dnb_quarterly.MANUAL_MAP`: vijftien DNB-rapporteurs stonden daar op `None` met als toelichting "not in DB". Dat is een cirkelredenering — ze ontbraken juist omdat niemand ze had toegevoegd, en die aantekening maakte de omissie permanent en onzichtbaar. Twaalf ervan zijn nu toegevoegd via `herstel_ontbrekende_fondsen.py`. Schoonmaak en Flexsecurity kregen hun oorspronkelijke id (61 en 95) terug, waardoor hun nieuws, documenten en jaarreeks vanzelf weer aanhaakten.
 
 Niet elke ongekoppelde rapporteur was een ontbrekend fonds, en de perioden verraden welke. CRH rapporteert tot en met 2024Q4 en Pensioenkring CRH begint in 2025Q1: dezelfde stichting onder een nieuwe vlag. Grolsche loopt door tot 2025Q3 terwijl Kring Grolsch al in 2024Q4 begint — vier kwartalen overlap, dus twee verschillende dingen. Koppelen bij overlap zou hetzelfde vermogen twee keer tellen. Kring CRH ging zo van 35 naar 373 DNB-rijen, Wolters Kluwer van 35 naar 371.
 
@@ -813,7 +817,9 @@ Twee fouten in de kaart zelf kwamen daarbij boven water. De dict-literal had vij
 
 Rij 177 bleek twee fondsen te bevatten. DNB kent Staples en Kring TotalEnergies NL (Stap) als aparte rapporteurs; de rij droeg de naam en de DNB-reeks van de kring, maar het jaarverslag, het nieuws en de analyses van Staples. Gesplitst: 177 is Staples, 238 is de kring met zijn 137 DNB-rijen.
 
-Koppeling ging van 173 naar 184 van de 188 rapporteurs, het sectortotaal van 1.617,2 naar 1.627,0 miljard. De vier resterende zijn bewust niet gekoppeld omdat koppelen zou dubbeltellen: Shell Nederland, ING Bank CDC, Grolsche en Lanschot.
+Die vier resterende bleken bij natrekken geen van alle een dubbeltelling. Het onderscheid is of de twee rapporteurs elkaar in de tijd overlappen, en dat moet je tegen de feed toetsen, niet tegen de database — die bevat immers al wat je er zelf in hebt geladen. Lanschot rapporteert tot 2024Q4 en zijn kring vanaf 2025Q1: nul overlap, dus hetzelfde fonds; de reeks stond al op 193 uit een oude automatische koppeling en staat er nu met opzet. Shell Nederland en ING Bank CDC overlappen juist volledig, 44 respectievelijk 45 kwartalen — dat zijn twee stichtingen naast elkaar. Rij 51 heet "Shell (SSPF and SNPS schemes)" maar draagt alleen SSPF (25,1 miljard voor risico fonds), terwijl SNPS apart rapporteert als DC-regeling (0,8 miljard voor risico deelnemer, geen beleidsdekkingsgraad omdat een DC-regeling die niet kent). Grolsche geeft vanaf 2024Q4 alleen nog nullen terwijl Kring Grolsch dan begint: een fonds in afbouw naast zijn opvolger.
+
+Daarmee zijn alle 188 DNB-rapporteurs gekoppeld en wordt geen enkele rij meer overgeslagen, tegen 173 bij aanvang. Twaalf fondsen toegevoegd; het sectortotaal ging van 1.617,2 naar 1.631,8 miljard over 194 pensioenfondsen.
 
 De les breder: bij ontdubbelen wordt `funds` opgeruimd maar de tabellen die ernaar verwijzen niet — SQLite dwingt foreign keys standaard niet af. De controle "Rijen die verwijzen naar een fonds dat niet bestaat" loopt daarom elke tabel met een `fund_id`-kolom langs, in plaats van een lijstje dat achterloopt zodra er een tabel bijkomt.
 

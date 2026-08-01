@@ -34,7 +34,6 @@ MANUAL_MAP: dict[str, int] = {
     "Pensioenkring Cargill (Hnp)": 230,
     "BPF Foodservice": 56,
     "Pensioenkring CRH (Hnp)": 187,
-    "Pensioenkring Van Lanschot (Hnp)": 193,
     # Centraal Beheer APF — DNB noemt dit APF "Achmea"
     "Kring 1 - DC (Achmea)": 209,
     "Kring DB evenwicht (Achmea)": 210,
@@ -112,11 +111,20 @@ MANUAL_MAP: dict[str, int] = {
     "Staples": 177,
     "Kring TotalEnergies NL (Stap)": 238,
 
-    # Wel bekend bij DNB, bewust niet gekoppeld — koppelen zou dubbeltellen:
-    "Shell Nederland": None,        # SNPS; fid 51 dekt SSPF en SNPS samen
-    "ING Bank CDC fonds": None,     # fid 108 dekt ING inclusief CDC
-    "Grolsche bierbrouwerij": None, # overlapt vier kwartalen met Kring Grolsch (219)
-    "Lanschot": None,               # fid 193 heeft de reeks al over dezelfde jaren
+    # Lanschot rapporteert tot 2024Q4 en zijn kring vanaf 2025Q1: hetzelfde
+    # patroon als CRH. De reeks stond al op 193 uit een oude automatische
+    # koppeling; nu staat het er met opzet.
+    "Lanschot": 193,
+    "Pensioenkring Van Lanschot (Hnp)": 193,
+    # Deze drie leken een dubbeltelling maar zijn twee stichtingen naast elkaar.
+    # Fonds 51 heet "SSPF and SNPS schemes" en draagt alleen SSPF (25,1 mrd voor
+    # risico fonds); SNPS rapporteert apart als DC-regeling (0,8 mrd voor risico
+    # deelnemer, geen beleidsdekkingsgraad). Idem ING en zijn CDC-fonds, dat
+    # over alle 45 kwartalen naast ING rapporteert. Grolsche geeft vanaf 2024Q4
+    # alleen nog nullen terwijl Kring Grolsch dan begint: een fonds in afbouw.
+    "Shell Nederland": 239,
+    "ING Bank CDC fonds": 240,
+    "Grolsche bierbrouwerij": 241,
     # HNPF (64) and Nationale-NL APF (145) intentionally not mapped: DNB
     # reports these APFs per kring ("Kring X (Achmea/Hnp/Stap)"), not under
     # the umbrella. Leaving them unmatched until a kring->APF aggregator is built.

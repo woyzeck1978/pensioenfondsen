@@ -1,15 +1,11 @@
 # DNB ↔ pension_funds.db name mismatches
 
-Generated 2026-08-01T20:46:49
+Generated 2026-08-01T20:53:09
 
-DB funds: 211 | DNB rapporteurs: 188 | matched: 185
+DB funds: 214 | DNB rapporteurs: 188 | matched: 189
 
 ## DNB rapporteurs without a DB match
 
-- `Grolsche bierbrouwerij`
-- `ING Bank CDC fonds`
-- `Lanschot`
-- `Shell Nederland`
 
 ## DB funds without a DNB match
 
@@ -92,6 +88,7 @@ DB funds: 211 | DNB rapporteurs: 188 | matched: 185
 - [exact] fid=97 `Gasunie` ⇄ DNB `Gasunie`
 - [substr] fid=98 `Gazelle` ⇄ DNB `Gazelle psf`
 - [exact] fid=100 `Geveke` ⇄ DNB `Geveke`
+- [manual] fid=241 `Grolsche Bierbrouwerij` ⇄ DNB `Grolsche bierbrouwerij`
 - [substr] fid=27 `Nederlandse Groothandel / SPNG (Dutch Wholesale)` ⇄ DNB `Groothandel`
 - [exact] fid=103 `HAL` ⇄ DNB `HAL`
 - [exact] fid=102 `Hagee` ⇄ DNB `Hagee`
@@ -106,6 +103,7 @@ DB funds: 211 | DNB rapporteurs: 188 | matched: 185
 - [exact] fid=158 `IFF` ⇄ DNB `IFF`
 - [substr] fid=46 `IKEA (STIP)` ⇄ DNB `IKEA`
 - [manual] fid=108 `ING / ING CDC` ⇄ DNB `ING`
+- [manual] fid=240 `ING Bank CDC fonds` ⇄ DNB `ING Bank CDC fonds`
 - [substr] fid=47 `KLM Algemeen (Ground Staff)` ⇄ DNB `KLM Algemeen`
 - [substr] fid=49 `KLM Vliegend Personeel (Flight Crew)` ⇄ DNB `KLM Vliegend Personeel`
 - [manual] fid=48 `KLM Cabinepersoneel (Cabin Crew)` ⇄ DNB `KLM-Cabinepersoneel`
@@ -148,6 +146,7 @@ DB funds: 211 | DNB rapporteurs: 188 | matched: 185
 - [manual] fid=238 `Kring TotalEnergies NL (Stap)` ⇄ DNB `Kring TotalEnergies NL (Stap)`
 - [manual] fid=216 `Kring equensWorldline (Centraal Beheer)` ⇄ DNB `Kring equensWorldline (Achmea)`
 - [manual] fid=229 `Kring Flexibele Regeling (HNPF)` ⇄ DNB `Kring flexible regeling (Hnp)`
+- [manual] fid=193 `Kring Van Lanschot (HNPF)` ⇄ DNB `Lanschot`
 - [exact] fid=178 `Levensmiddelenbedrijf` ⇄ DNB `Levensmiddelenbedrijf`
 - [exact] fid=112 `Lloyd's Register Nederland` ⇄ DNB `Lloyd's Register Nederland`
 - [substr] fid=4 `Loodsen (Pilots)` ⇄ DNB `Loodsen`
@@ -207,6 +206,7 @@ DB funds: 211 | DNB rapporteurs: 188 | matched: 185
 - [substr] fid=60 `Schilders-, Afwerkings- en Glaszetbedrijf (Painters and Glaziers)` ⇄ DNB `Schilders-, Afwerkings- en Glaszetbedrijf`
 - [manual] fid=61 `Schoonmaak- en Glazenwassersbedrijf` ⇄ DNB `Schoonmaak- en Glazenwassersbedrijf`
 - [substr] fid=51 `Shell (SSPF and SNPS schemes)` ⇄ DNB `Shell`
+- [manual] fid=239 `Shell Nederland (SNPS)` ⇄ DNB `Shell Nederland`
 - [substr] fid=128 `Smurfit Kappa` ⇄ DNB `Smurfit Kappa Nederland`
 - [exact] fid=130 `Sportfondsen` ⇄ DNB `Sportfondsen`
 - [manual] fid=177 `Staples (SPS, in liquidatie)` ⇄ DNB `Staples`

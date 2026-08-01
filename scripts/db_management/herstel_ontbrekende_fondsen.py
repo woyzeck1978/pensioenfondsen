@@ -59,11 +59,31 @@ TOEVOEGEN = [
     ("YARA Nederland", "YARA Nederland", "Ondernemingspensioenfonds", None, None),
     ("Coram", "Coram", "Ondernemingspensioenfonds", None, None),
     ("Calpam", "Calpam", "Ondernemingspensioenfonds", None, None),
+    # Deze drie rapporteren over precies dezelfde kwartalen als een fonds dat al
+    # in de tabel staat. Dat leek dubbeltellen, maar het zijn twee stichtingen
+    # naast elkaar: Shell 51 heet "SSPF and SNPS schemes" en draagt alleen de
+    # cijfers van SSPF (25,1 mrd voor risico fonds), terwijl SNPS als
+    # DC-regeling apart rapporteert (0,8 mrd voor risico deelnemer, geen
+    # beleidsdekkingsgraad). Hetzelfde bij ING en zijn CDC-fonds.
+    ("Shell Nederland", "Shell Nederland (SNPS)", "Ondernemingspensioenfonds",
+     "https://www.shell.nl/pensioenfonds.html", None),
+    ("ING Bank CDC fonds", "ING Bank CDC fonds", "Ondernemingspensioenfonds",
+     "https://ing.cdcpensioen.nl/", None),
+    # Grolsche rapporteert vanaf 2024Q4 alleen nog nullen terwijl Kring Grolsch
+    # dan begint: een fonds in afbouw naast zijn opvolger, geen dubbeltelling.
+    ("Grolsche bierbrouwerij", "Grolsche Bierbrouwerij", "Ondernemingspensioenfonds",
+     None, None),
 ]
 
-# Rapporteurs die de voorganger zijn van een rij die al bestaat. Alleen koppelen
-# als de perioden elkaar niet overlappen; dat toetst het script zelf.
-VOORGANGERS = {"CRH": 187, "Wolters Kluwer Nederland": 194, "Staples": 177}
+# Rapporteurs die de voorganger zijn van een rij die al bestaat, met de naam
+# waaronder de opvolger rapporteert. Alleen koppelen als de perioden elkaar niet
+# overlappen; dat toetst het script zelf tegen de feed.
+VOORGANGERS = {
+    "CRH": ("Pensioenkring CRH (Hnp)", 187),
+    "Wolters Kluwer Nederland": ("Pensioenkring Wolters Kluwer NL (Hnp)", 194),
+    "Lanschot": ("Pensioenkring Van Lanschot (Hnp)", 193),
+    "Grolsche bierbrouwerij": ("Kring Grolsch (Achmea)", 219),
+}
 
 
 def feed_per_naam() -> dict[str, dict]:
@@ -98,6 +118,7 @@ def main() -> int:
     laatste_periode = max(t for d in feed.values() for t in d["perioden"])
     con = sqlite3.connect(DB_PATH)
     bezet = {r[0] for r in con.execute("SELECT id FROM funds")}
+    bestaande_namen = {r[0].lower() for r in con.execute("SELECT name FROM funds")}
     volgend = max(bezet) + 1
 
     plan = []
@@ -105,6 +126,10 @@ def main() -> int:
         d = feed.get(dnb_naam)
         if not d:
             print(f"  {dnb_naam}: komt niet in de feed voor — overgeslagen")
+            continue
+        # Zonder deze toets voegt een tweede run alles nog eens toe: de fondsen
+        # zonder vast id krijgen dan gewoon een volgend nummer.
+        if naam.lower() in bestaande_namen:
             continue
         if vast is not None and vast in bezet:
             print(f"  {naam}: id {vast} is inmiddels bezet — overgeslagen")
@@ -129,30 +154,24 @@ def main() -> int:
               f"beleidsdg {p['dgr'] or '?':>6}  {p['kwartalen']:>3} kw, {wat}")
 
     print("\nVoorgangers van een bestaande rij — koppelen als de perioden aansluiten:\n")
+    # Deze toets vergelijkt de twee rapporteurs in de feed, niet de DB. Kijk je
+    # naar de DB, dan meld je overlap met je eigen zojuist geladen rijen.
     koppel = {}
-    for dnb_naam, fid in VOORGANGERS.items():
-        d = feed.get(dnb_naam)
-        if not d:
-            print(f"  {dnb_naam:<28} niet in de feed")
+    for dnb_naam, (opvolger, fid) in VOORGANGERS.items():
+        los, na = feed.get(dnb_naam), feed.get(opvolger)
+        naam_rij = con.execute("SELECT name FROM funds WHERE id=?", (fid,)).fetchone()
+        if not los or not na or not naam_rij:
+            print(f"  {dnb_naam:<28} rapporteur of fonds {fid} ontbreekt")
             continue
-        eind_los = max(d["perioden"])
-        r = con.execute("""SELECT f.name, MIN(dq.year * 10 + dq.quarter), COUNT(*)
-                           FROM funds f LEFT JOIN dnb_quarterly_metrics dq ON dq.fund_id = f.id
-                           WHERE f.id = ? GROUP BY f.id""", (fid,)).fetchone()
-        if not r:
-            print(f"  {dnb_naam:<28} fonds {fid} bestaat niet")
-            continue
-        start_rij = r[1]
-        eind_getal = int(kwartaal(eind_los).replace("Q", ""))
-        if start_rij and start_rij <= eind_getal:
-            print(f"  {dnb_naam:<28} OVERLAP met {r[0][:26]} (die begint in "
-                  f"{start_rij // 10}Q{start_rij % 10}) — niet koppelen")
+        overlap = {kwartaal(t) for t in los["perioden"]} & {kwartaal(t) for t in na["perioden"]}
+        if overlap:
+            print(f"  {dnb_naam:<28} OVERLAP met {opvolger[:30]} in "
+                  f"{len(overlap)} kwartalen — twee stichtingen naast elkaar, niet koppelen")
             continue
         koppel[dnb_naam] = fid
-        print(f"  {dnb_naam:<28} tot {kwartaal(eind_los)} -> {fid} {r[0][:30]} "
-              f"(begint {start_rij // 10}Q{start_rij % 10 if start_rij else '?'})"
-              if start_rij else
-              f"  {dnb_naam:<28} tot {kwartaal(eind_los)} -> {fid} {r[0][:30]} (nog geen DNB-rijen)")
+        print(f"  {dnb_naam:<28} tot {kwartaal(max(los['perioden']))}, "
+              f"{opvolger[:28]} vanaf {kwartaal(min(na['perioden']))} -> beide op "
+              f"{fid} {naam_rij[0][:26]}")
 
     if not args.apply:
         print("\nDroogloop. Draai met --apply om de fondsen toe te voegen.")
