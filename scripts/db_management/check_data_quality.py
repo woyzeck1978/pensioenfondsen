@@ -507,6 +507,22 @@ def dubbele_nieuwsberichten(con):
                 HAVING COUNT(*) > 1 ORDER BY n DESC LIMIT 15""")]
 
 
+def nieuwsdatum_ophoping(con):
+    """Te veel berichten op precies dezelfde dag — dat is een noodwaarde.
+
+    Een parser die geen datum vindt valt terug op een jaargrens, en dan staan er
+    146 berichten op 31 december en 116 op 1 januari. Die zijn niet van elkaar te
+    onderscheiden van een echte publicatie op die dag, en ze vervuilen elke
+    sortering op datum. Zo kregen twee analyses een publicatiedatum van
+    1 januari 2026 toegewezen terwijl hun verslag in juni verscheen.
+    """
+    return [f"{r['published_date']}: {r['n']} berichten op één dag"
+            for r in con.execute("""
+                SELECT published_date, COUNT(*) n FROM news_articles
+                WHERE published_date IS NOT NULL
+                GROUP BY published_date HAVING n >= 40 ORDER BY n DESC""")]
+
+
 def uitschieters_jaarreeks(con):
     """Waarden buiten elk redelijk bereik in de jaarreeks.
 
@@ -554,6 +570,7 @@ CONTROLES = [
     ("Dekkingsgraad gerapporteerd na het invaren", dekkingsgraad_na_invaren),
     ("SFDR-artikel spreekt het eigen verslag tegen", sfdr_tegenstrijdig),
     ("Hetzelfde nieuwsbericht meer dan eens opgeslagen", dubbele_nieuwsberichten),
+    ("Nieuwsdatums die op één dag ophopen", nieuwsdatum_ophoping),
 ]
 
 

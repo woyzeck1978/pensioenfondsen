@@ -58,20 +58,61 @@ def kandidaten(con, jaar: int):
         (f"{jaar}-01-01", jaar)).fetchall()
 
 
+# Steeds meer fondsen publiceren hun jaarverslag als website in plaats van als
+# document: verslagen.uwvpensioen.nl/jaarverslag-2025 bijvoorbeeld. Zo'n site
+# heeft doorgaans een aparte pagina die het geheel als PDF aanbiedt. Zonder die
+# tweede stap blijft het bericht "linkt geen PDF", terwijl het verslag er wel is.
+NAAR_VERSLAGSITE = re.compile(r"verslag|jaarverslag-20\d\d|annualreport", re.I)
+NAAR_DOWNLOAD = re.compile(r"downloaden-als-pdf|download.{0,12}pdf|pdf.{0,12}download|/print", re.I)
+
+
+def _links(pg, url: str, wacht: int = 1500):
+    r = pg.goto(url, wait_until="domcontentloaded", timeout=40000)
+    if not r or r.status >= 400:
+        return None, r.status if r else None
+    pg.wait_for_timeout(wacht)
+    return [h for h in dict.fromkeys(pg.eval_on_selector_all("a[href]", "e=>e.map(x=>x.href)")) if h], r.status
+
+
 def haal(pg, nieuws_url: str, jaar: int):
-    """Open het nieuwsbericht en haal de PDF waar het naar linkt."""
+    """Open het nieuwsbericht en haal de PDF waar het naar linkt.
+
+    Loopt zo nodig twee stappen door: bericht -> online jaarverslag -> pagina die
+    het als PDF aanbiedt.
+    """
     try:
-        r = pg.goto(nieuws_url, wait_until="domcontentloaded", timeout=40000)
-        if not r or r.status >= 400:
-            return None, f"nieuwspagina gaf {r.status if r else 'geen antwoord'}"
-        pg.wait_for_timeout(1500)
-        links = pg.eval_on_selector_all("a[href]", "e=>e.map(x=>x.href)")
+        links, status = _links(pg, nieuws_url)
+        if links is None:
+            return None, f"nieuwspagina gaf {status}"
     except Exception as e:
         return None, f"nieuwspagina onbereikbaar ({type(e).__name__})"
 
-    pdfs = [h for h in dict.fromkeys(links) if h and ".pdf" in h.lower()]
+    pdfs = [h for h in links if ".pdf" in h.lower()]
     if not pdfs:
-        return None, "nieuwsbericht linkt geen PDF"
+        # Stap 2: een online jaarverslag op een eigen (sub)domein.
+        eigen = nieuws_url.split("/")[2]
+        kandidaten = [h for h in links if NAAR_VERSLAGSITE.search(h) and h.split("/")[2] != eigen]
+        kandidaten += [h for h in links if NAAR_VERSLAGSITE.search(h) and str(jaar) in h]
+        for site in list(dict.fromkeys(kandidaten))[:3]:
+            try:
+                sublinks, _ = _links(pg, site, 2000)
+                if not sublinks:
+                    continue
+                pdfs = [h for h in sublinks if ".pdf" in h.lower()]
+                if pdfs:
+                    break
+                # Stap 3: de 'downloaden als pdf'-pagina van die verslagsite.
+                for dl in [h for h in sublinks if NAAR_DOWNLOAD.search(h)][:2]:
+                    diep, _ = _links(pg, dl, 2500)
+                    pdfs = [h for h in (diep or []) if ".pdf" in h.lower()]
+                    if pdfs:
+                        break
+                if pdfs:
+                    break
+            except Exception:
+                continue
+    if not pdfs:
+        return None, "nieuwsbericht linkt geen PDF, ook niet via een verslagsite"
     # Het volledige verslag heeft voorrang op een verkorte of MVB-versie.
     volgorde = sorted(pdfs, key=lambda u: (bool(NIET_HET_VERSLAG.search(u)),
                                            str(jaar) not in u, -len(u)))
