@@ -523,6 +523,63 @@ def nieuwsdatum_ophoping(con):
                 GROUP BY published_date HAVING n >= 40 ORDER BY n DESC""")]
 
 
+def nieuws_van_ander_fonds(con):
+    """Een nieuwsbericht op het webdomein van een ander fonds.
+
+    De monitor bewaart elke link die op een bericht lijkt onder het fonds waar
+    hij op dat moment kijkt. Linkt een fonds naar een ander fonds, dan komt het
+    bericht bij de verkeerde terecht. KLM Grondpersoneel had zo 44 berichten van
+    het cabinefonds staan, dat er zelf nul had, en 34 berichten van
+    pensioenfondsapf.nl hingen aan fonds 64 terwijl dat domein van 75 is. Dat
+    laatste liep door tot in de analyse: de ophaler volgde het bericht en leverde
+    het jaarverslag van 75 af bij 64.
+
+    Herstellen gaat met scripts/db_management/herstel_nieuwskoppeling.py.
+    """
+    def host(u):
+        if not u or u.startswith("mailto:"):
+            return None
+        h = u.split("//")[-1].split("/")[0].lower().split(":")[0]
+        return h[4:] if h.startswith("www.") else h
+
+    eigen = {fid: host(w) for fid, w in con.execute("SELECT id, website FROM funds")}
+    van_domein = {}
+    for fid, h in eigen.items():
+        if h:
+            van_domein.setdefault(h, fid)
+
+    uit, gezien = [], set()
+    for fid, naam, url in con.execute("""
+            SELECT n.fund_id, f.name, n.url FROM news_articles n
+            JOIN funds f ON f.id = n.fund_id WHERE n.url IS NOT NULL"""):
+        h = host(url)
+        mijn = eigen.get(fid)
+        if not h or not mijn or h == mijn:
+            continue
+        # Kringen van een koepel-APF delen het domein met opzet.
+        if h.split(".")[-2:] == mijn.split(".")[-2:]:
+            continue
+        eigenaar = van_domein.get(h)
+        if eigenaar and eigenaar != fid and (fid, h) not in gezien:
+            gezien.add((fid, h))
+            uit.append(f"{naam[:30]:32s} heeft nieuws van {h} (fonds {eigenaar})")
+    return uit
+
+
+def nieuws_zonder_fonds(con):
+    """Nieuws dat hangt aan een fonds-id dat niet meer in funds staat.
+
+    Bij het ontdubbelen verdwijnt de fondsrij maar niet zijn nieuws. Zeventien
+    berichten stonden op de id's 61, 95 en 153; het schoonmaakfonds bleek
+    daardoor helemaal uit de dataset te zijn gevallen zonder dat iets dat meldde.
+    """
+    return [f"fonds {r['fund_id']} bestaat niet — {r['n']} berichten, bv. {r['url'][:52]}"
+            for r in con.execute("""
+                SELECT fund_id, COUNT(*) n, MIN(url) url FROM news_articles
+                WHERE fund_id NOT IN (SELECT id FROM funds)
+                GROUP BY fund_id ORDER BY n DESC""")]
+
+
 def uitschieters_jaarreeks(con):
     """Waarden buiten elk redelijk bereik in de jaarreeks.
 
@@ -571,6 +628,8 @@ CONTROLES = [
     ("SFDR-artikel spreekt het eigen verslag tegen", sfdr_tegenstrijdig),
     ("Hetzelfde nieuwsbericht meer dan eens opgeslagen", dubbele_nieuwsberichten),
     ("Nieuwsdatums die op één dag ophopen", nieuwsdatum_ophoping),
+    ("Nieuwsbericht op het webdomein van een ander fonds", nieuws_van_ander_fonds),
+    ("Nieuws bij een fonds dat niet in funds staat", nieuws_zonder_fonds),
 ]
 
 
