@@ -566,18 +566,31 @@ def nieuws_van_ander_fonds(con):
     return uit
 
 
-def nieuws_zonder_fonds(con):
-    """Nieuws dat hangt aan een fonds-id dat niet meer in funds staat.
+def wezen_zonder_fonds(con):
+    """Rijen die verwijzen naar een fonds-id dat niet meer in funds staat.
 
-    Bij het ontdubbelen verdwijnt de fondsrij maar niet zijn nieuws. Zeventien
-    berichten stonden op de id's 61, 95 en 153; het schoonmaakfonds bleek
-    daardoor helemaal uit de dataset te zijn gevallen zonder dat iets dat meldde.
+    Bij het ontdubbelen verdwijnt de fondsrij maar niet wat ernaar verwijst.
+    Zeventien nieuwsberichten stonden op de id's 61, 95 en 153; het
+    schoonmaakfonds bleek daardoor helemaal uit de dataset te zijn gevallen
+    zonder dat iets dat meldde. Dezelfde stilte zat in vijf andere tabellen.
+
+    Daarom loopt deze controle elke tabel met een fund_id-kolom langs in plaats
+    van een lijstje dat achterloopt zodra er een tabel bijkomt. SQLite dwingt de
+    verwijzing niet af: foreign keys staan standaard uit, en die van
+    historical_metrics is nooit aangezet.
     """
-    return [f"fonds {r['fund_id']} bestaat niet — {r['n']} berichten, bv. {r['url'][:52]}"
-            for r in con.execute("""
-                SELECT fund_id, COUNT(*) n, MIN(url) url FROM news_articles
+    uit = []
+    for (tabel,) in con.execute(
+            "SELECT name FROM sqlite_master WHERE type='table' AND name <> 'funds'"):
+        kolommen = [r[1] for r in con.execute(f"PRAGMA table_info({tabel})")]
+        if "fund_id" not in kolommen:
+            continue
+        for r in con.execute(f"""
+                SELECT fund_id, COUNT(*) n FROM {tabel}
                 WHERE fund_id NOT IN (SELECT id FROM funds)
-                GROUP BY fund_id ORDER BY n DESC""")]
+                GROUP BY fund_id ORDER BY n DESC"""):
+            uit.append(f"{tabel:<28} fonds {r['fund_id']} bestaat niet — {r['n']} rij(en)")
+    return uit
 
 
 def uitschieters_jaarreeks(con):
@@ -629,7 +642,7 @@ CONTROLES = [
     ("Hetzelfde nieuwsbericht meer dan eens opgeslagen", dubbele_nieuwsberichten),
     ("Nieuwsdatums die op één dag ophopen", nieuwsdatum_ophoping),
     ("Nieuwsbericht op het webdomein van een ander fonds", nieuws_van_ander_fonds),
-    ("Nieuws bij een fonds dat niet in funds staat", nieuws_zonder_fonds),
+    ("Rijen die verwijzen naar een fonds dat niet bestaat", wezen_zonder_fonds),
 ]
 
 

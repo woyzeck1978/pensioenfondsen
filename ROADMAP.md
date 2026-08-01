@@ -791,6 +791,32 @@ Status op 2026-05-26 (alle drie lokaal getest): allemaal leeg / 404.
    herkenning voor de nieuwe metrics (vooral solidariteitsreserve %
    en invaardekkingsgraad zijn relatief vast format).
 
+### 11. Nieuws aan het juiste fonds (AFGEROND 2026-08-01)
+
+De monitor bewaarde elke nieuwslink onder het fonds waar hij op dat moment keek, ook als de link naar een ander fonds wees. Daardoor had KLM Cabinepersoneel nul berichten en KLM Grondpersoneel er vierenveertig van `klmcabinefonds.nl`. Dezelfde fout stond bij `pensioenfondsapf.nl` (34 berichten op fonds 64 in plaats van 75) en `pmepensioen.nl` (11 PME-berichten op StiPP).
+
+Dat bleef niet bij nieuws. De ophaler zoekt jaarverslagen via nieuwsberichten, dus een verkeerd gekoppeld bericht levert een verkeerd jaarverslag en daarna een analyse over het verkeerde fonds — precies wat er bij fonds 64 gebeurde.
+
+`scripts/db_management/herstel_nieuwskoppeling.py` corrigeert dit. Twee regels blijken nodig: vergelijk eerst de volledige hostnaam, want `nn.cdcpensioen.nl` en `ing.cdcpensioen.nl` zijn twee verschillende fondsen, en haal nooit een fonds weg van zijn eigen domein, want kringen delen dat met hun koepel met opzet. Zonder die tweede regel verhuisden dertien Zwitserleven- en zeven ING-berichten ten onrechte. `check_data_quality.py` heeft er twee controles bij, zodat het niet opnieuw stil misgaat.
+
+Fonds 177 heette Kring TotalEnergies NL. Twee onafhankelijke bronnen zeggen iets anders — het jaarverslag noemt TotalEnergies nergens en 22 nieuwsberichten komen van `pensioenfondsstaples.nl` — dus het heet nu Staples (SPS, in liquidatie). Die rij droeg daarnaast de DNB-cijfers van de kring; dat is bij punt 12 uit elkaar gehaald.
+
+### 12. Vijftien fondsen rapporteerden bij DNB maar stonden niet in de tabel (AFGEROND 2026-08-01)
+
+Het begon met zestien nieuwsberichten van `pensioenschoonmaak.nl` die hingen aan fonds-id 61, dat niet in `funds` staat. Bpf Schoonmaak- en Glazenwassersbedrijf heeft 6,8 miljard vermogen en 44 kwartalen DNB-historie; dat is geen randgeval. Het bleek per 1 januari 2026 ingevaren — "Het fondsvermogen is verdeeld", eigen nieuwsbericht.
+
+De oorzaak zat in `load_dnb_quarterly.MANUAL_MAP`: vijftien DNB-rapporteurs stonden daar op `None` met als toelichting "not in DB". Dat is een cirkelredenering — ze ontbraken juist omdat niemand ze had toegevoegd, en die aantekening maakte de omissie permanent en onzichtbaar. Negen ervan zijn nu toegevoegd via `herstel_ontbrekende_fondsen.py`, samen 10,4 miljard. Schoonmaak en Flexsecurity kregen hun oorspronkelijke id (61 en 95) terug, waardoor hun nieuws, documenten en jaarreeks vanzelf weer aanhaakten.
+
+Niet elke ongekoppelde rapporteur was een ontbrekend fonds, en de perioden verraden welke. CRH rapporteert tot en met 2024Q4 en Pensioenkring CRH begint in 2025Q1: dezelfde stichting onder een nieuwe vlag. Grolsche loopt door tot 2025Q3 terwijl Kring Grolsch al in 2024Q4 begint — vier kwartalen overlap, dus twee verschillende dingen. Koppelen bij overlap zou hetzelfde vermogen twee keer tellen. Kring CRH ging zo van 35 naar 373 DNB-rijen, Wolters Kluwer van 35 naar 371.
+
+Twee fouten in de kaart zelf kwamen daarbij boven water. De dict-literal had vijf dubbele sleutels, waarvan drie een bedoelde koppeling stilzwijgend uitzetten: `"CRH": 187` bovenaan werd verderop overschreven door `"CRH": None`. Python meldt dat niet. En de automatische koppeling slaat een fonds over zodra het bezet is, dus toen de voorganger van Wolters Kluwer aan 194 werd gekoppeld raakte de kring zijn eigen kwartalen kwijt; twee rapporteurs op één fonds kan alleen handmatig.
+
+Rij 177 bleek twee fondsen te bevatten. DNB kent Staples en Kring TotalEnergies NL (Stap) als aparte rapporteurs; de rij droeg de naam en de DNB-reeks van de kring, maar het jaarverslag, het nieuws en de analyses van Staples. Gesplitst: 177 is Staples, 238 is de kring met zijn 137 DNB-rijen.
+
+Koppeling ging van 173 naar 184 van de 188 rapporteurs, het sectortotaal van 1.617,2 naar 1.627,0 miljard. De vier resterende zijn bewust niet gekoppeld omdat koppelen zou dubbeltellen: Shell Nederland, ING Bank CDC, Grolsche en Lanschot.
+
+De les breder: bij ontdubbelen wordt `funds` opgeruimd maar de tabellen die ernaar verwijzen niet — SQLite dwingt foreign keys standaard niet af. De controle "Rijen die verwijzen naar een fonds dat niet bestaat" loopt daarom elke tabel met een `fund_id`-kolom langs, in plaats van een lijstje dat achterloopt zodra er een tabel bijkomt.
+
 ---
 
 ## Environment details for the next agent

@@ -34,10 +34,7 @@ MANUAL_MAP: dict[str, int] = {
     "Pensioenkring Cargill (Hnp)": 230,
     "BPF Foodservice": 56,
     "Pensioenkring CRH (Hnp)": 187,
-    "CRH": 187,
-    "Wolters Kluwer Nederland": 194,
     "Pensioenkring Van Lanschot (Hnp)": 193,
-    "Shell Nederland": 51,
     # Centraal Beheer APF — DNB noemt dit APF "Achmea"
     "Kring 1 - DC (Achmea)": 209,
     "Kring DB evenwicht (Achmea)": 210,
@@ -74,30 +71,52 @@ MANUAL_MAP: dict[str, int] = {
     "Werk en (re)Integratie": 38,
     "Mode-, Interieur-, Tapijt- en Textielindustrie": 25,
     "Medische Specialisten": 5,
-    "Tandartsen en Tandarts-Specialisten": None,  # no clear DB row; leave unmapped
     "KLM-Cabinepersoneel": 48,
     "Cap Gemini Nederland": 83,
     "HaskoningDHV": 104,
     "Samenwerking / Slagersbedrijf": 35,
-    "Schoonmaak- en Glazenwassersbedrijf": None,  # not in DB
     "PGB": 32,
-    "PDN": None,                                  # not in DB
     "Betonproduktenindustrie": 14,
-    "Zuivel en aanverwante industrie": None,      # not in DB
     "Bouwmaterialen": 18,                         # HiBiN = Bouwmaterialen
     "ING": 108,
     "PDN": 91,                                    # DSM Nederland = Pensioenfonds DSM Nederland
     "Zuivel en aanverwante industrie": 43,        # BPZ; dash placement differs from DB name
     "APF": 75,                                    # Generic DNB "APF" assumed = AkzoNobel APF
-    "Shell Nederland": None,                      # fid 51 already used by 'Shell' (SSPF); SNPS would dup
-    "Wolters Kluwer Nederland": None,             # not the same as fid 194 (kring Hnp)
-    "YARA Nederland": None,
-    "ING Bank CDC fonds": None,                   # fid 108 already used by 'ING'
-    "CRH": None,                                  # fid 187 already used by kring
-    "Grolsche bierbrouwerij": None,               # standalone; kring Grolsch is separate
-    # Non-DB DNB-only rapporteurs (acknowledged, intentionally unmapped):
-    "Honeywell": None, "Coram": None, "Calpam": None, "Flexsecurity": None,
-    "Staples": None, "Pensura": None, "Nedlloyd": None,
+
+    # --- Toegevoegd 2026-08-01 --------------------------------------------
+    # Deze rapporteurs stonden op None met als reden "not in DB". Dat was een
+    # cirkelredenering: ze ontbraken juist omdat niemand ze had toegevoegd. Het
+    # schoonmaakfonds heeft 6,8 miljard en 44 kwartalen historie. Zie
+    # herstel_ontbrekende_fondsen.py voor hoe de rijen zijn aangemaakt.
+    "Schoonmaak- en Glazenwassersbedrijf": 61,
+    "Flexsecurity": 95,
+    "Tandartsen en Tandarts-Specialisten": 231,
+    "Honeywell": 232,
+    "Nedlloyd": 233,
+    "Pensura": 234,
+    "YARA Nederland": 235,
+    "Coram": 236,
+    "Calpam": 237,
+    # CRH en Wolters Kluwer rapporteren tot en met 2024Q4, hun kring begint in
+    # 2025Q1: dezelfde stichting, nieuwe vlag. Beide stonden hierboven al
+    # gekoppeld en werden verderop stilzwijgend op None gezet — een dubbele
+    # sleutel in een dict-literal, waarvan de laatste wint.
+    "CRH": 187,
+    "Wolters Kluwer Nederland": 194,
+    # Twee rapporteurs op hetzelfde fonds mag alleen handmatig: de automatische
+    # koppeling slaat een fonds over zodra het bezet is, waardoor de kring zijn
+    # eigen kwartalen kwijtraakte aan zijn voorganger.
+    "Pensioenkring Wolters Kluwer NL (Hnp)": 194,
+    # DNB kent Staples en de Stap-kring als aparte rapporteurs. Rij 177 droeg de
+    # naam van de kring maar het verslag van Staples; op 2026-08-01 gesplitst.
+    "Staples": 177,
+    "Kring TotalEnergies NL (Stap)": 238,
+
+    # Wel bekend bij DNB, bewust niet gekoppeld — koppelen zou dubbeltellen:
+    "Shell Nederland": None,        # SNPS; fid 51 dekt SSPF en SNPS samen
+    "ING Bank CDC fonds": None,     # fid 108 dekt ING inclusief CDC
+    "Grolsche bierbrouwerij": None, # overlapt vier kwartalen met Kring Grolsch (219)
+    "Lanschot": None,               # fid 193 heeft de reeks al over dezelfde jaren
     # HNPF (64) and Nationale-NL APF (145) intentionally not mapped: DNB
     # reports these APFs per kring ("Kring X (Achmea/Hnp/Stap)"), not under
     # the umbrella. Leaving them unmatched until a kring->APF aggregator is built.

@@ -1,26 +1,15 @@
 # DNB ↔ pension_funds.db name mismatches
 
-Generated 2026-07-28T10:20:30
+Generated 2026-08-01T20:46:49
 
-DB funds: 201 | DNB rapporteurs: 188 | matched: 174
+DB funds: 211 | DNB rapporteurs: 188 | matched: 185
 
 ## DNB rapporteurs without a DB match
 
-- `CRH`
-- `Calpam`
-- `Coram`
-- `Flexsecurity`
 - `Grolsche bierbrouwerij`
-- `Honeywell`
 - `ING Bank CDC fonds`
 - `Lanschot`
-- `Nedlloyd`
-- `Pensura`
-- `Schoonmaak- en Glazenwassersbedrijf`
 - `Shell Nederland`
-- `Tandartsen en Tandarts-Specialisten`
-- `Wolters Kluwer Nederland`
-- `YARA Nederland`
 
 ## DB funds without a DNB match
 
@@ -48,6 +37,7 @@ DB funds: 201 | DNB rapporteurs: 188 | matched: 174
 - [55] `PME`
 - [206] `Pensioenfonds Ernst & Young`
 - [52] `Pension Insurers (Pensioenverzekeraars)These are traditional insurance companies that administer pension plans 6:`
+- [67] `Stap APF`
 - [36] `StiPP (Temp Agency and Seconded Workers)`
 - [134] `Tobacon Offshore Marine Consultancy B.V.`
 - [68] `Unilever APF`
@@ -81,10 +71,13 @@ DB funds: 201 | DNB rapporteurs: 188 | matched: 174
 - [manual] fid=15 `Bouw / BPFBouw (Construction)` ⇄ DNB `Bouwnijverheid`
 - [exact] fid=207 `Pensioenfonds British American Tobacco` ⇄ DNB `British American Tobacco`
 - [exact] fid=81 `Brocacef` ⇄ DNB `Brocacef`
+- [manual] fid=187 `Pensioenkring CRH (Hnp)` ⇄ DNB `CRH`
+- [manual] fid=237 `Calpam` ⇄ DNB `Calpam`
 - [exact] fid=82 `Campina` ⇄ DNB `Campina`
 - [manual] fid=83 `Capgemini / Capgemini Nederland` ⇄ DNB `Cap Gemini Nederland`
 - [exact] fid=84 `Cargill` ⇄ DNB `Cargill`
 - [substr] fid=85 `Citigroup` ⇄ DNB `Citigroup Nederland`
+- [manual] fid=236 `Coram` ⇄ DNB `Coram`
 - [substr] fid=86 `Cosun / Koninklijke Cosun` ⇄ DNB `Cosun`
 - [exact] fid=89 `DHL Nederland` ⇄ DNB `DHL Nederland`
 - [exact] fid=88 `Delta Lloyd` ⇄ DNB `Delta Lloyd`
@@ -93,6 +86,7 @@ DB funds: 201 | DNB rapporteurs: 188 | matched: 174
 - [exact] fid=90 `DOW` ⇄ DNB `Dow`
 - [exact] fid=92 `Ecolab` ⇄ DNB `Ecolab`
 - [exact] fid=93 `Essity` ⇄ DNB `Essity`
+- [manual] fid=95 `Flexsecurity (Randstad)` ⇄ DNB `Flexsecurity`
 - [exact] fid=96 `Forbo` ⇄ DNB `Forbo`
 - [substr] fid=2 `Fysiotherapeuten (SPF - Physiotherapists)` ⇄ DNB `Fysiotherapeuten`
 - [exact] fid=97 `Gasunie` ⇄ DNB `Gasunie`
@@ -103,6 +97,7 @@ DB funds: 201 | DNB rapporteurs: 188 | matched: 174
 - [exact] fid=102 `Hagee` ⇄ DNB `Hagee`
 - [manual] fid=104 `Haskoning DHV` ⇄ DNB `HaskoningDHV`
 - [exact] fid=105 `Heineken` ⇄ DNB `Heineken`
+- [manual] fid=232 `Honeywell` ⇄ DNB `Honeywell`
 - [exact] fid=106 `Hoogovens` ⇄ DNB `Hoogovens`
 - [substr] fid=19 `Horeca & Catering (Hospitality)` ⇄ DNB `Horecabedrijf`
 - [substr] fid=3 `Huisartsen (SPH - General Practitioners)` ⇄ DNB `Huisartsen`
@@ -150,7 +145,7 @@ DB funds: 201 | DNB rapporteurs: 188 | matched: 174
 - [exact] fid=175 `Kring Roba (Hnp)` ⇄ DNB `Kring Roba (Hnp)`
 - [exact] fid=176 `Kring SVG (Stap)` ⇄ DNB `Kring SVG (Stap)`
 - [manual] fid=217 `Kring Sligro Food Group (Centraal Beheer)` ⇄ DNB `Kring Sligro (Achmea)`
-- [exact] fid=177 `Kring TotalEnergies NL (Stap)` ⇄ DNB `Kring TotalEnergies NL (Stap)`
+- [manual] fid=238 `Kring TotalEnergies NL (Stap)` ⇄ DNB `Kring TotalEnergies NL (Stap)`
 - [manual] fid=216 `Kring equensWorldline (Centraal Beheer)` ⇄ DNB `Kring equensWorldline (Achmea)`
 - [manual] fid=229 `Kring Flexibele Regeling (HNPF)` ⇄ DNB `Kring flexible regeling (Hnp)`
 - [exact] fid=178 `Levensmiddelenbedrijf` ⇄ DNB `Levensmiddelenbedrijf`
@@ -170,6 +165,7 @@ DB funds: 201 | DNB rapporteurs: 188 | matched: 174
 - [substr] fid=26 `Molenaars (Millers)` ⇄ DNB `Molenaarspensioenfonds`
 - [exact] fid=118 `NN CDC` ⇄ DNB `NN CDC fonds`
 - [substr] fid=87 `De Nederlandsche Bank` ⇄ DNB `Nederlandsche Bank`
+- [manual] fid=233 `Nedlloyd` ⇄ DNB `Nedlloyd`
 - [substr] fid=28 `Notariaat (Notaries)` ⇄ DNB `Notariaat`
 - [exact] fid=181 `Oak` ⇄ DNB `Oak`
 - [manual] fid=91 `DSM Nederland` ⇄ DNB `PDN`
@@ -188,8 +184,9 @@ DB funds: 201 | DNB rapporteurs: 188 | matched: 174
 - [exact] fid=191 `Pensioenkring Randstad (Hnp)` ⇄ DNB `Pensioenkring Randstad (Hnp)`
 - [exact] fid=192 `Pensioenkring Sweco (Hnp)` ⇄ DNB `Pensioenkring Sweco (Hnp)`
 - [manual] fid=193 `Kring Van Lanschot (HNPF)` ⇄ DNB `Pensioenkring Van Lanschot (Hnp)`
-- [exact] fid=194 `Pensioenkring Wolters Kluwer NL (Hnp)` ⇄ DNB `Pensioenkring Wolters Kluwer NL (Hnp)`
+- [manual] fid=194 `Pensioenkring Wolters Kluwer NL (Hnp)` ⇄ DNB `Pensioenkring Wolters Kluwer NL (Hnp)`
 - [exact] fid=195 `Pensioenkring Xerox (Hnp)` ⇄ DNB `Pensioenkring Xerox (Hnp)`
+- [manual] fid=234 `Pensura` ⇄ DNB `Pensura`
 - [substr] fid=31 `Personeelsdiensten (Personnel Services)` ⇄ DNB `Personeelsdiensten`
 - [manual] fid=76 `APG` ⇄ DNB `Personeelspensioenfonds APG`
 - [exact] fid=119 `Philips` ⇄ DNB `Philips`
@@ -208,12 +205,14 @@ DB funds: 201 | DNB rapporteurs: 188 | matched: 174
 - [exact] fid=127 `Sagittarius` ⇄ DNB `Sagittarius`
 - [manual] fid=35 `Slagersbedrijf (Butchers)` ⇄ DNB `Samenwerking / Slagersbedrijf`
 - [substr] fid=60 `Schilders-, Afwerkings- en Glaszetbedrijf (Painters and Glaziers)` ⇄ DNB `Schilders-, Afwerkings- en Glaszetbedrijf`
+- [manual] fid=61 `Schoonmaak- en Glazenwassersbedrijf` ⇄ DNB `Schoonmaak- en Glazenwassersbedrijf`
 - [substr] fid=51 `Shell (SSPF and SNPS schemes)` ⇄ DNB `Shell`
 - [substr] fid=128 `Smurfit Kappa` ⇄ DNB `Smurfit Kappa Nederland`
 - [exact] fid=130 `Sportfondsen` ⇄ DNB `Sportfondsen`
-- [substr] fid=67 `Stap APF` ⇄ DNB `Staples`
+- [manual] fid=177 `Staples (SPS, in liquidatie)` ⇄ DNB `Staples`
 - [exact] fid=131 `TDV` ⇄ DNB `TDV`
 - [exact] fid=133 `TNO` ⇄ DNB `TNO`
+- [manual] fid=231 `Tandartsen en Tandarts-Specialisten` ⇄ DNB `Tandartsen en Tandarts-Specialisten`
 - [substr] fid=132 `Thales Nederland` ⇄ DNB `Thales`
 - [exact] fid=208 `Pensioenfonds Trespa` ⇄ DNB `Trespa`
 - [exact] fid=135 `UWV` ⇄ DNB `UWV`
@@ -224,7 +223,9 @@ DB funds: 201 | DNB rapporteurs: 188 | matched: 174
 - [substr] fid=37 `Waterbouw (Hydraulic Engineering)` ⇄ DNB `Waterbouw BPF`
 - [manual] fid=38 `Werk- en (re)Integratie / PWRI (Work and Reintegration)` ⇄ DNB `Werk en (re)Integratie`
 - [manual] fid=137 `Witteveen+Bos` ⇄ DNB `Witteveen & Bos`
+- [manual] fid=194 `Pensioenkring Wolters Kluwer NL (Hnp)` ⇄ DNB `Wolters Kluwer Nederland`
 - [substr] fid=39 `Woningcorporaties / SPW (Housing Corporations)` ⇄ DNB `Woningcorporaties`
+- [manual] fid=235 `YARA Nederland` ⇄ DNB `YARA Nederland`
 - [substr] fid=40 `Zoetwarenindustrie (Confectionery Industry)` ⇄ DNB `Zoetwarenindustrie`
 - [substr] fid=41 `Zorg en Welzijn / PFZW (Healthcare and Welfare)` ⇄ DNB `Zorg en Welzijn`
 - [substr] fid=42 `Zorgverzekeraars / SBZ (Health Insurers)` ⇄ DNB `Zorgverzekeraars`
