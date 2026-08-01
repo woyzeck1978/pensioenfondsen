@@ -490,6 +490,23 @@ def sfdr_tegenstrijdig(con):
     return uit
 
 
+def dubbele_nieuwsberichten(con):
+    """Hetzelfde bericht meer dan eens, doordat de URL verschilt maar de inhoud niet.
+
+    De tabel heeft UNIQUE op url, en dat is te fijnmazig: dezelfde pagina komt
+    binnen als .../bericht en .../bericht#main, en een overzichtspagina zelfs met
+    ?tag=Jaarverslag, ?tag=MVB en ?tag=jaarverslag naast elkaar. Dat leverde 552
+    dubbele berichten op, zichtbaar als herhaalde regels op de nieuwspagina.
+    """
+    return [f"{r['name'][:30]:32s} {r['published_date'] or '(geen datum)'}  "
+            f"{(r['title'] or '')[:44]} — {r['n']}x"
+            for r in con.execute("""
+                SELECT f.name, n.title, n.published_date, COUNT(*) n
+                FROM news_articles n JOIN funds f ON f.id = n.fund_id
+                GROUP BY n.fund_id, n.title, n.published_date
+                HAVING COUNT(*) > 1 ORDER BY n DESC LIMIT 15""")]
+
+
 def uitschieters_jaarreeks(con):
     """Waarden buiten elk redelijk bereik in de jaarreeks.
 
@@ -536,6 +553,7 @@ CONTROLES = [
      vermogen_per_deelnemer_jaarreeks),
     ("Dekkingsgraad gerapporteerd na het invaren", dekkingsgraad_na_invaren),
     ("SFDR-artikel spreekt het eigen verslag tegen", sfdr_tegenstrijdig),
+    ("Hetzelfde nieuwsbericht meer dan eens opgeslagen", dubbele_nieuwsberichten),
 ]
 
 

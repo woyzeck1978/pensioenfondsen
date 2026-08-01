@@ -227,8 +227,20 @@ def get_session() -> requests.Session:
 db_lock = threading.Lock()
 
 
+def canoniek(url: str) -> str:
+    """URL zonder fragment en zonder afsluitende slash.
+
+    De tabel heeft UNIQUE op url, en een fonds dat zowel .../nieuws/bericht als
+    .../nieuws/bericht#main oplevert kreeg daardoor twee rijen met dezelfde
+    titel en datum. Dat waren 552 overtollige berichten, zichtbaar als
+    dubbelingen op de nieuwspagina.
+    """
+    return url.split("#")[0].rstrip("/")
+
+
 def worker(row, db_path):
     fund_id, url, fallback_title = row
+    url = canoniek(url)
     headline, pub_date = fetch_article(url, get_session())
     if looks_generic(headline):
         if not looks_generic(fallback_title):
