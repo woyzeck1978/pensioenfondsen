@@ -8,7 +8,7 @@ this codebase**. This file tells an agent **what's been done and what's
 open**, with concrete first steps for each open item.
 
 > **Bijgewerkt 2026-07-31.** Van de tien openstaande punten zijn er acht
-> afgehandeld; punt 5 is verworpen met reden. Wat resteert is het
+> afgehandeld en is punt 5 verworpen met reden; punt 4 is half. Wat resteert is het
 > aggrid-tabelcomponent (punt 8, cosmetisch) en de acht kringen van De
 > Nationale, die achter een WAF zitten die elke browserpoging met 403 afwijst.
 > De datakwaliteitscontrole ging van 61 bevindingen naar 3, en die drie zijn
@@ -480,7 +480,28 @@ scraper-run + `git pull` overleven zonder merge-conflict. Nieuwe module:
 
 ## Open items, ranked by ROI
 
-### 1. Per-year deelnemers via LLM (HIGH value, MEDIUM effort)
+### 1. Per-jaar deelnemers (AFGEROND 2026-07-31, anders dan bedoeld)
+
+Niet met een LLM maar met tabelherkenning. Dat was de kern van de zaak: deze
+getallen staan in een kerncijfertabel, en een taalmodel leest tekst. PyMuPDF
+herkent de tabelstructuur, en dan is het een kwestie van de kolom kiezen op het
+jaartal in de kopregel in plaats van op volgorde.
+
+Dat laatste bleek de eigenlijke fout in de bestaande data: Thales stond over
+2025 op een totaal van 6.377, exact de kolom van 2024. Een kerncijfertabel toont
+vijf jaargangen naast elkaar, dus een verslag over 2025 vult ook 2021 tot 2024.
+386 lege velden gevuld bij 32 fondsen; de dekking over 2021 ging van 24 naar 43
+fondsen.
+
+Zie `scripts/db_management/lees_deelnemers_tabel.py --alle-jaren`. Kringen
+worden overgeslagen: hun 'eigen' verslag is het verzamelverslag van de koepel,
+en dat vraagt het hoofdstukfilter uit `wachtrij.py`.
+
+Het LLM-script is daarmee overbodig. Ollama en de slapende MBP zijn geen
+blokkade meer.
+
+<details><summary>oorspronkelijke tekst</summary>
+
 
 Script ships ready: `scripts/document_parsing/llm_extract_deelnemers_history.py`.
 Not yet run at scale because the MBP keeps falling asleep during bulk runs
@@ -507,6 +528,8 @@ and the local Ollama becomes unreachable on Tailscale.
 Expected gain: 3-5 years of per-fund deelnemer history for ~30 funds = several hundred extra cells in historical_metrics that currently only have a single-year snapshot.
 
 **Known issue with current filter**: the kerncijfers page-scorer requires both a header keyword AND a thousand-separator number pattern. Small funds (Lloyd's: 351 actief) don't match the numeric regex. Loosen `RE_DEELN_NUMERIC` in the script to accept 3-7 digit numbers without thousand separators if you want to catch them.
+
+</details>
 
 ### 2. Duplicate-row clean-up in historical_metrics (AFGEROND 2026-07-31)
 
@@ -582,13 +605,40 @@ AUM, weighted-average kring beleidsdg by AUM share, write to the umbrella row.
 
 </details>
 
-### 6. SFDR / EU taxonomy gaps (MEDIUM value, HIGH effort)
+### 6. SFDR- en taxonomiegaten (ONDERZOCHT 2026-07-31 — de vraag klopte niet)
+
+Dit punt wilde de lege `sfdr_article`-velden vullen uit de verslagen. Dat levert
+verkeerde gegevens op. PFZW noemt 'beleggingen die niet geclassificeerd zijn als
+artikel 8 SFDR product' en SPMS wil 'een groter deel van de portefeuille
+classificeren als artikel 8'. Beide gaan over de beleggingen in de portefeuille,
+niet over het fonds zelf; wie op 'artikel 8' zoekt schrijft ze allebei fout weg.
+
+Zorgwekkender is wat er al stond. ABP staat op artikel 8 terwijl zijn
+jaarverslag SFDR helemaal niet noemt.
+
+Het bruikbare signaal is de periodieke SFDR-bijlage: alleen artikel 8- en
+9-producten publiceren die. Daarmee is 49 keer bevestigd wat er stond. Maar de
+toets werkt eenzijdig — geen bijlage in het jaarverslag bewijst niets, want veel
+fondsen publiceren die los, en dat zou negentien valse meldingen geven.
+
+`check_data_quality.py` meldt daarom alleen het sluitende geval: als artikel 6
+geboekt terwijl er wel een bijlage is. Dat waren er twee, Slagersbedrijf en
+Vlakglas, beiden inmiddels op artikel 8 gezet. Bij Vlakglas was onze waarde niet
+fout maar verouderd: dat fonds wijzigde de classificatie per 1 januari 2024.
+
+De resterende 89 lege velden zijn dus geen achterstand om weg te werken. Wie ze
+wil vullen heeft de losse SFDR-bijlagen nodig, niet de jaarverslagen.
+
+<details><summary>oorspronkelijke tekst</summary>
+
 
 After all our extraction passes:
 - SFDR NULL: 75 funds (mostly without a local PDF, or with PDFs that don't mention an Article 6/8/9 classification).
 - EU Taxonomy NULL: 132 funds (taxonomy reporting is recent and many small funds simply don't report it).
 
 The remaining gaps need either bigger PDFs (download more FY2024 jaarverslagen from scraped_documents URLs) or a manual data entry pass.
+
+</details>
 
 ### 7. Data-quality outlier detection (AFGEROND 2026-07-31)
 
