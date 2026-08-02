@@ -1,7 +1,7 @@
 # ROADMAP / Project State — Dutch Pension Funds Dashboard
 
 Handoff document for the next agent (Antigravity, Claude Code, or a human).
-Last updated: 2026-08-01.
+Last updated: 2026-08-02.
 
 This is a sibling to `CLAUDE.md`. CLAUDE.md tells an agent **how to work on
 this codebase**. This file tells an agent **what's been done and what's
@@ -824,6 +824,41 @@ Daarmee zijn alle 188 DNB-rapporteurs gekoppeld en wordt geen enkele rij meer ov
 De les breder: bij ontdubbelen wordt `funds` opgeruimd maar de tabellen die ernaar verwijzen niet — SQLite dwingt foreign keys standaard niet af. De controle "Rijen die verwijzen naar een fonds dat niet bestaat" loopt daarom elke tabel met een `fund_id`-kolom langs, in plaats van een lijstje dat achterloopt zodra er een tabel bijkomt.
 
 ---
+
+## Stand van zaken en werkplan (2026-08-02)
+
+194 pensioenfondsen, 1.631,4 miljard, 214 analyses over 160 fondsen waarvan 107 over boekjaar 2025. De datakwaliteitscontrole staat op 7 bevindingen, alle zeven terechte signaleringen.
+
+Wat resteert is in kaart gebracht en valt uiteen in zes stukken, hieronder in de volgorde waarin ze elkaar mogelijk maken.
+
+### De blinde vlek: 32 fondsen, 67,8 miljard
+
+Tweeëndertig pensioenfondsen hebben wél een website maar geen enkel gescrapet document. Daaronder Pensioenfonds ING met 23,6 miljard en Horeca & Catering met 13,9 miljard en 1,28 miljoen deelnemers. Geen documenten betekent geen jaarverslag en dus geen analyse; dit is de bovenloop van bijna al het ontbrekende werk.
+
+Alle 32 zijn met een browser bezocht om vast te stellen wat er misgaat. Dat leverde vier groepen op, en die scheiding is belangrijk omdat elke groep een ander soort oplossing vraagt:
+
+| groep | aantal | wat er te zien is |
+|---|---:|---|
+| documenten staan er al, onder het verkeerde fonds-id | 5 | de landingspagina toont tientallen PDF's |
+| landingspagina toont niets | 18 | status 200, nul PDF-links |
+| WAF weigert (403) | 4 | waaronder Pensioenfonds ING |
+| site onbereikbaar | 5 | harde fout in Playwright |
+
+De eerste groep is geen scraperprobleem maar dezelfde koppelingsfout die bij `news_articles` al is hersteld: 250 rijen in `scraped_documents` staan op het domein van een ander fonds, waaronder 102 van `pensioenfondsapf.nl` op fonds 64 die bij 75 horen en 96 van `klmcabinefonds.nl` op 47 die bij 48 horen. Bij het herstellen van het nieuws is die tabel over het hoofd gezien.
+
+### De zes taken
+
+1. **Documenten aan het juiste fonds koppelen.** `herstel_nieuwskoppeling.py` generiek maken over beide tabellen in plaats van een tweede script te schrijven; de eigenaarsbepaling is al beproefd. Lost naar verwachting vijf van de 32 blinde fondsen in één keer op.
+2. **De achttien landingspagina's zonder documenten.** Twee oorzaken door elkaar: `funds.website` wijst bij een deel naar een diepe pagina in plaats van de homepage — bij fonds 194 zelfs naar het domein van kring Sweco — en bij een ander deel staan de documenten achter een pagina die niet vanaf de landingspagina linkt. De ophaler kan dat al vinden, de monitor niet. Die logica hoort in de monitor thuis, niet in tweeëndertig handmatig gecorrigeerde URL's.
+3. **Horeca & Catering.** Het grootste fonds zonder enige analyse, en ingevaren, dus meteen de eerste echte toets van het post-invaren-sjabloon uit punt 10. `phenc.nl` geeft 200 met 1 kB HTML en nul links, zowel met requests als in Playwright; wat daar staat moet eerst worden uitgezocht.
+4. **Negen fondsen achter een WAF of onbereikbaar.** Voor de vier 403's is de route beproefd: een zichtbare browser met `fetch()` binnen de pagina. Voor de vijf harde fouten eerst vaststellen wát er misgaat. Blijft een site onbereikbaar, dan is dat een uitkomst om vast te leggen, geen fout om te blijven proberen.
+5. **Nieuwsdatums.** 411 berichten staan op een noodwaarde en 307 hebben geen datum: samen 27 procent van een feed die op datum sorteert. De noodwaarde hoort NULL te zijn, zodat "onbekend" zichtbaar is in plaats van verzonnen; daarna de echte datum zoeken in de URL, de meta-tags of de tekst.
+6. **Lege kernvelden.** SFDR-artikel bij 102 fondsen leeg, invaardatum bij 159, deelnemers bij 74, dekkingsgraad bij 56. Invaardatum is het meest waard: `check_data_quality.py` gebruikt het om te bepalen of een lege dekkingsgraad een gat is of juist correct. Dat 159 fondsen geen invaardatum hebben terwijl er 36 de status 'Ingevaren' dragen, is meteen de eerste tegenspraak om op te lossen. Dit werk wordt makkelijker naarmate de taken hierboven meer verslagen binnenhalen, dus het staat achteraan.
+
+Taak 2 wacht op 1, en taak 6 op 2, 3 en 4. De rest kan onafhankelijk.
+
+---
+
 
 ## Environment details for the next agent
 
