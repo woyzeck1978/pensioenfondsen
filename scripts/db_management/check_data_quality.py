@@ -523,16 +523,22 @@ def nieuwsdatum_ophoping(con):
                 GROUP BY published_date HAVING n >= 40 ORDER BY n DESC""")]
 
 
-def nieuws_van_ander_fonds(con):
-    """Een nieuwsbericht op het webdomein van een ander fonds.
+def van_ander_fonds(con):
+    """Een bericht of document op het webdomein van een ander fonds.
 
-    De monitor bewaart elke link die op een bericht lijkt onder het fonds waar
-    hij op dat moment kijkt. Linkt een fonds naar een ander fonds, dan komt het
-    bericht bij de verkeerde terecht. KLM Grondpersoneel had zo 44 berichten van
-    het cabinefonds staan, dat er zelf nul had, en 34 berichten van
-    pensioenfondsapf.nl hingen aan fonds 64 terwijl dat domein van 75 is. Dat
-    laatste liep door tot in de analyse: de ophaler volgde het bericht en leverde
-    het jaarverslag van 75 af bij 64.
+    De monitor bewaart elke link onder het fonds waar hij op dat moment kijkt.
+    Linkt een fonds naar een ander fonds, dan komt de rij bij de verkeerde
+    terecht. KLM Grondpersoneel had zo 44 berichten van het cabinefonds staan,
+    dat er zelf nul had, en 34 berichten van pensioenfondsapf.nl hingen aan
+    fonds 64 terwijl dat domein van 75 is. Dat liep door tot in de analyse: de
+    ophaler volgde het bericht en leverde het jaarverslag van 75 af bij 64.
+
+    Beide tabellen nalopen is nodig gebleken. Toen het nieuws was rechtgezet
+    bleef `scraped_documents` staan, en daar zaten er 250 fout — waaronder de
+    102 documenten van APF en 96 van KLM Cabine. Daardoor leken vijf fondsen
+    onvindbaar voor de monitor terwijl hun documenten er gewoon waren, alleen
+    onder een ander id. Omgekeerd bleken fonds 64 en 22 daarna helemaal geen
+    eigen documenten te hebben; die dekking was altijd al schijn.
 
     Herstellen gaat met scripts/db_management/herstel_nieuwskoppeling.py.
     """
@@ -549,20 +555,21 @@ def nieuws_van_ander_fonds(con):
             van_domein.setdefault(h, fid)
 
     uit, gezien = [], set()
-    for fid, naam, url in con.execute("""
-            SELECT n.fund_id, f.name, n.url FROM news_articles n
-            JOIN funds f ON f.id = n.fund_id WHERE n.url IS NOT NULL"""):
-        h = host(url)
-        mijn = eigen.get(fid)
-        if not h or not mijn or h == mijn:
-            continue
-        # Kringen van een koepel-APF delen het domein met opzet.
-        if h.split(".")[-2:] == mijn.split(".")[-2:]:
-            continue
-        eigenaar = van_domein.get(h)
-        if eigenaar and eigenaar != fid and (fid, h) not in gezien:
-            gezien.add((fid, h))
-            uit.append(f"{naam[:30]:32s} heeft nieuws van {h} (fonds {eigenaar})")
+    for tabel, wat in (("news_articles", "nieuws"), ("scraped_documents", "documenten")):
+        for fid, naam, url in con.execute(f"""
+                SELECT t.fund_id, f.name, t.url FROM {tabel} t
+                JOIN funds f ON f.id = t.fund_id WHERE t.url IS NOT NULL"""):
+            h = host(url)
+            mijn = eigen.get(fid)
+            if not h or not mijn or h == mijn:
+                continue
+            # Kringen van een koepel-APF delen het domein met opzet.
+            if h.split(".")[-2:] == mijn.split(".")[-2:]:
+                continue
+            eigenaar = van_domein.get(h)
+            if eigenaar and eigenaar != fid and (tabel, fid, h) not in gezien:
+                gezien.add((tabel, fid, h))
+                uit.append(f"{naam[:28]:30s} heeft {wat} van {h} (fonds {eigenaar})")
     return uit
 
 
@@ -641,7 +648,7 @@ CONTROLES = [
     ("SFDR-artikel spreekt het eigen verslag tegen", sfdr_tegenstrijdig),
     ("Hetzelfde nieuwsbericht meer dan eens opgeslagen", dubbele_nieuwsberichten),
     ("Nieuwsdatums die op één dag ophopen", nieuwsdatum_ophoping),
-    ("Nieuwsbericht op het webdomein van een ander fonds", nieuws_van_ander_fonds),
+    ("Bericht of document op het webdomein van een ander fonds", van_ander_fonds),
     ("Rijen die verwijzen naar een fonds dat niet bestaat", wezen_zonder_fonds),
 ]
 

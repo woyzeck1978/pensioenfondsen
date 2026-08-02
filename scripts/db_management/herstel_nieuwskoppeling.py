@@ -96,7 +96,7 @@ def eigenaars(con) -> tuple[dict, dict]:
     return kies(per_host), kies(per_domein)
 
 
-def analyseer(con):
+def analyseer(con, tabel: str):
     op_host, op_domein = eigenaars(con)
     namen = dict(con.execute("SELECT id, name FROM funds"))
     eigen = {fid: host(w) for fid, w in con.execute("SELECT id, website FROM funds")}
@@ -107,7 +107,7 @@ def analyseer(con):
     wezen: dict[tuple, list] = defaultdict(list)
 
     for rid, fid, url in con.execute(
-            "SELECT rowid, fund_id, url FROM news_articles WHERE url IS NOT NULL"):
+            f"SELECT rowid, fund_id, url FROM {tabel} WHERE url IS NOT NULL"):
         h = host(url)
         if not h:
             continue
@@ -136,55 +136,77 @@ def analyseer(con):
     return verplaats, ruis, vreemd, wezen, namen
 
 
-def main() -> int:
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--apply", action="store_true", help="schrijf de correcties weg")
-    args = ap.parse_args()
+TABELLEN = {
+    # tabel: (enkelvoud, meervoud) voor de leesbaarheid van het rapport
+    "news_articles": ("bericht", "berichten"),
+    "scraped_documents": ("document", "documenten"),
+}
 
-    con = sqlite3.connect(DB_PATH)
-    verplaats, ruis, vreemd, wezen, namen = analyseer(con)
+
+def verwerk(con, tabel: str, woord: tuple[str, str], apply: bool) -> tuple[int, list, list]:
+    """Analyseer een tabel en druk het rapport af. Geeft terug wat er te doen is."""
+    een, meer = woord
+    verplaats, ruis, vreemd, wezen, namen = analyseer(con, tabel)
 
     n_v = sum(len(v) for v in verplaats.values())
-    print(f"{n_v} berichten staan bij een ander fonds dan waar hun domein bij hoort:\n")
+    print(f"\n=== {tabel} ===\n")
+    print(f"{n_v} {meer} staan bij een ander fonds dan waar hun domein bij hoort:")
     for (van, naar, h), rids in sorted(verplaats.items(), key=lambda x: -len(x[1])):
         print(f"  {len(rids):>3}x  {h:<26} {van:>4} {namen.get(van, '?')[:24]:<26}"
               f" -> {naar:>4} {namen.get(naar, '?')[:26]}")
 
-    print(f"\n{len(ruis)} berichten zijn deelknoppen of vertaallinks, geen nieuws:")
-    for d in sorted({r[1] for r in ruis}):
-        print(f"  {sum(1 for r in ruis if r[1] == d):>3}x  {d}")
+    if ruis:
+        print(f"\n{len(ruis)} {meer} zijn deelknoppen of vertaallinks, geen inhoud:")
+        for d in sorted({r[1] for r in ruis}):
+            print(f"  {sum(1 for r in ruis if r[1] == d):>3}x  {d}")
 
     if wezen:
         n_w = sum(len(v) for v in wezen.values())
-        print(f"\n{n_w} berichten hangen aan een fonds dat niet meer bestaat "
+        print(f"\n{n_w} {meer} hangen aan een fonds dat niet meer bestaat "
               f"— worden verwijderd:")
         for (fid, h), rids in sorted(wezen.items(), key=lambda x: -len(x[1])):
             print(f"  {len(rids):>3}x  {h:<34} fonds {fid}")
 
     if vreemd:
         n_x = sum(len(v) for v in vreemd.values())
-        print(f"\n{n_x} berichten staan op een domein dat bij geen enkel fonds hoort "
+        print(f"\n{n_x} {meer} staan op een domein dat bij geen enkel fonds hoort "
               f"— met de hand beoordelen:")
-        for (fid, h), rids in sorted(vreemd.items(), key=lambda x: -len(x[1])):
+        for (fid, h), rids in sorted(vreemd.items(), key=lambda x: -len(x[1]))[:12]:
             print(f"  {len(rids):>3}x  {h:<34} nu bij {fid} {namen.get(fid, '?')[:26]}")
+
+    if not apply:
+        return n_v, [], []
+
+    for (_van, naar, _h), rids in verplaats.items():
+        con.executemany(f"UPDATE {tabel} SET fund_id=? WHERE rowid=?",
+                        [(naar, r) for r in rids])
+    weg = [(r[0],) for r in ruis] + [(r,) for v in wezen.values() for r in v]
+    con.executemany(f"DELETE FROM {tabel} WHERE rowid=?", weg)
+    con.commit()
+    print(f"\n{n_v} {meer} verplaatst, {len(weg)} verwijderd "
+          f"({len(ruis)} ruis, {len(weg) - len(ruis)} zonder fonds).")
+    return n_v, ruis, weg
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--apply", action="store_true", help="schrijf de correcties weg")
+    ap.add_argument("--tabel", choices=sorted(TABELLEN), help="beperk tot deze tabel")
+    args = ap.parse_args()
+
+    con = sqlite3.connect(DB_PATH)
+    if args.apply:
+        kopie = DB_PATH.replace(".db", f".backup-{datetime.now().strftime('%Y%m%d_%H%M%S')}.db")
+        shutil.copy2(DB_PATH, kopie)
+        print(f"Back-up: {os.path.basename(kopie)}")
+
+    for tabel, woord in TABELLEN.items():
+        if args.tabel and tabel != args.tabel:
+            continue
+        verwerk(con, tabel, woord, args.apply)
 
     if not args.apply:
         print("\nDroogloop. Draai met --apply om dit weg te schrijven.")
-        con.close()
-        return 0
-
-    kopie = DB_PATH.replace(".db", f".backup-{datetime.now().strftime('%Y%m%d_%H%M%S')}.db")
-    shutil.copy2(DB_PATH, kopie)
-    print(f"\nBack-up: {os.path.basename(kopie)}")
-
-    for (_van, naar, _h), rids in verplaats.items():
-        con.executemany("UPDATE news_articles SET fund_id=? WHERE rowid=?",
-                        [(naar, r) for r in rids])
-    weg = [(r[0],) for r in ruis] + [(r,) for v in wezen.values() for r in v]
-    con.executemany("DELETE FROM news_articles WHERE rowid=?", weg)
-    con.commit()
-    print(f"{n_v} berichten verplaatst, {len(weg)} verwijderd "
-          f"({len(ruis)} ruis, {len(weg) - len(ruis)} zonder fonds).")
     con.close()
     return 0
 
