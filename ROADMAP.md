@@ -633,6 +633,29 @@ fout maar verouderd: dat fonds wijzigde de classificatie per 1 januari 2024.
 De resterende 89 lege velden zijn dus geen achterstand om weg te werken. Wie ze
 wil vullen heeft de losse SFDR-bijlagen nodig, niet de jaarverslagen.
 
+**Aanvulling 2026-08-02.** Die conclusie klopt nog steeds voor de jaarverslagen,
+maar de bijlagen zijn inmiddels wél binnen bereik. Door het herstel van de
+documentkoppeling en de monitor staan er nu 86 fondsen met een SFDR- of
+MVB-document, waarvan 26 met een echte precontractuele of periodieke bijlage.
+
+De SFDR-verordening schrijft daarvoor een vast sjabloon voor, en de kop verraadt
+de classificatie zonder interpretatie: "Ecologische en/of sociale kenmerken" is
+bijlage II of IV en dus artikel 8, "Duurzame beleggingsdoelstelling" is bijlage
+III of V en dus artikel 9. `bepaal_sfdr_uit_bijlage.py` leest alleen die kop.
+
+Eén valkuil zit erin, en de droogloop ving hem. Toetsen op de aanwezigheid van
+beide termen meldde elf artikel 8-fondsen als artikel 9, waaronder Pon. Het
+sjabloon vraagt namelijk zelf "Heeft dit financiële product een duurzame
+beleggingsdoelstelling? Ja / Nee", dus in elke artikel 8-bijlage staan beide
+termen. Wat telt is welke er als eerste staat. Na die correctie: dertien keer
+bevestigd wat er al stond, nul tegenspraak, zes ingevuld.
+
+Zes is weinig, en dat is het eerlijke beeld: `sfdr_article` gaat van 48 naar 51
+procent. De methode is nu wel bewezen, dus elke bijlage die de monitor voortaan
+oppikt levert er direct een op. De 25 documenten zonder leesbare kop zijn geen
+bijlage maar beleidsstukken ("MVB-beleid", "Toelichting SFDR"); daar valt niets
+uit af te leiden.
+
 <details><summary>oorspronkelijke tekst</summary>
 
 
