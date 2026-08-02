@@ -57,19 +57,53 @@ def _getal(tekst: str) -> int:
     return int(tekst.replace(".", ""))
 
 
-def lees(pdf_pad: str) -> tuple[float | None, int | None, list[str]]:
+def _kringtekst(pad: str, naam: str) -> str | None:
+    """Alleen het hoofdstuk van deze kring, uit een koepelverslag.
+
+    Een APF publiceert één verslag voor al zijn kringen — dat van Het
+    Nederlandse Pensioenfonds telt 1.131 pagina's voor elf kringen. Wie zo'n
+    document in zijn geheel leest, krijgt bij 'aantal deelnemers' tien
+    verschillende getallen terug en kan er geen kiezen. De analyses snijden
+    daarom per kring het hoofdstuk uit; hier gebeurt hetzelfde.
+    """
+    if not re.search(r"\b(pensioen)?kring\b", naam, re.I):
+        return None
+    try:
+        import importlib.util
+        spec = importlib.util.spec_from_file_location(
+            "wachtrij", os.path.join(BASE_DIR, "scripts", "automation", "wachtrij.py"))
+        w = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(w)
+        import fitz
+        doc = fitz.open(pad)
+        paginas = [p.get_text() for p in doc]
+        doc.close()
+        kring = w._kringnaam(naam)
+        if not kring:
+            return None
+        stukken = w._kies_paginas(paginas, kring)
+        return re.sub(r"\s+", " ", " ".join(stukken)) if stukken else None
+    except Exception:
+        return None
+
+
+def lees(pdf_pad: str, naam: str = "") -> tuple[float | None, int | None, list[str]]:
     """Dekkingsgraad en deelnemersaantal uit het verslag, plus wat er misging."""
     import fitz
 
     pad = pdf_pad if os.path.isabs(pdf_pad) else os.path.join(BASE_DIR, pdf_pad)
     if not os.path.exists(pad):
         return None, None, ["bestand ontbreekt"]
-    try:
-        doc = fitz.open(pad)
-        tekst = re.sub(r"\s+", " ", " ".join(p.get_text() for p in doc))
-        doc.close()
-    except Exception as e:
-        return None, None, [f"onleesbaar ({type(e).__name__})"]
+    kring = _kringtekst(pad, naam)
+    if kring:
+        tekst = kring
+    else:
+        try:
+            doc = fitz.open(pad)
+            tekst = re.sub(r"\s+", " ", " ".join(p.get_text() for p in doc))
+            doc.close()
+        except Exception as e:
+            return None, None, [f"onleesbaar ({type(e).__name__})"]
 
     opmerkingen: list[str] = []
 
@@ -123,7 +157,7 @@ def main() -> int:
         if not bron:
             zonder += 1
             continue
-        gevonden_dg, gevonden_dn, opm = lees(bron)
+        gevonden_dg, gevonden_dn, opm = lees(bron, naam)
         acties = []
         if dg is None and gevonden_dg is not None and args.veld != "deelnemers":
             acties.append(("dekkingsgraad_pct", gevonden_dg))

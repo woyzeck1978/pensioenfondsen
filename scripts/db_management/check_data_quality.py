@@ -573,6 +573,34 @@ def van_ander_fonds(con):
     return uit
 
 
+def invaardatum_tegenstrijdig(con):
+    """De twee kolommen over het invaren spreken elkaar tegen.
+
+    `wtp_transitie_datum` is de geplande overgangsdatum en staat bij 143
+    fondsen; `invaardatum` is de datum waarop het daadwerkelijk gebeurde en
+    stond bij 37. Dat leek een gat van ruim honderd fondsen, maar de informatie
+    was er al — in de andere kolom. Voor achttien fondsen met de status
+    'Ingevaren' is de datum daaruit overgenomen; voor wie nog niet is
+    ingevaren hoort `invaardatum` juist leeg te zijn.
+
+    Twee dingen blijven het melden waard. Een fonds dat volgens zijn status is
+    ingevaren maar geen datum heeft, en een fonds waar de twee kolommen elkaar
+    tegenspreken: bij vier fondsen staat in `wtp_transitie_datum` 2027-01-01
+    terwijl de invaardatum een jaar eerder ligt, wat op een terugvalwaarde
+    lijkt in plaats van een echte planning.
+    """
+    uit = [f"{r['name'][:34]:36s} status 'Ingevaren' maar geen invaardatum"
+           for r in con.execute(f"""
+               SELECT name FROM funds WHERE {LEVEND} AND COALESCE(is_pensioenfonds,1)=1
+                 AND status='Ingevaren' AND invaardatum IS NULL ORDER BY name""")]
+    uit += [f"{r['name'][:34]:36s} invaardatum {r['invaardatum']} maar transitiedatum {r['wtp_transitie_datum']}"
+            for r in con.execute(f"""
+                SELECT name, invaardatum, wtp_transitie_datum FROM funds
+                WHERE {LEVEND} AND invaardatum IS NOT NULL AND wtp_transitie_datum IS NOT NULL
+                  AND invaardatum <> wtp_transitie_datum ORDER BY name""")]
+    return uit
+
+
 def wezen_zonder_fonds(con):
     """Rijen die verwijzen naar een fonds-id dat niet meer in funds staat.
 
@@ -650,6 +678,7 @@ CONTROLES = [
     ("Nieuwsdatums die op één dag ophopen", nieuwsdatum_ophoping),
     ("Bericht of document op het webdomein van een ander fonds", van_ander_fonds),
     ("Rijen die verwijzen naar een fonds dat niet bestaat", wezen_zonder_fonds),
+    ("Invaardatum en transitiedatum spreken elkaar tegen", invaardatum_tegenstrijdig),
 ]
 
 
