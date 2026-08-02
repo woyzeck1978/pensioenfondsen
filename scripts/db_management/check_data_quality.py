@@ -67,19 +67,35 @@ def gedeelde_waarden(con, kolommen, label, drempel=100):
 def dubbele_fondsen(con):
     """Zelfde website betekent doorgaans dezelfde stichting, twee keer ingelezen.
 
-    APF-kringen delen legitiem de site van hun moederfonds, dus die blijven
-    buiten beschouwing — anders verdrinken de echte duplicaten in de ruis.
+    Twee uitzonderingen blijven buiten beschouwing, anders verdrinken de echte
+    duplicaten in de ruis. APF-kringen delen de site van hun moederfonds met
+    opzet. En een merk kan twee zelfstandige fondsen huisvesten: shellpensioen.nl
+    bedient zowel SSPF als SNPS, zwitserleven.nl zowel Athora als de PPI. Dat ze
+    zelfstandig zijn blijkt uit hun eigen DNB-rapportage — een duplicaatrij heeft
+    die niet, want DNB kent maar één rapporteur per stichting. Rapporteren beide
+    fondsen apart, dan is het geen dubbeling maar twee fondsen op één domein.
     """
+    eigen_dnb = {r["fund_id"] for r in con.execute(
+        "SELECT DISTINCT fund_id FROM dnb_quarterly_metrics")}
     groepen = defaultdict(list)
     for r in con.execute(f"""SELECT id, name, website FROM funds
                              WHERE {LEVEND} AND website IS NOT NULL AND website <> ''
+                               AND COALESCE(is_pensioenfonds, 1) = 1
                                AND name NOT LIKE 'Kring %' AND name NOT LIKE 'Pensioenkring %'
                                AND COALESCE(category,'') <> 'APF'"""):
         # alleen het domein vergelijken: dezelfde stichting krijgt soms een
         # diepe link naar de jaarverslagpagina en soms de homepage
         site = r["website"].lower().split("//")[-1].split("/")[0].removeprefix("www.")
         groepen[site].append(f"{r['name'][:30]} (id {r['id']})")
-    return [f"{site}: " + " | ".join(namen) for site, namen in groepen.items() if len(namen) > 1]
+    uit = []
+    for site, namen in groepen.items():
+        if len(namen) < 2:
+            continue
+        ids = [int(n.rsplit("id ", 1)[1].rstrip(")")) for n in namen]
+        if all(i in eigen_dnb for i in ids):
+            continue  # elk fonds rapporteert zelf bij DNB: zelfstandig, geen dubbeling
+        uit.append(f"{site}: " + " | ".join(namen))
+    return uit
 
 
 def apf_dubbeltelling(con):
