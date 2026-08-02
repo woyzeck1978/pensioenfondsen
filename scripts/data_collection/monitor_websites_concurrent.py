@@ -99,7 +99,16 @@ def scan_fund_worker(fund_tuple):
         
     base_domain = urlparse(website_url).netloc
     
+    # De pagina uit funds.website zelf staat vooraan, en dat is geen detail. De
+    # paden hieronder beginnen met een schuine streep, en urljoin gooit dan het
+    # pad uit website_url weg: bij een kring met een diepe link werd
+    # stappensioen.nl/financiele-situatie/pensioenkring-2 stilzwijgend
+    # stappensioen.nl/. Zo bleven dertig PDF's op de eigen pagina van
+    # Pensioenkring 2 onzichtbaar, terwijl de koepelhomepage niets opleverde.
+    # Twintig van de eenendertig fondsen zonder enig document zijn kringen die
+    # allemaal zo'n diepe link hebben.
     paths_to_check = [
+        website_url,
         '/',
         '/nieuws',
         '/actueel',
