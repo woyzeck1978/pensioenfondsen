@@ -508,19 +508,29 @@ def dubbele_nieuwsberichten(con):
 
 
 def nieuwsdatum_ophoping(con):
-    """Te veel berichten op precies dezelfde dag — dat is een noodwaarde.
+    """Te veel berichten van één fonds op precies dezelfde dag.
 
-    Een parser die geen datum vindt valt terug op een jaargrens, en dan staan er
-    146 berichten op 31 december en 116 op 1 januari. Die zijn niet van elkaar te
-    onderscheiden van een echte publicatie op die dag, en ze vervuilen elke
-    sortering op datum. Zo kregen twee analyses een publicatiedatum van
-    1 januari 2026 toegewezen terwijl hun verslag in juni verscheen.
+    Een parser die geen datum vindt viel terug op een jaargrens, en dan stonden
+    er 146 berichten op 31 december en 116 op 1 januari. Die zijn niet van een
+    echte publicatie op die dag te onderscheiden en vervuilen elke sortering;
+    zo kregen twee analyses een publicatiedatum van 1 januari 2026 terwijl hun
+    verslag in juni verscheen.
+
+    De telling gaat per fonds, niet over de hele tabel, en dat onderscheid is
+    nodig geworden. Na het herstel van augustus 2026 staan er nog 87 berichten
+    op 1 januari 2026, maar verspreid over 35 fondsen en met titels als "De
+    nieuwe pensioenregeling is gestart op 1 januari 2026". Dat is een echte
+    sectorbrede gebeurtenis — de Wtp-overgang en de jaarlijkse indexatie vallen
+    allebei op die dag. Een noodwaarde herken je eraan dat één fonds tientallen
+    berichten op dezelfde dag heeft, zoals het schoonmaakfonds met 138 stuks.
     """
-    return [f"{r['published_date']}: {r['n']} berichten op één dag"
+    return [f"{r['name'][:32]:34s} {r['published_date']}: {r['n']} berichten op één dag"
             for r in con.execute("""
-                SELECT published_date, COUNT(*) n FROM news_articles
-                WHERE published_date IS NOT NULL
-                GROUP BY published_date HAVING n >= 40 ORDER BY n DESC""")]
+                SELECT f.name, n.published_date, COUNT(*) n
+                FROM news_articles n JOIN funds f ON f.id = n.fund_id
+                WHERE n.published_date IS NOT NULL
+                GROUP BY n.fund_id, n.published_date
+                HAVING n >= 15 ORDER BY n DESC""")]
 
 
 def van_ander_fonds(con):

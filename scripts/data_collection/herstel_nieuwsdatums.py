@@ -56,6 +56,11 @@ NOODWAARDEN = ("2025-01-01", "2025-12-31", "2026-01-01", "2026-03-14")
 GEBLOKKEERD = ("Challenge Validation", "Just a moment...", "Attention Required! | Cloudflare",
                "Access denied", "403 Forbidden")
 VROEGST = "2005-01-01"
+# Sectienamen die sommige sites als paginatitel voeren. Ze zijn niet generiek
+# genoeg voor looks_generic() maar staan wel bij tientallen verschillende
+# berichten van hetzelfde fonds, en zeggen dus niets over dit bericht.
+SECTIENAMEN = ("Lees artikel", "Werknemers", "Werkgevers", "Huisarts & Pensioen",
+               "Nieuwsberichten", "Actueel", "Nieuwsoverzicht")
 
 
 def kandidaten(con, maximum: int):
@@ -66,7 +71,14 @@ def kandidaten(con, maximum: int):
         WHERE n.url LIKE 'http%'
           AND (n.published_date IS NULL
                OR n.published_date IN ({vragen})
-               OR n.title IN ({",".join("?" * len(GEBLOKKEERD))}))
+               OR n.title IN ({",".join("?" * len(GEBLOKKEERD))})
+               OR n.title IS NULL OR LENGTH(n.title) < 12
+               OR n.title IN ('Lees artikel','Werknemers','Werkgevers')
+               OR n.rowid IN (SELECT d.rowid FROM news_articles d
+                   JOIN (SELECT fund_id, title, published_date FROM news_articles
+                         GROUP BY 1,2,3 HAVING COUNT(*) > 1) g
+                     ON g.fund_id=d.fund_id AND g.title IS d.title
+                    AND g.published_date IS d.published_date))
         ORDER BY n.fund_id, n.rowid LIMIT ?""",
         NOODWAARDEN + GEBLOKKEERD + (maximum,)).fetchall()
 
@@ -78,9 +90,34 @@ def lees(pg, url: str) -> tuple[str | None, str | None]:
         return None, None
     pg.wait_for_timeout(900)
 
-    titel = pn.clean_title(pg.title())
+    # De titel van het document is de laatste keus, niet de eerste. Bij PMT
+    # staat daar "Lees artikel", bij StiPP "Werknemers" en bij Huisartsen
+    # "Huisarts & Pensioen" — de sectienaam van de site, niet de kop van dit
+    # bericht. Zes verschillende PMT-artikelen kwamen zo alle zes binnen als
+    # "Lees artikel" en werden daarna als duplicaat gemeld. De kop staat in de
+    # <h1> of in og:title.
+    titel = None
+    for selector, attribuut in (("meta[property='og:title']", "content"),
+                                ("h1", None), ("article h2", None)):
+        el = pg.locator(selector).first
+        if el.count():
+            ruw = el.get_attribute(attribuut) if attribuut else el.inner_text()
+            kandidaat = pn.clean_title(ruw)
+            if kandidaat and not pn.looks_generic(kandidaat):
+                titel = kandidaat
+                break
+    titel = titel or pn.clean_title(pg.title())
     if titel in GEBLOKKEERD:
         return None, None
+    # Laatste redmiddel: de slug uit de URL. PMT zet in zowel <title> als <h1>
+    # "Lees artikel", waardoor zes verschillende berichten dezelfde titel kregen.
+    # De slug is bij deze sites de kop in vereenvoudigde vorm — niet mooi, maar
+    # wel van elkaar te onderscheiden en herleidbaar tot de bron.
+    if pn.looks_generic(titel) or titel in SECTIENAMEN:
+        slug = url.rstrip("/").rsplit("/", 1)[-1].split("?")[0]
+        if len(slug) > 12 and "-" in slug:
+            uit_slug = slug.replace("-", " ").replace("_", " ").strip()
+            titel = uit_slug[:1].upper() + uit_slug[1:]
 
     # Eerst de gestructureerde bronnen: daar staat de datum met opzet, en een
     # datum van vandaag is er te vertrouwen. In lopende tekst is "vandaag" veel
@@ -101,6 +138,8 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true", help="schrijf de gevonden waarden weg")
     ap.add_argument("--max", type=int, default=40, help="hoeveel berichten deze run")
+    ap.add_argument("--headless", action="store_true",
+                    help="zonder venster; komt niet langs de WAF van veel fondssites")
     args = ap.parse_args()
 
     con = sqlite3.connect(DB_PATH, timeout=60)
@@ -108,10 +147,16 @@ def main() -> int:
     vandaag = date.today().isoformat()
     print(f"{len(rijen)} berichten opnieuw ophalen\n")
 
+    # Zichtbaar, niet headless. Dat is geen voorkeur maar noodzaak: een eerste
+    # ronde met headless liet alle 420 blokkadepagina's staan, terwijl dezelfde
+    # sites met een zichtbare browser gewoon 200 geven. Dat bleek eerder ook bij
+    # de jaarverslagen — vier fondsen die als 403 te boek stonden, waaronder
+    # Pensioenfonds ING en De Nationale APF, waren zo wel bereikbaar.
     from playwright.sync_api import sync_playwright
     pw = sync_playwright().start()
-    browser = pw.chromium.launch(headless=True)
-    pg = browser.new_context(user_agent=UA, locale="nl-NL").new_page()
+    browser = pw.chromium.launch(headless=args.headless)
+    pg = browser.new_context(user_agent=UA, locale="nl-NL",
+                             viewport={"width": 1400, "height": 900}).new_page()
 
     nieuw_datum = nieuw_titel = mislukt = geweigerd = 0
     voorstel = []
@@ -132,8 +177,10 @@ def main() -> int:
                 datum, geweigerd = None, geweigerd + 1
             if datum and not (VROEGST <= datum <= vandaag):
                 datum, geweigerd = None, geweigerd + 1
-            zet_titel = titel if (titel and (oude_titel in GEBLOKKEERD
-                                             or pn.looks_generic(oude_titel))) else None
+            vervangbaar = (oude_titel in GEBLOKKEERD or oude_titel in SECTIENAMEN
+                           or pn.looks_generic(oude_titel))
+            zet_titel = titel if (titel and vervangbaar and titel != oude_titel
+                                  and not pn.looks_generic(titel)) else None
             if not datum and not zet_titel:
                 continue
             voorstel.append((rid, datum, zet_titel))

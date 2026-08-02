@@ -861,13 +861,23 @@ De eerste groep is geen scraperprobleem maar dezelfde koppelingsfout die bij `ne
 
    En net als bij ING droeg rij 51 twee fondsen in een naam. SNPS heeft nu een eigen rij; 51 heet voortaan alleen Shell (SSPF).
 
-5. **Nieuwsdatums.** (IN UITVOERING) De oorzaak bleek zwaarder dan gedacht: 420 berichten hebben als titel "Challenge Validation", en dat is geen titel maar de blokkadepagina van een WAF. `parse_news_articles.py` haalt op met `requests`, wordt geweigerd, en bewaart wat hij terugkrijgt; bij 410 berichten vielen geen titel en geen datum samen. `herstel_nieuwsdatums.py` haalt ze opnieuw op met een echte browser — in een steekproef van 25 leverde dat er 23 alsnog een datum op — en maakt de vier noodwaarden leeg, want leeg is eerlijker dan verzonnen.
+5. **Nieuwsdatums.** (AFGEROND 2026-08-02) De oorzaak bleek zwaarder dan gedacht. 420 berichten hadden als titel "Challenge Validation", en dat is geen titel maar de blokkadepagina van een WAF: `parse_news_articles.py` haalt op met `requests`, wordt geweigerd, en bewaart wat hij terugkrijgt. Bij 410 berichten vielen geen titel en geen datum samen.
+
+   `herstel_nieuwsdatums.py` haalt ze opnieuw op met een echte browser. De eerste ronde draaide nog headless en liet alle 420 blokkades staan — dezelfde fout die bij punt 4 al was vastgesteld en hier opnieuw gemaakt. Zichtbaar werkt het wel. Van 1.193 berichten zonder bruikbare datum (37 procent) naar 316 (11 procent), en van 420 blokkadepagina's naar 5.
+
+   Drie grenzen bewaken wat er wordt weggeschreven: geen datum in de toekomst, geen datum voor 2005, en geen datum van een pagina met een generieke titel — want dat is een overzichtspagina, waar de datum van het bovenste bericht staat. Die derde grens wees 174 datums af.
+
+   Onderweg bleek de titel zelf een probleem. Ik las eerst `pg.title()`, waardoor zes verschillende PMT-artikelen alle zes "Lees artikel" gingen heten: de sectienaam van de site in plaats van de kop. Nu komt de titel uit `og:title` of de `<h1>`, met de URL-slug als laatste redmiddel.
+
+   Ook 254 rijen verwijderd die helemaal geen bericht waren: bladerlinks (`/page/2/`, `?p=4`), gefilterde overzichten (`?tag=MVB`) en dezelfde URL met en zonder afsluitende slash. De monitor filtert bladerlinks nu weg zodat ze niet terugkomen.
+
+   De controle op datumophoping telt voortaan per fonds. Er staan nog 87 berichten op 1 januari 2026, maar verspreid over 35 fondsen en met titels als "De nieuwe pensioenregeling is gestart op 1 januari 2026" — dat is een echte sectorbrede gebeurtenis, want de Wtp-overgang en de jaarlijkse indexatie vallen allebei op die dag. Een noodwaarde herken je eraan dat één fonds er tientallen op dezelfde dag heeft, zoals het schoonmaakfonds met 138.
 
 6. **Lege kernvelden.** (AFGEROND 2026-08-02) Het gat was kleiner dan de telling suggereerde. `invaardatum` stond bij 37 fondsen en `wtp_transitie_datum` bij 143; waar beide gevuld waren kwamen ze in 33 van de 37 gevallen overeen. De informatie bestond dus al, in de andere kolom. Voor achttien fondsen met de status 'Ingevaren' is de datum overgenomen — voor wie nog niet is ingevaren hoort `invaardatum` juist leeg te zijn. Vier fondsen waar de kolommen elkaar tegenspreken worden voortaan gemeld in plaats van stilzwijgend gekozen; alle vier hebben 2027-01-01 als transitiedatum, wat op een terugvalwaarde lijkt.
 
    `vul_kernvelden.py` las bij een kring het hele koepelverslag en kreeg dan tien deelnemersaantallen door elkaar, waarna hij terecht niets invulde. Hij snijdt nu eerst het hoofdstuk uit, net als de analyses doen; dat leverde meteen vier kringen met een eigen aantal op.
 
-Stand op 2026-08-02: vijf van de zes taken zijn af, de nieuwsdatums lopen nog. 227 analyses over 161 fondsen, waarvan 119 over boekjaar 2025.
+Stand op 2026-08-02: alle zes taken zijn af. 227 analyses over 161 fondsen, waarvan 119 over boekjaar 2025; 2.964 nieuwsberichten waarvan 89 procent met een datum.
 
 ---
 

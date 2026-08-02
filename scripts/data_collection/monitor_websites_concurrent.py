@@ -26,6 +26,9 @@ RE_DOC_TEXT = re.compile(
 )
 DOC_EXTENSIONS = ('.pdf', '.docx', '.xlsx', '.doc')
 
+# Bladerlinks in een nieuwsoverzicht, in de vormen die de fondssites gebruiken.
+RE_PAGINERING = re.compile(r"/page[:/-]\d+|[?&]p(?:aged?)?=\d+|/pagina[:/-]\d+", re.I)
+
 
 def _op_documentplatform(netloc):
     return any(host in netloc for host in DOC_PLATFORM_HOSTS)
@@ -73,6 +76,12 @@ def extract_links_from_page(url, soup, base_domain):
             doc_type = 'document'
         elif ('/nieuws/' in full_url.lower() or '/actueel/' in full_url.lower()) and full_url != url:
             path_parts = [p for p in parsed.path.split('/') if p]
+            # Bladerlinks zijn geen bericht maar dezelfde lijst een pagina
+            # verder: /nieuws/page/2/, ?p=4, ?paged=2, /nieuws/page:2/. Er
+            # stonden er 182 in de tabel, allemaal zonder titel en zonder datum,
+            # en ze doken telkens op als "duplicaat" in de datakwaliteitscontrole.
+            if RE_PAGINERING.search(full_url):
+                continue
             if len(path_parts) > 1:
                 doc_type = 'news'
                 
