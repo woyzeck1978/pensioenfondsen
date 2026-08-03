@@ -650,11 +650,41 @@ beleggingsdoelstelling? Ja / Nee", dus in elke artikel 8-bijlage staan beide
 termen. Wat telt is welke er als eerste staat. Na die correctie: dertien keer
 bevestigd wat er al stond, nul tegenspraak, zes ingevuld.
 
+**Aanvulling 2026-08-03.** De opmerking dat élk fonds een duurzaamheids-
+disclosure hoort te hebben klopt, en die is bruikbaarder gebleken dan zes
+fondsen. De SFDR verplicht iedere financiëlemarktdeelnemer tot publicatie op de
+eigen website; alleen publiceren artikel 8- en 9-producten daarbij de
+precontractuele bijlage met het vaste sjabloon, en een artikel 6-fonds juist
+niet. De aanwezigheid van de bijlage is dus zelf het signaal.
+
+Die bijlagen staan niet op de homepage. Van de acht grootste fondsen zonder
+classificatie linkte de helft er vanaf de voorpagina helemaal niet naar; bij
+SPMS staat hij twee klikken diep op een rapportagepagina onder 'verantwoord
+beleggen'. `zoek_sfdr_bijlagen.py` loopt daarom vaste paden, de homepage met
+twee hops, en de sitemap af. Dat leverde bij 22 van de 60 fondsen een bijlage op
+en 45 nieuwe documenten.
+
+Eén valkuil erbij, en die is principieel. Centraal Beheer APF opent zijn
+document met "Geen duurzame beleggingsdoelstelling — het Pensioenfonds promoot
+ecologische of sociale kenmerken, maar heeft geen duurzame beleggingsdoel-
+stelling". Dat is de tekstuele variant van het aangekruiste 'Nee'-vakje, en dus
+artikel 8. Wie de ontkenning wegleest maakt er artikel 9 van, en dat deed mijn
+eerste versie. De ontkenning hoort bij de term.
+
+`sfdr_article` staat nu op 105 van de 192 fondsen (55 procent), tegen 92 (48
+procent) aan het begin van de dag; 25 bestaande waarden zijn onderweg bevestigd
+en geen enkele tegengesproken. De 32 documenten zonder leesbare sjabloonkop zijn
+beleidsstukken, geen bijlagen.
+
+<details><summary>eerdere aanvulling van 2 augustus</summary>
+
 Zes is weinig, en dat is het eerlijke beeld: `sfdr_article` gaat van 48 naar 51
 procent. De methode is nu wel bewezen, dus elke bijlage die de monitor voortaan
 oppikt levert er direct een op. De 25 documenten zonder leesbare kop zijn geen
 bijlage maar beleidsstukken ("MVB-beleid", "Toelichting SFDR"); daar valt niets
 uit af te leiden.
+
+</details>
 
 <details><summary>oorspronkelijke tekst</summary>
 

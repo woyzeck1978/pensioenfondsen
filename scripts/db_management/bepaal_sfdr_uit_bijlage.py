@@ -47,7 +47,13 @@ DB_PATH = os.path.join(BASE_DIR, "data", "processed", "pension_funds.db")
 BIJLAGE = re.compile(r"sfdr|precontractue|periodieke informatie|annex[ _-]*[iv1-5]", re.I)
 # De koppen uit het verplichte sjabloon. Alleen in de eerste pagina zoeken.
 KOP_ART8 = re.compile(r"ecologische\s+(?:en/of|of|en)\s+sociale\s+kenmerken", re.I)
-KOP_ART9 = re.compile(r"duurzame\s+beleggings(?:doelstelling|doel)", re.I)
+# De ontkenning hoort bij de term. Centraal Beheer opent met "Geen duurzame
+# beleggingsdoelstelling — het Pensioenfonds promoot ecologische of sociale
+# kenmerken, maar heeft geen duurzame beleggingsdoelstelling". Dat is de
+# tekstuele variant van het aangekruiste 'Nee'-vakje en dus artikel 8; wie de
+# 'geen' wegleest maakt er artikel 9 van.
+KOP_ART9 = re.compile(r"(?<!geen\s)(?<!niet\s)duurzame\s+beleggings(?:doelstelling|doel)", re.I)
+ONTKEND = re.compile(r"(?:geen|niet)\s+(?:een\s+)?duurzame\s+beleggings(?:doelstelling|doel)", re.I)
 KOPZONE = 1200
 
 
@@ -75,6 +81,10 @@ def artikel_uit_kop(data: bytes) -> int | None:
     # elke artikel 8-bijlage staan beide termen. Alleen op aanwezigheid toetsen
     # gaf elf artikel 8-fondsen ten onrechte een 9, waaronder Pon, waarvan de
     # kop letterlijk "Ecologische en/of sociale kenmerken (E/S-kenmerken)" is.
+    # Staat de term ontkend in de kop, dan is dat het 'Nee'-antwoord op de vraag
+    # naar een duurzame beleggingsdoelstelling: artikel 8, ongeacht de volgorde.
+    if ONTKEND.search(kop):
+        return 8 if KOP_ART8.search(kop) else None
     m8, m9 = KOP_ART8.search(kop), KOP_ART9.search(kop)
     if m8 and m9:
         return 8 if m8.start() < m9.start() else 9
