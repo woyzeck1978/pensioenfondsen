@@ -68,7 +68,7 @@ def kies_url(con, fund_id: int, jaar: int) -> str | None:
         (fund_id,))]
     treffers = [u for u in kandidaten
                 if str(jaar) in u
-                and re.search(r"jaarverslag|jaarbericht|jaarrapport|jv_", u, re.I)]
+                and re.search(r"jaarverslag|jaarbericht|jaarrapport|jv[_-]", u, re.I)]
     if not treffers:
         return None
     # Verkort, MVB- en infographic-versies zijn geen bruikbare bron.
@@ -241,7 +241,7 @@ def zoek_en_haal_via_site(pg, home: str, jaar: int) -> tuple[str, bytes] | None:
             pg.wait_for_timeout(1200)
             for h in pg.eval_on_selector_all("a[href]", "e=>e.map(x=>x.href)"):
                 if (h and ".pdf" in h.lower()
-                        and re.search(r"jaarverslag|jaarbericht|jaarrapport|jv_", h, re.I)
+                        and re.search(r"jaarverslag|jaarbericht|jaarrapport|jv[_-]", h, re.I)
                         and not NIET_HET_VERSLAG.search(h)):
                     kandidaten.add(h)
             if kandidaten:
