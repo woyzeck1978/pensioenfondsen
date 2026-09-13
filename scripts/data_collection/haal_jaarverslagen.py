@@ -63,7 +63,7 @@ def kenmerkend(naam: str) -> list[str]:
     return [w for w in re.findall(r"[A-Za-zÀ-ÿ]{3,}", zonder.lower()) if w not in GENERIEK]
 
 
-def kies_url(con, fund_id: int, jaar: int) -> str | None:
+def kies_url(con, fund_id: int, jaar: int, website: str | None = None) -> str | None:
     """Beste jaarverslag-URL voor dit fonds en boekjaar; verkorte versies laatst."""
     kandidaten = [r[0] for r in con.execute(
         "SELECT url FROM scraped_documents WHERE fund_id = ? AND lower(url) LIKE '%.pdf'",
@@ -73,10 +73,15 @@ def kies_url(con, fund_id: int, jaar: int) -> str | None:
                 and re.search(r"jaarverslag|jaarbericht|jaarrapport|jv[_-]", u, re.I)]
     if not treffers:
         return None
-    # Verkort, MVB- en infographic-versies zijn geen bruikbare bron.
+    # Verkort, MVB- en infographic-versies zijn geen bruikbare bron. En een
+    # verslag van een vreemd domein gaat achteraan: scraped_documents bevat bij
+    # veel fondsen de stukken van geschilleninstantiepensioenfondsen.nl, waar
+    # iedere fondssite naar linkt. GIP_jaarverslag_2025.pdf matcht op
+    # "jaarverslag" en op het boekjaar, en werd zo het verslag van Mediahuis.
     def straf(u: str) -> tuple:
-        slecht = bool(re.search(r"verkort|mvb|verantwoord|populair|infograph|in.?beeld", u, re.I))
-        return (slecht, -len(u))
+        slecht = bool(NIET_HET_VERSLAG.search(u))
+        vreemd = bool(website) and not zelfde_domein(u, website)
+        return (vreemd, slecht, -len(u))
     return sorted(treffers, key=straf)[0]
 
 
@@ -206,7 +211,11 @@ PAGINA_SCORE = [
 # Paden die veel fondssites hebben maar niet altijd vanaf de homepage linken.
 VASTE_PADEN = ["documenten", "over-ons/documenten", "publicaties", "downloads",
                "over-ons/publicaties", "over-ons/jaarverslagen", "jaarverslagen"]
-NIET_HET_VERSLAG = re.compile(r"verkort|mvb|verantwoord|populair|infograph|in.?beeld|beleid", re.I)
+# "publieks" hoort in dezelfde rij als "verkort": Mediahuis zet de
+# Publieksversie-FJV-2025.pdf en het volledige FJV-2025 naast elkaar op
+# dezelfde nieuwspagina, en de publieksversie won op volgorde.
+NIET_HET_VERSLAG = re.compile(
+    r"verkort|publieks|mvb|verantwoord|populair|infograph|in.?beeld|beleid", re.I)
 # Dezelfde weigering, maar op de linktekst. Detailhandel zet de volledige en de
 # verkorte versie onder elkaar, en de verkorte heet in de URL
 # "Jaarverslag_In-t_Kort_..." -- dat glipt langs elk patroon hierboven. De
@@ -420,6 +429,53 @@ def download(pg, url: str) -> bytes | None:
     return None
 
 
+def haal_en_keur(pg, con, fid: int, naam: str, website: str | None, jaar: int,
+                 doelpad: str) -> tuple[str | None, bytes | None, str | None]:
+    """Haal het verslag op en keur het. Geeft (url, data, reden-van-afkeuring).
+
+    Twee bronnen, in volgorde: een URL uit scraped_documents, en anders de eigen
+    site. Het punt van deze functie is dat de tweede bron ook aan de beurt komt
+    als de eerste een bestand oplevert dat wordt afgekeurd. Dat gebeurde niet, en
+    het kostte Mediahuis: scraped_documents leverde het jaarverslag van de
+    geschilleninstantie, dat viel terecht af, en daarna gaf de ophaler het op --
+    terwijl het echte verslag op de eigen nieuwspagina stond.
+    """
+    laatste_reden = None
+    url = kies_url(con, fid, jaar, website)
+    bronnen = []
+    if url:
+        bronnen.append(("scraped_documents", url))
+    bronnen.append(("eigen site", None))
+
+    for _bron, kandidaat in bronnen:
+        data = None
+        if kandidaat:
+            try:
+                req = urllib.request.Request(
+                    kandidaat, headers={"User-Agent": UA, "Accept": "application/pdf,*/*"})
+                with urllib.request.urlopen(req, timeout=120) as r:
+                    data = r.read()
+            except Exception:
+                data = None
+        elif pg and website:
+            try:
+                gevonden = zoek_en_haal_via_site(pg, website, jaar)
+            except Exception:
+                gevonden = None
+            if gevonden:
+                kandidaat, data = gevonden
+        if data is None:
+            continue
+        with open(doelpad, "wb") as f:
+            f.write(data)
+        reden = keur(doelpad, jaar, naam, zelfde_domein(kandidaat, website))
+        if not reden:
+            return kandidaat, data, None
+        os.remove(doelpad)
+        laatste_reden = reden
+    return url, None, laatste_reden
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--jaar", type=int, default=2025)
@@ -456,38 +512,17 @@ def main() -> int:
     for fid, naam, aum, website in doelen:
         kort = re.sub(r"[^A-Za-z0-9]+", "_", naam.split("(")[0].strip())[:24].strip("_")
         pad = os.path.join(DOEL_MAP, f"{fid}_{kort}_{args.jaar}.pdf")
-        url = kies_url(con, fid, args.jaar)
-        data = None
-
-        if url:
-            try:
-                req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/pdf,*/*"})
-                with urllib.request.urlopen(req, timeout=120) as r:
-                    data = r.read()
-            except Exception as e:
-                print(f"  {fid:>4} {naam[:34]:<35} directe download faalde ({type(e).__name__})"
-                      + (" — via de site proberen" if pg else ""))
-
-        if data is None and pg and website:
-            gevonden = zoek_en_haal_via_site(pg, website, args.jaar)
-            if gevonden:
-                url, data = gevonden
-
-        if data is None:
-            print(f"  {fid:>4} {naam[:34]:<35} geen {args.jaar}-verslag gevonden")
-            geen_url += 1
-            continue
-
-        with open(pad, "wb") as f:
-            f.write(data)
-        reden = keur(pad, args.jaar, naam, zelfde_domein(url, website))
-        if reden:
-            os.remove(pad)
+        url, data, reden = haal_en_keur(pg, con, fid, naam, website, args.jaar, pad)
+        if data is not None:
+            print(f"  {fid:>4} {naam[:34]:<35} ok  {os.path.getsize(pad)//1024} kB  "
+                  f"{os.path.basename(pad)}")
+            goed += 1
+        elif reden:
             print(f"  {fid:>4} {naam[:34]:<35} AFGEKEURD: {reden}")
             afgekeurd += 1
         else:
-            print(f"  {fid:>4} {naam[:34]:<35} ok  {os.path.getsize(pad)//1024} kB  {os.path.basename(pad)}")
-            goed += 1
+            print(f"  {fid:>4} {naam[:34]:<35} geen {args.jaar}-verslag gevonden")
+            geen_url += 1
 
     if browser:
         browser.close()

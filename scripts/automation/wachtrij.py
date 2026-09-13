@@ -486,35 +486,17 @@ def verwerk(con, jaar: int, minuten: int, maxpogingen: int) -> None:
 
             kort = re.sub(r"[^A-Za-z0-9]+", "_", naam.split("(")[0].strip())[:24].strip("_")
             pad = os.path.join(hj.DOEL_MAP, f"{fid}_{kort}_{jaar}.pdf")
-            url, data = hj.kies_url(con, fid, jaar), None
+            # Eén gedeelde routine met haal_jaarverslagen.py, zodat de terugval
+            # van scraped_documents naar de eigen site hier niet apart hoeft te
+            # worden nagebouwd -- en niet stilletjes uiteen kan lopen.
+            url, data, reden = hj.haal_en_keur(pg, con, fid, naam, website, jaar, pad)
 
-            if url:
-                try:
-                    req = urllib.request.Request(
-                        url, headers={"User-Agent": hj.UA, "Accept": "application/pdf,*/*"})
-                    with urllib.request.urlopen(req, timeout=120) as r:
-                        data = r.read()
-                except Exception:
-                    data = None
-            if data is None and website:
-                try:
-                    gevonden = hj.zoek_en_haal_via_site(pg, website, jaar)
-                except Exception:
-                    gevonden = None
-                if gevonden:
-                    url, data = gevonden
-
-            if data is None:
+            if data is None and not reden:
                 _zet(con, fid, jaar, "niet_gevonden", f"geen {jaar}-verslag gevonden", url)
                 tellers["niet_gevonden"] += 1
                 print(f"  {fid:>4} {naam[:32]:<33} niets gevonden", flush=True)
                 continue
-
-            with open(pad, "wb") as f:
-                f.write(data)
-            reden = hj.keur(pad, jaar, naam, hj.zelfde_domein(url, website))
-            if reden:
-                os.remove(pad)
+            if data is None:
                 _zet(con, fid, jaar, "afgekeurd", reden, url)
                 tellers["afgekeurd"] += 1
                 print(f"  {fid:>4} {naam[:32]:<33} afgekeurd: {reden[:44]}", flush=True)
