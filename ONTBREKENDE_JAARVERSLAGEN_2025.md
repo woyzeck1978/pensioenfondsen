@@ -1,26 +1,23 @@
 # Ontbrekende jaarverslagen 2025 — werklijst
 
-Stand 2026-09-13, gegenereerd met `scripts/utils_and_viz/maak_werklijst.py`. 21 pensioenfondsen hebben nog geen analyse over boekjaar 2025.
+Stand 2026-09-13, gegenereerd met `scripts/utils_and_viz/maak_werklijst.py`. 18 pensioenfondsen hebben nog geen analyse over boekjaar 2025.
 
 **Kolom "Laatste"** is het nieuwste boekjaar waarvan we wél een analyse hebben. Staat daar 2024, dan zijn we precies één jaar achter.
 
 **Een verslag gevonden?** Zet hem neer als `data/annual_reports/<id>_<KorteNaam>_2025.pdf` en draai daarna `wachtrij.py vul --jaar 2025 --opnieuw`; die ziet het bestand staan, zet de status op `binnen` en snijdt de passages uit. Heb je alleen een URL, dan is `haal_jaarverslagen.py --jaar 2025 --via-site --fondsen <id>` sneller. Het uitschrijven van de analyse blijft handwerk.
 
-## Open fondsen (9)
+## Open fondsen (6)
 
 Hier zit de meeste waarde: fondsen die nog gewoon draaien en dus een jaarverslag horen te publiceren.
 
 | ✓ | id | Fonds | AUM € mld | Laatste | Website | Waarom niet gevonden |
 |---|---|---|---|---|---|---|
 | ☐ | 102 | Hagee | 0,68 | geen | [link](https://www.hagee.nl/) | draagt boekjaar 2024, niet 2025 ({2024: 126, 2023: 4, 2026: 1, 2022: 1, 2025: 3}) |
-| ☐ | 117 | Nederlandse Bisdommen | 0,55 | 2024 | [link](https://www.pnb.nl/bisdom/) | site blokkeert elke geautomatiseerde toegang (403 op curl, browsersessie en losse fetcher) -- alleen met de hand op te halen |
 | ☐ | 7 | Roeiers (SPRH - Rowers) | 0,19 | geen | [link](https://sprh.nl/) | publiceert geen jaarverslagen op de eigen site; downloadpagina bevat alleen ABTN, reglement, klachten- en beloningsbeleid |
 | ☐ | 101 | Gomacon | 0,01 | geen | [link](https://www.werkenaanonspensioen.nl/belangrijke-begrippen/overzicht-pensioenfondsen-en-pensioenverzekeraars) | niets gevonden op de site |
-| ☐ | 66 | De Nationale APF | – | 2024 | [link](https://www.denationaleapf.nl/) | site blokkeert elke geautomatiseerde toegang (403 op curl, browsersessie en losse fetcher) -- alleen met de hand op te halen |
 | ☐ | 134 | Tobacon Offshore Marine Consultancy B.V. | – | geen | **ontbreekt** | niets gevonden op de site |
-| ☐ | 224 | Kring E-DC (De Nationale) | – | geen | **ontbreekt** | site blokkeert elke geautomatiseerde toegang (403 op curl, browsersessie en losse fetcher) -- alleen met de hand op te halen |
-| ☐ | 225 | Kring G-Cargill (De Nationale) | – | geen | **ontbreekt** | site blokkeert elke geautomatiseerde toegang (403 op curl, browsersessie en losse fetcher) -- alleen met de hand op te halen |
-| ☐ | 226 | Kring H NN CDC (De Nationale) | – | geen | **ontbreekt** | site blokkeert elke geautomatiseerde toegang (403 op curl, browsersessie en losse fetcher) -- alleen met de hand op te halen |
+| ☐ | 225 | Kring G-Cargill (De Nationale) | – | geen | **ontbreekt** | kring bestond in 2025 nog niet; het fonds is per 1-1-2026 toegetreden tot De Nationale APF, eerste boekjaar is 2026 |
+| ☐ | 226 | Kring H NN CDC (De Nationale) | – | geen | **ontbreekt** | kring bestond in 2025 nog niet; het fonds is per 1-1-2026 toegetreden tot De Nationale APF, eerste boekjaar is 2026 |
 
 ## Ingevaren fondsen (0)
 
