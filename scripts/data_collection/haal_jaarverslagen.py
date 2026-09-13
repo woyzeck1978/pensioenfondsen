@@ -122,6 +122,16 @@ def keur(pad: str, jaar: int, naam: str, van_eigen_site: bool = False) -> str | 
     # paginavullende afbeelding in zat. Daar valt geen analyse uit te schrijven.
     if n < MIN_PAGINAS:
         return f"te kort voor een jaarverslag ({n} pagina's)"
+    # Draagt het stuk wel de cijfers van een pensioenfondsverslag? Detailhandel
+    # leverde 'Voortgang Thematische Dialogen juli-december 2025' van het Dutch
+    # Engagement Network: 33 pagina's, van het eigen domein (dus de naamcontrole
+    # verviel) en met 2025 op de omslag -- alle andere controles vielen om. Het
+    # woord dekkingsgraad komt er nul keer in voor.
+    #
+    # Het onderscheid is niet subtiel. Over de 23 verslagen die hier binnenkwamen
+    # loopt het van 146 tot 317 treffers; het engagementrapport staat op 0.
+    if len(PENSIOENVERSLAG.findall(heel)) < 10:
+        return "geen pensioenfondsverslag (dekkingsgraad/jaarrekening komen nauwelijks voor)"
     # Waar het misgaat is een verslag dat een ánder boekjaar draagt dan gevraagd:
     # TNO's verslag over 2024 kwam binnen als 2025 omdat de URL een uploaddatum
     # bevatte en '2025' verderop in het document stond. Alleen kijken of het
@@ -197,6 +207,11 @@ PAGINA_SCORE = [
 VASTE_PADEN = ["documenten", "over-ons/documenten", "publicaties", "downloads",
                "over-ons/publicaties", "over-ons/jaarverslagen", "jaarverslagen"]
 NIET_HET_VERSLAG = re.compile(r"verkort|mvb|verantwoord|populair|infograph|in.?beeld|beleid", re.I)
+# Waar een jaarverslag van een pensioenfonds altijd vol mee staat, en een
+# engagement- of beleidsrapport van hetzelfde fonds niet.
+PENSIOENVERSLAG = re.compile(
+    r"dekkingsgraad|technische voorziening|jaarrekening|funding ratio|coverage ratio"
+    r"|annual accounts", re.I)
 
 
 def jaartal(u: str) -> int:
