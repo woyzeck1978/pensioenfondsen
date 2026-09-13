@@ -1,18 +1,17 @@
 # Ontbrekende jaarverslagen 2025 — werklijst
 
-Stand 2026-09-13, gegenereerd met `scripts/utils_and_viz/maak_werklijst.py`. 36 pensioenfondsen hebben nog geen analyse over boekjaar 2025.
+Stand 2026-09-13, gegenereerd met `scripts/utils_and_viz/maak_werklijst.py`. 34 pensioenfondsen hebben nog geen analyse over boekjaar 2025.
 
 **Kolom "Laatste"** is het nieuwste boekjaar waarvan we wél een analyse hebben. Staat daar 2024, dan zijn we precies één jaar achter.
 
 **Een verslag gevonden?** Zet hem neer als `data/annual_reports/<id>_<KorteNaam>_2025.pdf` en draai daarna `wachtrij.py vul --jaar 2025 --opnieuw`; die ziet het bestand staan, zet de status op `binnen` en snijdt de passages uit. Heb je alleen een URL, dan is `haal_jaarverslagen.py --jaar 2025 --via-site --fondsen <id>` sneller. Het uitschrijven van de analyse blijft handwerk.
 
-## Open fondsen (19)
+## Open fondsen (17)
 
 Hier zit de meeste waarde: fondsen die nog gewoon draaien en dus een jaarverslag horen te publiceren.
 
 | ✓ | id | Fonds | AUM € mld | Laatste | Website | Waarom niet gevonden |
 |---|---|---|---|---|---|---|
-| ☐ | 172 | Kring Forward (Unilever) | 0,71 | geen | [link](https://www.unileverpensioenfonds.nl/) | niets gevonden op de site |
 | ☐ | 102 | Hagee | 0,68 | geen | [link](https://www.hagee.nl/) | niets gevonden op de site |
 | ☐ | 131 | TDV | 0,64 | 2024 | [link](https://pensioenfonds-tdv.nl/) | draagt boekjaar 2024, niet 2025 ({2024: 93, 2023: 4, 2025: 4}) |
 | ☐ | 93 | Essity | 0,62 | 2024 | [link](https://www.mijnessitypensioen.nl/) | niets gevonden op de site |
@@ -24,7 +23,6 @@ Hier zit de meeste waarde: fondsen die nog gewoon draaien en dus een jaarverslag
 | ☐ | 7 | Roeiers (SPRH - Rowers) | 0,19 | geen | [link](https://sprh.nl/) | niets gevonden op de site |
 | ☐ | 101 | Gomacon | 0,01 | geen | [link](https://www.werkenaanonspensioen.nl/belangrijke-begrippen/overzicht-pensioenfondsen-en-pensioenverzekeraars) | niets gevonden op de site |
 | ☐ | 66 | De Nationale APF | – | 2024 | [link](https://www.denationaleapf.nl/) | niets gevonden op de site |
-| ☐ | 68 | Unilever APF | – | 2024 | [link](https://www.unileverpensioenfonds.nl/) | niets gevonden op de site |
 | ☐ | 134 | Tobacon Offshore Marine Consultancy B.V. | – | geen | **ontbreekt** | niets gevonden op de site |
 | ☐ | 224 | Kring E-DC (De Nationale) | – | geen | **ontbreekt** | niets gevonden op de site |
 | ☐ | 225 | Kring G-Cargill (De Nationale) | – | geen | **ontbreekt** | niets gevonden op de site |
