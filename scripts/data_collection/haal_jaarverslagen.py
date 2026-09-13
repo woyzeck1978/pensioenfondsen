@@ -352,11 +352,15 @@ def zoek_en_haal_via_site(pg, home: str, jaar: int) -> tuple[str, bytes] | None:
             if not r or r.status >= 400:
                 continue
             pg.wait_for_timeout(1200)
-            paren = pg.eval_on_selector_all(
-                "a[href]", "e=>e.map(x=>[x.href, (x.innerText||'').trim().slice(0,120)])")
+            # Ook aria-label en title uitlezen, niet alleen de zichtbare tekst.
+            # Hagee draait op Wix: elk document is een anonieme UUID-PDF zonder
+            # linktekst en zonder jaartal in de URL, en de echte bestandsnaam
+            # ("2024 Jaarverslag Hagee.pdf") staat alleen in het aria-label.
+            paren = pg.eval_on_selector_all("a[href]", """e=>e.map(x=>[x.href,
+                ((x.innerText||'') + ' ' + (x.getAttribute('aria-label')||'') + ' '
+                 + (x.title||'')).trim().slice(0,160)])""")
         except Exception:
             continue
-        links = [h for h, _ in dict.fromkeys((h, k) for h, k in paren if h)]
 
         for h, tekst in paren:
             if not h or NIET_HET_VERSLAG.search(h) or NIET_HET_VERSLAG_TEKST.search(tekst):
@@ -372,11 +376,16 @@ def zoek_en_haal_via_site(pg, home: str, jaar: int) -> tuple[str, bytes] | None:
 
         if diepte >= MAX_DIEPTE:
             continue
-        for h in links:
+        for h, tekst in paren:
             kind = schoon(h)
             if kind in gezien or hoofddomein(kind) != dom or IS_BESTAND.search(kind):
                 continue
-            punten = score(kind)
+            # Ook op de linktekst scoren, en de gunstigste van de twee nemen.
+            # Essity zet zijn documenten op /formulier -- een pad waar geen enkel
+            # patroon op aanslaat -- terwijl de link zelf "Formulieren en
+            # documenten" heet. Daardoor kwam die pagina nooit in de frontier en
+            # bleef jaarverslag-2025.pdf onvindbaar.
+            punten = min(score(kind), score(tekst))
             if punten < 9:
                 frontier.append((punten, diepte + 1, kind))
 
