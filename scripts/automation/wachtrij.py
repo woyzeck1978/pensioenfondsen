@@ -399,7 +399,11 @@ def vul(con, jaar: int, opnieuw: bool) -> None:
             nieuw += 1
             al_binnen += bool(bestaand)
         elif opnieuw and cur[0] in ("niet_gevonden", "afgekeurd"):
-            con.execute("""UPDATE ophaal_wachtrij SET status='open', bijgewerkt=?
+            # Ook de teller terug: verwerk() filtert op pogingen < --pogingen,
+            # dus zonder deze reset meldt een re-sweep keurig "N in de rij
+            # gezet" en doet vervolgens niets. Wie expliciet om een nieuwe
+            # poging vraagt, bedoelt die teller ook.
+            con.execute("""UPDATE ophaal_wachtrij SET status='open', pogingen=0, bijgewerkt=?
                            WHERE fund_id=? AND jaar=?""", (_nu(), fid, jaar))
             nieuw += 1
     con.commit()

@@ -44,7 +44,7 @@ baseline=$(sqlite3 "$DB_REL" "
 echo "[pre]  scraped_documents=$(echo $baseline | cut -d'|' -f1)  news_articles=$(echo $baseline | cut -d'|' -f2)"
 
 echo
-echo "[1/3] monitor_websites_concurrent.py"
+echo "[1/5] monitor_websites_concurrent.py"
 cd scripts/data_collection
 if ! "$PYTHON" -u monitor_websites_concurrent.py; then
     echo "[FATAL] monitor exited non-zero — abort run" >&2
@@ -53,7 +53,7 @@ fi
 cd "$PROJECT_DIR"
 
 echo
-echo "[2/3] parse_news_articles.py"
+echo "[2/5] parse_news_articles.py"
 cd scripts/data_collection
 if ! "$PYTHON" -u parse_news_articles.py --workers 12; then
     echo "[FATAL] parser exited non-zero — abort run" >&2
@@ -82,18 +82,41 @@ echo "[post] scraped_documents=$(echo $after | cut -d'|' -f1)  news_articles=$(e
 # hier op. Bewust NIET blokkerend: een datafout mag de dataverzameling niet
 # stilleggen, het gaat erom dat het in het log staat.
 echo
-echo "[3/4] datakwaliteitscontrole"
+echo "[3/5] jaarverslagen ophalen (wachtrij)"
+# Deze stap ontbrak, en dat liep stil op: de monitor catalogiseert vooral
+# nieuwsberichten, dus de jaarverslagen kwamen alleen binnen als iemand
+# wachtrij.py met de hand draaide. Tussen 1 augustus en 13 september 2026
+# gebeurde dat niet, en stond de teller al die tijd op 44 "niet gevonden"
+# zonder dat er iets alarm sloeg.
+#
+# Het boekjaar volgt de kalender: verslagen over jaar N verschijnen in de
+# loop van N+1, grofweg vanaf mei. Voor die maand heeft het geen zin om op
+# N+1-1 te jagen, dan is N-1 nog het actuele boekjaar.
+BOEKJAAR=$(date '+%Y')
+if [ "$(date '+%m')" -lt 05 ]; then
+    BOEKJAAR=$((BOEKJAAR - 2))
+else
+    BOEKJAAR=$((BOEKJAAR - 1))
+fi
+echo "boekjaar $BOEKJAAR"
+"$PYTHON" -u scripts/automation/wachtrij.py vul --jaar "$BOEKJAAR" --opnieuw \
+    || echo "[warn] vul gaf een foutcode — zie hierboven"
+"$PYTHON" -u scripts/automation/wachtrij.py verwerk --jaar "$BOEKJAAR" --minuten 30 \
+    || echo "[warn] verwerk gaf een foutcode — zie hierboven"
+
+echo
+echo "[4/5] datakwaliteitscontrole"
 "$PYTHON" -u scripts/db_management/check_data_quality.py || echo "[warn] controle gaf een foutcode — zie hierboven"
 
 # Skip commit if DB is byte-identical to HEAD (rare but possible)
 if "$GIT" diff --quiet -- "$DB_REL"; then
-    echo "[4/4] geen DB-verandering — niets te committen."
+    echo "[5/5] geen DB-verandering — niets te committen."
     echo "done $(date '+%Y-%m-%d %H:%M:%S %Z')"
     exit 0
 fi
 
 echo
-echo "[4/4] commit + push"
+echo "[5/5] commit + push"
 "$GIT" add "$DB_REL"
 "$GIT" commit -m "auto: bi-daily scrape ($(date '+%Y-%m-%d %H:%M'))" || { echo "[FATAL] commit faalde" >&2; exit 5; }
 
