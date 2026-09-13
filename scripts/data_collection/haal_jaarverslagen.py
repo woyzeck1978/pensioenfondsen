@@ -213,6 +213,12 @@ NIET_HET_VERSLAG = re.compile(r"verkort|mvb|verantwoord|populair|infograph|in.?b
 # linktekst zegt gewoon "Jaarverslag 2025 (verkort)".
 NIET_HET_VERSLAG_TEKST = re.compile(r"verkort|in het kort|populair|publieks", re.I)
 VERSLAG_WOORD = re.compile(r"jaarverslag|jaarbericht|jaarrapport|jv[_-]", re.I)
+# Een bestand is geen pagina. SPOA hangt al zijn documenten onder /downloads/,
+# wat in PAGINA_SCORE de hoogste prioriteit krijgt -- waardoor veertien PDF's
+# vóór de jaarverslagenpagina in de wachtrij kwamen, Playwright op elk daarvan
+# afbrak met "Download is starting", en het paginabudget op was voordat de
+# crawl bij het verslag kwam.
+IS_BESTAND = re.compile(r"\.(?:pdf|docx?|xlsx?|pptx?|zip|csv)(?:$|[?#])", re.I)
 # Waar een jaarverslag van een pensioenfonds altijd vol mee staat, en een
 # engagement- of beleidsrapport van hetzelfde fonds niet.
 PENSIOENVERSLAG = re.compile(
@@ -359,7 +365,7 @@ def zoek_en_haal_via_site(pg, home: str, jaar: int) -> tuple[str, bytes] | None:
             continue
         for h in links:
             kind = schoon(h)
-            if kind in gezien or hoofddomein(kind) != dom:
+            if kind in gezien or hoofddomein(kind) != dom or IS_BESTAND.search(kind):
                 continue
             punten = score(kind)
             if punten < 9:
