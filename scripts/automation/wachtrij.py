@@ -398,6 +398,18 @@ def vul(con, jaar: int, opnieuw: bool) -> None:
                          os.path.relpath(bestaand, BASE_DIR) if bestaand else None, _nu()))
             nieuw += 1
             al_binnen += bool(bestaand)
+        elif bestaand and cur[0] in ("open", "niet_gevonden", "afgekeurd"):
+            # Het verslag staat inmiddels op schijf -- met de hand neergezet, of
+            # opgehaald met haal_jaarverslagen.py --fondsen. Dan is de rij
+            # openhouden verspilling: verwerk() gaat minuten browserwerk doen
+            # voor een bestand dat er al ligt. Dit gold ook voor rijen die al op
+            # 'open' stonden, dus de check hangt bewust niet aan --opnieuw.
+            con.execute("""UPDATE ophaal_wachtrij
+                           SET status='binnen', pad=?, pogingen=0, reden=NULL, bijgewerkt=?
+                           WHERE fund_id=? AND jaar=?""",
+                        (os.path.relpath(bestaand, BASE_DIR), _nu(), fid, jaar))
+            nieuw += 1
+            al_binnen += 1
         elif opnieuw and cur[0] in ("niet_gevonden", "afgekeurd"):
             # Ook de teller terug: verwerk() filtert op pogingen < --pogingen,
             # dus zonder deze reset meldt een re-sweep keurig "N in de rij

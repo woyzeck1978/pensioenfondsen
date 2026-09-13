@@ -207,6 +207,12 @@ PAGINA_SCORE = [
 VASTE_PADEN = ["documenten", "over-ons/documenten", "publicaties", "downloads",
                "over-ons/publicaties", "over-ons/jaarverslagen", "jaarverslagen"]
 NIET_HET_VERSLAG = re.compile(r"verkort|mvb|verantwoord|populair|infograph|in.?beeld|beleid", re.I)
+# Dezelfde weigering, maar op de linktekst. Detailhandel zet de volledige en de
+# verkorte versie onder elkaar, en de verkorte heet in de URL
+# "Jaarverslag_In-t_Kort_..." -- dat glipt langs elk patroon hierboven. De
+# linktekst zegt gewoon "Jaarverslag 2025 (verkort)".
+NIET_HET_VERSLAG_TEKST = re.compile(r"verkort|in het kort|populair|publieks", re.I)
+VERSLAG_WOORD = re.compile(r"jaarverslag|jaarbericht|jaarrapport|jv[_-]", re.I)
 # Waar een jaarverslag van een pensioenfonds altijd vol mee staat, en een
 # engagement- of beleidsrapport van hetzelfde fonds niet.
 PENSIOENVERSLAG = re.compile(
@@ -215,9 +221,31 @@ PENSIOENVERSLAG = re.compile(
 
 
 def jaartal(u: str) -> int:
-    """Het boekjaar zoals het in de bestandsnaam staat, 0 als er geen jaar in zit."""
-    gevonden = re.findall(r"(20[12]\d)", u.rsplit("/", 1)[-1])
-    return max(int(x) for x in gevonden) if gevonden else 0
+    """Het boekjaar uit een bestandsnaam of een linktekst, 0 als er geen jaar in zit.
+
+    Het jaar dat direct op een verslag-woord volgt wint. Dat is nodig zodra er
+    twee jaartallen in staan, en dat komt vaak voor: SABIC zet zijn lijst neer als
+    "Jaarverslag SPF 2025 (juli 2026)" -- het tweede jaartal is de
+    publicatiemaand. Op het maximum sorteren levert daar 2026 op, een boekjaar
+    dat nog niet bestaat. Detailhandel heeft hetzelfde in een bestandsnaam:
+    PFDH-Jaarverslag-A4-Sep2022-SPREADS_2023-09-07-112141_ngse.pdf is het verslag
+    over 2022 met een uploadstempel uit 2023.
+    """
+    staart = u.rsplit("/", 1)[-1] if "/" in u else u
+    woord = r"(?:jaarverslag|jaarbericht|jaarrapport|jv)\W{0,12}(20[12]\d)"
+    na_verslag = re.search(woord, staart, re.I)
+    if na_verslag:
+        return int(na_verslag.group(1))
+    # Staat er in het laatste padstuk geen jaar, kijk dan naar het hele pad: het
+    # jaar zit soms een niveau hoger. Gasunie biedt zijn verslag aan op
+    # /jaarverslag-2025/downloaden-als-pdf. Deze stap gaat bewust ná de regel
+    # hierboven, anders wint de uploadmap /wp-content/uploads/2026/06/ van
+    # SPIN-jaarverslag-2025.pdf.
+    hoger = re.search(woord, u, re.I)
+    if hoger:
+        return int(hoger.group(1))
+    gevonden = re.findall(r"(20[12]\d)", staart)
+    return int(gevonden[0]) if gevonden else 0
 
 
 FETCH_JS = """async (u) => {
@@ -258,7 +286,15 @@ def zoek_en_haal_via_site(pg, home: str, jaar: int) -> tuple[str, bytes] | None:
     zodra er een kandidaat van het gevraagde boekjaar ligt -- niet zodra er
     iets ligt.
     """
-    dom = urllib.parse.urlparse(home).netloc
+    # Niet de hostnaam maar het hoofddomein, want fondsen hangen hun publicaties
+    # graag op een zusje: Gasunie zet het verslag op
+    # publicaties.pensioenfondsgasunie.nl terwijl de site www. is. Twee labels
+    # volstaat hier -- deze fondsen zitten allemaal op .nl of .com, niet op een
+    # tweetraps-achtervoegsel als .co.uk.
+    def hoofddomein(u: str) -> str:
+        return ".".join(urllib.parse.urlparse(u).netloc.lower().split(".")[-2:])
+
+    dom = hoofddomein(home)
 
     def score(u: str) -> int:
         for patroon, punten in PAGINA_SCORE:
@@ -269,18 +305,31 @@ def zoek_en_haal_via_site(pg, home: str, jaar: int) -> tuple[str, bytes] | None:
     def schoon(u: str) -> str:
         return urllib.parse.urldefrag(u)[0].rstrip("/") or u
 
-    kandidaten: set[str] = set()
+    # url -> boekjaar zoals we het kennen. Het jaar staat lang niet altijd in de
+    # bestandsnaam: Detailhandel publiceert zijn verslag over 2025 als
+    # Jaarverslag_Pensioenfonds_Detailhandel_Spreads.pdf en zet het jaartal
+    # alleen in de linktekst. Op naam sorteren gaf dan Jaarverslag-2024.pdf.
+    kandidaten: dict[str, int] = {}
     gezien: set[str] = set()
+
+    def onthoud(url: str, jaar_uit_tekst: int) -> None:
+        gevonden = jaartal(url) or jaar_uit_tekst
+        if url not in kandidaten or (not kandidaten[url] and gevonden):
+            kandidaten[url] = gevonden
     # (score, diepte, url) -- laagste score eerst, dat is de meest belovende pagina.
     frontier: list[tuple[int, int, str]] = [(0, 0, schoon(home))]
     frontier += [(1, 1, schoon(home.rstrip("/") + "/" + pad)) for pad in VASTE_PADEN]
 
     while frontier and len(gezien) < MAX_PAGINAS_PER_SITE:
-        if any(jaartal(u) == jaar for u in kandidaten):
+        # Alleen stoppen op iets dat ook echt een bestand kán zijn. SPIN linkt
+        # vanaf de homepage naar het nieuwsbericht /page/jaarverslag-2025-nu-online/
+        # -- dat draagt het woord en het juiste jaar, en brak de crawl af op een
+        # HTML-pagina terwijl de echte PDF een klik verderop stond.
+        if any(j == jaar and ".pdf" in u.lower() for u, j in kandidaten.items()):
             break
         frontier.sort(key=lambda t: (t[0], t[1]))
         _, diepte, pagina = frontier.pop(0)
-        if pagina in gezien or urllib.parse.urlparse(pagina).netloc != dom:
+        if pagina in gezien or hoofddomein(pagina) != dom:
             continue
         gezien.add(pagina)
         try:
@@ -288,22 +337,29 @@ def zoek_en_haal_via_site(pg, home: str, jaar: int) -> tuple[str, bytes] | None:
             if not r or r.status >= 400:
                 continue
             pg.wait_for_timeout(1200)
-            links = [h for h in dict.fromkeys(
-                pg.eval_on_selector_all("a[href]", "e=>e.map(x=>x.href)")) if h]
+            paren = pg.eval_on_selector_all(
+                "a[href]", "e=>e.map(x=>[x.href, (x.innerText||'').trim().slice(0,120)])")
         except Exception:
             continue
+        links = [h for h, _ in dict.fromkeys((h, k) for h, k in paren if h)]
 
-        for h in links:
-            if (".pdf" in h.lower()
-                    and re.search(r"jaarverslag|jaarbericht|jaarrapport|jv[_-]", h, re.I)
-                    and not NIET_HET_VERSLAG.search(h)):
-                kandidaten.add(h)
+        for h, tekst in paren:
+            if not h or NIET_HET_VERSLAG.search(h) or NIET_HET_VERSLAG_TEKST.search(tekst):
+                continue
+            # Een .pdf-extensie is geen eis meer. Hoogovens serveert zijn verslag
+            # op /meer-informatie/documenten/jaarverslag-2025/ -- een
+            # download-endpoint zonder extensie, waar Playwright zelfs op
+            # "Download is starting" stukloopt als je er als pagina heen gaat.
+            # Dat de URL of de linktekst het woord jaarverslag draagt is genoeg;
+            # download() controleert daarna alsnog op een %PDF-header.
+            if VERSLAG_WOORD.search(h) or VERSLAG_WOORD.search(tekst):
+                onthoud(h, jaartal(tekst))
 
         if diepte >= MAX_DIEPTE:
             continue
         for h in links:
             kind = schoon(h)
-            if kind in gezien or urllib.parse.urlparse(kind).netloc != dom:
+            if kind in gezien or hoofddomein(kind) != dom:
                 continue
             punten = score(kind)
             if punten < 9:
@@ -312,9 +368,13 @@ def zoek_en_haal_via_site(pg, home: str, jaar: int) -> tuple[str, bytes] | None:
     if not kandidaten:
         return None
 
-    # Voorkeur voor het gevraagde boekjaar; anders het nieuwste dat er is.
-    volgorde = sorted(kandidaten, key=lambda u: (jaartal(u) != jaar, -jaartal(u)))
-    for url in volgorde[:3]:
+    # Voorkeur voor het gevraagde boekjaar; anders het nieuwste dat er is. Nu de
+    # .pdf-eis weg is komt er meer kaf mee, dus vijf pogingen in plaats van drie;
+    # download() geeft None zodra er geen %PDF uit komt, dus dat kost één verzoek.
+    volgorde = sorted(kandidaten, key=lambda u: (kandidaten[u] != jaar,
+                                                 ".pdf" not in u.lower(),
+                                                 -kandidaten[u]))
+    for url in volgorde[:5]:
         data = download(pg, url)
         if data:
             return url, data
