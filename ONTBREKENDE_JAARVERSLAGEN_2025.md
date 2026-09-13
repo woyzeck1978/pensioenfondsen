@@ -1,29 +1,22 @@
 # Ontbrekende jaarverslagen 2025 — werklijst
 
-Stand 2026-09-13, gegenereerd met `scripts/utils_and_viz/maak_werklijst.py`. 47 pensioenfondsen hebben nog geen analyse over boekjaar 2025.
+Stand 2026-09-13, gegenereerd met `scripts/utils_and_viz/maak_werklijst.py`. 36 pensioenfondsen hebben nog geen analyse over boekjaar 2025.
 
 **Kolom "Laatste"** is het nieuwste boekjaar waarvan we wél een analyse hebben. Staat daar 2024, dan zijn we precies één jaar achter.
 
 **Een verslag gevonden?** Zet hem neer als `data/annual_reports/<id>_<KorteNaam>_2025.pdf` en draai daarna `wachtrij.py vul --jaar 2025 --opnieuw`; die ziet het bestand staan, zet de status op `binnen` en snijdt de passages uit. Heb je alleen een URL, dan is `haal_jaarverslagen.py --jaar 2025 --via-site --fondsen <id>` sneller. Het uitschrijven van de analyse blijft handwerk.
 
-## Open fondsen (26)
+## Open fondsen (19)
 
 Hier zit de meeste waarde: fondsen die nog gewoon draaien en dus een jaarverslag horen te publiceren.
 
 | ✓ | id | Fonds | AUM € mld | Laatste | Website | Waarom niet gevonden |
 |---|---|---|---|---|---|---|
-| ☐ | 6 | Openbare Apothekers (SPOA - Public Pharmacists) | 1,88 | geen | [link](https://www.spoa.nl/) | niets gevonden op de site |
-| ☐ | 89 | DHL Nederland | 1,24 | 2024 | [link](https://www.pfdhl.nl/) | niets gevonden op de site |
-| ☐ | 50 | Mediahuis Nederland (Mhpf) | 1,24 | geen | [link](https://www.mhpf.nl/) | fondsnaam komt niet voor in het document (gezocht op mediahuis) |
-| ☐ | 83 | Capgemini / Capgemini Nederland | 1,05 | 2024 | [link](https://www.pensioenfondscg.nl/) | niets gevonden op de site |
-| ☐ | 183 | Pensioenkring 2 (Stap) | 0,88 | 2024 | [link](https://www.stappensioen.nl/pensioenkring-2/pensioenkring) | niets gevonden op de site |
 | ☐ | 172 | Kring Forward (Unilever) | 0,71 | geen | [link](https://www.unileverpensioenfonds.nl/) | niets gevonden op de site |
 | ☐ | 102 | Hagee | 0,68 | geen | [link](https://www.hagee.nl/) | niets gevonden op de site |
 | ☐ | 131 | TDV | 0,64 | 2024 | [link](https://pensioenfonds-tdv.nl/) | draagt boekjaar 2024, niet 2025 ({2024: 93, 2023: 4, 2025: 4}) |
 | ☐ | 93 | Essity | 0,62 | 2024 | [link](https://www.mijnessitypensioen.nl/) | niets gevonden op de site |
-| ☐ | 79 | Avebe | 0,57 | 2024 | [link](https://pensioenfondsavebe.nl/) | niets gevonden op de site |
 | ☐ | 117 | Nederlandse Bisdommen | 0,55 | 2024 | [link](https://www.pnb.nl/bisdom/) | niets gevonden op de site |
-| ☐ | 158 | IFF | 0,47 | geen | [link](https://iffpensioenfonds.nl/) | niets gevonden op de site |
 | ☐ | 81 | Brocacef | 0,35 | 2024 | [link](https://www.brocacefpensioenfonds.nl/) | draagt boekjaar 2024, niet 2025 ({2024: 19, 2021: 1, 2025: 2, 2023: 1}) |
 | ☐ | 127 | Sagittarius | 0,34 | 2024 | [link](https://pensioenfonds-sagittarius.nl/) | draagt boekjaar 2024, niet 2025 ({2024: 10, 2023: 2, 2016: 2, 2025: 1}) |
 | ☐ | 110 | KAS BANK | 0,34 | 2024 | [link](https://www.pensioenfondskasbank.nl/) | niets gevonden op de site |
@@ -39,30 +32,26 @@ Hier zit de meeste waarde: fondsen die nog gewoon draaien en dus een jaarverslag
 | ☐ | 229 | Kring Flexibele Regeling (HNPF) | – | geen | **ontbreekt** | niets gevonden op de site |
 | ☐ | 230 | Pensioenkring Cargill (HNPF) | – | geen | **ontbreekt** | niets gevonden op de site |
 
-## Ingevaren fondsen (5)
+## Ingevaren fondsen (3)
 
 | ✓ | id | Fonds | AUM € mld | Laatste | Website | Waarom niet gevonden |
 |---|---|---|---|---|---|---|
 | ☐ | 181 | Oak | 5,34 | 2024 | [link](https://www.oakpensioenfonds.nl/) | niets gevonden op de site |
-| ☐ | 25 | MITT (Fashion, Interior, Carpet, and Textile Industry) | 4,15 | 2024 | [link](https://www.pensioenfondsmitt.nl/) | niets gevonden op de site |
-| ☐ | 133 | TNO | 3,97 | 2024 | [link](https://www.pensioenfondstno.nl/) | draagt boekjaar 2024, niet 2025 ({2024: 177, 2025: 3, 2023: 9, 2021: 3, 2026: 1, 2022: 2}) |
+| ☐ | 133 | TNO | 3,97 | 2024 | [link](https://www.pensioenfondstno.nl/) | niets gevonden op de site |
 | ☐ | 136 | Vopak | 1,26 | 2024 | [link](https://pensioenfondsvopak-pensioen123.nl/pensioen123/) | niets gevonden op de site |
-| ☐ | 43 | Zuivel- en aanverwante industrie / BPZ (Dairy Industry) | 0,83 | 2024 | [link](https://www.pensioenfondszuivel.nl/) | draagt boekjaar 2024, niet 2025 ({2023: 2, 2024: 13, 2025: 1}) |
 
-## Gesloten, opgeheven of in liquidatie (16)
+## Gesloten, opgeheven of in liquidatie (14)
 
 Bij deze groep is het goed mogelijk dat er geen verslag over dit boekjaar meer komt. Loop ze pas na als de rest af is.
 
 | ✓ | id | Fonds | AUM € mld | Laatste | Website | Waarom niet gevonden |
 |---|---|---|---|---|---|---|
-| ☐ | 82 | Campina | 1,25 | geen | [link](https://www.pensioenfondscampina.nl/over-ons/financiele-situatie/) | niets gevonden op de site |
 | ☐ | 233 | Nedlloyd | 0,96 | geen | **ontbreekt** | niets gevonden op de site |
 | ☐ | 193 | Kring Van Lanschot (HNPF) | 0,95 | 2024 | [link](https://pensioenfondsvanlanschot.nl/) | niets gevonden op de site |
 | ☐ | 232 | Honeywell | 0,70 | geen | **ontbreekt** | niets gevonden op de site |
 | ☐ | 235 | YARA Nederland | 0,65 | geen | **ontbreekt** | niets gevonden op de site |
 | ☐ | 207 | Pensioenfonds British American Tobacco | 0,63 | geen | **ontbreekt** | niets gevonden op de site |
 | ☐ | 208 | Pensioenfonds Trespa | 0,19 | geen | **ontbreekt** | niets gevonden op de site |
-| ☐ | 103 | HAL | 0,17 | 2024 | [link](https://pensioenfondshal.nl/downloads/jaarverslag/) | draagt boekjaar 2019, niet 2025 ({2019: 18, 2013: 1, 2018: 10, 2020: 1}) |
 | ☐ | 77 | AT&T Nederland | 0,16 | 2024 | [link](https://att-pensioenfonds.nl/) | draagt boekjaar 2024, niet 2025 ({2024: 12, 2023: 2, 2014: 2, 2025: 1}) |
 | ☐ | 114 | Mercer | 0,15 | 2023 | [link](https://www.pensioenfondsmercer.nl/) | niets gevonden op de site |
 | ☐ | 236 | Coram | 0,07 | geen | **ontbreekt** | niets gevonden op de site |
