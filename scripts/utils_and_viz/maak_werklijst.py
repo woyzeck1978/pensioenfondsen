@@ -57,6 +57,18 @@ opende, stond het er. Alleen bij Hagee is met de hand vastgesteld dat er
 werkelijk nog niets is. Wil je zekerheid, dan moet je de documentenpagina zelf
 bekijken -- de melding zelf draagt die zekerheid niet.
 
+## Sites die geen enkele scraper binnenlaten
+
+Een aparte categorie: fondsen achter bot-bescherming van het Imperva-type. Daar
+geeft de site 403 op een kale request, op een echte browsersessie én op een
+losse fetcher, en bij De Nationale APF zelfs op het /media/-pad waar de PDFs
+zelf staan. Vastgesteld bij Capgemini, Gasunie, pnb.nl (Nederlandse Bisdommen)
+en denationaleapf.nl (het APF plus zijn kringen).
+
+Daar helpt geen crawl-logica tegen. De enige route is het bestand met de hand
+uit een gewone browser halen. Loopt de werklijst tegen de reden "site blokkeert
+elke geautomatiseerde toegang" aan, probeer het dan niet opnieuw met de zoeker.
+
 ## Laatste redmiddel
 
 Staat een verslag echt nergens, dan is het jaarrekeningdeel vaak wel bij DNB of
