@@ -48,6 +48,8 @@ DOEL_MAP = os.path.join(BASE_DIR, "data", "annual_reports")
 MIN_BYTES = 200_000
 MIN_PAGINAS = 12
 MAX_PAGINAS_JAARSCAN = 150   # ruim genoeg voor elk jaarverslag, en begrensd qua tijd
+MAX_PAGINAS_PER_SITE = 26   # een crawl kan ontsporen op een site met veel menu
+MAX_DIEPTE = 3              # /over-ons/financiele-situatie/jaarverslag is er drie
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36")
 
@@ -196,6 +198,13 @@ VASTE_PADEN = ["documenten", "over-ons/documenten", "publicaties", "downloads",
                "over-ons/publicaties", "over-ons/jaarverslagen", "jaarverslagen"]
 NIET_HET_VERSLAG = re.compile(r"verkort|mvb|verantwoord|populair|infograph|in.?beeld|beleid", re.I)
 
+
+def jaartal(u: str) -> int:
+    """Het boekjaar zoals het in de bestandsnaam staat, 0 als er geen jaar in zit."""
+    gevonden = re.findall(r"(20[12]\d)", u.rsplit("/", 1)[-1])
+    return max(int(x) for x in gevonden) if gevonden else 0
+
+
 FETCH_JS = """async (u) => {
   const r = await fetch(u, {credentials: 'include'});
   const b = new Uint8Array(await r.arrayBuffer());
@@ -206,18 +215,35 @@ FETCH_JS = """async (u) => {
 
 
 def zoek_en_haal_via_site(pg, home: str, jaar: int) -> tuple[str, bytes] | None:
-    """Loop de documentenpagina van het fonds af en haal het jaarverslag op.
+    """Loop de site van het fonds af en haal het jaarverslag op.
 
     De download gaat met fetch() binnen de pagina in plaats van via een losse
     request: die draagt de cookies en de fingerprint van een echte browser, en
     komt daarmee langs de WAF die curl afwijst.
+
+    Het zoeken zelf was eerst een lijstje van zes gescoorde links vanaf de
+    homepage, één stap diep, en dat miste structureel. Twee voorbeelden die het
+    uitleggen:
+
+    Bij Architectenbureaus staat het verslag op
+    /over-ons/financiele-situatie/jaarverslag -- drie stappen. En omdat elke
+    pagina de hele zijbalk herhaalt, raakte de tweede stap op aan *broertjes*
+    van de eerste in plaats van aan kinderen: financiele-situatie werd wel
+    bezocht, maar als tweede stap, zodat zijn eigen kinderen buiten bereik
+    bleven. De crawl was dus begrensd door bezoekvolgorde, niet door diepte.
+    Jaarverslag 2025 stond er gewoon; wij meldden "niets gevonden".
+
+    En hij stopte bij de eerste pagina waar iets PDF-achtigs op stond. Levert
+    die pagina alleen oude verslagen, dan werd het nieuwste-dat-er-is gepakt en
+    sneuvelde dat verderop op de boekjaarcontrole: SABIC kwam zo de ene run
+    binnen als boekjaar 2021, de volgende als 2020 en de derde als 2019.
+
+    Daarom nu een best-first-crawl: een frontier gesorteerd op paginascore,
+    kinderen tot MAX_DIEPTE, hetzelfde domein, een paginabudget, en stoppen
+    zodra er een kandidaat van het gevraagde boekjaar ligt -- niet zodra er
+    iets ligt.
     """
-    try:
-        pg.goto(home, wait_until="domcontentloaded", timeout=45000)
-        pg.wait_for_timeout(1800)
-        links = [h for h in dict.fromkeys(pg.eval_on_selector_all("a[href]", "e=>e.map(x=>x.href)")) if h]
-    except Exception:
-        return None
+    dom = urllib.parse.urlparse(home).netloc
 
     def score(u: str) -> int:
         for patroon, punten in PAGINA_SCORE:
@@ -225,13 +251,21 @@ def zoek_en_haal_via_site(pg, home: str, jaar: int) -> tuple[str, bytes] | None:
                 return punten
         return 9
 
-    te_bezoeken = sorted([h for h in links if score(h) < 9], key=score)[:6]
-    te_bezoeken += [home.rstrip("/") + "/" + pad for pad in VASTE_PADEN]
+    def schoon(u: str) -> str:
+        return urllib.parse.urldefrag(u)[0].rstrip("/") or u
 
     kandidaten: set[str] = set()
     gezien: set[str] = set()
-    for pagina in te_bezoeken:
-        if pagina in gezien:
+    # (score, diepte, url) -- laagste score eerst, dat is de meest belovende pagina.
+    frontier: list[tuple[int, int, str]] = [(0, 0, schoon(home))]
+    frontier += [(1, 1, schoon(home.rstrip("/") + "/" + pad)) for pad in VASTE_PADEN]
+
+    while frontier and len(gezien) < MAX_PAGINAS_PER_SITE:
+        if any(jaartal(u) == jaar for u in kandidaten):
+            break
+        frontier.sort(key=lambda t: (t[0], t[1]))
+        _, diepte, pagina = frontier.pop(0)
+        if pagina in gezien or urllib.parse.urlparse(pagina).netloc != dom:
             continue
         gezien.add(pagina)
         try:
@@ -239,25 +273,33 @@ def zoek_en_haal_via_site(pg, home: str, jaar: int) -> tuple[str, bytes] | None:
             if not r or r.status >= 400:
                 continue
             pg.wait_for_timeout(1200)
-            for h in pg.eval_on_selector_all("a[href]", "e=>e.map(x=>x.href)"):
-                if (h and ".pdf" in h.lower()
-                        and re.search(r"jaarverslag|jaarbericht|jaarrapport|jv[_-]", h, re.I)
-                        and not NIET_HET_VERSLAG.search(h)):
-                    kandidaten.add(h)
-            if kandidaten:
-                break
+            links = [h for h in dict.fromkeys(
+                pg.eval_on_selector_all("a[href]", "e=>e.map(x=>x.href)")) if h]
         except Exception:
             continue
+
+        for h in links:
+            if (".pdf" in h.lower()
+                    and re.search(r"jaarverslag|jaarbericht|jaarrapport|jv[_-]", h, re.I)
+                    and not NIET_HET_VERSLAG.search(h)):
+                kandidaten.add(h)
+
+        if diepte >= MAX_DIEPTE:
+            continue
+        for h in links:
+            kind = schoon(h)
+            if kind in gezien or urllib.parse.urlparse(kind).netloc != dom:
+                continue
+            punten = score(kind)
+            if punten < 9:
+                frontier.append((punten, diepte + 1, kind))
+
     if not kandidaten:
         return None
 
-    def jaartal(u: str) -> int:
-        gevonden = re.findall(r"(20[12]\d)", u.rsplit("/", 1)[-1])
-        return max(int(x) for x in gevonden) if gevonden else 0
-
     # Voorkeur voor het gevraagde boekjaar; anders het nieuwste dat er is.
     volgorde = sorted(kandidaten, key=lambda u: (jaartal(u) != jaar, -jaartal(u)))
-    for url in volgorde[:2]:
+    for url in volgorde[:3]:
         data = download(pg, url)
         if data:
             return url, data
