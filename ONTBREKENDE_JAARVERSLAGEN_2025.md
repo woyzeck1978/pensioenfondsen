@@ -13,15 +13,15 @@ Hier zit de meeste waarde: fondsen die nog gewoon draaien en dus een jaarverslag
 | ✓ | id | Fonds | AUM € mld | Laatste | Website | Waarom niet gevonden |
 |---|---|---|---|---|---|---|
 | ☐ | 102 | Hagee | 0,68 | geen | [link](https://www.hagee.nl/) | draagt boekjaar 2024, niet 2025 ({2024: 126, 2023: 4, 2026: 1, 2022: 1, 2025: 3}) |
-| ☐ | 117 | Nederlandse Bisdommen | 0,55 | 2024 | [link](https://www.pnb.nl/bisdom/) | niets gevonden op de site |
-| ☐ | 110 | KAS BANK | 0,34 | 2024 | [link](https://www.pensioenfondskasbank.nl/) | niets gevonden op de site |
-| ☐ | 7 | Roeiers (SPRH - Rowers) | 0,19 | geen | [link](https://sprh.nl/) | niets gevonden op de site |
+| ☐ | 117 | Nederlandse Bisdommen | 0,55 | 2024 | [link](https://www.pnb.nl/bisdom/) | site blokkeert elke geautomatiseerde toegang (403 op curl, browsersessie en losse fetcher) -- alleen met de hand op te halen |
+| ☐ | 110 | KAS BANK | 0,34 | 2024 | [link](https://www.pensioenfondskasbank.nl/) | site blokkeert elke geautomatiseerde toegang (403 op curl, browsersessie en losse fetcher) -- alleen met de hand op te halen |
+| ☐ | 7 | Roeiers (SPRH - Rowers) | 0,19 | geen | [link](https://sprh.nl/) | publiceert geen jaarverslagen op de eigen site; downloadpagina bevat alleen ABTN, reglement, klachten- en beloningsbeleid |
 | ☐ | 101 | Gomacon | 0,01 | geen | [link](https://www.werkenaanonspensioen.nl/belangrijke-begrippen/overzicht-pensioenfondsen-en-pensioenverzekeraars) | niets gevonden op de site |
-| ☐ | 66 | De Nationale APF | – | 2024 | [link](https://www.denationaleapf.nl/) | niets gevonden op de site |
+| ☐ | 66 | De Nationale APF | – | 2024 | [link](https://www.denationaleapf.nl/) | site blokkeert elke geautomatiseerde toegang (403 op curl, browsersessie en losse fetcher) -- alleen met de hand op te halen |
 | ☐ | 134 | Tobacon Offshore Marine Consultancy B.V. | – | geen | **ontbreekt** | niets gevonden op de site |
-| ☐ | 224 | Kring E-DC (De Nationale) | – | geen | **ontbreekt** | niets gevonden op de site |
-| ☐ | 225 | Kring G-Cargill (De Nationale) | – | geen | **ontbreekt** | niets gevonden op de site |
-| ☐ | 226 | Kring H NN CDC (De Nationale) | – | geen | **ontbreekt** | niets gevonden op de site |
+| ☐ | 224 | Kring E-DC (De Nationale) | – | geen | **ontbreekt** | site blokkeert elke geautomatiseerde toegang (403 op curl, browsersessie en losse fetcher) -- alleen met de hand op te halen |
+| ☐ | 225 | Kring G-Cargill (De Nationale) | – | geen | **ontbreekt** | site blokkeert elke geautomatiseerde toegang (403 op curl, browsersessie en losse fetcher) -- alleen met de hand op te halen |
+| ☐ | 226 | Kring H NN CDC (De Nationale) | – | geen | **ontbreekt** | site blokkeert elke geautomatiseerde toegang (403 op curl, browsersessie en losse fetcher) -- alleen met de hand op te halen |
 
 ## Ingevaren fondsen (3)
 
