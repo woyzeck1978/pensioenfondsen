@@ -1,12 +1,12 @@
 # Ontbrekende jaarverslagen 2025 — werklijst
 
-Stand 2026-09-13, gegenereerd met `scripts/utils_and_viz/maak_werklijst.py`. 29 pensioenfondsen hebben nog geen analyse over boekjaar 2025.
+Stand 2026-09-13, gegenereerd met `scripts/utils_and_viz/maak_werklijst.py`. 26 pensioenfondsen hebben nog geen analyse over boekjaar 2025.
 
 **Kolom "Laatste"** is het nieuwste boekjaar waarvan we wél een analyse hebben. Staat daar 2024, dan zijn we precies één jaar achter.
 
 **Een verslag gevonden?** Zet hem neer als `data/annual_reports/<id>_<KorteNaam>_2025.pdf` en draai daarna `wachtrij.py vul --jaar 2025 --opnieuw`; die ziet het bestand staan, zet de status op `binnen` en snijdt de passages uit. Heb je alleen een URL, dan is `haal_jaarverslagen.py --jaar 2025 --via-site --fondsen <id>` sneller. Het uitschrijven van de analyse blijft handwerk.
 
-## Open fondsen (12)
+## Open fondsen (10)
 
 Hier zit de meeste waarde: fondsen die nog gewoon draaien en dus een jaarverslag horen te publiceren.
 
@@ -22,8 +22,6 @@ Hier zit de meeste waarde: fondsen die nog gewoon draaien en dus een jaarverslag
 | ☐ | 224 | Kring E-DC (De Nationale) | – | geen | **ontbreekt** | niets gevonden op de site |
 | ☐ | 225 | Kring G-Cargill (De Nationale) | – | geen | **ontbreekt** | niets gevonden op de site |
 | ☐ | 226 | Kring H NN CDC (De Nationale) | – | geen | **ontbreekt** | niets gevonden op de site |
-| ☐ | 229 | Kring Flexibele Regeling (HNPF) | – | geen | **ontbreekt** | niets gevonden op de site |
-| ☐ | 230 | Pensioenkring Cargill (HNPF) | – | geen | **ontbreekt** | niets gevonden op de site |
 
 ## Ingevaren fondsen (3)
 
@@ -33,14 +31,13 @@ Hier zit de meeste waarde: fondsen die nog gewoon draaien en dus een jaarverslag
 | ☐ | 133 | TNO | 3,97 | 2024 | [link](https://www.pensioenfondstno.nl/) | niets gevonden op de site |
 | ☐ | 136 | Vopak | 1,26 | 2024 | [link](https://pensioenfondsvopak-pensioen123.nl/pensioen123/) | niets gevonden op de site |
 
-## Gesloten, opgeheven of in liquidatie (14)
+## Gesloten, opgeheven of in liquidatie (13)
 
 Bij deze groep is het goed mogelijk dat er geen verslag over dit boekjaar meer komt. Loop ze pas na als de rest af is.
 
 | ✓ | id | Fonds | AUM € mld | Laatste | Website | Waarom niet gevonden |
 |---|---|---|---|---|---|---|
 | ☐ | 233 | Nedlloyd | 0,96 | geen | **ontbreekt** | niets gevonden op de site |
-| ☐ | 193 | Kring Van Lanschot (HNPF) | 0,95 | 2024 | [link](https://pensioenfondsvanlanschot.nl/) | niets gevonden op de site |
 | ☐ | 232 | Honeywell | 0,70 | geen | **ontbreekt** | niets gevonden op de site |
 | ☐ | 235 | YARA Nederland | 0,65 | geen | **ontbreekt** | niets gevonden op de site |
 | ☐ | 131 | TDV | 0,64 | 2024 | [link](https://pensioenfonds-tdv.nl/) | draagt boekjaar 2024, niet 2025 ({2024: 93, 2023: 4, 2025: 4}) |
