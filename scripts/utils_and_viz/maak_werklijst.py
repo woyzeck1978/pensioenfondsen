@@ -49,9 +49,13 @@ nooit, dus die kolom invullen is hier de eerste stap. Let op dat de keuring bij
 een kring eist dat de kringnaam op de omslag staat: het koepelverslag noemt alle
 kringen en wordt daarom terecht geweigerd.
 
-**Fondsen waarvan de reden "draagt boekjaar 2024" is** hebben simpelweg nog niet
-gepubliceerd. De zoeker vindt daar netjes het nieuwste stuk dat er staat. Zet
-die onderaan en kijk over een paar maanden opnieuw.
+**Lees "draagt boekjaar 2024" niet als "nog niet gepubliceerd".** Die melding
+zegt alleen dat het nieuwste verslag dát de zoeker kon bereiken over 2024 ging.
+Sagittarius, Sportfondsen en AT&T stonden er alle drie zo bij en hadden hun
+verslag over 2025 gewoon online; zodra de zoeker hun echte documentenpagina
+opende, stond het er. Alleen bij Hagee is met de hand vastgesteld dat er
+werkelijk nog niets is. Wil je zekerheid, dan moet je de documentenpagina zelf
+bekijken -- de melding zelf draagt die zekerheid niet.
 
 ## Laatste redmiddel
 
