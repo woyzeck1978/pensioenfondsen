@@ -222,6 +222,7 @@ NIET_HET_VERSLAG = re.compile(
 # linktekst zegt gewoon "Jaarverslag 2025 (verkort)".
 NIET_HET_VERSLAG_TEKST = re.compile(r"verkort|in het kort|populair|publieks", re.I)
 VERSLAG_WOORD = re.compile(r"jaarverslag|jaarbericht|jaarrapport|jv[_-]", re.I)
+DOWNLOADPAGINA = re.compile(r"download|static_resource|/pdf(?:$|[/?#])", re.I)
 # Een bestand is geen pagina. SPOA hangt al zijn documenten onder /downloads/,
 # wat in PAGINA_SCORE de hoogste prioriteit krijgt -- waardoor veertien PDF's
 # vóór de jaarverslagenpagina in de wachtrij kwamen, Playwright op elk daarvan
@@ -395,8 +396,14 @@ def zoek_en_haal_via_site(pg, home: str, jaar: int) -> tuple[str, bytes] | None:
     # Voorkeur voor het gevraagde boekjaar; anders het nieuwste dat er is. Nu de
     # .pdf-eis weg is komt er meer kaf mee, dus vijf pogingen in plaats van drie;
     # download() geeft None zodra er geen %PDF uit komt, dus dat kost één verzoek.
+    # Na het boekjaar en een echte .pdf telt of de URL naar een downloadpagina
+    # ruikt. Oak publiceert zijn verslag als website waarin elk hoofdstukanker
+    # het woord jaarverslag draagt: honderd kandidaten, allemaal van 2025,
+    # allemaal zonder extensie. De enige bruikbare -- /downloaden-als-pdf --
+    # kwam dan bij toeval wel of niet in de eerste handvol pogingen terecht.
     volgorde = sorted(kandidaten, key=lambda u: (kandidaten[u] != jaar,
                                                  ".pdf" not in u.lower(),
+                                                 not DOWNLOADPAGINA.search(u),
                                                  -kandidaten[u]))
     for url in volgorde[:5]:
         data = download(pg, url)
@@ -433,6 +440,19 @@ def download(pg, url: str) -> bytes | None:
             data = r.body()
             if data[:4] == b"%PDF":
                 return data
+            # Geen PDF maar HTML: dat is bij publicatieplatforms de
+            # downloadpagina, niet het bestand. Gasunie en Oak serveren allebei
+            # op /jaarverslag-2025/downloaden-als-pdf een pagina die naar een
+            # /static_resource/<uuid>.pdf wijst. Eén keer doorklikken, niet
+            # verder -- anders wordt dit een tweede crawler.
+            if data[:200].lstrip()[:1] == b"<":
+                binnenin = re.search(rb"""["']([^"']+\.pdf)["']""", data)
+                if binnenin:
+                    vervolg = urllib.parse.urljoin(url, binnenin.group(1).decode("utf-8", "ignore"))
+                    if vervolg != url:
+                        r2 = pg.request.get(vervolg, timeout=90000)
+                        if r2.ok and r2.body()[:4] == b"%PDF":
+                            return r2.body()
     except Exception:
         pass
     return None
