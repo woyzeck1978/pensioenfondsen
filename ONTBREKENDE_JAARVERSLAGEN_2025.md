@@ -1,48 +1,17 @@
 # Ontbrekende jaarverslagen 2025 — werklijst
 
-Stand 2026-09-13. 52 van de 192 pensioenfondsen hebben nog geen analyse over boekjaar
-2025. Deze lijst is bedoeld om met de hand langs te lopen: vink af wat je hebt
-gevonden en zet de PDF-URL erbij.
+Stand 2026-09-13, gegenereerd met `scripts/utils_and_viz/maak_werklijst.py`. 47 pensioenfondsen hebben nog geen analyse over boekjaar 2025.
 
-**Kolom "Laatste"** is het nieuwste boekjaar waarvan we wél een analyse hebben.
-Staat daar 2024, dan zijn we precies één jaar achter. Staat er iets ouders, dan
-loopt het langer mis en is het fonds waarschijnlijk lastiger vindbaar.
+**Kolom "Laatste"** is het nieuwste boekjaar waarvan we wél een analyse hebben. Staat daar 2024, dan zijn we precies één jaar achter.
 
-**Een verslag gevonden?** Zet hem neer als
-`data/annual_reports/<id>_<KorteNaam>_2025.pdf` en draai daarna:
+**Een verslag gevonden?** Zet hem neer als `data/annual_reports/<id>_<KorteNaam>_2025.pdf` en draai daarna `wachtrij.py vul --jaar 2025 --opnieuw`; die ziet het bestand staan, zet de status op `binnen` en snijdt de passages uit. Heb je alleen een URL, dan is `haal_jaarverslagen.py --jaar 2025 --via-site --fondsen <id>` sneller. Het uitschrijven van de analyse blijft handwerk.
 
-```bash
-cd ~/pensioenfondsen-app
-.venv/bin/python3 scripts/automation/wachtrij.py vul --jaar 2025 --opnieuw
-```
+## Open fondsen (26)
 
-`vul` ziet een bestand dat er al staat, zet de status op `binnen` en snijdt de
-passages uit naar `data/interim/kern/<id>_2025.md`. Daarna is het uitschrijven
-van de analyse nog handwerk.
-
-Heb je alleen een URL, dan is dit sneller:
-
-```bash
-.venv/bin/python3 scripts/data_collection/haal_jaarverslagen.py \
-    --jaar 2025 --via-site --fondsen <id>
-```
-
-Let op de keuring: die wijst een verslag af als het een ander boekjaar draagt,
-als de fondsnaam er nergens in staat, of als het geen pensioenfondsverslag is.
-Dat laatste ving het engagementrapport dat onder Detailhandel binnenkwam.
-
-## Open fondsen (31)
-
-Hier zit de meeste waarde: fondsen die nog gewoon draaien en dus een
-jaarverslag horen te publiceren.
+Hier zit de meeste waarde: fondsen die nog gewoon draaien en dus een jaarverslag horen te publiceren.
 
 | ✓ | id | Fonds | AUM € mld | Laatste | Website | Waarom niet gevonden |
 |---|---|---|---|---|---|---|
-| ☐ | 17 | Detailhandel (Retail) | 32,31 | 2024 | [link](https://pensioenfondsdetailhandel.nl/) | engagementrapport van het Dutch Engagement Network, geen jaarverslag |
-| ☐ | 106 | Hoogovens | 10,41 | 2024 | [link](https://deelnemerportaal.pfhoogovens.nl/) | niets gevonden op de site |
-| ☐ | 45 | IBM (SPIN) / IBM Nederland | 3,50 | 2024 | [link](https://spin.metpensioen.nl/) | niets gevonden op de site |
-| ☐ | 126 | SABIC | 2,92 | 2024 | [link](https://spf-pensioenen.nl/nl) | draagt boekjaar 2022, niet 2025 ({2022: 102, 2015: 1, 2021: 5, 2023: 3}) |
-| ☐ | 97 | Gasunie | 2,31 | 2024 | [link](https://www.pensioenfondsgasunie.nl/) | niets gevonden op de site |
 | ☐ | 6 | Openbare Apothekers (SPOA - Public Pharmacists) | 1,88 | geen | [link](https://www.spoa.nl/) | niets gevonden op de site |
 | ☐ | 89 | DHL Nederland | 1,24 | 2024 | [link](https://www.pfdhl.nl/) | niets gevonden op de site |
 | ☐ | 50 | Mediahuis Nederland (Mhpf) | 1,24 | geen | [link](https://www.mhpf.nl/) | fondsnaam komt niet voor in het document (gezocht op mediahuis) |
@@ -82,8 +51,7 @@ jaarverslag horen te publiceren.
 
 ## Gesloten, opgeheven of in liquidatie (16)
 
-Bij deze groep is het goed mogelijk dat er geen verslag over 2025 meer komt.
-Loop ze pas na als de rest af is.
+Bij deze groep is het goed mogelijk dat er geen verslag over dit boekjaar meer komt. Loop ze pas na als de rest af is.
 
 | ✓ | id | Fonds | AUM € mld | Laatste | Website | Waarom niet gevonden |
 |---|---|---|---|---|---|---|
@@ -104,46 +72,44 @@ Loop ze pas na als de rest af is.
 | ☐ | 231 | Tandartsen en Tandarts-Specialisten | – | geen | **ontbreekt** | niets gevonden op de site |
 | ☐ | 241 | Grolsche Bierbrouwerij | – | geen | **ontbreekt** | niets gevonden op de site |
 
-## Bekende obstakels
+## Wat we onderweg tegenkwamen
 
-- **Hoogovens (106)** — de website in de tabel wijst naar het deelnemerportaal.
-  De echte site is `www.pfhoogovens.nl`, maar de documentenpagina daar laadt via
-  JavaScript en levert ook gerenderd nul PDF-links op; het verslag zit
-  waarschijnlijk achter een login. Corrigeer sowieso `funds.website`.
-- **Detailhandel (17)** — de zoeker vond hier "Voortgang Thematische Dialogen
-  juli-december 2025" van het Dutch Engagement Network en hield dat voor het
-  jaarverslag. Dat is sinds deze week afgevangen. Hun eigen verslagenpagina
-  (`/onze-organisatie/publicaties/jaarverslag`) eindigde bij 2024.
-- **SABIC (126)** — `spf-pensioenen.nl` heeft verslagen tot en met 2023 op
-  `/client/spfpensioen/upload/jaarverslagen/nl/`. Drie runs pakten daar een
-  willekeurig oud verslag; 2025 stond er niet bij.
-- **Oak (181)** — publiceert volgens de eerdere scrape alleen een verkort
-  jaarverslag, en dat filtert de zoeker bewust weg.
-- **Gomacon (101)** — geen eigen fondssite in de tabel.
-- **Mediahuis (50)** — het nieuwste stuk op de documentenpagina is het
-  MVB-verslag, niet het jaarverslag.
+Een verslag verstopt zich op meer manieren dan je zou denken. Vijf fondsen die
+hier als "niet gevonden" stonden bleken het gewoon online te hebben, en elk
+daarvan legde een eigen blinde vlek bloot. Alle vijf zijn inmiddels in de
+zoeker gerepareerd, maar het loont om ze te kennen als je met de hand zoekt:
+
+- **Het jaartal hoeft niet in de bestandsnaam te staan.** Detailhandel
+  publiceert zijn verslag als `Jaarverslag_Pensioenfonds_Detailhandel_Spreads.pdf`
+  en zet 2025 alleen in de linktekst.
+- **Een document hoeft niet op `.pdf` te eindigen.** Hoogovens serveert het op
+  `/meer-informatie/documenten/jaarverslag-2025/`, een download-endpoint.
+- **Het hoeft niet op het eigen domein te staan.** SABIC hangt zijn verslag op
+  `decisiontool.nl`, Gasunie op het subdomein `publicaties.`.
+- **Twee jaartallen in een regel is normaal.** "Jaarverslag SPF 2025 (juli 2026)"
+  -- het tweede getal is de publicatiemaand, niet het boekjaar.
+- **De site in de tabel kan de verkeerde zijn.** Bij Hoogovens stond het
+  deelnemerportaal, bij SPIN een oud adres. Controleer dat eerst.
+
+Verder: **Gasunie blokkeert een headless browser met 403.** Daar helpt geen
+crawl-logica tegen; zulke sites blijven handwerk.
 
 ## Twee clusters die je apart kunt aanpakken
 
-**Zes fondsen hebben helemaal geen website in de tabel** (134 Tobacon, 224 Kring
-E-DC, 225 Kring G-Cargill, 226 Kring H NN CDC, 229 Kring Flexibele Regeling,
-230 Pensioenkring Cargill). Het zijn kringen binnen een algemeen pensioenfonds;
-hun deelverslagen staan op de site van het APF zelf — De Nationale APF
-(`denationaleapf.nl`) respectievelijk Het Nederlandse Pensioenfonds
+**Fondsen zonder website in de tabel** zijn kringen binnen een algemeen
+pensioenfonds; hun deelverslagen staan op de site van het APF zelf -- De
+Nationale APF (`denationaleapf.nl`) of Het Nederlandse Pensioenfonds
 (`hetnederlandsepensioenfonds.nl`). Zonder `funds.website` komt de zoeker daar
-nooit, dus die kolom invullen is hier de eerste stap en niet het zoeken zelf.
-Let op dat de keuring bij een kring eist dat de kringnaam op de omslag staat:
-het koepelverslag noemt álle kringen en wordt daarom terecht geweigerd.
+nooit, dus die kolom invullen is hier de eerste stap. Let op dat de keuring bij
+een kring eist dat de kringnaam op de omslag staat: het koepelverslag noemt alle
+kringen en wordt daarom terecht geweigerd.
 
-**Vier fondsen leveren aantoonbaar hun verslag over 2024** (131 TDV, 81 Brocacef,
-127 Sagittarius, 130 Sportfondsen). De zoeker vindt daar keurig het nieuwste
-stuk dat er staat, en dat is 2024. Dat is dus geen zoekfout maar een fonds dat
-nog niet heeft gepubliceerd. Zet die onderaan je lijst en controleer over een
-paar maanden opnieuw.
+**Fondsen waarvan de reden "draagt boekjaar 2024" is** hebben simpelweg nog niet
+gepubliceerd. De zoeker vindt daar netjes het nieuwste stuk dat er staat. Zet
+die onderaan en kijk over een paar maanden opnieuw.
 
 ## Laatste redmiddel
 
-Staat een verslag echt nergens op de fondssite, dan is het jaarrekeningdeel vaak
-wel bij DNB of via de KvK te vinden. Voor ingevaren fondsen loont het om bij de
-nieuwe uitvoerder te kijken: NN CDC's verslag over 2025 verscheen onder de eigen
-naam, maar de opvolger publiceert voortaan bij De Nationale APF.
+Staat een verslag echt nergens, dan is het jaarrekeningdeel vaak wel bij DNB of
+via de KvK te vinden. Voor ingevaren fondsen loont het om bij de nieuwe
+uitvoerder te kijken.
