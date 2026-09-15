@@ -1,0 +1,83 @@
+{
+ "fund_id": 158,
+ "naam": "IFF",
+ "pad": "data/annual_reports/158_IFF_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -0.7,
+   "2024": null,
+   "pagina": 5,
+   "letterlijk": "Beleggingsrendement risico pensioenkring -0,7% (periode 1 oktober 2025 t/m 31 december 2025)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 141.1,
+   "2024": null,
+   "pagina": 5,
+   "letterlijk": "Beleidsdekkingsgraad 141,1%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 147.6,
+   "2024": null,
+   "pagina": 5,
+   "letterlijk": "Feitelijke dekkingsgraad 147,6%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 103.0,
+   "2024": null,
+   "pagina": 21,
+   "letterlijk": "Reële dekkingsgraad 103,0"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 116.1,
+   "2024": null,
+   "pagina": 5,
+   "letterlijk": "Vereiste dekkingsgraad 116,1%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.469423,
+   "2024": null,
+   "pagina": 58,
+   "letterlijk": "Beleggingen voor risico Pensioenkring IFF (bedragen x € 1.000) 469.423"
+  },
+  "deelnemers_actief": {
+   "2025": 1097,
+   "2024": null,
+   "pagina": 5,
+   "letterlijk": "Actieven en arbeidsongeschikten 1.097"
+  },
+  "deelnemers_slapers": {
+   "2025": 1182,
+   "2024": null,
+   "pagina": 5,
+   "letterlijk": "Gewezen deelnemers 1.182"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 573,
+   "2024": null,
+   "pagina": 5,
+   "letterlijk": "Pensioengerechtigden 573"
+  },
+  "deelnemers_totaal": {
+   "2025": 2852,
+   "2024": null,
+   "pagina": 5,
+   "letterlijk": "Totaal 2.852"
+  },
+  "rente_afdekking_pct": {
+   "2025": 70.3,
+   "2024": null,
+   "pagina": 75,
+   "letterlijk": "Het percentage afdekking van het renterisico van 70,3% (risicoparagraaf)"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-16",
+  "pagina": 87
+ },
+ "invaardatum": {
+  "datum": null,
+  "status": "geen datum genoemd",
+  "pagina": null
+ },
+ "opmerkingen": "Pensioenkring IFF bestaat pas sinds 1 oktober 2025 (CWO vanuit Stichting Pensioenfonds IFF): geen 2024-cijfers in dit verslag en het rendement -0,7% betreft alleen Q4 2025 - NIET vergelijkbaar met een jaarrendement. Verslag BO (p31) noemt dg 'van 130,9% naar 147,6%' en beleidsdg 'van 134,3% naar 141,1%' (startwaarden onduidelijk). Beleidsdg deels gebaseerd op dekkingsgraden oude fonds. Strategische renteafdekking vast 70,0% (p28). Geen invaardatum gevonden."
+}

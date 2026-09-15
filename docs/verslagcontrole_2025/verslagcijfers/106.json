@@ -1,0 +1,83 @@
+{
+ "fund_id": 106,
+ "naam": "Hoogovens",
+ "pad": "data/annual_reports/106_Hoogovens_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": 2.7,
+   "2024": 8.1,
+   "pagina": 9,
+   "letterlijk": "Rendement in % - Beleggingen (netto rendement na kosten) 2,7 | 8,1"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 129.8,
+   "2024": 123.8,
+   "pagina": 9,
+   "letterlijk": "Beleidsdekkingsgraad (in %) 129,8 | 123,8"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 137.1,
+   "2024": 122.2,
+   "pagina": 9,
+   "letterlijk": "Actuele dekkingsgraad (in %) 137,1 | 122,2"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 96.9,
+   "2024": 93.9,
+   "pagina": 9,
+   "letterlijk": "Reële dekkingsgraad (in %) 96,9 | 93,9"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 124.2,
+   "2024": 123.5,
+   "pagina": 9,
+   "letterlijk": "Vereiste dekkingsgraad op basis van strategische mix (in %) 124,2 | 123,5"
+  },
+  "aum_euro_bn": {
+   "2025": 10.446,
+   "2024": 10.403,
+   "pagina": 9,
+   "letterlijk": "Beleggingen voor risico pensioenfonds 10.446 | 10.403 (Bedragen in miljoen €)"
+  },
+  "deelnemers_actief": {
+   "2025": 9873,
+   "2024": 10301,
+   "pagina": 9,
+   "letterlijk": "Actieve deelnemers 9.873 | 10.301"
+  },
+  "deelnemers_slapers": {
+   "2025": 4469,
+   "2024": 4199,
+   "pagina": 9,
+   "letterlijk": "Gewezen deelnemers 4.469 | 4.199"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 14192,
+   "2024": 14203,
+   "pagina": 9,
+   "letterlijk": "Pensioengerechtigden 1 14.192 | 14.203 (incl. ingegane AO-pensioenen)"
+  },
+  "deelnemers_totaal": {
+   "2025": 28534,
+   "2024": 28703,
+   "pagina": 9,
+   "letterlijk": "Totaal 28.534 | 28.703"
+  },
+  "rente_afdekking_pct": {
+   "2025": 44,
+   "2024": null,
+   "pagina": 14,
+   "letterlijk": "Eind 2025 was 44% van het renterisico afgedekt."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-09",
+  "pagina": 3
+ },
+ "invaardatum": {
+  "datum": "2027-01-01",
+  "status": "gepland",
+  "pagina": 7
+ },
+ "opmerkingen": "Vereiste dekkingsgraad: strategische mix 124,2% gekozen; op basis van feitelijke mix 125,4% (2024: 124,3%). Renteafdekking 2024 niet expliciet ultimo genoemd (in 2025 verhoogd 'van 36% naar 40%', eind 2025 44%; besloten tot 48% via stappen dec 2025/jan 2026). AUM excl. beleggingen risico deelnemers (3 mln); incl. derivaten met negatieve waarde."
+}

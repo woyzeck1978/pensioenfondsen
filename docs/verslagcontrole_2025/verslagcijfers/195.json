@@ -1,0 +1,83 @@
+{
+ "fund_id": 195,
+ "naam": "Pensioenkring Xerox (Hnp)",
+ "pad": "data/annual_reports/165_Kring_Arcadis_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -0.5,
+   "2024": 7.65,
+   "pagina": 32,
+   "letterlijk": "Beleggingsrendement (in %) -0,50% 7,65%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 120.4,
+   "2024": 116.1,
+   "pagina": 31,
+   "letterlijk": "Beleidsdekkingsgraad (in %) 120,4% 116,1%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 123.5,
+   "2024": 116.2,
+   "pagina": 31,
+   "letterlijk": "Aanwezige dekkingsgraad (in %) 123,5% 116,2%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 92.5,
+   "2024": 89.4,
+   "pagina": 31,
+   "letterlijk": "Reële dekkingsgraad (in %) 92,5% 89,4%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 113.8,
+   "2024": 115.1,
+   "pagina": 31,
+   "letterlijk": "Vereiste dekkingsgraad (in %) 113,8% 115,1%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.687713,
+   "2024": 0.745197,
+   "pagina": 32,
+   "letterlijk": "Totaal beleggingen 687.713 745.197 (x EUR 1.000)"
+  },
+  "deelnemers_actief": {
+   "2025": 21,
+   "2024": 23,
+   "pagina": 31,
+   "letterlijk": "Aantal actieve deelnemers 21 23"
+  },
+  "deelnemers_slapers": {
+   "2025": 2056,
+   "2024": 2138,
+   "pagina": 31,
+   "letterlijk": "Aantal gewezen deelnemers 2.056 2.138"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 2463,
+   "2024": 2451,
+   "pagina": 31,
+   "letterlijk": "Aantal pensioengerechtigden 2.463 2.451"
+  },
+  "deelnemers_totaal": {
+   "2025": 4540,
+   "2024": 4612,
+   "pagina": 31,
+   "letterlijk": "4.540 4.612"
+  },
+  "rente_afdekking_pct": {
+   "2025": 83.0,
+   "2024": null,
+   "pagina": 425,
+   "letterlijk": "De feitelĳke renteafdekking per ultimo 2025 bedroeg 83,0%"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-30",
+  "pagina": 911
+ },
+ "invaardatum": {
+  "datum": "2028-01-01",
+  "status": "gepland",
+  "pagina": 434
+ },
+ "opmerkingen": "Cijfers uit het eigen kerncijferhoofdstuk van de kring (Jaarverslag 2025 Stichting Het Nederlandse Pensioenfonds, bedragen x EUR 1.000). AUM = 'Totaal beleggingen' uit de kerncijfers (na aftrek negatieve derivaten). Nominale dekkingsgraad = 'Aanwezige dekkingsgraad'. Vaststellingsdatum = ondertekening jaarrekening (Badhoevedorp, 30 juni 2026, p.911; ondertekening bestuursverslag p.438 zelfde datum). Renteafdekking 2024 niet opgezocht/genoemd. Kring opgericht 1 januari 2024. Renteafdekking-norm 80%. 'Uitgangspunt voor Pensioenkring Xerox is een nieuwe pensioenregeling ingaande op 1 januari 2028' (p.434)."
+}

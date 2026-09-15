@@ -1,0 +1,83 @@
+{
+ "fund_id": 183,
+ "naam": "Pensioenkring 2 (Stap)",
+ "pad": "data/annual_reports/183_Pensioenkring_2_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -2.7,
+   "2024": 7.0,
+   "pagina": 5,
+   "letterlijk": "Beleggingsrendement Per jaar -2,7% 7,0%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 122.8,
+   "2024": 118.3,
+   "pagina": 5,
+   "letterlijk": "Beleidsdekkingsgraad 122,8% 118,3%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 127.8,
+   "2024": 117.4,
+   "pagina": 5,
+   "letterlijk": "Feitelijke dekkingsgraad 127,8% 117,4%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 91.1,
+   "2024": 88.8,
+   "pagina": 23,
+   "letterlijk": "Reële dekkingsgraad 91,1 88,8"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 113.9,
+   "2024": 113.1,
+   "pagina": 5,
+   "letterlijk": "Vereiste dekkingsgraad 113,9% 113,1%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.961065,
+   "2024": 0.986729,
+   "pagina": 63,
+   "letterlijk": "Beleggingen voor risico Multi-client Pensioenkring 2 961.065 986.729 (bedragen x € 1.000)"
+  },
+  "deelnemers_actief": {
+   "2025": 343,
+   "2024": 353,
+   "pagina": 5,
+   "letterlijk": "Actieven en arbeidsongeschikten 343 353"
+  },
+  "deelnemers_slapers": {
+   "2025": 6636,
+   "2024": 6843,
+   "pagina": 5,
+   "letterlijk": "Gewezen deelnemers 6.636 6.843"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 1756,
+   "2024": 1619,
+   "pagina": 5,
+   "letterlijk": "Pensioengerechtigden 1.756 1.619"
+  },
+  "deelnemers_totaal": {
+   "2025": 8735,
+   "2024": 8815,
+   "pagina": 5,
+   "letterlijk": "Totaal 8.735 8.815"
+  },
+  "rente_afdekking_pct": {
+   "2025": 85.0,
+   "2024": 70.0,
+   "pagina": 32,
+   "letterlijk": "Gedurende 2025 is de strategische mate van afdekking van het renterisico verhoogd van 70,0% naar 85,0%."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-16",
+  "pagina": 98
+ },
+ "invaardatum": {
+  "datum": "2028-01-01",
+  "status": "gepland",
+  "pagina": 38
+ },
+ "opmerkingen": "Kringcijfers uit deel-jaarverslag Stap. Rente-afdekking is de strategische afdekking (geen feitelijk ultimo-percentage genoemd); 2024-waarde 70% = strategisch niveau voor verhoging. AUM = beleggingen voor risico kring (activa); pensioenvermogen is 830.184 (x1000). Vaststelling betreft de financiële opstelling ('Het bestuur heeft op 16 juni 2026 deze financiële opstelling vastgesteld'). Invaren: eind 2024 nog 'niet mogelijk', in 2025 heropend; p38 'beoogde transitie naar de solidaire premieregeling per 1 januari 2028'. Rendement bevat overlay (-3,3% bijdrage)."
+}

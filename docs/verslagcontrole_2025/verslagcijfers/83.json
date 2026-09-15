@@ -1,0 +1,83 @@
+{
+ "fund_id": 83,
+ "naam": "Capgemini / Capgemini Nederland",
+ "pad": "data/annual_reports/83_Capgemini_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": 0.4,
+   "2024": 7.8,
+   "pagina": 7,
+   "letterlijk": "Return o.b.v. total return (risico pensioenfonds) 0,40% 7,80%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 114.0,
+   "2024": 110.5,
+   "pagina": 8,
+   "letterlijk": "Beleidsdekkingsgraad 114,0% 110,5%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 118.1,
+   "2024": 109.7,
+   "pagina": 8,
+   "letterlijk": "Dekkingsgraad 118,1% 109,7%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 108.1,
+   "2024": 108.9,
+   "pagina": 8,
+   "letterlijk": "Vereiste dekkingsgraad 108,1% 108,9%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.627936,
+   "2024": 0.659509,
+   "pagina": 7,
+   "letterlijk": "Belegd vermogen voor risico pensioenfonds (in duizenden euro) 627.936 659.509"
+  },
+  "deelnemers_actief": {
+   "2025": 5235,
+   "2024": 5177,
+   "pagina": 7,
+   "letterlijk": "Deelnemers 5.235 5.177"
+  },
+  "deelnemers_slapers": {
+   "2025": 10852,
+   "2024": 10359,
+   "pagina": 7,
+   "letterlijk": "Gewezen deelnemers 10.852 10.359"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 1848,
+   "2024": 1654,
+   "pagina": 7,
+   "letterlijk": "Pensioengerechtigden 1.848 1.654"
+  },
+  "deelnemers_totaal": {
+   "2025": 17935,
+   "2024": 17190,
+   "pagina": 7,
+   "letterlijk": "Totaal 17.935 17.190"
+  },
+  "rente_afdekking_pct": {
+   "2025": 66.1,
+   "2024": null,
+   "pagina": 94,
+   "letterlijk": "De feitelijke renteafdekking op basis van de DNB-methodiek bedraagt 66,1% eind 2025."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-25",
+  "pagina": 101
+ },
+ "invaardatum": {
+  "datum": null,
+  "status": "vaart niet in",
+  "pagina": 100
+ },
+ "opmerkingen": "Fonds vaart niet zelf in: nieuwe opbouw vanaf 1-1-2026 bij BeFrank PPI, DC-beleggingen per 1-4-2026 overgedragen, DB-regeling en CVP-uitkeringen beoogd per 1-10-2026 via collectieve waardeoverdracht naar De Nationale APF; liquidatie verwacht Q2 2027 (p100). AUM excl. beleggingen risico deelnemers 437.777k (2024: 389.406k). Dekkingsgraad incl. DC-voorziening (vereiste dg incl. afname 7,5%-punt voor toerekening). Reële dekkingsgraad niet gevonden. Strategische renteafdekking 60% (= 62,8% DNB-methodiek)."
+}

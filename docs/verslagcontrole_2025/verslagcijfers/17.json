@@ -1,0 +1,83 @@
+{
+ "fund_id": 17,
+ "naam": "Detailhandel (Retail)",
+ "pad": "data/annual_reports/17_Detailhandel_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -4.8,
+   "2024": 9.2,
+   "pagina": 13,
+   "letterlijk": "Bruto rendement op totale beleggingen -4,8% 9,2%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 127.3,
+   "2024": 121.8,
+   "pagina": 13,
+   "letterlijk": "Beleidsdekkingsgraad 127,3% 121,8%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 137.1,
+   "2024": 117.2,
+   "pagina": 13,
+   "letterlijk": "Aanwezige dekkingsgraad 137,1% 117,2%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 90.2,
+   "2024": 89.5,
+   "pagina": 26,
+   "letterlijk": "reële dekkingsgraad van 90,2%. Dit is iets hoger dan eind 2024 (89,5%)"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 120.3,
+   "2024": 118.7,
+   "pagina": 13,
+   "letterlijk": "Vereiste dekkingsgraad 120,3% 118,7%"
+  },
+  "aum_euro_bn": {
+   "2025": 39.242037,
+   "2024": 37.400702,
+   "pagina": 96,
+   "letterlijk": "Beleggingen voor risico pensioenfonds (bedragen x € 1.000) 39.242.037 37.400.702"
+  },
+  "deelnemers_actief": {
+   "2025": 371769,
+   "2024": 366980,
+   "pagina": 13,
+   "letterlijk": "Actieve deelnemers (inclusief AO) 371.769 366.980"
+  },
+  "deelnemers_slapers": {
+   "2025": 785575,
+   "2024": 751937,
+   "pagina": 13,
+   "letterlijk": "Gewezen deelnemers 785.575 751.937"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 173347,
+   "2024": 168771,
+   "pagina": 13,
+   "letterlijk": "Gepensioneerden 173.347 168.771"
+  },
+  "deelnemers_totaal": {
+   "2025": 1330691,
+   "2024": 1287688,
+   "pagina": 13,
+   "letterlijk": "Totaal 1.330.691 1.287.688"
+  },
+  "rente_afdekking_pct": {
+   "2025": 70.0,
+   "2024": 70.0,
+   "pagina": 122,
+   "letterlijk": "het renterisico voor 70% af te dekken (2024: 70%)"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-24",
+  "pagina": 138
+ },
+ "invaardatum": {
+  "datum": "2027-01-01",
+  "status": "gepland",
+  "pagina": 21
+ },
+ "opmerkingen": "Rendement -4,8% is bruto incl. valuta- en renteafdekking; netto -4,9%, excl. afdekking +3,5% (p52). AUM = balanspost bruto incl. positieve derivaten (6,03 mld); na aftrek schuldpositie derivaten 31,77 mld (p108), pensioenvermogen 32,74 mld. Deelnemers: meerjarenoverzicht bijlage (p160) wijkt af: deelnemers 371.581 en gepensioneerden 173.535 (totaal gelijk). Renteafdekking 70% is beleidspercentage, geen gerealiseerde ultimo-waarde. Invaardatum uitgesteld van 1-1-2026 naar 1-1-2027 (besluit september 2025). Bestuursverslag en jaarrekening getekend Utrecht, 24 juni 2026 (p82, p138)."
+}

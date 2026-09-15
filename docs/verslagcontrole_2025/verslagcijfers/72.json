@@ -1,0 +1,83 @@
+{
+ "fund_id": 72,
+ "naam": "Achmea",
+ "pad": "data/annual_reports/72_Achmea_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -3.7,
+   "2024": 8.1,
+   "pagina": 33,
+   "letterlijk": "Totaal portefeuille -3,7% -3,2% -0,5% 8,1% (kop Portefeuille 2025 Benchmark 2025 Excess 2025 Portefeuille 2024)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 141.4,
+   "2024": 136.4,
+   "pagina": 8,
+   "letterlijk": "Beleidsdekkingsgraad 141,4 136,4 137,5 (kop 2025 2024 2023)"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 147.8,
+   "2024": 133.1,
+   "pagina": 8,
+   "letterlijk": "Actuele dekkingsgraad 147,8 133,1 132,6"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 102.3,
+   "2024": 100.9,
+   "pagina": 51,
+   "letterlijk": "Wettelijke reële dekkingsgraad 102,3 100,9 100,5 (kop 31-12-2025 31-12-2024)"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 117.2,
+   "2024": 116.9,
+   "pagina": 8,
+   "letterlijk": "Vereiste dekkingsgraad 117,2 116,9 116,4"
+  },
+  "aum_euro_bn": {
+   "2025": 9.425425,
+   "2024": 9.745691,
+   "pagina": 8,
+   "letterlijk": "Verdeling beleggingsportefeuille voor risico fonds (x € 1.000) Totaal beleggingen 9.425.425 9.745.691"
+  },
+  "deelnemers_actief": {
+   "2025": 12829,
+   "2024": 12358,
+   "pagina": 8,
+   "letterlijk": "Actieve deelnemers 12.829 12.358 12.135"
+  },
+  "deelnemers_slapers": {
+   "2025": 19502,
+   "2024": 19606,
+   "pagina": 8,
+   "letterlijk": "Gewezen deelnemers 19.502 19.606 19.685"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 8743,
+   "2024": 8139,
+   "pagina": 8,
+   "letterlijk": "Pensioengerechtigden 8.743 8.139 7.628"
+  },
+  "deelnemers_totaal": {
+   "2025": 41074,
+   "2024": 40103,
+   "pagina": 8,
+   "letterlijk": "41.074 40.103 39.448 (totaalregel zonder label)"
+  },
+  "rente_afdekking_pct": {
+   "2025": 80.0,
+   "2024": null,
+   "pagina": 106,
+   "letterlijk": "In 2025 dekte het fonds 80% af van het renterisico van de verplichtingen op basis van marktrente"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-18",
+  "pagina": 121
+ },
+ "invaardatum": {
+  "datum": "2027-07-01",
+  "status": "gepland",
+  "pagina": 15
+ },
+ "opmerkingen": "AUM: 'Totaal beleggingen' 9.425.425 (na aftrek derivaten met negatieve waarde); balanspost 'Beleggingen'/'Totaal beleggingen activa' is 10.815.340 (2024: 10.668.657) - andere definitie. Rendement -3,7% is bruto, inclusief rente-afdekking (-8,3%); netto na 0,48% kosten -4,24% (p45). 2024-benchmarkkolommen ontbreken in tabel p33. Reële dekkingsgraad is de 'wettelijke reële dekkingsgraad' (beleidsdekkingsgraad / vereiste beleidsdekkingsgraad voor toeslagverlening). Rente-afdekking 80% in 2025, geen 2024-waarde gevonden. Vaststelling in vergadering van 18 juni 2026 (p121, ook p88); voorwoord gedateerd Apeldoorn 18 juni 2026. Geplande invaardatum 1 juli 2027."
+}

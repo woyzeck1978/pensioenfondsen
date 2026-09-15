@@ -1,0 +1,83 @@
+{
+ "fund_id": 5,
+ "naam": "Medisch Specialisten (SPMS - Medical Specialists)",
+ "pad": "data/annual_reports/5_Medisch_Specialisten_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -3.4,
+   "2024": 8.4,
+   "pagina": 7,
+   "letterlijk": "Netto-beleggingsrendement -3,4 8,4"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 147.5,
+   "2024": 143.8,
+   "pagina": 8,
+   "letterlijk": "De beleidsdekkingsgraad ... steeg van 143,8 procent naar 147,5 procent."
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 154.7,
+   "2024": 140.2,
+   "pagina": 8,
+   "letterlijk": "De actuele UFR-dekkingsgraad steeg van 140,2 procent naar 154,7 procent."
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 183.8,
+   "2024": null,
+   "pagina": 98,
+   "letterlijk": "De reële dekkingsgraad eind 2025 bedraagt derhalve (243,1%/132,3% =) 183,8%."
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 121.1,
+   "2024": 118.9,
+   "pagina": 8,
+   "letterlijk": "Het Vereiste Eigen Vermogen (VEV) steeg van 118,9 procent naar 121,1 procent"
+  },
+  "aum_euro_bn": {
+   "2025": 14.149911,
+   "2024": 13.986946,
+   "pagina": 75,
+   "letterlijk": "Beleggingen pensioenfonds 14.149.911 13.986.946 (duizenden euro's)"
+  },
+  "deelnemers_actief": {
+   "2025": 9239,
+   "2024": 9098,
+   "pagina": 6,
+   "letterlijk": "Actieve deelnemers totaal 9.239 9.098"
+  },
+  "deelnemers_slapers": {
+   "2025": 1944,
+   "2024": 1928,
+   "pagina": 6,
+   "letterlijk": "Premievrĳe rechten (slapers - gewezen deelnemers) totaal 1.944 1.928"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 8116,
+   "2024": 7953,
+   "pagina": 6,
+   "letterlijk": "Pensioentrekkenden 8.116 7.953"
+  },
+  "deelnemers_totaal": {
+   "2025": 19299,
+   "2024": 18979,
+   "pagina": 6,
+   "letterlijk": "Totaal 19.299 18.979"
+  },
+  "rente_afdekking_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-16",
+  "pagina": 78
+ },
+ "invaardatum": {
+  "datum": "2028-01-01",
+  "status": "gepland",
+  "pagina": 8
+ },
+ "opmerkingen": "PDF met versleutelingsfout bij pdfinfo, tekst leesbaar. LET OP kerncijfertabel p.6-7: koprij toont '2026 2025 2024 2023 2022 2021' maar er staan maar vijf waardekolommen; de eerste kolom is 2025 (bevestigd door p.21: 9.239 deelnemers per 31-12-2025, en p.8). Kerncijfertabel geeft dekkingsgraden afgerond (155/140, beleid 148/144, vereist 121/119); exacte waarden uit p.8. Bruto rendement -3,1%. Reële dekkingsgraad 183,8% volgens afwijkende definitie (nominale beleidsdekkingsgraad 243,1% / TBI-grens, want onvoorwaardelijke 3% toeslag). AUM 14,15 mrd is balanspost bruto; 'belegd vermogen ... 12,0 miljard' (p.8) na schulden uit hoofde van beleggingen (2.156.603). Feitelijke renteafdekking ultimo 2025 niet gevonden; strategisch 85% (p.99), IBI-benchmark 2024: 80%. Beoogde transitiedatum 1 januari 2028."
+}

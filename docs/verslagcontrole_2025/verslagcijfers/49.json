@@ -1,0 +1,83 @@
+{
+ "fund_id": 49,
+ "naam": "KLM Vliegend Personeel (Flight Crew)",
+ "pad": "data/annual_reports/49_KLM_Vliegend_Personeel_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -4.1,
+   "2024": 6.1,
+   "pagina": 7,
+   "letterlijk": "Rendement beleggingen voor risico pensioenfonds ... Totaalrendement -4,1% 6,1% (kop 2025 2024)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 157.8,
+   "2024": 161.5,
+   "pagina": 6,
+   "letterlijk": "Beleidsdekkingsgraad 157,8% 161,5%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 158.2,
+   "2024": 152.5,
+   "pagina": 6,
+   "letterlijk": "Nominale dekkingsgraad 158,2% 152,5%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 115.1,
+   "2024": 104.4,
+   "pagina": 6,
+   "letterlijk": "Reële dekkingsgraad 115,1% 104,4%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 116.7,
+   "2024": 116.5,
+   "pagina": 6,
+   "letterlijk": "Vereiste dekkingsgraad volgens FTK 116,7% 116,5%"
+  },
+  "aum_euro_bn": {
+   "2025": 10.0274,
+   "2024": 10.6211,
+   "pagina": 6,
+   "letterlijk": "(bedragen in miljoenen euro's) Beleggingen voor risico pensioenfonds ... Totaal 10.027,4 10.621,1"
+  },
+  "deelnemers_actief": {
+   "2025": 3603,
+   "2024": 3440,
+   "pagina": 6,
+   "letterlijk": "Aantal actieve deelnemers 3.603 3.440"
+  },
+  "deelnemers_slapers": {
+   "2025": 73,
+   "2024": 85,
+   "pagina": 6,
+   "letterlijk": "Aantal gewezen deelnemers 73 85"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 2494,
+   "2024": 2449,
+   "pagina": 6,
+   "letterlijk": "Aantal pensioengerechtigden 2.494 2.449"
+  },
+  "deelnemers_totaal": {
+   "2025": 6170,
+   "2024": 5974,
+   "pagina": 6,
+   "letterlijk": "Totaal 6.170 5.974"
+  },
+  "rente_afdekking_pct": {
+   "2025": 120,
+   "2024": 111,
+   "pagina": 101,
+   "letterlijk": "De hoogte van de afdekking bedraagt ultimo 2025 ongeveer 120% (2024: ongeveer 111%)"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-10",
+  "pagina": 126
+ },
+ "invaardatum": {
+  "datum": "2027-01-01",
+  "status": "gepland",
+  "pagina": 2
+ },
+ "opmerkingen": "Rendement is totaalrendement beleggingen voor risico pensioenfonds (incl. matching); risico deelnemers (netto regeling) 1,7%. Bruto totaalrendement -4,0%, netto -4,5% (p52). AUM = beleggingen voor risico pensioenfonds (10.027,4 mln); totaal belegd vermogen incl. risico deelnemers volgens voorwoord 10,28 mld. Renteafdekking ~120% volgens duration-tabel (p101), gemeten o.b.v. marktrente. Vereiste dekkingsgraad o.b.v. strategische mix; feitelijke mix ook 116,7% (2024: 116,8%). Transitiedatum uitgesteld van 1-1-2026 naar 1-1-2027; transitiebesluit begin maart 2026. Vaststelling: ondertekening bestuur en RvT 'Amstelveen, 10 juni 2026' (p126)."
+}

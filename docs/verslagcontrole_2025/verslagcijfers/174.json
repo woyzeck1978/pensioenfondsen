@@ -1,0 +1,83 @@
+{
+ "fund_id": 174,
+ "naam": "Kring Progress (Unilever)",
+ "pad": "data/annual_reports/68_Unilever_APF_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": 0.6,
+   "2024": 6.9,
+   "pagina": 57,
+   "letterlijk": "Progress: Gewogen rendement (incl. derivaten en overige beleggingen) 0,6% 6,9%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 173.3,
+   "2024": 167.3,
+   "pagina": 109,
+   "letterlijk": "Progress: Beleidsdekkingsgraad 173,3% 167,3%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 179.6,
+   "2024": 166.7,
+   "pagina": 109,
+   "letterlijk": "Progress: Actuele dekkingsgraad 179,6% 166,7%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 128.4,
+   "2024": 127.6,
+   "pagina": 109,
+   "letterlijk": "Progress: Reële dekkingsgraad 128,4% 127,6%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 112.0,
+   "2024": 114.1,
+   "pagina": 109,
+   "letterlijk": "Progress: Vereiste dekkingsgraad 112,0% 114,1%"
+  },
+  "aum_euro_bn": {
+   "2025": 5.227,
+   "2024": 5.685,
+   "pagina": 57,
+   "letterlijk": "Progress kerncijfers (bedragen in miljoenen euro's): Totaal belegd vermogen 5.227 5.685"
+  },
+  "deelnemers_actief": {
+   "2025": 761,
+   "2024": 909,
+   "pagina": 57,
+   "letterlijk": "Progress: Deelnemers voor wie wordt bijgedragen 761 909"
+  },
+  "deelnemers_slapers": {
+   "2025": 6008,
+   "2024": 6211,
+   "pagina": 57,
+   "letterlijk": "Progress: Deelnemers met premievrije aanspraken 6.008 6.211"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 9919,
+   "2024": 10072,
+   "pagina": 57,
+   "letterlijk": "Progress: Pensioengerechtigden 9.919 10.072"
+  },
+  "deelnemers_totaal": {
+   "2025": 16688,
+   "2024": 17192,
+   "pagina": 57,
+   "letterlijk": "Progress: Totaal 16.688 17.192"
+  },
+  "rente_afdekking_pct": {
+   "2025": 93,
+   "2024": 91,
+   "pagina": 106,
+   "letterlijk": "Progress: ongeveer 93% van de rentemismatch (rentegevoeligheid van de kring) afgedekt. Per eind 2024 was dit ongeveer 91%."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-05-26",
+  "pagina": 71
+ },
+ "invaardatum": {
+  "datum": null,
+  "status": "vaart niet in",
+  "pagina": 4
+ },
+ "opmerkingen": "Uit het verslag van Unilever APF, hoofdstuk kring Progress (oorspronkelijk door batch 2 onder fund 68 gezet). AANNAME: dit APF-verslag bevat twee kringen, Forward en Progress. Kring Forward heeft een eigen fund_id (172, eigen PDF) in een andere batch; daarom zijn hier de cijfers van KRING PROGRESS ingevuld (geen APF-totaal). Controleer of fund 68 inderdaad Progress representeert. Forward ter vergelijking: rendement -2,3% (10,3%), beleidsdg 171,6% (151,3%), actueel 185,4% (145,1%), renteafdekking eind 2025 50,8%, invaren per 1-1-2027. Progress blijft in het huidige stelsel (p4: 'Voor de gesloten kring Progress verandert er niets'). Progress 'deelnemers voor wie wordt bijgedragen' = actieven (opbouw gestopt per 1-4-2015). Renteafdekking 93% via renteswaps op rentemismatch; strategisch 90% sinds 2023 (p53). Vaststelling 'Rotterdam, 26 mei 2026' (p29/p71)."
+}

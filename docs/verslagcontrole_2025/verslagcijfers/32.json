@@ -1,0 +1,84 @@
+{
+ "fund_id": 32,
+ "invaardatum": {
+  "datum": null,
+  "pagina": null,
+  "status": "geen datum genoemd"
+ },
+ "opmerkingen": "PGB (fund 32): Deelnemers actief staat op pag. 12 letterlijk vermeld als '128.186 deelnemers die pensioen opbouwen'. In de tabel op pag. 13 is dit uitgesplitst in premiebetalende deelnemers (121.452 in 2025; 121.855 in 2024) en deelnemers met toekenning wegens arbeidsongeschiktheid (6.734 in 2025; 6.313 in 2024; som 2024 = 128.168). Deelnemers totaal op pag. 13 betreft de som van actieven en premievrije deelnemers/slapers (353.494 in 2025; 347.520 in 2024); inclusief pensioengerechtigden zou het totaal 459.484 zijn (105.990 pensioenen). Vereiste dekkingsgraad: 116,6% o.b.v. werkelijke beleggingsportefeuille (124,5% in 2024); o.b.v. strategische beleggingsportefeuille bedraagt deze 120,2% (121,7% in 2024). Belegd vermogen staat in de tabel als 34.567 miljoen euro (pag. 12 vermeldt afgerond € 34,6 miljard). Vaststellingsdatum van het jaarverslag door het bestuur en invaardatum Wtp worden niet genoemd in de verstrekte uitsnede.",
+ "vaststellingsdatum": {
+  "datum": null,
+  "pagina": null
+ },
+ "velden": {
+  "aum_euro_bn": {
+   "2024": 34.927,
+   "2025": 34.567,
+   "letterlijk": "Totale waarde beleggingsportefeuille inclusief negatieve derivaten 34.567 (miljoenen euro's)",
+   "pagina": 13
+  },
+  "beleggingsrendement_pct": {
+   "2024": 9.4,
+   "2025": 0.1,
+   "letterlijk": "Totaal rendement in % 0,1",
+   "pagina": 13
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2024": 116.2,
+   "2025": 123.9,
+   "letterlijk": "Beleidsdekkingsgraad in % 123,9",
+   "pagina": 13
+  },
+  "deelnemers_actief": {
+   "2024": 128168,
+   "2025": 128186,
+   "letterlijk": "128.186 deelnemers die pensioen opbouwen",
+   "pagina": 12
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2024": 103233,
+   "2025": 105990,
+   "letterlijk": "Totaal 105.990",
+   "pagina": 13
+  },
+  "deelnemers_slapers": {
+   "2024": 219352,
+   "2025": 225308,
+   "letterlijk": "Premievrije deelnemers¹ 225.308",
+   "pagina": 13
+  },
+  "deelnemers_totaal": {
+   "2024": 347520,
+   "2025": 353494,
+   "letterlijk": "Totaal 353.494",
+   "pagina": 13
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2024": 116.7,
+   "2025": 131.5,
+   "letterlijk": "UFR-dekkingsgraad in % 131,5",
+   "pagina": 13
+  },
+  "reele_dekkingsgraad_pct": {
+   "2024": 87.7,
+   "2025": 91.5,
+   "letterlijk": "Reële dekkingsgraad in % 91,5",
+   "pagina": 13
+  },
+  "rente_afdekking_pct": {
+   "2024": 70,
+   "2025": 74,
+   "letterlijk": "Aan het eind van het verslagjaar bedroeg de renteafdekking 74 procent (2024: 70 procent)",
+   "pagina": 113
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2024": 124.5,
+   "2025": 116.6,
+   "letterlijk": "Vereist vermogen in % o.b.v. werkelijke beleggingsportefeuille 116,6",
+   "pagina": 13
+  }
+ },
+ "naam": "PGB (Various Industries)",
+ "pad": "data/annual_reports/32_PGB_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

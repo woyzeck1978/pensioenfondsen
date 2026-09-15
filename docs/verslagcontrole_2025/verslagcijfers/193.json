@@ -1,0 +1,83 @@
+{
+ "fund_id": 193,
+ "naam": "Kring Van Lanschot (HNPF)",
+ "pad": "data/annual_reports/193_Kring_Van_Lanschot_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 127.4,
+   "2024": null,
+   "pagina": 27,
+   "letterlijk": "Beleidsdekkingsgraad (in %) 127,4%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 130.6,
+   "2024": null,
+   "pagina": 27,
+   "letterlijk": "Aanwezige dekkingsgraad (in %) 130,6%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 94.9,
+   "2024": null,
+   "pagina": 27,
+   "letterlijk": "Reële dekkingsgraad (in %) 94,9%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 113.7,
+   "2024": null,
+   "pagina": 27,
+   "letterlijk": "Vereiste dekkingsgraad (in %) 113,7%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.900837,
+   "2024": null,
+   "pagina": 28,
+   "letterlijk": "Totaal beleggingen 900.837 (bedragen in duizenden euro's)"
+  },
+  "deelnemers_actief": {
+   "2025": 38,
+   "2024": null,
+   "pagina": 27,
+   "letterlijk": "Aantal actieve deelnemers 38"
+  },
+  "deelnemers_slapers": {
+   "2025": 3013,
+   "2024": null,
+   "pagina": 27,
+   "letterlijk": "Aantal gewezen deelnemers 3.013"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 1009,
+   "2024": null,
+   "pagina": 27,
+   "letterlijk": "Aantal pensioengerechtigden 1.009"
+  },
+  "deelnemers_totaal": {
+   "2025": 4060,
+   "2024": null,
+   "pagina": 27,
+   "letterlijk": "Aantal deelnemers (totaal) 4.060"
+  },
+  "rente_afdekking_pct": {
+   "2025": 82.0,
+   "2024": null,
+   "pagina": 376,
+   "letterlijk": "De feitelĳke renteafdekking per ultimo 2025 bedroeg 82,0%."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-30",
+  "pagina": 911
+ },
+ "invaardatum": {
+  "datum": "2027-07-01",
+  "status": "gepland",
+  "pagina": 385
+ },
+ "opmerkingen": "Kring opgericht 1-1-2025 (CWO vanuit Stichting Pensioenfonds F. van Lanschot), dus geen 2024-cijfers in de kring; beleidsdekkingsgraad eind 2024 bij het geliquideerde fonds 122,6% (p375). Beleggingsrendement kerncijfers p28 '0,00%' (ook benchmark 0,00%) lijkt placeholder; bestuursverslag p376 geeft alleen matchingportefeuille -17,9% en rendementsportefeuille 6,7% (elders matching -30,1%), geen totaal -> null. Renteafdekking: feitelijk 82,0% (p376), jaarrekening p829 zegt 'per ultimo 2025 voor 80% afgedekt' (strategisch); beleid per ultimo 2025 gewijzigd naar 100%. Vaststellingsdatum = ondertekening APF-jaarrekening Badhoevedorp 30-6-2026 (bestuursverslag idem p438). Invaren: voornemen dossier juni 2026, doel 1 juli 2027. Kerncijfers p27 geven 'Aantal deelnemers' 4.060 maar kostentabel noemt 'Totaal aantal deelnemers 1.047'."
+}

@@ -1,0 +1,83 @@
+{
+ "fund_id": 45,
+ "naam": "IBM (SPIN) / IBM Nederland",
+ "pad": "data/annual_reports/45_IBM_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -4.3,
+   "2024": -0.2,
+   "pagina": 5,
+   "letterlijk": "Beleggingsperformance DB-regeling -4,3% -0,2%; p.20: 'Het beleggingsrendement van -4,3% (2024: -0,2%)'"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 129.1,
+   "2024": 133.5,
+   "pagina": 13,
+   "letterlijk": "Beleidsdekkingsgraad 129,1% 133,5%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 130.9,
+   "2024": 130.5,
+   "pagina": 13,
+   "letterlijk": "Actuele Dekkingsgraad 130,9% 130,5%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 104.3,
+   "2024": 107.8,
+   "pagina": 13,
+   "letterlijk": "Reële dekkingsgraad 104,3% 107,8%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 106.2,
+   "2024": 106.2,
+   "pagina": 13,
+   "letterlijk": "Vereiste dekkingsgraad 106,2% 106,2%"
+  },
+  "aum_euro_bn": {
+   "2025": 3.498,
+   "2024": 3.836,
+   "pagina": 5,
+   "letterlijk": "(bedragen x € 1 miljoen) Beleggingsportefeuille DB-regeling 3.498 3.836"
+  },
+  "deelnemers_actief": {
+   "2025": 1134,
+   "2024": 1624,
+   "pagina": 5,
+   "letterlijk": "Actieve deelnemers 1.134 1.624"
+  },
+  "deelnemers_slapers": {
+   "2025": 5808,
+   "2024": 5581,
+   "pagina": 5,
+   "letterlijk": "Gewezen deelnemers 5.808 5.581"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 5691,
+   "2024": 5618,
+   "pagina": 5,
+   "letterlijk": "Pensioengerechtigden 5.691 5.618"
+  },
+  "deelnemers_totaal": {
+   "2025": 12633,
+   "2024": 12823,
+   "pagina": 5,
+   "letterlijk": "Totaal 12.633 12.823"
+  },
+  "rente_afdekking_pct": {
+   "2025": 104.0,
+   "2024": null,
+   "pagina": 19,
+   "letterlijk": "De totale renteafdekking voor de DB-portefeuille is 100,0% strategisch (104,0% actueel)"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-16",
+  "pagina": 124
+ },
+ "invaardatum": {
+  "datum": null,
+  "status": "vaart niet in",
+  "pagina": 63
+ },
+ "opmerkingen": "Eén fonds (Stichting Pensioenfonds IBM Nederland, SPIN) met DB- en DC-regeling; cijfers voor het fonds als geheel, rendement en AUM voor de DB-regeling. Rendement -4,3% is DB-regeling incl. overlays (renteafdekkingsderivaten; zonder die derivaten 0,2% hoger); DC-rendement verschilt per cohort. AUM: kerncijfer DB-portefeuille 3.498 mln (= 3.498.439 duizend in tabel p.100, netto na schuldpositie derivaten); balans p.87 'Beleggingen voor risico pensioenfonds' bruto 3.594.583 duizend (2024: 3.926.053); daarnaast beleggingen voor risico deelnemers (DC) 616 mln (2024: 599). Dekkingsgraden incl. DC-regeling; excl. DC actuele dg 138,5% (2024: 137,0%). Vereiste dekkingsgraad = 'Vereist Eigen Vermogen (in %)' 106,2%. Renteafdekking 104,0% actueel (DB, marktwaarde, geïndexeerde verplichtingen), 2024 niet gevonden. SPIN vaart niet in ('SPIN niet gaat invaren', p.63; werkgevers geen verzoek tot invaren, p.11); transitie/implementatiedatum nieuwe regeling 1 januari 2028 (p.33). Bestuursverslag vastgesteld 16 juni 2026 (p.77), jaarrekening ondertekend Amstelveen 16 juni 2026 (p.124)."
+}

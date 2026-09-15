@@ -1,0 +1,83 @@
+{
+ "fund_id": 100,
+ "naam": "Geveke",
+ "pad": "data/annual_reports/100_Geveke_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": 5.17,
+   "2024": 6.37,
+   "pagina": 6,
+   "letterlijk": "Beleggingsrendement voor risico fonds 5,17 6,37 8,57 (kop 2025 2024 2023)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 108.8,
+   "2024": 109.3,
+   "pagina": 6,
+   "letterlijk": "Beleidsdekkingsgraad (in %) 108,8 109,3 110,1"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 110.0,
+   "2024": 107.4,
+   "pagina": 6,
+   "letterlijk": "Aanwezige dekkingsgraad (in %) 110,0 107,4 110,3"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 91.3,
+   "2024": 89.2,
+   "pagina": 6,
+   "letterlijk": "Reële dekkingsgraad (in %) 91,3 89,2 91,5"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 103.0,
+   "2024": 103.0,
+   "pagina": 6,
+   "letterlijk": "Vereiste dekkingsgraad (in %) 103,0 103,0 103,0"
+  },
+  "aum_euro_bn": {
+   "2025": 0.023831,
+   "2024": 0.023256,
+   "pagina": 6,
+   "letterlijk": "Beleggingsportefeuille (x € 1.000) Beleggingen voor risico fonds 23.831 23.256"
+  },
+  "deelnemers_actief": {
+   "2025": null,
+   "2024": null,
+   "pagina": 6,
+   "letterlijk": "Deelnemers - - -"
+  },
+  "deelnemers_slapers": {
+   "2025": 689,
+   "2024": 702,
+   "pagina": 6,
+   "letterlijk": "Gewezen deelnemers 689 702 745"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 883,
+   "2024": 928,
+   "pagina": 6,
+   "letterlijk": "Pensioengerechtigden 883 928 914"
+  },
+  "deelnemers_totaal": {
+   "2025": 1572,
+   "2024": 1630,
+   "pagina": 6,
+   "letterlijk": "Totaal deelnemers 1.572 1.630 1.659"
+  },
+  "rente_afdekking_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-08-31",
+  "pagina": 59
+ },
+ "invaardatum": {
+  "datum": null,
+  "status": "vaart niet in",
+  "pagina": 14
+ },
+ "opmerkingen": "Gesloten fonds zonder actieve deelnemers (kerncijfers tonen '-'). AUM = beleggingen voor risico fonds exclusief herverzekeringsdeel TV (€ 68,5 mln herverzekerd) en exclusief beleggingen risico deelnemer (5.875); pensioenvermogen is 98.180 (x € 1.000). Vereiste dekkingsgraad in kerncijfers 103,0% is gelijk aan de minimaal vereiste; op basis van strategische mix is hij 102,1% (p72). Voorwoord noemt '107,%' als beginstand (typefout; kerncijfers 107,4). Rente-afdekking: 'Aangezien het Fonds geen expliciete rente-afdekking heeft, is het renterisico niet afgedekt' (p30) -> null gelaten. Invaren: bestuur heeft begin 2026 besloten niet in te varen (p4, p14). Vaststelling: 'Het bestuur heeft op 31 augustus 2026 de jaarrekening vastgesteld' (p59)."
+}

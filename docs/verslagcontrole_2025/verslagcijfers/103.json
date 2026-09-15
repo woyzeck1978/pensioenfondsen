@@ -1,0 +1,83 @@
+{
+ "fund_id": 103,
+ "naam": "HAL",
+ "pad": "data/annual_reports/103_HAL_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": 13.96,
+   "2024": 10.5,
+   "pagina": 6,
+   "letterlijk": "Totaal rendement 13,96% 10,50%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 246.1,
+   "2024": 218.1,
+   "pagina": 16,
+   "letterlijk": "De beleidsdekkingsgraad van het Fonds bedraagt ultimo 2025: 246,1% (ultimo 2024: 218,1%)"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 275.0,
+   "2024": 210.2,
+   "pagina": 6,
+   "letterlijk": "Nominale dekkingsgraad 275% 210% (kerncijfers, afgerond)"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 179.1,
+   "2024": 162.7,
+   "pagina": 52,
+   "letterlijk": "Reële beleidsdekkingsgraad 179,1% 162,7%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 141.2,
+   "2024": 137.4,
+   "pagina": 52,
+   "letterlijk": "Vereist vermogen (bij strategische assetmix) 141,2% 137,4%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.165956,
+   "2024": 0.148778,
+   "pagina": 6,
+   "letterlijk": "Totaal beleggingen 165.956 148.778 (Bedragen x €1.000)"
+  },
+  "deelnemers_actief": {
+   "2025": 56,
+   "2024": 56,
+   "pagina": 5,
+   "letterlijk": "Deelnemers (actieve) 56 56"
+  },
+  "deelnemers_slapers": {
+   "2025": 114,
+   "2024": 115,
+   "pagina": 5,
+   "letterlijk": "Gewezen deelnemers 114 115"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": null,
+   "2024": null,
+   "pagina": 5,
+   "letterlijk": "Ouderdomspensioen 627 / Nabestaandenpensioen 424 / Arbeidsongeschiktheidspensioen 2 (geen totaalregel)"
+  },
+  "deelnemers_totaal": {
+   "2025": 1223,
+   "2024": 1280,
+   "pagina": 5,
+   "letterlijk": "Totaal deelnemers 1.223 1.280"
+  },
+  "rente_afdekking_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": 26,
+   "letterlijk": "Het renterisico wordt niet doelbewust afgedekt"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-09",
+  "pagina": 61
+ },
+ "invaardatum": {
+  "datum": null,
+  "status": "vaart niet in",
+  "pagina": 74
+ },
+ "opmerkingen": "TEGENSTRIJDIG: kerncijfers p6 geven nominale DG 275% en beleidsDG 246%, en p16 beleidsDG 246,1%; maar tabellen p47 en p52 geven 'Nominale dekkingsgraad 246,1%' en 'Beleidsdekkingsgraad 275,1%' (labels lijken verwisseld; vermogen 165.716 / TV 59.872 past bij ~275%). Genomen: beleids 246,1 (p16) en nominaal 275 (p6, afgerond; vermoedelijk 275,1). Pensioengerechtigden alleen per soort uitgesplitst (627+424+2), geen totaal -> null. Geen derivaten, renteafdekking niet als % genoemd. Reële dekkingsgraad is 'reële beleidsdekkingsgraad' (beleidsDG / indexatiedekkingsgraad). Wtp: werkgever doet geen verzoek tot invaren; fonds gaat naar verwachting vanaf 1-1-2028 gesloten verder. Nominale DG 2024 = 210,2% (p47/p52; voor 2024 zijn de labels daar wel consistent met p6/p16)."
+}

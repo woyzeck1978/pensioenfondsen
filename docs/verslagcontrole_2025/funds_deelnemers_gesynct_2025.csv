@@ -1,0 +1,522 @@
+fund_id,fonds,veld,oud,nieuw
+1,Dierenartsen (SPD - Veterinarians),deelnemers_slapers,1695,1576
+4,Loodsen (Pilots),deelnemers_totaal,17139,1353
+4,Loodsen (Pilots),deelnemers_actief,17109,469
+5,Medisch Specialisten (SPMS - Medical Specialists),deelnemers_totaal,,19299
+5,Medisch Specialisten (SPMS - Medical Specialists),deelnemers_gepensioneerd,,8116
+5,Medisch Specialisten (SPMS - Medical Specialists),deelnemers_slapers,,1944
+5,Medisch Specialisten (SPMS - Medical Specialists),deelnemers_actief,,9239
+6,Openbare Apothekers (SPOA - Public Pharmacists),deelnemers_totaal,6014,6086
+6,Openbare Apothekers (SPOA - Public Pharmacists),deelnemers_gepensioneerd,1678,1699
+6,Openbare Apothekers (SPOA - Public Pharmacists),deelnemers_slapers,1352,1373
+8,Verloskundigen (SPV - Midwives),deelnemers_totaal,719,5278
+8,Verloskundigen (SPV - Midwives),deelnemers_gepensioneerd,,638
+8,Verloskundigen (SPV - Midwives),deelnemers_slapers,,1769
+8,Verloskundigen (SPV - Midwives),deelnemers_actief,,2856
+9,ABP (Government and Education),deelnemers_totaal,3139659,3201054
+9,ABP (Government and Education),deelnemers_gepensioneerd,1051433,1088584
+9,ABP (Government and Education),deelnemers_actief,1306248,1330945
+10,Architectenbureaus (Architecture Firms),deelnemers_slapers,23007,23276
+10,Architectenbureaus (Architecture Firms),deelnemers_actief,9958,10344
+11,Bakkersbedrijf (Bakeries),deelnemers_totaal,145162,146809
+11,Bakkersbedrijf (Bakeries),deelnemers_gepensioneerd,24625,26691
+11,Bakkersbedrijf (Bakeries),deelnemers_slapers,85680,84739
+11,Bakkersbedrijf (Bakeries),deelnemers_actief,34857,35379
+13,Beroepsvervoer over de Weg (Commercial Road Transport),deelnemers_totaal,639879,669618
+13,Beroepsvervoer over de Weg (Commercial Road Transport),deelnemers_gepensioneerd,116908,126105
+13,Beroepsvervoer over de Weg (Commercial Road Transport),deelnemers_slapers,326030,343285
+13,Beroepsvervoer over de Weg (Commercial Road Transport),deelnemers_actief,196941,200228
+15,Bouw / BPFBouw (Construction),deelnemers_totaal,653807,746664
+15,Bouw / BPFBouw (Construction),deelnemers_gepensioneerd,162319,246917
+15,Bouw / BPFBouw (Construction),deelnemers_slapers,340126,330636
+15,Bouw / BPFBouw (Construction),deelnemers_actief,151362,158410
+16,BPL Pensioen (Agriculture),deelnemers_totaal,454318,678488
+16,BPL Pensioen (Agriculture),deelnemers_gepensioneerd,20,84328
+16,BPL Pensioen (Agriculture),deelnemers_actief,20,136349
+17,Detailhandel (Retail),deelnemers_totaal,1287688,1330691
+17,Detailhandel (Retail),deelnemers_gepensioneerd,168771,173347
+17,Detailhandel (Retail),deelnemers_slapers,751937,785575
+17,Detailhandel (Retail),deelnemers_actief,366980,371769
+18,HiBiN (Building Materials Trade),deelnemers_gepensioneerd,,6251
+18,HiBiN (Building Materials Trade),deelnemers_slapers,,20615
+18,HiBiN (Building Materials Trade),deelnemers_actief,,10785
+20,Kappersbedrijf (Hairdressers),deelnemers_totaal,77384,78781
+20,Kappersbedrijf (Hairdressers),deelnemers_gepensioneerd,4433,4742
+20,Kappersbedrijf (Hairdressers),deelnemers_slapers,52507,53634
+21,Koopvaardij (Merchant Navy),deelnemers_gepensioneerd,25455,24876
+21,Koopvaardij (Merchant Navy),deelnemers_slapers,17885,18243
+21,Koopvaardij (Merchant Navy),deelnemers_actief,4635,4770
+22,Levensmiddelen / BPFL (Food Industry),deelnemers_gepensioneerd,32482,28282
+22,Levensmiddelen / BPFL (Food Industry),deelnemers_actief,148060,143920
+23,Medewerkers Apotheken / PMA (Pharmacy Employees),deelnemers_gepensioneerd,,10383
+23,Medewerkers Apotheken / PMA (Pharmacy Employees),deelnemers_slapers,,23789
+23,Medewerkers Apotheken / PMA (Pharmacy Employees),deelnemers_actief,,23560
+24,Metaal & Techniek / PMT (Metal & Technique),deelnemers_totaal,1301729,1327324
+24,Metaal & Techniek / PMT (Metal & Technique),deelnemers_gepensioneerd,,263497
+24,Metaal & Techniek / PMT (Metal & Technique),deelnemers_slapers,,554865
+24,Metaal & Techniek / PMT (Metal & Technique),deelnemers_actief,,449183
+25,"MITT (Fashion, Interior, Carpet, and Textile Industry)",deelnemers_totaal,54356,129636
+25,"MITT (Fashion, Interior, Carpet, and Textile Industry)",deelnemers_gepensioneerd,88,54479
+25,"MITT (Fashion, Interior, Carpet, and Textile Industry)",deelnemers_actief,31,20559
+26,Molenaars (Millers),deelnemers_totaal,12346,12142
+26,Molenaars (Millers),deelnemers_gepensioneerd,,2767
+26,Molenaars (Millers),deelnemers_slapers,,5923
+26,Molenaars (Millers),deelnemers_actief,,3452
+27,Nederlandse Groothandel / SPNG (Dutch Wholesale),deelnemers_totaal,36879,37474
+27,Nederlandse Groothandel / SPNG (Dutch Wholesale),deelnemers_gepensioneerd,7316,7683
+27,Nederlandse Groothandel / SPNG (Dutch Wholesale),deelnemers_slapers,24739,25050
+27,Nederlandse Groothandel / SPNG (Dutch Wholesale),deelnemers_actief,4824,4741
+28,Notariaat (Notaries),deelnemers_gepensioneerd,,6124
+28,Notariaat (Notaries),deelnemers_slapers,,9964
+28,Notariaat (Notaries),deelnemers_actief,,12540
+32,PGB (Various Industries),deelnemers_totaal,,353494
+32,PGB (Various Industries),deelnemers_gepensioneerd,,105990
+32,PGB (Various Industries),deelnemers_slapers,,225308
+32,PGB (Various Industries),deelnemers_actief,,128186
+35,Slagersbedrijf (Butchers),deelnemers_gepensioneerd,13829,14598
+35,Slagersbedrijf (Butchers),deelnemers_slapers,45077,46253
+35,Slagersbedrijf (Butchers),deelnemers_actief,14480,14695
+37,Waterbouw (Hydraulic Engineering),deelnemers_actief,2951,3010
+38,Werk- en (re)Integratie / PWRI (Work and Reintegration),deelnemers_totaal,185796,185794
+38,Werk- en (re)Integratie / PWRI (Work and Reintegration),deelnemers_gepensioneerd,64144,64658
+38,Werk- en (re)Integratie / PWRI (Work and Reintegration),deelnemers_slapers,49050,47971
+38,Werk- en (re)Integratie / PWRI (Work and Reintegration),deelnemers_actief,72602,73165
+39,Woningcorporaties / SPW (Housing Corporations),deelnemers_totaal,,79859
+39,Woningcorporaties / SPW (Housing Corporations),deelnemers_gepensioneerd,,23119
+39,Woningcorporaties / SPW (Housing Corporations),deelnemers_slapers,,24735
+39,Woningcorporaties / SPW (Housing Corporations),deelnemers_actief,,32005
+41,Zorg en Welzijn / PFZW (Healthcare and Welfare),deelnemers_totaal,,3037700
+41,Zorg en Welzijn / PFZW (Healthcare and Welfare),deelnemers_gepensioneerd,,676200
+41,Zorg en Welzijn / PFZW (Healthcare and Welfare),deelnemers_slapers,,897900
+41,Zorg en Welzijn / PFZW (Healthcare and Welfare),deelnemers_actief,,1463600
+42,Zorgverzekeraars / SBZ (Health Insurers),deelnemers_totaal,33129,44816
+42,Zorgverzekeraars / SBZ (Health Insurers),deelnemers_gepensioneerd,9723,10357
+42,Zorgverzekeraars / SBZ (Health Insurers),deelnemers_slapers,23391,23027
+42,Zorgverzekeraars / SBZ (Health Insurers),deelnemers_actief,15,10786
+43,Zuivel- en aanverwante industrie / BPZ (Dairy Industry),deelnemers_totaal,8614,17502
+43,Zuivel- en aanverwante industrie / BPZ (Dairy Industry),deelnemers_gepensioneerd,1377,1689
+43,Zuivel- en aanverwante industrie / BPZ (Dairy Industry),deelnemers_slapers,5267,5899
+43,Zuivel- en aanverwante industrie / BPZ (Dairy Industry),deelnemers_actief,1970,9914
+45,IBM (SPIN) / IBM Nederland,deelnemers_totaal,,12633
+45,IBM (SPIN) / IBM Nederland,deelnemers_gepensioneerd,,5691
+45,IBM (SPIN) / IBM Nederland,deelnemers_slapers,,5808
+45,IBM (SPIN) / IBM Nederland,deelnemers_actief,,1134
+49,KLM Vliegend Personeel (Flight Crew),deelnemers_totaal,5974,6170
+49,KLM Vliegend Personeel (Flight Crew),deelnemers_gepensioneerd,2449,2494
+49,KLM Vliegend Personeel (Flight Crew),deelnemers_slapers,85,73
+49,KLM Vliegend Personeel (Flight Crew),deelnemers_actief,3440,3603
+50,Mediahuis Nederland (Mhpf),deelnemers_totaal,,7406
+50,Mediahuis Nederland (Mhpf),deelnemers_gepensioneerd,,2147
+50,Mediahuis Nederland (Mhpf),deelnemers_slapers,,4214
+50,Mediahuis Nederland (Mhpf),deelnemers_actief,,1045
+51,Shell (SSPF),deelnemers_totaal,,29020
+51,Shell (SSPF),deelnemers_gepensioneerd,,18532
+51,Shell (SSPF),deelnemers_slapers,,6377
+51,Shell (SSPF),deelnemers_actief,,4111
+56,Foodservice & Groothandel in Levensmiddelen (Foodservice & Wholesale),deelnemers_totaal,47514,72194
+56,Foodservice & Groothandel in Levensmiddelen (Foodservice & Wholesale),deelnemers_gepensioneerd,12123,12695
+56,Foodservice & Groothandel in Levensmiddelen (Foodservice & Wholesale),deelnemers_slapers,35373,37259
+56,Foodservice & Groothandel in Levensmiddelen (Foodservice & Wholesale),deelnemers_actief,18,22240
+57,Media PNO (Creative and Digital Sector),deelnemers_gepensioneerd,,12090
+57,Media PNO (Creative and Digital Sector),deelnemers_slapers,,36785
+57,Media PNO (Creative and Digital Sector),deelnemers_actief,,22263
+60,"Schilders-, Afwerkings- en Glaszetbedrijf (Painters and Glaziers)",deelnemers_totaal,171322,102989
+60,"Schilders-, Afwerkings- en Glaszetbedrijf (Painters and Glaziers)",deelnemers_actief,103000,34560
+61,Schoonmaak- en Glazenwassersbedrijf,deelnemers_gepensioneerd,44263,47552
+61,Schoonmaak- en Glazenwassersbedrijf,deelnemers_slapers,278717,291973
+61,Schoonmaak- en Glazenwassersbedrijf,deelnemers_actief,116644,118706
+62,"Vlakglas, Verf, Glasbewerking- en het Glazeniersbedrijf / BPFV (Flat Glass, Paint, and Glazing)",deelnemers_totaal,26729,50588
+62,"Vlakglas, Verf, Glasbewerking- en het Glazeniersbedrijf / BPFV (Flat Glass, Paint, and Glazing)",deelnemers_gepensioneerd,11,10811
+62,"Vlakglas, Verf, Glasbewerking- en het Glazeniersbedrijf / BPFV (Flat Glass, Paint, and Glazing)",deelnemers_slapers,26707,27186
+62,"Vlakglas, Verf, Glasbewerking- en het Glazeniersbedrijf / BPFV (Flat Glass, Paint, and Glazing)",deelnemers_actief,11,12591
+63,"Vlees, Vleeswaren, Gemaksvoeding en Pluimveevlees / VLEP (Meat and Poultry)",deelnemers_totaal,137356,142570
+63,"Vlees, Vleeswaren, Gemaksvoeding en Pluimveevlees / VLEP (Meat and Poultry)",deelnemers_gepensioneerd,16969,17874
+63,"Vlees, Vleeswaren, Gemaksvoeding en Pluimveevlees / VLEP (Meat and Poultry)",deelnemers_slapers,91990,95797
+63,"Vlees, Vleeswaren, Gemaksvoeding en Pluimveevlees / VLEP (Meat and Poultry)",deelnemers_actief,28397,28899
+65,Centraal Beheer APF,deelnemers_totaal,,90766
+65,Centraal Beheer APF,deelnemers_gepensioneerd,,11232
+65,Centraal Beheer APF,deelnemers_slapers,,46154
+65,Centraal Beheer APF,deelnemers_actief,,33380
+66,De Nationale APF,deelnemers_totaal,,35308
+66,De Nationale APF,deelnemers_gepensioneerd,6984,7314
+66,De Nationale APF,deelnemers_actief,6760,7091
+71,ABN AMRO,deelnemers_totaal,83196,104828
+71,ABN AMRO,deelnemers_gepensioneerd,31258,32656
+71,ABN AMRO,deelnemers_slapers,51894,50967
+71,ABN AMRO,deelnemers_actief,,21205
+72,Achmea,deelnemers_totaal,40103,41074
+72,Achmea,deelnemers_gepensioneerd,8139,8743
+72,Achmea,deelnemers_actief,12358,12829
+73,Ahold Delhaize,deelnemers_totaal,127503,129768
+73,Ahold Delhaize,deelnemers_gepensioneerd,13875,14492
+73,Ahold Delhaize,deelnemers_slapers,51743,52548
+73,Ahold Delhaize,deelnemers_actief,61885,62728
+75,"APF (AkzoNobel, Nouryon, Nobian, Salt)",deelnemers_totaal,29566,28947
+75,"APF (AkzoNobel, Nouryon, Nobian, Salt)",deelnemers_gepensioneerd,5041,15198
+75,"APF (AkzoNobel, Nouryon, Nobian, Salt)",deelnemers_slapers,15451,9109
+75,"APF (AkzoNobel, Nouryon, Nobian, Salt)",deelnemers_actief,9074,4640
+77,AT&T Nederland,deelnemers_totaal,480,474
+77,AT&T Nederland,deelnemers_gepensioneerd,,147
+77,AT&T Nederland,deelnemers_slapers,,327
+78,Atos,deelnemers_totaal,15705,15503
+78,Atos,deelnemers_gepensioneerd,4405,4773
+78,Atos,deelnemers_slapers,11300,10668
+79,Avebe,deelnemers_totaal,2824,3941
+79,Avebe,deelnemers_gepensioneerd,1477,2039
+79,Avebe,deelnemers_slapers,464,904
+79,Avebe,deelnemers_actief,883,998
+80,Avery Dennison,deelnemers_totaal,,2403
+80,Avery Dennison,deelnemers_gepensioneerd,,708
+80,Avery Dennison,deelnemers_slapers,,1208
+80,Avery Dennison,deelnemers_actief,,487
+81,Brocacef,deelnemers_totaal,3283,4215
+81,Brocacef,deelnemers_gepensioneerd,355,1197
+81,Brocacef,deelnemers_slapers,1846,1915
+81,Brocacef,deelnemers_actief,1082,1065
+82,Campina,deelnemers_totaal,10020,9508
+82,Campina,deelnemers_gepensioneerd,,6371
+82,Campina,deelnemers_slapers,,2549
+82,Campina,deelnemers_actief,,40
+83,Capgemini / Capgemini Nederland,deelnemers_totaal,,17935
+83,Capgemini / Capgemini Nederland,deelnemers_gepensioneerd,,1848
+83,Capgemini / Capgemini Nederland,deelnemers_slapers,,10852
+83,Capgemini / Capgemini Nederland,deelnemers_actief,,5235
+84,Cargill,deelnemers_totaal,776,3848
+84,Cargill,deelnemers_gepensioneerd,,1347
+84,Cargill,deelnemers_slapers,,1756
+84,Cargill,deelnemers_actief,,745
+86,Cosun / Koninklijke Cosun,deelnemers_totaal,2926,3639
+86,Cosun / Koninklijke Cosun,deelnemers_slapers,60,734
+86,Cosun / Koninklijke Cosun,deelnemers_actief,1205,1242
+87,De Nederlandsche Bank,deelnemers_totaal,,6734
+87,De Nederlandsche Bank,deelnemers_gepensioneerd,,1705
+87,De Nederlandsche Bank,deelnemers_slapers,,2448
+87,De Nederlandsche Bank,deelnemers_actief,,2581
+88,Delta Lloyd,deelnemers_totaal,,11899
+88,Delta Lloyd,deelnemers_gepensioneerd,,4589
+88,Delta Lloyd,deelnemers_slapers,,6040
+88,Delta Lloyd,deelnemers_actief,,1270
+89,DHL Nederland,deelnemers_gepensioneerd,4958,5081
+89,DHL Nederland,deelnemers_slapers,8147,7982
+89,DHL Nederland,deelnemers_actief,2989,3031
+91,DSM Nederland,deelnemers_totaal,26646,26345
+91,DSM Nederland,deelnemers_slapers,8382,8147
+91,DSM Nederland,deelnemers_actief,5629,5563
+92,Ecolab,deelnemers_gepensioneerd,324,220
+92,Ecolab,deelnemers_slapers,299,294
+92,Ecolab,deelnemers_actief,30,101
+93,Essity,deelnemers_totaal,3927,4052
+93,Essity,deelnemers_gepensioneerd,946,1021
+93,Essity,deelnemers_actief,1481,1539
+95,Flexsecurity (Randstad),deelnemers_totaal,,233925
+95,Flexsecurity (Randstad),deelnemers_slapers,,175730
+95,Flexsecurity (Randstad),deelnemers_actief,,58195
+97,Gasunie,deelnemers_totaal,4757,4936
+97,Gasunie,deelnemers_slapers,746,759
+97,Gasunie,deelnemers_actief,2273,2424
+98,Gazelle,deelnemers_totaal,1740,1720
+98,Gazelle,deelnemers_gepensioneerd,,377
+98,Gazelle,deelnemers_slapers,,830
+98,Gazelle,deelnemers_actief,,513
+100,Geveke,deelnemers_totaal,1630,1572
+100,Geveke,deelnemers_gepensioneerd,,883
+100,Geveke,deelnemers_slapers,,689
+103,HAL,deelnemers_totaal,1280,1223
+103,HAL,deelnemers_slapers,,114
+103,HAL,deelnemers_actief,,56
+104,Haskoning DHV,deelnemers_totaal,16931,11292
+104,Haskoning DHV,deelnemers_gepensioneerd,2062,2140
+104,Haskoning DHV,deelnemers_slapers,5111,5257
+104,Haskoning DHV,deelnemers_actief,9758,3895
+105,Heineken,deelnemers_actief,3085,2971
+106,Hoogovens,deelnemers_slapers,4199,4469
+106,Hoogovens,deelnemers_actief,10301,9873
+107,Huntsman Rozenburg,deelnemers_totaal,1654,1771
+107,Huntsman Rozenburg,deelnemers_gepensioneerd,1287,1256
+107,Huntsman Rozenburg,deelnemers_slapers,349,331
+107,Huntsman Rozenburg,deelnemers_actief,18,184
+110,KAS BANK,deelnemers_totaal,1864,1823
+110,KAS BANK,deelnemers_slapers,1427,1383
+110,KAS BANK,deelnemers_actief,25,26
+111,KPN,deelnemers_gepensioneerd,24720,25498
+111,KPN,deelnemers_slapers,36155,35265
+111,KPN,deelnemers_actief,10952,10573
+112,Lloyd's Register Nederland,deelnemers_totaal,1223,1225
+112,Lloyd's Register Nederland,deelnemers_gepensioneerd,,288
+112,Lloyd's Register Nederland,deelnemers_slapers,,591
+112,Lloyd's Register Nederland,deelnemers_actief,,346
+113,Mars,deelnemers_gepensioneerd,1389,1431
+113,Mars,deelnemers_slapers,1468,1517
+113,Mars,deelnemers_actief,1531,1557
+115,Metro,deelnemers_totaal,8480,8283
+115,Metro,deelnemers_gepensioneerd,2241,2314
+115,Metro,deelnemers_slapers,6074,5827
+115,Metro,deelnemers_actief,165,142
+116,MSD,deelnemers_totaal,9846,12234
+116,MSD,deelnemers_gepensioneerd,31,2387
+116,MSD,deelnemers_slapers,5788,6216
+116,MSD,deelnemers_actief,4027,3631
+117,Nederlandse Bisdommen,deelnemers_totaal,2632,2559
+117,Nederlandse Bisdommen,deelnemers_slapers,488,457
+117,Nederlandse Bisdommen,deelnemers_actief,589,544
+118,NN CDC,deelnemers_totaal,7727,12700
+118,NN CDC,deelnemers_gepensioneerd,,1028
+118,NN CDC,deelnemers_slapers,,11521
+118,NN CDC,deelnemers_actief,,151
+119,Philips,deelnemers_totaal,,88154
+119,Philips,deelnemers_gepensioneerd,,45201
+119,Philips,deelnemers_slapers,,31801
+119,Philips,deelnemers_actief,,11152
+120,Pon,deelnemers_totaal,10759,11157
+120,Pon,deelnemers_gepensioneerd,,1303
+120,Pon,deelnemers_slapers,,5479
+120,Pon,deelnemers_actief,,4372
+121,PostNL,deelnemers_gepensioneerd,36519,37867
+121,PostNL,deelnemers_slapers,38657,37969
+121,PostNL,deelnemers_actief,17734,17111
+122,Provisum,deelnemers_totaal,9358,9239
+122,Provisum,deelnemers_gepensioneerd,2978,3036
+122,Provisum,deelnemers_slapers,4081,3924
+124,Robeco,deelnemers_totaal,8868,3124
+124,Robeco,deelnemers_gepensioneerd,8800,492
+124,Robeco,deelnemers_slapers,23,1831
+124,Robeco,deelnemers_actief,45,801
+125,Rockwool,deelnemers_totaal,3219,3310
+125,Rockwool,deelnemers_gepensioneerd,,1128
+125,Rockwool,deelnemers_slapers,,976
+125,Rockwool,deelnemers_actief,,1206
+126,SABIC,deelnemers_gepensioneerd,2589,2746
+126,SABIC,deelnemers_slapers,3345,3389
+126,SABIC,deelnemers_actief,2868,2664
+127,Sagittarius,deelnemers_totaal,6298,3305
+127,Sagittarius,deelnemers_gepensioneerd,22,1676
+127,Sagittarius,deelnemers_slapers,1271,1607
+127,Sagittarius,deelnemers_actief,5005,22
+128,Smurfit Kappa,deelnemers_totaal,6197,6301
+128,Smurfit Kappa,deelnemers_gepensioneerd,1740,1841
+128,Smurfit Kappa,deelnemers_slapers,2246,2285
+128,Smurfit Kappa,deelnemers_actief,2211,2175
+130,Sportfondsen,deelnemers_totaal,7826,8247
+130,Sportfondsen,deelnemers_gepensioneerd,1499,1575
+130,Sportfondsen,deelnemers_slapers,3252,3522
+130,Sportfondsen,deelnemers_actief,3075,3150
+133,TNO,deelnemers_totaal,18839,19249
+133,TNO,deelnemers_gepensioneerd,5700,5875
+133,TNO,deelnemers_actief,5819,6046
+135,UWV,deelnemers_totaal,,61611
+135,UWV,deelnemers_gepensioneerd,,18908
+135,UWV,deelnemers_slapers,,18792
+135,UWV,deelnemers_actief,,23911
+136,Vopak,deelnemers_totaal,6126,6072
+136,Vopak,deelnemers_gepensioneerd,,2744
+136,Vopak,deelnemers_slapers,,2046
+136,Vopak,deelnemers_actief,,1282
+137,Witteveen+Bos,deelnemers_totaal,2586,2780
+137,Witteveen+Bos,deelnemers_gepensioneerd,227,251
+137,Witteveen+Bos,deelnemers_slapers,1041,1073
+137,Witteveen+Bos,deelnemers_actief,1318,1456
+158,IFF,deelnemers_totaal,,2852
+158,IFF,deelnemers_gepensioneerd,,573
+158,IFF,deelnemers_slapers,,1182
+158,IFF,deelnemers_actief,,1097
+163,Kring AFM (De Nationale),deelnemers_totaal,,1907
+163,Kring AFM (De Nationale),deelnemers_gepensioneerd,,109
+163,Kring AFM (De Nationale),deelnemers_slapers,,928
+163,Kring AFM (De Nationale),deelnemers_actief,,870
+164,Kring ANWB (De Nationale),deelnemers_totaal,6915,16167
+164,Kring ANWB (De Nationale),deelnemers_gepensioneerd,,2935
+164,Kring ANWB (De Nationale),deelnemers_slapers,,8857
+164,Kring ANWB (De Nationale),deelnemers_actief,,4375
+165,Kring Arcadis (Hnp),deelnemers_totaal,4925,9310
+165,Kring Arcadis (Hnp),deelnemers_gepensioneerd,,2755
+165,Kring Arcadis (Hnp),deelnemers_slapers,,4385
+165,Kring Arcadis (Hnp),deelnemers_actief,,2170
+166,Kring B (De Nationale),deelnemers_totaal,,4971
+166,Kring B (De Nationale),deelnemers_gepensioneerd,,972
+166,Kring B (De Nationale),deelnemers_slapers,,3385
+166,Kring B (De Nationale),deelnemers_actief,,614
+167,Kring CK1 (Hnp),deelnemers_totaal,2589,14121
+167,Kring CK1 (Hnp),deelnemers_gepensioneerd,,603
+167,Kring CK1 (Hnp),deelnemers_slapers,,11532
+167,Kring CK1 (Hnp),deelnemers_actief,,1986
+168,Kring D (De Nationale),deelnemers_totaal,,7115
+168,Kring D (De Nationale),deelnemers_gepensioneerd,,1361
+168,Kring D (De Nationale),deelnemers_slapers,,5729
+168,Kring D (De Nationale),deelnemers_actief,,25
+169,Kring A / AZL en Unisys (De Nationale),deelnemers_totaal,,3660
+169,Kring A / AZL en Unisys (De Nationale),deelnemers_gepensioneerd,,1645
+169,Kring A / AZL en Unisys (De Nationale),deelnemers_slapers,,1393
+169,Kring A / AZL en Unisys (De Nationale),deelnemers_actief,,622
+172,Kring Forward (Unilever),deelnemers_totaal,,6412
+172,Kring Forward (Unilever),deelnemers_gepensioneerd,,483
+172,Kring Forward (Unilever),deelnemers_slapers,,3544
+172,Kring Forward (Unilever),deelnemers_actief,,2385
+173,Kring McCain (De Nationale),deelnemers_totaal,923,1488
+173,Kring McCain (De Nationale),deelnemers_gepensioneerd,,292
+173,Kring McCain (De Nationale),deelnemers_slapers,,611
+173,Kring McCain (De Nationale),deelnemers_actief,,585
+175,Kring Roba (Hnp),deelnemers_totaal,,750
+175,Kring Roba (Hnp),deelnemers_gepensioneerd,,159
+175,Kring Roba (Hnp),deelnemers_slapers,,264
+175,Kring Roba (Hnp),deelnemers_actief,,327
+183,Pensioenkring 2 (Stap),deelnemers_totaal,8815,8735
+183,Pensioenkring 2 (Stap),deelnemers_gepensioneerd,1619,1756
+183,Pensioenkring 2 (Stap),deelnemers_slapers,6843,6636
+183,Pensioenkring 2 (Stap),deelnemers_actief,353,343
+185,Pensioenkring Astellas (Stap),deelnemers_totaal,,2106
+185,Pensioenkring Astellas (Stap),deelnemers_gepensioneerd,,408
+185,Pensioenkring Astellas (Stap),deelnemers_slapers,,1022
+185,Pensioenkring Astellas (Stap),deelnemers_actief,,676
+187,Pensioenkring CRH (Hnp),deelnemers_totaal,3067,12310
+187,Pensioenkring CRH (Hnp),deelnemers_gepensioneerd,,2060
+187,Pensioenkring CRH (Hnp),deelnemers_slapers,,9243
+187,Pensioenkring CRH (Hnp),deelnemers_actief,,1007
+189,Pensioenkring OWASE (Hnp),deelnemers_totaal,,4761
+189,Pensioenkring OWASE (Hnp),deelnemers_gepensioneerd,,1808
+189,Pensioenkring OWASE (Hnp),deelnemers_slapers,,1627
+189,Pensioenkring OWASE (Hnp),deelnemers_actief,,1326
+190,Pensioenkring PepsiCo (Hnp),deelnemers_totaal,,1789
+190,Pensioenkring PepsiCo (Hnp),deelnemers_gepensioneerd,,479
+190,Pensioenkring PepsiCo (Hnp),deelnemers_slapers,,844
+190,Pensioenkring PepsiCo (Hnp),deelnemers_actief,,466
+191,Pensioenkring Randstad (Hnp),deelnemers_totaal,1604,13355
+191,Pensioenkring Randstad (Hnp),deelnemers_gepensioneerd,,1489
+191,Pensioenkring Randstad (Hnp),deelnemers_slapers,,11751
+192,Pensioenkring Sweco (Hnp),deelnemers_totaal,,7670
+192,Pensioenkring Sweco (Hnp),deelnemers_gepensioneerd,,1904
+192,Pensioenkring Sweco (Hnp),deelnemers_slapers,,3851
+192,Pensioenkring Sweco (Hnp),deelnemers_actief,,1915
+193,Kring Van Lanschot (HNPF),deelnemers_gepensioneerd,,1009
+193,Kring Van Lanschot (HNPF),deelnemers_slapers,,3013
+193,Kring Van Lanschot (HNPF),deelnemers_actief,,38
+194,Pensioenkring Wolters Kluwer NL (Hnp),deelnemers_totaal,,7170
+194,Pensioenkring Wolters Kluwer NL (Hnp),deelnemers_gepensioneerd,,3094
+194,Pensioenkring Wolters Kluwer NL (Hnp),deelnemers_slapers,,3326
+194,Pensioenkring Wolters Kluwer NL (Hnp),deelnemers_actief,,750
+195,Pensioenkring Xerox (Hnp),deelnemers_totaal,,4540
+195,Pensioenkring Xerox (Hnp),deelnemers_gepensioneerd,,2463
+195,Pensioenkring Xerox (Hnp),deelnemers_slapers,,2056
+195,Pensioenkring Xerox (Hnp),deelnemers_actief,,21
+198,Rijn- en Binnenvaart,deelnemers_totaal,21255,21099
+198,Rijn- en Binnenvaart,deelnemers_gepensioneerd,3620,3806
+198,Rijn- en Binnenvaart,deelnemers_slapers,13288,17121
+198,Rijn- en Binnenvaart,deelnemers_actief,4347,172
+207,Pensioenfonds British American Tobacco,deelnemers_totaal,,2181
+207,Pensioenfonds British American Tobacco,deelnemers_gepensioneerd,,1318
+207,Pensioenfonds British American Tobacco,deelnemers_slapers,,836
+207,Pensioenfonds British American Tobacco,deelnemers_actief,,27
+209,Kring DC (Centraal Beheer),deelnemers_gepensioneerd,,1350
+209,Kring DC (Centraal Beheer),deelnemers_slapers,,20876
+209,Kring DC (Centraal Beheer),deelnemers_actief,,24743
+210,Kring DB Evenwicht (Centraal Beheer),deelnemers_gepensioneerd,,1456
+210,Kring DB Evenwicht (Centraal Beheer),deelnemers_slapers,,1182
+210,Kring DB Evenwicht (Centraal Beheer),deelnemers_actief,,15
+211,Kring DB Koopkracht (Centraal Beheer),deelnemers_gepensioneerd,,96
+211,Kring DB Koopkracht (Centraal Beheer),deelnemers_slapers,,1160
+211,Kring DB Koopkracht (Centraal Beheer),deelnemers_actief,,157
+212,Kring DB Premie (Centraal Beheer),deelnemers_gepensioneerd,,289
+212,Kring DB Premie (Centraal Beheer),deelnemers_slapers,,4241
+212,Kring DB Premie (Centraal Beheer),deelnemers_actief,,842
+213,Kring DB Stabiliteit (Centraal Beheer),deelnemers_gepensioneerd,,98
+213,Kring DB Stabiliteit (Centraal Beheer),deelnemers_slapers,,1367
+213,Kring DB Stabiliteit (Centraal Beheer),deelnemers_actief,,310
+214,Kring HPE (Centraal Beheer),deelnemers_gepensioneerd,,3332
+214,Kring HPE (Centraal Beheer),deelnemers_slapers,,3633
+214,Kring HPE (Centraal Beheer),deelnemers_actief,,205
+215,Kring RBS / NatWest (Centraal Beheer),deelnemers_gepensioneerd,,347
+215,Kring RBS / NatWest (Centraal Beheer),deelnemers_slapers,,1454
+215,Kring RBS / NatWest (Centraal Beheer),deelnemers_actief,,12
+216,Kring equensWorldline (Centraal Beheer),deelnemers_gepensioneerd,,937
+216,Kring equensWorldline (Centraal Beheer),deelnemers_slapers,,1480
+216,Kring equensWorldline (Centraal Beheer),deelnemers_actief,,468
+217,Kring Sligro Food Group (Centraal Beheer),deelnemers_gepensioneerd,,1325
+217,Kring Sligro Food Group (Centraal Beheer),deelnemers_slapers,,6438
+217,Kring Sligro Food Group (Centraal Beheer),deelnemers_actief,,5013
+218,Kring Deutsche Bank Nederland (Centraal Beheer),deelnemers_gepensioneerd,,590
+218,Kring Deutsche Bank Nederland (Centraal Beheer),deelnemers_slapers,,1386
+218,Kring Deutsche Bank Nederland (Centraal Beheer),deelnemers_actief,,440
+219,Kring Grolsch (Centraal Beheer),deelnemers_gepensioneerd,,686
+219,Kring Grolsch (Centraal Beheer),deelnemers_slapers,,769
+219,Kring Grolsch (Centraal Beheer),deelnemers_actief,,583
+220,Kring Chemours (Centraal Beheer),deelnemers_gepensioneerd,,87
+220,Kring Chemours (Centraal Beheer),deelnemers_slapers,,85
+220,Kring Chemours (Centraal Beheer),deelnemers_actief,,236
+221,Kring ESN (Centraal Beheer),deelnemers_gepensioneerd,,85
+221,Kring ESN (Centraal Beheer),deelnemers_slapers,,194
+221,Kring ESN (Centraal Beheer),deelnemers_actief,,170
+222,Kring HP Nederland (Centraal Beheer),deelnemers_gepensioneerd,,102
+222,Kring HP Nederland (Centraal Beheer),deelnemers_slapers,,405
+222,Kring HP Nederland (Centraal Beheer),deelnemers_actief,,159
+223,Kring Bavaria (Centraal Beheer),deelnemers_gepensioneerd,,452
+223,Kring Bavaria (Centraal Beheer),deelnemers_slapers,,1484
+223,Kring Bavaria (Centraal Beheer),deelnemers_actief,,27
+224,Kring E-DC (De Nationale),deelnemers_totaal,,1109
+227,Kring Holland Casino (Stap),deelnemers_totaal,,11078
+227,Kring Holland Casino (Stap),deelnemers_gepensioneerd,,1486
+227,Kring Holland Casino (Stap),deelnemers_slapers,,5679
+227,Kring Holland Casino (Stap),deelnemers_actief,,3913
+228,Kring IFF (Stap),deelnemers_totaal,,2852
+228,Kring IFF (Stap),deelnemers_gepensioneerd,,573
+228,Kring IFF (Stap),deelnemers_slapers,,1182
+228,Kring IFF (Stap),deelnemers_actief,,1097
+229,Kring Flexibele Regeling (HNPF),deelnemers_totaal,,8413
+229,Kring Flexibele Regeling (HNPF),deelnemers_gepensioneerd,,10
+229,Kring Flexibele Regeling (HNPF),deelnemers_slapers,,2941
+229,Kring Flexibele Regeling (HNPF),deelnemers_actief,,5462
+230,Pensioenkring Cargill (HNPF),deelnemers_totaal,,759
+230,Pensioenkring Cargill (HNPF),deelnemers_gepensioneerd,,218
+230,Pensioenkring Cargill (HNPF),deelnemers_slapers,,213
+230,Pensioenkring Cargill (HNPF),deelnemers_actief,,328
+123,Rabobank,deelnemers_slapers,,49184
+123,Rabobank,deelnemers_actief,,32010
+129,SNS REAAL,deelnemers_totaal,20928,21118
+129,SNS REAAL,deelnemers_gepensioneerd,4688,4821
+129,SNS REAAL,deelnemers_slapers,11523,11833
+129,SNS REAAL,deelnemers_actief,4717,4464
+186,Pensioenkring Ballast Nedam (Stap),deelnemers_totaal,,5771
+186,Pensioenkring Ballast Nedam (Stap),deelnemers_gepensioneerd,,2668
+186,Pensioenkring Ballast Nedam (Stap),deelnemers_slapers,,3087
+186,Pensioenkring Ballast Nedam (Stap),deelnemers_actief,,16
+70,Abbott / Abbott Nederland,deelnemers_totaal,4221,3767
+70,Abbott / Abbott Nederland,deelnemers_gepensioneerd,405,455
+70,Abbott / Abbott Nederland,deelnemers_slapers,1592,1615
+70,Abbott / Abbott Nederland,deelnemers_actief,2224,1697
+132,Thales Nederland,deelnemers_totaal,6377,6790
+132,Thales Nederland,deelnemers_gepensioneerd,,2289
+132,Thales Nederland,deelnemers_slapers,,1628
+132,Thales Nederland,deelnemers_actief,,2873
+90,DOW,deelnemers_totaal,4900,4832
+90,DOW,deelnemers_gepensioneerd,3009,3081
+90,DOW,deelnemers_slapers,904,839
+90,DOW,deelnemers_actief,987,912
+170,Kring Douwe Egberts (Stap),deelnemers_totaal,,8388
+170,Kring Douwe Egberts (Stap),deelnemers_gepensioneerd,,4401
+170,Kring Douwe Egberts (Stap),deelnemers_slapers,,3938
+170,Kring Douwe Egberts (Stap),deelnemers_actief,,49
+12,Banden- en Wielenbranche (Tire and Wheel Branch),deelnemers_totaal,21912,23247
+12,Banden- en Wielenbranche (Tire and Wheel Branch),deelnemers_gepensioneerd,1870,2068
+12,Banden- en Wielenbranche (Tire and Wheel Branch),deelnemers_slapers,12734,13858
+12,Banden- en Wielenbranche (Tire and Wheel Branch),deelnemers_actief,7136,7165
+171,Kring Eastman (Stap),deelnemers_totaal,,1139
+171,Kring Eastman (Stap),deelnemers_gepensioneerd,,150
+171,Kring Eastman (Stap),deelnemers_slapers,,745
+171,Kring Eastman (Stap),deelnemers_actief,,244
+3,Huisartsen (SPH - General Practitioners),deelnemers_totaal,25951,26513
+3,Huisartsen (SPH - General Practitioners),deelnemers_gepensioneerd,7936,8089
+3,Huisartsen (SPH - General Practitioners),deelnemers_slapers,2161,2465
+3,Huisartsen (SPH - General Practitioners),deelnemers_actief,15854,15959
+188,Pensioenkring GE Nederland (Stap),deelnemers_totaal,,2635
+188,Pensioenkring GE Nederland (Stap),deelnemers_gepensioneerd,,251
+188,Pensioenkring GE Nederland (Stap),deelnemers_slapers,,1857
+188,Pensioenkring GE Nederland (Stap),deelnemers_actief,,527
+96,Forbo,deelnemers_totaal,1749,2549
+96,Forbo,deelnemers_gepensioneerd,,873
+96,Forbo,deelnemers_slapers,,778
+96,Forbo,deelnemers_actief,,898
+176,Kring SVG (Stap),deelnemers_totaal,,6617
+176,Kring SVG (Stap),deelnemers_gepensioneerd,,3216
+176,Kring SVG (Stap),deelnemers_slapers,,3375
+176,Kring SVG (Stap),deelnemers_actief,,26
+14,Beton / Betonproductenindustrie (Concrete Industry),deelnemers_gepensioneerd,,8383
+14,Beton / Betonproductenindustrie (Concrete Industry),deelnemers_slapers,,13979
+14,Beton / Betonproductenindustrie (Concrete Industry),deelnemers_actief,,6716

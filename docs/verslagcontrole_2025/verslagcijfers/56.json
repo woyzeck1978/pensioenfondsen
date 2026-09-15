@@ -1,0 +1,83 @@
+{
+ "fund_id": 56,
+ "naam": "Foodservice & Groothandel in Levensmiddelen (Foodservice & Wholesale)",
+ "pad": "data/annual_reports/56_Foodservice_Groothandel_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -11.0,
+   "2024": 8.8,
+   "pagina": 7,
+   "letterlijk": "Beleggingsrendement -11,0% 8,80%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 126.1,
+   "2024": 120.5,
+   "pagina": 7,
+   "letterlijk": "Beleidsdekkingsgraad 126,1% 120,5%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 130.6,
+   "2024": 119.3,
+   "pagina": 7,
+   "letterlijk": "Dekkingsgraad 130,6% 119,3%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 88.8,
+   "2024": 88.2,
+   "pagina": 13,
+   "letterlijk": "Ultimo 2025 bedroeg de reële dekkingsgraad 88,80% (ultimo 2024 was dit 88,20%)"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 111.9,
+   "2024": 111.6,
+   "pagina": 80,
+   "letterlijk": "Vereiste dekkingsgraad (strategische verdeling) 111,9% 111,6%"
+  },
+  "aum_euro_bn": {
+   "2025": 1.849721,
+   "2024": 2.005546,
+   "pagina": 7,
+   "letterlijk": "Belegd vermogen (in duizenden euro) 1.849.721 2.005.546"
+  },
+  "deelnemers_actief": {
+   "2025": 22240,
+   "2024": 21754,
+   "pagina": 7,
+   "letterlijk": "Deelnemers 22.240 21.754"
+  },
+  "deelnemers_slapers": {
+   "2025": 37259,
+   "2024": 35373,
+   "pagina": 7,
+   "letterlijk": "Gewezen deelnemers 37.259 35.373"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 12695,
+   "2024": 12123,
+   "pagina": 7,
+   "letterlijk": "Pensioengerechtigden 12.695 12.123"
+  },
+  "deelnemers_totaal": {
+   "2025": 72194,
+   "2024": 69250,
+   "pagina": 7,
+   "letterlijk": "Totaal 72.194 69.250"
+  },
+  "rente_afdekking_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-22",
+  "pagina": 54
+ },
+ "invaardatum": {
+  "datum": "2027-04-01",
+  "status": "gepland",
+  "pagina": 26
+ },
+ "opmerkingen": "Renteafdekking: geen ultimo-cijfer. Norm dynamische renteafdekking eind 2025 110% (begin 2025 95%, p30); gerealiseerde ex-post afdekking over heel 2025 circa 78,7% (p31). Daarom null. Totaal deelnemers 2024: meerjarenoverzicht 69.250, kostentabel p36 71.499 (tegenstrijdig). Vereiste dg feitelijke verdeling 112,5% (2024 112,0%). Vaststelling = verslag van het bestuur 'vastgesteld te Utrecht op 22 juni 2026' (p54). Invaardatum 1 april 2027 is 'beoogde ingangsdatum' in implementatieplan (p5/p26)."
+}

@@ -1,0 +1,83 @@
+{
+ "fund_id": 10,
+ "naam": "Architectenbureaus (Architecture Firms)",
+ "pad": "data/annual_reports/10_Architectenbureaus_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -1.5,
+   "2024": 11.58,
+   "pagina": 6,
+   "letterlijk": "Realised investment return -1.50% 11.58% 10.38% (header 2025 2024 2023 2022 2021)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 131.0,
+   "2024": 123.0,
+   "pagina": 6,
+   "letterlijk": "Policy funding ratio 131.0% 123.0% 125.6%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 137.0,
+   "2024": 122.9,
+   "pagina": 6,
+   "letterlijk": "Current funding ratio 137.0% 122.9% 117.8%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 119.5,
+   "2024": 118.4,
+   "pagina": 17,
+   "letterlijk": "... than the required funding ratio of 119.5% (2024: 'required funding ratio on that date (118.4%)', p77)"
+  },
+  "aum_euro_bn": {
+   "2025": 4.892633,
+   "2024": 5.051836,
+   "pagina": 6,
+   "letterlijk": "Key figures (Amounts x €1,000) Invested assets 4,892,633 5,051,836"
+  },
+  "deelnemers_actief": {
+   "2025": 10344,
+   "2024": 9958,
+   "pagina": 6,
+   "letterlijk": "Participants 10,344 9,958 9,895"
+  },
+  "deelnemers_slapers": {
+   "2025": 23276,
+   "2024": 23007,
+   "pagina": 6,
+   "letterlijk": "Former participants 23,276 23,007 23,029"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 14084,
+   "2024": 14002,
+   "pagina": 6,
+   "letterlijk": "Pension beneficiaries 14,084 14,002 13,975"
+  },
+  "deelnemers_totaal": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "rente_afdekking_pct": {
+   "2025": 70.0,
+   "2024": null,
+   "pagina": 7,
+   "letterlijk": "We have therefore hedged 70% of the interest rate risk."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-03",
+  "pagina": 63
+ },
+ "invaardatum": {
+  "datum": "2027-01-01",
+  "status": "gepland",
+  "pagina": 4
+ },
+ "opmerkingen": "Engelstalige versie van het jaarverslag. Geen totaalregel deelnemers in key figures (niet opgeteld). Vereiste dekkingsgraad 2025 uit tekst p17 (119,5%, = required capital 699.873 = 19,5% van TV, p77); 2024 118,4% uit p77. Reële dekkingsgraad niet gevonden. Rente-afdekking 70% is het nagestreefde/beleidsniveau richting invaardatum (p7), geen expliciet gemeten ultimo-cijfer. Rendement -1,5% totaal (matching -15,6%, return 11,7%, p31). Invaren: 'On 1 January 2027, we will switch to the new pension system and transfer all the accrued pension rights' (p4). Vaststelling: 'The Board adopted the annual accounts on 3 June 2026' (p63); omslag gedateerd 3 June 2026."
+}

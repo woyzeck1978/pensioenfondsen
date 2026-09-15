@@ -1,0 +1,83 @@
+{
+ "fund_id": 218,
+ "naam": "Kring Deutsche Bank Nederland (Centraal Beheer)",
+ "pad": "data/annual_reports/65_Centraal_Beheer_APF_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -9.06,
+   "2024": 9.25,
+   "pagina": 362,
+   "letterlijk": "Beleggingsrendement -9,06% 9,25% (kop 2025 2024)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 132.0,
+   "2024": 127.0,
+   "pagina": 367,
+   "letterlijk": "Beleidsdekkingsgraad 132,0% 127,0%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 134.6,
+   "2024": 125.0,
+   "pagina": 367,
+   "letterlijk": "Actuele dekkingsgraad 134,6% 125,0%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 94.8,
+   "2024": 93.5,
+   "pagina": 367,
+   "letterlijk": "Reële dekkingsgraad 94,8% 93,5%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 114.7,
+   "2024": 114.4,
+   "pagina": 367,
+   "letterlijk": "Vereiste dekkingsgraad 114,7% 114,4%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.477591,
+   "2024": 0.516895,
+   "pagina": 363,
+   "letterlijk": "Totaal belegd vermogen (x € 1.000) 477.591 516.895"
+  },
+  "deelnemers_actief": {
+   "2025": 440,
+   "2024": 482,
+   "pagina": 361,
+   "letterlijk": "Actieven en arbeidsongeschikten 440 482"
+  },
+  "deelnemers_slapers": {
+   "2025": 1386,
+   "2024": 1378,
+   "pagina": 361,
+   "letterlijk": "Gewezen deelnemers 1.386 1.378"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 590,
+   "2024": 563,
+   "pagina": 361,
+   "letterlijk": "Pensioengerechtigden 590 563"
+  },
+  "deelnemers_totaal": {
+   "2025": 2416,
+   "2024": 2423,
+   "pagina": 361,
+   "letterlijk": "Deelnemers 2.416 2.423"
+  },
+  "rente_afdekking_pct": {
+   "2025": 70,
+   "2024": null,
+   "pagina": 376,
+   "letterlijk": "strategie waarbĳ 70% van de rentegevoeligheid van de dekkingsgraad wordt afgedekt"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-17",
+  "pagina": 425
+ },
+ "invaardatum": {
+  "datum": "2028-01-01",
+  "status": "gepland",
+  "pagina": 380
+ },
+ "opmerkingen": "Renteafdekking 70% is strategie en gedefinieerd op de rentegevoeligheid van de DEKKINGSGRAAD (niet van de verplichtingen zoals bij andere kringen). Invaren: 'Het ligt in de bedoeling dat Kring Deutsche Bank Nederland op 1 januari 2028 invaart' (p380; ook p378). Vaststelling: 'heeft de jaarrekening over het verslagjaar 2025 vastgesteld in de vergadering van 17 juni 2026' (p425); bestuursverslag ondertekend 'Zeist, 15 juni 2026' (p403). Deelnemersaantallen: 'Deelnemers' = totaal; actieven incl. arbeidsongeschikten. Bedragen in de kringtabellen in € 1.000."
+}

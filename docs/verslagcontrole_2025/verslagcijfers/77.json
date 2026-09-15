@@ -1,0 +1,83 @@
+{
+ "fund_id": 77,
+ "naam": "AT&T Nederland",
+ "pad": "data/annual_reports/77_AT_T_Nederland_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": 0.47,
+   "2024": 8.56,
+   "pagina": 4,
+   "letterlijk": "Het beleggingsrendement in 2025 was 0,47% (2024: 8,56%)."
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 129.2,
+   "2024": 122.3,
+   "pagina": 3,
+   "letterlijk": "Beleidsdekkingsgraad 129,2%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 134.5,
+   "2024": 121.7,
+   "pagina": 3,
+   "letterlijk": "Actuele dekkingsgraad 134,5%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 97.8,
+   "2024": 93.0,
+   "pagina": 3,
+   "letterlijk": "Reële dekkingsgraad 97,8%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 113.4,
+   "2024": 120.4,
+   "pagina": 3,
+   "letterlijk": "Vereiste dekkingsgraad 113,4%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.164181,
+   "2024": 0.164007,
+   "pagina": 35,
+   "letterlijk": "Balans (in € '000): Beleggingen voor risico Pensioenfonds 164.181 (2024: 164.007)"
+  },
+  "deelnemers_actief": {
+   "2025": 0,
+   "2024": 0,
+   "pagina": 3,
+   "letterlijk": "Actieve deelnemers 0"
+  },
+  "deelnemers_slapers": {
+   "2025": 327,
+   "2024": 343,
+   "pagina": 3,
+   "letterlijk": "Houders premievrije polissen 327"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 147,
+   "2024": 137,
+   "pagina": 3,
+   "letterlijk": "Gepensioneerden 147"
+  },
+  "deelnemers_totaal": {
+   "2025": 474,
+   "2024": 480,
+   "pagina": 3,
+   "letterlijk": "Totaal aantal deelnemers 474"
+  },
+  "rente_afdekking_pct": {
+   "2025": 80.0,
+   "2024": 58.0,
+   "pagina": 16,
+   "letterlijk": "Hiermee wordt 80% (2024: 58%) van het renterisico afgedekt"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-05-27",
+  "pagina": 1
+ },
+ "invaardatum": {
+  "datum": null,
+  "status": "vaart niet in",
+  "pagina": 23
+ },
+ "opmerkingen": "Kerncijfertabel (p3) geeft afgerond totaal rendement 0,5% (2024: 8,6%); de preciezere 0,47%/8,56% uit p4/p11 is gebruikt. AUM-definities lopen uiteen: balans beleggingen risico fonds 164.181 (incl. 4.289 derivaten met negatieve waarde, p43), kerncijfer 'Beleggingen (voor risico fonds en risico deelnemers, incl. lopende interest)' 162.815 (p3), tekst 'belegd vermogen excl. risico deelnemers' € 159,9 mln (p11). Renteafdekking 80% is de (strategische) afdekking per p16/p17/p21; p21 zegt verhoging 'van 50% naar 80%' terwijl p16 2024 op 58% zet. Geen expliciete vaststellingsdatum door het bestuur gevonden: datum is de omslagdatum 'Jaarverslag 2025 27 mei 2026' (p1), gelijk aan de controleverklaring (Amstelveen, 27 mei 2026, p68). Fonds vaart niet in: collectieve waardeoverdracht naar Zwitserleven per 1 april 2026, gevolgd door liquidatie (p4, p23, p29). Gesloten fonds sinds 2014."
+}

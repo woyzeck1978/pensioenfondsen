@@ -1,0 +1,83 @@
+{
+ "fund_id": 116,
+ "naam": "MSD",
+ "pad": "data/annual_reports/116_MSD_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -0.8,
+   "2024": 10.4,
+   "pagina": 10,
+   "letterlijk": "Beleggingsrendement -0,8% 10,4%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 151.7,
+   "2024": 146.9,
+   "pagina": 9,
+   "letterlijk": "Beleidsdekkingsgraad 3) 151,7% 146,9%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 161.0,
+   "2024": 145.0,
+   "pagina": 9,
+   "letterlijk": "DNB Dekkingsgraad 2) 161,0% 145,0%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 109.4,
+   "2024": 108.2,
+   "pagina": 34,
+   "letterlijk": "reële FTK dekkingsgraad ultimo 2025: 109,4% (ultimo 2024: 108,2%)"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 120.3,
+   "2024": 120.1,
+   "pagina": 9,
+   "letterlijk": "Strategisch vereist vermogen 120,3% 120,1%"
+  },
+  "aum_euro_bn": {
+   "2025": 3.504762,
+   "2024": 3.528845,
+   "pagina": 9,
+   "letterlijk": "Belegd vermogen 1) 3.504.762 3.528.845 (in duizenden euro)"
+  },
+  "deelnemers_actief": {
+   "2025": 3631,
+   "2024": 4027,
+   "pagina": 9,
+   "letterlijk": "Actieve deelnemers 3.631 4.027"
+  },
+  "deelnemers_slapers": {
+   "2025": 6216,
+   "2024": 5788,
+   "pagina": 9,
+   "letterlijk": "Gewezen deelnemers 6.216 5.788"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 2387,
+   "2024": 2227,
+   "pagina": 9,
+   "letterlijk": "Pensioengerechtigden 2.387 2.227"
+  },
+  "deelnemers_totaal": {
+   "2025": 12234,
+   "2024": 12042,
+   "pagina": 9,
+   "letterlijk": "(totaalregel zonder label) 12.234 12.042; p28: 'álle 12.234 deelnemers'"
+  },
+  "rente_afdekking_pct": {
+   "2025": 93.4,
+   "2024": null,
+   "pagina": 110,
+   "letterlijk": "De feitelijke afdekking o.b.v. de berekening van het renterisico binnen het vereist eigen vermogen bedraagt ultimo 2025 93,4%"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-09",
+  "pagina": 117
+ },
+ "invaardatum": {
+  "datum": null,
+  "status": "vaart niet in",
+  "pagina": 6
+ },
+ "opmerkingen": "Belegd vermogen in meerjarenoverzicht is exclusief liquide middelen en vorderingen beleggingen (incl. ca. € 3,5 mld). Reële dekkingsgraad: fonds noemt twee varianten, reële FTK-DG 109,4% (genomen) en reële marktwaarde-DG 108,3% (2024: 90,7%). Marktwaarde-DG ultimo 2025 ook 161,0%. Renteafdekking: strategisch 90% vanaf sept 2025 (was 80%); feitelijk 93,4%, 2024-feitelijk niet gevonden. Wtp: nieuwe SPR per 1-1-2028 voor opbouw, bestaande FTK-aanspraken worden niet ingevaren."
+}

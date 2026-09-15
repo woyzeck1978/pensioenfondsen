@@ -1,0 +1,84 @@
+{
+ "fund_id": 198,
+ "invaardatum": {
+  "datum": "2027-01-01",
+  "pagina": 17,
+  "status": "gepland"
+ },
+ "opmerkingen": "Per 1 december 2025 heeft een volledige collectieve waardeoverdracht (CWO) plaatsgevonden naar Pensioenfonds Vervoer en is het fonds in liquidatie getreden. In de kerncijfers worden cijfers per 30-11-2025 (dag voor CWO) en ultimo 2025 (31-12) vermeld. Ultimo 2025 zijn alle deelnemersaantallen en vermogen 0, en dekkingsgraden en rendement n.v.t. De operationele 2025-cijfers per 30-11-2025 zijn: actieve deelnemers 172 (alleen arbeidsongeschikten met premievrije voortzetting, p. 7 noot 2 en p. 49), slapers 17.121, pensioengerechtigden 3.806, totaal 21.099. Pensioenvermogen € 1.164,7 mln (beleggingen voor risico pensioenfonds € 152,1 mln; gemiddeld belegd vermogen € 1.055,1 mln p. 47). Rendement inclusief rente-overlay 0,6%. Actuele dekkingsgraad 155,6% (vóór 7,4% slotindexatie; 145,3% erna, p. 8 noot 5). Beleidsdekkingsgraad 142,8%. Vereiste dekkingsgraad 2025 staat als n.v.t. in de kerncijfertabel (p. 26/27 noemt 120,0% als strategisch niveau/norm). Reële dekkingsgraad en renteafdekking niet genoemd. Invaardatum: overgedragen deelnemers gaan mee naar de Wtp bij Pensioenfonds Vervoer op de geplande invaardatum 1 januari 2027 (p. 17). Geen vaststellingsdatum door het bestuur in de uitsneden.",
+ "vaststellingsdatum": {
+  "datum": null,
+  "pagina": null
+ },
+ "velden": {
+  "aum_euro_bn": {
+   "2024": 1.187101,
+   "2025": 1.164727,
+   "letterlijk": "Pensioenvermogen 1.164.727 (in duizenden euro)",
+   "pagina": 8
+  },
+  "beleggingsrendement_pct": {
+   "2024": 9.3,
+   "2025": 0.6,
+   "letterlijk": "Rendement (inclusief rente-overlay) 0,6%",
+   "pagina": 8
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2024": 137.4,
+   "2025": 142.8,
+   "letterlijk": "Beleidsdekkingsgraad 142,8%",
+   "pagina": 8
+  },
+  "deelnemers_actief": {
+   "2024": 4347,
+   "2025": 172,
+   "letterlijk": "Deelnemers 2) 172",
+   "pagina": 7
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2024": 3620,
+   "2025": 3806,
+   "letterlijk": "Pensioengerechtigden 3.806",
+   "pagina": 7
+  },
+  "deelnemers_slapers": {
+   "2024": 13288,
+   "2025": 17121,
+   "letterlijk": "Gewezen deelnemers 3) 17.121",
+   "pagina": 7
+  },
+  "deelnemers_totaal": {
+   "2024": 21255,
+   "2025": 21099,
+   "letterlijk": "Totaal aantal 21.099",
+   "pagina": 7
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2024": 133.3,
+   "2025": 155.6,
+   "letterlijk": "Dekkingsgraad 155,6%",
+   "pagina": 8
+  },
+  "reele_dekkingsgraad_pct": {
+   "2024": null,
+   "2025": null,
+   "letterlijk": "",
+   "pagina": null
+  },
+  "rente_afdekking_pct": {
+   "2024": null,
+   "2025": null,
+   "letterlijk": "",
+   "pagina": null
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2024": 120,
+   "2025": null,
+   "letterlijk": "",
+   "pagina": 8
+  }
+ },
+ "naam": "Rijn- en Binnenvaart",
+ "pad": "data/annual_reports/198_RijnEnBinnenvaart_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

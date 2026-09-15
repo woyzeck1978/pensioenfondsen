@@ -1,0 +1,83 @@
+{
+ "fund_id": 176,
+ "naam": "Kring SVG (Stap)",
+ "pad": "data/annual_reports/176_SVG_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -1.5,
+   "2024": 7.7,
+   "pagina": 5,
+   "letterlijk": "Beleggingsrendement Per jaar -1,5% 7,7%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 127.0,
+   "2024": 125.2,
+   "pagina": 5,
+   "letterlijk": "Beleidsdekkingsgraad 127,0% 125,2%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 128.4,
+   "2024": 124.8,
+   "pagina": 5,
+   "letterlijk": "Feitelijke dekkingsgraad 128,4% 124,8%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 99.1,
+   "2024": 97.5,
+   "pagina": 20,
+   "letterlijk": "Reële dekkingsgraad 99,1 97,5"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 114.5,
+   "2024": 114.5,
+   "pagina": 5,
+   "letterlijk": "Vereiste dekkingsgraad 114,5% 114,5%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.608416,
+   "2024": 0.627677,
+   "pagina": 58,
+   "letterlijk": "Beleggingen voor risico Pensioenkring SVG 608.416 627.677 (bedragen x € 1.000)"
+  },
+  "deelnemers_actief": {
+   "2025": 26,
+   "2024": 31,
+   "pagina": 5,
+   "letterlijk": "Actieven en arbeidsongeschikten 26 31"
+  },
+  "deelnemers_slapers": {
+   "2025": 3375,
+   "2024": 3626,
+   "pagina": 5,
+   "letterlijk": "Gewezen deelnemers 3.375 3.626"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 3216,
+   "2024": 3068,
+   "pagina": 5,
+   "letterlijk": "Pensioengerechtigden 3.216 3.068"
+  },
+  "deelnemers_totaal": {
+   "2025": 6617,
+   "2024": 6725,
+   "pagina": 5,
+   "letterlijk": "Totaal 6.617 6.725"
+  },
+  "rente_afdekking_pct": {
+   "2025": 100.0,
+   "2024": 100.0,
+   "pagina": 28,
+   "letterlijk": "Gedurende 2025 is de strategische afdekking van het renterisico onveranderd 100% geweest."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-16",
+  "pagina": 90
+ },
+ "invaardatum": {
+  "datum": "2027-07-01",
+  "status": "gepland",
+  "pagina": 31
+ },
+ "opmerkingen": "Tegenstrijdigheid reële dekkingsgraad: p20 en p70 noemen 99,1% (2024: 97,5%), p82 noemt 'Ultimo 2025 bedraagt de reële dekkingsgraad 98,9%'. 99,1 gekozen (tabel, tweemaal). Rente-afdekking = strategisch niveau (100%, ook 2024 'onveranderd'), geen feitelijke ultimo-stand. Kring is gesloten (geen actieve opbouw), toch 26 actieven/AO genoemd. Invaren: 'De beoogde ingangsdatum voor invaren in het nieuwe pensioenstelsel is 1 juli 2027.' Vaststelling betreft financiële opstelling."
+}

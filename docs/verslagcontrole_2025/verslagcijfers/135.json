@@ -1,0 +1,21 @@
+{
+ "fund_id": 135,
+ "naam": "UWV",
+ "pad": "data/annual_reports/135_UWV_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {"2025": -3.7, "2024": 7.4, "pagina": 29, "letterlijk": "Het netto rendement was in 2025 -3,7 procent (2024: 7,4 procent)."},
+  "beleidsdekkingsgraad_pct": {"2025": 121.9, "2024": 119.5, "pagina": 8, "letterlijk": "Beleidsdekkingsgraad 121,9% 119,5% 121,2% (kop 2025 2024 2023)"},
+  "nominale_dekkingsgraad_pct": {"2025": 124.5, "2024": 117.3, "pagina": 8, "letterlijk": "Actuele dekkingsgraad 124,5% 117,3% 116,6%"},
+  "reele_dekkingsgraad_pct": {"2025": 90.9, "2024": 90.3, "pagina": 8, "letterlijk": "Reële dekkingsgraad 90,9% 90,3% 90,7%"},
+  "vereiste_dekkingsgraad_pct": {"2025": 115.2, "2024": 115.5, "pagina": 8, "letterlijk": "Strategisch vereiste dekkingsgraad 115,2% 115,5% 117,0%"},
+  "aum_euro_bn": {"2025": 8.5195, "2024": 9.2384, "pagina": 8, "letterlijk": "Beleggingen risico pensioenfonds (bedragen in miljoenen euro) 8.519,5 9.238,4"},
+  "deelnemers_actief": {"2025": 23911, "2024": 23295, "pagina": 8, "letterlijk": "Deelnemers, actief en voortgezet 23.911 23.295 22.950"},
+  "deelnemers_slapers": {"2025": 18792, "2024": 18982, "pagina": 8, "letterlijk": "Gewezen deelnemers 18.792 18.982 18.583"},
+  "deelnemers_pensioengerechtigd": {"2025": 18908, "2024": 18050, "pagina": 8, "letterlijk": "Pensioengerechtigden 18.908 18.050 17.298"},
+  "deelnemers_totaal": {"2025": 61611, "2024": 60327, "pagina": 8, "letterlijk": "Totaal aantal 61.611 60.327 58.831"},
+  "rente_afdekking_pct": {"2025": 87.9, "2024": 72.5, "pagina": 52, "letterlijk": "De renteafdekking per 31 december 2025 was met 87,9 procent in lijn met het herziene beleggingsbeleid."}
+ },
+ "vaststellingsdatum": {"datum": "2026-05-28", "pagina": 68},
+ "invaardatum": {"datum": "2028-01-01", "status": "gepland", "pagina": 13},
+ "opmerkingen": "Rendement: netto -3,7%, bruto -3,6% (2024 beide 7,4%) (p29); de -8,7% op p18 is het effect van het beleggingsresultaat op de dekkingsgraad, geen rendement. AUM kerncijfers 8.519,5 mln is netto na derivaten aan passiefzijde (909.815 x € 1.000); de balans toont de beleggingen bruto (vastgoed 874.087, aandelen 2.412.854, vastrentend 5.106.790, derivaten 27.881, overig 1.007.742). Excl. beleggingen risico deelnemers 3.235. Rente-afdekking 2024 = 72,5% (dynamische staffel, p27); statisch beleid 85% vanaf 31-1-2025. Vaststellingsdatum 28 mei 2026 staat bij bestuursverslag (p68) en accountant; exacte bestuursondertekening onder jaarrekening niet apart gecontroleerd. Transitiedatum verschoven van 1-1-2027 naar 1-1-2028."
+}

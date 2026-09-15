@@ -1,0 +1,83 @@
+{
+ "fund_id": 124,
+ "naam": "Robeco",
+ "pad": "data/annual_reports/124_Robeco_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -4.85,
+   "2024": 10.81,
+   "pagina": 5,
+   "letterlijk": "Beleggingsrendement risico pensioenfonds - Beleggingsrendement netto 2025 -4,85% | 2024 10,81%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 151.6,
+   "2024": 149.3,
+   "pagina": 5,
+   "letterlijk": "Beleidsdekkingsgraad 2025 151,6% | 2024 149,3%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 159.9,
+   "2024": 149.5,
+   "pagina": 5,
+   "letterlijk": "Actuele dekkingsgraad 2025 159,9% | 2024 149,5%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 106.0,
+   "2024": 111.1,
+   "pagina": 35,
+   "letterlijk": "Reële dekkingsgraad UFR 2025 106,0 | 2024 111,1"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 112.0,
+   "2024": 111.0,
+   "pagina": 5,
+   "letterlijk": "Vereiste dekkingsgraad 2025 112,0% | 2024 111,0%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.867701,
+   "2024": 0.9205,
+   "pagina": 5,
+   "letterlijk": "(Bedragen x € 1.000) Beleggingen - voor risico pensioenfonds 2025 867.701 | 2024 920.500"
+  },
+  "deelnemers_actief": {
+   "2025": 801,
+   "2024": 788,
+   "pagina": 4,
+   "letterlijk": "Deelnemers 2025 801 | 2024 788"
+  },
+  "deelnemers_slapers": {
+   "2025": 1831,
+   "2024": 1911,
+   "pagina": 4,
+   "letterlijk": "Gewezen deelnemers 2025 1.831 | 2024 1.911"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 492,
+   "2024": 388,
+   "pagina": 4,
+   "letterlijk": "Pensioengerechtigden 2025 492 | 2024 388"
+  },
+  "deelnemers_totaal": {
+   "2025": 3124,
+   "2024": 3087,
+   "pagina": 4,
+   "letterlijk": "Totaal 2025 3.124 | 2024 3.087"
+  },
+  "rente_afdekking_pct": {
+   "2025": 99.2,
+   "2024": 98.4,
+   "pagina": 86,
+   "letterlijk": "De werkelijke renteafdekking ultimo 2025 is 99,2% (2024: 98,4%)"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-02",
+  "pagina": 98
+ },
+ "invaardatum": {
+  "datum": "2027-01-01",
+  "status": "gepland",
+  "pagina": 62
+ },
+ "opmerkingen": "Reële dekkingsgraad tegenstrijdig: tabel p35 'Reële dekkingsgraad UFR' 106,0 (2024 111,1), maar tekst direct eronder 'De reële dekkingsgraad ultimo 2025 bedraagt 108,5% (2024: 111,1%)'. Dekkingsgraden in kerncijfers op marktrente (RTS); op UFR: actueel 160,0, beleids 151,6 (2024 149,4), vereist 112,0 (2024 110,2). Totaal belegd vermogen incl. risico deelnemers (DC) 949.514 (2024 990.183) x € 1.000; aum hier = beleggingen voor risico pensioenfonds (incl. premiedepot 1.039). Rendement -4,85% is netto portefeuillerendement risico pensioenfonds (LDI-fonds met renteafdekking is onderdeel van de portefeuille). Invaardatum 1-1-2027 'beoogd'; DNB-beoordeling invaardossier liep nog. Vaststelling: 'jaarrekening 2025 vastgesteld in de vergadering van 2 juni 2026'."
+}

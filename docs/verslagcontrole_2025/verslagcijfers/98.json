@@ -1,0 +1,83 @@
+{
+ "fund_id": 98,
+ "naam": "Gazelle",
+ "pad": "data/annual_reports/98_Gazelle_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": 0.2,
+   "2024": 10.8,
+   "pagina": 5,
+   "letterlijk": "Beleggingsrendement 0,2 10,8 (in %, kolommen 2025 2024); p32: Totaal rendement +0,19%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 137.1,
+   "2024": 128.3,
+   "pagina": 5,
+   "letterlijk": "Beleidsdekkingsgraad (in %) 137,1 128,3"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 146.2,
+   "2024": 126.9,
+   "pagina": 5,
+   "letterlijk": "Aanwezige dekkingsgraad (in %) 146,2 126,9"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 99.0,
+   "2024": 95.1,
+   "pagina": 5,
+   "letterlijk": "Reële dekkingsgraad (in %) 99,0 95,1"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 121.2,
+   "2024": 120.0,
+   "pagina": 5,
+   "letterlijk": "Vereiste dekkingsgraad (in %) 121,2 120,0"
+  },
+  "aum_euro_bn": {
+   "2025": 0.171525,
+   "2024": 0.168212,
+   "pagina": 5,
+   "letterlijk": "Beleggingen voor risico fonds 171.525 168.212 (x € 1.000)"
+  },
+  "deelnemers_actief": {
+   "2025": 513,
+   "2024": 503,
+   "pagina": 5,
+   "letterlijk": "Deelnemers 513 503"
+  },
+  "deelnemers_slapers": {
+   "2025": 830,
+   "2024": 676,
+   "pagina": 5,
+   "letterlijk": "Gewezen deelnemers 830 676"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 377,
+   "2024": 498,
+   "pagina": 5,
+   "letterlijk": "Pensioengerechtigden 377 498"
+  },
+  "deelnemers_totaal": {
+   "2025": 1720,
+   "2024": 1677,
+   "pagina": 5,
+   "letterlijk": "Totaal deelnemers 1.720 1.677"
+  },
+  "rente_afdekking_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": 31,
+   "letterlijk": "afdekking van het renterisico dicht bij de strategische renteafdekking van 60%"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-08-31",
+  "pagina": 63
+ },
+ "invaardatum": {
+  "datum": "2028-01-01",
+  "status": "gepland",
+  "pagina": 12
+ },
+ "opmerkingen": "Renteafdekking: alleen strategisch 60% genoemd, geen feitelijk ultimo-percentage -> null. Pensioengerechtigden daalt 498->377 terwijl slapers 676->830 stijgen en totaal (513+830+377=1720) klopt; mogelijk herclassificatie door nieuw administratiesysteem (Idella), niet toegelicht. Invaren: sociale partners vragen SPR per 1-1-2028 inclusief invaren; bestuur beoordeelt de opdracht nog (niet definitief besloten). Jaarverslag laat (uitstel DNB tot 1-9-2026); jaarrekening vastgesteld 31 augustus 2026. Maand-DG december in bestuursverslag (144,5%/137,0%) wijkt af van kerncijfers (146,2%/137,1%); kerncijfers zijn gebaseerd op jaarrekening."
+}

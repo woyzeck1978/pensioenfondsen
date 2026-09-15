@@ -1,0 +1,21 @@
+{
+ "fund_id": 14,
+ "naam": "Beton / Betonproductenindustrie (Concrete Industry)",
+ "pad": "data/annual_reports/14_Beton_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {"2025": -4.68, "2024": 8.2, "pagina": 14, "letterlijk": "Performance -4,68% 8,20% 9,04% (kop 2025 2024 2023)"},
+  "beleidsdekkingsgraad_pct": {"2025": 118.8, "2024": 112.7, "pagina": 14, "letterlijk": "Beleidsdekkingsgraad 118,8% 112,7% 111,5%"},
+  "nominale_dekkingsgraad_pct": {"2025": 125.7, "2024": 112.0, "pagina": 14, "letterlijk": "Aanwezige dekkingsgraad 125,7% 112,0% 110,0%"},
+  "reele_dekkingsgraad_pct": {"2025": 85.7, "2024": 83.4, "pagina": 17, "letterlijk": "actuele dekkingsgraad, beleidsdekkingsgraad, vereiste dekkingsgraad en reële dekkingsgraad respectievelijk 125,7%, 118,8%, 116,4% en 85,7% (ultimo 2024: 112,0%, 112,7%, 115,7% en 83,4%)"},
+  "vereiste_dekkingsgraad_pct": {"2025": 116.4, "2024": 115.7, "pagina": 17, "letterlijk": "vereiste dekkingsgraad ... 116,4% (ultimo 2024: ... 115,7%)"},
+  "aum_euro_bn": {"2025": 1.612035, "2024": 1.352523, "pagina": 65, "letterlijk": "Beleggingen voor risico pensioenfonds (* € 1.000) 1.612.035 1.352.523"},
+  "deelnemers_actief": {"2025": 6716, "2024": 6883, "pagina": 14, "letterlijk": "Actieve deelnemers 6.716 6.883 7.108"},
+  "deelnemers_slapers": {"2025": 13979, "2024": 13673, "pagina": 14, "letterlijk": "Gewezen deelnemers 13.979 13.673 13.529"},
+  "deelnemers_pensioengerechtigd": {"2025": 8383, "2024": 8263, "pagina": 14, "letterlijk": "Pensioengerechtigden 8.383 8.263 8.288"},
+  "deelnemers_totaal": {"2025": null, "2024": null, "pagina": null, "letterlijk": ""},
+  "rente_afdekking_pct": {"2025": 79.0, "2024": null, "pagina": 86, "letterlijk": "De renteafdekking per balansdatum, op basis van marktrente, bedraagt 79,0%."}
+ },
+ "vaststellingsdatum": {"datum": "2026-06-19", "pagina": 97},
+ "invaardatum": {"datum": "2026-07-01", "status": "gepland", "pagina": 19},
+ "opmerkingen": "AUM: balans/kerncijfers 1.612.035 (x € 1.000) is bruto (derivaten activa 460.071; passiva overige schulden 426.250). Voetnoot bij kerncijfers zegt ten onrechte dat negatieve derivaten gesaldeerd zijn; netto belegd vermogen volgens p30 circa € 1.187 mln / tabel 1.189.245 (2024: 1.225.407). Vereiste dekkingsgraad staat niet in de kerncijfertabel, alleen in tekst p17. Rente-afdekking: p86 noemt 79,0% per balansdatum, p36 'circa 80%'. Actieve deelnemers zijn inclusief 396 arbeidsongeschikten. Geen totaal aantal deelnemers genoemd. Invaren: oorspronkelijke datum 1-1-2026 losgelaten (okt 2025); na balansdatum gepland per 1 juli 2026 onder voorwaarden (DNB geen bezwaar april 2026). Jaarrekening besproken 12 juni 2026, jaarverslag vastgesteld 19 juni 2026."
+}

@@ -1,0 +1,83 @@
+{
+ "fund_id": 187,
+ "naam": "Pensioenkring CRH (Hnp)",
+ "pad": "data/annual_reports/187_Pensioenkring_CRH_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -2.03,
+   "2024": null,
+   "pagina": 16,
+   "letterlijk": "Beleggingsrendement (in %) -2,03%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 124.7,
+   "2024": null,
+   "pagina": 15,
+   "letterlijk": "Beleidsdekkingsgraad (in %) 124,7%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 134.2,
+   "2024": null,
+   "pagina": 15,
+   "letterlijk": "Aanwezige dekkingsgraad (in %) 134,2%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 88.6,
+   "2024": null,
+   "pagina": 15,
+   "letterlijk": "Reële dekkingsgraad (in %) 88,6%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 117.6,
+   "2024": null,
+   "pagina": 15,
+   "letterlijk": "Vereiste dekkingsgraad (in %) 117,6%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.835227,
+   "2024": null,
+   "pagina": 15,
+   "letterlijk": "Totaal beleggingen 835.227 (duizenden euro's)"
+  },
+  "deelnemers_actief": {
+   "2025": 1007,
+   "2024": null,
+   "pagina": 15,
+   "letterlijk": "Aantal actieve deelnemers 1.007"
+  },
+  "deelnemers_slapers": {
+   "2025": 9243,
+   "2024": null,
+   "pagina": 15,
+   "letterlijk": "Aantal gewezen deelnemers 9.243"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 2060,
+   "2024": null,
+   "pagina": 15,
+   "letterlijk": "Aantal pensioengerechtigden 2.060"
+  },
+  "deelnemers_totaal": {
+   "2025": 12310,
+   "2024": null,
+   "pagina": 15,
+   "letterlijk": "12.310 (totaalregel onder aantal deelnemers)"
+  },
+  "rente_afdekking_pct": {
+   "2025": 72.7,
+   "2024": null,
+   "pagina": 210,
+   "letterlijk": "De feitelĳke renteafdekking per ultimo 2025 bedroeg 72,7%"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-30",
+  "pagina": 911
+ },
+ "invaardatum": {
+  "datum": "2028-01-01",
+  "status": "gepland",
+  "pagina": 221
+ },
+ "opmerkingen": "Kring van APF Het Nederlandse Pensioenfonds, opgericht 1-1-2025: geen 2024-cijfers in het verslag (alle 2024 = null). Alle cijfers uit de eigen kerncijferpagina's CRH (p.15-16), niet APF-totaal. Renteafdekking tegenstrijdig: p.210 feitelijk 72,7% (norm 70%), jaarrekening p.623 'per ultimo 2025 voor 70% afgedekt'; strategisch beleid per ultimo 2025 gewijzigd naar 100% afdekking (p.207). Totaal beleggingen 835.227 is na aftrek derivaten (-88.888); pensioenvermogen 935.106. Ondertekening door HNPF-bestuur en RvT, Badhoevedorp 30 juni 2026 (ook bestuursverslag p.438). Beoogde transitiedatum 1-1-2028 (p.219/221)."
+}

@@ -1,0 +1,83 @@
+{
+ "fund_id": 61,
+ "naam": "Schoonmaak- en Glazenwassersbedrijf",
+ "pad": "data/annual_reports/61_Schoonmaak_en_Glazenwass_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -1.8,
+   "2024": 7.5,
+   "pagina": 6,
+   "letterlijk": "Beleggingsrendement, incl. risicoafdekking -1,8% 7,5%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 123.3,
+   "2024": 113.2,
+   "pagina": 6,
+   "letterlijk": "Beleidsdekkingsgraad 123,3% 113,2%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 132.0,
+   "2024": 113.8,
+   "pagina": 6,
+   "letterlijk": "Aanwezige dekkingsgraad 132,0% 113,8%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 88.8,
+   "2024": 83.6,
+   "pagina": 6,
+   "letterlijk": "Reële dekkingsgraad 88,8% 83,6%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 118.8,
+   "2024": 116.4,
+   "pagina": 6,
+   "letterlijk": "Vereiste dekkingsgraad 118,8% 116,4%"
+  },
+  "aum_euro_bn": {
+   "2025": 6.779873,
+   "2024": 6.715842,
+   "pagina": 6,
+   "letterlijk": "Belegd vermogen (bedragen in € 1.000) 6.779.873 6.715.842"
+  },
+  "deelnemers_actief": {
+   "2025": 118706,
+   "2024": 116644,
+   "pagina": 5,
+   "letterlijk": "Aantal actieve deelnemers einde jaar 118.706 116.644"
+  },
+  "deelnemers_slapers": {
+   "2025": 291973,
+   "2024": 278717,
+   "pagina": 5,
+   "letterlijk": "Aantal gewezen deelnemers einde jaar 291.973 278.717"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 47552,
+   "2024": 43963,
+   "pagina": 85,
+   "letterlijk": "Pensioengerechtigden 47.552 ... 43.963 (aantal, specificatie voorziening naar categorieën)"
+  },
+  "deelnemers_totaal": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "rente_afdekking_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-05-21",
+  "pagina": 62
+ },
+ "invaardatum": {
+  "datum": "2026-01-01",
+  "status": "ingevaren",
+  "pagina": 17
+ },
+ "opmerkingen": "Kerncijfers p5 geven pensioengerechtigden alleen per soort (OP 42.170, PP 5.099, WP 283, AOP 270); totaal 47.552 uit p85. Totaal deelnemers niet genoemd. Renteafdekking ultimo 2025 niet als getal genoemd: 2024 'ongeveer 60 procent', in 2025 eerst vast 70%, oktober 62%, november opnieuw verlaagd (p25-26). Actieve deelnemers 'in jaar' 157.795 vs 'einde jaar' 118.706 - einde jaar gekozen. p53 noemt dg eind 2025 133,5% (kerncijfers 132,0%). Jaarverslag en jaarrekening vastgesteld 21 mei 2026 (p62/p107). Ingevaren 1 januari 2026."
+}

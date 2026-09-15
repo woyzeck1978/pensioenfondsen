@@ -1,0 +1,83 @@
+{
+ "fund_id": 28,
+ "naam": "Notariaat (Notaries)",
+ "pad": "data/annual_reports/28_Notariaat_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -6.8,
+   "2024": 8.0,
+   "pagina": 7,
+   "letterlijk": "Rendement beleggingen (%) -6,8 8,0 11,5 -27,7 1,9 (kop 2025 2024 2023 2022 2021)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 117.2,
+   "2024": 112.3,
+   "pagina": 7,
+   "letterlijk": "Beleidsdekkingsgraad (%) 117,2 112,3 115,1"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 121.6,
+   "2024": 112.0,
+   "pagina": 7,
+   "letterlijk": "Actuele dekkingsgraad (%) 121,6 112,0 109,3"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 86.0,
+   "2024": 84.1,
+   "pagina": 88,
+   "letterlijk": "Reële dekkingsgraad 86,0% 84,1%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 114.4,
+   "2024": 114.0,
+   "pagina": 73,
+   "letterlijk": "Vereiste dekkingsgraad per 31 december 114,4% 114,0%"
+  },
+  "aum_euro_bn": {
+   "2025": 2.819,
+   "2024": 3.171,
+   "pagina": 7,
+   "letterlijk": "Bedragen x € 1 miljoen; Beleggingen¹ 2.819 3.171 2.960"
+  },
+  "deelnemers_actief": {
+   "2025": 12540,
+   "2024": 11841,
+   "pagina": 7,
+   "letterlijk": "Actieve deelnemers 12.540 11.841"
+  },
+  "deelnemers_slapers": {
+   "2025": 9964,
+   "2024": 9830,
+   "pagina": 7,
+   "letterlijk": "Ex-deelnemers 9.964 9.830"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 6124,
+   "2024": 5939,
+   "pagina": 7,
+   "letterlijk": "Gepensioneerden 6.124 5.939"
+  },
+  "deelnemers_totaal": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "rente_afdekking_pct": {
+   "2025": 80,
+   "2024": 80,
+   "pagina": 75,
+   "letterlijk": "het renterisico voor 80% af te dekken (2024: 80%)"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-05-21",
+  "pagina": 100
+ },
+ "invaardatum": {
+  "datum": "2027-01-01",
+  "status": "gepland",
+  "pagina": 19
+ },
+ "opmerkingen": "AUM = beleggingen onder aftrek van derivaten die bij verplichtingen zijn opgenomen (voetnoot kerncijfers). Rendement staat als 'Rendement beleggingen'; dekkingsgraadverloop noemt 'Beleggingsrendement (inclusief renteafdekking)'. Verslag geeft geen totaal aantal deelnemers (niet opgeteld). Renteafdekking 80% is beleid; p34: 'Gedurende 2025 is het renterisico voor 80% afgedekt op basis van de marktrente' - geen apart gemeten ultimo-percentage. Vereiste dekkingsgraad 114,4% o.b.v. strategische mix (feitelijke mix ook 14,4%); p21 noemt 'vereiste beleidsdekkingsgraad van 114,0%' voor eind 2025, wat het 2024-cijfer lijkt (tegenstrijdig met p73/p89: 114,4%). Invaarmelding bij DNB ingediend met 1-1-2027 als beoogde overgangsdatum; invaarbesluit 20-10-2025. Vaststelling: 'Den Haag, 21 mei 2026 Namens het bestuur' (p100)."
+}

@@ -1,0 +1,83 @@
+{
+ "fund_id": 110,
+ "naam": "KAS BANK",
+ "pad": "data/annual_reports/110_KAS_BANK_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -3.6,
+   "2024": 7.0,
+   "pagina": 7,
+   "letterlijk": "Beleggingsrendement -3,6% 7,0%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 128.7,
+   "2024": 127.5,
+   "pagina": 8,
+   "letterlijk": "Beleidsdekkingsgraad (BDG) 3) 128,7% 127,5%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 134.7,
+   "2024": 124.1,
+   "pagina": 8,
+   "letterlijk": "Aanwezige dekkingsgraad 2) 134,7% 124,1%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 93.4,
+   "2024": 94.2,
+   "pagina": 8,
+   "letterlijk": "Reële dekkingsgraad 4) 93,4% 94,2%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 115.2,
+   "2024": 115.2,
+   "pagina": 8,
+   "letterlijk": "Vereiste dekkingsgraad 115,2% 115,2%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.330709,
+   "2024": 0.35741,
+   "pagina": 7,
+   "letterlijk": "(in duizenden euro) Belegd vermogen 330.709 357.410"
+  },
+  "deelnemers_actief": {
+   "2025": 26,
+   "2024": 25,
+   "pagina": 7,
+   "letterlijk": "Actieve deelnemers 26 1) 25 1)"
+  },
+  "deelnemers_slapers": {
+   "2025": 1383,
+   "2024": 1427,
+   "pagina": 7,
+   "letterlijk": "Gewezen deelnemers 1.383 1.427"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 414,
+   "2024": 412,
+   "pagina": 7,
+   "letterlijk": "Pensioengerechtigden 414 412"
+  },
+  "deelnemers_totaal": {
+   "2025": 1823,
+   "2024": 1864,
+   "pagina": 7,
+   "letterlijk": "Totaal 1.823 1.864"
+  },
+  "rente_afdekking_pct": {
+   "2025": 82.5,
+   "2024": 83.6,
+   "pagina": 94,
+   "letterlijk": "Eind 2025 was het renterisico van de verplichtingen voor 82,5% (2024: 83,6%) afgedekt"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-22",
+  "pagina": 51
+ },
+ "invaardatum": {
+  "datum": null,
+  "status": "vaart niet in",
+  "pagina": 5
+ },
+ "opmerkingen": "Fonds in liquidatie sinds besluit 25-2-2026: rechten worden per 1 oktober 2026 via collectieve waardeoverdracht overgedragen aan De Nationale APF; het fonds vaart zelf niet in (status 'vaart niet in' gekozen, datum CWO 2026-10-01). Actieve deelnemers zijn uitsluitend arbeidsongeschikten (uitvoeringsovereenkomst opgezegd per 1-5-2023). Renteafdekking 82,5% excl. UFR, strategisch 77,5%. Vaststelling 'Vastgesteld te Amsterdam, 22 juni 2026' door vereffenaars; één handtekening ontbreekt wegens overlijden."
+}

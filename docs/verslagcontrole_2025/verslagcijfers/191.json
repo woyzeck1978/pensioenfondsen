@@ -1,0 +1,83 @@
+{
+ "fund_id": 191,
+ "naam": "Pensioenkring Randstad (Hnp)",
+ "pad": "data/annual_reports/165_Kring_Arcadis_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -9.29,
+   "2024": 6.12,
+   "pagina": 22,
+   "letterlijk": "Beleggingsrendement (in %) -9,29% 6,12%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 108.8,
+   "2024": 107.9,
+   "pagina": 21,
+   "letterlijk": "Beleidsdekkingsgraad (in %) 108,8% 107,9%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 113.0,
+   "2024": 106.0,
+   "pagina": 21,
+   "letterlijk": "Aanwezige dekkingsgraad (in %) 113,0% 106,0%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 78.7,
+   "2024": 79.6,
+   "pagina": 22,
+   "letterlijk": "Reële dekkingsgraad (in %) 78,7% 79,6%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 111.5,
+   "2024": 111.4,
+   "pagina": 21,
+   "letterlijk": "Vereiste dekkingsgraad (in %) 111,5% 111,4%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.849658,
+   "2024": 0.918764,
+   "pagina": 22,
+   "letterlijk": "Totaal beleggingen 849.658 918.764 (x EUR 1.000)"
+  },
+  "deelnemers_actief": {
+   "2025": null,
+   "2024": null,
+   "pagina": 21,
+   "letterlijk": "Arbeidsongeschikten 115 127 (geen regel 'Actieve deelnemers')"
+  },
+  "deelnemers_slapers": {
+   "2025": 11751,
+   "2024": 12008,
+   "pagina": 21,
+   "letterlijk": "Gewezen deelnemers 11.751 12.008"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 1489,
+   "2024": 1315,
+   "pagina": 21,
+   "letterlijk": "Pensioengerechtigden 1.489 1.315"
+  },
+  "deelnemers_totaal": {
+   "2025": 13355,
+   "2024": 13450,
+   "pagina": 21,
+   "letterlijk": "13.355 13.450"
+  },
+  "rente_afdekking_pct": {
+   "2025": 99.7,
+   "2024": null,
+   "pagina": 295,
+   "letterlijk": "De feitelĳke afdekking per ultimo 2025 bedroeg 99,7%"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-30",
+  "pagina": 911
+ },
+ "invaardatum": {
+  "datum": "2027-01-01",
+  "status": "gepland",
+  "pagina": 284
+ },
+ "opmerkingen": "Cijfers uit het eigen kerncijferhoofdstuk van de kring (Jaarverslag 2025 Stichting Het Nederlandse Pensioenfonds, bedragen x EUR 1.000). AUM = 'Totaal beleggingen' uit de kerncijfers (na aftrek negatieve derivaten). Nominale dekkingsgraad = 'Aanwezige dekkingsgraad'. Vaststellingsdatum = ondertekening jaarrekening (Badhoevedorp, 30 juni 2026, p.911; ondertekening bestuursverslag p.438 zelfde datum). Renteafdekking 2024 niet opgezocht/genoemd. Kring heet 'Pensioenkring Randstad Groep'; besloten kring zonder premie (n.v.t.). Kerncijfers tonen geen actieve deelnemers maar 'Arbeidsongeschikten 115 (2024: 127)'; deelnemers_actief daarom null (totaal 13.355 is incl. arbeidsongeschikten). Renteafdekking-norm 100%. 'zal op 1 januari 2027 invaren naar een flexibele premieregeling met risicodelingsreserve' (p.284)."
+}

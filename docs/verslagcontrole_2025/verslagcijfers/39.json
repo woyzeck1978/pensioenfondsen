@@ -1,0 +1,84 @@
+{
+ "fund_id": 39,
+ "invaardatum": {
+  "datum": "2026-01-01",
+  "pagina": 150,
+  "status": "ingevaren"
+ },
+ "opmerkingen": "SPW (fund 39): Invaren per 2026-01-01 naar de solidaire premieregeling is bevestigd in de Gebeurtenissen na balansdatum (pag. 139) en de Controleverklaring (pag. 150: 'dat het pensioenfonds op 1 januari 2026 de bestaande pensioenaanspraken en het eigen vermogen heeft overgezet (ingevaren) naar het nieuwe pensioenstelsel'). Renteafdekking percentage wordt niet vermeld in de uitsnede. Vaststellingsdatum door het bestuur ontbreekt in de verstrekte uitsnede (pagina 140 'Ondertekening van de jaarrekening' is niet opgenomen in de uitsnede). Belegd vermogen: 15.315.365 duizend euro = 15,315365 miljard euro (2024: 15.975.339 duizend euro = 15,975339 miljard euro). Vereist eigen vermogen van 125,8% (2024: 126,1%) geldt als vereiste dekkingsgraad onder de normportefeuille (pag. 109).",
+ "vaststellingsdatum": {
+  "datum": null,
+  "pagina": null
+ },
+ "velden": {
+  "aum_euro_bn": {
+   "2024": 15.975339,
+   "2025": 15.315365,
+   "letterlijk": "Belegd vermogen 15.315.365 (bedragen in 1.000 euro)",
+   "pagina": 7
+  },
+  "beleggingsrendement_pct": {
+   "2024": 8.4,
+   "2025": -3.9,
+   "letterlijk": "Beleggingsrendement incl. derivaten -3,9%",
+   "pagina": 7
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2024": 130.3,
+   "2025": 134.9,
+   "letterlijk": "Beleidsdekkingsgraad 134,9%",
+   "pagina": 7
+  },
+  "deelnemers_actief": {
+   "2024": 30997,
+   "2025": 32005,
+   "letterlijk": "Deelnemers 32.005",
+   "pagina": 6
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2024": 22214,
+   "2025": 23119,
+   "letterlijk": "Pensioengerechtigden 23.119",
+   "pagina": 6
+  },
+  "deelnemers_slapers": {
+   "2024": 24267,
+   "2025": 24735,
+   "letterlijk": "Gewezen deelnemers 24.735",
+   "pagina": 6
+  },
+  "deelnemers_totaal": {
+   "2024": 77478,
+   "2025": 79859,
+   "letterlijk": "Totaal 79.859",
+   "pagina": 6
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2024": 128.8,
+   "2025": 143.1,
+   "letterlijk": "Dekkingsgraad 143,1%",
+   "pagina": 7
+  },
+  "reele_dekkingsgraad_pct": {
+   "2024": 97,
+   "2025": 102.9,
+   "letterlijk": "Eind 2025 bedraagt de reële dekkingsgraad 102,9 procent (2024: 97 procent)",
+   "pagina": 51
+  },
+  "rente_afdekking_pct": {
+   "2024": null,
+   "2025": null,
+   "letterlijk": "",
+   "pagina": null
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2024": 126.1,
+   "2025": 125.8,
+   "letterlijk": "Vereist eigen vermogen 125,8%",
+   "pagina": 7
+  }
+ },
+ "naam": "Woningcorporaties / SPW (Housing Corporations)",
+ "pad": "data/annual_reports/39_SPW_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

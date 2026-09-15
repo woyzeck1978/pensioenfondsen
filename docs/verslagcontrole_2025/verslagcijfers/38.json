@@ -1,0 +1,21 @@
+{
+ "fund_id": 38,
+ "naam": "Werk- en (re)Integratie / PWRI (Work and Reintegration)",
+ "pad": "data/annual_reports/38_Werk_en_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {"2025": 2.81, "2024": 8.9, "pagina": 6, "letterlijk": "Rendement (%) 2,81 8,9 9,0 (kop 2025 2024 2023)"},
+  "beleidsdekkingsgraad_pct": {"2025": null, "2024": 127.0, "pagina": 7, "letterlijk": "Beleidsdekkingsgraad n.v.t. 127,0 126,4"},
+  "nominale_dekkingsgraad_pct": {"2025": null, "2024": 124.0, "pagina": 7, "letterlijk": "Dekkingsgraad fonds (A / B) (%) n.v.t. 124,0 123,4"},
+  "reele_dekkingsgraad_pct": {"2025": null, "2024": null, "pagina": null, "letterlijk": ""},
+  "vereiste_dekkingsgraad_pct": {"2025": null, "2024": null, "pagina": null, "letterlijk": ""},
+  "aum_euro_bn": {"2025": 11.060532, "2024": 10.916609, "pagina": 6, "letterlijk": "Risico deelnemers onder Wtp (excl. AOV) Totaal beleggingen (€ 1.000) 11.060.532 n.v.t.; 2024: balans Beleggingen voor risico pensioenfonds 10.916.609 (p69)"},
+  "deelnemers_actief": {"2025": 73165, "2024": 72602, "pagina": 6, "letterlijk": "Actieve deelnemers 73.165 72.602 74.450"},
+  "deelnemers_slapers": {"2025": 47971, "2024": 49050, "pagina": 6, "letterlijk": "Gewezen deelnemers 47.971 49.050 49.783"},
+  "deelnemers_pensioengerechtigd": {"2025": 64658, "2024": 64144, "pagina": 6, "letterlijk": "Pensioengerechtigden 64.658 64.144 62.530"},
+  "deelnemers_totaal": {"2025": 185794, "2024": 185796, "pagina": 6, "letterlijk": "Totaal aantal 185.794 185.796 186.763"},
+  "rente_afdekking_pct": {"2025": null, "2024": null, "pagina": null, "letterlijk": ""}
+ },
+ "vaststellingsdatum": {"datum": "2026-06-30", "pagina": 72},
+ "invaardatum": {"datum": "2025-01-01", "status": "ingevaren", "pagina": 72},
+ "opmerkingen": "Ingevaren per 1 januari 2025 (solidaire premieregeling); FTK-dekkingsgraden 2025 n.v.t. in meerjarenoverzicht. Vereiste en reële dekkingsgraad 2024 staan niet in dit verslag. AUM niet vergelijkbaar tussen jaren: 2025 = totaal beleggingen risico deelnemers Wtp excl. AOV (11.060.532); balans 2025 toont beleggingen risico deelnemers 11.137.448 (incl. AOV) en risico pensioenfonds 60.426; 2024 = FTK beleggingen risico pensioenfonds 10.916.609 (balans p69). AOV-spaarregeling (76.916) niet ingevaren. Rente-afdekking: alleen kwalitatief (lifecycle-afhankelijk, p19), geen percentage. Actieven excl. AOV-deelnemers (9.784)."
+}

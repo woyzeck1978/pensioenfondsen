@@ -1,0 +1,83 @@
+{
+ "fund_id": 229,
+ "naam": "Kring Flexibele Regeling (HNPF)",
+ "pad": "data/annual_reports/229_Kring_Flexibele_Regeling_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": 10,
+   "letterlijk": "(alleen rendement per deelportefeuille: matching -9,1%, rendements 11,3%, vastrentend 1,2%)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 100.2,
+   "2024": 101.6,
+   "pagina": 9,
+   "letterlijk": "Beleidsdekkingsgraad (in %) 2025: 100,2% (WTP 95,5% / FTK 101,5%); 2024: 101,6%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 100.2,
+   "2024": 101.5,
+   "pagina": 9,
+   "letterlijk": "Aanwezige dekkingsgraad (in %) 2025: 100,2% (WTP 95,5% / FTK 101,5%); 2024: 101,5%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": 131,
+   "letterlijk": "De vereiste dekkingsgraad dient ongeveer 101,8% te zijn. (geen exact ultimo-cijfer)"
+  },
+  "aum_euro_bn": {
+   "2025": 0.088315,
+   "2024": 0.056354,
+   "pagina": 10,
+   "letterlijk": "Kerncijfers (x € 1.000) Totaal beleggingen voor risico deelnemers 88.315 (WTP 16.186 / FTK 72.129); 2024: 56.354"
+  },
+  "deelnemers_actief": {
+   "2025": 5462,
+   "2024": 4939,
+   "pagina": 9,
+   "letterlijk": "Actieve deelnemers 5.462 (WTP 3.590 / FTK 1.872); 2024: 4.939"
+  },
+  "deelnemers_slapers": {
+   "2025": 2941,
+   "2024": 2200,
+   "pagina": 9,
+   "letterlijk": "Gewezen deelnemers 2.941 (WTP 2.244 / FTK 697); 2024: 2.200"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 10,
+   "2024": 10,
+   "pagina": 9,
+   "letterlijk": "Pensioengerechtigden 10 (WTP 7 / FTK 3); 2024: 10"
+  },
+  "deelnemers_totaal": {
+   "2025": 8413,
+   "2024": 7149,
+   "pagina": 9,
+   "letterlijk": "(totaal) 8.413 (WTP 5.841 / FTK 2.572); 2024: 7.149"
+  },
+  "rente_afdekking_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-30",
+  "pagina": 911
+ },
+ "invaardatum": {
+  "datum": null,
+  "status": "geen datum genoemd",
+  "pagina": 131
+ },
+ "opmerkingen": "Collectiviteitkring Flexibele regeling binnen APF Het Nederlandse Pensioenfonds (13 kringen; alle cijfers kring-specifiek, niet APF-totaal of Collectiviteitkring 1). DC-kring: beleggingsrisico voor rekening deelnemers; geen fondsbreed totaalrendement gerapporteerd, alleen per deelportefeuille (matching -9,1%, rendementsportefeuille 11,3%, vastrentend 1,2%) -> rendement null. Kerncijfers 2025 gesplitst in WTP-deel (Efteling, Flexibele Premieregeling sinds 1 september 2024, in jaarrekening verwerkt per 1 januari 2025) en FTK-deel; totaalkolom gebruikt. WTP-deel: DG 95,5%, onder MVEV (reservetekort, p113/p116). Minimaal vereiste dekkingsgraad 101,3% (2024: 101,5%); vereiste dekkingsgraad alleen 'ongeveer 101,8%' (p131) -> null. Rente-afdekking alleen via matchingportefeuille per deelnemer, geen percentage. Invaren: deels al Wtp (Efteling per 1-9-2024); voor FTK-werkgevers alleen 'Uiterlijk op 1 januari 2028 moet alle toekomstige pensioenopbouw plaatsvinden op basis van de regels van het nieuwe pensioenstelsel' (p131), geen kringspecifieke datum. Vaststelling: 'Ondertekening jaarrekening Badhoevedorp, 30 juni 2026' (p911, APF-breed)."
+}

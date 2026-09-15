@@ -1,0 +1,83 @@
+{
+ "fund_id": 181,
+ "naam": "Oak",
+ "pad": "data/annual_reports/181_Oak_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -2.1,
+   "2024": 9.0,
+   "pagina": 14,
+   "letterlijk": "Jaarrendement portefeuille in % -2,1 9,0"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 132.0,
+   "2024": 124.7,
+   "pagina": 14,
+   "letterlijk": "Beleidsdekkingsgraad in % 132,0 124,7"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 141.3,
+   "2024": 122.9,
+   "pagina": 14,
+   "letterlijk": "Dekkingsgraad in % 141,3 122,9"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 93.6,
+   "2024": 92.8,
+   "pagina": 38,
+   "letterlijk": "De reële dekkingsgraad betreft ultimo 2025 93,6% (2024: 92,8%)"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 117.7,
+   "2024": 117.9,
+   "pagina": 14,
+   "letterlijk": "Vereist eigen vermogen in % 117,7 117,9"
+  },
+  "aum_euro_bn": {
+   "2025": 5.345,
+   "2024": 5.437,
+   "pagina": 14,
+   "letterlijk": "Belegd vermogen in € mln 5.345 5.437"
+  },
+  "deelnemers_actief": {
+   "2025": 28232,
+   "2024": 28082,
+   "pagina": 14,
+   "letterlijk": "Actieven en arbeidsongeschikten 28.232 28.082"
+  },
+  "deelnemers_slapers": {
+   "2025": 55126,
+   "2024": 54812,
+   "pagina": 14,
+   "letterlijk": "Gewezen deelnemers 55.126 54.812"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 35885,
+   "2024": 36014,
+   "pagina": 14,
+   "letterlijk": "Pensioengerechtigden 35.885 36.014"
+  },
+  "deelnemers_totaal": {
+   "2025": 119243,
+   "2024": 118908,
+   "pagina": 14,
+   "letterlijk": "Totaal aantal verzekerden 119.243 118.908"
+  },
+  "rente_afdekking_pct": {
+   "2025": 80.0,
+   "2024": null,
+   "pagina": 164,
+   "letterlijk": "De afdekking van het renterisico bedraagt 80%."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-17",
+  "pagina": 87
+ },
+ "invaardatum": {
+  "datum": "2026-01-01",
+  "status": "ingevaren",
+  "pagina": 32
+ },
+ "opmerkingen": "Rendement: kerncijfers -2,1%, maar hoofdstuk 5.3 (p56) noemt 'Totaal incl. currency overlay -/- 2,0%' (excl. overlay -4,7%). Renteafdekking 80% is het beleid (p57 strategisch, p119 bandbreedte 75-85%); een gerealiseerd ultimo-percentage wordt niet genoemd, 2024 niet expliciet. Bestuursverslag en jaarrekening beide ondertekend Amsterdam, 17 juni 2026 (p87, p137)."
+}

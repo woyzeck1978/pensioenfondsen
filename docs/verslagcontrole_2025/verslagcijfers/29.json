@@ -1,0 +1,21 @@
+{
+ "fund_id": 29,
+ "naam": "Openbare Bibliotheken / POB (Public Libraries)",
+ "pad": "data/annual_reports/29_Openbare_Bibliotheken_PO_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {"2025": 2.0, "2024": 10.3, "pagina": 9, "letterlijk": "Rendement totaal beleggingsportefeuille 2,0% 10,3% 11,7% (kop 2025 2024 2023)"},
+  "beleidsdekkingsgraad_pct": {"2025": null, "2024": 135.3, "pagina": 10, "letterlijk": "Beleidsdekkingsgraad n.v.t. 135,3% 130,7%"},
+  "nominale_dekkingsgraad_pct": {"2025": 101.8, "2024": 133.4, "pagina": 10, "letterlijk": "Dekkingsgraad 101,8% 133,4% 130,4%"},
+  "reele_dekkingsgraad_pct": {"2025": null, "2024": null, "pagina": null, "letterlijk": ""},
+  "vereiste_dekkingsgraad_pct": {"2025": null, "2024": 118.8, "pagina": 10, "letterlijk": "Vereiste dekkingsgraad n.v.t. 118,8% 118,5%"},
+  "aum_euro_bn": {"2025": 2.599591, "2024": 2.595941, "pagina": 9, "letterlijk": "Totaal beleggingen (in duizenden euro) 2.599.591 2.595.941 (2025 = beleggingen voor risico deelnemers)"},
+  "deelnemers_actief": {"2025": 9450, "2024": 8951, "pagina": 9, "letterlijk": "Actieve deelnemers 9.450 8.951 8.497"},
+  "deelnemers_slapers": {"2025": 8425, "2024": 8714, "pagina": 9, "letterlijk": "Gewezen deelnemers 8.425 8.714 8.558"},
+  "deelnemers_pensioengerechtigd": {"2025": 9255, "2024": 8989, "pagina": 9, "letterlijk": "Pensioengerechtigden 9.255 8.989 8.545"},
+  "deelnemers_totaal": {"2025": 27130, "2024": 26654, "pagina": 9, "letterlijk": "Totaal 27.130 26.654 25.600"},
+  "rente_afdekking_pct": {"2025": 70.2, "2024": 50.6, "pagina": 126, "letterlijk": "Feitelijke renteafdekking 70,2% 50,6% (kop 2025 2024)"}
+ },
+ "vaststellingsdatum": {"datum": "2026-06-29", "pagina": 62},
+ "invaardatum": {"datum": "2025-07-01", "status": "ingevaren", "pagina": 24},
+ "opmerkingen": "Ingevaren per 1 juli 2025 in de solidaire premieregeling (Wtp); ultimo 2025 zijn FTK-maatstaven n.v.t. De 'dekkingsgraad' 101,8% ultimo 2025 is een Wtp-maatstaf (toetsvermogen/MVEV-context, MVEV 100,46%), niet vergelijkbaar met de FTK-dekkingsgraad 2024. Beleidsdekkingsgraad, vereiste en reële dekkingsgraad 2025 n.v.t. (reële DG in 2024-kolom niet in meerjarenoverzicht). AUM 2025 = beleggingen voor risico deelnemers incl. kortlopende vorderingen/liquide middelen/schulden inzake beleggingen; 2024 = beleggingen voor risico pensioenfonds. Rendement 2,0% = totaal, bestaande uit beschermingsrendement -2,1% en overrendement 4,2%. Rente-afdekking 2025 (70,2%) betreft de Wtp-beschermingsportefeuille (beoogd 69,1%); per ultimo juni 2025 (vlak voor invaren) was de FTK-afdekking 78,6% excl. bedrijfsobligaties/hypotheken/green bonds (p37). Bestuursverslag vastgesteld te Utrecht 29 juni 2026 (p62); VO-verslag 25 juni 2026."
+}

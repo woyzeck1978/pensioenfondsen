@@ -1,0 +1,83 @@
+{
+ "fund_id": 15,
+ "naam": "Bouw / BPFBouw (Construction)",
+ "pad": "data/annual_reports/15_BPFBouw_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -3.9,
+   "2024": 7.6,
+   "pagina": 11,
+   "letterlijk": "Totaalrendement incl. derivaten overlay -3,9 7,6"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 133.1,
+   "2024": 126.3,
+   "pagina": 11,
+   "letterlijk": "Beleidsdekkingsgraad (in procenten) 133,1 126,3"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 141.0,
+   "2024": 125.6,
+   "pagina": 11,
+   "letterlijk": "Dekkingsgraad (in procenten) 141,0 125,6"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 97.5,
+   "2024": 94.5,
+   "pagina": 29,
+   "letterlijk": "2025 141,0 133,1 97,5 / 2024 125,6 126,3 94,5 (Reële dekkingsgraad ultimo jaar)"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 125.0,
+   "2024": 123.7,
+   "pagina": 11,
+   "letterlijk": "Vereist eigen vermogen (in procenten) 125,0 123,7"
+  },
+  "aum_euro_bn": {
+   "2025": 75.713,
+   "2024": 78.241,
+   "pagina": 11,
+   "letterlijk": "Bedragen in miljoenen euro's: Totaal beleggingen 75.713 78.241"
+  },
+  "deelnemers_actief": {
+   "2025": 158410,
+   "2024": 151362,
+   "pagina": 10,
+   "letterlijk": "- Actieve deelnemers 158.410 151.362"
+  },
+  "deelnemers_slapers": {
+   "2025": 330636,
+   "2024": 340126,
+   "pagina": 10,
+   "letterlijk": "- Gewezen deelnemers 330.636 340.126"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 246917,
+   "2024": 246659,
+   "pagina": 10,
+   "letterlijk": "- Pensioengerechtigden 246.917 246.659"
+  },
+  "deelnemers_totaal": {
+   "2025": 746664,
+   "2024": 749104,
+   "pagina": 10,
+   "letterlijk": "Totaal 746.664 749.104"
+  },
+  "rente_afdekking_pct": {
+   "2025": 61.6,
+   "2024": 61.8,
+   "pagina": 135,
+   "letterlijk": "Het werkelijke afdekkingsniveau ultimo 2025 is uitgekomen op 61,6 procent van de dekkingsgraad (2024: 61,8 procent"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-05-21",
+  "pagina": 143
+ },
+ "invaardatum": {
+  "datum": "2026-01-01",
+  "status": "ingevaren",
+  "pagina": 21
+ },
+ "opmerkingen": "AUM: 'Totaal beleggingen' 75.713 mln; 'Saldo belegd vermogen' (na schulden uit beleggingen) is 66.269 mln (2024: 69.471). Totaal deelnemers 746.664 omvat ook arbeidsongeschikten zonder (7.712) en met AO-uitkering (2.989), die niet in actief/gewezen/pensioengerechtigd zitten. 'Vereiste dekkingsgraad' staat als 'Vereist eigen vermogen (in procenten) 125,0' (25,0% van de voorziening). Rente-afdekking is gemeten t.o.v. de dekkingsgraad (norm 62%), niet t.o.v. de verplichtingen. Rendement excl. overlay -2,4%; p116 noemt 'exclusief renteafdekking: -0,9 procent' — andere definitie. Invaren per 1 januari 2026 (na balansdatum)."
+}

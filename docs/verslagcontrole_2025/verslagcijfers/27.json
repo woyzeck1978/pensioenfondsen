@@ -1,0 +1,83 @@
+{
+ "fund_id": 27,
+ "naam": "Nederlandse Groothandel / SPNG (Dutch Wholesale)",
+ "pad": "data/annual_reports/27_SPNG_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": 2.5,
+   "2024": 8.0,
+   "pagina": 7,
+   "letterlijk": "Beleggingsresultaat 2,5% 8,0%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 112.0,
+   "2024": 109.4,
+   "pagina": 9,
+   "letterlijk": "Beleidsdekkingsgraad 112,0% 109,4%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 114.9,
+   "2024": 107.9,
+   "pagina": 9,
+   "letterlijk": "Dekkingsgraad totaal fonds 114,9% 107,9%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 88.7,
+   "2024": 87.1,
+   "pagina": 15,
+   "letterlijk": "Ultimo 2025 bedroeg de reële dekkingsgraad 88,7% (ultimo 2024: 87,1%)"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 106.8,
+   "2024": 106.7,
+   "pagina": 9,
+   "letterlijk": "Vereiste Dekkingsgraad 106,8% 106,7%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.906041,
+   "2024": 0.852684,
+   "pagina": 7,
+   "letterlijk": "Totaal beleggingen 906.041 852.684 (in duizenden euro)"
+  },
+  "deelnemers_actief": {
+   "2025": 4741,
+   "2024": 4824,
+   "pagina": 7,
+   "letterlijk": "Actieve deelnemers 4.741 4.824"
+  },
+  "deelnemers_slapers": {
+   "2025": 25050,
+   "2024": 24739,
+   "pagina": 7,
+   "letterlijk": "Gewezen deelnemers 25.050 24.739"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 7683,
+   "2024": 7316,
+   "pagina": 7,
+   "letterlijk": "Pensioengerechtigden 7.683 7.316"
+  },
+  "deelnemers_totaal": {
+   "2025": 37474,
+   "2024": 36879,
+   "pagina": 7,
+   "letterlijk": "Totaal 37.474 36.879"
+  },
+  "rente_afdekking_pct": {
+   "2025": 46.0,
+   "2024": null,
+   "pagina": 89,
+   "letterlijk": "De feitelijke renteafdekking op basis van de DNB-methodiek bedraagt 46,0% eind 2025"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-26",
+  "pagina": 50
+ },
+ "invaardatum": {
+  "datum": null,
+  "status": "vaart niet in",
+  "pagina": 51
+ },
+ "opmerkingen": "Totaal beleggingen (906 mln) is som van verzekerd deel (garantiecontracten NN/Aegon op marktwaarde, niet op balans), eigen beheer en DC-regeling. Rendement 2,5% is netto totaal; eigen beheer 0,9%, DC 5,1%, verzekerd deel 3,3%. Dekkingsgraad eigen beheer 141,3% wijkt sterk af van totaal fonds 114,9%. Renteafdekking 46% geldt alleen eigen beheer uitkeringsovereenkomst (strategisch ongewijzigd in 2025; 2024 niet als getal). Bestuur besloot geen verzoek tot invaren (p.51); transitie naar Wtp uiterlijk 1-1-2028 via individuele waardeoverdracht/premieregeling (p.50). Tekst p.49 noemt 'eind april 2025' beleidsdekkingsgraad 113,4% — waarschijnlijk april 2026 bedoeld."
+}

@@ -1,0 +1,83 @@
+{
+ "fund_id": 13,
+ "naam": "Beroepsvervoer over de Weg (Commercial Road Transport)",
+ "pad": "data/annual_reports/13_Beroepsvervoer_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -2.2,
+   "2024": 8.9,
+   "pagina": 5,
+   "letterlijk": "Beleggingsrendement -2,2% 8,9% (kolommen 2025 2024)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 121.0,
+   "2024": 111.6,
+   "pagina": 5,
+   "letterlijk": "Beleidsdekkingsgraad in % 121,0% 111,6%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 127.5,
+   "2024": 111.3,
+   "pagina": 5,
+   "letterlijk": "Actuele dekkingsgraad volgens FTK in % (a / b) 127,5% 111,3%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 86.5,
+   "2024": 82.2,
+   "pagina": 5,
+   "letterlijk": "Reële dekkingsgraad 86,5% 82,2%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 118.9,
+   "2024": 118.3,
+   "pagina": 64,
+   "letterlijk": "de vereiste dekkingsgraad van eind 2025 uit op 118,9% (eind 2024: 118,3%"
+  },
+  "aum_euro_bn": {
+   "2025": 34.781,
+   "2024": 33.945,
+   "pagina": 5,
+   "letterlijk": "Balanswaarde (jaareinde, incl. derivaten passiva) 34.781 33.945 (Bedragen x € 1.000.000)"
+  },
+  "deelnemers_actief": {
+   "2025": 200228,
+   "2024": 196941,
+   "pagina": 5,
+   "letterlijk": "Deelnemers, actief en voortgezet 200.228 196.941"
+  },
+  "deelnemers_slapers": {
+   "2025": 343285,
+   "2024": 326030,
+   "pagina": 5,
+   "letterlijk": "Gewezen deelnemers 343.285 326.030"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 126105,
+   "2024": 116908,
+   "pagina": 5,
+   "letterlijk": "Pensioengerechtigden 126.105 116.908"
+  },
+  "deelnemers_totaal": {
+   "2025": 669618,
+   "2024": 639879,
+   "pagina": 5,
+   "letterlijk": "Totaal aantal deelnemers 669.618 639.879"
+  },
+  "rente_afdekking_pct": {
+   "2025": 65.0,
+   "2024": 58.0,
+   "pagina": 115,
+   "letterlijk": "De werkelijke afdekking ultimo 2025 bedraagt 65% (2024: 58%)"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-04-16",
+  "pagina": 131
+ },
+ "invaardatum": {
+  "datum": "2027-01-01",
+  "status": "gepland",
+  "pagina": 11
+ },
+ "opmerkingen": "Renteafdekking op marktwaardebasis (beleid = werkelijk = 65%). Beleggingen = balanswaarde incl. derivaten passiva; 'Balanswaarde voor bep. dekkingsgraad' is 37.082 mln. Actieve deelnemers incl. 'voortgezet'. Stijging slapers/gepensioneerden in 2025 door collectieve waardeoverdracht Pf Rijn- en Binnenvaart per 1-12-2025. Actuele dekkingsgraad eind 2025 is al inclusief toeslag 4,12% per 1-1-2026. Vereiste dekkingsgraad als % niet in kerncijfertabel (daar 'VEV in % van voorziening' 18,9%/18,3%), wel in tekst p.64."
+}

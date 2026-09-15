@@ -1,0 +1,83 @@
+{
+ "fund_id": 1,
+ "naam": "Dierenartsen (SPD - Veterinarians)",
+ "pad": "data/annual_reports/1_Dierenartsen_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -4.5,
+   "2024": 9.0,
+   "pagina": 8,
+   "letterlijk": "Beleggingsrendement voor risico fonds (%) Werkelijk (inclusief resultaat valuta- en rentehedge) -4,5 | 9,0"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 120.0,
+   "2024": 113.8,
+   "pagina": 7,
+   "letterlijk": "Beleidsdekkingsgraad 120,0 | 113,8"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 125.7,
+   "2024": 114.3,
+   "pagina": 7,
+   "letterlijk": "Actuele dekkingsgraad 125,7 | 114,3"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 88.5,
+   "2024": 85.4,
+   "pagina": 7,
+   "letterlijk": "Reële dekkingsgraad 88,5 | 85,4"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 118.4,
+   "2024": 116.7,
+   "pagina": 7,
+   "letterlijk": "Vereiste dekkingsgraad 118,4 | 116,7"
+  },
+  "aum_euro_bn": {
+   "2025": 1.646514,
+   "2024": 1.736739,
+   "pagina": 8,
+   "letterlijk": "Totaal beleggingen activa (x € 1.000) 1.646.514 | 1.736.739"
+  },
+  "deelnemers_actief": {
+   "2025": 4817,
+   "2024": 4725,
+   "pagina": 7,
+   "letterlijk": "Deelnemers 4.817 | 4.725"
+  },
+  "deelnemers_slapers": {
+   "2025": 1576,
+   "2024": 1512,
+   "pagina": 7,
+   "letterlijk": "Gewezen deelnemers 1.576 | 1.512"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 2161,
+   "2024": 2080,
+   "pagina": 7,
+   "letterlijk": "Pensioengerechtigden 2.161 | 2.080"
+  },
+  "deelnemers_totaal": {
+   "2025": 8673,
+   "2024": 8427,
+   "pagina": 7,
+   "letterlijk": "(totaalregel) 8.673 | 8.427"
+  },
+  "rente_afdekking_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": 54,
+   "letterlijk": "strategie waarbij 70% van renterisico van de dekkingsgraad wordt afgedekt (beleid, geen ultimo-realisatie)"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-05-29",
+  "pagina": 121
+ },
+ "invaardatum": {
+  "datum": "2026-01-01",
+  "status": "ingevaren",
+  "pagina": 113
+ },
+ "opmerkingen": "Gewezen deelnemers exclusief aparte regel 'Gewezen deelnemers met uitstel ingang pensioen' (119; 2024: 110); totaal 8.673 is inclusief die groep. Renteafdekking: alleen beleid (70%, tijdelijk verhoogd tot invaren) en 'in december 2025 afgebouwd tot het gewenste niveau' (p5) zonder ultimo-percentage, daarom null. AUM = totaal beleggingen voor risico pensioenfonds (geen negatieve derivaten in 2025). Ingevaren per 1 januari 2026 (na balansdatum)."
+}

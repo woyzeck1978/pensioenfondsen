@@ -1,0 +1,83 @@
+{
+ "fund_id": 126,
+ "naam": "SABIC",
+ "pad": "data/annual_reports/126_SABIC_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -2.3,
+   "2024": 6.3,
+   "pagina": 21,
+   "letterlijk": "Beleggingsrendement in % Portefeuille -2,3% 6,3%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 124.0,
+   "2024": 119.7,
+   "pagina": 21,
+   "letterlijk": "Beleidsdekkingsgraad 124,0% 119,7%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 129.8,
+   "2024": 117.1,
+   "pagina": 21,
+   "letterlijk": "Dekkingsgraad 129,8% 117,1%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 92.1,
+   "2024": null,
+   "pagina": 55,
+   "letterlijk": "SPF berekende die overeenkomstig artikel 133b van de Pensioenwet op 92,1%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 119.8,
+   "2024": 120.0,
+   "pagina": 21,
+   "letterlijk": "Vereist eigen vermogen 119,8% 120,0%"
+  },
+  "aum_euro_bn": {
+   "2025": 2.9573,
+   "2024": 3.0607,
+   "pagina": 21,
+   "letterlijk": "Belegd vermogen (Ultimo jaar in € mln) 2.957,3 3.060,7"
+  },
+  "deelnemers_actief": {
+   "2025": 2664,
+   "2024": 2868,
+   "pagina": 21,
+   "letterlijk": "Actieven 2.664 2.868"
+  },
+  "deelnemers_slapers": {
+   "2025": 3389,
+   "2024": 3345,
+   "pagina": 21,
+   "letterlijk": "Gewezen Deelnemers (slapers) 3.389 3.345"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 2746,
+   "2024": 2589,
+   "pagina": 21,
+   "letterlijk": "Pensioengerechtigden 2.746 2.589"
+  },
+  "deelnemers_totaal": {
+   "2025": 8799,
+   "2024": 8802,
+   "pagina": 21,
+   "letterlijk": "Totaal aantal deelnemers 8.799 8.802"
+  },
+  "rente_afdekking_pct": {
+   "2025": 76.0,
+   "2024": 76.0,
+   "pagina": 67,
+   "letterlijk": "de rente-afdekking te verhogen van 62% naar 76%, welke in 2025 is gecontinueerd"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-02",
+  "pagina": 104
+ },
+ "invaardatum": {
+  "datum": "2027-01-01",
+  "status": "gepland",
+  "pagina": 33
+ },
+ "opmerkingen": "Kerncijfertabel staat op PDF-pagina 21 (gedrukt paginanummer 19). Engelse kerncijfers (p154) noemen beleidsdekkingsgraad 124,2% en belegd vermogen 2.957,4; Nederlandse tabel en p55/p96 zeggen 124,0%. Reële dekkingsgraad 2024 niet gevonden. Renteafdekking 76% is het (tijdelijk verhoogde) beleidsniveau sinds medio 2024, geen gemeten ultimo-cijfer. Voorlopige vaststelling in vergadering 28 mei 2026, formele ondertekening/vaststelling 2 juni 2026 (p104). Invaardatum verschoven van 1-1-2026 naar 1-1-2027; voornemen tot invaren genomen eind januari 2026."
+}

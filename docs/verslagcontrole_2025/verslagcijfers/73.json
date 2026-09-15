@@ -1,0 +1,83 @@
+{
+ "fund_id": 73,
+ "naam": "Ahold Delhaize",
+ "pad": "data/annual_reports/73_Ahold_Delhaize_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -6.0,
+   "2024": 8.1,
+   "pagina": 93,
+   "letterlijk": "Totaal rendement (%) -6,0 (2025) | 8,1 (2024)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 134.8,
+   "2024": 125.7,
+   "pagina": 93,
+   "letterlijk": "Beleidsdekkingsgraad (%) 134,8 (2025) | 125,7 (2024)"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 139.9,
+   "2024": 128.1,
+   "pagina": 94,
+   "letterlijk": "Eind 2025 bedroeg de maandelijkse dekkingsgraad 139,9% (2024: 128,1%)."
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 94.7,
+   "2024": 91.0,
+   "pagina": 96,
+   "letterlijk": "Per eind 2025 is de reële dekkingsgraad van Ahold Delhaize Pensioen gelijk aan 94,7% (2024: 91,0%)."
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 118.2,
+   "2024": 119.1,
+   "pagina": 93,
+   "letterlijk": "Vereist eigen vermogen (%) 118,2 (2025) | 119,1 (2024)"
+  },
+  "aum_euro_bn": {
+   "2025": 5.8786,
+   "2024": 6.2103,
+   "pagina": 93,
+   "letterlijk": "Kerngegevens (x € 1 miljoen): Belegd vermogen 5.878,6 (2025) | 6.210,3 (2024)"
+  },
+  "deelnemers_actief": {
+   "2025": 62728,
+   "2024": 61885,
+   "pagina": 93,
+   "letterlijk": "Deelnemers 62.728 | 61.885"
+  },
+  "deelnemers_slapers": {
+   "2025": 52548,
+   "2024": 51743,
+   "pagina": 93,
+   "letterlijk": "Gewezen deelnemers 52.548 | 51.743"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 14492,
+   "2024": 13875,
+   "pagina": 93,
+   "letterlijk": "Pensioengerechtigden 14.492 | 13.875"
+  },
+  "deelnemers_totaal": {
+   "2025": 129768,
+   "2024": 127503,
+   "pagina": 93,
+   "letterlijk": "Totaal 129.768 | 127.503"
+  },
+  "rente_afdekking_pct": {
+   "2025": 102.5,
+   "2024": 67.3,
+   "pagina": 65,
+   "letterlijk": "bedraagt het afgedekte percentage van de verplichtingen 102,5% (2024: 67,3%)."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-04-02",
+  "pagina": 81
+ },
+ "invaardatum": {
+  "datum": "2028-01-01",
+  "status": "gepland",
+  "pagina": 15
+ },
+ "opmerkingen": "Vereiste dekkingsgraad: 118,2% op strategische portefeuille (kerncijfers); op feitelijke beleggingen 118,1% (2024: 119,5%) (p.96). Renteafdekking: p.65 noemt 102,5% (2024: 67,3%) op marktwaarde; p.73 zegt begin 2025 80% afgedekt en besluit tot 100% - 67,3% ultimo 2024 wijkt af van die 80%. Totaal rendement -6,0% is inclusief valuta-afdekking (1,4%), exclusief daarvan -7,4%. Aantal pensioengerechtigden 14.492 = 11.267 pensioengerechtigden + 3.225 nabestaanden (p.100). Jaarrekening ondertekend door bestuur te Zaandam, 2 april 2026."
+}

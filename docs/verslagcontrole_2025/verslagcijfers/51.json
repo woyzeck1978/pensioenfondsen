@@ -1,0 +1,83 @@
+{
+ "fund_id": 51,
+ "naam": "Shell (SSPF)",
+ "pad": "data/annual_reports/51_Shell_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -4.2,
+   "2024": 3.0,
+   "pagina": 41,
+   "letterlijk": "Beleggingsrendement 2025 -4,2% | 2024 3,0%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 133.7,
+   "2024": 134,
+   "pagina": 76,
+   "letterlijk": "De dekkingsgraad ultimo 2025 is 135,9% en de beleidsdekkingsgraad 133,7%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 135.9,
+   "2024": 129.1,
+   "pagina": 76,
+   "letterlijk": "De dekkingsgraad ultimo 2025 is 135,9%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "aum_euro_bn": {
+   "2025": 25.262,
+   "2024": 27.171,
+   "pagina": 20,
+   "letterlijk": "Totaal Vermogen/ Rendement (VERMOGEN €MILJOEN) 2025 25.262 | 2024 27.171"
+  },
+  "deelnemers_actief": {
+   "2025": 4111,
+   "2024": 4882,
+   "pagina": 41,
+   "letterlijk": "Actieve deelnemers 2025 4.111 | 2024 4.882"
+  },
+  "deelnemers_slapers": {
+   "2025": 6377,
+   "2024": 6195,
+   "pagina": 41,
+   "letterlijk": "Gewezen deelnemers 2025 6.377 | 2024 6.195"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 18532,
+   "2024": 18604,
+   "pagina": 41,
+   "letterlijk": "Ingegane pensioenen 2025 18.532 | 2024 18.604"
+  },
+  "deelnemers_totaal": {
+   "2025": 29020,
+   "2024": 29681,
+   "pagina": 41,
+   "letterlijk": "Totaal 2025 29.020 | 2024 29.681"
+  },
+  "rente_afdekking_pct": {
+   "2025": 100,
+   "2024": null,
+   "pagina": 83,
+   "letterlijk": "Ultimo 2025 bedroeg de strategische nominale rentehedge 100%"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-05-06",
+  "pagina": 66
+ },
+ "invaardatum": {
+  "datum": "2027-01-01",
+  "status": "gepland",
+  "pagina": 43
+ },
+ "opmerkingen": "Kerncijfertabel (p41) rondt dekkingsgraden af op hele procenten: DG 136%/129%, BDG 134%/134%; 2025 exact uit p76 (135,9 / 133,7), 2024 nominale DG 129,1% uit interview p43; 2024 BDG alleen afgerond (134). Rendement exclusief liability hedge 4,3% (2024 3,9%). Vereiste dekkingsgraad niet als percentage genoemd: vereist eigen vermogen 13,9% van VPV (2024 14,7%, p83) - niet omgerekend. AUM = portefeuille-overzicht p20 (€ mln); netto activa balans 25.329 (2024 27.202) en totaal activa 27.166 wijken af. Pensioengerechtigden = 'ingegane pensioenen' incl. partner- en wezenpensioen. Renteafdekking 2024: p35 zegt nominale afdekking 'in 2024 verder verhoogd tot 100%', geen expliciet ultimo-2024-cijfer, dus null. Invaren gepland 1-1-2027 (implementatieplan ingediend bij DNB juli 2025)."
+}

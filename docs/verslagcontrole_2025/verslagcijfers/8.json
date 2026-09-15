@@ -1,0 +1,83 @@
+{
+ "fund_id": 8,
+ "naam": "Verloskundigen (SPV - Midwives)",
+ "pad": "data/annual_reports/8_Verloskundigen_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -10.1,
+   "2024": 8.9,
+   "pagina": 51,
+   "letterlijk": "Totaal inclusief rente- en valutahedge -10,1 6,9 8,9 10,6 (portefeuille 2025, benchmark 2025, portefeuille 2024, benchmark 2024)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 126.1,
+   "2024": 113.2,
+   "pagina": 8,
+   "letterlijk": "Beleidsdekkingsgraad 126,1 113,2"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 138.1,
+   "2024": 110.9,
+   "pagina": 8,
+   "letterlijk": "Actuele dekkingsgraad 138,1 110,9"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 152.4,
+   "2024": 137.1,
+   "pagina": 8,
+   "letterlijk": "Reële dekkingsgraad 152,4 137,1"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 120.6,
+   "2024": 117.5,
+   "pagina": 8,
+   "letterlijk": "Vereiste dekingsgraad 120,6 117,5"
+  },
+  "aum_euro_bn": {
+   "2025": 0.441415,
+   "2024": 0.463837,
+   "pagina": 8,
+   "letterlijk": "Beleggingen - voor risico pensioenfonds (x € 1.000) 441.415 463.837"
+  },
+  "deelnemers_actief": {
+   "2025": 2871,
+   "2024": 2856,
+   "pagina": 8,
+   "letterlijk": "Deelnemers 2.871 2.856"
+  },
+  "deelnemers_slapers": {
+   "2025": 1769,
+   "2024": 1678,
+   "pagina": 8,
+   "letterlijk": "Gewezen deelnemers 1.769 1.678"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 638,
+   "2024": 589,
+   "pagina": 8,
+   "letterlijk": "Pensioengerechtigden 638 589"
+  },
+  "deelnemers_totaal": {
+   "2025": 5278,
+   "2024": 5123,
+   "pagina": 8,
+   "letterlijk": "5.278 5.123"
+  },
+  "rente_afdekking_pct": {
+   "2025": 60,
+   "2024": null,
+   "pagina": 51,
+   "letterlijk": "Vanaf begin 2025 dekt het pensioenfonds 60% van het renterisico op basis van de marktrente af"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-29",
+  "pagina": 109
+ },
+ "invaardatum": {
+  "datum": null,
+  "status": "gepland",
+  "pagina": 65
+ },
+ "opmerkingen": "Rendement tegenstrijdig: kerncijfers p9 'Gemiddeld rendement inclusief rente- en valuta-afdekking 10,07' (2025) en 5,6 (2024, gelijk aan 2023 - vermoedelijk fout) vs. tabel p51 -10,1 (2025) en 8,9 (2024); beleggingsresultaat was negatief (-29.677k), dus -10,1 gekozen; 10,07 is waarschijnlijk teken vergeten. Exclusief afdekking 7,23%. Beleidsdg in tekst p22 126,2% en actuele dg 139,7% (tabellen: 126,1 / 138,1). Reële dg afwijkend gedefinieerd (2% onvoorwaardelijke toeslag buiten beschouwing). Renteafdekking 60% is beleidspercentage, geen gerealiseerde ultimo-afdekking; p24 noemt verhoging renteafdekking. Invaardatum: 1-1-2026 en 1-7-2027 niet haalbaar, nu 'later moment in het tweede halfjaar van 2027' (p65), geen exacte datum. Vaststelling p109 'Tilburg, 29 juni 2026'."
+}

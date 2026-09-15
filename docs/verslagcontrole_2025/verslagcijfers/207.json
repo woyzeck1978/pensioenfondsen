@@ -1,0 +1,83 @@
+{
+ "fund_id": 207,
+ "naam": "Pensioenfonds British American Tobacco",
+ "pad": "data/annual_reports/207_Pensioenfonds_British_Am_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -3.55,
+   "2024": 2.53,
+   "pagina": 5,
+   "letterlijk": "Rendement portefeuille in % -3,55% 2,53%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 110.9,
+   "2024": 136.1,
+   "pagina": 5,
+   "letterlijk": "Beleidsdekkingsgraad in % 110,9% 136,1%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 102.0,
+   "2024": 129.8,
+   "pagina": 5,
+   "letterlijk": "Actuele DNB dekkingsgraad in % 102,0% 129,8%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": 104.7,
+   "pagina": 5,
+   "letterlijk": "Wettelijke reële dekkingsgraad in % n.v.t. 104,7%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": 103.4,
+   "pagina": 5,
+   "letterlijk": "Vereiste dekkingsgraad in % n.v.t. 103,4%"
+  },
+  "aum_euro_bn": {
+   "2025": null,
+   "2024": 0.631587,
+   "pagina": 5,
+   "letterlijk": "(Bedragen in duizenden €) Balanswaarde beleggingen - 631.587"
+  },
+  "deelnemers_actief": {
+   "2025": 27,
+   "2024": 28,
+   "pagina": 5,
+   "letterlijk": "Actieve deelnemers (incl. AO’ers) 27 28"
+  },
+  "deelnemers_slapers": {
+   "2025": 836,
+   "2024": 886,
+   "pagina": 5,
+   "letterlijk": "Gewezen deelnemers (‘slapers’) 836 886"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 1318,
+   "2024": 1297,
+   "pagina": 5,
+   "letterlijk": "Pensioengerechtigden 1.318 1.297"
+  },
+  "deelnemers_totaal": {
+   "2025": 2181,
+   "2024": 2211,
+   "pagina": 5,
+   "letterlijk": "Totaal aantal verzekerden 2.181 2.211"
+  },
+  "rente_afdekking_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-23",
+  "pagina": 69
+ },
+ "invaardatum": {
+  "datum": null,
+  "status": "vaart niet in",
+  "pagina": 34
+ },
+ "opmerkingen": "Fonds heeft per 1 mei 2025 alle aanspraken herverzekerd (buy-in Aegon) en in mei 2025 alle beleggingen verkocht; balanswaarde beleggingen ultimo 2025 is '-' (nihil), daarom aum 2025 null. Rendement -3,55% betreft de periode tot de verkoop. Vereiste en reële dekkingsgraad ultimo 2025 n.v.t. door herverzekering. Dekkingsgraad vanaf mei 2025 inclusief toekomstige toeslagen (definitiebreuk t.o.v. 2024). Geen rente-afdekkingspercentage ultimo jaar (rentehedge verkocht; tot april bandbreedte 94-100% van reële kasstromen). Transitieplan: opgebouwde rechten worden niet ingevaren, nieuwe Wtp-regeling vanaf 1-1-2028 bij andere uitvoerder. Bestuursverslag getekend Amstelveen 23 juni 2026 (p.43), jaarrekening idem (p.69)."
+}

@@ -1,0 +1,83 @@
+{
+ "fund_id": 57,
+ "naam": "Media PNO (Creative and Digital Sector)",
+ "pad": "data/annual_reports/57_Media_PNO_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -3.0,
+   "2024": 9.3,
+   "pagina": 8,
+   "letterlijk": "Totaalrendement -3,0% 9,3%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 122.5,
+   "2024": 117.4,
+   "pagina": 8,
+   "letterlijk": "Beleidsdekkingsgraad 122,5% 117,4%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 128.8,
+   "2024": 114.2,
+   "pagina": 8,
+   "letterlijk": "Actuele dekkingsgraad 128,8% 114,2%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 88.3,
+   "2024": null,
+   "pagina": 13,
+   "letterlijk": "De reële dekkingsgraad bedraagt voor PNO Media 88,3%."
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 117.9,
+   "2024": null,
+   "pagina": 13,
+   "letterlijk": "volgens het financieel toetsingskader vereiste dekkingsgraad van 117,9 %"
+  },
+  "aum_euro_bn": {
+   "2025": 8.099551,
+   "2024": 8.110053,
+   "pagina": 135,
+   "letterlijk": "Totaal beleggingen voor risico pensioenfonds 8.099.551 ... 8.110.053 (x EUR 1.000)"
+  },
+  "deelnemers_actief": {
+   "2025": 22263,
+   "2024": 22464,
+   "pagina": 8,
+   "letterlijk": "Deelnemers 22.263 22.464"
+  },
+  "deelnemers_slapers": {
+   "2025": 36785,
+   "2024": 35520,
+   "pagina": 8,
+   "letterlijk": "Gewezen deelnemers 36.785 35.520"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 12090,
+   "2024": 11589,
+   "pagina": 8,
+   "letterlijk": "Pensioengerechtigden 12.090 11.589"
+  },
+  "deelnemers_totaal": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "rente_afdekking_pct": {
+   "2025": 73.0,
+   "2024": null,
+   "pagina": 68,
+   "letterlijk": "Samenstelling renteafdekking op 31 december 2025 ... Totaal 73,0%"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-25",
+  "pagina": 181
+ },
+ "invaardatum": {
+  "datum": "2027-01-01",
+  "status": "gepland",
+  "pagina": 6
+ },
+ "opmerkingen": "Reële dekkingsgraad: tekst p.13 88,3%, maar grafiek p.13 toont 89,0%. Vereiste dekkingsgraad 117,9% voor het hele fonds; alleen DB-regelingen 118,2% (p.12). Kerncijfers geven vereist eigen vermogen 17,9% (2024: 22,8%); 2024-vereiste dekkingsgraad niet expliciet genoemd, dus null. Totaal deelnemers niet vermeld. AUM: balanspost 2025 kolom totaal (incl. 16 WTP-deel); beleggingen voor risico deelnemers 74.217 apart. Renteafdekking: norm verhoogd van 50% naar 70% in april 2025, feitelijk 73,0% op 31-12-2025. Vaststelling 'Hilversum, 25 juni 2026 Vastgesteld door het bestuur'."
+}

@@ -1,0 +1,21 @@
+{
+ "fund_id": 92,
+ "naam": "Ecolab",
+ "pad": "data/annual_reports/92_Ecolab_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {"2025": -2.0, "2024": 13.2, "pagina": 11, "letterlijk": "Beleggingsrendement in % -2,0% 13,2% 11,0% (kop Boekjaar 2025 2024 2023)"},
+  "beleidsdekkingsgraad_pct": {"2025": 143.9, "2024": 139.7, "pagina": 11, "letterlijk": "Beleidsdekkingsgraad (in %) 143,9% 139,7% 136,0%"},
+  "nominale_dekkingsgraad_pct": {"2025": 148.3, "2024": 135.4, "pagina": 11, "letterlijk": "Aanwezige dekkingsgraad (in %) 148,3% 135,4% 134,0%"},
+  "reele_dekkingsgraad_pct": {"2025": 108.1, "2024": 105.9, "pagina": 11, "letterlijk": "Reële dekkingsgraad (in %) 108,1% 105,9% 102,0%"},
+  "vereiste_dekkingsgraad_pct": {"2025": 115.1, "2024": 114.6, "pagina": 11, "letterlijk": "Vereiste dekkingsgraad (in %) 115,1% 114,6% 114,7%"},
+  "aum_euro_bn": {"2025": 0.139858, "2024": 0.141395, "pagina": 60, "letterlijk": "Beleggingen voor risico pensioenfonds (x € 1.000) Aandelen 53.856 + Vastrentende waarden 86.002 = 139.858 (2024: 141.395)"},
+  "deelnemers_actief": {"2025": 101, "2024": 110, "pagina": 11, "letterlijk": "Actieve deelnemers 101 110 127"},
+  "deelnemers_slapers": {"2025": 294, "2024": 299, "pagina": 11, "letterlijk": "Premievrije rechten (\"slapers\") 294 299 297"},
+  "deelnemers_pensioengerechtigd": {"2025": 220, "2024": 214, "pagina": 11, "letterlijk": "Pensioentrekkenden 220 214 205"},
+  "deelnemers_totaal": {"2025": null, "2024": null, "pagina": null, "letterlijk": ""},
+  "rente_afdekking_pct": {"2025": 72.5, "2024": null, "pagina": 79, "letterlijk": "Ten aanzien van de rentehedge hield het fonds een strategisch afdekkingspercentage aan van 72,5% met een bandbreedte tussen 65% en 80%."}
+ },
+ "vaststellingsdatum": {"datum": "2026-06-26", "pagina": 101},
+ "invaardatum": {"datum": null, "status": "vaart niet in", "pagina": 22},
+ "opmerkingen": "Rente-afdekking 72,5% is het strategische percentage (bandbreedte 65-80%); een feitelijk gerealiseerd percentage ultimo 2025 wordt niet genoemd, voor 2024 geen expliciete waarde gevonden. Kerncijfers noemen derivaten apart (-107 / -208) naast aandelen en vastrentend; balans-subtotaal beleggingen 139.858 (x € 1.000). Pensioenvermogen in kerncijfers 140.435. Geen totaal aantal deelnemers genoemd. Invaren: bestuur heeft besloten geen premieregeling uit te voeren; 'invaren niet aan de orde' - collectieve waardeoverdracht (buy-out) naar verzekeraar; exclusiviteitsovereenkomst getekend 22 juni 2026 (p101)."
+}

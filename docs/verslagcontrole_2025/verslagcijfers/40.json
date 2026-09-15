@@ -1,0 +1,83 @@
+{
+ "fund_id": 40,
+ "naam": "Zoetwarenindustrie (Confectionery Industry)",
+ "pad": "data/annual_reports/40_Zoetwaren_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -3.3,
+   "2024": 12.0,
+   "pagina": 7,
+   "letterlijk": "Jaarrendement portefeuille -3,3 12,0"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 130.8,
+   "2024": 121.7,
+   "pagina": 7,
+   "letterlijk": "Beleidsdekkingsgraad in % 130,8 121,7"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 140.8,
+   "2024": 123.0,
+   "pagina": 7,
+   "letterlijk": "Dekkingsgraad in % 140,8 123,0"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 94.8,
+   "2024": 90.3,
+   "pagina": 7,
+   "letterlijk": "Reële dekkingsgraad in % 94,8 90,3"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 118.6,
+   "2024": 117.7,
+   "pagina": 7,
+   "letterlijk": "Vereist eigen vermogen in % 118,6 117,7"
+  },
+  "aum_euro_bn": {
+   "2025": 3.2112,
+   "2024": 3.2866,
+   "pagina": 7,
+   "letterlijk": "Balanswaarde (incl. negatieve beleggingen) in € mln. 3.211,2 3.286,6"
+  },
+  "deelnemers_actief": {
+   "2025": 10060,
+   "2024": 9789,
+   "pagina": 7,
+   "letterlijk": "Deelnemers, actieven en arbeidsongeschikten 10.060 9.789"
+  },
+  "deelnemers_slapers": {
+   "2025": 22764,
+   "2024": 23863,
+   "pagina": 7,
+   "letterlijk": "Gewezen deelnemers 22.764 23.863"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 11547,
+   "2024": 11117,
+   "pagina": 7,
+   "letterlijk": "Ingegane pensioenen 11.547 11.117"
+  },
+  "deelnemers_totaal": {
+   "2025": 44371,
+   "2024": 44769,
+   "pagina": 7,
+   "letterlijk": "Totaal aantal verzekerden 44.371 44.769"
+  },
+  "rente_afdekking_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": 28,
+   "letterlijk": "De gehanteerde norm voor renteafdekking op basis van marktrente is 85%."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-18",
+  "pagina": 105
+ },
+ "invaardatum": {
+  "datum": "2026-01-01",
+  "status": "ingevaren",
+  "pagina": 104
+ },
+ "opmerkingen": "Rendement -3,3% (p7; p27: 'De portefeuille behaalde over 2025 een rendement van -3,27%', matching -23,28%, return +9,38%) is totale portefeuille incl. matching. Let op: p91 noemt 'Beleggingsrendement (inclusief renteafdekking) -6,6% / 9,4%' maar dat is het dekkingsgraadeffect in de dekkingsgraadanalyse, geen rendement. Renteafdekking: alleen de norm 85% genoemd (p28), geen feitelijk percentage ultimo 2025 gevonden -> null; de '61% afgedekt' op p93 is valutarisico. Vereiste dekkingsgraad = 'Vereist eigen vermogen in %' (p15 bevestigt: vereiste dekkingsgraad 118,6%). Actieven incl. arbeidsongeschikten. Ondertekening jaarrekening Amsterdam 18 juni 2026 (p105; ook p9, p114). Voornemen fusie met Bpf Bakkers per 1 januari 2027."
+}

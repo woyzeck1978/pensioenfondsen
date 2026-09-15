@@ -1,0 +1,83 @@
+{
+ "fund_id": 2,
+ "naam": "Fysiotherapeuten (SPF - Physiotherapists)",
+ "pad": "data/annual_reports/2_Fysiotherapeuten_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": null,
+   "2024": 6.55,
+   "pagina": 9,
+   "letterlijk": "Beleggingsrendement voor risico pensioenfonds (%) 2025 - | 2024 6,55 (netto; direct en indirect 6,80)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": null,
+   "2024": 116.2,
+   "pagina": 8,
+   "letterlijk": "Beleidsdekkingsgraad 2025 - | 2024 116,2"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": 114.8,
+   "pagina": 8,
+   "letterlijk": "Aanwezige dekkingsgraad 2025 - | 2024 114,8"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": 130.0,
+   "pagina": 8,
+   "letterlijk": "Reële dekkingsgraad 2025 - | 2024 130,0"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": 120.1,
+   "pagina": 8,
+   "letterlijk": "Vereiste dekkingsgraad 2025 - | 2024 120,1"
+  },
+  "aum_euro_bn": {
+   "2025": 0.218942,
+   "2024": 4.568267,
+   "pagina": 8,
+   "letterlijk": "Beleggingen ** - voor risico pensioenfonds (x € 1.000) 2025 218.942 | 2024 4.568.267; - voor risico deelnemers 2025 3.909.612"
+  },
+  "deelnemers_actief": {
+   "2025": 23295,
+   "2024": 23202,
+   "pagina": 8,
+   "letterlijk": "Deelnemers 2025 23.295 | 2024 23.202"
+  },
+  "deelnemers_slapers": {
+   "2025": 8798,
+   "2024": 8473,
+   "pagina": 8,
+   "letterlijk": "Gewezen deelnemers 2025 8.798 | 2024 8.473"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "deelnemers_totaal": {
+   "2025": 42113,
+   "2024": 41020,
+   "pagina": 8,
+   "letterlijk": "(totaalregel) 2025 42.113 | 2024 41.020"
+  },
+  "rente_afdekking_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-07-08",
+  "pagina": 170
+ },
+ "invaardatum": {
+  "datum": "2025-10-01",
+  "status": "ingevaren",
+  "pagina": 5
+ },
+ "opmerkingen": "Ingevaren per 1-10-2025 (Flexibele premieregeling); verslag noemt voor 2025 geen dekkingsgraden en geen fondsrendement ('niet langer relevant'). Transitiedekkingsgraad 30-9-2025 127,1%, beleidsdekkingsgraad 30-9-2025 119,7% (p36). Tegenstrijdig: p36 zegt beleidsdekkingsgraad ultimo 2024 116,1 en startdekkingsgraad 2025 116,5, kerncijfers 116,2 resp. 114,8. AUM: na invaren staat vrijwel alles 'voor risico deelnemers' (3.909.612 duizend); risico-pensioenfonds 2025 slechts 218.942 duizend - voor een fondsbrede vergelijking is het deelnemersdeel relevant. Beleggingen incl. negatieve derivaten: 3.824.836 (2024: 4.275.649). Pensioengerechtigden alleen uitgesplitst (ouderdom 8.499, nabestaanden 1.283, wezen 94; 2024 7.879/1.229/94), niet opgeteld; premievrijen AO 144 apart. CVP-portefeuille rendement -0,30% alleen vanaf 1-10-2025. Renteafdekking na invaren: strategisch 70% van renterisico CVP-uitkeringen (marktrente), vóór invaren 80% (rekenrente); geen feitelijk fondspercentage ultimo jaar."
+}

@@ -1,0 +1,83 @@
+{
+ "fund_id": 11,
+ "naam": "Bakkersbedrijf (Bakeries)",
+ "pad": "data/annual_reports/11_Bakkersbedrijf_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -5.2,
+   "2024": 10.0,
+   "pagina": 6,
+   "letterlijk": "Jaarrendement portefeuille -5,2% (2025) | 10,0% (2024)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 122.7,
+   "2024": 116.9,
+   "pagina": 6,
+   "letterlijk": "Beleidsdekkingsgraad 122,7% | 116,9%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 130.1,
+   "2024": 115.5,
+   "pagina": 6,
+   "letterlijk": "Dekkingsgraad 130,1% | 115,5%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 87.0,
+   "2024": 86.9,
+   "pagina": 6,
+   "letterlijk": "Reële dekkingsgraad 87,0% | 86,9%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 115.5,
+   "2024": null,
+   "pagina": 86,
+   "letterlijk": "Vereist eigen vermogen 503.685 115,5% (31-12-2025)"
+  },
+  "aum_euro_bn": {
+   "2025": 4.332618,
+   "2024": 4.561841,
+   "pagina": 6,
+   "letterlijk": "Beleggingen (bedragen x 1.000): Balanswaarde ** 4.332.618 | 4.561.841"
+  },
+  "deelnemers_actief": {
+   "2025": 35379,
+   "2024": 35636,
+   "pagina": 6,
+   "letterlijk": "Deelnemers, actief en voortgezet 35.379 | 35.636"
+  },
+  "deelnemers_slapers": {
+   "2025": 84739,
+   "2024": 85650,
+   "pagina": 6,
+   "letterlijk": "Gewezen deelnemers (slapers) 84.739 | 85.650"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 26691,
+   "2024": 25365,
+   "pagina": 6,
+   "letterlijk": "Pensioengerechtigden 26.691 | 25.365"
+  },
+  "deelnemers_totaal": {
+   "2025": 146809,
+   "2024": 146651,
+   "pagina": 6,
+   "letterlijk": "Totaal aantal deelnemers 146.809 | 146.651"
+  },
+  "rente_afdekking_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-19",
+  "pagina": 107
+ },
+ "invaardatum": {
+  "datum": "2026-01-01",
+  "status": "ingevaren",
+  "pagina": 115
+ },
+ "opmerkingen": "Vereiste dekkingsgraad 2025 inconsistent in verslag: 115,5% (tabel p.86), 115,1% (p.16), 116,2% (tekst p.86). 2024: alleen tekst 'vereiste dekkingsgraad per 31 december 2024 (115,0%)' (p.86), niet ingevuld wegens twijfel. Rendement: -5,2% jaarrendement/totaalrendement; p.16 noemt nettorendement incl. renteafdekking -4,9%. Nominale dekkingsgraad: voorwoord p.8 noemt 130,4%, tabellen 130,1%. Reële dekkingsgraad = beleidsdekkingsgraad / TBI-grens (eigen definitie). Renteafdekking: alleen norm 80% op marktrente (p.34), geen gerealiseerd percentage gevonden. Vaststelling: bestuur 'Groningen, 19 juni 2026' (p.68/p.107); accountant 19 juni 2026."
+}

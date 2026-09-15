@@ -1,0 +1,83 @@
+{
+ "fund_id": 165,
+ "naam": "Kring Arcadis (Hnp)",
+ "pad": "data/annual_reports/165_Kring_Arcadis_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -4.33,
+   "2024": 7.07,
+   "pagina": 12,
+   "letterlijk": "Beleggingsrendement (in %) -4,33% 7,07%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 124.5,
+   "2024": 121.6,
+   "pagina": 11,
+   "letterlijk": "Beleidsdekkingsgraad (in %) 124,5% 121,6%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 132.9,
+   "2024": 119.0,
+   "pagina": 11,
+   "letterlijk": "Aanwezige dekkingsgraad (in %) 132,9% 119,0%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 89.2,
+   "2024": 88.9,
+   "pagina": 12,
+   "letterlijk": "Reële dekkingsgraad (in %) 89,2% 88,9%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 119.5,
+   "2024": 118.9,
+   "pagina": 11,
+   "letterlijk": "Vereiste dekkingsgraad (in %) 119,5% 118,9%"
+  },
+  "aum_euro_bn": {
+   "2025": 1.221048,
+   "2024": 1.250955,
+   "pagina": 12,
+   "letterlijk": "Totaal beleggingen 1.221.048 1.250.955 (x EUR 1.000)"
+  },
+  "deelnemers_actief": {
+   "2025": 2170,
+   "2024": 2197,
+   "pagina": 11,
+   "letterlijk": "Actieve deelnemers 2.170 2.197"
+  },
+  "deelnemers_slapers": {
+   "2025": 4385,
+   "2024": 4240,
+   "pagina": 11,
+   "letterlijk": "Gewezen deelnemers 4.385 4.240"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 2755,
+   "2024": 2725,
+   "pagina": 11,
+   "letterlijk": "Pensioengerechtigden 2.755 2.725"
+  },
+  "deelnemers_totaal": {
+   "2025": 9310,
+   "2024": 9162,
+   "pagina": 11,
+   "letterlijk": "9.310 9.162"
+  },
+  "rente_afdekking_pct": {
+   "2025": 86.3,
+   "2024": null,
+   "pagina": 149,
+   "letterlijk": "De feitelĳke afdekking per ultimo 2025 bedroeg 86,3%"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-30",
+  "pagina": 911
+ },
+ "invaardatum": {
+  "datum": "2026-07-01",
+  "status": "gepland",
+  "pagina": 34
+ },
+ "opmerkingen": "Cijfers uit het eigen kerncijferhoofdstuk van de kring (Jaarverslag 2025 Stichting Het Nederlandse Pensioenfonds, bedragen x EUR 1.000). AUM = 'Totaal beleggingen' uit de kerncijfers (na aftrek negatieve derivaten). Nominale dekkingsgraad = 'Aanwezige dekkingsgraad'. Vaststellingsdatum = ondertekening jaarrekening (Badhoevedorp, 30 juni 2026, p.911; ondertekening bestuursverslag p.438 zelfde datum). Renteafdekking 2024 niet opgezocht/genoemd. Renteafdekking-norm 85%. Invaren gepland per 1 juli 2026 (p.34, p.161; eerder 1 januari 2026). Verslag ondertekend 30 juni 2026, dus op dat moment nog niet ingevaren."
+}

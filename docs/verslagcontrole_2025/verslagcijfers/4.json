@@ -1,0 +1,83 @@
+{
+ "fund_id": 4,
+ "naam": "Loodsen (Pilots)",
+ "pad": "data/annual_reports/4_Loodsen_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": 0.8,
+   "2024": 9.2,
+   "pagina": 8,
+   "letterlijk": "Nettorendement (in procenten) 2024 9,2 | 2025 0,8"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "aum_euro_bn": {
+   "2025": 1.043759,
+   "2024": 1.068215,
+   "pagina": 8,
+   "letterlijk": "Belegd vermogen ultimo jaar (x 1.000 euro) 2024 1.068.215 | 2025 1.043.759"
+  },
+  "deelnemers_actief": {
+   "2025": 469,
+   "2024": 466,
+   "pagina": 7,
+   "letterlijk": "Deelnemers 2024 466 | 2025 469"
+  },
+  "deelnemers_slapers": {
+   "2025": 9,
+   "2024": 9,
+   "pagina": 7,
+   "letterlijk": "Gewezen deelnemers 2024 9 | 2025 9"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "deelnemers_totaal": {
+   "2025": 1353,
+   "2024": 1343,
+   "pagina": 7,
+   "letterlijk": "Totaal 2024 1.343 | 2025 1.353"
+  },
+  "rente_afdekking_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-18",
+  "pagina": 89
+ },
+ "invaardatum": {
+  "datum": "2025-01-01",
+  "status": "ingevaren",
+  "pagina": 6
+ },
+ "opmerkingen": "Ingevaren in SPR per 1-1-2025; geen FTK-beleids-/reële/vereiste dekkingsgraad over 2025. Kerncijfers p7 noemen 'Dekkingsgraad* 102,4%' (p73: ultimostand 102,39%) maar dat is de Wtp-solvabiliteit (pensioenvermogen excl. solidariteitsreserve / TV), volgens het verslag niet vergelijkbaar met FTK - daarom null. 2024 FTK-dekkingsgraden niet in de gelezen passages. Rendement tegenstrijdig: kerncijfers/beleggingsparagraaf 0,8% (2024 9,2%), kostenparagraaf p76 'Fonds (netto) 0,12' (2024 8,7). Pensioengerechtigden niet als één getal: ouderdom 628, AO-pensioen 7, partner 224, wezen 16 (2025); niet opgeteld. Renteafdekking alleen als lifecycle (0-100% per leeftijd), geen collectief ultimo-percentage. Kerncijfertabel volgt 'Pensioenstatuut 2015' t/m 2024."
+}

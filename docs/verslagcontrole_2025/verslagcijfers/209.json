@@ -1,0 +1,83 @@
+{
+ "fund_id": 209,
+ "naam": "Kring DC (Centraal Beheer)",
+ "pad": "data/annual_reports/65_Centraal_Beheer_APF_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": 8.98,
+   "2024": 17.03,
+   "pagina": 84,
+   "letterlijk": "Beleggingsrendement 8,98% 17,03% (kop 2025 2024)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 101.9,
+   "2024": 101.8,
+   "pagina": 85,
+   "letterlijk": "Beleidsdekkingsgraad (december) 101,9% 101,8%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 101.9,
+   "2024": 101.8,
+   "pagina": 85,
+   "letterlijk": "Actuele dekkingsgraad ultimo 101,9% 101,8%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "aum_euro_bn": {
+   "2025": 1.314588,
+   "2024": 1.036244,
+   "pagina": 85,
+   "letterlijk": "Totaal belegd vermogen (x € 1.000) 1.314.588 1.036.244"
+  },
+  "deelnemers_actief": {
+   "2025": 24743,
+   "2024": 26071,
+   "pagina": 84,
+   "letterlijk": "Actieven en arbeidsongeschikten 24.743 26.071"
+  },
+  "deelnemers_slapers": {
+   "2025": 20876,
+   "2024": 17222,
+   "pagina": 84,
+   "letterlijk": "Gewezen deelnemers 20.876 17.222"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 1350,
+   "2024": 946,
+   "pagina": 84,
+   "letterlijk": "Pensioengerechtigden 1.350 946"
+  },
+  "deelnemers_totaal": {
+   "2025": 46969,
+   "2024": 44239,
+   "pagina": 84,
+   "letterlijk": "Deelnemers 46.969 44.239"
+  },
+  "rente_afdekking_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-17",
+  "pagina": 425
+ },
+ "invaardatum": {
+  "datum": null,
+  "status": "vaart niet in",
+  "pagina": 103
+ },
+ "opmerkingen": "DC-kring: geen vereiste of reële dekkingsgraad genoemd ('Het vereist eigen vermogen is daarom nihil', p92); dekkingsgraad is buffer t.o.v. MVEV. Terugblik p103 noemt belegd vermogen 'circa € 1.376 miljoen', kerncijfertabel p85 1.314.588 (x € 1.000) - tabel aangehouden. Geen renteafdekkingspercentage voor de kring (lifecycles). Invaren: 'Kring DC gebruik van de eerbiedigende werking' (p103), dus geen invaren van opgebouwde DC-regelingen. Vaststelling: 'heeft de jaarrekening over het verslagjaar 2025 vastgesteld in de vergadering van 17 juni 2026' (p425); bestuursverslag ondertekend 'Zeist, 15 juni 2026' (p403). Deelnemersaantallen: 'Deelnemers' = totaal; actieven incl. arbeidsongeschikten. Bedragen in de kringtabellen in € 1.000."
+}

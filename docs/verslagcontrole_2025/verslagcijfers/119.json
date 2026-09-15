@@ -1,0 +1,83 @@
+{
+ "fund_id": 119,
+ "naam": "Philips",
+ "pad": "data/annual_reports/119_Philips_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -1.6,
+   "2024": 4.9,
+   "pagina": 128,
+   "letterlijk": "Totaal beleggingsresultaat -1,6 4,9"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 125.2,
+   "2024": 124.0,
+   "pagina": 8,
+   "letterlijk": "Beleidsdekkingsgraad 125,2% 124,0%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 132.7,
+   "2024": 122.7,
+   "pagina": 8,
+   "letterlijk": "Actuele dekkingsgraad 132,7% 122,7%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 92.2,
+   "2024": 92.4,
+   "pagina": 8,
+   "letterlijk": "Reële dekkingsgraad 92,2% 92,4%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 115.6,
+   "2024": 115.5,
+   "pagina": 8,
+   "letterlijk": "Vereiste dekkingsgraad3 115,6% 115,5%"
+  },
+  "aum_euro_bn": {
+   "2025": 17.654,
+   "2024": 18.458,
+   "pagina": 128,
+   "letterlijk": "Verdeling belegd vermogen (bedragen in miljoenen euro's) Totaal 17.654 18.458"
+  },
+  "deelnemers_actief": {
+   "2025": 11152,
+   "2024": 11784,
+   "pagina": 13,
+   "letterlijk": "Pensioenopbouwers6 11.152 11.784"
+  },
+  "deelnemers_slapers": {
+   "2025": 31801,
+   "2024": 32189,
+   "pagina": 13,
+   "letterlijk": "Houders premievrije polissen 31.801 32.189"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 45201,
+   "2024": 46186,
+   "pagina": 13,
+   "letterlijk": "Pensioenontvangers 45.201 46.186"
+  },
+  "deelnemers_totaal": {
+   "2025": 88154,
+   "2024": 90159,
+   "pagina": 13,
+   "letterlijk": "Totaal 88.154 90.159"
+  },
+  "rente_afdekking_pct": {
+   "2025": 87.8,
+   "2024": 87.4,
+   "pagina": 181,
+   "letterlijk": "Ultimo 2025 bedroeg de nominale renteafdekking 87,8% (ultimo 2024: 87,4%)."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-05-26",
+  "pagina": 106
+ },
+ "invaardatum": {
+  "datum": "2027-01-01",
+  "status": "gepland",
+  "pagina": 31
+ },
+ "opmerkingen": "Pensioenvermogen 17.710 mln (p8) wijkt af van belegd vermogen 17.654 mln (p128, excl. beleggingen voor risico deelnemers); belegd vermogen gekozen. Renteafdekking nominaal 87,8%; reëel 50,1% (2024 46,1%); beleid sinds mei 2025 vaste nominale hedge 84%. Reële marktrente-dekkingsgraad 95,7% is een ander begrip dan de reële dekkingsgraad 92,2%. Vaststellingsdatum = ondertekening bestuursverslag/jaarrekening 'Eindhoven, 26 mei 2026' (p106, p192)."
+}

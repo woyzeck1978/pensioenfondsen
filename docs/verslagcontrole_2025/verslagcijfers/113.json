@@ -1,0 +1,83 @@
+{
+ "fund_id": 113,
+ "naam": "Mars",
+ "pad": "data/annual_reports/113_Mars_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -7.3,
+   "2024": 6.6,
+   "pagina": 9,
+   "letterlijk": "Total portfolio -7.3% 6.6%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 136.5,
+   "2024": 140.3,
+   "pagina": 8,
+   "letterlijk": "Policy Funding Ratio 136.5% 140.3%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 136.5,
+   "2024": 138.9,
+   "pagina": 8,
+   "letterlijk": "Funding ratio 136.5% 138.9%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 119.3,
+   "2024": 121.2,
+   "pagina": 17,
+   "letterlijk": "31-Dec-2025 136.5% 136.5% 119.3% (Ongoing Solvency Margin Ratio)"
+  },
+  "aum_euro_bn": {
+   "2025": 1.427581,
+   "2024": 1.584988,
+   "pagina": 60,
+   "letterlijk": "Investments for risk MPF 1,427,581 1,584,988 (in EUR 1,000)"
+  },
+  "deelnemers_actief": {
+   "2025": 1557,
+   "2024": 1531,
+   "pagina": 8,
+   "letterlijk": "Active members 1,557 1,531"
+  },
+  "deelnemers_slapers": {
+   "2025": 1517,
+   "2024": 1468,
+   "pagina": 8,
+   "letterlijk": "Deferred members 1,517 1,468"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 1431,
+   "2024": 1389,
+   "pagina": 8,
+   "letterlijk": "Retirees 1,431 1,389"
+  },
+  "deelnemers_totaal": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "rente_afdekking_pct": {
+   "2025": 80.1,
+   "2024": null,
+   "pagina": 33,
+   "letterlijk": "Interest Rate 80.0% 80.0% 80.1% (End 2025 Asset Allocation)"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-26",
+  "pagina": 85
+ },
+ "invaardatum": {
+  "datum": "2028-01-01",
+  "status": "gepland",
+  "pagina": 29
+ },
+ "opmerkingen": "Engelstalig verslag. Vereiste dekkingsgraad = Ongoing Solvency Margin Ratio: p.17 geeft 119,3% ultimo 2025, p.22 (actuarial) 119,2%; 'Required own funds 215,500 19.2%' (p.76). Reële dekkingsgraad niet genoemd. Totaal deelnemers niet in het verslag vermeld (null). AUM = balanspost investments for risk MPF (incl. ARP-beleggingen, excl. ASP-beleggingen voor risico deelnemers 120.263); 'Market Value of assets' in kerncijfers 1.534.259 is incl. risico deelnemers. Renteafdekking 80,1% = feitelijke hedge eind 2025 (norm 80%). Transitiedatum uitgesteld van 1 januari 2027 naar 1 januari 2028 (p.29, p.37). Vaststellingsdatum: 'Veghel, 26 June 2026' bij ondertekening (p.51 en p.85)."
+}

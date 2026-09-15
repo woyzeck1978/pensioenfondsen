@@ -1,0 +1,83 @@
+{
+ "fund_id": 70,
+ "naam": "Abbott / Abbott Nederland",
+ "pad": "data/annual_reports/70_Abbott_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -5.2,
+   "2024": 10.6,
+   "pagina": 13,
+   "letterlijk": "Beleggingen voor risico pensioenfonds: Rendement op basis van total return -5,2% 10,6% 10,3% (kop 2025 2024 2023)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 136.6,
+   "2024": 129.0,
+   "pagina": 14,
+   "letterlijk": "Beleidsdekkingsgraad 136,6% 129,0% 131,3%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 148.9,
+   "2024": 127.5,
+   "pagina": 14,
+   "letterlijk": "Aanwezige dekkingsgraad 148,9% 127,5% 128,5%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 94.5,
+   "2024": 97.2,
+   "pagina": 14,
+   "letterlijk": "Reële dekkingsgraad 94,5% 97,2% 95,6%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 114.7,
+   "2024": 112.6,
+   "pagina": 14,
+   "letterlijk": "Vereiste dekkingsgraad 114,7% 112,6% 112,6%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.510179,
+   "2024": 0.562051,
+   "pagina": 13,
+   "letterlijk": "(in duizenden euro) Beleggingen voor risico pensioenfonds Belegd vermogen 510.179 562.051"
+  },
+  "deelnemers_actief": {
+   "2025": 1697,
+   "2024": 2224,
+   "pagina": 13,
+   "letterlijk": "Actieve deelnemers 1.697 2.224 2.076"
+  },
+  "deelnemers_slapers": {
+   "2025": 1615,
+   "2024": 1592,
+   "pagina": 13,
+   "letterlijk": "Gewezen deelnemers 1.615 1.592 1.392"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 455,
+   "2024": 405,
+   "pagina": 13,
+   "letterlijk": "Pensioengerechtigden 455 405 353"
+  },
+  "deelnemers_totaal": {
+   "2025": 3767,
+   "2024": 4221,
+   "pagina": 13,
+   "letterlijk": "Totaal 3.767 4.221 3.821"
+  },
+  "rente_afdekking_pct": {
+   "2025": 82.9,
+   "2024": null,
+   "pagina": 95,
+   "letterlijk": "De feitelijke renteafdekking op basis van de DNB-methodiek bedraagt 82,9% eind 2025."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-29",
+  "pagina": 100
+ },
+ "invaardatum": {
+  "datum": null,
+  "status": "geen datum genoemd",
+  "pagina": 52
+ },
+ "opmerkingen": "AUM exclusief beleggingen voor risico deelnemers (2025: 0; 2024: 82.936 duizend - DC-kapitalen per 15 juli 2025 via CWO naar Zwitserleven overgedragen). Rendement risico deelnemers apart: -4,4% (2024: 9,3%). Rente-afdekking: strategisch 75,0% op swapcurve = 74,8% DNB-methodiek; feitelijk 82,9% (DNB-methodiek) gekozen; geen ultimo-2024-cijfer gevonden. Het fonds is een gesloten FTK-fonds; geen invaarplan of datum genoemd - 'Het bestuur zal zich in 2026 beraden over de toekomst van het fonds' (p52); AZL stopt nFTK-dienstverlening per 1 januari 2030 (p85). 'Actieve deelnemers' zijn volgens VO-verslag gewezen deelnemers met actief dienstverband (regeling gesloten). Vaststelling: 'Vastgesteld te Zwolle, 29 juni 2026' onder jaarrekening (p100) en bestuursverslag (p52)."
+}

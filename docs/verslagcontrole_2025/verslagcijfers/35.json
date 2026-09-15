@@ -1,0 +1,21 @@
+{
+ "fund_id": 35,
+ "naam": "Slagersbedrijf (Butchers)",
+ "pad": "data/annual_reports/35_Slagersbedrijf_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {"2025": -3.76, "2024": 7.93, "pagina": 6, "letterlijk": "Totaal rendement portefeuille -3,76% 7,93% 4,64% (kop 2025 2024 2023)"},
+  "beleidsdekkingsgraad_pct": {"2025": 134.1, "2024": 128.4, "pagina": 6, "letterlijk": "Beleidsdekkingsgraad 134,1% 128,4% 128,9%"},
+  "nominale_dekkingsgraad_pct": {"2025": 139.4, "2024": 126.5, "pagina": 6, "letterlijk": "UFR dekkingsgraad 139,4% 126,5% 125,4%"},
+  "reele_dekkingsgraad_pct": {"2025": 96.8, "2024": 95.8, "pagina": 6, "letterlijk": "Reële dekkingsgraad 96,8% 95,8% 95,0%"},
+  "vereiste_dekkingsgraad_pct": {"2025": 116.7, "2024": 114.6, "pagina": 6, "letterlijk": "Vereiste dekkingsgraad 116,7% 114,6% 115,9%"},
+  "aum_euro_bn": {"2025": 2.885803, "2024": 2.796306, "pagina": 63, "letterlijk": "Beleggingen voor risico pensioenfonds (Bedragen x € 1.000,-) 2.885.803 2.796.306"},
+  "deelnemers_actief": {"2025": 14695, "2024": 14480, "pagina": 5, "letterlijk": "Deelnemers 14.695 14.480 12.505"},
+  "deelnemers_slapers": {"2025": 46253, "2024": 45077, "pagina": 5, "letterlijk": "Gewezen deelnemers (slapers) 46.253 45.077 42.579"},
+  "deelnemers_pensioengerechtigd": {"2025": 14598, "2024": 13829, "pagina": 5, "letterlijk": "Pensioengerechtigden 14.598 13.829 13.281"},
+  "deelnemers_totaal": {"2025": null, "2024": null, "pagina": null, "letterlijk": ""},
+  "rente_afdekking_pct": {"2025": 80.0, "2024": null, "pagina": 40, "letterlijk": "De renteafdekking lag gedurende het hele jaar op 80%."}
+ },
+ "vaststellingsdatum": {"datum": "2026-06-25", "pagina": 91},
+ "invaardatum": {"datum": "2027-01-01", "status": "gepland", "pagina": 20},
+ "opmerkingen": "Nominale dekkingsgraad is de 'UFR dekkingsgraad' (pensioenvermogen / technische voorzieningen). Rendement -3,76% is 'Totaal rendement portefeuille'; voetnoot 2 (p6) zegt dat het resultaat op de rentehedge afzonderlijk van het rendement op de beleggingsportefeuille wordt gerapporteerd - onduidelijk of -3,76% de rentehedge omvat; een apart totaalrendement incl. hedge niet gevonden. AUM: balans 2.885.803 (x € 1.000) bruto; kerncijfers tonen 2.680.765 na aftrek negatieve derivaten (-205.038) en 'belegd vermogen' 2.653.473 (2024: 2.794.018 resp. 2.786.289). Deelnemers 14.695 is inclusief 722 met premievrije opbouw AO; geen totaal genoemd. Rente-afdekking: p40 tekst 80% heel 2025 (verhoogd vanaf begin 2025, daarvoor dynamisch), maar een tabel op dezelfde pagina noemt 'Renteafdekking (marktcurve) 70% 70%' - tegenstrijdig/andere maatstaf. Invaren per 1-1-2026 uitgesteld; nieuwe beoogde invaardatum 1 januari 2027 (DNB geen verbod verlengd)."
+}

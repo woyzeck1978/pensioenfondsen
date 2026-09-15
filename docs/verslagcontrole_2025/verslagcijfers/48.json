@@ -1,0 +1,83 @@
+{
+ "fund_id": 48,
+ "naam": "KLM Cabinepersoneel (Cabin Crew)",
+ "pad": "data/annual_reports/48_KLM_Cabinepersoneel_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -4.2,
+   "2024": 9.0,
+   "pagina": 3,
+   "letterlijk": "Totaalrendement -4,2% 9,0% (kolommen 2025 2024)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 126.0,
+   "2024": 124.6,
+   "pagina": 3,
+   "letterlijk": "Beleidsdekkingsgraad 126,0% 124,6%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 132.7,
+   "2024": 120.1,
+   "pagina": 3,
+   "letterlijk": "Actuele dekkingsgraad 132,7% 120,1%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 95.4,
+   "2024": 80.0,
+   "pagina": 100,
+   "letterlijk": "De reële dekkingsgraad bedraagt 95,4% (2024: 80,0%)"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 119.5,
+   "2024": 122.8,
+   "pagina": 3,
+   "letterlijk": "Wettelĳk vereiste dekkingsgraad 119,5% 122,8%"
+  },
+  "aum_euro_bn": {
+   "2025": 4.0074,
+   "2024": 4.2735,
+   "pagina": 3,
+   "letterlijk": "Belegd vermogen 4.007,4 4.273,5 (bedragen in EUR miljoenen)"
+  },
+  "deelnemers_actief": {
+   "2025": 10204,
+   "2024": 10073,
+   "pagina": 3,
+   "letterlijk": "Aantal actieve deelnemers 10.204 10.073"
+  },
+  "deelnemers_slapers": {
+   "2025": 2899,
+   "2024": 3002,
+   "pagina": 3,
+   "letterlijk": "Aantal gewezen deelnemers 2.899 3.002"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 3275,
+   "2024": 3096,
+   "pagina": 3,
+   "letterlijk": "Aantal pensioengerechtigden (incl. AO) 3.275 3.096"
+  },
+  "deelnemers_totaal": {
+   "2025": 16378,
+   "2024": 16171,
+   "pagina": 3,
+   "letterlijk": "Totaal 16.378 16.171"
+  },
+  "rente_afdekking_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-05-21",
+  "pagina": 121
+ },
+ "invaardatum": {
+  "datum": "2026-01-01",
+  "status": "ingevaren",
+  "pagina": 4
+ },
+ "opmerkingen": "Geen feitelijk renteafdekkingspercentage ultimo 2025 genoemd: p.21 bestuur verhoogde in mei 2025 de strategische renteafdekking met 5%-punt naar 90%; p.65 verantwoordingsorgaan spreekt van 'circa 85% van de verplichtingen'; p.101 effectiviteit afdekking ultimo 2025 ca. 93% (2024: 77%) - geen van drieen is eenduidig de hedge ratio ultimo, dus null. Belegd vermogen 2024 wisselt licht in het verslag: 4.273,5 (kerncijfers p.3), 4.272 (portefeuilletabel p.21), 4.275 (meerjarenoverzicht p.143). Wettelijke reele dekkingsgraad 93,8% (2024: 93,5%) apart vermeld; hier de reele dekkingsgraad 95,4% opgenomen. Vijfjaarsoverzicht p.143 noemt 2023-rendement 9,3% tegen 9,0% op p.3 (niet relevant voor 2025/2024)."
+}

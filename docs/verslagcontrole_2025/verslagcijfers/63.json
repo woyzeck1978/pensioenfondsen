@@ -1,0 +1,83 @@
+{
+ "fund_id": 63,
+ "naam": "Vlees, Vleeswaren, Gemaksvoeding en Pluimveevlees / VLEP (Meat and Poultry)",
+ "pad": "data/annual_reports/63_VLEP_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -4.6,
+   "2024": 10.3,
+   "pagina": 7,
+   "letterlijk": "Beleggingsrendement -4,60% 10,30%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 123.2,
+   "2024": 115.1,
+   "pagina": 8,
+   "letterlijk": "Beleidsdekkingsgraad 123,2% 115,1%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 130.5,
+   "2024": 114.7,
+   "pagina": 8,
+   "letterlijk": "Aanwezige dekkingsgraad 130,5% 114,7%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 87.9,
+   "2024": 84.7,
+   "pagina": 8,
+   "letterlijk": "Reële dekkingsgraad 87,9% 84,7%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 115.1,
+   "2024": 118.2,
+   "pagina": 8,
+   "letterlijk": "Vereiste dekkingsgraad 115,1% 118,2%"
+  },
+  "aum_euro_bn": {
+   "2025": 3.890497,
+   "2024": 3.965526,
+   "pagina": 7,
+   "letterlijk": "Belegd vermogen 3.890.497 1) 3.965.526 1) (in duizenden euro)"
+  },
+  "deelnemers_actief": {
+   "2025": 28899,
+   "2024": 28397,
+   "pagina": 7,
+   "letterlijk": "Actieve deelnemers (inclusief arbeidsongeschikten) 28.899 28.397"
+  },
+  "deelnemers_slapers": {
+   "2025": 95797,
+   "2024": 91990,
+   "pagina": 7,
+   "letterlijk": "Gewezen deelnemers 95.797 91.990"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 17874,
+   "2024": 16969,
+   "pagina": 7,
+   "letterlijk": "Pensioengerechtigden 17.874 16.969"
+  },
+  "deelnemers_totaal": {
+   "2025": 142570,
+   "2024": 137356,
+   "pagina": 7,
+   "letterlijk": "Totaal 142.570 137.356"
+  },
+  "rente_afdekking_pct": {
+   "2025": 100.0,
+   "2024": null,
+   "pagina": 48,
+   "letterlijk": "Begin 2025 van 60% naar 75%. Eind 2025 is de renteafdekking verhoogd van 75% naar 100%."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-25",
+  "pagina": 121
+ },
+ "invaardatum": {
+  "datum": "2027-01-01",
+  "status": "gepland",
+  "pagina": 3
+ },
+ "opmerkingen": "Renteafdekking tegenstrijdig: p48 beleidsniveau 100% eind 2025; risicoparagraaf p115 zegt eerst 'strategisch 60%' en daarna 'strategische renteafdekking van 100,0% (swapcurve) = 102,1% DNB-methodiek; feitelijke renteafdekking DNB-methodiek 96,7% eind 2025'. 2024 niet expliciet als ultimo (alleen 'begin 2025 60%'). Belegd vermogen incl. vorderingen/schulden uit beleggingen en saldi depotbanken. Vereiste DG is strategisch; feitelijk 116,1% (p19). Invaardatum uitgesteld van 1-1-2026 naar 1-1-2027; invaarbesluit 4 december 2025. Jaarrekening 'Vastgesteld te Woerden, 25 juni 2026' (ook p75, bestuursverslag)."
+}

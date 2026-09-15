@@ -1,0 +1,83 @@
+{
+ "fund_id": 133,
+ "naam": "TNO",
+ "pad": "data/annual_reports/133_TNO_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -1.4,
+   "2024": 9.1,
+   "pagina": 12,
+   "letterlijk": "Beleggingsrendement -1,4% 9,1% 11,5% -19,1% 8,6% (2025..2021)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 128.7,
+   "2024": 123.4,
+   "pagina": 13,
+   "letterlijk": "Beleidsdekkingsgraad 128,7% 123,4% 122,6% 130,0% 114,8%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 137.1,
+   "2024": 124.1,
+   "pagina": 13,
+   "letterlijk": "Dekkingsgraad 137,1% 124,1% 120,1% 133,6% 122,3%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 94.1,
+   "2024": 92.2,
+   "pagina": 13,
+   "letterlijk": "Reële dekkingsgraad 94,1% 92,2% 92,4% 90,5% 92,1%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 120.0,
+   "2024": 119.4,
+   "pagina": 13,
+   "letterlijk": "Vereiste dekkingsgraad 120,0% 119,4% 120,5% 121,1% 120,3%"
+  },
+  "aum_euro_bn": {
+   "2025": 3.970511,
+   "2024": 4.066562,
+   "pagina": 12,
+   "letterlijk": "Beleggingen voor risico Pensioenfonds Belegd vermogen 3.970.511 4.066.562 (in duizenden euro's)"
+  },
+  "deelnemers_actief": {
+   "2025": 6046,
+   "2024": 5819,
+   "pagina": 12,
+   "letterlijk": "Actieve deelnemers 6.046 5.819 5.590"
+  },
+  "deelnemers_slapers": {
+   "2025": 7328,
+   "2024": 7320,
+   "pagina": 12,
+   "letterlijk": "Gewezen deelnemers 7.328 7.320 7.173"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 5875,
+   "2024": 5700,
+   "pagina": 12,
+   "letterlijk": "Pensioengerechtigden 5.875 5.700 5.621"
+  },
+  "deelnemers_totaal": {
+   "2025": 19249,
+   "2024": 18839,
+   "pagina": 12,
+   "letterlijk": "Totaal 19.249 18.839 18.384"
+  },
+  "rente_afdekking_pct": {
+   "2025": 80,
+   "2024": null,
+   "pagina": 63,
+   "letterlijk": "Het niveau van de rentehedge is het gehele jaar constant gelijk gebleven op 80%"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-24",
+  "pagina": 150
+ },
+ "invaardatum": {
+  "datum": "2026-07-01",
+  "status": "gepland",
+  "pagina": 47
+ },
+ "opmerkingen": "AUM excl. belegd vermogen voor risico deelnemers (84.481 / 98.351). Rente-afdekking 80% van de verplichtingen (vastgezet sinds maart 2024, dus ook 2024 80% maar niet als ultimo-2024-cijfer genoemd); komt eind 2025 overeen met circa 60% van het vermogen. Bestuursverslag noemt ook -1,41% en actuele dg 137,15%, BDG 128,71%. Jaarrekening opgemaakt 11 juni 2026 (p119); ondertekening bestuur en RvT Rijswijk 24 juni 2026 (p150). Overgang nieuw stelsel gepland 1 juli 2026."
+}

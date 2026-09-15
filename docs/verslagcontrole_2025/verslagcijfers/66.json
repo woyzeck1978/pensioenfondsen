@@ -1,0 +1,83 @@
+{
+ "fund_id": 66,
+ "naam": "De Nationale APF",
+ "pad": "data/annual_reports/66_De_Nationale_APF_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": "Geen APF-breed rendement; alleen per kring."
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": "Geen APF-brede dekkingsgraad; alleen per kring."
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": "Alleen per kring."
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": "Alleen per kring."
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": "Alleen per kring."
+  },
+  "aum_euro_bn": {
+   "2025": 3.645,
+   "2024": 3.778,
+   "pagina": 9,
+   "letterlijk": "Beheerd vermogen (in mln) 3.645"
+  },
+  "deelnemers_actief": {
+   "2025": 7091,
+   "2024": 6760,
+   "pagina": 9,
+   "letterlijk": "Actieve deelnemers 7.091"
+  },
+  "deelnemers_slapers": {
+   "2025": 20903,
+   "2024": 20814,
+   "pagina": 9,
+   "letterlijk": "Gewezen deelnemers 20.903"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 7314,
+   "2024": 6984,
+   "pagina": 9,
+   "letterlijk": "Pensioengerechtigden 7.314"
+  },
+  "deelnemers_totaal": {
+   "2025": 35308,
+   "2024": 34558,
+   "pagina": 9,
+   "letterlijk": "Totaal 35.308"
+  },
+  "rente_afdekking_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": "Alleen per kring (werkelijk 72,2-77,9%, strategisch 80%)."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-17",
+  "pagina": 379
+ },
+ "invaardatum": {
+  "datum": null,
+  "status": "geen datum genoemd",
+  "pagina": 28
+ },
+ "opmerkingen": "APF-totaal uit meerjarenoverzicht 'De Nationale APF bedrijfsomgeving' p9. Rendement, dekkingsgraden en renteafdekking bestaan alleen per kring (null). AUM = 'Beheerd vermogen (in mln)' 3.645 mln; dat is niet hetzelfde als som van 'Belegd vermogen' per kring (die is excl. overlopende posten/liquide middelen en Kring E DC). Deelnemersaantallen op p9 tellen op tot de som van kringen A, B, D, McCain, AFM, ANWB (excl. Kring E, 1.109 deelnemers). Invaardatum verschilt per kring: p28 'Het fonds beoogt om per 1 januari 2027 twee kringen in te varen'; Kring B en ANWB naar 1-1-2028. Vaststellingsdatum = ondertekening jaarrekening 17 juni 2026 (p379)."
+}

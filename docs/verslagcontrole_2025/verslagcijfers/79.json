@@ -1,0 +1,83 @@
+{
+ "fund_id": 79,
+ "naam": "Avebe",
+ "pad": "data/annual_reports/79_Avebe_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": 4.1,
+   "2024": 17.5,
+   "pagina": 23,
+   "letterlijk": "Rendement beleggingen voor vermogensbeheerkosten 4,1% 17,5%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 144.1,
+   "2024": 138.5,
+   "pagina": 5,
+   "letterlijk": "Beleidsdekkingsgraad 144,1 138,5"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 148.3,
+   "2024": 137.6,
+   "pagina": 5,
+   "letterlijk": "Actuele dekkingsgraad 148,3 137,6"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 109.5,
+   "2024": 106.0,
+   "pagina": 5,
+   "letterlijk": "Reële dekkingsgraad 109,5 106,0"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 118.1,
+   "2024": 117.5,
+   "pagina": 5,
+   "letterlijk": "Vereiste dekkingsgraad 118,1 117,5"
+  },
+  "aum_euro_bn": {
+   "2025": 0.567582,
+   "2024": 0.536531,
+   "pagina": 4,
+   "letterlijk": "Beleggingen - voor risico pensioenfonds (x € 1.000) 567.582 536.531"
+  },
+  "deelnemers_actief": {
+   "2025": 998,
+   "2024": 1014,
+   "pagina": 4,
+   "letterlijk": "Deelnemers 998 1.014"
+  },
+  "deelnemers_slapers": {
+   "2025": 904,
+   "2024": 880,
+   "pagina": 4,
+   "letterlijk": "Gewezen deelnemers 904 880"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 2039,
+   "2024": 2088,
+   "pagina": 4,
+   "letterlijk": "Pensioengerechtigden 2.039 2.088"
+  },
+  "deelnemers_totaal": {
+   "2025": 3941,
+   "2024": 3982,
+   "pagina": 4,
+   "letterlijk": "3.941 3.982 (Hier wordt het aantal verzekerden weergegeven)"
+  },
+  "rente_afdekking_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": 20,
+   "letterlijk": ""
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-18",
+  "pagina": 109
+ },
+ "invaardatum": {
+  "datum": "2028-01-01",
+  "status": "gepland",
+  "pagina": 16
+ },
+ "opmerkingen": "Rendement 4,1% is vóór vermogensbeheerkosten en inclusief overlay/renteafdekking (p37: 'Totaal 4,1'); na kosten 3,74% (2024: 17,2%); excl. overlay 8,3%; p22 noemt 8,32% voor de vrije portefeuille. Beleggingen 567,6 mln excl. verzekerd deel technische voorzieningen (345,6 mln bij Aegon); gemiddeld belegd vermogen incl. verzekerd deel 914 mln. Renteafdekking: alleen strategisch doel 75% van nominale verplichtingen (p20), geen gerealiseerd ultimo-percentage. Datumconflict: jaarrekening vastgesteld in vergadering van 18 juni 2026 (p109), bestuursverslag en jaarrekening getekend 'Veendam, 25 juni 2026' (p64, p110). Invaren 1-1-2028 (uitgesteld wegens overstap administratie naar Dion per 1-1-2027)."
+}

@@ -1,0 +1,83 @@
+{
+ "fund_id": 78,
+ "naam": "Atos",
+ "pad": "data/annual_reports/78_Atos_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": 1.8,
+   "2024": 10.6,
+   "pagina": 34,
+   "letterlijk": "Gehele portefeuille 1,80% -1,44% 10,60% 11,81% (Rendement/BM 2025, Rendement/BM 2024)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 131.8,
+   "2024": 126.0,
+   "pagina": 6,
+   "letterlijk": "Beleidsdekkingsgraad (in %) 131,8 126,0"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 139.8,
+   "2024": 127.6,
+   "pagina": 43,
+   "letterlijk": "Actuele dekkingsgraad 139,8 127,6"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 100.0,
+   "2024": 97.5,
+   "pagina": 43,
+   "letterlijk": "Reële dekkingsgraad 100,0 97,5"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "aum_euro_bn": {
+   "2025": 2.557,
+   "2024": 2.602,
+   "pagina": 6,
+   "letterlijk": "Belegd vermogen (€ miljoenen) 2.557 2.602"
+  },
+  "deelnemers_actief": {
+   "2025": 0,
+   "2024": 0,
+   "pagina": 48,
+   "letterlijk": "Vanaf 1 januari 2014 is er geen actieve pensioenopbouw meer. Er zijn geen actieve deelnemers meer"
+  },
+  "deelnemers_slapers": {
+   "2025": 10668,
+   "2024": 11230,
+   "pagina": 6,
+   "letterlijk": "Gewezen deelnemers 10.668 11.230"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 4773,
+   "2024": 4405,
+   "pagina": 6,
+   "letterlijk": "Pensioengerechtigden 4.773 4.405"
+  },
+  "deelnemers_totaal": {
+   "2025": 15503,
+   "2024": 15705,
+   "pagina": 6,
+   "letterlijk": "Totaal deelnemers 15.503 15.705"
+  },
+  "rente_afdekking_pct": {
+   "2025": 70.0,
+   "2024": 60.0,
+   "pagina": 69,
+   "letterlijk": "De renteafdekking was stabiel vanaf het begin jaar tot en met oktober 2025 (60%), in de opvolgende maanden was de renteafdekking 70%"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-19",
+  "pagina": 41
+ },
+ "invaardatum": {
+  "datum": null,
+  "status": "vaart niet in",
+  "pagina": 15
+ },
+ "opmerkingen": "Vereiste dekkingsgraad niet als percentage genoemd; wel 'vereist eigen vermogen 343.802 / 18,6%' (2024: 15,7%) op p63 - niet omgerekend. Belegd vermogen kerncijfers 2.557 mln wijkt af van balans 'Beleggingen voor risico pensioenfonds' 2.445.013 (x €1.000; 2024 2.436.286); daarnaast 216,4 mln beleggingen voor risico deelnemers (BP). Rendement 1,80% is 'gehele portefeuille' (return+matching). Renteafdekking 70%/60% is het (strategische) afdekkingsniveau, geen gemeten ultimo-percentage. Totaal deelnemers omvat 62 gewezen deelnemers met voortzetting (arbeidsongeschikten); 2024-actieven 0 op basis van dezelfde zin. Fonds is gesloten; sociale partners besloten niet in te varen (p15)."
+}

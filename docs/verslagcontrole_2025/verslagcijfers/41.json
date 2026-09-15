@@ -1,0 +1,83 @@
+{
+ "fund_id": 41,
+ "naam": "Zorg en Welzijn / PFZW (Healthcare and Welfare)",
+ "pad": "data/annual_reports/41_PFZW_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -3.8,
+   "2024": 8.0,
+   "pagina": 10,
+   "letterlijk": "Jaarrendement 8,2% -22,6% 8,7% 8,0% -3,8% (kop 2021 2022 2023 2024 2025)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 117.7,
+   "2024": 108.9,
+   "pagina": 9,
+   "letterlijk": "Beleidsdekkingsgraad 99,7% 111,5% 112,0% 108,9% 117,7% (kop 2021..2025)"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 126.0,
+   "2024": 109.8,
+   "pagina": 9,
+   "letterlijk": "Actuele dekkingsgraad 106,6% 108,7% 106,1% 109,8% 126,0% (kop 2021..2025)"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 85.5,
+   "2024": 80.9,
+   "pagina": 149,
+   "letterlijk": "Reële dekkingsgraad 85,5% 80,9% (kop 31-12-2025 31-12-2024)"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 121.7,
+   "2024": 123.3,
+   "pagina": 149,
+   "letterlijk": "onder de vereiste dekkingsgraad van 121,7% (2024: 123,3%)"
+  },
+  "aum_euro_bn": {
+   "2025": 252.036,
+   "2024": 259.078,
+   "pagina": 10,
+   "letterlijk": "Belegd vermogen (in € mln) 277.456 216.517 237.577 259.078 252.036 (kop 2021..2025)"
+  },
+  "deelnemers_actief": {
+   "2025": 1463600,
+   "2024": 1418700,
+   "pagina": 8,
+   "letterlijk": "Premiebetalende deelnemers 1.340.700 1.365.400 1.390.700 1.418.700 1.463.600 (kop 2021..2025)"
+  },
+  "deelnemers_slapers": {
+   "2025": 897900,
+   "2024": 892800,
+   "pagina": 8,
+   "letterlijk": "Gewezen deelnemers 1.092.500 1.102.300 878.600 892.800 897.900"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 676200,
+   "2024": 638100,
+   "pagina": 8,
+   "letterlijk": "Pensioengerechtigden 552.100 580.600 607.300 638.100 676.200"
+  },
+  "deelnemers_totaal": {
+   "2025": 3037700,
+   "2024": 2949600,
+   "pagina": 8,
+   "letterlijk": "Totaal deelnemers 2.985.300 3.048.300 2.876.600 2.949.600 3.037.700"
+  },
+  "rente_afdekking_pct": {
+   "2025": 70.5,
+   "2024": 58.5,
+   "pagina": 145,
+   "letterlijk": "Afdekkingspercentages rente afdekkingsmandaat T.o.v. daadwerkelijke verplichtingen 70,5% 58,5% (kop 31-12-2025 31-12-2024)"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-04-29",
+  "pagina": 170
+ },
+ "invaardatum": {
+  "datum": "2026-01-01",
+  "status": "ingevaren",
+  "pagina": 84
+ },
+ "opmerkingen": "Meerjarenoverzicht (p8-10) heeft de jaren OPLOPEND (2021 links, 2025 rechts) - let op kolomkeuze. Reële dekkingsgraad tegenstrijdig: p22 'steeg in 2025 van 80,9% naar 85,7%', risicoparagraaf jaarrekening p149 tabel 85,5%; tabelwaarde genomen. Rendement -3,8% is incl. renteafdekking (excl. renteafdekking 3,3%, renteafdekking -7,1%, p150). Rente-afdekking: gerealiseerd 70,5% t.o.v. daadwerkelijke verplichtingen; strategisch afdekkingspercentage 71,0% (2024: 58,0%). Vereiste dekkingsgraad 121,7% ook in p22/p24. Vaststelling = ondertekening jaarrekening 'Zeist, 29 april 2026' (p170). Ingevaren per 1 januari 2026 (p84, p24); pensioengerechtigden bij transitie verhoogd met 12,4%."
+}

@@ -1,0 +1,83 @@
+{
+ "fund_id": 175,
+ "naam": "Kring Roba (Hnp)",
+ "pad": "data/annual_reports/165_Kring_Arcadis_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -3.29,
+   "2024": 10.13,
+   "pagina": 24,
+   "letterlijk": "Beleggingsrendement (in %) -3,29% 10,13%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 151.3,
+   "2024": 148.2,
+   "pagina": 23,
+   "letterlijk": "Beleidsdekkingsgraad (in %) 151,3% 148,2%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 157.1,
+   "2024": 144.2,
+   "pagina": 23,
+   "letterlijk": "Aanwezige dekkingsgraad (in %) 157,1% 144,2%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 110.6,
+   "2024": 110.4,
+   "pagina": 23,
+   "letterlijk": "Reële dekkingsgraad (in %) 110,6% 110,4%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 116.6,
+   "2024": 116.4,
+   "pagina": 23,
+   "letterlijk": "Vereiste dekkingsgraad (in %) 116,6% 116,4%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.186975,
+   "2024": 0.210119,
+   "pagina": 24,
+   "letterlijk": "Totaal beleggingen 186.975 210.119 (x EUR 1.000)"
+  },
+  "deelnemers_actief": {
+   "2025": 327,
+   "2024": 334,
+   "pagina": 23,
+   "letterlijk": "Aantal actieve deelnemers 327 334"
+  },
+  "deelnemers_slapers": {
+   "2025": 264,
+   "2024": 246,
+   "pagina": 23,
+   "letterlijk": "Aantal gewezen deelnemers 264 246"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 159,
+   "2024": 149,
+   "pagina": 23,
+   "letterlijk": "Aantal pensioengerechtigden 159 149"
+  },
+  "deelnemers_totaal": {
+   "2025": 750,
+   "2024": 729,
+   "pagina": 23,
+   "letterlijk": "750 729"
+  },
+  "rente_afdekking_pct": {
+   "2025": 103.8,
+   "2024": null,
+   "pagina": 321,
+   "letterlijk": "De feitelĳke afdekking per ultimo 2025 bedroeg 103,8%. Die afwĳking valt buiten de toegestane bandbreedte"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-30",
+  "pagina": 911
+ },
+ "invaardatum": {
+  "datum": "2027-07-01",
+  "status": "gepland",
+  "pagina": 332
+ },
+ "opmerkingen": "Cijfers uit het eigen kerncijferhoofdstuk van de kring (Jaarverslag 2025 Stichting Het Nederlandse Pensioenfonds, bedragen x EUR 1.000). AUM = 'Totaal beleggingen' uit de kerncijfers (na aftrek negatieve derivaten). Nominale dekkingsgraad = 'Aanwezige dekkingsgraad'. Vaststellingsdatum = ondertekening jaarrekening (Badhoevedorp, 30 juni 2026, p.911; ondertekening bestuursverslag p.438 zelfde datum). Renteafdekking 2024 niet opgezocht/genoemd. Kring opgericht 1 januari 2023. Renteafdekking-norm 100%; feitelijk 103,8% viel buiten de bandbreedte. 'Pensioenkring Roba is voornemens per 1 juli 2027 over te gaan naar het nieuwe pensioenstelsel' (p.332)."
+}

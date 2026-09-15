@@ -1,0 +1,83 @@
+{
+ "fund_id": 25,
+ "naam": "MITT (Fashion, Interior, Carpet, and Textile Industry)",
+ "pad": "data/annual_reports/25_MITT_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -2.19,
+   "2024": 7.55,
+   "pagina": 10,
+   "letterlijk": "Rendement op basis van total return -2,19% 7,55%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 127.8,
+   "2024": 119.3,
+   "pagina": 11,
+   "letterlijk": "Beleidsdekkingsgraad 127,8% 119,3%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 135.7,
+   "2024": 118.9,
+   "pagina": 11,
+   "letterlijk": "Dekkingsgraad 135,7% 118,9%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 92.0,
+   "2024": 87.9,
+   "pagina": 29,
+   "letterlijk": "Eind 2025 was de reële dekkingsgraad 92,0% (eind 2024 was dit 87,9%)"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 120.1,
+   "2024": 118.8,
+   "pagina": 11,
+   "letterlijk": "Strategisch vereiste dekkingsgraad 120,1% 118,8%"
+  },
+  "aum_euro_bn": {
+   "2025": 3.855529,
+   "2024": 4.170596,
+   "pagina": 10,
+   "letterlijk": "Beleggingen 3) (in duizenden euro) 3.855.529 4.170.596 - 3) inclusief lopende intrest en liquide middelen"
+  },
+  "deelnemers_actief": {
+   "2025": 20559,
+   "2024": 20455,
+   "pagina": 10,
+   "letterlijk": "Deelnemers 20.559 20.455"
+  },
+  "deelnemers_slapers": {
+   "2025": 54598,
+   "2024": 54237,
+   "pagina": 10,
+   "letterlijk": "Gewezen deelnemers 54.598 54.237"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 54479,
+   "2024": 54378,
+   "pagina": 10,
+   "letterlijk": "Pensioengerechtigden 2) 54.479 54.378"
+  },
+  "deelnemers_totaal": {
+   "2025": 129636,
+   "2024": 129070,
+   "pagina": 10,
+   "letterlijk": "Totaal aantal verzekerden 129.636 129.070"
+  },
+  "rente_afdekking_pct": {
+   "2025": 71.6,
+   "2024": null,
+   "pagina": 103,
+   "letterlijk": "De feitelijke afdekking van het renterisico ultimo 2025 is 71,6% op basis van de swapcurve."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-25",
+  "pagina": 62
+ },
+ "invaardatum": {
+  "datum": "2026-04-01",
+  "status": "ingevaren",
+  "pagina": 30
+ },
+ "opmerkingen": "Pensioengerechtigden inclusief niet-opgevraagde pensioenen (NOP). AUM kerncijfers incl. lopende intrest en liquide middelen; 'Totaal belegd vermogen' p90: 3.833.727k (2024: 4.112.764k). Feitelijk vereiste dg 121,5% (119,9%). Strategische renteafdekking 70,0%; 2024 feitelijk niet gevonden. p103 schrijft 'beleidsdekkingsgraad afgenomen met 8,5%-punt' terwijl hij steeg (tekstfout). Ingevaren per 1 april 2026 (p30). Bestuursverslag 'Vastgesteld te Heerlen, 25 juni 2026' (p62)."
+}

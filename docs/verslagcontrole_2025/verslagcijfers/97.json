@@ -1,0 +1,83 @@
+{
+ "fund_id": 97,
+ "naam": "Gasunie",
+ "pad": "data/annual_reports/97_Gasunie_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": 0.6,
+   "2024": 11.7,
+   "pagina": 6,
+   "letterlijk": "Rendement op basis van total return 0,6% 11,7%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 146.0,
+   "2024": 141.2,
+   "pagina": 6,
+   "letterlijk": "Beleidsdekkingsgraad 146,0% 141,2%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 152.5,
+   "2024": 137.4,
+   "pagina": 6,
+   "letterlijk": "Actuele dekkingsgraad 152,5% 137,4%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 108.1,
+   "2024": 104.6,
+   "pagina": 6,
+   "letterlijk": "Reële dekkingsgraad 108,1% 104,6%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 124.2,
+   "2024": 123.9,
+   "pagina": 6,
+   "letterlijk": "Vereiste dekkingsgraad 124,2% 123,9%"
+  },
+  "aum_euro_bn": {
+   "2025": 2.219564,
+   "2024": 2.272079,
+   "pagina": 6,
+   "letterlijk": "Totale beleggingen voor risico pensioenfonds 2.219.564 2.272.079 (bedragen in duizenden euro)"
+  },
+  "deelnemers_actief": {
+   "2025": 2424,
+   "2024": 2273,
+   "pagina": 6,
+   "letterlijk": "Actieve deelnemers 2.424 2.273"
+  },
+  "deelnemers_slapers": {
+   "2025": 759,
+   "2024": 746,
+   "pagina": 6,
+   "letterlijk": "Gewezen deelnemers 759 746"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 1753,
+   "2024": 1738,
+   "pagina": 6,
+   "letterlijk": "Pensioengerechtigden 1.753 1.738"
+  },
+  "deelnemers_totaal": {
+   "2025": 4936,
+   "2024": 4757,
+   "pagina": 6,
+   "letterlijk": "Totaal 4.936 4.757"
+  },
+  "rente_afdekking_pct": {
+   "2025": 70.7,
+   "2024": null,
+   "pagina": 137,
+   "letterlijk": "De feitelijke renteafdekking op basis van de DNB-methodiek bedraagt 70,7% eind 2025."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-18",
+  "pagina": 143
+ },
+ "invaardatum": {
+  "datum": "2027-01-01",
+  "status": "gepland",
+  "pagina": 88
+ },
+ "opmerkingen": "Renteafdekking kent drie cijfers: feitelijk 70,7% (DNB-methodiek, gekozen), strategisch 75,0% op swapcurve = 77,0% DNB-methodiek (p137); p69 tabel 'Totaal 75%' (feitelijke afdekking in % TV, swapcurve). Geen 2024-afdekkingspercentage gevonden. Vaststelling: 'Vastgesteld te Groningen d.d. 18 juni 2026' (p143); p110 'jaarrekening opgemaakt op 18 juni 2026'. Invaren gepland per 1 januari 2027 (p88, ook p10/p61)."
+}

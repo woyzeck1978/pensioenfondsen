@@ -1,0 +1,21 @@
+{
+ "fund_id": 30,
+ "naam": "Particuliere Beveiliging (Private Security)",
+ "pad": "data/annual_reports/30_Particuliere_Beveiliging_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {"2025": -4.8, "2024": 10.6, "pagina": 8, "letterlijk": "Rendementspercentage -4,8% 10,6% 7,4% (kop 2025 2024 2023)"},
+  "beleidsdekkingsgraad_pct": {"2025": 134.5, "2024": 125.1, "pagina": 8, "letterlijk": "Beleidsdekkingsgraad 134,5% 125,1% 129,5%"},
+  "nominale_dekkingsgraad_pct": {"2025": 143.2, "2024": 124.5, "pagina": 8, "letterlijk": "Dekkingsgraad 143,2% 124,5% 121,4%"},
+  "reele_dekkingsgraad_pct": {"2025": null, "2024": null, "pagina": null, "letterlijk": ""},
+  "vereiste_dekkingsgraad_pct": {"2025": 122.3, "2024": 123.5, "pagina": 8, "letterlijk": "Vereiste dekkingsgraad 122,3% 123,5% 122,2%"},
+  "aum_euro_bn": {"2025": 2.419408, "2024": 2.480281, "pagina": 101, "letterlijk": "Beleggingen voor risico pensioenfonds (x € 1.000) 2.419.408 2.480.281"},
+  "deelnemers_actief": {"2025": 32280, "2024": 29095, "pagina": 160, "letterlijk": "Actieven 29.095 (stand ultimo 2024) ... 32.280 (stand ultimo 2025)"},
+  "deelnemers_slapers": {"2025": 33825, "2024": 32941, "pagina": 160, "letterlijk": "Slapers 32.941 ... 33.825"},
+  "deelnemers_pensioengerechtigd": {"2025": 7567, "2024": 6803, "pagina": 160, "letterlijk": "Pensioengerechtigden 6.803 1.007 243 7.567"},
+  "deelnemers_totaal": {"2025": 73672, "2024": 68839, "pagina": 160, "letterlijk": "Totaal 68.839 15.656 10.823 73.672"},
+  "rente_afdekking_pct": {"2025": 80.0, "2024": 60.0, "pagina": 79, "letterlijk": "De renteafdekking ging van 60% aan het begin van het jaar naar 80% eind 2025."}
+ },
+ "vaststellingsdatum": {"datum": "2026-06-09", "pagina": 104},
+ "invaardatum": {"datum": "2026-01-01", "status": "ingevaren", "pagina": 6},
+ "opmerkingen": "Ingevaren per 1 januari 2026; cijfers ultimo 2025 zijn FTK. Rendement: kerncijfers 'Rendementspercentage' -4,8%; p79 noemt voor de portefeuille -4,57%; dekkingsgraadattributie p39 geeft -8,6% 'exclusief renteafdekking' (effect op DG). AUM: balans 2.419.408 (bruto incl. derivaten 81.884); kerncijfers 'Belegd vermogen' 2.032.692 (2024: 2.281.551). Deelnemers staan niet in de kerncijfertabel maar in bijlage 12.1 (p160, stand ultimo 2024 en 2025); actieven incl. arbeidsongeschikten volgens grafiek p10. Reële dekkingsgraad niet gevonden. Rente-afdekking 2024 = '60% aan het begin van het jaar' 2025, als ultimo-2024-waarde gelezen."
+}

@@ -1,0 +1,83 @@
+{
+ "fund_id": 31,
+ "naam": "Personeelsdiensten (Personnel Services)",
+ "pad": "data/annual_reports/31_StiPP_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": 5.4,
+   "2024": 9.2,
+   "pagina": 12,
+   "letterlijk": "Gemiddeld beleggingsrendement gehele fonds in % 5,4% 9,2%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 113.5,
+   "2024": 112.4,
+   "pagina": 13,
+   "letterlijk": "Beleidsdekkingsgraad in % 113,5% 112,4%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 110.9,
+   "2024": 112.9,
+   "pagina": 13,
+   "letterlijk": "Actuele dekkingsgraad in % 110,9% 112,9%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 111.2,
+   "2024": 110.3,
+   "pagina": 19,
+   "letterlijk": "De reële dekkingsgraad bedraagt 111,2% ultimo 2025 (2024: 110,3%)"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 102.7,
+   "2024": 103.3,
+   "pagina": 18,
+   "letterlijk": "ligt ruim boven het vereiste niveau van 102,7% (2024: 103,3%)"
+  },
+  "aum_euro_bn": {
+   "2025": 4.416,
+   "2024": 3.758,
+   "pagina": 12,
+   "letterlijk": "Belegd vermogen 4.416 3.758 (Bedragen in € 1.000.000)"
+  },
+  "deelnemers_actief": {
+   "2025": 519107,
+   "2024": 545483,
+   "pagina": 41,
+   "letterlijk": "Aantal actieve deelnemers 519.107 545.483"
+  },
+  "deelnemers_slapers": {
+   "2025": 1016658,
+   "2024": 911731,
+   "pagina": 41,
+   "letterlijk": "Aantal gewezen deelnemers 1.016.658 911.731"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 20359,
+   "2024": 19936,
+   "pagina": 41,
+   "letterlijk": "Aantal pensioengerechtigden 20.359 19.936"
+  },
+  "deelnemers_totaal": {
+   "2025": 1556124,
+   "2024": 1477150,
+   "pagina": 41,
+   "letterlijk": "Totaal 1.556.124 1.477.150"
+  },
+  "rente_afdekking_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-16",
+  "pagina": 111
+ },
+ "invaardatum": {
+  "datum": "2026-01-01",
+  "status": "ingevaren",
+  "pagina": 107
+ },
+ "opmerkingen": "DC-fonds (beschikbare premie). Belegd vermogen 4.416 mln is het gehele fonds incl. beleggingen voor risico deelnemers, niet alleen risico pensioenfonds. Rendement is 'gemiddeld' over verschillende portefeuilles/beleggingsmixen. Actuele dekkingsgraad ultimo 2025 gedrukt door eenmalige versterking voorzieningen i.v.m. Wtp-overgang (voetnoot 9); dekkingsgraad risico fonds apart 185,6% (2024: 246,7%). Pensioengerechtigden 20.359 incl. 8.345 met niet-opgenomen pensioen (12.014 met ingegane uitkering). Geen renteafdekkingspercentage genoemd (alleen duratie-matching uitkeringen). Ingevaren per 1-1-2026, na balansdatum."
+}

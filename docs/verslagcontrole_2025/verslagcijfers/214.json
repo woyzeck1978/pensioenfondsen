@@ -1,0 +1,83 @@
+{
+ "fund_id": 214,
+ "naam": "Kring HPE (Centraal Beheer)",
+ "pad": "data/annual_reports/65_Centraal_Beheer_APF_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": 1.77,
+   "2024": 8.03,
+   "pagina": 293,
+   "letterlijk": "Beleggingsrendement 1,77% 8,03% (kop 2025 2024)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 132.0,
+   "2024": 127.4,
+   "pagina": 300,
+   "letterlijk": "Beleidsdekkingsgraad 132,0% 127,4%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 137.9,
+   "2024": 125.0,
+   "pagina": 300,
+   "letterlijk": "Actuele dekkingsgraad 137,9% 125,0%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 101.0,
+   "2024": 97.6,
+   "pagina": 300,
+   "letterlijk": "Reële dekkingsgraad 101,0% 97,6%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 118.8,
+   "2024": 117.7,
+   "pagina": 300,
+   "letterlijk": "Vereiste dekkingsgraad 118,8% 117,7%"
+  },
+  "aum_euro_bn": {
+   "2025": 1.671292,
+   "2024": 1.664469,
+   "pagina": 294,
+   "letterlijk": "Totaal belegd vermogen (x € 1.000) 1.671.292 1.664.469"
+  },
+  "deelnemers_actief": {
+   "2025": 205,
+   "2024": 201,
+   "pagina": 292,
+   "letterlijk": "Actieven en arbeidsongeschikten 205 201"
+  },
+  "deelnemers_slapers": {
+   "2025": 3633,
+   "2024": 3911,
+   "pagina": 292,
+   "letterlijk": "Gewezen deelnemers 3.633 3.911"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 3332,
+   "2024": 3176,
+   "pagina": 292,
+   "letterlijk": "Pensioengerechtigden 3.332 3.176"
+  },
+  "deelnemers_totaal": {
+   "2025": 7170,
+   "2024": 7288,
+   "pagina": 292,
+   "letterlijk": "Deelnemers 7.170 7.288"
+  },
+  "rente_afdekking_pct": {
+   "2025": 60,
+   "2024": null,
+   "pagina": 309,
+   "letterlijk": "strategie waarbĳ 60% van de rentegevoeligheid van de pensioenverplichtingen op basis van de marktrente wordt afgedekt"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-17",
+  "pagina": 425
+ },
+ "invaardatum": {
+  "datum": null,
+  "status": "geen datum genoemd",
+  "pagina": 311
+ },
+ "opmerkingen": "Kerncijfertabel p14/16 noemt beleidsdekkingsgraad HPE 132,04%; kringtabellen 132,0%. Renteafdekking 60% is strategie, geen gerealiseerd ultimo-percentage. Invaren: 'We zĳn nog in afwachting van het definitieve transitieplan van HPE' (p311), geen datum. Vaststelling: 'heeft de jaarrekening over het verslagjaar 2025 vastgesteld in de vergadering van 17 juni 2026' (p425); bestuursverslag ondertekend 'Zeist, 15 juni 2026' (p403). Deelnemersaantallen: 'Deelnemers' = totaal; actieven incl. arbeidsongeschikten. Bedragen in de kringtabellen in € 1.000."
+}

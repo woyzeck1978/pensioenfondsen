@@ -1,0 +1,83 @@
+{
+ "fund_id": 87,
+ "naam": "De Nederlandsche Bank",
+ "pad": "data/annual_reports/87_De_Nederlandsche_Bank_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -4.57,
+   "2024": 8.4,
+   "pagina": 15,
+   "letterlijk": "Totaal rendement beleggingsportefeuille -4,57% 8,40%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 140.4,
+   "2024": 137.7,
+   "pagina": 15,
+   "letterlijk": "Beleidsdekkingsgraad 140,4% 137,7%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 145.9,
+   "2024": 136.3,
+   "pagina": 15,
+   "letterlijk": "Dekkingsgraad 145,9% 136,3%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 102.4,
+   "2024": 102.5,
+   "pagina": 15,
+   "letterlijk": "Reële dekkingsgraad 102,4% 102,5%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 113.9,
+   "2024": 115.4,
+   "pagina": 15,
+   "letterlijk": "Vereiste dekkingsgraad 113,9% 115,4%"
+  },
+  "aum_euro_bn": {
+   "2025": 2.153955,
+   "2024": 2.367544,
+   "pagina": 14,
+   "letterlijk": "Balanswaarde van de beleggingen, Totaal (bedragen in duizenden euro) 2.153.955 2.367.544"
+  },
+  "deelnemers_actief": {
+   "2025": 2581,
+   "2024": 2525,
+   "pagina": 15,
+   "letterlijk": "Deelnemers 2.581 2.525"
+  },
+  "deelnemers_slapers": {
+   "2025": 2448,
+   "2024": 2379,
+   "pagina": 15,
+   "letterlijk": "Gewezen deelnemers 2.448 2.379"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 1705,
+   "2024": 1657,
+   "pagina": 15,
+   "letterlijk": "Uitkeringsgerechtigden 1.705 1.657"
+  },
+  "deelnemers_totaal": {
+   "2025": 6734,
+   "2024": 6561,
+   "pagina": 15,
+   "letterlijk": "Totaal 6.734 6.561"
+  },
+  "rente_afdekking_pct": {
+   "2025": 75,
+   "2024": 75,
+   "pagina": 71,
+   "letterlijk": "Het renterisico is voor 75% van het marktrenterisico van de dekkingsgraad afgedekt."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-18",
+  "pagina": 104
+ },
+ "invaardatum": {
+  "datum": "2026-07-01",
+  "status": "gepland",
+  "pagina": 5
+ },
+ "opmerkingen": "Renteafdekking 75% is gedefinieerd op het marktrenterisico van de dekkingsgraad (niet van de verplichtingen); verslag zegt dat dit ongeveer overeenkomt met volledige afdekking van de verplichtingen. 2024: p20 'maatstaf ... ongewijzigd, te weten 75%'. Reële dg 2024: kerncijfers 102,5%, jaarrekening p142 103,8% (tegenstrijdig). Belegd vermogen: kerncijfers 2.153.955k (incl. negatieve derivaten); tabel p77 noemt 2.276,3 mln. Invaren per 1 juli 2026 met positieve DNB-beschikking 8 juni 2026 - op verslagdatum nog niet ingevaren. Vaststelling 'Vastgesteld te Amsterdam, 18 juni 2026' (p104)."
+}

@@ -1,0 +1,83 @@
+{
+ "fund_id": 188,
+ "naam": "Pensioenkring GE Nederland (Stap)",
+ "pad": "data/annual_reports/188_GE_Nederland_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -2.7,
+   "2024": 8.3,
+   "pagina": 5,
+   "letterlijk": "Beleggingsrendement risico pensioenkring -2,7% 8,3% 14,2% (kop 2025 2024 2023 2022 2021)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 149.6,
+   "2024": 140.3,
+   "pagina": 5,
+   "letterlijk": "Beleidsdekkingsgraad 149,6% 140,3% 138,3%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 163.5,
+   "2024": 140.7,
+   "pagina": 5,
+   "letterlijk": "Feitelijke dekkingsgraad 163,5% 140,7% 135,9%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 106.3,
+   "2024": 102.5,
+   "pagina": 24,
+   "letterlijk": "Reële dekkingsgraad 106,3 102,5"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 125.0,
+   "2024": 125.1,
+   "pagina": 5,
+   "letterlijk": "Vereiste dekkingsgraad 125,0% 125,1% 126,0%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.686465,
+   "2024": 0.674488,
+   "pagina": 63,
+   "letterlijk": "Balans (bedragen x € 1.000) Beleggingen voor risico Pensioenkring GE Nederland 686.465 / 674.488"
+  },
+  "deelnemers_actief": {
+   "2025": 527,
+   "2024": 529,
+   "pagina": 5,
+   "letterlijk": "Actieven en arbeidsongeschikten 527 529 516"
+  },
+  "deelnemers_slapers": {
+   "2025": 1857,
+   "2024": 1849,
+   "pagina": 5,
+   "letterlijk": "Gewezen deelnemers 1.857 1.849 1.854"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 251,
+   "2024": 223,
+   "pagina": 5,
+   "letterlijk": "Pensioengerechtigden 251 223 200"
+  },
+  "deelnemers_totaal": {
+   "2025": 2635,
+   "2024": 2601,
+   "pagina": 5,
+   "letterlijk": "Totaal 2.635 2.601 2.570"
+  },
+  "rente_afdekking_pct": {
+   "2025": 69.9,
+   "2024": null,
+   "pagina": 84,
+   "letterlijk": "Het renteafdekkingspercentage van 69,9% leidt ertoe dat de duration van de vastrentende waarden na afdekking van het renterisico stijgt met 6,7 naar 16,6."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-16",
+  "pagina": 100
+ },
+ "invaardatum": {
+  "datum": "2028-01-01",
+  "status": "gepland",
+  "pagina": 36
+ },
+ "opmerkingen": "Deel-jaarverslag Stap; alle cijfers kring-specifiek (kringtabel p55 met strategische percentages van alle Stap-kringen niet gebruikt). Rendement risico deelnemer 2025 0,0% (geen DC-voorziening meer). Rente-afdekking 69,9% uit risicotabel kolom 31-12-2025; tekst p16 'rond het strategische niveau van 70% gefluctueerd'; 2024 niet expliciet. AUM = beleggingen voor risico kring; pensioenvermogen 653.733. Invaren: nog geen definitief transitieplan; Stap kan gevraagde buy-out (art. 84 PW) niet uitvoeren, 'de verwachte transitiedatum 1 januari 2028' (BO-verslag p36) - onzeker, vorm (invaren of alternatief) nog open. Vaststelling: 'Het bestuur heeft op 16 juni 2026 deze financiële opstelling vastgesteld' (p100)."
+}

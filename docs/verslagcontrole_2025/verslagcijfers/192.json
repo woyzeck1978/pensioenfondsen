@@ -1,0 +1,83 @@
+{
+ "fund_id": 192,
+ "naam": "Pensioenkring Sweco (Hnp)",
+ "pad": "data/annual_reports/165_Kring_Arcadis_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -5.19,
+   "2024": 6.6,
+   "pagina": 26,
+   "letterlijk": "Beleggingsrendement (in %) -5,19% 6,60%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 115.9,
+   "2024": 113.2,
+   "pagina": 25,
+   "letterlijk": "Beleidsdekkingsgraad (in %) 115,9% 113,2%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 120.6,
+   "2024": 112.6,
+   "pagina": 25,
+   "letterlijk": "Aanwezige dekkingsgraad (in %) 120,6% 112,6%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 86.6,
+   "2024": 85.7,
+   "pagina": 26,
+   "letterlijk": "Reële dekkingsgraad (in %) 86,6% 85,7%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 115.1,
+   "2024": 115.0,
+   "pagina": 25,
+   "letterlijk": "Vereiste dekkingsgraad (in %) 115,1% 115,0%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.847521,
+   "2024": 1.024692,
+   "pagina": 26,
+   "letterlijk": "Totaal beleggingen 847.521 1.024.692 (x EUR 1.000)"
+  },
+  "deelnemers_actief": {
+   "2025": 1915,
+   "2024": 1630,
+   "pagina": 25,
+   "letterlijk": "Actieve deelnemers 1.915 1.630"
+  },
+  "deelnemers_slapers": {
+   "2025": 3851,
+   "2024": 3778,
+   "pagina": 25,
+   "letterlijk": "Gewezen deelnemers 3.851 3.778"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 1904,
+   "2024": 1870,
+   "pagina": 25,
+   "letterlijk": "Pensioengerechtigden 1.904 1.870"
+  },
+  "deelnemers_totaal": {
+   "2025": 7670,
+   "2024": 7278,
+   "pagina": 25,
+   "letterlijk": "7.670 7.278"
+  },
+  "rente_afdekking_pct": {
+   "2025": 99.8,
+   "2024": null,
+   "pagina": 349,
+   "letterlijk": "De feitelĳke renteafdekking per ultimo 2025 bedroeg 99,8%, inclusief de indexatie van 0,60%"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-30",
+  "pagina": 911
+ },
+ "invaardatum": {
+  "datum": "2026-07-01",
+  "status": "gepland",
+  "pagina": 34
+ },
+ "opmerkingen": "Cijfers uit het eigen kerncijferhoofdstuk van de kring (Jaarverslag 2025 Stichting Het Nederlandse Pensioenfonds, bedragen x EUR 1.000). AUM = 'Totaal beleggingen' uit de kerncijfers (na aftrek negatieve derivaten). Nominale dekkingsgraad = 'Aanwezige dekkingsgraad'. Vaststellingsdatum = ondertekening jaarrekening (Badhoevedorp, 30 juni 2026, p.911; ondertekening bestuursverslag p.438 zelfde datum). Renteafdekking 2024 niet opgezocht/genoemd. Renteafdekking-norm 100%. Invaren gepland 1 juli 2026 (p.34 'Arcadis en Pensioenkring Sweco volgen op 1 juli 2026'; p.339; oorspronkelijk doel 1 januari 2026, p.361)."
+}

@@ -1,0 +1,83 @@
+{
+ "fund_id": 43,
+ "naam": "Zuivel- en aanverwante industrie / BPZ (Dairy Industry)",
+ "pad": "data/annual_reports/43_Zuivel_en_aanverwante_in_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -14.29,
+   "2024": 9.13,
+   "pagina": 8,
+   "letterlijk": "Totaalrendement inclusief hedges -14,29% (2024: 9,13%)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 122.5,
+   "2024": 119.4,
+   "pagina": 8,
+   "letterlijk": "Beleidsdekkingsgraad per 31 december 122,5%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 127.9,
+   "2024": 116.9,
+   "pagina": 8,
+   "letterlijk": "Actuele dekkingsgraad per 31 december 127,9%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 84.1,
+   "2024": 86.2,
+   "pagina": 8,
+   "letterlijk": "Reële dekkingsgraad per 31 december 84,1%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 120.4,
+   "2024": 119.3,
+   "pagina": 8,
+   "letterlijk": "Vereiste dekkingsgraad per 31 december 120,4%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.827223,
+   "2024": 0.873497,
+   "pagina": 74,
+   "letterlijk": "Balans (x € 1.000): Beleggingen voor risico fonds 827.223 (2024: 873.497)"
+  },
+  "deelnemers_actief": {
+   "2025": 9914,
+   "2024": 9950,
+   "pagina": 8,
+   "letterlijk": "Aantal deelnemers (actief en voortgezet) 9.914"
+  },
+  "deelnemers_slapers": {
+   "2025": 5899,
+   "2024": 5267,
+   "pagina": 8,
+   "letterlijk": "Aantal gewezen deelnemers (slapers) 5.899"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 1689,
+   "2024": 1377,
+   "pagina": 8,
+   "letterlijk": "Aantal pensioengerechtigden 1.689"
+  },
+  "deelnemers_totaal": {
+   "2025": 17502,
+   "2024": 16594,
+   "pagina": 125,
+   "letterlijk": "Mutatieoverzicht deelnemers: Stand per 31 december 2025 ... Totaal 17.502"
+  },
+  "rente_afdekking_pct": {
+   "2025": 84.9,
+   "2024": null,
+   "pagina": 42,
+   "letterlijk": "De feitelijke renteafdekking per eind 2025 bedraagt 84,9%."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-25",
+  "pagina": 106
+ },
+ "invaardatum": {
+  "datum": "2026-01-01",
+  "status": "ingevaren",
+  "pagina": 101
+ },
+ "opmerkingen": "Rendement -14,29% is incl. hedges/valuta-afdekking (excl. valuta-afdekking -15,23%, p38). Deelnemers_actief 9.914 is 'actief en voortgezet' = 9.635 actieven + 279 AO'ers (p125); totaal 17.502 komt uit het mutatieoverzicht (p125), niet uit de kerncijfers; 2024-totaal = stand 1-1-2025 (16.594). AUM = balanspost beleggingen voor risico fonds; beleggingsoverzicht p43 geeft 827.230 incl. valuta-afdekking; aanwezig vermogen 841.688. Renteafdekking 84,9% feitelijk ultimo 2025 (doel tijdelijk 85%, strategisch 55%); geen 2024-ultimocijfer gevonden. Vaststelling jaarrekening 'in de vergadering van 25 juni 2026' (p106); accountant en actuaris ook 25 juni 2026, maar voettekst actuariële verklaring noemt 27 mei 2026. Invaren per 1-1-2026 (p101, p20, p23)."
+}

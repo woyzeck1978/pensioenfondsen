@@ -1,0 +1,83 @@
+{
+ "fund_id": 123,
+ "naam": "Rabobank",
+ "pad": "data/annual_reports/123_Rabobank_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -4.2,
+   "2024": 6.8,
+   "pagina": 6,
+   "letterlijk": "Beleggingsresultaat in % -4,2 6,8 7,8 (kop 2025 2024 2023 2022 2021)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 121.4,
+   "2024": 117.5,
+   "pagina": 6,
+   "letterlijk": "Beleidsdekkingsgraad in % 121,4 117,5 118,8"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 126.6,
+   "2024": 116.7,
+   "pagina": 6,
+   "letterlijk": "Actuele dekkingsgraad in % (A/B) 126,6 116,7 116,5"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 90.5,
+   "2024": 88.2,
+   "pagina": 6,
+   "letterlijk": "Reële dekkingsgraad (wettelijk) in % 90,5 88,2 87,5"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 110.7,
+   "2024": 111.4,
+   "pagina": 6,
+   "letterlijk": "Vereiste dekkingsgraad in % 110,7 111,4 113,1"
+  },
+  "aum_euro_bn": {
+   "2025": 29.2524,
+   "2024": 28.7141,
+   "pagina": 99,
+   "letterlijk": "Balans (in miljoenen euro's) Beleggingen voor risico fonds 29.252,4 28.714,1"
+  },
+  "deelnemers_actief": {
+   "2025": 32010,
+   "2024": 31832,
+   "pagina": 6,
+   "letterlijk": "Actieve deelnemers 32.010 31.832 30.235"
+  },
+  "deelnemers_slapers": {
+   "2025": 49184,
+   "2024": 49260,
+   "pagina": 6,
+   "letterlijk": "Gewezen deelnemers 49.184 49.260 49.730"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": null,
+   "2024": null,
+   "pagina": 6,
+   "letterlijk": "(alleen uitgesplitst: ouderdomspensioen 22.877 / partnerpensioen 4.088 / wezenpensioen 536)"
+  },
+  "deelnemers_totaal": {
+   "2025": 110598,
+   "2024": 109070,
+   "pagina": 6,
+   "letterlijk": "Totaal 110.598 109.070 106.597"
+  },
+  "rente_afdekking_pct": {
+   "2025": 80.0,
+   "2024": null,
+   "pagina": 132,
+   "letterlijk": "ultimo 2025 bedroeg het afdekkingspercentage 80%. Dit wordt gedaan voor 65% via renteswaps en staatsobligaties en voor 15% via swaptions."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-05-12",
+  "pagina": 101
+ },
+ "invaardatum": {
+  "datum": "2027-01-01",
+  "status": "gepland",
+  "pagina": 3
+ },
+ "opmerkingen": "AUM = beleggingen voor risico fonds (29.252,4 mln); daarnaast beleggingen risico deelnemers Flexioen 24,5 en PR2023 1.559,5 mln; beschikbaar vermogen (pensioenvermogen) is lager, 24.947,1 mln, door 5.945,1 mln overige schulden (o.a. derivaten/collateral). Pensioengerechtigden alleen per soort (22.877 OP, 4.088 PP, 536 WzP) - niet opgeteld; arbeidsongeschikte deelnemers (1.903) apart van actieven. Reële dekkingsgraad: wettelijk 90,5% gekozen; op basis van break-even inflatie 89,8% (2024: 76,3%). Dekkingsgraad alleen CDC-regeling 128,8% (p42). Rente-afdekking 80% totaal incl. swaptions (p64, p132). Invaren: overstap naar Wtp per 1 januari 2027 (p3, VO p90 'invaardatum op 1 januari 2027'). Vaststelling: 'Het bestuur heeft op 12 mei 2026 de jaarrekening vastgesteld' (p101); bestuursverslag ondertekend Utrecht 13 mei 2026 (p97)."
+}

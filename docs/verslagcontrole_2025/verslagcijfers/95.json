@@ -1,0 +1,83 @@
+{
+ "fund_id": 95,
+ "naam": "Flexsecurity (Randstad)",
+ "pad": "data/annual_reports/95_Flexsecurity_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": 4.3,
+   "2024": 12.1,
+   "pagina": 6,
+   "letterlijk": "Performance beleggingsportefeuilles Totale portefeuille 4,3% 12,1% 9,3% (kop 2025 2024 2023 2022 2021)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 106.5,
+   "2024": 106.5,
+   "pagina": 6,
+   "letterlijk": "Beleidsdekkingsgraad 106,5% 106,5% 105,7%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 103.5,
+   "2024": 106.8,
+   "pagina": 6,
+   "letterlijk": "Dekkingsgraad 103,5% 106,8% 106,2%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 103.7,
+   "2024": 104.7,
+   "pagina": 6,
+   "letterlijk": "Reële dekkingsgraad 103,7% 104,7% 103,7%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 100.9,
+   "2024": 101.1,
+   "pagina": 6,
+   "letterlijk": "Vereiste dekkingsgraad 100,9% 101,1% 101,1%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.697763,
+   "2024": 0.67331,
+   "pagina": 6,
+   "letterlijk": "Financiële gegevens (in duizenden euro) Totaal belegd vermogen 697.763 673.310"
+  },
+  "deelnemers_actief": {
+   "2025": 58195,
+   "2024": 59153,
+   "pagina": 5,
+   "letterlijk": "Actieve deelnemers 58.195 59.153 60.631"
+  },
+  "deelnemers_slapers": {
+   "2025": 175730,
+   "2024": 174929,
+   "pagina": 5,
+   "letterlijk": "Gewezen deelnemers 175.730 174.929 157.499"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": null,
+   "2024": null,
+   "pagina": 5,
+   "letterlijk": "(geen regel pensioengerechtigden in meerjarenoverzicht)"
+  },
+  "deelnemers_totaal": {
+   "2025": 233925,
+   "2024": 234082,
+   "pagina": 5,
+   "letterlijk": "Totaal 233.925 234.082 218.130"
+  },
+  "rente_afdekking_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-12",
+  "pagina": 126
+ },
+ "invaardatum": {
+  "datum": "2026-01-01",
+  "status": "ingevaren",
+  "pagina": 33
+ },
+ "opmerkingen": "Premieregelingfonds (DC); belegd vermogen is grotendeels voor risico deelnemers (615.829 van 697.763). Rendement: meerjarenoverzicht en p54 noemen 4,3%, maar p67 spreekt van 'de door Flexsecurity gerealiseerde 4,9% op totaalniveau' - tegenstrijdig in het verslag. Vereiste dekkingsgraad: meerjarenoverzicht 100,9%, tabel p30 'Vereiste dekkingsgraad strategisch' 100,70% - tegenstrijdig; VEV = MVEV (8.637). Actuele dekkingsgraad december 2025 gedrukt door transitie-effecten (AO-voorziening, kostenvoorziening). Geen pensioengerechtigden gerapporteerd. Rente-afdekking alleen per leeftijdsgroep, geen fondsbreed percentage. Invaren: nieuwe regeling (Talentpensioen) 'formeel per 1 januari 2026 een feit', beschikking geen verbod tot invaren 30-09-2025 (p9, p33). Vaststelling: 'Deze jaarrekening is vastgesteld op 12 juni 2026 en ondertekend te Diemen op 26 juni 2026' (p126)."
+}

@@ -34,6 +34,7 @@ data/interim/
 data/raw/
 data/PensioenPro/
 data/transitieplannen/
+data/abtn/
 logs/
 
 # Do NOT ignore the processed database and excel exports

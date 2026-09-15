@@ -1,0 +1,83 @@
+{
+ "fund_id": 22,
+ "naam": "Levensmiddelen / BPFL (Food Industry)",
+ "pad": "data/annual_reports/22_Levensmiddelen_BPFL_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -10.8,
+   "2024": 10.6,
+   "pagina": 6,
+   "letterlijk": "Rendement (inclusief rente-overlay) 2025 -10,8% | 2024 10,6%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 118.4,
+   "2024": 109.2,
+   "pagina": 7,
+   "letterlijk": "Beleidsdekkingsgraad 2025 118,4% | 2024 109,2%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 127.2,
+   "2024": 110.2,
+   "pagina": 7,
+   "letterlijk": "Dekkingsgraad 2025 127,2% | 2024 110,2%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 82.3,
+   "2024": 79.5,
+   "pagina": 14,
+   "letterlijk": "Ultimo 2025 bedroeg de reële dekkingsgraad 82,3% (ultimo 2024 was dit 79,5%)"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 118.0,
+   "2024": 117.2,
+   "pagina": 7,
+   "letterlijk": "Vereiste dekkingsgraad 2025 118,0% | 2024 117,2%"
+  },
+  "aum_euro_bn": {
+   "2025": 5.786419,
+   "2024": 6.344214,
+   "pagina": 6,
+   "letterlijk": "Beleggingen (in duizenden euro) 2025 5.786.419 | 2024 6.344.214"
+  },
+  "deelnemers_actief": {
+   "2025": 143920,
+   "2024": 144794,
+   "pagina": 6,
+   "letterlijk": "Actieve deelnemers, exclusief arbeidsongeschikten 2025 143.920 | 2024 144.794"
+  },
+  "deelnemers_slapers": {
+   "2025": 247822,
+   "2024": 234889,
+   "pagina": 6,
+   "letterlijk": "Gewezen deelnemers 2025 247.822 | 2024 234.889"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 28282,
+   "2024": 26742,
+   "pagina": 6,
+   "letterlijk": "Pensioengerechtigden met uitkering 2025 28.282 | 2024 26.742"
+  },
+  "deelnemers_totaal": {
+   "2025": 428364,
+   "2024": 413803,
+   "pagina": 6,
+   "letterlijk": "Totaal aantal deelnemers 2025 428.364 | 2024 413.803"
+  },
+  "rente_afdekking_pct": {
+   "2025": 74.2,
+   "2024": null,
+   "pagina": 100,
+   "letterlijk": "De feitelijke renteafdekking op basis van de DNB-methodiek bedraagt 74,2% eind 2025"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-22",
+  "pagina": 62
+ },
+ "invaardatum": {
+  "datum": "2026-01-01",
+  "status": "ingevaren",
+  "pagina": 55
+ },
+ "opmerkingen": "Ingevaren per 1-1-2026; cijfers ultimo 2025 zijn nog FTK. Actieven excl. 4.140 (2024: 4.030) arbeidsongeschikte actieven, apart vermeld en niet opgeteld; pensioengerechtigden excl. 4.200 (2024: 3.348) 'niet opgevraagd pensioen'. AUM 'Beleggingen' in meerjarenoverzicht is incl. liquide middelen beschikbaar voor beleggingen en saldo negatieve derivaten (balans p74 activa beleggingen 6.895.844; verloopstaat p85 5.743.041). Renteafdekking: strategisch 75% op swapcurve (= 80% DNB-methodiek), feitelijk 74,2% DNB-methodiek; 2024-waarde niet gevonden. Marktwaarde-dekkingsgraad 127,1%. Rendement is netto (na vermogensbeheerkosten). Bestuursverslag p62 en jaarrekening p108 beide 22 juni 2026."
+}

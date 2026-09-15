@@ -1,0 +1,83 @@
+{
+ "fund_id": 91,
+ "naam": "DSM Nederland",
+ "pad": "data/annual_reports/91_PDN_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": 1.6,
+   "2024": 8.6,
+   "pagina": 10,
+   "letterlijk": "Beleggingsrendement (netto) 1 jaars * 1,6% 8,6%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 130.3,
+   "2024": 124.9,
+   "pagina": 10,
+   "letterlijk": "Beleidsdekkingsgraad 130,3% 124,9%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 135.9,
+   "2024": 122.3,
+   "pagina": 10,
+   "letterlijk": "Dekkingsgraad PDN 135,9% 122,3%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 98.6,
+   "2024": 95.3,
+   "pagina": 50,
+   "letterlijk": "De reële dekkingsgraad is volgens artikel 133b van de Pensioenwet berekend op 98,6%. ... Vorig jaar was de reële dekkingsgraad 95,3%."
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 116.8,
+   "2024": 116.4,
+   "pagina": 10,
+   "letterlijk": "Vereiste dekkingsgraad 116,8% 116,4%"
+  },
+  "aum_euro_bn": {
+   "2025": 7.735,
+   "2024": 7.797,
+   "pagina": 10,
+   "letterlijk": "Totaal belegd vermogen (IBM) 7.735 7.797 (Ultimo jaar in € mln)"
+  },
+  "deelnemers_actief": {
+   "2025": 5563,
+   "2024": 5629,
+   "pagina": 10,
+   "letterlijk": "Actieven (incl. postactieven en arbeidsongeschikten) 5.563 5.629"
+  },
+  "deelnemers_slapers": {
+   "2025": 8147,
+   "2024": 8382,
+   "pagina": 10,
+   "letterlijk": "Gewezen deelnemers 8.147 8.382"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 12635,
+   "2024": 12635,
+   "pagina": 10,
+   "letterlijk": "Pensioengerechtigden 12.635 12.635"
+  },
+  "deelnemers_totaal": {
+   "2025": 26345,
+   "2024": 26646,
+   "pagina": 10,
+   "letterlijk": "Totaal aantal deelnemers (in personen) 26.345 26.646"
+  },
+  "rente_afdekking_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": 88,
+   "letterlijk": "hanteert Pensioenfonds PDN strategisch een (ex-ante) afdekking van 75% van de marktwaarde verplichtingen"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-05-19",
+  "pagina": 104
+ },
+ "invaardatum": {
+  "datum": "2027-01-01",
+  "status": "gepland",
+  "pagina": 46
+ },
+ "opmerkingen": "Renteafdekking: alleen strategisch/beleidsniveau 75% (eind 2024 verhoogd van 42% naar 75%, in 2025 gehandhaafd; p27, p30, p88); geen gerealiseerd ultimo-percentage genoemd, dus null. AUM: kengetallen 'Totaal belegd vermogen (IBM)' 7.735 mln (p10); de balans (p76) toont 'Beleggingen voor risico fonds' 7.770 mln (2024: 7.749) en totaal beleggingen 7.816 mln - definities verschillen. Beleggingsrendement is netto na beheerkosten, totaalfonds (incl. matchingportefeuille). Pensioengerechtigden 2024 staat in de tabel ook als 12.635 (identiek aan 2025), letterlijk overgenomen. Vaststelling: voorlopig besluit 13 mei 2026, formele ondertekening en vaststelling 19 mei 2026 (p104). Invaren: transitie verschoven van 1 januari 2026 naar 1 januari 2027; invaarmelding bij DNB ingediend 4 november 2025 (p46)."
+}

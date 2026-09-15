@@ -1,0 +1,83 @@
+{
+ "fund_id": 16,
+ "naam": "BPL Pensioen (Agriculture)",
+ "pad": "data/annual_reports/16_BPL_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -1.69,
+   "2024": 9.68,
+   "pagina": 11,
+   "letterlijk": "Gemiddeld rendement op beleggingen (incl. rentehedge) -1,69% 9,68%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 125.4,
+   "2024": 117.6,
+   "pagina": 11,
+   "letterlijk": "Beleidsdekkingsgraad 125,4% 117,6%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 133.3,
+   "2024": 115.3,
+   "pagina": 11,
+   "letterlijk": "Actuele dekkingsgraad 133,3% 115,3%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 89.7,
+   "2024": 86.8,
+   "pagina": 11,
+   "letterlijk": "Reële dekkingsgraad 89,7% 86,8%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 120.7,
+   "2024": 119.2,
+   "pagina": 10,
+   "letterlijk": "Vereiste dekkingsgraad 120,7% 119,2%"
+  },
+  "aum_euro_bn": {
+   "2025": 24.727303,
+   "2024": 24.832054,
+   "pagina": 11,
+   "letterlijk": "Belegd vermogen (incl. derivaten passiva) (x € 1.000) 24.727.303 24.832.054"
+  },
+  "deelnemers_actief": {
+   "2025": 136349,
+   "2024": 133388,
+   "pagina": 10,
+   "letterlijk": "Deelnemers, actief en voortgezet 136.349 133.388"
+  },
+  "deelnemers_slapers": {
+   "2025": 457811,
+   "2024": 454278,
+   "pagina": 10,
+   "letterlijk": "Ex-deelnemers 457.811 454.278"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 84328,
+   "2024": 80495,
+   "pagina": 10,
+   "letterlijk": "Pensioengerechtigden 84.328 80.495"
+  },
+  "deelnemers_totaal": {
+   "2025": 678488,
+   "2024": 668161,
+   "pagina": 43,
+   "letterlijk": "Totaal inclusief ex-deelnemers 678.488 668.161"
+  },
+  "rente_afdekking_pct": {
+   "2025": 69,
+   "2024": null,
+   "pagina": 35,
+   "letterlijk": "Per 31 december 2025 is 69% van het renterisico op basis van de marktrente afgedekt."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-05-28",
+  "pagina": 155
+ },
+ "invaardatum": {
+  "datum": "2027-01-01",
+  "status": "gepland",
+  "pagina": 34
+ },
+ "opmerkingen": "Actieven = 'actief en voortgezet' (bijlage p173 splitst 130.708 actief + 5.641 in een aparte kolom). Renteafdekking 2024 niet expliciet genoemd (p67: 'In 2025 bleef het renteafdekkingspercentage stabiel op 69%'). Bestuursverslag en jaarrekening beide vastgesteld 28 mei 2026 (p86/p155)."
+}

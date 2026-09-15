@@ -1,0 +1,83 @@
+{
+ "fund_id": 23,
+ "naam": "Medewerkers Apotheken / PMA (Pharmacy Employees)",
+ "pad": "data/annual_reports/23_Medewerkers_Apotheken_PM_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -7.8,
+   "2024": 8.6,
+   "pagina": 10,
+   "letterlijk": "Totaal rendement portefeuille -7,8 8,6 9,5 (kop 2025 2024 2023)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 112.9,
+   "2024": 107.6,
+   "pagina": 10,
+   "letterlijk": "Beleidsdekkingsgraad (in %) 112,9 107,6 105,0"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 118.2,
+   "2024": 106.6,
+   "pagina": 10,
+   "letterlijk": "Aanwezige dekkingsgraad (in %) 118,2 106,6 104,2"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 80.5,
+   "2024": 79.2,
+   "pagina": 15,
+   "letterlijk": "De reële dekkingsgraad was eind 2025 80,5% (eind 2024 was dit 79,2%)."
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 123.5,
+   "2024": 122.3,
+   "pagina": 10,
+   "letterlijk": "Vereiste dekkingsgraad (in %) 123,5 122,3 124,0"
+  },
+  "aum_euro_bn": {
+   "2025": 4.087276,
+   "2024": 4.00122,
+   "pagina": 68,
+   "letterlijk": "Totaal Beleggingen (x € 1.000) 4.087.276 4.001.220"
+  },
+  "deelnemers_actief": {
+   "2025": 23560,
+   "2024": 23991,
+   "pagina": 10,
+   "letterlijk": "Actieve deelnemers met pensioenopbouw 23.560 23.991 23.597"
+  },
+  "deelnemers_slapers": {
+   "2025": 23789,
+   "2024": 22788,
+   "pagina": 10,
+   "letterlijk": "Gewezen deelnemers 23.789 22.788 21.670"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 10383,
+   "2024": 9819,
+   "pagina": 10,
+   "letterlijk": "Pensioengerechtigden 10.383 9.819 9.277"
+  },
+  "deelnemers_totaal": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "rente_afdekking_pct": {
+   "2025": 80.0,
+   "2024": 55.0,
+   "pagina": 41,
+   "letterlijk": "Begin 2025 dekte PMA 55% van het renterisico van de verplichtingen af op basis van de marktrente en deze afdekking is in februari verhoogd naar 80%."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-09",
+  "pagina": 61
+ },
+ "invaardatum": {
+  "datum": "2028-01-01",
+  "status": "gepland",
+  "pagina": 16
+ },
+ "opmerkingen": "Rendement -7,8% is inclusief renteoverlay; exclusief overlay 6,0% (p35). AUM = balans 'Totaal Beleggingen' 4.087.276 (x € 1.000), bruto: derivaten aan passiefzijde 957.049 (p68); netto belegd vermogen € 3.130 mln eind 2025 / € 3.377 mln eind 2024 (p35); kerncijfers noemen 'Pensioenvermogen' 3.140 mln. Actieven: kerncijfers 23.560 'met pensioenopbouw', maar tabel 12 (p27) noemt 'Totaal deelnemers 23.867' eind 2025 (2024 beide 23.991) - tegenstrijdig. Daarnaast 1.541 'gewezen deelnemers met opbouw bij AO' (2024: 1.412), niet opgeteld bij slapers. Geen totaal aantal deelnemers genoemd. Rente-afdekking 80% is het verhoogde beleidsniveau per februari 2025; een gerealiseerd percentage ultimo 2025 niet gevonden. Vaststelling: bestuursverslag en accountantsverklaring 9 juni 2026; ondertekening onder jaarrekening (p94) vermeldt 'Den Haag, 9 juni 2025' (kennelijke typefout). Transitie uitgesteld van 1-1-2027 naar 1-1-2028 (besluit oktober 2025)."
+}

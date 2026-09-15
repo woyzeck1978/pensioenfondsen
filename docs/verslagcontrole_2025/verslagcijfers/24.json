@@ -1,0 +1,83 @@
+{
+ "fund_id": 24,
+ "naam": "Metaal & Techniek / PMT (Metal & Technique)",
+ "pad": "data/annual_reports/24_PMT_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -5.9,
+   "2024": 8.2,
+   "pagina": 14,
+   "letterlijk": "Totaal netto rendement –5,9% 8,2% (kolommen 2025 2024)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 115.3,
+   "2024": 108.4,
+   "pagina": 12,
+   "letterlijk": "Beleidsdekkingsgraad 6) 115,3% 108,4%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 122.3,
+   "2024": 108.4,
+   "pagina": 12,
+   "letterlijk": "Dekkingsgraad (D = C/A) 122,3% 108,4%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 83.1,
+   "2024": 80.2,
+   "pagina": 12,
+   "letterlijk": "Reële dekkingsgraad 7) 83,1% 80,2%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": 119.6,
+   "pagina": 113,
+   "letterlijk": "beleidsdekkingsgraad per 31 december 2024 lager was dan de vereiste dekkingsgraad (119,6%)"
+  },
+  "aum_euro_bn": {
+   "2025": 85.781,
+   "2024": 90.325,
+   "pagina": 14,
+   "letterlijk": "Totaal belegd vermogen 85.781 90.325 (x € 1 miljoen)"
+  },
+  "deelnemers_actief": {
+   "2025": 449183,
+   "2024": 433275,
+   "pagina": 11,
+   "letterlijk": "Actieve deelnemers 449.183 433.275"
+  },
+  "deelnemers_slapers": {
+   "2025": 554865,
+   "2024": 552936,
+   "pagina": 11,
+   "letterlijk": "Gewezen deelnemers 554.865 552.936"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 263497,
+   "2024": 254478,
+   "pagina": 11,
+   "letterlijk": "Totaal pensioengerechtigden 263.497 254.478"
+  },
+  "deelnemers_totaal": {
+   "2025": 1327324,
+   "2024": 1301729,
+   "pagina": 11,
+   "letterlijk": "Totaal deelnemers 1.327.324 1.301.729"
+  },
+  "rente_afdekking_pct": {
+   "2025": 75.0,
+   "2024": 74.9,
+   "pagina": 114,
+   "letterlijk": "Werkelijke renteafdekking 75,0% 74,9% (ultimo 2025, ultimo 2024, marktwaarde)"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-03",
+  "pagina": 69
+ },
+ "invaardatum": {
+  "datum": "2026-01-01",
+  "status": "ingevaren",
+  "pagina": 24
+ },
+ "opmerkingen": "Rendement: kerncijfers geven bruto –5,6% en netto –5,9%; netto genomen (ook infographic p15). Vereiste dekkingsgraad ultimo 2025 niet als percentage genoemd; p113 geeft vereist eigen vermogen 14.773 mln = 20,9% van TV (strategische mix), 2024 19,6% -> 2025 op null gelaten. Totaal deelnemers is incl. 59.779 niet-opgevraagde pensioenen. Technische voorziening 2024 herrubriceerd (voorziening operationele kosten). Ondertekening bestuursverslag en jaarrekening 'Den Haag, 3 juni 2026'."
+}

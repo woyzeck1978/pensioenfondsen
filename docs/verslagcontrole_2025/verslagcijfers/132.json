@@ -1,0 +1,83 @@
+{
+ "fund_id": 132,
+ "naam": "Thales Nederland",
+ "pad": "data/annual_reports/132_Thales_Nederland_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -0.7,
+   "2024": 8.9,
+   "pagina": 4,
+   "letterlijk": "Totaal beleggingsrendement (in %) -0,7% | 8,9%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 132.6,
+   "2024": 129.5,
+   "pagina": 4,
+   "letterlijk": "Beleidsdekkingsgraad 132,6% | 129,5%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 137.9,
+   "2024": 126.3,
+   "pagina": 4,
+   "letterlijk": "Actuele dekkingsgraad 137,9% | 126,3%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 120.1,
+   "2024": 120.5,
+   "pagina": 4,
+   "letterlijk": "Vereiste dekkingsgraad o.b.v. werkelijke beleggingsmix 120,1% | 120,5%"
+  },
+  "aum_euro_bn": {
+   "2025": 1.730914,
+   "2024": 1.802017,
+   "pagina": 4,
+   "letterlijk": "Totaal beleggingen (bedragen in duizenden euro's) 1.730.914 | 1.802.017"
+  },
+  "deelnemers_actief": {
+   "2025": 2873,
+   "2024": 2620,
+   "pagina": 4,
+   "letterlijk": "Actieve deelnemers 2.873 | 2.620"
+  },
+  "deelnemers_slapers": {
+   "2025": 1628,
+   "2024": 1532,
+   "pagina": 4,
+   "letterlijk": "Gewezen deelnemers 1.628 | 1.532"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 2289,
+   "2024": 2225,
+   "pagina": 4,
+   "letterlijk": "Pensioengerechtigde deelnemers 2.289 | 2.225"
+  },
+  "deelnemers_totaal": {
+   "2025": 6790,
+   "2024": 6377,
+   "pagina": 4,
+   "letterlijk": "Totaal aantal deelnemers 6.790 | 6.377"
+  },
+  "rente_afdekking_pct": {
+   "2025": 80,
+   "2024": null,
+   "pagina": 38,
+   "letterlijk": "De totale renteafdekking is hierbij gehandhaafd op 80 procent van het renterisico van de verplichtingen."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-12",
+  "pagina": 108
+ },
+ "invaardatum": {
+  "datum": "2026-10-01",
+  "status": "gepland",
+  "pagina": 45
+ },
+ "opmerkingen": "Rendement -0,7% is incl. valuta-afdekking en LDI-portefeuille (voetnoot 5); unhedged -3,0%. Vereiste dekkingsgraad o.b.v. strategische mix 120,5% (2024: 120,7%) naast werkelijke mix 120,1%. Totaal beleggingen exclusief derivaten met negatief saldo € 81.218 duizend (voetnoot 4) en op look-through-basis. Renteafdekking 80% volgt uit beleidstekst ('gehandhaafd op 80 procent', besluit 2024 opgehoogd naar 80%), geen expliciet ultimo-cijfer. Reële dekkingsgraad niet gevonden. Invaardatum beoogd 1 oktober 2026 (eerder 1-1-2026 en 1-6-2026)."
+}

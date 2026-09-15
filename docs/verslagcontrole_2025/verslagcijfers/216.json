@@ -1,0 +1,83 @@
+{
+ "fund_id": 216,
+ "naam": "Kring equensWorldline (Centraal Beheer)",
+ "pad": "data/annual_reports/65_Centraal_Beheer_APF_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -2.09,
+   "2024": 6.9,
+   "pagina": 271,
+   "letterlijk": "Beleggingsrendement -2,09% 6,90% (kop 2025 2024)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 121.6,
+   "2024": 115.5,
+   "pagina": 277,
+   "letterlijk": "Beleidsdekkingsgraad 121,6% 115,5%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 124.8,
+   "2024": 114.9,
+   "pagina": 277,
+   "letterlijk": "Actuele dekkingsgraad 124,8% 114,9%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 90.1,
+   "2024": 86.6,
+   "pagina": 277,
+   "letterlijk": "Reële dekkingsgraad 90,1% 86,6%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 110.3,
+   "2024": 110.9,
+   "pagina": 277,
+   "letterlijk": "Vereiste dekkingsgraad 110,3% 110,9%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.671814,
+   "2024": 0.698625,
+   "pagina": 272,
+   "letterlijk": "Totaal belegd vermogen (x € 1.000) 671.814 698.625"
+  },
+  "deelnemers_actief": {
+   "2025": 468,
+   "2024": 520,
+   "pagina": 270,
+   "letterlijk": "Actieven en arbeidsongeschikten 468 520"
+  },
+  "deelnemers_slapers": {
+   "2025": 1480,
+   "2024": 1464,
+   "pagina": 270,
+   "letterlijk": "Gewezen deelnemers 1.480 1.464"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 937,
+   "2024": 911,
+   "pagina": 270,
+   "letterlijk": "Pensioengerechtigden 937 911"
+  },
+  "deelnemers_totaal": {
+   "2025": 2885,
+   "2024": 2895,
+   "pagina": 270,
+   "letterlijk": "Deelnemers 2.885 2.895"
+  },
+  "rente_afdekking_pct": {
+   "2025": 84,
+   "2024": 75,
+   "pagina": 286,
+   "letterlijk": "strategie waarbĳ 84% van de rentegevoeligheid ... ; renteafdekkingspercentage aangepast van 75% naar 84% (p288)"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-17",
+  "pagina": 425
+ },
+ "invaardatum": {
+  "datum": "2027-07-01",
+  "status": "gepland",
+  "pagina": 289
+ },
+ "opmerkingen": "Renteafdekking: strategisch percentage; per eind maart 2025 aangepast van 75% naar 84% (p288). 2024=75% is het percentage vóór die aanpassing, niet expliciet als ultimo-2024 benoemd. Invaren: 'De verwachte transitiedatum voor Kring equensWordline is 1 juli 2027' (p289). Vaststelling: 'heeft de jaarrekening over het verslagjaar 2025 vastgesteld in de vergadering van 17 juni 2026' (p425); bestuursverslag ondertekend 'Zeist, 15 juni 2026' (p403). Deelnemersaantallen: 'Deelnemers' = totaal; actieven incl. arbeidsongeschikten. Bedragen in de kringtabellen in € 1.000."
+}

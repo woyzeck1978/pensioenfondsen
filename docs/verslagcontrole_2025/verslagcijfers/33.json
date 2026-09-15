@@ -1,0 +1,83 @@
+{
+ "fund_id": 33,
+ "naam": "Rail & Openbaar Vervoer (Rail & Public Transport)",
+ "pad": "data/annual_reports/33_RailOV_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -1.1,
+   "2024": 8.6,
+   "pagina": 5,
+   "letterlijk": "Nettorendement op beleggingen -1,1% 8,6%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 135.8,
+   "2024": 131.5,
+   "pagina": 5,
+   "letterlijk": "Beleidsdekkingsgraad 135,8% 131,5%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 141.5,
+   "2024": 128.6,
+   "pagina": 5,
+   "letterlijk": "Actuele dekkingsgraad 141,5% 128,6%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 99.9,
+   "2024": 98.1,
+   "pagina": 14,
+   "letterlijk": "Eind 2025 is de reële dekkingsgraad van Rail & OV 99,9% (2024: 98,1%)."
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 121.8,
+   "2024": 121.3,
+   "pagina": 5,
+   "letterlijk": "Vereiste dekkingsgraad (bij gemiddelde mix) 121,8% 121,3%"
+  },
+  "aum_euro_bn": {
+   "2025": 25.2,
+   "2024": 25.668,
+   "pagina": 5,
+   "letterlijk": "Belegd vermogen (x € 1 miljoen) 25.200 25.668"
+  },
+  "deelnemers_actief": {
+   "2025": 47226,
+   "2024": 45905,
+   "pagina": 5,
+   "letterlijk": "Aantal actieve deelnemers 47.226 45.905"
+  },
+  "deelnemers_slapers": {
+   "2025": 25786,
+   "2024": 24948,
+   "pagina": 5,
+   "letterlijk": "Aantal ex-deelnemers 25.786 24.948"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 43385,
+   "2024": 42135,
+   "pagina": 5,
+   "letterlijk": "Totaal aantal pensioengerechtigden: 43.385 42.135"
+  },
+  "deelnemers_totaal": {
+   "2025": 116397,
+   "2024": 112988,
+   "pagina": 5,
+   "letterlijk": "Totaal pensioenbestand 116.397 112.988"
+  },
+  "rente_afdekking_pct": {
+   "2025": 71,
+   "2024": 55,
+   "pagina": 36,
+   "letterlijk": "Gedurende het jaar is de afdekking van het renterisico opgehoogd van 55% naar 71%"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-05-27",
+  "pagina": 147
+ },
+ "invaardatum": {
+  "datum": "2026-01-01",
+  "status": "ingevaren",
+  "pagina": 3
+ },
+ "opmerkingen": "Renteafdekking: 71% als eindstand van 2025 en 55% (rentestaffel) als beginstand afgeleid uit 'opgehoogd van 55% naar 71%' - geen expliciete ultimo-datum genoemd. Vereiste dg bij feitelijke mix 119,6% (122,5%), bij strategische mix 122,3% (120,8%). Ingevaren per 1 januari 2026 (p3). Jaarrekening ondertekend 'Utrecht, 27 mei 2026' door het bestuur (p147)."
+}

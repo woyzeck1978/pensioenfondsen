@@ -1,0 +1,83 @@
+{
+ "fund_id": 104,
+ "naam": "Haskoning DHV",
+ "pad": "data/annual_reports/104_Haskoning_DHV_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -3.7,
+   "2024": 7.8,
+   "pagina": 6,
+   "letterlijk": "Beleggingsrendement -3,7% 7,8% 9,2% -19,5% (kolommen 2025 2024 2023 2022)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 128.1,
+   "2024": 124.6,
+   "pagina": 6,
+   "letterlijk": "Beleidsdekkingsgraad 128,1% 124,6% 123,8% 123,7%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 137.7,
+   "2024": 122.4,
+   "pagina": 6,
+   "letterlijk": "Actuele dekkingsgraad 137,7% 122,4% 120,7% 126,2%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 119.5,
+   "2024": 119.9,
+   "pagina": 6,
+   "letterlijk": "Vereiste dekkingsgraad 119,5% 119,9% 123,9% 124,9%"
+  },
+  "aum_euro_bn": {
+   "2025": 1.260147,
+   "2024": 1.29525,
+   "pagina": 6,
+   "letterlijk": "Beleggingsportefeuille (x € 1.000) totaal 1.260.147 1.295.250"
+  },
+  "deelnemers_actief": {
+   "2025": 3895,
+   "2024": 3718,
+   "pagina": 6,
+   "letterlijk": "Deelnemers 3.895 3.718 3.568 3.398"
+  },
+  "deelnemers_slapers": {
+   "2025": 5257,
+   "2024": 5111,
+   "pagina": 6,
+   "letterlijk": "Gewezen deelnemers 5.257 5.111"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 2140,
+   "2024": 2062,
+   "pagina": 6,
+   "letterlijk": "Pensioengerechtigden 2.140 2.062"
+  },
+  "deelnemers_totaal": {
+   "2025": 11292,
+   "2024": 10891,
+   "pagina": 6,
+   "letterlijk": "Aantal verzekerden totaal 11.292 10.891"
+  },
+  "rente_afdekking_pct": {
+   "2025": 77.9,
+   "2024": null,
+   "pagina": 13,
+   "letterlijk": "Eind 2025 bedraagt de renteafdekking tegen huidige verplichtingen 77,9%"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-23",
+  "pagina": 99
+ },
+ "invaardatum": {
+  "datum": "2027-01-01",
+  "status": "gepland",
+  "pagina": 42
+ },
+ "opmerkingen": "AUM = totaal beleggingsportefeuille kerncijfers (x EUR 1.000); pensioenvermogen is 1.267.065. Rente-afdekking 2024 niet als percentage ultimo 2024 genoemd (alleen beleid: swaps 60% + swaptions). Rendement -3,7% is totaal incl. renteafdekking (VRW -19,4%/-19,3%, ZW 9,9%). Verslag gedateerd Amersfoort 23 juni 2026 (ook voorblad 'Datum: 23 juni 2026')."
+}

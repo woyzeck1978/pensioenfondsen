@@ -1,0 +1,83 @@
+{
+ "fund_id": 238,
+ "naam": "Kring TotalEnergies NL (Stap)",
+ "pad": "data/annual_reports/238_Kring_TotalEnergies_NL_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -4.1,
+   "2024": 9.6,
+   "pagina": 5,
+   "letterlijk": "Beleggingsrendement Per jaar -4,1% 9,6%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 124.4,
+   "2024": 120.8,
+   "pagina": 5,
+   "letterlijk": "Beleidsdekkingsgraad 124,4% 120,8%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 127.2,
+   "2024": 120.8,
+   "pagina": 5,
+   "letterlijk": "Feitelijke dekkingsgraad 127,2% 120,8%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 92.6,
+   "2024": 91.2,
+   "pagina": 23,
+   "letterlijk": "Reële dekkingsgraad 92,6 91,2"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 119.1,
+   "2024": 119.4,
+   "pagina": 5,
+   "letterlijk": "Vereiste dekkingsgraad 119,1% 119,4%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.607572,
+   "2024": 0.603566,
+   "pagina": 62,
+   "letterlijk": "Beleggingen voor risico Pensioenkring TotalEnergies Nederland 607.572 603.566 (bedragen x € 1.000)"
+  },
+  "deelnemers_actief": {
+   "2025": 841,
+   "2024": 855,
+   "pagina": 5,
+   "letterlijk": "Actieven en arbeidsongeschikten 841 855"
+  },
+  "deelnemers_slapers": {
+   "2025": 526,
+   "2024": 497,
+   "pagina": 5,
+   "letterlijk": "Gewezen deelnemers 526 497"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 560,
+   "2024": 545,
+   "pagina": 5,
+   "letterlijk": "Pensioengerechtigden 560 545"
+  },
+  "deelnemers_totaal": {
+   "2025": 1927,
+   "2024": 1897,
+   "pagina": 5,
+   "letterlijk": "Totaal 1.927 1.897"
+  },
+  "rente_afdekking_pct": {
+   "2025": 100.0,
+   "2024": null,
+   "pagina": 32,
+   "letterlijk": "Gedurende 2025 is de mate van feitelijke renterisico-afdekking van 100,0% gehanteerd."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-16",
+  "pagina": 97
+ },
+ "invaardatum": {
+  "datum": null,
+  "status": "gepland",
+  "pagina": 36
+ },
+ "opmerkingen": "Kringcijfers uit deel-jaarverslag Stap. Rente-afdekking: formulering 'gehanteerd' duidt eerder op het beleidsniveau dan op een gemeten ultimo-stand; 2024 niet genoemd. Invaren: 'De sociale partners streven ernaar om als kring in 2028 de overgang naar het nieuwe pensioenstelsel te realiseren' — alleen jaartal, geen datum. Vaststelling betreft de financiële opstelling (16 juni 2026)."
+}

@@ -1,0 +1,83 @@
+{
+ "fund_id": 122,
+ "naam": "Provisum",
+ "pad": "data/annual_reports/122_Provisum_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -0.2,
+   "2024": 7.2,
+   "pagina": 5,
+   "letterlijk": "Rendement (na kosten) -0,2% 7,2% 9,4% (kop 2025 2024 2023)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 152.8,
+   "2024": 147.6,
+   "pagina": 5,
+   "letterlijk": "Beleidsdekkingsgraad 152,8% 147,6% 143,9%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 159.6,
+   "2024": 146.0,
+   "pagina": 5,
+   "letterlijk": "Dekkingsgraad 159,6% 146,0% 143,6%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 131.1,
+   "2024": 129.0,
+   "pagina": 5,
+   "letterlijk": "Reële dekkingsgraad** 131,1% 129,0% 124,9%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 114.1,
+   "2024": 113.7,
+   "pagina": 5,
+   "letterlijk": "Vereiste dekkingsgraad volgens FTK (evenwichtswaarde) 114,1% 113,7% 115,6%"
+  },
+  "aum_euro_bn": {
+   "2025": 1.381968,
+   "2024": 1.422851,
+   "pagina": 70,
+   "letterlijk": "Balans (bedragen x € 1.000) Beleggingen voor risico pensioenfonds [1] 1.381.968 1.422.851"
+  },
+  "deelnemers_actief": {
+   "2025": 2279,
+   "2024": 2299,
+   "pagina": 5,
+   "letterlijk": "Actieve deelnemers met nog niet ingegaan pensioen 2.279 2.299 2.180"
+  },
+  "deelnemers_slapers": {
+   "2025": 3924,
+   "2024": 4081,
+   "pagina": 5,
+   "letterlijk": "Gewezen deelnemers met premievrije aanspraken (slapers) 3.924 4.081 3.942"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 3036,
+   "2024": 2978,
+   "pagina": 5,
+   "letterlijk": "Pensioengerechtigden 3.036 2.978 2.936"
+  },
+  "deelnemers_totaal": {
+   "2025": 9239,
+   "2024": 9358,
+   "pagina": 5,
+   "letterlijk": "Totaal 9.239 9.358 9.058"
+  },
+  "rente_afdekking_pct": {
+   "2025": 100.07,
+   "2024": null,
+   "pagina": 82,
+   "letterlijk": "Het daarbij behorende renteafdekkingspercentage op 31-12-2025 bedraagt 100,07%"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-11",
+  "pagina": 105
+ },
+ "invaardatum": {
+  "datum": "2026-06-01",
+  "status": "ingevaren",
+  "pagina": 104
+ },
+ "opmerkingen": "AUM: balanswaarde gekozen; kerncijfers p5 tonen 'Beheerd vermogen door AFAM' 1.405.832 (2024: 1.453.875), dat is incl. 23.864 liquide middelen (brugstaat p82). Beleggingen risico deelnemers 26.914 niet meegeteld. Reële dekkingsgraad met voetnoot: berekend volgens art. 7 Regeling Pensioenwet (verwachte prijsstijging 2,0%). Renteafdekking 2024 niet als cijfer gevonden (p53: 'bedraagt 100%' als beleid sinds 2024) -> null. Ondertekening jaarrekening 'Huizen, 11 juni 2026' (p105). Invaren: 'Provisum is per 1 juni 2026 ingevaren' (p104); oorspronkelijk beoogd 1-1-2026."
+}

@@ -1,0 +1,83 @@
+{
+ "fund_id": 6,
+ "naam": "Openbare Apothekers (SPOA - Public Pharmacists)",
+ "pad": "data/annual_reports/6_Openbare_Apothekers_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -5.3,
+   "2024": 8.9,
+   "pagina": 6,
+   "letterlijk": "Netto rendement1) -5,3% 8,9% (Meerjarenoverzicht)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 127.7,
+   "2024": 121.9,
+   "pagina": 6,
+   "letterlijk": "Beleidsdekkingsgraad 127,7% 121,9%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 131.4,
+   "2024": 121.0,
+   "pagina": 6,
+   "letterlijk": "Actuele dekkingsgraad 131,4% 121,0%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 99.2,
+   "2024": 95.9,
+   "pagina": 24,
+   "letterlijk": "De reële dekkingsgraad was ultimo 2025 99,2% (ultimo 2024 was deze 95,9%)"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 112.0,
+   "2024": 112.5,
+   "pagina": 6,
+   "letterlijk": "Vereiste dekkingsgraad 112,0% 112,5%"
+  },
+  "aum_euro_bn": {
+   "2025": 1.886378,
+   "2024": 1.960511,
+   "pagina": 6,
+   "letterlijk": "Belegd vermogen 1.886.378 1.960.511 (bedragen in duizenden euro's)"
+  },
+  "deelnemers_actief": {
+   "2025": 3014,
+   "2024": 2984,
+   "pagina": 6,
+   "letterlijk": "Actieve deelnemers 3.014 2.984"
+  },
+  "deelnemers_slapers": {
+   "2025": 1373,
+   "2024": 1352,
+   "pagina": 6,
+   "letterlijk": "Gewezen deelnemers 1.373 1.352"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 1699,
+   "2024": 1678,
+   "pagina": 6,
+   "letterlijk": "Pensioengerechtigden 1.699 1.678"
+  },
+  "deelnemers_totaal": {
+   "2025": 6086,
+   "2024": 6014,
+   "pagina": 6,
+   "letterlijk": "Totaal 6.086 6.014"
+  },
+  "rente_afdekking_pct": {
+   "2025": 100.0,
+   "2024": null,
+   "pagina": 85,
+   "letterlijk": "De strategische renteafdekking van 100% op basis van de swapcurve is eind 2025 equivalent met een renteafdekking van 100% op basis van de DNB-methodiek"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-29",
+  "pagina": 93
+ },
+ "invaardatum": {
+  "datum": "2028-01-01",
+  "status": "gepland",
+  "pagina": 57
+ },
+ "opmerkingen": "Rendement: -5,3% is het netto rendement op het vermogen; voetnoot 1 (p6) zegt dat het alleen het vermogen betreft, met het resultaat op rendement (+7,7%) als dekkingsgraad-effect; niet expliciet vermeld of renteafdekking erin zit. Renteafdekking: alleen het strategische percentage (100%, beleid in 2025 niet gewijzigd, p27); er staat geen feitelijk gerealiseerd percentage ultimo 2025, en ultimo 2024 wordt niet apart genoemd (daarom null). Vereiste dekkingsgraad: 112,0% is de strategisch vereiste; p85 noemt ook de feitelijk vereiste 113,5% (2024: 112,7%). Invaren: het bestuur (p3, p51) noemt geen nieuwe datum ('zal SPOA een nieuwe transitiedatum vaststellen') na het uitstel van 1-1-2026 (eerst naar 1-7-2027, p22/p57); alleen het verslag van het intern toezicht (p57) noemt 'de beoogde transitiedatum, nu per 1 januari 2028', en p47 noemt 'uiterlijk per 1 januari 2028' als uitgangspunt. Die datum is dus onzeker. Vaststelling: 'Vastgesteld d.d. 29 juni 2026' (p93)."
+}

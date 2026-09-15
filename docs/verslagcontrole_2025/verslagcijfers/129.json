@@ -1,0 +1,83 @@
+{
+ "fund_id": 129,
+ "naam": "SNS REAAL",
+ "pad": "data/annual_reports/129_SNS_REAAL_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -1.3,
+   "2024": 8.7,
+   "pagina": 6,
+   "letterlijk": "Rendement Totale portefeuille -1,3% 8,7%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 127.3,
+   "2024": 119.2,
+   "pagina": 7,
+   "letterlijk": "Beleidsdekkingsgraad 127,3% 119,2%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 135.7,
+   "2024": 118.2,
+   "pagina": 7,
+   "letterlijk": "Nominale dekkingsgraad marktrente incl. UFR 135,7% 118,2%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 92.5,
+   "2024": 75.1,
+   "pagina": 7,
+   "letterlijk": "Reële dekkingsgraad 92,5% 75,1%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 119.2,
+   "2024": 117.0,
+   "pagina": 7,
+   "letterlijk": "Vereiste dekkingsgraad 119,2% 117,0%"
+  },
+  "aum_euro_bn": {
+   "2025": 3.3178,
+   "2024": 3.4705,
+   "pagina": 6,
+   "letterlijk": "Totaal beleggingen 3.317,8 3.470,5 (in EUR miljoen)"
+  },
+  "deelnemers_actief": {
+   "2025": 4464,
+   "2024": 4717,
+   "pagina": 6,
+   "letterlijk": "Actieve deelnemers 4.464 4.717"
+  },
+  "deelnemers_slapers": {
+   "2025": 11833,
+   "2024": 11523,
+   "pagina": 6,
+   "letterlijk": "Gewezen deelnemers 11.833 11.523"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 4821,
+   "2024": 4688,
+   "pagina": 6,
+   "letterlijk": "Pensioengerechtigden 4.821 4.688"
+  },
+  "deelnemers_totaal": {
+   "2025": 21118,
+   "2024": 20928,
+   "pagina": 6,
+   "letterlijk": "Totaal aantal deelnemers 21.118 20.928"
+  },
+  "rente_afdekking_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-11",
+  "pagina": 74
+ },
+ "invaardatum": {
+  "datum": "2028-01-01",
+  "status": "gepland",
+  "pagina": 4
+ },
+ "opmerkingen": "Renteafdekking: alleen een dynamische staffel per dekkingsgraadregio (70-110%, p.29), geen gerealiseerd afdekkingspercentage ultimo 2025 gevonden. Reële dekkingsgraad 92,5% is op marktrente incl. UFR; de wettelijke DNB-variant is 92,6% (2024: 88,6%, p.23). Invaren per 1-1-2028 is voorgenomen besluit van 18 mei 2026 (oorspronkelijk 1-1-2027), definitieve besluitvorming gepland 9 juli 2026."
+}

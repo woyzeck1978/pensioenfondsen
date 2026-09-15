@@ -1,0 +1,83 @@
+{
+ "fund_id": 166,
+ "naam": "Kring B (De Nationale)",
+ "pad": "data/annual_reports/66_De_Nationale_APF_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -3.0,
+   "2024": 8.1,
+   "pagina": 11,
+   "letterlijk": "Rendement op basis van total return -3,0%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 120.5,
+   "2024": 114.2,
+   "pagina": 11,
+   "letterlijk": "Beleidsdekkingsgraad 120,5%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 128.3,
+   "2024": 111.0,
+   "pagina": 11,
+   "letterlijk": "Aanwezige dekkingsgraad 128,3%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 87.1,
+   "2024": 84.6,
+   "pagina": 70,
+   "letterlijk": "Reële dekkingsgraad 87,1%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 113.1,
+   "2024": 114.2,
+   "pagina": 11,
+   "letterlijk": "Vereiste dekkingsgraad 113,1%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.593749,
+   "2024": 0.631962,
+   "pagina": 11,
+   "letterlijk": "Belegd vermogen 593.749 (Financiële gegevens in duizenden euro)"
+  },
+  "deelnemers_actief": {
+   "2025": 614,
+   "2024": 610,
+   "pagina": 11,
+   "letterlijk": "Actieve deelnemers 614"
+  },
+  "deelnemers_slapers": {
+   "2025": 3385,
+   "2024": 3412,
+   "pagina": 11,
+   "letterlijk": "Gewezen deelnemers 3.385"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 972,
+   "2024": 939,
+   "pagina": 11,
+   "letterlijk": "Pensioengerechtigden 972"
+  },
+  "deelnemers_totaal": {
+   "2025": 4971,
+   "2024": 4961,
+   "pagina": 11,
+   "letterlijk": "Totaal 4.971"
+  },
+  "rente_afdekking_pct": {
+   "2025": 77.1,
+   "2024": null,
+   "pagina": 244,
+   "letterlijk": "De werkelijke afdekking van het renterisico op basis van de DNB-systematiek is 77,1%"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-17",
+  "pagina": 379
+ },
+ "invaardatum": {
+  "datum": "2028-01-01",
+  "status": "gepland",
+  "pagina": 79
+ },
+ "opmerkingen": "Kerncijferpagina 11 (Kring B), kolom 2025 gecontroleerd tegen tabel dekkingsgraden p70 (31-12-2025/31-12-2024 komen overeen). Belegd vermogen uit meerjarenoverzicht (in duizenden euro, excl. beleggingsgerelateerde overlopende posten en liquide middelen); de tekst bij de financiele positie noemt een afwijkend 'circa'-bedrag (circa 599 miljoen euro (2024: circa 623 miljoen)). Vereiste dekkingsgraad = kerncijferregel 'Vereiste dekkingsgraad' = strategisch vereist (SVEV); feitelijk vereist (FVEV) is 114,9% (2024: 115,7%). Renteafdekking = werkelijke afdekking op DNB-systematiek (strategisch 80,0%); 2024-waarde niet genoemd. Vaststellingsdatum = 'Ondertekening jaarrekening, Den Haag, 17 juni 2026'; afzonderlijke datum voor het bestuursverslag niet gevonden. Invaardatum: 'invaardatum van Kring B wordt verschoven naar 1 januari 2028' (p79); oorspronkelijk beoogd 1-1-2027. NIBC accepteert het uitstel niet; bij uitbrengen verslag nog in gesprek, dus datum onzeker."
+}

@@ -1,0 +1,83 @@
+{
+ "fund_id": 167,
+ "naam": "Kring CK1 (Hnp)",
+ "pad": "data/annual_reports/167_Kring_CK1_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -11.29,
+   "2024": 6.59,
+   "pagina": 8,
+   "letterlijk": "Beleggingsrendement (in %) -11,29% 6,59%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 116.0,
+   "2024": 110.4,
+   "pagina": 7,
+   "letterlijk": "Beleidsdekkingsgraad (in %) 116,0% 110,4%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 124.4,
+   "2024": 107.7,
+   "pagina": 7,
+   "letterlijk": "Aanwezige dekkingsgraad (in %) 124,4% 107,7%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 79.4,
+   "2024": 79.5,
+   "pagina": 7,
+   "letterlijk": "Reële dekkingsgraad (in %) 79,4% 79,5%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 118.9,
+   "2024": 117.9,
+   "pagina": 7,
+   "letterlijk": "Vereiste dekkingsgraad (in %) 118,9% 117,9%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.45853,
+   "2024": 0.495024,
+   "pagina": 8,
+   "letterlijk": "Totaal beleggingen 458.530 495.024 (x EUR 1.000)"
+  },
+  "deelnemers_actief": {
+   "2025": 1986,
+   "2024": 2297,
+   "pagina": 7,
+   "letterlijk": "Actieve deelnemers 1.986 2.297"
+  },
+  "deelnemers_slapers": {
+   "2025": 11532,
+   "2024": 11142,
+   "pagina": 7,
+   "letterlijk": "Gewezen deelnemers 11.532 11.142"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 603,
+   "2024": 533,
+   "pagina": 7,
+   "letterlijk": "Pensioengerechtigden 603 533"
+  },
+  "deelnemers_totaal": {
+   "2025": 14121,
+   "2024": 13972,
+   "pagina": 7,
+   "letterlijk": "14.121 13.972"
+  },
+  "rente_afdekking_pct": {
+   "2025": 82.6,
+   "2024": null,
+   "pagina": 86,
+   "letterlijk": "De feitelĳke renteafdekking per ultimo 2025 bedroeg 82,6%, inclusief de indexatie van 0,27%"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-30",
+  "pagina": 911
+ },
+ "invaardatum": {
+  "datum": "2027-01-01",
+  "status": "gepland",
+  "pagina": 97
+ },
+ "opmerkingen": "Cijfers uit het eigen kerncijferhoofdstuk van de kring (Jaarverslag 2025 Stichting Het Nederlandse Pensioenfonds, bedragen x EUR 1.000). AUM = 'Totaal beleggingen' uit de kerncijfers (na aftrek negatieve derivaten). Nominale dekkingsgraad = 'Aanwezige dekkingsgraad'. Vaststellingsdatum = ondertekening jaarrekening (Badhoevedorp, 30 juni 2026, p.911; ondertekening bestuursverslag p.438 zelfde datum). Renteafdekking 2024 niet opgezocht/genoemd. Kring heet in het verslag 'Collectiviteitkring 1' (kerncijfers p.7-8, bestuursverslag p.73-103). Opvallend: aanwezige dekkingsgraad stijgt van 107,7% naar 124,4% ondanks rendement -11,29% (voorziening daalt 494.459 -> 390.802). Renteafdekking-norm 80%. Invaardossier maart 2026 ingediend met doel 1 januari 2027."
+}

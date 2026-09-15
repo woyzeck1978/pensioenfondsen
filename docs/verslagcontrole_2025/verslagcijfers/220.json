@@ -1,0 +1,83 @@
+{
+ "fund_id": 220,
+ "naam": "Kring Chemours (Centraal Beheer)",
+ "pad": "data/annual_reports/65_Centraal_Beheer_APF_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": 1.17,
+   "2024": 11.03,
+   "pagina": 247,
+   "letterlijk": "Beleggingsrendement 1,17% 11,03% 11,73% (kop 2025 2024 ...)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 146.0,
+   "2024": 139.0,
+   "pagina": 254,
+   "letterlijk": "Beleidsdekkingsgraad 146,0% 139,0% (kop 31-12-2025 31-12-2024 ...)"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 153.9,
+   "2024": 136.8,
+   "pagina": 254,
+   "letterlijk": "Actuele dekkingsgraad 153,9% 136,8%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 107.1,
+   "2024": 103.3,
+   "pagina": 254,
+   "letterlijk": "Reële dekkingsgraad 107,1% 103,3%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 118.1,
+   "2024": 118.2,
+   "pagina": 254,
+   "letterlijk": "Vereiste dekkingsgraad 118,1% 118,2%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.360252,
+   "2024": 0.358357,
+   "pagina": 248,
+   "letterlijk": "Totaal belegd vermogen (Bedragen in € 1.000) 360.252 358.357"
+  },
+  "deelnemers_actief": {
+   "2025": 236,
+   "2024": 288,
+   "pagina": 246,
+   "letterlijk": "Actieven en arbeidsongeschikten 236 288"
+  },
+  "deelnemers_slapers": {
+   "2025": 85,
+   "2024": 47,
+   "pagina": 246,
+   "letterlijk": "Gewezen deelnemers 85 47"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 87,
+   "2024": 74,
+   "pagina": 246,
+   "letterlijk": "Pensioengerechtigden 87 74"
+  },
+  "deelnemers_totaal": {
+   "2025": 408,
+   "2024": 409,
+   "pagina": 246,
+   "letterlijk": "Deelnemers 408 409"
+  },
+  "rente_afdekking_pct": {
+   "2025": 80.0,
+   "2024": null,
+   "pagina": 263,
+   "letterlijk": "Wĳ maken voor de Kring Chemours gebruik van een strategie waarbĳ 80% van de rentegevoeligheid van de pensioenverplichtingen op basis van de marktrente wordt afgedekt."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-17",
+  "pagina": 843
+ },
+ "invaardatum": {
+  "datum": "2028-01-01",
+  "status": "gepland",
+  "pagina": 266
+ },
+ "opmerkingen": "Vaststellingsdatum: 'Vaststelling en ondertekening jaarrekening, Zeist, 17 juni 2026' (p843); het bestuursverslag is ondertekend op 15 juni 2026 (p403). Kerncijfers van de kring staan in paragraaf x.1 (deelnemers, rendement, belegd vermogen); reële en vereiste dekkingsgraad komen uit x.3.1. Rendement is het totale beleggingsrendement van de kring, inclusief matchingportefeuille. Rente-afdekking: het verslag noemt alleen het beleidspercentage uit de risicoparagraaf, geen gerealiseerde afdekking per ultimo; 2024 niet genoemd. Invaren: 'De overgang naar het nieuwe pensioenstelsel (Wtp) staat voor Kring Chemours gepland op 1-1-2028' (p266)."
+}

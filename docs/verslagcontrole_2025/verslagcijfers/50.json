@@ -1,0 +1,83 @@
+{
+ "fund_id": 50,
+ "naam": "Mediahuis Nederland (Mhpf)",
+ "pad": "data/annual_reports/50_Mediahuis_Nederland_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -1.3,
+   "2024": 8.59,
+   "pagina": 8,
+   "letterlijk": "Totaal rendement - 1,30% 8,59%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 125.7,
+   "2024": 121.1,
+   "pagina": 8,
+   "letterlijk": "Beleidsdekkingsgraad 125,7% 121,1%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 129.0,
+   "2024": 121.8,
+   "pagina": 8,
+   "letterlijk": "Actuele dekkingsgraad 129,0% 121,8%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 93.2,
+   "2024": 90.1,
+   "pagina": 12,
+   "letterlijk": "Reële dekkingsgraad 93,2% 90,1%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 119.1,
+   "2024": 118.3,
+   "pagina": 12,
+   "letterlijk": "Vereiste dekkingsgraad 119,1% 118,3%"
+  },
+  "aum_euro_bn": {
+   "2025": 1.23704,
+   "2024": 1.283721,
+   "pagina": 8,
+   "letterlijk": "Totaal belegd vermogen (€ 1.000) 1.237.040 1.283.721"
+  },
+  "deelnemers_actief": {
+   "2025": 1045,
+   "2024": 1019,
+   "pagina": 8,
+   "letterlijk": "Actieve deelnemers 1.045 1.019"
+  },
+  "deelnemers_slapers": {
+   "2025": 4214,
+   "2024": 4246,
+   "pagina": 8,
+   "letterlijk": "Gewezen deelnemers 4.214 4.246"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 2147,
+   "2024": 2044,
+   "pagina": 8,
+   "letterlijk": "Pensioengerechtigden 2.147 2.044"
+  },
+  "deelnemers_totaal": {
+   "2025": 7406,
+   "2024": 7309,
+   "pagina": 8,
+   "letterlijk": "Totaal 7.406 7.309"
+  },
+  "rente_afdekking_pct": {
+   "2025": 81,
+   "2024": 79.5,
+   "pagina": 34,
+   "letterlijk": "S1 - Renterisico ... Afdekking 81% uit de matchingportefeuille (31-dec-25); 79,5% (31-dec-24)"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-05-28",
+  "pagina": 95
+ },
+ "invaardatum": {
+  "datum": "2027-01-01",
+  "status": "gepland",
+  "pagina": 58
+ },
+ "opmerkingen": "Profiel (p9) noemt 1.046 actieven en 2.146 gepensioneerden, kerngegevens 1.045/2.147. Beleid renteafdekking 80% (strategisch 60%, tijdelijk verhoogd). Jaarrekening opgemaakt 19 mei 2026 (p72), getekend 28 mei 2026 (p65/p95). Invaardatum 1-1-2027 was 'beoogd', maar Mediahuis NL gaat na invaren naar PNO-Media en de transitieplannen zijn in april 2026 teruggestuurd (p5/p58): datum onzeker. Reële dekkingsgraad = beleidsdg / toekomstbestendige indexatiedg."
+}

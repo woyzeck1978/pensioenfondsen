@@ -1,0 +1,21 @@
+{
+ "fund_id": 60,
+ "naam": "Schilders-, Afwerkings- en Glaszetbedrijf (Painters and Glaziers)",
+ "pad": "data/annual_reports/60_Schilders_Afwerkings_en_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {"2025": -1.16, "2024": 11.02, "pagina": 7, "letterlijk": "Beleggingsrendement (in %) -1.16 11,02 11,10 (kop 2025 2024 2023)"},
+  "beleidsdekkingsgraad_pct": {"2025": 140.7, "2024": 130.1, "pagina": 7, "letterlijk": "Beleidsdekkingsgraad (in %) 140,7 130,1 127,1"},
+  "nominale_dekkingsgraad_pct": {"2025": 150.7, "2024": 131.2, "pagina": 7, "letterlijk": "Actuele dekkingsgraad (in %) 150,7 131,2 125,0"},
+  "reele_dekkingsgraad_pct": {"2025": 102.7, "2024": 97.5, "pagina": 7, "letterlijk": "Reële dekkingsgraad (in %) 102,7 97,5 94,1"},
+  "vereiste_dekkingsgraad_pct": {"2025": 121.2, "2024": 121.8, "pagina": 7, "letterlijk": "Vereiste dekkingsgraad volgens FTK (in %) 121,2 121,8 119,7"},
+  "aum_euro_bn": {"2025": 9.870407, "2024": 9.744614, "pagina": 71, "letterlijk": "Beleggingen voor risico pensioenfonds (x € 1.000) 9.870.407 9.744.614"},
+  "deelnemers_actief": {"2025": 34560, "2024": 34465, "pagina": 7, "letterlijk": "Actieve deelnemers 34.560 34.465 34.685"},
+  "deelnemers_slapers": {"2025": 31528, "2024": 31785, "pagina": 7, "letterlijk": "Gewezen deelnemers 31.528 31.785 32.272"},
+  "deelnemers_pensioengerechtigd": {"2025": 36901, "2024": 36537, "pagina": 7, "letterlijk": "Pensioengerechtigden 36.901 36.537 36.463"},
+  "deelnemers_totaal": {"2025": 102989, "2024": 102787, "pagina": 7, "letterlijk": "Totaal 102.989 102.787 103.420"},
+  "rente_afdekking_pct": {"2025": 75.0, "2024": null, "pagina": 102, "letterlijk": "In lijn met het strategisch beleggingsbeleid 2025 wordt 75% van het nominale renterisico afgedekt door middel van een rentehedge."}
+ },
+ "vaststellingsdatum": {"datum": "2026-06-25", "pagina": 122},
+ "invaardatum": {"datum": "2026-01-01", "status": "ingevaren", "pagina": 48},
+ "opmerkingen": "Ingevaren per 1 januari 2026; cijfers ultimo 2025 zijn nog FTK. Rendement 2025 staat in de kerncijfers met punt als decimaalteken ('-1.16'). AUM: balans 9.870.407 (x € 1.000) bruto incl. positieve derivaten 182.745; kerncijfers tonen derivaten netto -673,6 mln en pensioenvermogen 9.147,0 mln. Actieve deelnemers incl. 16.391 zzp'ers. Rente-afdekking 75% is het strategische beleidspercentage; een feitelijk ultimo-percentage niet gevonden. Bestuur 'Vastgesteld door het bestuur te Zeist op 25 juni 2026' (p122)."
+}

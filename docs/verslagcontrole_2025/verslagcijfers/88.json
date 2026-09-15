@@ -1,0 +1,21 @@
+{
+ "fund_id": 88,
+ "naam": "Delta Lloyd",
+ "pad": "data/annual_reports/88_DeltaLloyd_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {"2025": -3.3, "2024": 8.8, "pagina": 10, "letterlijk": "Beleggingsrendement Totale portefeuille -3,3% 8,8% 8,4% (kop 2025 2024 2023)"},
+  "beleidsdekkingsgraad_pct": {"2025": 135.9, "2024": 131.5, "pagina": 10, "letterlijk": "Beleidsdekkingsgraad (BDG) 135,9% 131,5% 127,8%"},
+  "nominale_dekkingsgraad_pct": {"2025": 139.2, "2024": 130.9, "pagina": 10, "letterlijk": "Actuele DNB-dekkingsgraad 139,2% 130,9% 127,4%"},
+  "reele_dekkingsgraad_pct": {"2025": 102.2, "2024": 99.5, "pagina": 45, "letterlijk": "Reële dekkingsgraad volgens richtlijnen FTK 102,2% 99,5% (31 december 2025 / 31 december 2024)"},
+  "vereiste_dekkingsgraad_pct": {"2025": 110.4, "2024": 112.5, "pagina": 45, "letterlijk": "Dekkingsgraad op basis van het vereist eigen vermogen 110,4% 112,5%"},
+  "aum_euro_bn": {"2025": 2.979416, "2024": 3.174149, "pagina": 10, "letterlijk": "Beleggingen (x € 1.000) Actuele waarde (activa en passiva) 2.979.416 3.174.149"},
+  "deelnemers_actief": {"2025": 1270, "2024": 1378, "pagina": 9, "letterlijk": "Actieve deelnemers 1) 1.270 1.378 1.543"},
+  "deelnemers_slapers": {"2025": 6040, "2024": 6179, "pagina": 9, "letterlijk": "Gewezen deelnemers ('slapers') 6.040 6.179 6.339"},
+  "deelnemers_pensioengerechtigd": {"2025": 4589, "2024": 4482, "pagina": 9, "letterlijk": "Pensioengerechtigden 4.589 4.482 4.326"},
+  "deelnemers_totaal": {"2025": 11899, "2024": 12039, "pagina": 9, "letterlijk": "Totaal 11.899 12.039 12.208"},
+  "rente_afdekking_pct": {"2025": 110.0, "2024": null, "pagina": 59, "letterlijk": "per 15 december 2025 het afdekkingspercentage verhoogd naar 110% van de verplichtingen."}
+ },
+ "vaststellingsdatum": {"datum": "2026-06-01", "pagina": 95},
+ "invaardatum": {"datum": null, "status": "vaart niet in", "pagina": 23},
+ "opmerkingen": "AUM = 'Actuele waarde (activa en passiva)' in kerncijfers = 'Totaal beleggingen voor risico pensioenfonds' in toelichting (p124), netto na derivaten met negatieve waarde (58.257) en collateral; activazijde bruto 3.037.673 (2025) / 3.295.203 (2024). Rente-afdekking: norm 90% (p59), per 15 december 2025 verhoogd naar 110% - beleidspercentage, geen gemeten ultimo-percentage; 2024-waarde niet expliciet genoemd. Actieve deelnemers zijn gewezen deelnemers van DL Services nog in dienst bij NN plus arbeidsongeschikten met premievrije opbouw. Invaren: sociale partners besloten in 2024 niet in te varen; buy-out-traject, exclusiviteitsovereenkomst met Zwitserleven medio januari 2026. Vaststellingsdatum = datum bestuursverslag (Amsterdam, 1 juni 2026, p95); aparte vaststellingszin onder jaarrekening niet gevonden."
+}

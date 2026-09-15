@@ -1,0 +1,83 @@
+{
+ "fund_id": 20,
+ "naam": "Kappersbedrijf (Hairdressers)",
+ "pad": "data/annual_reports/20_Kappersbedrijf_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -9.4,
+   "2024": 9.86,
+   "pagina": 10,
+   "letterlijk": "Totaal rendement portefeuille 2025 -9,40% | 2024 9,86%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 121.1,
+   "2024": 108.0,
+   "pagina": 9,
+   "letterlijk": "Beleidsdekkingsgraad 2025 121,1% | 2024 108,0%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 129.3,
+   "2024": 108.1,
+   "pagina": 9,
+   "letterlijk": "Actuele dekkingsgraad 2025 129,3% | 2024 108,1%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 80.9,
+   "2024": 77.2,
+   "pagina": 38,
+   "letterlijk": "De reële dekkingsgraad van het pensioenfonds steeg in 2025 van 77,2% naar 80,9%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 121.4,
+   "2024": 119.2,
+   "pagina": 10,
+   "letterlijk": "Vereiste dekkingsgraad (3) 2025 121,4% | 2024 119,2%"
+  },
+  "aum_euro_bn": {
+   "2025": 1.065742,
+   "2024": 1.134063,
+   "pagina": 10,
+   "letterlijk": "Totaal beleggingsportefeuille (bedragen x € 1.000) 2025 1.065.742 | 2024 1.134.063"
+  },
+  "deelnemers_actief": {
+   "2025": 20405,
+   "2024": 20444,
+   "pagina": 78,
+   "letterlijk": "Actieve deelnemers stand per 1 januari 2025 20.444 | stand per 31 december 2025 20.405"
+  },
+  "deelnemers_slapers": {
+   "2025": 53634,
+   "2024": 52507,
+   "pagina": 78,
+   "letterlijk": "Gewezen deelnemers 52.507 ... 53.634"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 4742,
+   "2024": 4433,
+   "pagina": 78,
+   "letterlijk": "Pensioengerechtigden 4.433 ... 4.742"
+  },
+  "deelnemers_totaal": {
+   "2025": 78781,
+   "2024": 77384,
+   "pagina": 78,
+   "letterlijk": "Totaal alle deelnemers 77.384 ... 78.781"
+  },
+  "rente_afdekking_pct": {
+   "2025": 65,
+   "2024": null,
+   "pagina": 57,
+   "letterlijk": "In lijn met het strategisch beleid is het matchpercentage vastgesteld op 65%"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-16",
+  "pagina": 140
+ },
+ "invaardatum": {
+  "datum": "2028-01-01",
+  "status": "gepland",
+  "pagina": 4
+ },
+ "opmerkingen": "Actieve deelnemers incl. arbeidsongeschikten (verloopoverzicht p78: 20.405); kerncijfers p9 splitsen in actieve 19.420 + arbeidsongeschikten 985 (2024: 19.532 + 912). 2024-waarden deelnemers = stand 1 januari 2025 uit verloopoverzicht. Renteafdekking 65% is het strategische matchpercentage (geen gemeten ultimo-stand); in feb 2026 besloten te verhogen naar 80% (p133), 2024-percentage niet expliciet als ultimostand. Belegd vermogen p6 '1.065,7 miljoen' = kerncijfer 1.065.742. Invaardatum eerder 1-1-2027, uitgesteld naar 1-1-2028 (p84). Naast actuele dekkingsgraad ook 'Dekkingsgraad (marktrente)' 129,2% (p10)."
+}

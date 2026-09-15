@@ -1,0 +1,83 @@
+{
+ "fund_id": 65,
+ "naam": "Centraal Beheer APF",
+ "pad": "data/annual_reports/65_Centraal_Beheer_APF_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "rente_afdekking_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "aum_euro_bn": {
+   "2025": 7.742535,
+   "2024": 7.573757,
+   "pagina": 13,
+   "letterlijk": "Kerncĳfers Centraal Beheer APF: Totaal belegd vermogen 7.742.535 7.573.757 (x € 1.000; kop 31-12-2025 31-12-2024)"
+  },
+  "deelnemers_actief": {
+   "2025": 33380,
+   "2024": 34623,
+   "pagina": 13,
+   "letterlijk": "Actieven en arbeidsongeschikten 33.380 34.623"
+  },
+  "deelnemers_slapers": {
+   "2025": 46154,
+   "2024": 42037,
+   "pagina": 13,
+   "letterlijk": "Gewezen deelnemers 46.154 42.037"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 11232,
+   "2024": 10273,
+   "pagina": 13,
+   "letterlijk": "Pensioengerechtigden 11.232 10.273"
+  },
+  "deelnemers_totaal": {
+   "2025": 90766,
+   "2024": 86933,
+   "pagina": 13,
+   "letterlijk": "Totaal aantal deelnemers 90.766 86.933"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-17",
+  "pagina": 843
+ },
+ "invaardatum": {
+  "datum": null,
+  "status": "geen datum genoemd",
+  "pagina": 29
+ },
+ "opmerkingen": "APF-totalen uit 'Kerncĳfers Centraal Beheer APF' (p13); totaal belegd vermogen is de som van alle zestien kringen (p16 'Totaal APF' 7.742.535). Dekkingsgraden, rendement en rente-afdekking bestaan alleen per kring, er is geen APF-totaal (null). Het APF (bedrijfsomgeving) heeft 'geen beleggingen voor eigen risico' (p44). Vaststellingsdatum: jaarrekening vastgesteld en ondertekend 'Zeist, 17 juni 2026' (p843); bestuursverslag ondertekend 15 juni 2026 (p403), voorwoord 17 juni 2026. Invaren verschilt per kring, geen APF-brede datum: Grolsch als eerste per 1 januari 2027 (p1218-tekst hfst 4, p400), RBS en Sligro 1 juli 2027, Chemours 1-1-2028; DB Premie/Stabiliteit/Koopkracht niet-invaarverzoek, DB Evenwicht vaart niet in, Bavaria via CWO naar Aegon per 1 mei 2026. Het streven is in 2026 zeven invaardossiers bij DNB in te dienen (p11)."
+}

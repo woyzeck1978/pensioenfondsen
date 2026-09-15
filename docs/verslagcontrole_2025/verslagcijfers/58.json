@@ -1,0 +1,83 @@
+{
+ "fund_id": 58,
+ "naam": "Metalektro / PME",
+ "pad": "data/annual_reports/58_Metalektro_PME_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -3.0,
+   "2024": 8.7,
+   "pagina": 11,
+   "letterlijk": "Totaal rendement 2025 -3,0% | 2024 8,7%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 120.1,
+   "2024": 112.7,
+   "pagina": 10,
+   "letterlijk": "Beleidsdekkingsgraad 2025 120,1% | 2024 112,7%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 125.3,
+   "2024": 113.0,
+   "pagina": 10,
+   "letterlijk": "Dekkingsgraad (D = C / A) 2025 125,3% | 2024 113,0%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 87.8,
+   "2024": 84.1,
+   "pagina": 10,
+   "letterlijk": "Reële dekkingsgraad 2025 87,8% | 2024 84,1%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 117.8,
+   "2024": 118.1,
+   "pagina": 10,
+   "letterlijk": "Vereiste dekkingsgraad 2025 117,8% | 2024 118,1%"
+  },
+  "aum_euro_bn": {
+   "2025": 60.808,
+   "2024": 61.086,
+   "pagina": 149,
+   "letterlijk": "Totaal beleggingen voor risico pensioenfonds (bedragen x EUR 1 miljoen) 2025 60.808 | 2024 61.086"
+  },
+  "deelnemers_actief": {
+   "2025": 184847,
+   "2024": 183436,
+   "pagina": 7,
+   "letterlijk": "Deelnemers verplichte regeling (1) 2025 184.847 | 2024 183.436"
+  },
+  "deelnemers_slapers": {
+   "2025": 276363,
+   "2024": 276263,
+   "pagina": 7,
+   "letterlijk": "Gewezen deelnemers (2) 2025 276.363 | 2024 276.263"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 173980,
+   "2024": 169818,
+   "pagina": 7,
+   "letterlijk": "Pensioengerechtigden (3) 2025 173.980 | 2024 169.818"
+  },
+  "deelnemers_totaal": {
+   "2025": 635190,
+   "2024": 629517,
+   "pagina": 7,
+   "letterlijk": "Totaal deelnemers (1+2+3) 2025 635.190 | 2024 629.517"
+  },
+  "rente_afdekking_pct": {
+   "2025": 70.0,
+   "2024": 64.9,
+   "pagina": 176,
+   "letterlijk": "Werkelijke renteafdekking ultimo 2025 70,0% | ultimo 2024 64,9%"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-05-21",
+  "pagina": 147
+ },
+ "invaardatum": {
+  "datum": "2027-01-01",
+  "status": "gepland",
+  "pagina": 16
+ },
+ "opmerkingen": "AUM: balans (p149) 60.808 mln; kerncijfers p11 'Totaal belegd vermogen' volgens strategische indeling 58.871 mln (2024 59.360) - andere definitie. Rendement na vermogensbeheerkosten; voor kosten -2,6% (p39). Actieven incl. 8.524 premievrij arbeidsongeschikten. Renteafdekking gemeten op marktrente; p62 normportefeuille-tabel lijkt kolommen 'eind 2025' 65% en 'begin 2025' 70% verwisseld te hebben t.o.v. p63/p176 (feitelijk eind 2024 64,9%, eind 2025 70,0%)."
+}

@@ -1,0 +1,83 @@
+{
+ "fund_id": 140,
+ "naam": "BeFrank PPI",
+ "pad": "data/annual_reports/140_BeFrank_PPI_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "aum_euro_bn": {
+   "2025": 12.897193,
+   "2024": 11.110032,
+   "pagina": 5,
+   "letterlijk": "(In duizenden euro) AuM 2025 12.897.193 | 2024 11.110.032"
+  },
+  "deelnemers_actief": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "deelnemers_slapers": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "deelnemers_totaal": {
+   "2025": 403870,
+   "2024": 372150,
+   "pagina": 5,
+   "letterlijk": "Aantal deelnemers 2025 403.870 | 2024 372.150"
+  },
+  "rente_afdekking_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-10",
+  "pagina": 39
+ },
+ "invaardatum": {
+  "datum": null,
+  "status": "geen datum genoemd",
+  "pagina": null
+ },
+ "opmerkingen": "PPI (premieregeling, beleggingen voor risico deelnemers): geen dekkingsgraden, geen vereiste dekkingsgraad, geen renteafdekking op fondsniveau. Geen totaalrendement: alleen rendementen per lifecycle/profiel/leeftijd (p11-12); 'Solvabiliteit BeFrank PPI 105%' is de solvabiliteit van de N.V., geen dekkingsgraad. Deelnemers niet uitgesplitst naar actief/slaper/gepensioneerd. Vaststellingsdatum = ondertekening jaarrekening door directie 'Amsterdam, 10 juni 2026' (p39); formele vaststelling is aan de AVA en niet gedateerd. Invaren n.v.t. voor PPI; transitie Wtp uiterlijk 1-1-2028 is algemene marktcontext (p5)."
+}

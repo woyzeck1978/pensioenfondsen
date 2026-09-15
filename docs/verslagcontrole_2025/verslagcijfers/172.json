@@ -1,0 +1,83 @@
+{
+ "fund_id": 172,
+ "naam": "Kring Forward (Unilever)",
+ "pad": "data/annual_reports/172_Kring_Forward_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -2.3,
+   "2024": 10.3,
+   "pagina": 44,
+   "letterlijk": "Kerncijfers Forward: Gewogen rendement - 2,3% 10,3% 8,1% (kop 2025 2024 2023 ...)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 171.6,
+   "2024": 151.3,
+   "pagina": 86,
+   "letterlijk": "Forward toelichting balans: Beleidsdekkingsgraad 171,6% 151,3%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 185.4,
+   "2024": 145.1,
+   "pagina": 86,
+   "letterlijk": "Actuele dekkingsgraad 185,4% 145,1%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 105.7,
+   "2024": 101.7,
+   "pagina": 86,
+   "letterlijk": "Reële dekkingsgraad 105,7% 101,7%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 121.5,
+   "2024": 122.7,
+   "pagina": 86,
+   "letterlijk": "Vereiste dekkingsgraad 121,5% 122,7%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.701576,
+   "2024": 0.653014,
+   "pagina": 44,
+   "letterlijk": "Kerncijfers Forward (bedragen in '000 euro's): Totaal belegd vermogen 701.576 653.014"
+  },
+  "deelnemers_actief": {
+   "2025": 2385,
+   "2024": 2673,
+   "pagina": 44,
+   "letterlijk": "Deelnemers voor wie wordt bijgedragen 2.385 2.673"
+  },
+  "deelnemers_slapers": {
+   "2025": 3544,
+   "2024": 3053,
+   "pagina": 44,
+   "letterlijk": "Deelnemers met premievrije aanspraken 3.544 3.053"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 483,
+   "2024": 417,
+   "pagina": 44,
+   "letterlijk": "Pensioengerechtigden 483 417"
+  },
+  "deelnemers_totaal": {
+   "2025": 6412,
+   "2024": 6143,
+   "pagina": 44,
+   "letterlijk": "Totaal 6.412 6.143"
+  },
+  "rente_afdekking_pct": {
+   "2025": 50.8,
+   "2024": null,
+   "pagina": 40,
+   "letterlijk": "De renteafdekking was eind 2025 50,8%."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-05-26",
+  "pagina": 71
+ },
+ "invaardatum": {
+  "datum": "2027-01-01",
+  "status": "gepland",
+  "pagina": 10
+ },
+ "opmerkingen": "Kring Forward binnen Unilever APF (naast kring Progress); alle cijfers zijn Forward-specifiek (Progress: BDG 173,3%, DG 179,6%, niet gebruikt). Kerncijfertabel p44 rondt dekkingsgraden af op hele procenten (185%/172%/106%); exacte waarden uit toelichting p86. Fondsvermogen € 714,4 mln (p33) vs totaal belegd vermogen € 701,6 mln (p44, gebruikt als AUM). Rente-afdekking 2024: alleen besluit strategische afdekking van 30% naar 50% (p36), geen ultimo-2024-cijfer. Invaren: aanvraag eind 2025 bij DNB ingediend, 'De streefdatum om Forward in te varen blijft 1 januari 2027' (p4, p10). Vaststelling: jaarrekening APF getekend 'Rotterdam, 26 mei 2026' door Raad van Bestuur (p71; ook p29)."
+}

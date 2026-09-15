@@ -1,0 +1,83 @@
+{
+ "fund_id": 46,
+ "naam": "IKEA (STIP)",
+ "pad": "data/annual_reports/46_IKEA_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -6.0,
+   "2024": 13.5,
+   "pagina": 8,
+   "letterlijk": "Beleggingsrendement (netto) -6,0 13,5 10,1 -29,2 3,5 (kop 2025 2024 2023 2022 2021)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 143.8,
+   "2024": 132.7,
+   "pagina": 7,
+   "letterlijk": "Beleidsdekkingsgraad 143,8 132,7 133,1 (kop 31-12-2025 31-12-2024 31-12-2023)"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 153.7,
+   "2024": 128.5,
+   "pagina": 7,
+   "letterlijk": "Actuele dekkingsgraad 153,7 128,5 125,3"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 98.2,
+   "2024": 95.5,
+   "pagina": 16,
+   "letterlijk": "De reële dekkingsgraad ultimo 2025 bedraagt 98,2% (2024: 95,5%)"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 124.3,
+   "2024": 124.6,
+   "pagina": 7,
+   "letterlijk": "Vereiste dekkingsgraad 124,3 124,6 124,6"
+  },
+  "aum_euro_bn": {
+   "2025": 0.922333,
+   "2024": 0.810812,
+   "pagina": 7,
+   "letterlijk": "Beleggingen - voor risico pensioenfonds (x € 1.000) 922.333 810.812"
+  },
+  "deelnemers_actief": {
+   "2025": 7497,
+   "2024": 7387,
+   "pagina": 7,
+   "letterlijk": "Deelnemers 7.497 41,4 7.387 42,8 (kop Aantal 2025 % Aantal 2024 %)"
+  },
+  "deelnemers_slapers": {
+   "2025": 9696,
+   "2024": 9058,
+   "pagina": 7,
+   "letterlijk": "Gewezen deelnemers 9.696 53,5 9.058 52,5"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 935,
+   "2024": 817,
+   "pagina": 7,
+   "letterlijk": "Pensioengerechtigden 935 5,1 817 4,7"
+  },
+  "deelnemers_totaal": {
+   "2025": 18128,
+   "2024": 17262,
+   "pagina": 7,
+   "letterlijk": "18.128 100,0 17.262 100,0"
+  },
+  "rente_afdekking_pct": {
+   "2025": 75.0,
+   "2024": 60.0,
+   "pagina": 32,
+   "letterlijk": "De strategische renteafdekking is eind 2025 verhoogd naar 75%"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-29",
+  "pagina": 104
+ },
+ "invaardatum": {
+  "datum": "2028-01-01",
+  "status": "gepland",
+  "pagina": 28
+ },
+ "opmerkingen": "Kerncijfers p7-8; deelnemerstabel wisselt aantallen en percentages af - aantallen genomen. AUM = beleggingen voor risico pensioenfonds (bruto); saldo overige vorderingen en schulden -161.065 (vermoedelijk negatieve derivaten), totaal aanwezig vermogen 761.554. Vereiste dekkingsgraad: kerncijfers 124,3%, maar tekst p16/p39 noemt 124,2% (strategische mix). Rendement is netto na kosten. Rente-afdekking: alleen strategische norm (75%, bandbreedte +/-5%-punt), in december 2025 verhoogd van 60% naar 75% (p34); geen gerealiseerd percentage gevonden. Vaststelling in bestuursvergadering van 29 juni 2026 (p104). Invaren gepland per 1 januari 2028."
+}

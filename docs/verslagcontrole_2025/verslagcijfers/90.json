@@ -1,0 +1,83 @@
+{
+ "fund_id": 90,
+ "naam": "DOW",
+ "pad": "data/annual_reports/90_DOW_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -2.8,
+   "2024": 4.0,
+   "pagina": 7,
+   "letterlijk": "Rendement op basis van total return -2,8% 4,0%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 116.8,
+   "2024": 115.6,
+   "pagina": 7,
+   "letterlijk": "Beleidsdekkingsgraad 6) 116,8% 115,6%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 121.3,
+   "2024": 113.1,
+   "pagina": 7,
+   "letterlijk": "Actuele dekkingsgraad 5) 121,3% 113,1%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 88.4,
+   "2024": 88.1,
+   "pagina": 22,
+   "letterlijk": "Reële dekkingsgraad 1) 88,4% 88,1%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 108.7,
+   "2024": 109.2,
+   "pagina": 7,
+   "letterlijk": "Vereiste dekkingsgraad (o.b.v. de strategische beleggingsmix) 108,7% 109,2%"
+  },
+  "aum_euro_bn": {
+   "2025": 2.000913,
+   "2024": 2.147374,
+   "pagina": 76,
+   "letterlijk": "(in duizenden euro) Totaal beleggingen 2.147.374 (ultimo 2024) ... 2.000.913 (ultimo 2025)"
+  },
+  "deelnemers_actief": {
+   "2025": 912,
+   "2024": 987,
+   "pagina": 7,
+   "letterlijk": "Actieve deelnemers 912 987"
+  },
+  "deelnemers_slapers": {
+   "2025": 839,
+   "2024": 904,
+   "pagina": 7,
+   "letterlijk": "Gewezen deelnemers 839 904"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 3081,
+   "2024": 3009,
+   "pagina": 7,
+   "letterlijk": "Pensioengerechtigden 3.081 3.009"
+  },
+  "deelnemers_totaal": {
+   "2025": 4832,
+   "2024": 4900,
+   "pagina": 7,
+   "letterlijk": "Totaal 4.832 4.900"
+  },
+  "rente_afdekking_pct": {
+   "2025": 100.0,
+   "2024": null,
+   "pagina": 90,
+   "letterlijk": "Het pensioenfonds dekt het nominale renterisico voor 100% af."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-29",
+  "pagina": 51
+ },
+ "invaardatum": {
+  "datum": null,
+  "status": "vaart niet in",
+  "pagina": 20
+ },
+ "opmerkingen": "AUM: totaal beleggingen netto (incl. derivaten met negatieve waarde -71.434 op passiva) 2.000.913 duizend; kerncijfers noemen alleen pensioenvermogen 2.115.821 (2024: 2.241.656). Renteafdekking 100% is beleidsuitspraak (geen feitelijk gemeten percentage, geen 2024-waarde). Fonds vaart niet in: nieuwe regeling (uiterlijk 1-1-2028) niet bij het fonds; voorgenomen collectieve waardeoverdracht naar een verzekeraar, geen datum. Vaststelling bestuursverslag 'Terneuzen d.d. 29 juni 2026' (p51), jaarrekening p92 idem."
+}

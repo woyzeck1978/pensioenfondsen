@@ -1,0 +1,83 @@
+{
+ "fund_id": 137,
+ "naam": "Witteveen+Bos",
+ "pad": "data/annual_reports/137_Witteveen_Bos_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": 3.12,
+   "2024": 7.15,
+   "pagina": 5,
+   "letterlijk": "Beleggingsrendement4 2025 3,12% | 2024 7,15% (4. Rendement beleggingen voor vermogensbeheerkosten)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 132.4,
+   "2024": 118.1,
+   "pagina": 5,
+   "letterlijk": "Beleidsdekkingsgraad 2025 132,4% | 2024 118,1%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 145.1,
+   "2024": 114.4,
+   "pagina": 5,
+   "letterlijk": "Aanwezige dekkingsgraad2 2025 145,1% | 2024 114,4%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 93.5,
+   "2024": 86.6,
+   "pagina": 5,
+   "letterlijk": "Reële dekkingsgraad3 2025 93,5% | 2024 86,6%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 117.3,
+   "2024": 119.1,
+   "pagina": 5,
+   "letterlijk": "Vereiste dekkingsgraad 2025 117,3% | 2024 119,1%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.222755,
+   "2024": 0.206278,
+   "pagina": 5,
+   "letterlijk": "Bedragen x 1.000 EUR - Totaal beleggingen 2025 222.755 | 2024 206.278"
+  },
+  "deelnemers_actief": {
+   "2025": 1456,
+   "2024": 1318,
+   "pagina": 4,
+   "letterlijk": "Deelnemers 2025 1.456 | 2024 1.318"
+  },
+  "deelnemers_slapers": {
+   "2025": 1073,
+   "2024": 1041,
+   "pagina": 4,
+   "letterlijk": "Gewezen deelnemers 2025 1.073 | 2024 1.041"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 251,
+   "2024": 227,
+   "pagina": 4,
+   "letterlijk": "Pensioengerechtigden 2025 251 | 2024 227"
+  },
+  "deelnemers_totaal": {
+   "2025": 2780,
+   "2024": 2586,
+   "pagina": 4,
+   "letterlijk": "Totaal aantal deelnemers 2025 2.780 | 2024 2.586"
+  },
+  "rente_afdekking_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-09",
+  "pagina": 64
+ },
+ "invaardatum": {
+  "datum": "2027-01-01",
+  "status": "gepland",
+  "pagina": 8
+ },
+ "opmerkingen": "Rendement 3,12% is vóór vermogensbeheerkosten; na kosten 2,90% (2024 6,89%) p19; beleggingsparagraaf p24 'Totaal (samengesteld) 3,27%' na kosten. Renteafdekking: alleen strategisch - 35% beleid (bandbreedte 30-45%), in november 2025 besloten naar 65% strategisch; p24 'strategische renteafdekking eind 2025 van circa 65 % op marktwaarde'; geen gemeten ultimo-percentage, daarom null. Tegenstrijdigheid 2024 beleidsdekkingsgraad: kerncijfers/p22/p59 118,1%, maar p23 'Per 31 december 2024 was de beleidsdekkingsgraad ... 114,4 %' (dat is de actuele DG). Actuele DG 2025 al inclusief toeslag 3,1% per 1-1-2026. Bestuursverslag en jaarrekening ondertekend 'Deventer, 9 juni 2026' (p34, p64); jaarrekening 'opgemaakt' 9 juni 2026 (p45)."
+}

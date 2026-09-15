@@ -1,0 +1,83 @@
+{
+ "fund_id": 127,
+ "naam": "Sagittarius",
+ "pad": "data/annual_reports/127_Sagittarius_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": 8.9,
+   "2024": 4.0,
+   "pagina": 6,
+   "letterlijk": "Beleggingsrendementen - Na aftrek kosten 8,9% | 4,0%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 140.7,
+   "2024": 131.6,
+   "pagina": 6,
+   "letterlijk": "Beleidsdekkingsgraad 140,7% | 131,6%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 151.8,
+   "2024": 128.7,
+   "pagina": 6,
+   "letterlijk": "Dekkingsgraad actueel 151,8% | 128,7%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 105.8,
+   "2024": 100.0,
+   "pagina": 6,
+   "letterlijk": "Reële dekkingsgraad 105,8% | 100,0%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 118.1,
+   "2024": 116.6,
+   "pagina": 15,
+   "letterlijk": "hogere beleidsdekkingsgraad had dan het vereist eigen vermogen van 118,1% (2024: p.10 'het vereist eigen vermogen 116,6%')"
+  },
+  "aum_euro_bn": {
+   "2025": 0.341773,
+   "2024": 0.323114,
+   "pagina": 16,
+   "letterlijk": "Belegd vermogen Totaal 341.773 | 323.114 (alle bedragen in 1.000 euro)"
+  },
+  "deelnemers_actief": {
+   "2025": 22,
+   "2024": 412,
+   "pagina": 6,
+   "letterlijk": "Deelnemers 22 | 412"
+  },
+  "deelnemers_slapers": {
+   "2025": 1607,
+   "2024": 1271,
+   "pagina": 6,
+   "letterlijk": "Gewezen deelnemers 1.607 | 1.271"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 1676,
+   "2024": 1669,
+   "pagina": 6,
+   "letterlijk": "Pensioengerechtigden 1.676 | 1.669"
+  },
+  "deelnemers_totaal": {
+   "2025": 3305,
+   "2024": 3352,
+   "pagina": 6,
+   "letterlijk": "Aantal verzekerden (totaal) 3.305 | 3.352"
+  },
+  "rente_afdekking_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-19",
+  "pagina": 31
+ },
+ "invaardatum": {
+  "datum": null,
+  "status": "vaart niet in",
+  "pagina": 8
+ },
+ "opmerkingen": "Rendement: na aftrek kosten 8,9% (2024 4,0%) gekozen; bestuursverslag noemt vooral voor aftrek kosten 9,0% (2024 4,1%). Geen renteafdekkingspercentage genoemd (rentebeleid via normverdeling obligaties). 'Vereiste dekkingsgraad' staat als 'vereist eigen vermogen' in %. Fonds gaat niet over naar nieuw stelsel (p8 klacht over 'beslissing om niet over te gaan naar het nieuwe pensioenstelsel'); uitvoeringsovereenkomst Rexel beëindigd per 31-12-2025, CWO van opgebouwde rechten werknemers naar ander fonds (PGB) wacht op DNB; fonds wordt gesloten fonds. Daling actieven 412->22 door collectieve uitdiensttreding ultimo 2025."
+}

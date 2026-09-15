@@ -1,0 +1,21 @@
+{
+ "fund_id": 112,
+ "naam": "Lloyd's Register Nederland",
+ "pad": "data/annual_reports/112_Lloyd_s_Register_Nederla_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {"2025": -1.5, "2024": 8.7, "pagina": 4, "letterlijk": "Beleggingsrendement -/- 1,5% 8,7% 14,6% (kop 2025 2024 2023)"},
+  "beleidsdekkingsgraad_pct": {"2025": 126.3, "2024": 120.3, "pagina": 4, "letterlijk": "Beleidsdekkingsgraad 126,3% 120,3% 117,6%"},
+  "nominale_dekkingsgraad_pct": {"2025": 133.0, "2024": 118.7, "pagina": 4, "letterlijk": "Aanwezige dekkingsgraad 133,0% 118,7% 116,7%"},
+  "reele_dekkingsgraad_pct": {"2025": 93.0, "2024": 91.3, "pagina": 48, "letterlijk": "Reële dekkingsgraad 93,0% 91,3% (31-12-2025 31-12-2024)"},
+  "vereiste_dekkingsgraad_pct": {"2025": 109.5, "2024": 120.0, "pagina": 4, "letterlijk": "Vereiste dekkingsgraad 109,5% 120,0% 121,8%"},
+  "aum_euro_bn": {"2025": 0.274052, "2024": 0.280332, "pagina": 96, "letterlijk": "Beleggingen voor risico pensioenfonds (x EUR 1.000) 274.052 280.332"},
+  "deelnemers_actief": {"2025": 346, "2024": 351, "pagina": 4, "letterlijk": "Actieve deelnemers 346 351 386"},
+  "deelnemers_slapers": {"2025": 591, "2024": 593, "pagina": 4, "letterlijk": "Gewezen deelnemers 591 593 551"},
+  "deelnemers_pensioengerechtigd": {"2025": 288, "2024": 279, "pagina": 4, "letterlijk": "Pensioengerechtigden 288 279 270"},
+  "deelnemers_totaal": {"2025": 1225, "2024": 1223, "pagina": 4, "letterlijk": "Totaal 1.225 1.223 1.207"},
+  "rente_afdekking_pct": {"2025": 80.0, "2024": 80.0, "pagina": 11, "letterlijk": "Vanaf 31 december 2024 is de renteafdekking 80%."}
+ },
+ "vaststellingsdatum": {"datum": "2026-06-23", "pagina": 129},
+ "invaardatum": {"datum": "2028-01-01", "status": "gepland", "pagina": 42},
+ "opmerkingen": "Rente-afdekking 80% is het (strategische) beleidspercentage (p55: 80,0% met bandbreedte 75-85%); een feitelijk gerealiseerd afdekkingspercentage ultimo 2025 wordt niet genoemd. Invaren is uitgesteld naar 1 januari 2028; formeel besluit tot invaren nog niet genomen (p3). Dekkingsgraad ultimo 2025 is inclusief de per 1-1-2026 toegekende indexatie van 2,24%. Rendement is totaal na kosten incl. vastrentende/LDI (p56)."
+}

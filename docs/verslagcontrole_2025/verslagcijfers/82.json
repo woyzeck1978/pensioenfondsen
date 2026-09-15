@@ -1,0 +1,83 @@
+{
+ "fund_id": 82,
+ "naam": "Campina",
+ "pad": "data/annual_reports/82_Campina_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": 0.2,
+   "2024": 7.5,
+   "pagina": 6,
+   "letterlijk": "Beleggingsrendement 0,2 7,5 9,9 (kop 2025 2024 2023 2022 2021, %)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 133.1,
+   "2024": 129.9,
+   "pagina": 6,
+   "letterlijk": "Beleidsdekkingsgraad 133,1 129,9 124,9"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 139.8,
+   "2024": 131.2,
+   "pagina": 6,
+   "letterlijk": "Nominale dekkingsgraad 139,8 131,2 125,8"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 101.6,
+   "2024": 102.0,
+   "pagina": 37,
+   "letterlijk": "Eind 2025 bedraagt de reële dekkingsgraad 101,6% (2024: 102,0%)."
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 107.7,
+   "2024": 113.3,
+   "pagina": 6,
+   "letterlijk": "Vereiste dekkingsgraad (strategische beleggingsmix) 107,7 113,3 113,5"
+  },
+  "aum_euro_bn": {
+   "2025": 1.3623,
+   "2024": 1.3879,
+   "pagina": 6,
+   "letterlijk": "Beleggingsportefeuille (EUR 1 miljoen) totaal 1.362,3 1.387,9"
+  },
+  "deelnemers_actief": {
+   "2025": 40,
+   "2024": 46,
+   "pagina": 6,
+   "letterlijk": "Deelnemers (arbeidsongeschikten) 40 46 55"
+  },
+  "deelnemers_slapers": {
+   "2025": 2549,
+   "2024": 2656,
+   "pagina": 6,
+   "letterlijk": "Gewezen deelnemers ('slapers') 2.549 2.656 2.807"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 6371,
+   "2024": 6665,
+   "pagina": 6,
+   "letterlijk": "Pensioengerechtigden 6.371 6.665 6.745"
+  },
+  "deelnemers_totaal": {
+   "2025": 9508,
+   "2024": 10020,
+   "pagina": 6,
+   "letterlijk": "(totaalregel) 9.508 10.020 10.344"
+  },
+  "rente_afdekking_pct": {
+   "2025": 100.3,
+   "2024": 78.7,
+   "pagina": 53,
+   "letterlijk": "S1 Renterisico ... 31 december 2025: 100,3% afgedekt. 31 december 2024: 78,7% afgedekt."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-04-22",
+  "pagina": 91
+ },
+ "invaardatum": {
+  "datum": null,
+  "status": "vaart niet in",
+  "pagina": 5
+ },
+ "opmerkingen": "Gesloten fonds. Deelnemerscategorieën: naast 2.549 'slapers' zijn er 548 (2024: 653) 'gewezen deelnemers (werkzaam bij de werkgevers)' - niet opgeteld; 'actief' zijn alleen 40 arbeidsongeschikten met opbouw. Totaal 9.508 omvat alle vier groepen. AUM = totaal beleggingen (EUR 1.362,3 mln); pensioenvermogen is 1.248,9 mln. Invaren: bestuur kiest voor CWO naar verzekeraar Athora/Zwitserleven en voorgenomen liquidatie, niet invaren onder Wtp; CWO-dossier begin maart 2026 bij DNB ingediend, pensioenen naar verwachting vanaf medio 2026 door Zwitserleven (p5). Tabel p73 noemt benodigde BDG voor TBI 131,0% terwijl p16/p37 131,1% zeggen. Vaststelling: jaarrekening ondertekend 'Woerden, 22 april 2026' (p91; bestuursverslag p56 zelfde datum)."
+}

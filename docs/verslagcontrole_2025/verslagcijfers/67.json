@@ -1,0 +1,83 @@
+{
+ "fund_id": 67,
+ "naam": "Stap APF",
+ "pad": "data/annual_reports/67_Stap_APF_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "aum_euro_bn": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "deelnemers_actief": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "deelnemers_slapers": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "deelnemers_totaal": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "rente_afdekking_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-16",
+  "pagina": 67
+ },
+ "invaardatum": {
+  "datum": null,
+  "status": "geen datum genoemd",
+  "pagina": 29
+ },
+ "opmerkingen": "Stap is een APF met afgescheiden pensioenkringen (Eastman, SVG, Holland Casino, Douwe Egberts, Ballast Nedam, GE Nederland, TotalEnergies, Aon, Astellas, IFF, Multi-client Pensioenkring 2). Het verslag geeft geen fondsbrede rendement, dekkingsgraden, belegd vermogen, deelnemerstotaal of renteafdekking; alleen per kring (overzicht p.18). Alle velden daarom null. Vaststellingsdatum onzeker: bestuursverslag Stap eindigt met 'Utrecht, 16 juni 2026 / Stichting Algemeen Pensioenfonds Stap' (p.67); verslag RvT zelfde datum (p.72); geen aparte ondertekening jaarrekening gevonden. Invaren verschilt per kring: Holland Casino ingevaren 1 mei 2025, doel voor een groep kringen 1 oktober 2026 (p.30), overige uiterlijk 1 januari 2028. Op 23 april 2026 fusievoornemen met Het Nederlandse Pensioenfonds aangekondigd (p.67)."
+}

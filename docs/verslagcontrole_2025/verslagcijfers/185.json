@@ -1,0 +1,83 @@
+{
+ "fund_id": 185,
+ "naam": "Pensioenkring Astellas (Stap)",
+ "pad": "data/annual_reports/185_Astellas_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": 0.1,
+   "2024": 8.6,
+   "pagina": 5,
+   "letterlijk": "Beleggingsrendement risico pensioenkring 0,1% 8,6%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 133.4,
+   "2024": 125.6,
+   "pagina": 5,
+   "letterlijk": "Beleidsdekkingsgraad 133,4% 125,6%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 140.2,
+   "2024": 123.6,
+   "pagina": 5,
+   "letterlijk": "Feitelijke dekkingsgraad 140,2% 123,6%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 97.9,
+   "2024": 94.4,
+   "pagina": 22,
+   "letterlijk": "Reële dekkingsgraad 97,9 94,4"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 119.3,
+   "2024": 118.4,
+   "pagina": 5,
+   "letterlijk": "Vereiste dekkingsgraad 119,3% 118,4%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.501943,
+   "2024": 0.481217,
+   "pagina": 60,
+   "letterlijk": "Beleggingen voor risico Pensioenkring Astellas 501.943 481.217 (bedragen x € 1.000)"
+  },
+  "deelnemers_actief": {
+   "2025": 676,
+   "2024": 681,
+   "pagina": 5,
+   "letterlijk": "Actieven en arbeidsongeschikten 676 681"
+  },
+  "deelnemers_slapers": {
+   "2025": 1022,
+   "2024": 1014,
+   "pagina": 5,
+   "letterlijk": "Gewezen deelnemers 1.022 1.014"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 408,
+   "2024": 377,
+   "pagina": 5,
+   "letterlijk": "Pensioengerechtigden 408 377"
+  },
+  "deelnemers_totaal": {
+   "2025": 2106,
+   "2024": 2072,
+   "pagina": 5,
+   "letterlijk": "Totaal 2.106 2.072"
+  },
+  "rente_afdekking_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": 29,
+   "letterlijk": "Gedurende 2025 is een vast niveau voor de strategische renterisico-afdekking van 60,0% gehanteerd."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-16",
+  "pagina": 100
+ },
+ "invaardatum": {
+  "datum": "2027-07-01",
+  "status": "gepland",
+  "pagina": 33
+ },
+ "opmerkingen": "Rendement: kerngegevens p5 en p33 geven 0,1% (positief), maar p22 spreekt van 'een negatief beleggingsrendement van 0,1%' - teken tegenstrijdig in het verslag; 0.1 overgenomen uit de tabel. Rendement risico deelnemer apart: -2,1% (2024: 8,9%). Renteafdekking: alleen strategisch 60,0% genoemd (p29, p52) en 'rond het strategische niveau van 60% geflucteerd' (p14); geen gerealiseerd ultimo-percentage, dus null. AUM = beleggingen voor risico pensioenkring (balans p60); excl. beleggingen voor risico deelnemers (17.592 / 22.355 duizend); pensioenvermogen kerngegevens 499.405 / 498.208 duizend. Vaststelling: financiële opstelling vastgesteld 16 juni 2026 (p100), ondertekening Den Haag 16 juni 2026 (p98). Invaren: transitiedatum uitgesteld van 1 januari 2027 naar 1 juli 2027 (FPR-kring bij Stap, wissel uitvoerder naar TKP), p33/p34. Nominale dekkingsgraad = 'Feitelijke dekkingsgraad' (gelijk aan dekkingsgraad op basis van marktrente, p22)."
+}

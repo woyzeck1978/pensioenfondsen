@@ -1,0 +1,83 @@
+{
+ "fund_id": 117,
+ "naam": "Nederlandse Bisdommen",
+ "pad": "data/annual_reports/117_Nederlandse_Bisdommen_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": 0.9,
+   "2024": 7.0,
+   "pagina": 5,
+   "letterlijk": "Beleggingsrendementen (op basis van total return) 0,9% 7,0%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 155.9,
+   "2024": 154.5,
+   "pagina": 6,
+   "letterlijk": "Beleidsdekkingsgraad 155,9% 154,5%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 160.0,
+   "2024": 150.6,
+   "pagina": 6,
+   "letterlijk": "Dekkingsgraad (ultimo jaar) Op basis van RTS 160,0% 150,6%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 120.9,
+   "2024": 120.5,
+   "pagina": 49,
+   "letterlijk": "Ultimo 2025 bedroeg de reële dekkingsgraad 120,9% (ultimo 2024 was dit 120,5%)"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 111.8,
+   "2024": 111.8,
+   "pagina": 6,
+   "letterlijk": "Vereiste FTK (op basis van de strategische mix) 111,8% 111,8%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.54027,
+   "2024": 0.553854,
+   "pagina": 5,
+   "letterlijk": "(in duizenden euro) Totaal belegd vermogen 540.270 553.854"
+  },
+  "deelnemers_actief": {
+   "2025": 544,
+   "2024": 589,
+   "pagina": 5,
+   "letterlijk": "Actieve deelnemers 544 589"
+  },
+  "deelnemers_slapers": {
+   "2025": 457,
+   "2024": 488,
+   "pagina": 5,
+   "letterlijk": "Slapers 457 488"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 1558,
+   "2024": 1555,
+   "pagina": 5,
+   "letterlijk": "Pensioengerechtigden 1.558 1.555"
+  },
+  "deelnemers_totaal": {
+   "2025": 2559,
+   "2024": 2632,
+   "pagina": 5,
+   "letterlijk": "Totaal 2.559 2.632"
+  },
+  "rente_afdekking_pct": {
+   "2025": 101.7,
+   "2024": null,
+   "pagina": 100,
+   "letterlijk": "De feitelijke renteafdekking op basis van de DNB-methodiek bedraag 101,7% eind 2025."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-17",
+  "pagina": 65
+ },
+ "invaardatum": {
+  "datum": "2028-01-01",
+  "status": "gepland",
+  "pagina": 20
+ },
+ "opmerkingen": "Vereiste dekkingsgraad = strategisch (111,8%); feitelijk vereist is 111,9% (p38/p100). Renteafdekking: strategisch 100% op swapcurve, feitelijk 101,7% DNB-methodiek; geen 2024-waarde genoemd. Rendement is total return (returnportefeuille 0,5%, matching 0,9% bijdragen p49). Beleidsdekkingsgraad 2024 volgens p23 met 0,36% te laag vastgesteld (fout hersteld)."
+}

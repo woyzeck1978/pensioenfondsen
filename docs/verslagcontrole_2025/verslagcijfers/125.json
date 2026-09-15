@@ -1,0 +1,83 @@
+{
+ "fund_id": 125,
+ "naam": "Rockwool",
+ "pad": "data/annual_reports/125_Rockwool_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -2.0,
+   "2024": 9.0,
+   "pagina": 7,
+   "letterlijk": "Rendement o.b.v. total return -2,0% 9,0%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 121.6,
+   "2024": 113.1,
+   "pagina": 8,
+   "letterlijk": "Beleidsdekkingsgraad 2) 121,6% 113,1%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 125.1,
+   "2024": 114.0,
+   "pagina": 8,
+   "letterlijk": "Dekkingsgraad FTK 1) 125,1% 114,0%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 89.8,
+   "2024": 84.7,
+   "pagina": 9,
+   "letterlijk": "Einde 2025 bedroeg de reële dekkingsgraad 89,8% (einde 2024 was dit 84,7%)"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 113.4,
+   "2024": 113.5,
+   "pagina": 8,
+   "letterlijk": "Vereiste dekkingsgraad (strategisch) 113,4% 113,5%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.437981,
+   "2024": 0.446321,
+   "pagina": 7,
+   "letterlijk": "Belegd vermogen 437.981 446.321 (in duizenden euro)"
+  },
+  "deelnemers_actief": {
+   "2025": 1206,
+   "2024": 1212,
+   "pagina": 7,
+   "letterlijk": "Deelnemers 1.206 1.212"
+  },
+  "deelnemers_slapers": {
+   "2025": 976,
+   "2024": 982,
+   "pagina": 7,
+   "letterlijk": "Gewezen deelnemers 976 982"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 1128,
+   "2024": 1077,
+   "pagina": 7,
+   "letterlijk": "Pensioengerechtigden 1.128 1.077"
+  },
+  "deelnemers_totaal": {
+   "2025": 3310,
+   "2024": 3271,
+   "pagina": 7,
+   "letterlijk": "Totaal aantal verzekerden 3.310 3.271"
+  },
+  "rente_afdekking_pct": {
+   "2025": 82.2,
+   "2024": null,
+   "pagina": 80,
+   "letterlijk": "het renterisico aan het einde van het verslagjaar voor 82,2% werd afgedekt"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-24",
+  "pagina": 87
+ },
+ "invaardatum": {
+  "datum": "2027-07-01",
+  "status": "gepland",
+  "pagina": 6
+ },
+ "opmerkingen": "Voorwoord p5 zegt dat de dekkingsgraad steeg 'als gevolg van de gedaalde rente' terwijl p27/p30 van een gestegen rente in Europa spreken; cijfers zelf consistent. Feitelijk vereiste dekkingsgraad 114,7% (2024: 113,9%); strategisch 113,4% genomen. Belegd vermogen incl. liquide middelen/vorderingen/schulden beleggingen: € 438,094 mln (p24). Voorwoord gedateerd 5 juni 2026, bestuursverslag en jaarrekening 'Vastgesteld te Roermond, 24 juni 2026'. Renteafdekking-norm per 1-12-2025 verhoogd van 69% naar 82%; 2024-feitelijk niet in uitsnede gevonden."
+}

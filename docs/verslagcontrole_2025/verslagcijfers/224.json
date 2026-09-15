@@ -1,0 +1,83 @@
+{
+ "fund_id": 224,
+ "naam": "Kring E-DC (De Nationale)",
+ "pad": "data/annual_reports/224_Kring_E_DC_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": 7.8,
+   "2024": 13.2,
+   "pagina": 13,
+   "letterlijk": "Kring E: Rendement op basis van total return 7,8% (2024: 13,2%)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 100.4,
+   "2024": 100.7,
+   "pagina": 289,
+   "letterlijk": "De dekkingsgraad is 100,4% (2024: 100,7%)"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "aum_euro_bn": {
+   "2025": 0.018451,
+   "2024": 0.01649,
+   "pagina": 13,
+   "letterlijk": "Kring E (in duizenden euro): Beleggingen voor risico deelnemers, Belegd vermogen 18.451 (2024: 16.490)"
+  },
+  "deelnemers_actief": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "deelnemers_slapers": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "deelnemers_totaal": {
+   "2025": 1109,
+   "2024": 1085,
+   "pagina": 13,
+   "letterlijk": "Kring E: Totaal aantal deelnemers 1.109"
+  },
+  "rente_afdekking_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-17",
+  "pagina": 180
+ },
+ "invaardatum": {
+  "datum": null,
+  "status": "vaart niet in",
+  "pagina": 107
+ },
+ "opmerkingen": "Kring E is een DC-kring (premieovereenkomst, alles voor risico deelnemers); geen beleids-, reële of vereiste dekkingsgraad. De genoemde 'dekkingsgraad' 100,4% (p289) is pensioenvermogen 18.373 / voorziening risico deelnemers, geen FTK-dekkingsgraad. Kerncijfers Kring E (p13) geven alleen totaal aantal deelnemers, geen splitsing actief/slapers/gepensioneerd. Renteafdekking: alleen beleid in de lifecycle (richting 90% bij vaste, 70% bij variabele uitkering, p106), geen ultimocijfer. Rendement 7,8% ook in totaaloverzicht p106 (marktwaarde totaal 18.864 incl. liquiditeiten). Vaststellingsdatum geldt voor het hele APF (p180: 'Het bestuur heeft het jaarverslag vastgesteld op 17 juni 2026'; ook p164). Invaren: DC-kapitalen worden naar verwachting per 1 september 2026 collectief overgedragen naar de hoofdkringen en daar op het transitiemoment van de basisregeling mee ingevaren; Kring E zelf wordt begin 2027 beëindigd (p107, p289) - daarom 'vaart niet in' als kring."
+}

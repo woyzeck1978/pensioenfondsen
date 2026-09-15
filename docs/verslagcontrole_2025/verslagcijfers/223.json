@@ -1,0 +1,83 @@
+{
+ "fund_id": 223,
+ "naam": "Kring Bavaria (Centraal Beheer)",
+ "pad": "data/annual_reports/65_Centraal_Beheer_APF_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -0.64,
+   "2024": 7.79,
+   "pagina": 203,
+   "letterlijk": "Beleggingsrendement -0,64% 7,79% 7,80% (kop 2025 2024 ...)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 123.1,
+   "2024": 115.5,
+   "pagina": 209,
+   "letterlijk": "Beleidsdekkingsgraad 123,1% 115,5% (kop 31-12-2025 31-12-2024 ...)"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 130.8,
+   "2024": 114.4,
+   "pagina": 209,
+   "letterlijk": "Actuele dekkingsgraad 130,8% 114,4%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 89.9,
+   "2024": 85.8,
+   "pagina": 209,
+   "letterlijk": "Reële dekkingsgraad 89,9% 85,8%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 112.9,
+   "2024": 113.4,
+   "pagina": 209,
+   "letterlijk": "Vereiste dekkingsgraad 112,9% 113,4%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.221645,
+   "2024": 0.231703,
+   "pagina": 204,
+   "letterlijk": "Totaal belegd vermogen (Bedragen in € 1.000) 221.645 231.703"
+  },
+  "deelnemers_actief": {
+   "2025": 27,
+   "2024": 33,
+   "pagina": 202,
+   "letterlijk": "Actieven en arbeidsongeschikten 27 33"
+  },
+  "deelnemers_slapers": {
+   "2025": 1484,
+   "2024": 1540,
+   "pagina": 202,
+   "letterlijk": "Gewezen deelnemers 1.484 1.540"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 452,
+   "2024": 431,
+   "pagina": 202,
+   "letterlijk": "Pensioengerechtigden 452 431"
+  },
+  "deelnemers_totaal": {
+   "2025": 1963,
+   "2024": 2004,
+   "pagina": 202,
+   "letterlijk": "Deelnemers 1.963 2.004"
+  },
+  "rente_afdekking_pct": {
+   "2025": 65.0,
+   "2024": null,
+   "pagina": 218,
+   "letterlijk": "Het doel in 2025 was om 65% van de mutatie van de pensioenvoorziening als gevolg van een verandering van de marktrentecurve af te dekken."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-17",
+  "pagina": 843
+ },
+ "invaardatum": {
+  "datum": null,
+  "status": "vaart niet in",
+  "pagina": 202
+ },
+ "opmerkingen": "Vaststellingsdatum: 'Vaststelling en ondertekening jaarrekening, Zeist, 17 juni 2026' (p843); het bestuursverslag is ondertekend op 15 juni 2026 (p403). Kerncijfers van de kring staan in paragraaf x.1 (deelnemers, rendement, belegd vermogen); reële en vereiste dekkingsgraad komen uit x.3.1. Rendement is het totale beleggingsrendement van de kring, inclusief matchingportefeuille. Rente-afdekking: het verslag noemt alleen het beleidspercentage uit de risicoparagraaf, geen gerealiseerde afdekking per ultimo; 2024 niet genoemd. Bavaria: begin 2026 renteafdekking verhoogd naar 80% vanwege de CWO (p218). Invaren niet: 'pensioenaanspraken en -rechten van alle deelnemers in Kring Bavaria per 1 mei 2026 op grond van artikel 84 PW overgedragen aan Aegon' (collectieve waardeoverdracht naar verzekeraar, p202/p219); kring wordt beëindigd. In hoofdstuk 4.1 wordt nog gesproken over 'uitstel van de beoogde transitie van Kring Bavaria' (p30)."
+}

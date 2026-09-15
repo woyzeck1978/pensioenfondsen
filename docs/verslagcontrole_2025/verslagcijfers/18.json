@@ -1,0 +1,83 @@
+{
+ "fund_id": 18,
+ "naam": "HiBiN (Building Materials Trade)",
+ "pad": "data/annual_reports/18_HiBiN_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -2.7,
+   "2024": 8.1,
+   "pagina": 4,
+   "letterlijk": "Beleggingsrendement -2,7% 8,1% 9,4% (kop 2025 2024 2023 2022 2021)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 122.5,
+   "2024": 112.1,
+   "pagina": 4,
+   "letterlijk": "Beleidsdekkingsgraad 122,5% 112,1% 113,3%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 133.0,
+   "2024": 111.8,
+   "pagina": 4,
+   "letterlijk": "Dekkingsgraad 133,0% 111,8% 110,7%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 84.8,
+   "2024": 82.3,
+   "pagina": 4,
+   "letterlijk": "Reële dekkingsgraad 84,80% 82,3% 82,1%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 116.6,
+   "2024": 117.2,
+   "pagina": 4,
+   "letterlijk": "Dekkingsgraad vereist vermogen 116,6% 117,2% 119,0%"
+  },
+  "aum_euro_bn": {
+   "2025": 1.171877,
+   "2024": 1.234557,
+   "pagina": 4,
+   "letterlijk": "Beleggingen (x € 1.000) Belegd vermogen 1.171.877 1.234.557"
+  },
+  "deelnemers_actief": {
+   "2025": 10785,
+   "2024": 10556,
+   "pagina": 4,
+   "letterlijk": "Actieve deelnemers 10.785 10.556 10.459"
+  },
+  "deelnemers_slapers": {
+   "2025": 20615,
+   "2024": 19868,
+   "pagina": 4,
+   "letterlijk": "Gewezen deelnemers 20.615 19.868 18.543"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 6251,
+   "2024": 6001,
+   "pagina": 4,
+   "letterlijk": "Pensioengerechtigde deelnemers: 6.251 6.001 5.821"
+  },
+  "deelnemers_totaal": {
+   "2025": null,
+   "2024": null,
+   "pagina": 4,
+   "letterlijk": "geen totaalregel in kerngegevens"
+  },
+  "rente_afdekking_pct": {
+   "2025": 80.0,
+   "2024": 60.0,
+   "pagina": 52,
+   "letterlijk": "De strategische afdekking van het renterisico van het fonds ultimo 2025 is 80% van de nominale verplichtingen op basis van marktrente"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-05-04",
+  "pagina": 58
+ },
+ "invaardatum": {
+  "datum": "2026-10-01",
+  "status": "gepland",
+  "pagina": 15
+ },
+ "opmerkingen": "Kerngegevenstabel op PDF-pagina 4 (verslagpagina 7), kolommen 2025..2021. Totaal deelnemers niet vermeld (niet opgeteld). AUM = 'Belegd vermogen' x € 1.000; p27 noemt beleggingsportefeuille incl. negatieve derivaten € 1.167,9 mln (2024: € 1.230,8 mln); pensioenvermogen 1.286.486. Opvallend: rendement -2,7% terwijl dekkingsgraad steeg van 111,8% naar 133,0% (rentestijging). Rente-afdekking is de strategische norm 80% (bandbreedte 75-85%), geen gerealiseerd percentage gevonden; verhoogd van 60% naar 80% per februari 2025 (p27), 2024-waarde 60% uit 'in 2024 al verhoogd van 50% naar 60%'. Vereiste dekkingsgraad = regel 'Dekkingsgraad vereist vermogen'. Vaststelling: 'jaarrekening 2025 vastgesteld op 4 mei 2026' (p58), ondertekening 'Etten Leur, 18 mei 2026'. Invaren: voorgenomen datum 1 oktober 2026 (uitgesteld van 1 januari 2026)."
+}

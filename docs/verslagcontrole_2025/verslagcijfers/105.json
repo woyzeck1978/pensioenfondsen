@@ -1,0 +1,83 @@
+{
+ "fund_id": 105,
+ "naam": "Heineken",
+ "pad": "data/annual_reports/105_Heineken_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": 2.2,
+   "2024": 12.6,
+   "pagina": 5,
+   "letterlijk": "Portefeuillerendement 2,2% 12,6% (kerncijfers)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 150.5,
+   "2024": 139.3,
+   "pagina": 5,
+   "letterlijk": "Beleidsdekkingsgraad 150,5% 139,3%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 158.9,
+   "2024": 138.1,
+   "pagina": 5,
+   "letterlijk": "Actuele dekkingsgraad 158,9% 138,1%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 111.5,
+   "2024": 105.0,
+   "pagina": 5,
+   "letterlijk": "Reële dekkingsgraad 111,5% 105,0%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 124.4,
+   "2024": 124.3,
+   "pagina": 5,
+   "letterlijk": "Vereiste dekkingsgraad 124,4% 124,3%"
+  },
+  "aum_euro_bn": {
+   "2025": 4.828,
+   "2024": 4.787,
+   "pagina": 5,
+   "letterlijk": "Beleggingen Totaal 4.828 4.787 (bedragen x € 1 miljoen)"
+  },
+  "deelnemers_actief": {
+   "2025": 2971,
+   "2024": 3085,
+   "pagina": 5,
+   "letterlijk": "Actieve deelnemers 2.971 3.085"
+  },
+  "deelnemers_slapers": {
+   "2025": 7303,
+   "2024": 7290,
+   "pagina": 5,
+   "letterlijk": "Gewezen deelnemers 7.303 7.290"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 5972,
+   "2024": 5953,
+   "pagina": 5,
+   "letterlijk": "Pensioengerechtigden 5.972 5.953"
+  },
+  "deelnemers_totaal": {
+   "2025": 16246,
+   "2024": 16328,
+   "pagina": 5,
+   "letterlijk": "Totaal 16.246 16.328"
+  },
+  "rente_afdekking_pct": {
+   "2025": 63.8,
+   "2024": 56.2,
+   "pagina": 62,
+   "letterlijk": "Eind 2025 was op die manier 63,8% van het renterisico afgedekt (eind 2024 was dit 56,2%)"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-05-26",
+  "pagina": 102
+ },
+ "invaardatum": {
+  "datum": "2026-01-01",
+  "status": "ingevaren",
+  "pagina": 124
+ },
+ "opmerkingen": "Rendement is 'Portefeuillerendement' (p5; p35: 'Rendement beleggingen na vermogensbeheerkosten 2,2%'), totale portefeuille incl. matching. AUM = totaal beleggingen 4.828 mln; pensioenvermogen (DNB-methodiek) is 4.835 mln. Vaststelling: 'Het bestuur heeft de jaarrekening op 26 mei 2026 opgemaakt' (p102), ondertekening Amstelveen 26 mei 2026 (p132). Renteafdekking 63,8% op basis van marktrente (ook p24). Telling gewezen deelnemers vanaf 2024 gewijzigd (voetnoot p5)."
+}

@@ -1,0 +1,83 @@
+{
+ "fund_id": 230,
+ "naam": "Pensioenkring Cargill (HNPF)",
+ "pad": "data/annual_reports/230_Pensioenkring_Cargill_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -2.24,
+   "2024": 8.98,
+   "pagina": 14,
+   "letterlijk": "Beleggingsrendement (in %) -2,24% 8,98%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 149.6,
+   "2024": 148.4,
+   "pagina": 13,
+   "letterlijk": "Beleidsdekkingsgraad (in %) 149,6% 148,4%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 156.7,
+   "2024": 148.9,
+   "pagina": 13,
+   "letterlijk": "Aanwezige dekkingsgraad (in %) 156,7% 148,9%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 108.2,
+   "2024": 108.5,
+   "pagina": 13,
+   "letterlijk": "Reële dekkingsgraad (in %) 108,2% 108,5%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 115.3,
+   "2024": 115.5,
+   "pagina": 13,
+   "letterlijk": "Vereiste dekkingsgraad (in %) 115,3% 115,5%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.218373,
+   "2024": 0.238783,
+   "pagina": 14,
+   "letterlijk": "Totaal beleggingen 218.373 238.783 (bedragen in duizenden euro's)"
+  },
+  "deelnemers_actief": {
+   "2025": 328,
+   "2024": 311,
+   "pagina": 13,
+   "letterlijk": "Aantal actieve deelnemers 328 311"
+  },
+  "deelnemers_slapers": {
+   "2025": 213,
+   "2024": 200,
+   "pagina": 13,
+   "letterlijk": "Aantal gewezen deelnemers 213 200"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 218,
+   "2024": 206,
+   "pagina": 13,
+   "letterlijk": "Aantal pensioengerechtigden 218 206"
+  },
+  "deelnemers_totaal": {
+   "2025": 759,
+   "2024": 717,
+   "pagina": 13,
+   "letterlijk": "759 717"
+  },
+  "rente_afdekking_pct": {
+   "2025": 101.9,
+   "2024": null,
+   "pagina": 181,
+   "letterlijk": "De feitelijke afdekking per ultimo 2025 bedroeg 101,9%."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-30",
+  "pagina": 911
+ },
+ "invaardatum": {
+  "datum": "2027-01-01",
+  "status": "gepland",
+  "pagina": 171
+ },
+ "opmerkingen": "Kring Cargill Bioindustrial binnen APF Het Nederlandse Pensioenfonds (1131 p.); alle cijfers uit de kring-kerncijfers p13-14, niet het APF-totaal. Totaal beleggingen is incl. negatieve derivaten (-7.786); pensioenvermogen 227.097. Dekkingsgraad 2025 berekend incl. bestemmingsreserve (voetnoot). Rente-afdekking: norm 100% op marktrente, feitelijk 101,9% (buiten bandbreedte, verhoogd i.v.m. indexatie 8,28% per 1-1-2026); 2024 niet genoemd. Invaardatum afgeleid uit 'solidaire premieregeling die zal gelden per 1 januari 2027' (p171); bevestigd door BO-verslag Cargill p194: invaardatum verschoven van 1 juli 2025 naar 1 juli 2026, 'nu koersen we op 1 januari 2027'. Vaststelling: ondertekening jaarrekening en bestuursverslag Badhoevedorp 30 juni 2026 (p438/p911)."
+}

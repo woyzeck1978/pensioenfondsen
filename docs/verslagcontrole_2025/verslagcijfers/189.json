@@ -1,0 +1,83 @@
+{
+ "fund_id": 189,
+ "naam": "Pensioenkring OWASE (Hnp)",
+ "pad": "data/annual_reports/165_Kring_Arcadis_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -2.5,
+   "2024": 8.89,
+   "pagina": 18,
+   "letterlijk": "Beleggingsrendement (in %) -2,50% 8,89%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 133.0,
+   "2024": 129.9,
+   "pagina": 17,
+   "letterlijk": "Beleidsdekkingsgraad (in %) 133,0% 129,9%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 136.5,
+   "2024": 128.0,
+   "pagina": 17,
+   "letterlijk": "Aanwezige dekkingsgraad (in %) 136,5% 128,0%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 99.8,
+   "2024": 98.6,
+   "pagina": 18,
+   "letterlijk": "Reële dekkingsgraad (in %) 99,8% 98,6%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 118.3,
+   "2024": 118.3,
+   "pagina": 17,
+   "letterlijk": "Vereiste dekkingsgraad (in %) 118,3% 118,3%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.924402,
+   "2024": 1.005534,
+   "pagina": 18,
+   "letterlijk": "Totaal beleggingen 924.402 1.005.534 (x EUR 1.000)"
+  },
+  "deelnemers_actief": {
+   "2025": 1326,
+   "2024": 1276,
+   "pagina": 17,
+   "letterlijk": "Actieve deelnemers 1.326 1.276"
+  },
+  "deelnemers_slapers": {
+   "2025": 1627,
+   "2024": 1601,
+   "pagina": 17,
+   "letterlijk": "Gewezen deelnemers 1.627 1.601"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 1808,
+   "2024": 1768,
+   "pagina": 17,
+   "letterlijk": "Pensioengerechtigden 1.808 1.768"
+  },
+  "deelnemers_totaal": {
+   "2025": 4761,
+   "2024": 4645,
+   "pagina": 17,
+   "letterlijk": "4.761 4.645"
+  },
+  "rente_afdekking_pct": {
+   "2025": 102.7,
+   "2024": null,
+   "pagina": 239,
+   "letterlijk": "De feitelĳke afdekking per ultimo 2025 bedroeg 102,7%"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-30",
+  "pagina": 911
+ },
+ "invaardatum": {
+  "datum": "2026-04-01",
+  "status": "ingevaren",
+  "pagina": 34
+ },
+ "opmerkingen": "Cijfers uit het eigen kerncijferhoofdstuk van de kring (Jaarverslag 2025 Stichting Het Nederlandse Pensioenfonds, bedragen x EUR 1.000). AUM = 'Totaal beleggingen' uit de kerncijfers (na aftrek negatieve derivaten). Nominale dekkingsgraad = 'Aanwezige dekkingsgraad'. Vaststellingsdatum = ondertekening jaarrekening (Badhoevedorp, 30 juni 2026, p.911; ondertekening bestuursverslag p.438 zelfde datum). Renteafdekking 2024 niet opgezocht/genoemd. Renteafdekking-norm 100%. 'Inmiddels is Pensioenkring OWASE per 1 april 2026 overgegaan naar het nieuwe stelsel' (p.34; p.250 'Implementatie en invaren op 1 april 2026'; formele overgang was voorzien op 1 januari 2026)."
+}

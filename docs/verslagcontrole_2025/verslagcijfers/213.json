@@ -1,0 +1,83 @@
+{
+ "fund_id": 213,
+ "naam": "Kring DB Stabiliteit (Centraal Beheer)",
+ "pad": "data/annual_reports/65_Centraal_Beheer_APF_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -12.56,
+   "2024": 10.73,
+   "pagina": 126,
+   "letterlijk": "Beleggingsrendement -12,56% 10,73% (kop 2025 2024)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 112.3,
+   "2024": 99.0,
+   "pagina": 132,
+   "letterlijk": "Beleidsdekkingsgraad 112,3% 99,0% (31-12-2025, 31-12-2024)"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 119.3,
+   "2024": 104.5,
+   "pagina": 132,
+   "letterlijk": "Actuele dekkingsgraad 119,3% 104,5%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 77.0,
+   "2024": 71.2,
+   "pagina": 132,
+   "letterlijk": "Reële dekkingsgraad 77,0% 71,2%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 111.1,
+   "2024": 111.1,
+   "pagina": 132,
+   "letterlijk": "Vereiste dekkingsgraad 111,1% 111,1%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.029244,
+   "2024": 0.032308,
+   "pagina": 127,
+   "letterlijk": "Totaal belegd vermogen (x € 1.000) 29.244 32.308"
+  },
+  "deelnemers_actief": {
+   "2025": 310,
+   "2024": 286,
+   "pagina": 125,
+   "letterlijk": "Actieven en arbeidsongeschikten 310 286"
+  },
+  "deelnemers_slapers": {
+   "2025": 1367,
+   "2024": 1369,
+   "pagina": 125,
+   "letterlijk": "Gewezen deelnemers 1.367 1.369"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 98,
+   "2024": 76,
+   "pagina": 125,
+   "letterlijk": "Pensioengerechtigden 98 76"
+  },
+  "deelnemers_totaal": {
+   "2025": 1775,
+   "2024": 1731,
+   "pagina": 125,
+   "letterlijk": "Deelnemers 1.775 1.731"
+  },
+  "rente_afdekking_pct": {
+   "2025": 90,
+   "2024": null,
+   "pagina": 140,
+   "letterlijk": "strategie waarbĳ 90% van de rentegevoeligheid van de pensioenverplichtingen op basis van de marktrente wordt afgedekt"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-17",
+  "pagina": 425
+ },
+ "invaardatum": {
+  "datum": null,
+  "status": "vaart niet in",
+  "pagina": 142
+ },
+ "opmerkingen": "Renteafdekking 90% is het beleid/strategie, geen gerealiseerd ultimo-percentage; geen 2024-waarde genoemd. Negatief rendement (-12,56%) door hoge renteafdekking bij stijgende rente. Invaren: 'de conclusie om niet in te varen is met sociale partners gedeeld' (p142). Vaststelling: 'heeft de jaarrekening over het verslagjaar 2025 vastgesteld in de vergadering van 17 juni 2026' (p425); bestuursverslag ondertekend 'Zeist, 15 juni 2026' (p403). Deelnemersaantallen: 'Deelnemers' = totaal; actieven incl. arbeidsongeschikten. Bedragen in de kringtabellen in € 1.000."
+}

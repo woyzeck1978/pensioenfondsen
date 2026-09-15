@@ -1,0 +1,83 @@
+{
+ "fund_id": 118,
+ "naam": "NN CDC",
+ "pad": "data/annual_reports/118_NN_CDC_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -5.9,
+   "2024": 5.8,
+   "pagina": 7,
+   "letterlijk": "Beleggingsrendement -5,9% | 5,8%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 136.3,
+   "2024": 128.2,
+   "pagina": 7,
+   "letterlijk": "Beleidsdekkingsgraad 136,3% | 128,2%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 147.7,
+   "2024": 123.2,
+   "pagina": 7,
+   "letterlijk": "Aanwezige dekkingsgraad 147,7% | 123,2%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 92.3,
+   "2024": 91.4,
+   "pagina": 7,
+   "letterlijk": "Reële dekkingsgraad 92,3% | 91,4%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 118.2,
+   "2024": 117.6,
+   "pagina": 7,
+   "letterlijk": "Strategisch vereiste dekkingsgraad 118,2% | 117,6%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.883026,
+   "2024": 1.023029,
+   "pagina": 7,
+   "letterlijk": "Belegd vermogen 883.026 | 1.023.029 (in duizenden euro)"
+  },
+  "deelnemers_actief": {
+   "2025": 151,
+   "2024": 155,
+   "pagina": 7,
+   "letterlijk": "Actieve deelnemers 151 | 155"
+  },
+  "deelnemers_slapers": {
+   "2025": 11521,
+   "2024": 11814,
+   "pagina": 7,
+   "letterlijk": "Gewezen deelnemers 11.521 | 11.814"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 1028,
+   "2024": 866,
+   "pagina": 7,
+   "letterlijk": "Pensioengerechtigden 1.028 | 866"
+  },
+  "deelnemers_totaal": {
+   "2025": 12700,
+   "2024": 12835,
+   "pagina": 7,
+   "letterlijk": "Totaal 12.700 | 12.835"
+  },
+  "rente_afdekking_pct": {
+   "2025": 81.6,
+   "2024": null,
+   "pagina": 27,
+   "letterlijk": "Het jaar eindigde met een renteafdekking van 81,6%."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-15",
+  "pagina": 68
+ },
+ "invaardatum": {
+  "datum": null,
+  "status": "vaart niet in",
+  "pagina": 11
+ },
+ "opmerkingen": "Fonds in liquidatie: CWO naar De Nationale APF per 1-1-2026; DN APF plant invaren per 1 juli 2027 (p11), het fonds zelf vaart niet in. Renteafdekking: beleggingsparagraaf 81,6% (strategisch 80% op swapcurve); risicoparagraaf p62 noemt feitelijke afdekking 82,1% op DNB-methodiek. Tegenstrijdigheid: p20 zegt belegd vermogen 'circa 1.010 mln eind 2024 naar circa 940 mln ultimo 2025', kerncijfers p7 geven 1.023.029 / 883.026 (duizenden). Vereiste dekkingsgraad strategisch 118,2%; feitelijk 118,5% (2024 117,7%). Verslag noemt 151 'actieve deelnemers' maar ook dat er geen actieve deelnemers meer zijn (p20)."
+}

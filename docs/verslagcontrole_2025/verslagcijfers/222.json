@@ -1,0 +1,83 @@
+{
+ "fund_id": 222,
+ "naam": "Kring HP Nederland (Centraal Beheer)",
+ "pad": "data/annual_reports/65_Centraal_Beheer_APF_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -1.74,
+   "2024": 12.18,
+   "pagina": 316,
+   "letterlijk": "Beleggingsrendement -1,74% 12,18% (kop 2025 2024)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 137.1,
+   "2024": 130.1,
+   "pagina": 323,
+   "letterlijk": "Beleidsdekkingsgraad 137,1% 130,1%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 143.8,
+   "2024": 128.8,
+   "pagina": 323,
+   "letterlijk": "Actuele dekkingsgraad 143,8% 128,8%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 99.0,
+   "2024": 95.6,
+   "pagina": 323,
+   "letterlijk": "Reële dekkingsgraad 99,0% 95,6%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 116.7,
+   "2024": 117.6,
+   "pagina": 323,
+   "letterlijk": "Vereiste dekkingsgraad 116,7% 117,6%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.239605,
+   "2024": 0.24228,
+   "pagina": 317,
+   "letterlijk": "Totaal belegd vermogen (x € 1.000) 239.605 242.280"
+  },
+  "deelnemers_actief": {
+   "2025": 159,
+   "2024": 175,
+   "pagina": 315,
+   "letterlijk": "Actieven en arbeidsongeschikten 159 175"
+  },
+  "deelnemers_slapers": {
+   "2025": 405,
+   "2024": 400,
+   "pagina": 315,
+   "letterlijk": "Gewezen deelnemers 405 400"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 102,
+   "2024": 91,
+   "pagina": 315,
+   "letterlijk": "Pensioengerechtigden 102 91"
+  },
+  "deelnemers_totaal": {
+   "2025": 666,
+   "2024": 666,
+   "pagina": 315,
+   "letterlijk": "Deelnemers 666 666"
+  },
+  "rente_afdekking_pct": {
+   "2025": 75,
+   "2024": null,
+   "pagina": 333,
+   "letterlijk": "Het afdekkingspercentage in 2025 bedroeg 75% op basis van de marktrente"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-17",
+  "pagina": 425
+ },
+ "invaardatum": {
+  "datum": null,
+  "status": "geen datum genoemd",
+  "pagina": 335
+ },
+ "opmerkingen": "In het verslag heet de kring 'Kring HPNL'. Renteafdekking: dynamisch beleid 50-80% (tabel swaprente/UFR-dekkingsgraad, aanpassing per 1 april); 'in 2025 bedroeg 75%' - niet expliciet ultimo. Invaren: transitieplan van sociale partners ontvangen, behandeling gestart (p335); geen datum genoemd. Vaststelling: 'heeft de jaarrekening over het verslagjaar 2025 vastgesteld in de vergadering van 17 juni 2026' (p425); bestuursverslag ondertekend 'Zeist, 15 juni 2026' (p403). Deelnemersaantallen: 'Deelnemers' = totaal; actieven incl. arbeidsongeschikten. Bedragen in de kringtabellen in € 1.000."
+}

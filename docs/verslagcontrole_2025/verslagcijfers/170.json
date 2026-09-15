@@ -1,0 +1,83 @@
+{
+ "fund_id": 170,
+ "naam": "Kring Douwe Egberts (Stap)",
+ "pad": "data/annual_reports/170_Douwe_Egberts_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -2.1,
+   "2024": 9.0,
+   "pagina": 5,
+   "letterlijk": "Beleggingsrendement Per jaar -2,1% 9,0%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 136.7,
+   "2024": 134.1,
+   "pagina": 5,
+   "letterlijk": "Beleidsdekkingsgraad 136,7% 134,1%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 139.4,
+   "2024": 133.3,
+   "pagina": 5,
+   "letterlijk": "Feitelijke dekkingsgraad 139,4% 133,3%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 104.9,
+   "2024": 103.2,
+   "pagina": 20,
+   "letterlijk": "Reële dekkingsgraad 104,9 103,2"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 118.9,
+   "2024": 118.9,
+   "pagina": 5,
+   "letterlijk": "Vereiste dekkingsgraad 118,9% 118,9%"
+  },
+  "aum_euro_bn": {
+   "2025": 1.6822,
+   "2024": 1.7943,
+   "pagina": 10,
+   "letterlijk": "Totaal ** / *** 1.682,2 (in € miljoen) 1.794,3; *** eindstand van de beleggingen inclusief de negatieve derivaten"
+  },
+  "deelnemers_actief": {
+   "2025": 49,
+   "2024": 57,
+   "pagina": 5,
+   "letterlijk": "Actieven en arbeidsongeschikten 49 57"
+  },
+  "deelnemers_slapers": {
+   "2025": 3938,
+   "2024": 4127,
+   "pagina": 5,
+   "letterlijk": "Gewezen deelnemers 3.938 4.127"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 4401,
+   "2024": 4374,
+   "pagina": 5,
+   "letterlijk": "Pensioengerechtigden 4.401 4.374"
+  },
+  "deelnemers_totaal": {
+   "2025": 8388,
+   "2024": 8558,
+   "pagina": 5,
+   "letterlijk": "Totaal 8.388 8.558"
+  },
+  "rente_afdekking_pct": {
+   "2025": 99.82,
+   "2024": null,
+   "pagina": 79,
+   "letterlijk": "Het percentage afdekking van het renterisico van 99,82% leidt ertoe dat de duration ... stijgt"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-16",
+  "pagina": 92
+ },
+ "invaardatum": {
+  "datum": "2026-10-01",
+  "status": "gepland",
+  "pagina": 33
+ },
+ "opmerkingen": "Alle cijfers zijn van pensioenkring Douwe Egberts (deel-jaarverslag). AUM: 1.682,2 mln is het belegd vermogen na aftrek van de negatieve derivaten (p10; p32: 'afgenomen van € 1.794 miljoen naar € 1.682 miljoen'). Op de balans (p59) staan de beleggingen bruto op 1.868.005 duizend (2024: 1.920.233), met 185.776 aan derivaten aan de passiefzijde. Rendement: -2,1% is het totale rendement inclusief renteswaps (die droegen -5,6%-punt bij, p12). Renteafdekking: de feitelijke afdekking ultimo 2025 is 99,82%, de strategische/vaste afdekking 100% (p32). Voor 2024 staat geen ultimo-percentage; wel staat er dat de afdekking 'gedurende 2025 verhoogd van 70% naar 100%' is (p28/p79), vandaar null. Deelnemers_actief omvat ook de arbeidsongeschikten (gesloten kring). Vaststelling: 'Het bestuur heeft op 16 juni 2026 deze financiële opstelling vastgesteld' (p92), ondertekend Den Haag 16 juni 2026 (p90); het verslag van het belanghebbendenorgaan is gedateerd 7 mei 2026 (p34). Invaren: gepland per 1 oktober 2026 (eerder 1 januari 2027), goedgekeurd door het BO en begin november 2025 bij DNB ingediend (p33). Dit staat alleen in het BO-verslag. Verder wordt de voorgenomen fusie van Stap met HNPF genoemd (23 april 2026, p32)."
+}

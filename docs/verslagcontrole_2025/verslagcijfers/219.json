@@ -1,0 +1,83 @@
+{
+ "fund_id": 219,
+ "naam": "Kring Grolsch (Centraal Beheer)",
+ "pad": "data/annual_reports/65_Centraal_Beheer_APF_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": 0.98,
+   "2024": 1.7,
+   "pagina": 383,
+   "letterlijk": "Beleggingsrendement 0,98% 1,70% (kop 2025 2024) (kop 2025 2024 ...)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 127.8,
+   "2024": 121.6,
+   "pagina": 388,
+   "letterlijk": "Beleidsdekkingsgraad 127,8% 121,6% (kop 31-12-2025 31-12-2024 ...)"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 134.0,
+   "2024": 119.2,
+   "pagina": 388,
+   "letterlijk": "Actuele dekkingsgraad 134,0% 119,2%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 94.8,
+   "2024": 91.4,
+   "pagina": 388,
+   "letterlijk": "Reële dekkingsgraad 94,8% 91,4%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 117.2,
+   "2024": 117.6,
+   "pagina": 388,
+   "letterlijk": "Vereiste dekkingsgraad 117,2% 117,6%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.387374,
+   "2024": 0.387566,
+   "pagina": 384,
+   "letterlijk": "Totaal belegd vermogen (Bedragen in € 1.000) 387.374 387.566"
+  },
+  "deelnemers_actief": {
+   "2025": 583,
+   "2024": 601,
+   "pagina": 382,
+   "letterlijk": "Actieven en arbeidsongeschikten 583 601"
+  },
+  "deelnemers_slapers": {
+   "2025": 769,
+   "2024": 747,
+   "pagina": 382,
+   "letterlijk": "Gewezen deelnemers 769 747"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 686,
+   "2024": 670,
+   "pagina": 382,
+   "letterlijk": "Pensioengerechtigden 686 670"
+  },
+  "deelnemers_totaal": {
+   "2025": 2038,
+   "2024": 2018,
+   "pagina": 382,
+   "letterlijk": "Deelnemers 2.038 2.018"
+  },
+  "rente_afdekking_pct": {
+   "2025": 72.5,
+   "2024": null,
+   "pagina": 397,
+   "letterlijk": "Wĳ maken voor de Kring Grolsch gebruik van een strategie waarbĳ 72,5% van de rentegevoeligheid van de dekkingsgraad wordt afgedekt."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-17",
+  "pagina": 843
+ },
+ "invaardatum": {
+  "datum": "2027-01-01",
+  "status": "gepland",
+  "pagina": 400
+ },
+ "opmerkingen": "Vaststellingsdatum: 'Vaststelling en ondertekening jaarrekening, Zeist, 17 juni 2026' (p843); het bestuursverslag is ondertekend op 15 juni 2026 (p403). Kerncijfers van de kring staan in paragraaf x.1 (deelnemers, rendement, belegd vermogen); reële en vereiste dekkingsgraad komen uit x.3.1. Rendement is het totale beleggingsrendement van de kring, inclusief matchingportefeuille. Rente-afdekking: het verslag noemt alleen het beleidspercentage uit de risicoparagraaf, geen gerealiseerde afdekking per ultimo; 2024 niet genoemd. Grolsch: kring gestart 1 oktober 2024 (p390), dus 2024-rendement (1,70%) en kostencijfers 2024 betreffen alleen 1-10 t/m 31-12-2024. Afdekking is gedefinieerd op rentegevoeligheid van de dekkingsgraad, niet van de verplichtingen. Tegenstrijdigheid: BO-verslag noemt 'Eind 2025 was de dekkingsgraad 134,8 %' (p400), kerncijfers en financiële paragraaf 134,0% (p383/p388). Invaren: 'De beoogde transitiedatum voor Kring Grolsch is 1 januari 2027' (p400; ook p1218-tekst hoofdstuk 4). Uitsluitsel DNB verwacht vóór 1 september 2026 (p29/p399) resp. vóór 1 juli 2026 (p400)."
+}

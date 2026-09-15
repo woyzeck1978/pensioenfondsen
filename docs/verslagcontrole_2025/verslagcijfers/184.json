@@ -1,0 +1,83 @@
+{
+ "fund_id": 184,
+ "naam": "Pensioenkring AON (Stap)",
+ "pad": "data/annual_reports/184_Pensioenkring_AON_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": 4.3,
+   "2024": 7.4,
+   "pagina": 5,
+   "letterlijk": "Beleggingsrendement Per jaar 4,3% 7,4%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 154.0,
+   "2024": 147.6,
+   "pagina": 5,
+   "letterlijk": "Beleidsdekkingsgraad 154,0% 147,6%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 162.8,
+   "2024": 145.6,
+   "pagina": 5,
+   "letterlijk": "Feitelijke dekkingsgraad 162,8% 145,6%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 117.6,
+   "2024": 113.0,
+   "pagina": 21,
+   "letterlijk": "Reële dekkingsgraad 117,6 113,0"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 116.7,
+   "2024": 115.8,
+   "pagina": 5,
+   "letterlijk": "Vereiste dekkingsgraad 116,7% 115,8%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.733126,
+   "2024": 0.729634,
+   "pagina": 59,
+   "letterlijk": "Beleggingen voor risico Pensioenkring Aon Groep Nederland (bedragen x € 1.000) 733.126 729.634"
+  },
+  "deelnemers_actief": {
+   "2025": 332,
+   "2024": 364,
+   "pagina": 5,
+   "letterlijk": "Actieven en arbeidsongeschikten 332 364"
+  },
+  "deelnemers_slapers": {
+   "2025": 1329,
+   "2024": 1399,
+   "pagina": 5,
+   "letterlijk": "Gewezen deelnemers 1.329 1.399"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 1214,
+   "2024": 1154,
+   "pagina": 5,
+   "letterlijk": "Pensioengerechtigden 1.214 1.154"
+  },
+  "deelnemers_totaal": {
+   "2025": 2875,
+   "2024": 2917,
+   "pagina": 5,
+   "letterlijk": "Totaal 2.875 2.917"
+  },
+  "rente_afdekking_pct": {
+   "2025": 61.2,
+   "2024": null,
+   "pagina": 79,
+   "letterlijk": "Het percentage afdekking van het renterisico van 61,2% (risicoparagraaf, stand 31-12-2025)"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-16",
+  "pagina": 92
+ },
+ "invaardatum": {
+  "datum": "2027-07-01",
+  "status": "gepland",
+  "pagina": 32
+ },
+ "opmerkingen": "Strategische renteafdekking onveranderd 60,0% (p29); 61,2% is de afdekking in de S1-toelichting per ultimo 2025, 2024-percentage niet genoemd. Invaardatum voorgesteld 1-1-2027, aangepast naar 1-7-2027; invaardossier begin april 2026 bij DNB ingediend (p32). Vaststelling = financiële opstelling door bestuur Stap 16 juni 2026."
+}

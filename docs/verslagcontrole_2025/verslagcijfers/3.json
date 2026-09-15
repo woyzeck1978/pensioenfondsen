@@ -1,0 +1,83 @@
+{
+ "fund_id": 3,
+ "naam": "Huisartsen (SPH - General Practitioners)",
+ "pad": "data/annual_reports/3_Huisartsen_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": 12,
+   "letterlijk": "Beleggingsportefeuille uitkeringsregeling -1,4% 4,7% (geen fondstotaal)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 131.7,
+   "2024": 132.6,
+   "pagina": 11,
+   "letterlijk": "Beleidsdekkingsgraad (in %) 131,7 132,6"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 132.6,
+   "2024": 127.6,
+   "pagina": 11,
+   "letterlijk": "Dekkingsgraad op basis van DNB-rente (in %) 132,6 127,6"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 105.3,
+   "2024": 105.1,
+   "pagina": 11,
+   "letterlijk": "Reële dekkingsgraad (in %) 105,3 105,1"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 112.7,
+   "2024": 114.8,
+   "pagina": 11,
+   "letterlijk": "Vereiste dekkingsgraad FTK (in %) 112,7 114,8"
+  },
+  "aum_euro_bn": {
+   "2025": 10.233,
+   "2024": 10.534,
+   "pagina": 125,
+   "letterlijk": "Beleggingen voor risico fonds 10.233 10.534 (x EUR 1 miljoen)"
+  },
+  "deelnemers_actief": {
+   "2025": 15959,
+   "2024": 15854,
+   "pagina": 10,
+   "letterlijk": "Actieve deelnemers 15.959 15.854"
+  },
+  "deelnemers_slapers": {
+   "2025": 2465,
+   "2024": 2161,
+   "pagina": 10,
+   "letterlijk": "Gewezen deelnemers 2.465 2.161"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 8089,
+   "2024": 7936,
+   "pagina": 10,
+   "letterlijk": "Pensioengerechtigden 8.089 7.936"
+  },
+  "deelnemers_totaal": {
+   "2025": 26513,
+   "2024": 25951,
+   "pagina": 10,
+   "letterlijk": "Totaal aantal deelnemers 26.513 25.951"
+  },
+  "rente_afdekking_pct": {
+   "2025": 73,
+   "2024": 68,
+   "pagina": 154,
+   "letterlijk": "Ultimo 2025 werd door het fonds 73% (2024: 68%) van het renterisico strategisch afgedekt."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-18",
+  "pagina": 130
+ },
+ "invaardatum": {
+  "datum": "2028-01-01",
+  "status": "gepland",
+  "pagina": 73
+ },
+ "opmerkingen": "Geen totaal fondsrendement: verslag rapporteert per regeling - stabiel uitkeringscollectief/uitkeringsregeling -1,4% (2024: 4,7%, incl. matching -10,9%), premieregeling 3,8%, CVP -7,7%; daarom null. Dekkingsgraad fonds als geheel 132,6%; exclusief premieregelingkapitalen 138,0% (2024: 130,6%) (p.36). AUM: beleggingen voor risico fonds 10.233 mln; daarnaast risico deelnemers 1.119 mln (2024: 829). Renteafdekking 73% is 'strategisch' afgedekt volgens staffel, geen expliciet feitelijk percentage. Voornemen invaren 1 januari 2028."
+}

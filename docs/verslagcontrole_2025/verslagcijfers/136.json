@@ -1,0 +1,83 @@
+{
+ "fund_id": 136,
+ "naam": "Vopak",
+ "pad": "data/annual_reports/136_Vopak_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": 1.0,
+   "2024": 7.1,
+   "pagina": 3,
+   "letterlijk": "Totale rendement beleggingen 1,0% 7,1% 9,2% (2025 2024 2023)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 135.1,
+   "2024": 131.1,
+   "pagina": 3,
+   "letterlijk": "Beleidsdekkingsgraad 135,1% 131,1% 128,0%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 137.7,
+   "2024": 129.3,
+   "pagina": 3,
+   "letterlijk": "Dekkingsgraad 137,7% 129,3% 128,0%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 108.3,
+   "2024": 105.1,
+   "pagina": 3,
+   "letterlijk": "Reële dekkingsgraad 108,3% 105,1% 99,6%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 114.7,
+   "2024": 115.1,
+   "pagina": 3,
+   "letterlijk": "Vereiste dekkingsgraad 114,7% 115,1% 115,9%"
+  },
+  "aum_euro_bn": {
+   "2025": 1.197321,
+   "2024": 1.243375,
+   "pagina": 3,
+   "letterlijk": "Beleggingen voor risico pensioenfonds 1.197.321 1.243.375 (Bedragen in EUR 1.000)"
+  },
+  "deelnemers_actief": {
+   "2025": 1282,
+   "2024": 1353,
+   "pagina": 3,
+   "letterlijk": "Aantallen Deelnemers 1.282 1.353 1.413"
+  },
+  "deelnemers_slapers": {
+   "2025": 2046,
+   "2024": 1985,
+   "pagina": 3,
+   "letterlijk": "Gewezen deelnemers 2.046 1.985 1.955"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 2744,
+   "2024": 2762,
+   "pagina": 3,
+   "letterlijk": "Pensioengerechtigden 2.744 2.762 2.771"
+  },
+  "deelnemers_totaal": {
+   "2025": 6072,
+   "2024": 6100,
+   "pagina": 3,
+   "letterlijk": "6.072 6.100 6.139"
+  },
+  "rente_afdekking_pct": {
+   "2025": 64.7,
+   "2024": 69.5,
+   "pagina": 66,
+   "letterlijk": "Eind 2025 bedraagt de afdekking van het renterisico op basis van de swapcurve 64,7% (eind 2024 was dit 69,5%)"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-26",
+  "pagina": 69
+ },
+ "invaardatum": {
+  "datum": "2026-07-01",
+  "status": "gepland",
+  "pagina": 8
+ },
+ "opmerkingen": "AUM excl. beleggingen voor risico deelnemers (235.207 in 2025, 219.552 in 2024). Rendement 1,0% is incl. LDI; excl. LDI 6,8%. Rente-afdekking 64,7% is feitelijk op swapcurve-basis; beleggingsplan 2025 noemt 70% renteafdekking op marktrente (strategisch 50%). Beoogde transitiedatum 1 juli 2026 (na verslagdatum, dus nog gepland)."
+}

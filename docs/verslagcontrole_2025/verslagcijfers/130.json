@@ -1,0 +1,83 @@
+{
+ "fund_id": 130,
+ "naam": "Sportfondsen",
+ "pad": "data/annual_reports/130_Sportfondsen_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": 4.4,
+   "2024": 12.19,
+   "pagina": 5,
+   "letterlijk": "Beleggingsperformance1 Beleggingsrendement 4,40% 12,19% 12,20% (kop 2025 2024 2023; voetnoot: betreffen de beleggingen in eigen beheer)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 131.1,
+   "2024": 128.7,
+   "pagina": 4,
+   "letterlijk": "Beleidsdekkingsgraad 131,1% 128,7% 126,2%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 138.6,
+   "2024": 127.4,
+   "pagina": 4,
+   "letterlijk": "Dekkingsgraad 138,6% 127,4% 126,2%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 96.9,
+   "2024": 96.3,
+   "pagina": 4,
+   "letterlijk": "Reële dekkingsgraad 96,9% 96,3% 93,1%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 109.7,
+   "2024": 109.6,
+   "pagina": 4,
+   "letterlijk": "Vereiste dekkingsgraad 109,7% 109,6% 108,0%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.196935,
+   "2024": 0.18318,
+   "pagina": 5,
+   "letterlijk": "Beleggingsportefeuille (x € 1.000) Beleggingen voor risico fonds 196.935 183.180"
+  },
+  "deelnemers_actief": {
+   "2025": 3150,
+   "2024": 3075,
+   "pagina": 4,
+   "letterlijk": "Deelnemers1 3.150 3.075 1.944"
+  },
+  "deelnemers_slapers": {
+   "2025": 3522,
+   "2024": 3252,
+   "pagina": 4,
+   "letterlijk": "Gewezen deelnemers 3.522 3.252 2.950"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 1575,
+   "2024": 1499,
+   "pagina": 4,
+   "letterlijk": "Pensioengerechtigden 1.575 1.499 1.427"
+  },
+  "deelnemers_totaal": {
+   "2025": 8247,
+   "2024": 7826,
+   "pagina": 4,
+   "letterlijk": "Totaal aantal deelnemers 8.247 7.826 6.321"
+  },
+  "rente_afdekking_pct": {
+   "2025": 70.0,
+   "2024": null,
+   "pagina": 46,
+   "letterlijk": "Ultimo 2025 leidde dit beleid tot een renteafdekking van 70%. (eigen beheer depot)"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-26",
+  "pagina": 55
+ },
+ "invaardatum": {
+  "datum": "2028-01-01",
+  "status": "gepland",
+  "pagina": 19
+ },
+ "opmerkingen": "Fonds met twee depots: verzekerd/herverzekerd depot bij ASR (voorheen Aegon) en eigen beheer. Rendement 4,40% betreft volgens voetnoot alleen eigen beheer (herverzekerde portefeuille -5,76% incl. SLM, p35); geen gecombineerd totaalrendement. AUM = beleggingen voor risico fonds (eigen beheer) 196.935; incl. herverzekeringsdeel TV 139.926 is het totaal 336.861 (x € 1.000). BDG 2024: kerncijfers 128,7%, maar tekst p29 zegt '(2024: 128,5%)' - tegenstrijdig. Vereiste dekkingsgraad: kerncijfers 109,7% (VEV 22.008), p29 noemt 109,0% op feitelijke portefeuille en jaarrekening p66 VEV 23.605 - definities verschillen. Rente-afdekking 70% geldt voor eigen beheer depot; verzekerd depot strategisch 75% via SLM-fonds, renterisico daar voor verzekeraar (p45) - geen fondsbreed cijfer. Invaren: 'overgang ... naar het nieuwe pensioenstelsel ... is gepland met ingang van 1 januari 2028' (VO-verslag p19). Vaststelling: 'Het bestuur heeft op 26 juni 2026 de jaarrekening opgemaakt' (p55); bestuursverslag 'Amsterdam, 26 juni 2026' (p49)."
+}

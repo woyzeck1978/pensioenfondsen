@@ -1,0 +1,83 @@
+{
+ "fund_id": 217,
+ "naam": "Kring Sligro Food Group (Centraal Beheer)",
+ "pad": "data/annual_reports/65_Centraal_Beheer_APF_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -0.61,
+   "2024": 10.71,
+   "pagina": 225,
+   "letterlijk": "Beleggingsrendement -0,61% 10,71% 10,88% (kop 2025 2024 ...)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 136.9,
+   "2024": 124.8,
+   "pagina": 231,
+   "letterlijk": "Beleidsdekkingsgraad 136,9% 124,8% (kop 31-12-2025 31-12-2024 ...)"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 147.2,
+   "2024": 123.3,
+   "pagina": 231,
+   "letterlijk": "Actuele dekkingsgraad 147,2% 123,3%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 96.4,
+   "2024": 91.0,
+   "pagina": 231,
+   "letterlijk": "Reële dekkingsgraad 96,4% 91,0%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 119.2,
+   "2024": 118.5,
+   "pagina": 231,
+   "letterlijk": "Vereiste dekkingsgraad 119,2% 118,5%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.578937,
+   "2024": 0.566619,
+   "pagina": 226,
+   "letterlijk": "Totaal belegd vermogen (Bedragen in € 1.000) 578.937 566.619"
+  },
+  "deelnemers_actief": {
+   "2025": 5013,
+   "2024": 4743,
+   "pagina": 224,
+   "letterlijk": "Actieven en arbeidsongeschikten 5.013 4.743"
+  },
+  "deelnemers_slapers": {
+   "2025": 6438,
+   "2024": 5657,
+   "pagina": 224,
+   "letterlijk": "Gewezen deelnemers 6.438 5.657"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 1325,
+   "2024": 1181,
+   "pagina": 224,
+   "letterlijk": "Pensioengerechtigden 1.325 1.181"
+  },
+  "deelnemers_totaal": {
+   "2025": 12776,
+   "2024": 11581,
+   "pagina": 224,
+   "letterlijk": "Deelnemers 12.776 11.581"
+  },
+  "rente_afdekking_pct": {
+   "2025": 65.0,
+   "2024": null,
+   "pagina": 240,
+   "letterlijk": "Wĳ maken voor de Kring Sligro Food Group gebruik van een strategie waarbĳ 65% van de rentegevoeligheid van de pensioenverplichtingen op basis van de marktrente wordt afgedekt."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-17",
+  "pagina": 843
+ },
+ "invaardatum": {
+  "datum": "2027-07-01",
+  "status": "gepland",
+  "pagina": 242
+ },
+ "opmerkingen": "Vaststellingsdatum: 'Vaststelling en ondertekening jaarrekening, Zeist, 17 juni 2026' (p843); het bestuursverslag is ondertekend op 15 juni 2026 (p403). Kerncijfers van de kring staan in paragraaf x.1 (deelnemers, rendement, belegd vermogen); reële en vereiste dekkingsgraad komen uit x.3.1. Rendement is het totale beleggingsrendement van de kring, inclusief matchingportefeuille. Rente-afdekking: het verslag noemt alleen het beleidspercentage uit de risicoparagraaf, geen gerealiseerde afdekking per ultimo; 2024 niet genoemd. Invaren: 'Naar verwachting zal de kring op 1 juli 2027 invaren naar de multi client kring Flexibel+' (p242); eerder genoemde 1 januari 2027 verschoven naar 1 juli 2027 (p243); BO noemt de datum 'nog niet zeker' (p244)."
+}

@@ -1,0 +1,83 @@
+{
+ "fund_id": 190,
+ "naam": "Pensioenkring PepsiCo (Hnp)",
+ "pad": "data/annual_reports/165_Kring_Arcadis_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -9.37,
+   "2024": 5.9,
+   "pagina": 20,
+   "letterlijk": "Beleggingsrendement (in %) -9,37% 5,90%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 117.3,
+   "2024": 117.0,
+   "pagina": 19,
+   "letterlijk": "Beleidsdekkingsgraad (in %) 117,3% 117,0%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 122.1,
+   "2024": 114.4,
+   "pagina": 19,
+   "letterlijk": "Aanwezige dekkingsgraad (in %) 122,1% 114,4%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 82.5,
+   "2024": 84.5,
+   "pagina": 19,
+   "letterlijk": "Reële dekkingsgraad (in %) 82,5% 84,5%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 111.5,
+   "2024": 110.9,
+   "pagina": 19,
+   "letterlijk": "Vereiste dekkingsgraad (in %) 111,5% 110,9%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.260363,
+   "2024": 0.300428,
+   "pagina": 20,
+   "letterlijk": "Totaal beleggingen 260.363 300.428 (x EUR 1.000)"
+  },
+  "deelnemers_actief": {
+   "2025": 466,
+   "2024": 489,
+   "pagina": 19,
+   "letterlijk": "Aantal actieve deelnemers 466 489"
+  },
+  "deelnemers_slapers": {
+   "2025": 844,
+   "2024": 814,
+   "pagina": 19,
+   "letterlijk": "Aantal gewezen deelnemers 844 814"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 479,
+   "2024": 472,
+   "pagina": 19,
+   "letterlijk": "Aantal pensioengerechtigden 479 472"
+  },
+  "deelnemers_totaal": {
+   "2025": 1789,
+   "2024": 1775,
+   "pagina": 19,
+   "letterlijk": "1.789 1.775"
+  },
+  "rente_afdekking_pct": {
+   "2025": 102.4,
+   "2024": null,
+   "pagina": 269,
+   "letterlijk": "De feitelĳke renteafdekking per ultimo 2025 bedroeg 102,4%"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-30",
+  "pagina": 911
+ },
+ "invaardatum": {
+  "datum": "2027-01-01",
+  "status": "gepland",
+  "pagina": 279
+ },
+ "opmerkingen": "Cijfers uit het eigen kerncijferhoofdstuk van de kring (Jaarverslag 2025 Stichting Het Nederlandse Pensioenfonds, bedragen x EUR 1.000). AUM = 'Totaal beleggingen' uit de kerncijfers (na aftrek negatieve derivaten). Nominale dekkingsgraad = 'Aanwezige dekkingsgraad'. Vaststellingsdatum = ondertekening jaarrekening (Badhoevedorp, 30 juni 2026, p.911; ondertekening bestuursverslag p.438 zelfde datum). Renteafdekking 2024 niet opgezocht/genoemd. Kring opgericht 1 januari 2024. Renteafdekking-norm 100%. Invaardossier februari 2026 ingediend met doel 1 januari 2027."
+}

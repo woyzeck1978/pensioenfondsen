@@ -1,0 +1,83 @@
+{
+ "fund_id": 107,
+ "naam": "Huntsman Rozenburg",
+ "pad": "data/annual_reports/107_Huntsman_Rozenburg_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": 0.7,
+   "2024": 8.9,
+   "pagina": 6,
+   "letterlijk": "Rendement op basis van total return 0,7% 8,9%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 147.8,
+   "2024": 142.4,
+   "pagina": 5,
+   "letterlijk": "Beleidsdekkingsgraad 147,8% 142,4%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 153.6,
+   "2024": 139.4,
+   "pagina": 5,
+   "letterlijk": "Aanwezige dekkingsgraad 153,6% 139,4%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 114.0,
+   "2024": 113.1,
+   "pagina": 5,
+   "letterlijk": "Vereiste dekkingsgraad 114,0% 113,1%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.5667,
+   "2024": 0.580542,
+   "pagina": 6,
+   "letterlijk": "Belegd vermogen (excl. lopende intrest en liquide middelen) 566.700 580.542 (x € 1.000)"
+  },
+  "deelnemers_actief": {
+   "2025": 184,
+   "2024": 194,
+   "pagina": 5,
+   "letterlijk": "Deelnemers 184 194"
+  },
+  "deelnemers_slapers": {
+   "2025": 331,
+   "2024": 349,
+   "pagina": 5,
+   "letterlijk": "Gewezen deelnemers 331 349"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 1256,
+   "2024": 1287,
+   "pagina": 5,
+   "letterlijk": "Pensioengerechtigden 1.256 1.287"
+  },
+  "deelnemers_totaal": {
+   "2025": 1771,
+   "2024": 1830,
+   "pagina": 5,
+   "letterlijk": "(totaalregel zonder label) 1.771 1.830"
+  },
+  "rente_afdekking_pct": {
+   "2025": 80.8,
+   "2024": null,
+   "pagina": 23,
+   "letterlijk": "Per ultimo van het verslagjaar was de afdekking van het renterisico 80,8%"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-29",
+  "pagina": 69
+ },
+ "invaardatum": {
+  "datum": null,
+  "status": "vaart niet in",
+  "pagina": 29
+ },
+ "opmerkingen": "Renteafdekking: bestuursverslag 80,8% (swapcurve), risicoparagraaf p63 feitelijk 79,3% op DNB-methodiek; 2024-waarde niet genoemd (alleen strategisch 60%->80% in 2024). Vereiste DG = strategisch; feitelijk vereist 114,3% (p63). Geen invaarverzoek; bestuur bereidt zich voor op sluiting per 1 januari 2028. Bestuursverslag vastgesteld 29 juni 2026 (p39), jaarrekening 'Vastgesteld te Rozenburg d.d. 29 juni 2026' (p69). Reële DG niet genoemd."
+}

@@ -1,0 +1,83 @@
+{
+ "fund_id": 47,
+ "naam": "KLM Algemeen (Ground Staff)",
+ "pad": "data/annual_reports/47_KLM_Algemeen_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -3.1,
+   "2024": 9.8,
+   "pagina": 6,
+   "letterlijk": "Rendement beleggingen voor risico pensioenfonds ... Totaalrendement -3,1% 9,8% 8,3% (kop 2025 2024 2023)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 139.2,
+   "2024": 135.2,
+   "pagina": 5,
+   "letterlijk": "Beleidsdekkingsgraad 139,2% 135,2% 131,7%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 143.7,
+   "2024": 132.1,
+   "pagina": 5,
+   "letterlijk": "Nominale dekkingsgraad 143,7% 132,1% 130,2%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 103.3,
+   "2024": 89.5,
+   "pagina": 5,
+   "letterlijk": "Reële dekkingsgraad 103,3% 89,5% 83,7%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 123.5,
+   "2024": 122.6,
+   "pagina": 5,
+   "letterlijk": "Vereiste dekkingsgraad volgens FTK 123,5% 122,6% 126,0%"
+  },
+  "aum_euro_bn": {
+   "2025": 10.3306,
+   "2024": 11.3216,
+   "pagina": 5,
+   "letterlijk": "Beleggingen voor risico pensioenfonds (Bedragen in € mio) Totaal 10.330,6 11.321,6"
+  },
+  "deelnemers_actief": {
+   "2025": 13378,
+   "2024": 13448,
+   "pagina": 5,
+   "letterlijk": "Aantal actieve deelnemers 13.378 13.448 12.943"
+  },
+  "deelnemers_slapers": {
+   "2025": 8888,
+   "2024": 8977,
+   "pagina": 5,
+   "letterlijk": "Aantal gewezen deelnemers 8.888 8.977 9.087"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 12797,
+   "2024": 12380,
+   "pagina": 5,
+   "letterlijk": "Aantal pensioengerechtigden 12.797 12.380 11.924"
+  },
+  "deelnemers_totaal": {
+   "2025": 35063,
+   "2024": 34805,
+   "pagina": 5,
+   "letterlijk": "Totaal 35.063 34.805 33.954"
+  },
+  "rente_afdekking_pct": {
+   "2025": 74.0,
+   "2024": 72.8,
+   "pagina": 100,
+   "letterlijk": "Renteafdekking 74,0% 72,8% (kop 2025 2024)"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-23",
+  "pagina": 125
+ },
+ "invaardatum": {
+  "datum": "2026-01-01",
+  "status": "ingevaren",
+  "pagina": 123
+ },
+ "opmerkingen": "AUM uit kerncijfers (€ mln) is netto van derivaten met negatieve waarde (-418,3); de balans (p69) toont 'Totaal beleggingen voor risico pensioenfonds' 10.904,5 (2024: 11.641,8), met derivaten passief 573,9 apart. Kerncijfers p5 noemen VPV 7.147,0, bijlage p158/160 7.355,7 (= incl. voorziening operationele kosten 208,7). Reële dekkingsgraad 103,3%; daarnaast 'wettelijke reële dekkingsgraad' 103,2% (2024: 101,6%). Renteafdekking 74,0% op marktrentebasis (p100). Tekst p50 bevat evidente fouten ('gemiddeld aantal deelnemers 438', '€ 10.330,6 miljard'). Invaren: 'Stichting Algemeen Pensioenfonds KLM is per 1 januari 2026 ingevaren' (p123). Ondertekening bestuur en RvT 'Amstelveen, 23 juni 2026' (p125)."
+}

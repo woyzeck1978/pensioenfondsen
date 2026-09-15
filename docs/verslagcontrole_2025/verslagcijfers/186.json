@@ -1,0 +1,83 @@
+{
+ "fund_id": 186,
+ "naam": "Pensioenkring Ballast Nedam (Stap)",
+ "pad": "data/annual_reports/186_Pensioenkring_Ballast_Nedam_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": 1.4,
+   "2024": 7.8,
+   "pagina": 5,
+   "letterlijk": "Beleggingsrendement Per jaar 1,4% 7,8%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 127.8,
+   "2024": 122.2,
+   "pagina": 5,
+   "letterlijk": "Beleidsdekkingsgraad 127,8% 122,2%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 134.1,
+   "2024": 121.3,
+   "pagina": 5,
+   "letterlijk": "Feitelijke dekkingsgraad 134,1% 121,3%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 97.7,
+   "2024": 93.8,
+   "pagina": 21,
+   "letterlijk": "Reële dekkingsgraad 97,7 93,8"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 118.4,
+   "2024": 117.7,
+   "pagina": 5,
+   "letterlijk": "Vereiste dekkingsgraad 118,4% 117,7%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.990944,
+   "2024": 1.034492,
+   "pagina": 60,
+   "letterlijk": "Beleggingen voor risico Pensioenkring Ballast Nedam (bedragen x € 1.000) 990.944 1.034.492"
+  },
+  "deelnemers_actief": {
+   "2025": 16,
+   "2024": 16,
+   "pagina": 5,
+   "letterlijk": "Actieven en arbeidsongeschikten 16 16"
+  },
+  "deelnemers_slapers": {
+   "2025": 3087,
+   "2024": 3209,
+   "pagina": 5,
+   "letterlijk": "Gewezen deelnemers 3.087 3.209"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 2668,
+   "2024": 2662,
+   "pagina": 5,
+   "letterlijk": "Pensioengerechtigden 2.668 2.662"
+  },
+  "deelnemers_totaal": {
+   "2025": 5771,
+   "2024": 5887,
+   "pagina": 5,
+   "letterlijk": "Totaal 5.771 5.887"
+  },
+  "rente_afdekking_pct": {
+   "2025": 99.3,
+   "2024": null,
+   "pagina": 82,
+   "letterlijk": "Het percentage afdekking van het renterisico van 99,3% (risicoparagraaf)"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-16",
+  "pagina": 95
+ },
+ "invaardatum": {
+  "datum": "2026-10-01",
+  "status": "gepland",
+  "pagina": 33
+ },
+ "opmerkingen": "Renteafdekking in 2025 ter bescherming van de invaardekkingsgraad opgehoogd van 55% naar 100% (p12); 99,3% in risicoparagraaf. Gesloten kring zonder opbouw (16 actieven = arbeidsongeschikten). Invaardatum oorspronkelijk 1-1-2027, aangepast naar 1-10-2026 (verslag belanghebbendenorgaan p33)."
+}

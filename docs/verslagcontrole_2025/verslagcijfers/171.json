@@ -1,0 +1,83 @@
+{
+ "fund_id": 171,
+ "naam": "Kring Eastman (Stap)",
+ "pad": "data/annual_reports/171_Kring_Eastman_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -7.8,
+   "2024": 7.7,
+   "pagina": 5,
+   "letterlijk": "Beleggingsrendement Per jaar -7,8% 7,7% 10,0% (kop 2025 2024 2023 2022 2021)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 123.9,
+   "2024": 120.6,
+   "pagina": 5,
+   "letterlijk": "Beleidsdekkingsgraad 123,9% 120,6% 118,7%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 124.6,
+   "2024": 120.1,
+   "pagina": 5,
+   "letterlijk": "Feitelijke dekkingsgraad 124,6% 120,1% 118,8%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 89.7,
+   "2024": 89.2,
+   "pagina": 21,
+   "letterlijk": "Reële dekkingsgraad 89,7 89,2"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 115.3,
+   "2024": 114.9,
+   "pagina": 5,
+   "letterlijk": "Vereiste dekkingsgraad 115,3% 114,9% 114,8%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.218835,
+   "2024": 0.218813,
+   "pagina": 60,
+   "letterlijk": "Balans (bedragen x € 1.000) Beleggingen voor risico Pensioenkring Eastman 218.835 / 218.813"
+  },
+  "deelnemers_actief": {
+   "2025": 244,
+   "2024": 249,
+   "pagina": 5,
+   "letterlijk": "Actieven en arbeidsongeschikten 244 249 278"
+  },
+  "deelnemers_slapers": {
+   "2025": 745,
+   "2024": 733,
+   "pagina": 5,
+   "letterlijk": "Gewezen deelnemers 745 733 722"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 150,
+   "2024": 138,
+   "pagina": 5,
+   "letterlijk": "Pensioengerechtigden 150 138 120"
+  },
+  "deelnemers_totaal": {
+   "2025": 1139,
+   "2024": 1120,
+   "pagina": 5,
+   "letterlijk": "Totaal 1.139 1.120 1.120"
+  },
+  "rente_afdekking_pct": {
+   "2025": 102.6,
+   "2024": null,
+   "pagina": 82,
+   "letterlijk": "Het percentage afdekking van het renterisico van 102,6% leidt ertoe dat de duration van de vastrentende waarden ... stijgt met 14,4 naar 20,0."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-16",
+  "pagina": 96
+ },
+ "invaardatum": {
+  "datum": "2027-07-01",
+  "status": "gepland",
+  "pagina": 33
+ },
+ "opmerkingen": "Rendement: kerngegevens -7,8%, maar p21 en BO-verslag p32/p33 noemen -7,9% - tegenstrijdig in het verslag. Rente-afdekking: 102,6% uit risicotabel (kolom 31-12-2025, duration 20,0); tekst p13/p30 zegt feitelijke afdekking 'in 2025 verhoogd van 77,5% naar 100%' (strategisch gelijk gebleven, 77,5% in kringtabel p52). 2024 niet expliciet ultimo -> null. AUM = beleggingen voor risico kring; balans kent daarnaast derivaten aan passiefzijde (41.563); pensioenvermogen 178.151. Invaren: oorspronkelijk 1 januari 2026, 'transitiedatum verschoven naar 1 juli 2027' (p33), invaardossier begin april 2026 bij DNB ingediend. Vaststelling: 'Het bestuur heeft op 16 juni 2026 deze financiële opstelling vastgesteld' (p96). Deel-jaarverslag Stap."
+}

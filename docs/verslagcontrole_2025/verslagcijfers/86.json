@@ -1,0 +1,83 @@
+{
+ "fund_id": 86,
+ "naam": "Cosun / Koninklijke Cosun",
+ "pad": "data/annual_reports/86_Cosun_Koninklijke_Cosun_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -5.6,
+   "2024": 7.7,
+   "pagina": 6,
+   "letterlijk": "Beleggingsperformance Totaal bruto -5,6% 7,7% 7,6% (kop 2025 2024 2023 2022 2021)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 125.6,
+   "2024": 124.3,
+   "pagina": 6,
+   "letterlijk": "Beleidsdekkingsgraad 125,6% 124,3% 129,8%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 129.7,
+   "2024": 121.2,
+   "pagina": 6,
+   "letterlijk": "Dekkingsgraad 129,7% 121,2% 121,2%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 94.6,
+   "2024": 94.6,
+   "pagina": 6,
+   "letterlijk": "Reële dekkingsgraad 94,6% 94,6% 97,8%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 114.1,
+   "2024": 115.3,
+   "pagina": 6,
+   "letterlijk": "Vereiste dekkingsgraad 114,1% 115,3% 115,2%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.94359,
+   "2024": 1.023611,
+   "pagina": 74,
+   "letterlijk": "Balans (in duizenden euro's) Beleggingen voor risico pensioenfonds 943.590 / 1.023.611"
+  },
+  "deelnemers_actief": {
+   "2025": 1242,
+   "2024": 1205,
+   "pagina": 6,
+   "letterlijk": "Actieve deelnemers 1.242 1.205 1.137"
+  },
+  "deelnemers_slapers": {
+   "2025": 734,
+   "2024": 673,
+   "pagina": 6,
+   "letterlijk": "Premievrije deelnemers 734 673 632"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 1663,
+   "2024": 1661,
+   "pagina": 6,
+   "letterlijk": "Pensioengerechtigden 1.663 1.661 1.653"
+  },
+  "deelnemers_totaal": {
+   "2025": 3639,
+   "2024": 3539,
+   "pagina": 6,
+   "letterlijk": "Totaal 3.639 3.539 3.422"
+  },
+  "rente_afdekking_pct": {
+   "2025": 100.0,
+   "2024": null,
+   "pagina": 43,
+   "letterlijk": "De totale mate van renteafdekking is daarbij onveranderd op 100% gebleven."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-16",
+  "pagina": 102
+ },
+ "invaardatum": {
+  "datum": "2026-01-01",
+  "status": "ingevaren",
+  "pagina": 71
+ },
+ "opmerkingen": "Rendement: kerncijfers geven bruto -5,6% (incl. valuta-afdekking en put-optie) en netto na kosten -5,7% (p6, p41); bruto gekozen. Rente-afdekking: in februari 2025 verhoogd van 75% naar 100% (p17, p43) - 75% is dus de stand van vóór die verhoging, niet expliciet als ultimo-2024-cijfer genoemd -> 2024 null. Invaren: bestuur heeft op 23 december 2025 definitief besloten tot overgang en invaren per 1 januari 2026 (p71); invaarbeschikking DNB ontvangen (p30). Vaststelling: bestuursverslag/jaarrekening getekend 'Breda, 16 juni 2026' (p102, ook voorwoord p4); verslag VO is gedateerd 5 juni 2026."
+}

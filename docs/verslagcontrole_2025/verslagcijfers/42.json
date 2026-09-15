@@ -1,0 +1,83 @@
+{
+ "fund_id": 42,
+ "naam": "Zorgverzekeraars / SBZ (Health Insurers)",
+ "pad": "data/annual_reports/42_SBZ_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -2.42,
+   "2024": 6.19,
+   "pagina": 75,
+   "letterlijk": "Tabel 1: SBZ totale portefeuille — Totaal inclusief renteoverlay -2,42% | 6,19%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 126.7,
+   "2024": 120.3,
+   "pagina": 21,
+   "letterlijk": "Beleidsdekkingsgraad 126,7% | 120,3%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 131.4,
+   "2024": 119.4,
+   "pagina": 21,
+   "letterlijk": "Actuele dekkingsgraad 131,4% | 119,4%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 95.4,
+   "2024": 91.1,
+   "pagina": 44,
+   "letterlijk": "reële dekkingsgraad. Deze bedraagt ultimo 2025 95,4% (2024: 91,1%)"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 115.6,
+   "2024": 114.9,
+   "pagina": 21,
+   "letterlijk": "Vereiste dekkingsgraad 115,6% | 114,9%"
+  },
+  "aum_euro_bn": {
+   "2025": 6.013604,
+   "2024": 6.040634,
+   "pagina": 20,
+   "letterlijk": "Beleggingen risico fonds (excl. negatieve derivaten) (x EUR 1.000) 6.013.604 | 6.040.634"
+  },
+  "deelnemers_actief": {
+   "2025": 10786,
+   "2024": 10456,
+   "pagina": 20,
+   "letterlijk": "Actieve deelnemers 10.786 | 10.456"
+  },
+  "deelnemers_slapers": {
+   "2025": 23027,
+   "2024": 23391,
+   "pagina": 20,
+   "letterlijk": "Gewezen deelnemers 23.027 | 23.391"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 10357,
+   "2024": 9723,
+   "pagina": 20,
+   "letterlijk": "Pensioengerechtigden 10.357 | 9.723"
+  },
+  "deelnemers_totaal": {
+   "2025": 44816,
+   "2024": 44241,
+   "pagina": 20,
+   "letterlijk": "Totaal 44.816 | 44.241"
+  },
+  "rente_afdekking_pct": {
+   "2025": 80,
+   "2024": null,
+   "pagina": 121,
+   "letterlijk": "Het renterisico van de verplichtingen is voor ruim 80% afgedekt."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-15",
+  "pagina": 95
+ },
+ "invaardatum": {
+  "datum": "2028-01-01",
+  "status": "gepland",
+  "pagina": 28
+ },
+ "opmerkingen": "AUM: excl. negatieve derivaten 6.013.604; incl. negatieve derivaten (netto) 5.534.699 (2024: 5.792.522); daarnaast beleggingen risico deelnemer 446.726 (niet meegeteld). Kerncijfers noemen naast 'Actuele dekkingsgraad 131,4%' ook 'Dekkingsgraad o.b.v. marktrente 130,8%' (2024 beide 119,4%); 131,4% ook in financiële positie p43. Totaal deelnemers 44.816 omvat ook 646 arbeidsongeschikte premievrije deelnemers (aparte regel). Renteafdekking 'ruim 80%' (niet exact); normhedge per 1-10-2025 verhoogd naar 80% tot invaren (p61), strategisch 60%. Rendement -2,42% komt uit performancetabel Middelloonregeling (p75), niet uit de kerncijfertabel; ook genoemd p196. Vaststellingsdatum: ondertekening bestuur 'Zeist, 15 juni 2026' (p95), jaarrekening vastgesteld p148/151 zelfde datum."
+}

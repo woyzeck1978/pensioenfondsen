@@ -1,0 +1,21 @@
+{
+ "fund_id": 228,
+ "naam": "Kring IFF (Stap)",
+ "pad": "data/annual_reports/228_IFF_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {"2025": -0.7, "2024": null, "pagina": 5, "letterlijk": "Beleggingsrendement risico pensioenkring -0,7% (** periode 1 oktober 2025 t/m 31 december 2025)"},
+  "beleidsdekkingsgraad_pct": {"2025": 141.1, "2024": 134.3, "pagina": 5, "letterlijk": "Beleidsdekkingsgraad 141,1% (p31: 'De beleidsdekkingsgraad steeg van 134,3% naar 141,1%')"},
+  "nominale_dekkingsgraad_pct": {"2025": 147.6, "2024": 130.9, "pagina": 5, "letterlijk": "Feitelijke dekkingsgraad 147,6% (p31: 'Per saldo steeg de dekkingsgraad van 130,9% naar 147,6%')"},
+  "reele_dekkingsgraad_pct": {"2025": 103.0, "2024": null, "pagina": 21, "letterlijk": "Reële dekkingsgraad 103,0 (Cijfers in % 2025)"},
+  "vereiste_dekkingsgraad_pct": {"2025": 116.1, "2024": null, "pagina": 5, "letterlijk": "Vereiste dekkingsgraad 116,1%"},
+  "aum_euro_bn": {"2025": 0.469423, "2024": null, "pagina": 58, "letterlijk": "Beleggingen voor risico Pensioenkring IFF (bedragen x € 1.000) 469.423"},
+  "deelnemers_actief": {"2025": 1097, "2024": null, "pagina": 5, "letterlijk": "Actieven en arbeidsongeschikten 1.097"},
+  "deelnemers_slapers": {"2025": 1182, "2024": null, "pagina": 5, "letterlijk": "Gewezen deelnemers 1.182"},
+  "deelnemers_pensioengerechtigd": {"2025": 573, "2024": null, "pagina": 5, "letterlijk": "Pensioengerechtigden 573"},
+  "deelnemers_totaal": {"2025": 2852, "2024": null, "pagina": 5, "letterlijk": "Totaal 2.852"},
+  "rente_afdekking_pct": {"2025": 70.0, "2024": null, "pagina": 28, "letterlijk": "Gedurende 2025 is een vast niveau voor de strategische renterisico-afdekking van 70,0% gehanteerd."}
+ },
+ "vaststellingsdatum": {"datum": "2026-06-16", "pagina": 85},
+ "invaardatum": {"datum": null, "status": "geen datum genoemd", "pagina": 63},
+ "opmerkingen": "Deel-jaarverslag van Pensioenkring IFF binnen APF Stap; kring operationeel sinds 1 oktober 2025 (overdracht van Stichting IFF Pensioenfonds in liquidatie). Alle cijfers zijn kring-eigen; de kerncijfertabel kent alleen een 2025-kolom. De 2024-waarden voor dekkingsgraad (130,9%) en beleidsdekkingsgraad (134,3%) komen uit het verslag van het belanghebbendenorgaan (p31) als beginstand 2025 en betreffen dus het oude Stichting IFF Pensioenfonds ultimo 2024, niet de kring. Rendement -0,7% dekt alleen Q4 2025 (1 okt - 31 dec), niet het hele jaar. Rente-afdekking 70,0% is strategisch; p50 kolomkoppen onleesbaar in tekstextractie, p28 bevestigt 70,0% voor IFF. Invaren: sociale partners hebben 'de intentie uitgesproken om in te varen' (p63); BO noemt 2026 traject naar invaren (p32); geen datum. Vastgesteld door bestuur Stap, Den Haag 16 juni 2026 (p85)."
+}

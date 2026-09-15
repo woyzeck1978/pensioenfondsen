@@ -1,0 +1,83 @@
+{
+ "fund_id": 221,
+ "naam": "Kring ESN (Centraal Beheer)",
+ "pad": "data/annual_reports/65_Centraal_Beheer_APF_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": 0.82,
+   "2024": 10.82,
+   "pagina": 340,
+   "letterlijk": "Beleggingsrendement 0,82% 10,82% (kop 2025 2024)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 136.6,
+   "2024": 130.8,
+   "pagina": 347,
+   "letterlijk": "Beleidsdekkingsgraad 136,6% 130,8%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 143.7,
+   "2024": 128.5,
+   "pagina": 347,
+   "letterlijk": "Actuele dekkingsgraad 143,7% 128,5%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 100.2,
+   "2024": 96.9,
+   "pagina": 347,
+   "letterlijk": "Reële dekkingsgraad 100,2% 96,9%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 117.0,
+   "2024": 117.0,
+   "pagina": 347,
+   "letterlijk": "Vereiste dekkingsgraad 117,0% 117,0%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.259208,
+   "2024": 0.256135,
+   "pagina": 341,
+   "letterlijk": "Totaal belegd vermogen (x € 1.000) 259.208 256.135"
+  },
+  "deelnemers_actief": {
+   "2025": 170,
+   "2024": 187,
+   "pagina": 339,
+   "letterlijk": "Actieven en arbeidsongeschikten 170 187"
+  },
+  "deelnemers_slapers": {
+   "2025": 194,
+   "2024": 197,
+   "pagina": 339,
+   "letterlijk": "Gewezen deelnemers 194 197"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 85,
+   "2024": 67,
+   "pagina": 339,
+   "letterlijk": "Pensioengerechtigden 85 67"
+  },
+  "deelnemers_totaal": {
+   "2025": 449,
+   "2024": 451,
+   "pagina": 339,
+   "letterlijk": "Deelnemers 449 451"
+  },
+  "rente_afdekking_pct": {
+   "2025": null,
+   "2024": 75,
+   "pagina": 355,
+   "letterlijk": "In 2024 werd 75% van de rentegevoeligheid van de pensioenverplichtingen op basis van de marktrente afgedekt"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-17",
+  "pagina": 425
+ },
+ "invaardatum": {
+  "datum": null,
+  "status": "geen datum genoemd",
+  "pagina": 357
+ },
+ "opmerkingen": "Renteafdekking: dynamisch beleid 50-80%; het verslag noemt alleen '2024: 75%' (vermoedelijk niet bijgewerkt), geen 2025-percentage, dus 2025 null. Invaren: alleen voorbereidingen Wtp genoemd, geen transitiedatum voor de kring. Vaststelling: 'heeft de jaarrekening over het verslagjaar 2025 vastgesteld in de vergadering van 17 juni 2026' (p425); bestuursverslag ondertekend 'Zeist, 15 juni 2026' (p403). Deelnemersaantallen: 'Deelnemers' = totaal; actieven incl. arbeidsongeschikten. Bedragen in de kringtabellen in € 1.000."
+}

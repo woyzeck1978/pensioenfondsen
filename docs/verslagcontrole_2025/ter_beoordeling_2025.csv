@@ -1,0 +1,230 @@
+fund_id,fonds,jaar,veld,database,verslag,actie,pagina,vindplaats,tweede_lezing
+2,Fysiotherapeuten (SPF - Physiotherapists),2025,aum_euro_bn,,0.218942,gevuld,8,Beleggingen ** - voor risico pensioenfonds (x € 1.000) 2025 218.942 | 2024 4.568.267; - voor risico deelnemers 2025 3.909.612,beide_fout
+2,Fysiotherapeuten (SPF - Physiotherapists),2024,nominale_dekkingsgraad_pct,,114.8,gevuld,8,"Aanwezige dekkingsgraad 2025 - | 2024 114,8",niet_nagelezen
+3,Huisartsen (SPH - General Practitioners),2025,rente_afdekking_pct,73.4,73,ter_beoordeling,154,Ultimo 2025 werd door het fonds 73% (2024: 68%) van het renterisico strategisch afgedekt.,niet_te_bepalen
+3,Huisartsen (SPH - General Practitioners),2025,aum_euro_bn,9.26,10.233,ter_beoordeling,125,Beleggingen voor risico fonds 10.233 10.534 (x EUR 1 miljoen),beide_fout
+4,Loodsen (Pilots),2024,deelnemers_slapers,,9,gevuld,7,Gewezen deelnemers 2024 9 | 2025 9,niet_nagelezen
+5,Medisch Specialisten (SPMS - Medical Specialists),2025,aum_euro_bn,11.979,14.149911,ter_beoordeling,75,Beleggingen pensioenfonds 14.149.911 13.986.946 (duizenden euro's),beide_fout
+6,Openbare Apothekers (SPOA - Public Pharmacists),2025,rente_afdekking_pct,99.1,100.0,ter_beoordeling,85,De strategische renteafdekking van 100% op basis van de swapcurve is eind 2025 equivalent met een renteafdekking van 100% op basis van de DNB-methodiek,niet_te_bepalen
+6,Openbare Apothekers (SPOA - Public Pharmacists),2024,deelnemers_actief,,2984,gevuld,6,Actieve deelnemers 3.014 2.984,niet_nagelezen
+8,Verloskundigen (SPV - Midwives),2025,beleggingsrendement_pct,-5.4,-10.1,vervangen,51,"Totaal inclusief rente- en valutahedge -10,1 6,9 8,9 10,6 (portefeuille 2025, benchmark 2025, portefeuille 2024, benchmark 2024)",database_klopt
+8,Verloskundigen (SPV - Midwives),2025,rente_afdekking_pct,56.3,60,ter_beoordeling,51,Vanaf begin 2025 dekt het pensioenfonds 60% van het renterisico op basis van de marktrente af,niet_te_bepalen
+9,ABP (Government and Education),2025,rente_afdekking_pct,59.3,49.1,ter_beoordeling,26,"Eind 2025 bedroeg de renteafdekking, net als eind 2024, 49,1%",voorstel_klopt
+9,ABP (Government and Education),2025,aum_euro_bn,531.83,559.698,ter_beoordeling,130,Totaal beleggingen (in € mln) Totaal 2025 559.698 | Totaal 2024 568.856,voorstel_klopt
+10,Architectenbureaus (Architecture Firms),2025,rente_afdekking_pct,74.2,70.0,ter_beoordeling,7,We have therefore hedged 70% of the interest rate risk.,niet_te_bepalen
+12,Banden- en Wielenbranche (Tire and Wheel Branch),2025,rente_afdekking_pct,90.4,87.0,ter_beoordeling,76,"De feitelijke renteafdekking op basis van de DNB-methodiek bedraagt 87,0% eind 2025",voorstel_klopt
+13,Beroepsvervoer over de Weg (Commercial Road Transport),2025,rente_afdekking_pct,62.6,65.0,ter_beoordeling,115,De werkelijke afdekking ultimo 2025 bedraagt 65% (2024: 58%),voorstel_klopt
+13,Beroepsvervoer over de Weg (Commercial Road Transport),2025,aum_euro_bn,37.1,34.781,ter_beoordeling,5,"Balanswaarde (jaareinde, incl. derivaten passiva) 34.781 33.945 (Bedragen x € 1.000.000)",voorstel_klopt
+14,Beton / Betonproductenindustrie (Concrete Industry),2025,rente_afdekking_pct,82.8,79.0,ter_beoordeling,86,"De renteafdekking per balansdatum, op basis van marktrente, bedraagt 79,0%.",voorstel_klopt
+14,Beton / Betonproductenindustrie (Concrete Industry),2025,aum_euro_bn,1.187,1.612035,ter_beoordeling,65,Beleggingen voor risico pensioenfonds (* € 1.000) 1.612.035 1.352.523,voorstel_klopt
+15,Bouw / BPFBouw (Construction),2025,rente_afdekking_pct,93.5,61.6,ter_beoordeling,135,"Het werkelijke afdekkingsniveau ultimo 2025 is uitgekomen op 61,6 procent van de dekkingsgraad (2024: 61,8 procent",voorstel_klopt
+15,Bouw / BPFBouw (Construction),2025,aum_euro_bn,66.268,75.713,ter_beoordeling,11,Bedragen in miljoenen euro's: Totaal beleggingen 75.713 78.241,beide_fout
+16,BPL Pensioen (Agriculture),2025,rente_afdekking_pct,66.5,69,ter_beoordeling,35,Per 31 december 2025 is 69% van het renterisico op basis van de marktrente afgedekt.,voorstel_klopt
+17,Detailhandel (Retail),2025,rente_afdekking_pct,70.2,70.0,ter_beoordeling,122,het renterisico voor 70% af te dekken (2024: 70%),niet_te_bepalen
+17,Detailhandel (Retail),2025,aum_euro_bn,32.313,39.242037,ter_beoordeling,96,Beleggingen voor risico pensioenfonds (bedragen x € 1.000) 39.242.037 37.400.702,voorstel_klopt
+18,HiBiN (Building Materials Trade),2025,aum_euro_bn,1.269,1.171877,ter_beoordeling,4,Beleggingen (x € 1.000) Belegd vermogen 1.171.877 1.234.557,voorstel_klopt
+19,Horeca & Catering (Hospitality),2025,rente_afdekking_pct,61.5,63,ter_beoordeling,123,Ultimo 2025 verlaagde het fonds het vaste afdekkingspercentage naar 63%,voorstel_klopt
+20,Kappersbedrijf (Hairdressers),2025,rente_afdekking_pct,56.6,65,ter_beoordeling,57,In lijn met het strategisch beleid is het matchpercentage vastgesteld op 65%,niet_te_bepalen
+21,Koopvaardij (Merchant Navy),2025,aum_euro_bn,3.506,3.370974,ter_beoordeling,6,Actuele waarde belegd vermogen 3.370.974 3.700.307 (x 1 duizend Euro),voorstel_klopt
+23,Medewerkers Apotheken / PMA (Pharmacy Employees),2025,rente_afdekking_pct,76.4,80.0,ter_beoordeling,41,Begin 2025 dekte PMA 55% van het renterisico van de verplichtingen af op basis van de marktrente en deze afdekking is in februari verhoogd naar 80%.,niet_te_bepalen
+23,Medewerkers Apotheken / PMA (Pharmacy Employees),2025,aum_euro_bn,3.128,4.087276,ter_beoordeling,68,Totaal Beleggingen (x € 1.000) 4.087.276 4.001.220,voorstel_klopt
+25,"MITT (Fashion, Interior, Carpet, and Textile Industry)",2025,aum_euro_bn,4.147,3.855529,ter_beoordeling,10,Beleggingen 3) (in duizenden euro) 3.855.529 4.170.596 - 3) inclusief lopende intrest en liquide middelen,voorstel_klopt
+25,"MITT (Fashion, Interior, Carpet, and Textile Industry)",2024,deelnemers_slapers,,54237,gevuld,10,Gewezen deelnemers 54.598 54.237,niet_nagelezen
+26,Molenaars (Millers),2025,rente_afdekking_pct,60.4,76.8,ter_beoordeling,49,"Het geconsolideerde renterisico was op 31 december 2025 voor 76,8% ex-ante afgedekt",voorstel_klopt
+28,Notariaat (Notaries),2025,aum_euro_bn,2.895,2.819,ter_beoordeling,7,Bedragen x € 1 miljoen; Beleggingen¹ 2.819 3.171 2.960,voorstel_klopt
+30,Particuliere Beveiliging (Private Security),2025,rente_afdekking_pct,83.1,80.0,ter_beoordeling,79,De renteafdekking ging van 60% aan het begin van het jaar naar 80% eind 2025.,voorstel_klopt
+30,Particuliere Beveiliging (Private Security),2025,aum_euro_bn,2.37,2.419408,ter_beoordeling,101,Beleggingen voor risico pensioenfonds (x € 1.000) 2.419.408 2.480.281,voorstel_klopt
+32,PGB (Various Industries),2025,rente_afdekking_pct,74.7,74,ter_beoordeling,113,Aan het eind van het verslagjaar bedroeg de renteafdekking 74 procent (2024: 70 procent),voorstel_klopt
+33,Rail & Openbaar Vervoer (Rail & Public Transport),2025,rente_afdekking_pct,72.9,71,ter_beoordeling,36,Gedurende het jaar is de afdekking van het renterisico opgehoogd van 55% naar 71%,voorstel_klopt
+34,Recreatie (Recreation),2025,rente_afdekking_pct,82.0,76.1,ter_beoordeling,22,"Rente-afdekking (marktrente) 76,0% 76,1% (kolommen strategisch / feitelijk ultimo 2025)",voorstel_klopt
+34,Recreatie (Recreation),2025,aum_euro_bn,1.08,1.122934,ter_beoordeling,84,Beleggingen voor risico pensioenfonds (x € 1.000) 1.122.934 1.172.945,voorstel_klopt
+35,Slagersbedrijf (Butchers),2025,rente_afdekking_pct,83.5,80.0,ter_beoordeling,40,De renteafdekking lag gedurende het hele jaar op 80%.,voorstel_klopt
+35,Slagersbedrijf (Butchers),2025,aum_euro_bn,2.681,2.885803,ter_beoordeling,63,"Beleggingen voor risico pensioenfonds (Bedragen x € 1.000,-) 2.885.803 2.796.306",voorstel_klopt
+37,Waterbouw (Hydraulic Engineering),2024,deelnemers_slapers,,3475,gevuld,6,Gewezen deelnemers 3.476 3.475 3.430,niet_nagelezen
+37,Waterbouw (Hydraulic Engineering),2024,deelnemers_pensioengerechtigd,,5150,gevuld,6,Pensioengerechtigden 5.159 5.150 5.247,niet_nagelezen
+37,Waterbouw (Hydraulic Engineering),2024,deelnemers_totaal,,11576,gevuld,6,Totaal aantal deelnemers 11.645 11.576 11.526,niet_nagelezen
+38,Werk- en (re)Integratie / PWRI (Work and Reintegration),2024,nominale_dekkingsgraad_pct,,124.0,gevuld,7,"Dekkingsgraad fonds (A / B) (%) n.v.t. 124,0 123,4",niet_nagelezen
+41,Zorg en Welzijn / PFZW (Healthcare and Welfare),2025,rente_afdekking_pct,68.0,70.5,ter_beoordeling,145,"Afdekkingspercentages rente afdekkingsmandaat T.o.v. daadwerkelijke verplichtingen 70,5% 58,5% (kop 31-12-2025 31-12-2024)",voorstel_klopt
+42,Zorgverzekeraars / SBZ (Health Insurers),2025,rente_afdekking_pct,61.2,80,ter_beoordeling,121,Het renterisico van de verplichtingen is voor ruim 80% afgedekt.,voorstel_klopt
+42,Zorgverzekeraars / SBZ (Health Insurers),2025,aum_euro_bn,5.537,6.013604,ter_beoordeling,20,Beleggingen risico fonds (excl. negatieve derivaten) (x EUR 1.000) 6.013.604 | 6.040.634,voorstel_klopt
+43,Zuivel- en aanverwante industrie / BPZ (Dairy Industry),2025,rente_afdekking_pct,90.5,84.9,ter_beoordeling,42,"De feitelijke renteafdekking per eind 2025 bedraagt 84,9%.",voorstel_klopt
+45,IBM (SPIN) / IBM Nederland,2025,rente_afdekking_pct,138.1,104.0,ter_beoordeling,19,"De totale renteafdekking voor de DB-portefeuille is 100,0% strategisch (104,0% actueel)",voorstel_klopt
+46,IKEA (STIP),2025,rente_afdekking_pct,67.7,75.0,ter_beoordeling,32,De strategische renteafdekking is eind 2025 verhoogd naar 75%,niet_te_bepalen
+46,IKEA (STIP),2025,aum_euro_bn,0.756,0.922333,ter_beoordeling,7,Beleggingen - voor risico pensioenfonds (x € 1.000) 922.333 810.812,voorstel_klopt
+47,KLM Algemeen (Ground Staff),2025,rente_afdekking_pct,77.9,74.0,ter_beoordeling,100,"Renteafdekking 74,0% 72,8% (kop 2025 2024)",voorstel_klopt
+47,KLM Algemeen (Ground Staff),2025,aum_euro_bn,10.576,10.3306,ter_beoordeling,5,"Beleggingen voor risico pensioenfonds (Bedragen in € mio) Totaal 10.330,6 11.321,6",voorstel_klopt
+49,KLM Vliegend Personeel (Flight Crew),2025,rente_afdekking_pct,120.8,120,ter_beoordeling,101,De hoogte van de afdekking bedraagt ultimo 2025 ongeveer 120% (2024: ongeveer 111%),voorstel_klopt
+50,Mediahuis Nederland (Mhpf),2025,rente_afdekking_pct,81.8,81,ter_beoordeling,34,"S1 - Renterisico ... Afdekking 81% uit de matchingportefeuille (31-dec-25); 79,5% (31-dec-24)",voorstel_klopt
+51,Shell (SSPF),2025,rente_afdekking_pct,103.3,100,ter_beoordeling,83,Ultimo 2025 bedroeg de strategische nominale rentehedge 100%,niet_te_bepalen
+57,Media PNO (Creative and Digital Sector),2025,aum_euro_bn,7.544,8.099551,ter_beoordeling,135,Totaal beleggingen voor risico pensioenfonds 8.099.551 ... 8.110.053 (x EUR 1.000),voorstel_klopt
+58,Metalektro / PME,2025,aum_euro_bn,58.871,60.808,ter_beoordeling,149,Totaal beleggingen voor risico pensioenfonds (bedragen x EUR 1 miljoen) 2025 60.808 | 2024 61.086,voorstel_klopt
+60,"Schilders-, Afwerkings- en Glaszetbedrijf (Painters and Glaziers)",2025,rente_afdekking_pct,69.8,75.0,ter_beoordeling,102,In lijn met het strategisch beleggingsbeleid 2025 wordt 75% van het nominale renterisico afgedekt door middel van een rentehedge.,niet_te_bepalen
+60,"Schilders-, Afwerkings- en Glaszetbedrijf (Painters and Glaziers)",2025,aum_euro_bn,9.101,9.870407,ter_beoordeling,71,Beleggingen voor risico pensioenfonds (x € 1.000) 9.870.407 9.744.614,voorstel_klopt
+62,"Vlakglas, Verf, Glasbewerking- en het Glazeniersbedrijf / BPFV (Flat Glass, Paint, and Glazing)",2025,rente_afdekking_pct,93.6,99.7,ter_beoordeling,50,"De werkelijke renteafdekking komt per eind december 2025 uit op 99,7%.",voorstel_klopt
+63,"Vlees, Vleeswaren, Gemaksvoeding en Pluimveevlees / VLEP (Meat and Poultry)",2025,rente_afdekking_pct,103.3,100.0,ter_beoordeling,48,Begin 2025 van 60% naar 75%. Eind 2025 is de renteafdekking verhoogd van 75% naar 100%.,voorstel_klopt
+66,De Nationale APF,2024,deelnemers_slapers,,20814,gevuld,9,Gewezen deelnemers 20.903,niet_nagelezen
+70,Abbott / Abbott Nederland,2025,rente_afdekking_pct,79.5,82.9,ter_beoordeling,95,"De feitelijke renteafdekking op basis van de DNB-methodiek bedraagt 82,9% eind 2025.",voorstel_klopt
+71,ABN AMRO,2025,vereiste_dekkingsgraad_pct,120.0,109.8,vervangen,115,"Vereiste dekkingsgraad o.b.v. feitelijke beleggingsmix 109,8% | 110,6%",database_klopt
+71,ABN AMRO,2025,rente_afdekking_pct,108.1,85,ter_beoordeling,127,Ultimo 2025 was 85% van het renterisico van de balans afgedekt (2024: 75%).,voorstel_klopt
+71,ABN AMRO,2025,aum_euro_bn,25.223,26.038085,ter_beoordeling,97,Balans (x € 1.000): Totaal beleggingen voor risico pensioenfonds 26.038.085 | 28.576.140,voorstel_klopt
+72,Achmea,2025,rente_afdekking_pct,83.7,80.0,ter_beoordeling,106,In 2025 dekte het fonds 80% af van het renterisico van de verplichtingen op basis van marktrente,voorstel_klopt
+73,Ahold Delhaize,2025,rente_afdekking_pct,100.8,102.5,ter_beoordeling,65,"bedraagt het afgedekte percentage van de verplichtingen 102,5% (2024: 67,3%).",voorstel_klopt
+74,Alliance,2025,aum_euro_bn,0.629,0.685584,ter_beoordeling,61,Beleggingen voor risico pensioenfonds 685.584 683.944 (x EUR 1.000),voorstel_klopt
+75,"APF (AkzoNobel, Nouryon, Nobian, Salt)",2025,aum_euro_bn,5.108,5.297,ter_beoordeling,7,Pensioenvermogen 5.297 (Bedragen in € miljoen),voorstel_klopt
+77,AT&T Nederland,2025,rente_afdekking_pct,79.5,80.0,ter_beoordeling,16,Hiermee wordt 80% (2024: 58%) van het renterisico afgedekt,voorstel_klopt
+77,AT&T Nederland,2025,aum_euro_bn,0.16,0.164181,ter_beoordeling,35,Balans (in € '000): Beleggingen voor risico Pensioenfonds 164.181 (2024: 164.007),voorstel_klopt
+77,AT&T Nederland,2025,deelnemers_actief,343,0,vervangen,3,Actieve deelnemers 0,voorstel_klopt
+78,Atos,2025,rente_afdekking_pct,82.2,70.0,ter_beoordeling,69,"De renteafdekking was stabiel vanaf het begin jaar tot en met oktober 2025 (60%), in de opvolgende maanden was de renteafdekking 70%",voorstel_klopt
+78,Atos,2025,aum_euro_bn,2.34,2.557,ter_beoordeling,6,Belegd vermogen (€ miljoenen) 2.557 2.602,voorstel_klopt
+78,Atos,2025,deelnemers_actief,,0,gevuld,48,Vanaf 1 januari 2014 is er geen actieve pensioenopbouw meer. Er zijn geen actieve deelnemers meer,voorstel_klopt
+80,Avery Dennison,2025,rente_afdekking_pct,85.5,88.1,ter_beoordeling,37,"De mate van renteafdekking per eind december 2025 bedroeg 88,1% op basis van de niet-geïndexeerde kasstromen",voorstel_klopt
+81,Brocacef,2025,rente_afdekking_pct,71.3,67.4,ter_beoordeling,39,"S1 Renterisico ... 31 december 2025: 67,4% afgedekt door middel van obligaties en derivaten",voorstel_klopt
+82,Campina,2025,rente_afdekking_pct,102.2,100.3,ter_beoordeling,53,"S1 Renterisico ... 31 december 2025: 100,3% afgedekt. 31 december 2024: 78,7% afgedekt.",voorstel_klopt
+82,Campina,2025,aum_euro_bn,1.249,1.3623,ter_beoordeling,6,"Beleggingsportefeuille (EUR 1 miljoen) totaal 1.362,3 1.387,9",voorstel_klopt
+83,Capgemini / Capgemini Nederland,2025,rente_afdekking_pct,61.7,66.1,ter_beoordeling,94,"De feitelijke renteafdekking op basis van de DNB-methodiek bedraagt 66,1% eind 2025.",voorstel_klopt
+83,Capgemini / Capgemini Nederland,2025,aum_euro_bn,0.688,0.627936,ter_beoordeling,7,Belegd vermogen voor risico pensioenfonds (in duizenden euro) 627.936 659.509,voorstel_klopt
+84,Cargill,2025,rente_afdekking_pct,101.6,95.2,ter_beoordeling,104,"De feitelijke afdekking van het renterisico ultimo 2025 is 95,2% op basis van de swapcurve.",voorstel_klopt
+84,Cargill,2025,aum_euro_bn,1.168,1.048071,ter_beoordeling,5,(in duizenden euro) Belegd vermogen voor risico pensioenfonds 1.048.071 1) 1.173.260,voorstel_klopt
+85,Citigroup,2025,rente_afdekking_pct,77.8,76,ter_beoordeling,76,De feitelijke ex-ante renteafdekking ultimo 2025 bedraagt 76% (2024: 77%),voorstel_klopt
+85,Citigroup,2025,deelnemers_actief,164,0,vervangen,3,Actieve deelnemers 2025 0 | 2024 0,voorstel_klopt
+85,Citigroup,2024,deelnemers_pensioengerechtigd,,161,gevuld,3,Pensioengerechtigden 2025 161 | 2024 161,niet_nagelezen
+86,Cosun / Koninklijke Cosun,2025,rente_afdekking_pct,103.4,100.0,ter_beoordeling,43,De totale mate van renteafdekking is daarbij onveranderd op 100% gebleven.,voorstel_klopt
+86,Cosun / Koninklijke Cosun,2024,deelnemers_pensioengerechtigd,,1661,gevuld,6,Pensioengerechtigden 1.663 1.661 1.653,niet_nagelezen
+87,De Nederlandsche Bank,2025,rente_afdekking_pct,106.0,75,ter_beoordeling,71,Het renterisico is voor 75% van het marktrenterisico van de dekkingsgraad afgedekt.,niet_te_bepalen
+87,De Nederlandsche Bank,2025,aum_euro_bn,2.276,2.153955,ter_beoordeling,14,"Balanswaarde van de beleggingen, Totaal (bedragen in duizenden euro) 2.153.955 2.367.544",voorstel_klopt
+88,Delta Lloyd,2025,rente_afdekking_pct,111.6,110.0,ter_beoordeling,59,per 15 december 2025 het afdekkingspercentage verhoogd naar 110% van de verplichtingen.,niet_te_bepalen
+89,DHL Nederland,2025,rente_afdekking_pct,112.1,102.7,ter_beoordeling,103,"De feitelijke renteafdekking op basis van de DNB-methodiek bedraagt 102,7% eind 2025.",voorstel_klopt
+89,DHL Nederland,2024,deelnemers_totaal,,16094,gevuld,9,Totaal aantal deelnemers 16.094 16.094 16.088,niet_nagelezen
+90,DOW,2025,rente_afdekking_pct,87.9,100.0,ter_beoordeling,90,Het pensioenfonds dekt het nominale renterisico voor 100% af.,voorstel_klopt
+90,DOW,2025,aum_euro_bn,2.111,2.000913,ter_beoordeling,76,(in duizenden euro) Totaal beleggingen 2.147.374 (ultimo 2024) ... 2.000.913 (ultimo 2025),voorstel_klopt
+90,DOW,2024,deelnemers_actief,,987,gevuld,7,Actieve deelnemers 912 987,niet_nagelezen
+90,DOW,2024,deelnemers_slapers,,904,gevuld,7,Gewezen deelnemers 839 904,niet_nagelezen
+90,DOW,2024,deelnemers_pensioengerechtigd,,3009,gevuld,7,Pensioengerechtigden 3.081 3.009,niet_nagelezen
+90,DOW,2024,deelnemers_totaal,,4900,gevuld,7,Totaal 4.832 4.900,niet_nagelezen
+92,Ecolab,2025,rente_afdekking_pct,67.4,72.5,ter_beoordeling,79,"Ten aanzien van de rentehedge hield het fonds een strategisch afdekkingspercentage aan van 72,5% met een bandbreedte tussen 65% en 80%.",niet_te_bepalen
+93,Essity,2025,rente_afdekking_pct,80.8,81.4,ter_beoordeling,92,"De feitelijke renteafdekking op basis van de DNB-methodiek bedraagt 81,4% eind 2025.",voorstel_klopt
+93,Essity,2025,aum_euro_bn,0.622,0.608976,ter_beoordeling,7,Belegd vermogen Risico pensioenfonds (Bedragen in euro x € 1.000) 608.976 607.162,voorstel_klopt
+93,Essity,2024,deelnemers_slapers,,1500,gevuld,7,gewezen deelnemers 1.492 1.500,niet_nagelezen
+96,Forbo,2025,rente_afdekking_pct,77.5,80,ter_beoordeling,29,Met deze portefeuille wordt ongeveer 80% van het renterisico van de verplichtingen afgedekt.,voorstel_klopt
+96,Forbo,2025,aum_euro_bn,0.475,0.423314,ter_beoordeling,9,Belegd vermogen 1) 423.314 476.270 (in duizenden euro),voorstel_klopt
+96,Forbo,2024,deelnemers_actief,,920,gevuld,9,Actieve deelnemers 898 920,niet_nagelezen
+96,Forbo,2024,deelnemers_slapers,,792,gevuld,9,Gewezen deelnemers 778 792,niet_nagelezen
+96,Forbo,2024,deelnemers_pensioengerechtigd,,829,gevuld,9,Pensioengerechtigden 873 829,niet_nagelezen
+96,Forbo,2024,deelnemers_totaal,,2541,gevuld,9,Totaal 2.549 2.541,niet_nagelezen
+97,Gasunie,2025,rente_afdekking_pct,72.0,70.7,ter_beoordeling,137,"De feitelijke renteafdekking op basis van de DNB-methodiek bedraagt 70,7% eind 2025.",voorstel_klopt
+97,Gasunie,2025,aum_euro_bn,2.315,2.219564,ter_beoordeling,6,Totale beleggingen voor risico pensioenfonds 2.219.564 2.272.079 (bedragen in duizenden euro),voorstel_klopt
+97,Gasunie,2024,deelnemers_pensioengerechtigd,,1738,gevuld,6,Pensioengerechtigden 1.753 1.738,niet_nagelezen
+104,Haskoning DHV,2025,rente_afdekking_pct,76.0,77.9,ter_beoordeling,13,"Eind 2025 bedraagt de renteafdekking tegen huidige verplichtingen 77,9%",voorstel_klopt
+105,Heineken,2025,rente_afdekking_pct,23.5,63.8,ter_beoordeling,62,"Eind 2025 was op die manier 63,8% van het renterisico afgedekt (eind 2024 was dit 56,2%)",voorstel_klopt
+106,Hoogovens,2025,rente_afdekking_pct,42.3,44,ter_beoordeling,14,Eind 2025 was 44% van het renterisico afgedekt.,voorstel_klopt
+106,Hoogovens,2024,deelnemers_pensioengerechtigd,,14203,gevuld,9,Pensioengerechtigden 1 14.192 | 14.203 (incl. ingegane AO-pensioenen),niet_nagelezen
+106,Hoogovens,2024,deelnemers_totaal,,28703,gevuld,9,Totaal 28.534 | 28.703,niet_nagelezen
+107,Huntsman Rozenburg,2025,rente_afdekking_pct,79.3,80.8,ter_beoordeling,23,"Per ultimo van het verslagjaar was de afdekking van het renterisico 80,8%",voorstel_klopt
+108,ING (Stichting Pensioenfonds ING),2025,rente_afdekking_pct,122.1,118.3,ter_beoordeling,86,"De renteafdekking bedroeg ultimo 2025 118,3% van de rentegevoeligheid van de nominale verplichtingen.",voorstel_klopt
+108,ING (Stichting Pensioenfonds ING),2025,aum_euro_bn,23.668,25.038,ter_beoordeling,63,Balans (bedragen in miljoenen euro's): Beleggingen voor risico van het Fonds 25.038 | 26.589,voorstel_klopt
+110,KAS BANK,2025,rente_afdekking_pct,92.6,82.5,ter_beoordeling,94,"Eind 2025 was het renterisico van de verplichtingen voor 82,5% (2024: 83,6%) afgedekt",voorstel_klopt
+110,KAS BANK,2024,deelnemers_pensioengerechtigd,,412,gevuld,7,Pensioengerechtigden 414 412,niet_nagelezen
+112,Lloyd's Register Nederland,2025,rente_afdekking_pct,86.7,80.0,ter_beoordeling,11,Vanaf 31 december 2024 is de renteafdekking 80%.,niet_te_bepalen
+113,Mars,2025,rente_afdekking_pct,107.6,80.1,ter_beoordeling,33,Interest Rate 80.0% 80.0% 80.1% (End 2025 Asset Allocation),voorstel_klopt
+116,MSD,2025,rente_afdekking_pct,99.6,93.4,ter_beoordeling,110,"De feitelijke afdekking o.b.v. de berekening van het renterisico binnen het vereist eigen vermogen bedraagt ultimo 2025 93,4%",voorstel_klopt
+117,Nederlandse Bisdommen,2025,rente_afdekking_pct,107.0,101.7,ter_beoordeling,100,"De feitelijke renteafdekking op basis van de DNB-methodiek bedraag 101,7% eind 2025.",voorstel_klopt
+117,Nederlandse Bisdommen,2024,deelnemers_pensioengerechtigd,,1555,gevuld,5,Pensioengerechtigden 1.558 1.555,niet_nagelezen
+118,NN CDC,2025,rente_afdekking_pct,83.0,81.6,ter_beoordeling,27,"Het jaar eindigde met een renteafdekking van 81,6%.",voorstel_klopt
+118,NN CDC,2025,aum_euro_bn,0.94,0.883026,ter_beoordeling,7,Belegd vermogen 883.026 | 1.023.029 (in duizenden euro),voorstel_klopt
+119,Philips,2025,rente_afdekking_pct,93.1,87.8,ter_beoordeling,181,"Ultimo 2025 bedroeg de nominale renteafdekking 87,8% (ultimo 2024: 87,4%).",voorstel_klopt
+120,Pon,2024,deelnemers_slapers,,5714,gevuld,5,Gewezen deelnemers 5.482 5.714 5.523,niet_nagelezen
+121,PostNL,2025,rente_afdekking_pct,120.2,120.0,ter_beoordeling,27,Van dit risico dekt het pensioenfonds strategisch ultimo 2025 120% af,niet_te_bepalen
+121,PostNL,2025,aum_euro_bn,9.18,9.475992,ter_beoordeling,59,Beleggingen voor risico pensioenfonds (bedragen x 1.000) 31-12-2025 9.475.992 | 31-12-2024 10.099.686,voorstel_klopt
+122,Provisum,2025,rente_afdekking_pct,101.7,100.07,ter_beoordeling,82,"Het daarbij behorende renteafdekkingspercentage op 31-12-2025 bedraagt 100,07%",voorstel_klopt
+123,Rabobank,2025,rente_afdekking_pct,86.8,80.0,ter_beoordeling,132,ultimo 2025 bedroeg het afdekkingspercentage 80%. Dit wordt gedaan voor 65% via renteswaps en staatsobligaties en voor 15% via swaptions.,niet_te_bepalen
+123,Rabobank,2025,aum_euro_bn,24.947,29.2524,ter_beoordeling,99,"Balans (in miljoenen euro's) Beleggingen voor risico fonds 29.252,4 28.714,1",voorstel_klopt
+123,Rabobank,2024,nominale_dekkingsgraad_pct,,116.7,gevuld,6,"Actuele dekkingsgraad in % (A/B) 126,6 116,7 116,5",niet_nagelezen
+123,Rabobank,2024,deelnemers_slapers,,49260,gevuld,6,Gewezen deelnemers 49.184 49.260 49.730,niet_nagelezen
+124,Robeco,2025,rente_afdekking_pct,98.1,99.2,ter_beoordeling,86,"De werkelijke renteafdekking ultimo 2025 is 99,2% (2024: 98,4%)",voorstel_klopt
+125,Rockwool,2025,rente_afdekking_pct,77.5,82.2,ter_beoordeling,80,"het renterisico aan het einde van het verslagjaar voor 82,2% werd afgedekt",voorstel_klopt
+126,SABIC,2025,rente_afdekking_pct,73.8,76.0,ter_beoordeling,67,"de rente-afdekking te verhogen van 62% naar 76%, welke in 2025 is gecontinueerd",niet_te_bepalen
+126,SABIC,2024,deelnemers_totaal,,8802,gevuld,21,Totaal aantal deelnemers 8.799 8.802,niet_nagelezen
+128,Smurfit Kappa,2025,rente_afdekking_pct,63.5,57.7,ter_beoordeling,91,"De feitelijke renteafdekking op basis van de DNB-methodiek bedraagt 57,7% eind 2025.",voorstel_klopt
+130,Sportfondsen,2025,rente_afdekking_pct,73.8,70.0,ter_beoordeling,46,Ultimo 2025 leidde dit beleid tot een renteafdekking van 70%. (eigen beheer depot),voorstel_klopt
+132,Thales Nederland,2025,rente_afdekking_pct,85.6,80,ter_beoordeling,38,De totale renteafdekking is hierbij gehandhaafd op 80 procent van het renterisico van de verplichtingen.,voorstel_klopt
+133,TNO,2025,rente_afdekking_pct,83.9,80,ter_beoordeling,63,Het niveau van de rentehedge is het gehele jaar constant gelijk gebleven op 80%,voorstel_klopt
+133,TNO,2024,deelnemers_slapers,,7320,gevuld,12,Gewezen deelnemers 7.328 7.320 7.173,niet_nagelezen
+135,UWV,2025,rente_afdekking_pct,83.2,87.9,ter_beoordeling,52,"De renteafdekking per 31 december 2025 was met 87,9 procent in lijn met het herziene beleggingsbeleid.",voorstel_klopt
+135,UWV,2025,aum_euro_bn,8.885,8.5195,ter_beoordeling,8,"Beleggingen risico pensioenfonds (bedragen in miljoenen euro) 8.519,5 9.238,4",voorstel_klopt
+136,Vopak,2025,rente_afdekking_pct,69.7,64.7,ter_beoordeling,66,"Eind 2025 bedraagt de afdekking van het renterisico op basis van de swapcurve 64,7% (eind 2024 was dit 69,5%)",voorstel_klopt
+136,Vopak,2025,aum_euro_bn,1.259,1.197321,ter_beoordeling,3,Beleggingen voor risico pensioenfonds 1.197.321 1.243.375 (Bedragen in EUR 1.000),voorstel_klopt
+163,Kring AFM (De Nationale),2025,rente_afdekking_pct,77.6,72.2,ter_beoordeling,342,"De werkelijke afdekking van het renterisico op basis van de DNB-systematiek is 72,2%",voorstel_klopt
+163,Kring AFM (De Nationale),2024,reele_dekkingsgraad_pct,,86.2,gevuld,128,"Reële dekkingsgraad 89,3%",niet_nagelezen
+164,Kring ANWB (De Nationale),2025,rente_afdekking_pct,87.8,77.9,ter_beoordeling,372,"De werkelijke afdekking van het renterisico op basis van de DNB-systematiek is 77,9%",voorstel_klopt
+164,Kring ANWB (De Nationale),2025,aum_euro_bn,1.726,1.671473,ter_beoordeling,16,Belegd vermogen 1.671.473 (Financiële gegevens in duizenden euro),voorstel_klopt
+164,Kring ANWB (De Nationale),2024,reele_dekkingsgraad_pct,,87.2,gevuld,147,"Reële dekkingsgraad 92,1%",niet_nagelezen
+165,Kring Arcadis (Hnp),2025,rente_afdekking_pct,89.5,86.3,ter_beoordeling,149,"De feitelĳke afdekking per ultimo 2025 bedroeg 86,3%",voorstel_klopt
+166,Kring B (De Nationale),2025,rente_afdekking_pct,79.3,77.1,ter_beoordeling,244,"De werkelijke afdekking van het renterisico op basis van de DNB-systematiek is 77,1%",voorstel_klopt
+166,Kring B (De Nationale),2024,reele_dekkingsgraad_pct,,84.6,gevuld,70,"Reële dekkingsgraad 87,1%",niet_nagelezen
+167,Kring CK1 (Hnp),2025,rente_afdekking_pct,83.6,82.6,ter_beoordeling,86,"De feitelĳke renteafdekking per ultimo 2025 bedroeg 82,6%, inclusief de indexatie van 0,27%",voorstel_klopt
+167,Kring CK1 (Hnp),2025,aum_euro_bn,0.487,0.45853,ter_beoordeling,8,Totaal beleggingen 458.530 495.024 (x EUR 1.000),voorstel_klopt
+168,Kring D (De Nationale),2025,rente_afdekking_pct,77.1,73.7,ter_beoordeling,272,"De werkelijke afdekking van het renterisico op basis van de DNB-systematiek is 73,7%",voorstel_klopt
+168,Kring D (De Nationale),2024,reele_dekkingsgraad_pct,,83.7,gevuld,86,"Reële dekkingsgraad 88,4%",niet_nagelezen
+169,Kring A / AZL en Unisys (De Nationale),2025,rente_afdekking_pct,80.9,75.6,ter_beoordeling,214,"De werkelijke afdekking van het renterisico op basis van de DNB-systematiek is 75,6%",voorstel_klopt
+169,Kring A / AZL en Unisys (De Nationale),2024,reele_dekkingsgraad_pct,,90.7,gevuld,53,"Reële dekkingsgraad 94,1%",niet_nagelezen
+171,Kring Eastman (Stap),2025,aum_euro_bn,0.177,0.218835,ter_beoordeling,60,Balans (bedragen x € 1.000) Beleggingen voor risico Pensioenkring Eastman 218.835 / 218.813,voorstel_klopt
+171,Kring Eastman (Stap),2024,deelnemers_actief,,249,gevuld,5,Actieven en arbeidsongeschikten 244 249 278,niet_nagelezen
+171,Kring Eastman (Stap),2024,deelnemers_slapers,,733,gevuld,5,Gewezen deelnemers 745 733 722,niet_nagelezen
+171,Kring Eastman (Stap),2024,deelnemers_pensioengerechtigd,,138,gevuld,5,Pensioengerechtigden 150 138 120,niet_nagelezen
+173,Kring McCain (De Nationale),2025,rente_afdekking_pct,77.1,72.2,ter_beoordeling,315,"De werkelijke afdekking van het renterisico op basis van de DNB-systematiek is 72,2%",voorstel_klopt
+173,Kring McCain (De Nationale),2024,reele_dekkingsgraad_pct,,87.7,gevuld,112,"Reële dekkingsgraad 89,3%",niet_nagelezen
+174,Kring Progress (Unilever),2025,rente_afdekking_pct,93.2,93,ter_beoordeling,106,Progress: ongeveer 93% van de rentemismatch (rentegevoeligheid van de kring) afgedekt. Per eind 2024 was dit ongeveer 91%.,voorstel_klopt
+175,Kring Roba (Hnp),2025,rente_afdekking_pct,106.1,103.8,ter_beoordeling,321,"De feitelĳke afdekking per ultimo 2025 bedroeg 103,8%. Die afwĳking valt buiten de toegestane bandbreedte",voorstel_klopt
+175,Kring Roba (Hnp),2025,aum_euro_bn,0.198,0.186975,ter_beoordeling,24,Totaal beleggingen 186.975 210.119 (x EUR 1.000),voorstel_klopt
+176,Kring SVG (Stap),2025,rente_afdekking_pct,101.6,100.0,ter_beoordeling,28,Gedurende 2025 is de strategische afdekking van het renterisico onveranderd 100% geweest.,niet_te_bepalen
+176,Kring SVG (Stap),2025,aum_euro_bn,0.56,0.608416,ter_beoordeling,58,Beleggingen voor risico Pensioenkring SVG 608.416 627.677 (bedragen x € 1.000),voorstel_klopt
+177,"Staples (SPS, in liquidatie)",2024,deelnemers_actief,,33,gevuld,5,Actieve deelnemers - 33 38,niet_nagelezen
+177,"Staples (SPS, in liquidatie)",2024,deelnemers_slapers,,3240,gevuld,5,Gewezen deelnemers - 3.240 3.435,niet_nagelezen
+177,"Staples (SPS, in liquidatie)",2024,deelnemers_pensioengerechtigd,,4158,gevuld,5,Pensioengerechtigden - 4.158 4.187,niet_nagelezen
+177,"Staples (SPS, in liquidatie)",2024,deelnemers_totaal,,7431,gevuld,5,Totaal - 7.431 7.660,niet_nagelezen
+181,Oak,2025,rente_afdekking_pct,83.8,80.0,ter_beoordeling,164,De afdekking van het renterisico bedraagt 80%.,voorstel_klopt
+183,Pensioenkring 2 (Stap),2025,rente_afdekking_pct,86.0,85.0,ter_beoordeling,32,"Gedurende 2025 is de strategische mate van afdekking van het renterisico verhoogd van 70,0% naar 85,0%.",niet_te_bepalen
+183,Pensioenkring 2 (Stap),2025,aum_euro_bn,0.829,0.961065,ter_beoordeling,63,Beleggingen voor risico Multi-client Pensioenkring 2 961.065 986.729 (bedragen x € 1.000),voorstel_klopt
+185,Pensioenkring Astellas (Stap),2025,aum_euro_bn,0.48,0.501943,ter_beoordeling,60,Beleggingen voor risico Pensioenkring Astellas 501.943 481.217 (bedragen x € 1.000),voorstel_klopt
+187,Pensioenkring CRH (Hnp),2025,rente_afdekking_pct,75.4,72.7,ter_beoordeling,210,"De feitelĳke renteafdekking per ultimo 2025 bedroeg 72,7%",voorstel_klopt
+187,Pensioenkring CRH (Hnp),2025,aum_euro_bn,0.925,0.835227,ter_beoordeling,15,Totaal beleggingen 835.227 (duizenden euro's),voorstel_klopt
+188,Pensioenkring GE Nederland (Stap),2025,aum_euro_bn,0.672,0.686465,ter_beoordeling,63,Balans (bedragen x € 1.000) Beleggingen voor risico Pensioenkring GE Nederland 686.465 / 674.488,voorstel_klopt
+189,Pensioenkring OWASE (Hnp),2025,rente_afdekking_pct,101.2,102.7,ter_beoordeling,239,"De feitelĳke afdekking per ultimo 2025 bedroeg 102,7%",voorstel_klopt
+189,Pensioenkring OWASE (Hnp),2025,aum_euro_bn,0.974,0.924402,ter_beoordeling,18,Totaal beleggingen 924.402 1.005.534 (x EUR 1.000),voorstel_klopt
+190,Pensioenkring PepsiCo (Hnp),2025,rente_afdekking_pct,104.0,102.4,ter_beoordeling,269,"De feitelĳke renteafdekking per ultimo 2025 bedroeg 102,4%",voorstel_klopt
+190,Pensioenkring PepsiCo (Hnp),2025,aum_euro_bn,0.279,0.260363,ter_beoordeling,20,Totaal beleggingen 260.363 300.428 (x EUR 1.000),voorstel_klopt
+191,Pensioenkring Randstad (Hnp),2025,rente_afdekking_pct,101.2,99.7,ter_beoordeling,295,"De feitelĳke afdekking per ultimo 2025 bedroeg 99,7%",voorstel_klopt
+191,Pensioenkring Randstad (Hnp),2025,aum_euro_bn,0.895,0.849658,ter_beoordeling,22,Totaal beleggingen 849.658 918.764 (x EUR 1.000),voorstel_klopt
+192,Pensioenkring Sweco (Hnp),2025,rente_afdekking_pct,100.6,99.8,ter_beoordeling,349,"De feitelĳke renteafdekking per ultimo 2025 bedroeg 99,8%, inclusief de indexatie van 0,60%",voorstel_klopt
+192,Pensioenkring Sweco (Hnp),2025,aum_euro_bn,0.923,0.847521,ter_beoordeling,26,Totaal beleggingen 847.521 1.024.692 (x EUR 1.000),voorstel_klopt
+194,Pensioenkring Wolters Kluwer NL (Hnp),2025,rente_afdekking_pct,84.4,88.8,ter_beoordeling,401,"De feitelĳke afdekking per ultimo 2025 bedroeg 88,8%. Die afwĳking valt iets buiten de toegestane bandbreedte",voorstel_klopt
+194,Pensioenkring Wolters Kluwer NL (Hnp),2025,aum_euro_bn,1.123,1.06182,ter_beoordeling,30,Totaal beleggingen 1.061.820 (x EUR 1.000),voorstel_klopt
+195,Pensioenkring Xerox (Hnp),2025,rente_afdekking_pct,85.7,83.0,ter_beoordeling,425,"De feitelĳke renteafdekking per ultimo 2025 bedroeg 83,0%",voorstel_klopt
+195,Pensioenkring Xerox (Hnp),2025,aum_euro_bn,0.739,0.687713,ter_beoordeling,32,Totaal beleggingen 687.713 745.197 (x EUR 1.000),voorstel_klopt
+207,Pensioenfonds British American Tobacco,2024,reele_dekkingsgraad_pct,,104.7,gevuld,5,"Wettelijke reële dekkingsgraad in % n.v.t. 104,7%",niet_nagelezen
+210,Kring DB Evenwicht (Centraal Beheer),2025,rente_afdekking_pct,,65.0,gevuld,175,Wĳ gebruiken in de Kring DB Evenwicht een strategie waarbĳ 65% van de rentegevoeligheid van de pensioenverplichtingen op basis van de marktrente wordt afgedekt.,niet_te_bepalen
+211,Kring DB Koopkracht (Centraal Beheer),2025,rente_afdekking_pct,,60.0,gevuld,158,Wĳ gebruiken in de Kring DB Koopkracht een strategie waarbĳ 60% van de rentegevoeligheid van de pensioenverplichtingen op basis van de marktrente wordt afgedekt.,niet_te_bepalen
+212,Kring DB Premie (Centraal Beheer),2025,rente_afdekking_pct,,60.0,gevuld,121,Wĳ gebruiken in de Kring DB Premie een strategie waarbĳ 60% van de rentegevoeligheid van de pensioenverplichtingen op basis van de marktrente wordt afgedekt.,niet_te_bepalen
+213,Kring DB Stabiliteit (Centraal Beheer),2025,rente_afdekking_pct,,90,gevuld,140,strategie waarbĳ 90% van de rentegevoeligheid van de pensioenverplichtingen op basis van de marktrente wordt afgedekt,niet_te_bepalen
+214,Kring HPE (Centraal Beheer),2025,rente_afdekking_pct,,60,gevuld,309,strategie waarbĳ 60% van de rentegevoeligheid van de pensioenverplichtingen op basis van de marktrente wordt afgedekt,niet_te_bepalen
+218,Kring Deutsche Bank Nederland (Centraal Beheer),2025,rente_afdekking_pct,,70,gevuld,376,strategie waarbĳ 70% van de rentegevoeligheid van de dekkingsgraad wordt afgedekt,niet_te_bepalen
+219,Kring Grolsch (Centraal Beheer),2025,rente_afdekking_pct,,72.5,gevuld,397,"Wĳ maken voor de Kring Grolsch gebruik van een strategie waarbĳ 72,5% van de rentegevoeligheid van de dekkingsgraad wordt afgedekt.",niet_te_bepalen
+220,Kring Chemours (Centraal Beheer),2025,rente_afdekking_pct,,80.0,gevuld,263,Wĳ maken voor de Kring Chemours gebruik van een strategie waarbĳ 80% van de rentegevoeligheid van de pensioenverplichtingen op basis van de marktrente wordt afgedekt.,niet_te_bepalen
+221,Kring ESN (Centraal Beheer),2024,rente_afdekking_pct,,75,gevuld,355,In 2024 werd 75% van de rentegevoeligheid van de pensioenverplichtingen op basis van de marktrente afgedekt,niet_nagelezen
+223,Kring Bavaria (Centraal Beheer),2025,rente_afdekking_pct,,65.0,gevuld,218,Het doel in 2025 was om 65% van de mutatie van de pensioenvoorziening als gevolg van een verandering van de marktrentecurve af te dekken.,niet_te_bepalen
+227,Kring Holland Casino (Stap),2024,beleidsdekkingsgraad_pct,,128.8,gevuld,5,"Beleidsdekkingsgraad n.v.t. 128,8% 124,8%",niet_nagelezen
+227,Kring Holland Casino (Stap),2024,reele_dekkingsgraad_pct,,95.3,gevuld,25,"Reële dekkingsgraad n.v.t. 95,3",niet_nagelezen
+227,Kring Holland Casino (Stap),2024,vereiste_dekkingsgraad_pct,,123.0,gevuld,5,"Vereiste dekkingsgraad n.v.t. 123,0% 123,1%",niet_nagelezen
+228,Kring IFF (Stap),2025,rente_afdekking_pct,,70.0,gevuld,28,"Gedurende 2025 is een vast niveau voor de strategische renterisico-afdekking van 70,0% gehanteerd.",niet_te_bepalen
+238,Kring TotalEnergies NL (Stap),2024,beleggingsrendement_pct,,9.6,gevuld,5,"Beleggingsrendement Per jaar -4,1% 9,6%",niet_nagelezen
+238,Kring TotalEnergies NL (Stap),2024,beleidsdekkingsgraad_pct,,120.8,gevuld,5,"Beleidsdekkingsgraad 124,4% 120,8%",niet_nagelezen
+238,Kring TotalEnergies NL (Stap),2024,reele_dekkingsgraad_pct,,91.2,gevuld,23,"Reële dekkingsgraad 92,6 91,2",niet_nagelezen
+238,Kring TotalEnergies NL (Stap),2024,vereiste_dekkingsgraad_pct,,119.4,gevuld,5,"Vereiste dekkingsgraad 119,1% 119,4%",niet_nagelezen
+238,Kring TotalEnergies NL (Stap),2024,deelnemers_actief,,855,gevuld,5,Actieven en arbeidsongeschikten 841 855,niet_nagelezen
+238,Kring TotalEnergies NL (Stap),2024,deelnemers_slapers,,497,gevuld,5,Gewezen deelnemers 526 497,niet_nagelezen
+238,Kring TotalEnergies NL (Stap),2024,deelnemers_pensioengerechtigd,,545,gevuld,5,Pensioengerechtigden 560 545,niet_nagelezen
+238,Kring TotalEnergies NL (Stap),2024,deelnemers_totaal,,1897,gevuld,5,Totaal 1.927 1.897,niet_nagelezen
+239,Shell Nederland (SNPS),2025,beleidsdekkingsgraad_pct,,102.5,gevuld,20,"Feitelijke dekkingsgraad 102,5% (2024: 102,7%); p.69: 'De beleidsdekkingsgraad is gelijk aan de feitelijke dekkingsgraad.'",niet_te_bepalen
+239,Shell Nederland (SNPS),2025,vereiste_dekkingsgraad_pct,,101.2,gevuld,20,"Minimaal vereiste dekkingsgraad 101,2%; p.69: 'De vereiste dekkingsgraad is gelijk aan de minimaal vereiste dekkingsgraad.'",niet_te_bepalen
+239,Shell Nederland (SNPS),2024,beleidsdekkingsgraad_pct,,102.7,gevuld,20,"Feitelijke dekkingsgraad 102,5% (2024: 102,7%); p.69: 'De beleidsdekkingsgraad is gelijk aan de feitelijke dekkingsgraad.'",niet_te_bepalen
+239,Shell Nederland (SNPS),2024,vereiste_dekkingsgraad_pct,,101.2,gevuld,20,"Minimaal vereiste dekkingsgraad 101,2%; p.69: 'De vereiste dekkingsgraad is gelijk aan de minimaal vereiste dekkingsgraad.'",niet_te_bepalen

@@ -1,0 +1,83 @@
+{
+ "fund_id": 108,
+ "naam": "ING (Stichting Pensioenfonds ING)",
+ "pad": "data/annual_reports/108_ING_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -5.3,
+   "2024": 1.8,
+   "pagina": 3,
+   "letterlijk": "RENDEMENT TOTALE BELEGGINGEN -5,3% 2024: 1,8%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 139.4,
+   "2024": 144.8,
+   "pagina": 23,
+   "letterlijk": "Eind 2025 was deze beleidsdekkingsgraad 139,4% (144,8% ultimo 2024)."
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 140.5,
+   "2024": 136.6,
+   "pagina": 23,
+   "letterlijk": "De nominale DNB-dekkingsgraad nam toe van 136,6% ultimo 2024 naar 140,5% ultimo 2025."
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 104.6,
+   "2024": 96.5,
+   "pagina": 4,
+   "letterlijk": "Figuur 1 Kerncijfers, Reële dekkingsgraad 2025 104,6% | 2024 96,5%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 112.8,
+   "2024": 113.2,
+   "pagina": 23,
+   "letterlijk": "Ultimo 2025 was de vereiste dekkingsgraad van het Fonds ... 112,8% (ultimo 2024: 113,2%)."
+  },
+  "aum_euro_bn": {
+   "2025": 25.038,
+   "2024": 26.589,
+   "pagina": 63,
+   "letterlijk": "Balans (bedragen in miljoenen euro's): Beleggingen voor risico van het Fonds 25.038 | 26.589"
+  },
+  "deelnemers_actief": {
+   "2025": 364,
+   "2024": 405,
+   "pagina": 4,
+   "letterlijk": "Aantal deelnemers einde boekjaar: Deelnemers 364 (2025) | 405 (2024)"
+  },
+  "deelnemers_slapers": {
+   "2025": 36649,
+   "2024": 38146,
+   "pagina": 4,
+   "letterlijk": "Gewezen deelnemers 36.649 (2025) | 38.146 (2024)"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 26728,
+   "2024": 25995,
+   "pagina": 4,
+   "letterlijk": "Totaal pensioengerechtigden 26.728 (2025) | 25.995 (2024)"
+  },
+  "deelnemers_totaal": {
+   "2025": 63741,
+   "2024": 64546,
+   "pagina": 4,
+   "letterlijk": "Totaal aantal deelnemers 63.741 (2025) | 64.546 (2024)"
+  },
+  "rente_afdekking_pct": {
+   "2025": 118.3,
+   "2024": null,
+   "pagina": 86,
+   "letterlijk": "De renteafdekking bedroeg ultimo 2025 118,3% van de rentegevoeligheid van de nominale verplichtingen."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-05-29",
+  "pagina": 53
+ },
+ "invaardatum": {
+  "datum": "2027-07-01",
+  "status": "gepland",
+  "pagina": 23
+ },
+ "opmerkingen": "Tegenstrijdigheid: p.23 en p.89 noemen DNB-dekkingsgraad ultimo 2025 140,5%, maar tabellen op p.78/p.89 tonen DNB-dekkingsgraad 140,2% naast marktwaardedekkingsgraad 140,5%; 140,5% gekozen (tekst). Reële dekkingsgraad: 104,6% is ultimo-stand eigen methode; 12-maandsgemiddelde 101,3% (2024 99,2%) staat op kerncijferpagina; reële DNB-dekkingsgraad 105,6% (2024 110,3%). AUM: balanspost 25.038 mln (bruto); kerncijferpagina toont 'Waarde beleggingen' 23.668 mln (2024 25.792), netto van negatieve derivaten onder schulden. Actieve deelnemers 2024: tabel 405, tekst p.36 zegt 402. Renteafdekking 2024 niet gevonden (strategisch 120%, bandbreedte 105-135%). Vaststelling: 'Amsterdam, vastgesteld 29 mei 2026' onder bestuursverslag (voorzitter); accountantsverklaring ook 29 mei 2026. Wettelijk vereiste datum voor invaren van ING CDC Pensioenfonds (ander fonds) is 1-1-2028, niet verwarren."
+}

@@ -380,6 +380,85 @@ def historische_deelnemers_gedeeld(con):
     return uit
 
 
+def historische_deelnemers_dubbel(con):
+    """Twee deelnemerskolommen in dezelfde jaarrij met exact hetzelfde getal.
+
+    De controle op `funds` ving dit al, maar de jaarreeks niet. Over 2025 stonden
+    IKEA, Avery Dennison, Alliance, Dierenartsen en Vopak met slapers gelijk aan
+    gepensioneerden, en Molenaars met drie keer 2.048 -- over 2024 kwam het
+    patroon één keer voor.
+    """
+    uit = []
+    for r in con.execute("""
+            SELECT f.name, h.year, h.deelnemers_actief a, h.deelnemers_slapers s,
+                   h.deelnemers_pensioengerechtigd g
+            FROM historical_metrics h JOIN funds f ON f.id = h.fund_id"""):
+        paren = (("actief", "slapers", r["a"], r["s"]),
+                 ("actief", "gepensioneerd", r["a"], r["g"]),
+                 ("slapers", "gepensioneerd", r["s"], r["g"]))
+        for k1, k2, v1, v2 in paren:
+            if v1 is not None and v1 == v2 and v1 > 100:
+                uit.append(f"{r['name'][:34]:36s} FY{r['year']}  {k1} en {k2} allebei {v1:,}")
+    return uit
+
+
+# Hoeveel een fonds in één jaar kan groeien of krimpen voordat het een verkeerde
+# kolom is. Een fusie of een waardeoverdracht verdubbelt soms het vermogen; een
+# factor tweeënhalf in deelnemers of vermogen in één jaar is vrijwel altijd een
+# leesfout. Bij drie glipte Schilders (34.465 naar 103.000, factor 2,99) erdoor.
+SPRONG_FACTOR = 2.5
+
+
+def sprong_jaarreeks(con):
+    """Deelnemers of vermogen die tussen twee opeenvolgende jaren springen.
+
+    Schilders ging van 34.465 naar 103.000 actieven, IKEA van 7.387 naar 16.833,
+    Zuivel van 9.950 naar 1.970, en Foodservice van 2,0 naar 0,331 miljard. Elk
+    getal afzonderlijk is plausibel, en daarom zag geen enkele controle op één rij
+    het. De overgang van het ene jaar naar het volgende verraadt ze wel.
+    """
+    velden = [("deelnemers_actief", "actieven", 500), ("deelnemers_totaal", "deelnemers", 500),
+              ("aum_euro_bn", "vermogen", 0.05)]
+    uit = []
+    for kolom, label, minimum in velden:
+        for r in con.execute(f"""
+                SELECT f.name, h.year, h.{kolom} nu, v.{kolom} voor
+                FROM historical_metrics h
+                JOIN historical_metrics v ON v.fund_id = h.fund_id AND v.year = h.year - 1
+                JOIN funds f ON f.id = h.fund_id
+                WHERE {LEVEND} AND h.{kolom} > 0 AND v.{kolom} > 0
+                  AND MAX(h.{kolom}, v.{kolom}) >= ?""", (minimum,)):
+            factor = max(r["nu"], r["voor"]) / min(r["nu"], r["voor"])
+            if factor >= SPRONG_FACTOR:
+                uit.append(f"{r['name'][:32]:34s} FY{r['year'] - 1}->FY{r['year']}  "
+                           f"{label} {r['voor']:,} -> {r['nu']:,} (x{factor:.1f})")
+    return uit
+
+
+def funds_wijkt_af_van_jaarreeks(con):
+    """Een veld in `funds` dat niet strookt met de nieuwste rij in de jaarreeks.
+
+    Bij Foodservice stond `funds.aum_euro_bn` op 2,006 -- het vermogen van 2024 in
+    duizenden euro's, gelezen als miljarden -- terwijl de jaarreeks 0,331 gaf.
+    Welke van de twee fout is valt hier niet te zeggen, maar dat ze meer dan een
+    kwart uiteenlopen betekent dat minstens een van beide niet klopt.
+    """
+    uit = []
+    for r in con.execute(f"""
+            SELECT f.name, f.aum_euro_bn f_aum, f.deelnemers_totaal f_tot, h.year,
+                   h.aum_euro_bn h_aum, h.deelnemers_totaal h_tot
+            FROM funds f
+            JOIN historical_metrics h ON h.fund_id = f.id
+             AND h.year = (SELECT MAX(year) FROM historical_metrics x
+                           WHERE x.fund_id = f.id AND (x.aum_euro_bn IS NOT NULL
+                                                       OR x.deelnemers_totaal IS NOT NULL))
+            WHERE {LEVEND}"""):
+        for label, a, b in (("vermogen", r["f_aum"], r["h_aum"]), ("deelnemers", r["f_tot"], r["h_tot"])):
+            if a and b and max(a, b) / min(a, b) > 1.25:
+                uit.append(f"{r['name'][:32]:34s} {label}: funds {a:,} tegen FY{r['year']} {b:,}")
+    return uit
+
+
 def pensioenfonds_zonder_dnb(con):
     """Als pensioenfonds gemarkeerd, vermogen van betekenis, maar DNB kent het niet.
 
@@ -679,6 +758,9 @@ CONTROLES = [
     ("Zelfde deelnemersuitsplitsing in de jaarreeks bij meerdere fondsen",
      historische_deelnemers_gedeeld),
     ("Hetzelfde getal in twee deelnemerskolommen", deelnemers_gedupliceerd_binnen_fonds),
+    ("Hetzelfde getal in twee deelnemerskolommen van de jaarreeks", historische_deelnemers_dubbel),
+    ("Sprong tussen twee jaren die geen fonds maakt", sprong_jaarreeks),
+    ("Fondsentabel wijkt af van de nieuwste jaarrij", funds_wijkt_af_van_jaarreeks),
     ("Vermogen per deelnemer buiten elke verhouding", vermogen_per_deelnemer),
     ("Zelfde deelnemersuitsplitsing bij meerdere fondsen",
      lambda c: gedeelde_waarden(c, ["deelnemers_actief", "deelnemers_slapers", "deelnemers_gepensioneerd"], "")),

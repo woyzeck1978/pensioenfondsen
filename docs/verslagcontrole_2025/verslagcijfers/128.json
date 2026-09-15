@@ -1,0 +1,83 @@
+{
+ "fund_id": 128,
+ "naam": "Smurfit Kappa",
+ "pad": "data/annual_reports/128_Smurfit_Kappa_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -0.1,
+   "2024": 10.4,
+   "pagina": 6,
+   "letterlijk": "Rendement o.b.v. total return 2) -0,1% 10,4%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 130.9,
+   "2024": 127.6,
+   "pagina": 7,
+   "letterlijk": "Beleidsdekkingsgraad 130,9% 127,6%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 134.1,
+   "2024": 124.6,
+   "pagina": 7,
+   "letterlijk": "Actuele Dekkingsgraad 134,1% 124,6%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 99.4,
+   "2024": 98.5,
+   "pagina": 18,
+   "letterlijk": "Ultimo 2025 bedroeg de reële dekkingsgraad 99,4%. Ultimo 2024 was dit 98,5%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 116.1,
+   "2024": 115.4,
+   "pagina": 7,
+   "letterlijk": "Vereiste Dekkingsgraad 116,1% 115,4%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.872992,
+   "2024": 0.875067,
+   "pagina": 6,
+   "letterlijk": "(in duizenden euro) Belegd vermogen 1) 872.992 875.067"
+  },
+  "deelnemers_actief": {
+   "2025": 2175,
+   "2024": 2211,
+   "pagina": 6,
+   "letterlijk": "Actieve deelnemers 2.175 2.211"
+  },
+  "deelnemers_slapers": {
+   "2025": 2285,
+   "2024": 2246,
+   "pagina": 6,
+   "letterlijk": "Gewezen deelnemers 2.285 2.246"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 1841,
+   "2024": 1740,
+   "pagina": 6,
+   "letterlijk": "Pensioengerechtigden 1.841 1.740"
+  },
+  "deelnemers_totaal": {
+   "2025": 6301,
+   "2024": 6197,
+   "pagina": 6,
+   "letterlijk": "Totaal 6.301 6.197"
+  },
+  "rente_afdekking_pct": {
+   "2025": 57.7,
+   "2024": null,
+   "pagina": 91,
+   "letterlijk": "De feitelijke renteafdekking op basis van de DNB-methodiek bedraagt 57,7% eind 2025."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-15",
+  "pagina": 61
+ },
+ "invaardatum": {
+  "datum": "2027-07-01",
+  "status": "gepland",
+  "pagina": 57
+ },
+ "opmerkingen": "Rendement: kerncijfers -0,1% total return, tekst p8 noemt portefeuillerendement -0,05%. Renteafdekking: strategisch 60% (swapcurve), feitelijk 57,7% (DNB); geen 2024-waarde. Vereiste dekkingsgraad = strategisch; feitelijk 117,2% (2024 115,7%, p90). Bestuursverslag ondertekend Schiphol 12 juni 2026, 'Vastgesteld 15 juni 2026' (p61) en jaarrekening vastgesteld 15 juni 2026 (p96). Transitiedatum uitgesteld van 1-1-2027 naar 1-7-2027. Belegd vermogen incl. collateral en negatieve beleggingen."
+}

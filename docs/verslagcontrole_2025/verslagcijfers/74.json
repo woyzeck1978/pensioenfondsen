@@ -1,0 +1,83 @@
+{
+ "fund_id": 74,
+ "naam": "Alliance",
+ "pad": "data/annual_reports/74_Alliance_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -2.33,
+   "2024": null,
+   "pagina": 39,
+   "letterlijk": "Het totale fondsrendement bedroeg in 2025 -2,33% (inclusief valutahedge)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 127.4,
+   "2024": 123.0,
+   "pagina": 10,
+   "letterlijk": "Beleidsdekkingsgraad 127,4 123,0"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 131.7,
+   "2024": 120.2,
+   "pagina": 10,
+   "letterlijk": "Actuele dekkingsgraad 131,7 120,2"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 94.8,
+   "2024": 93.2,
+   "pagina": 10,
+   "letterlijk": "Reële dekkingsgraad 94,8 93,2"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 123.7,
+   "2024": 124.3,
+   "pagina": 10,
+   "letterlijk": "Vereiste dekkingsgraad 123,7 124,3"
+  },
+  "aum_euro_bn": {
+   "2025": 0.685584,
+   "2024": 0.683944,
+   "pagina": 61,
+   "letterlijk": "Beleggingen voor risico pensioenfonds 685.584 683.944 (x EUR 1.000)"
+  },
+  "deelnemers_actief": {
+   "2025": 1246,
+   "2024": 1182,
+   "pagina": 10,
+   "letterlijk": "Actieve deelnemers 1.246 1.182"
+  },
+  "deelnemers_slapers": {
+   "2025": 2402,
+   "2024": 2460,
+   "pagina": 10,
+   "letterlijk": "Gewezen deelnemers 2.402 2.460"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 2085,
+   "2024": 2074,
+   "pagina": 10,
+   "letterlijk": "Pensioengerechtigden 2.085 2.074"
+  },
+  "deelnemers_totaal": {
+   "2025": 5733,
+   "2024": 5716,
+   "pagina": 10,
+   "letterlijk": "5.733 5.716"
+  },
+  "rente_afdekking_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": 40,
+   "letterlijk": "ex-ante afdekkingspercentage in 2025 verhoogd naar 90%, gerealiseerde ex-post afdekking over heel 2025 met 76,8%"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-16",
+  "pagina": 65
+ },
+ "invaardatum": {
+  "datum": "2028-01-01",
+  "status": "gepland",
+  "pagina": 30
+ },
+ "opmerkingen": "Rendement 2024 niet als fondstotaal gevonden (null). Exclusief valutahedge was het rendement -3,84% (p.39). AUM: balanspost beleggingen voor risico pensioenfonds 685.584 is inclusief derivaten met negatieve waarde (56.759); kerncijfer 'Totaal beleggingen' na aftrek daarvan 628.825 (2024: 653.436). Renteafdekking ultimo 2025 niet genoemd: strategisch 90% per 1 juli 2025 (van 67%), ex-post 76,8% over heel 2025 (p.40) en elders 'impliciet ... circa 58%' (p.38) - tegenstrijdig, dus null. Dekkingsgraad 1 januari 2025 in jaarrekening 120,3 vs 120,2 in kerncijfers."
+}

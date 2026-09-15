@@ -1,0 +1,84 @@
+{
+ "fund_id": 75,
+ "invaardatum": {
+  "datum": "2027",
+  "pagina": 14,
+  "status": "gepland"
+ },
+ "opmerkingen": "Reële dekkingsgraad en gemeten renteafdekking ultimo jaar worden niet vermeld in de uitsneden (wel rendement op de rente-overlay van -10,7% op p. 35). Invaardatum: overgang naar nieuwe pensioenregeling (FPR) gepland in 2027 (p. 14); p. 77 vermeldt 'invaren in 2026 zoals dat gepland was'. Geen vaststellingsdatum door het bestuur aangetroffen in de uitsneden.",
+ "vaststellingsdatum": {
+  "datum": null,
+  "pagina": null
+ },
+ "velden": {
+  "aum_euro_bn": {
+   "2024": 5.427,
+   "2025": 5.297,
+   "letterlijk": "Pensioenvermogen 5.297 (Bedragen in € miljoen)",
+   "pagina": 7
+  },
+  "beleggingsrendement_pct": {
+   "2024": 7.9,
+   "2025": 0.8,
+   "letterlijk": "Beleggingsrendement % 0,8",
+   "pagina": 7
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2024": 122.3,
+   "2025": 125.4,
+   "letterlijk": "Beleidsdekkingsgraad 125,4",
+   "pagina": 7
+  },
+  "deelnemers_actief": {
+   "2024": 5041,
+   "2025": 4640,
+   "letterlijk": "4.640",
+   "pagina": 6
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2024": 15451,
+   "2025": 15198,
+   "letterlijk": "15.198",
+   "pagina": 6
+  },
+  "deelnemers_slapers": {
+   "2024": 9074,
+   "2025": 9109,
+   "letterlijk": "9.109",
+   "pagina": 6
+  },
+  "deelnemers_totaal": {
+   "2024": 29566,
+   "2025": 28947,
+   "letterlijk": "28.947",
+   "pagina": 6
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2024": 119,
+   "2025": 129.7,
+   "letterlijk": "Actueel 129,7",
+   "pagina": 7
+  },
+  "reele_dekkingsgraad_pct": {
+   "2024": null,
+   "2025": null,
+   "letterlijk": "",
+   "pagina": null
+  },
+  "rente_afdekking_pct": {
+   "2024": null,
+   "2025": null,
+   "letterlijk": "",
+   "pagina": null
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2024": 116.6,
+   "2025": 116.8,
+   "letterlijk": "Vereist 116,8",
+   "pagina": 7
+  }
+ },
+ "naam": "APF (AkzoNobel, Nouryon, Nobian, Salt)",
+ "pad": "data/annual_reports/75_Pensioenfonds_APF_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

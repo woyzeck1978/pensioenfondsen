@@ -1,0 +1,83 @@
+{
+ "fund_id": 9,
+ "naam": "ABP (Government and Education)",
+ "pad": "data/annual_reports/9_ABP_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -1.6,
+   "2024": 8.4,
+   "pagina": 8,
+   "letterlijk": "Rendement totaal (= direct + indirect) in % 2025 -1,6 | 2024 8,4"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 118.3,
+   "2024": 113.1,
+   "pagina": 7,
+   "letterlijk": "Beleidsdekkingsgraad in % 2025 118,3 | 2024 113,1"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 123.5,
+   "2024": 111.7,
+   "pagina": 7,
+   "letterlijk": "Dekkingsgraad (A/B) in % 2025 123,5 | 2024 111,7"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 87.5,
+   "2024": 85.2,
+   "pagina": 7,
+   "letterlijk": "Reële dekkingsgraad in % 2025 87,5 | 2024 85,2"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 127.0,
+   "2024": 126.3,
+   "pagina": 7,
+   "letterlijk": "Vereist eigen vermogen (+ 100 - in %) 2025 127,0 | 2024 126,3"
+  },
+  "aum_euro_bn": {
+   "2025": 559.698,
+   "2024": 568.856,
+   "pagina": 130,
+   "letterlijk": "Totaal beleggingen (in € mln) Totaal 2025 559.698 | Totaal 2024 568.856"
+  },
+  "deelnemers_actief": {
+   "2025": 1330945,
+   "2024": 1306248,
+   "pagina": 7,
+   "letterlijk": "Actieve deelnemers 2025 1.330.945 | 2024 1.306.248"
+  },
+  "deelnemers_slapers": {
+   "2025": 781525,
+   "2024": 781978,
+   "pagina": 7,
+   "letterlijk": "Gewezen deelnemers 2025 781.525 | 2024 781.978"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 1088584,
+   "2024": 1051433,
+   "pagina": 7,
+   "letterlijk": "Pensioengerechtigden 2025 1.088.584 | 2024 1.051.433"
+  },
+  "deelnemers_totaal": {
+   "2025": 3201054,
+   "2024": 3139659,
+   "pagina": 7,
+   "letterlijk": "Totaal deelnemers 2025 3.201.054 | 2024 3.139.659"
+  },
+  "rente_afdekking_pct": {
+   "2025": 49.1,
+   "2024": 49.1,
+   "pagina": 26,
+   "letterlijk": "Eind 2025 bedroeg de renteafdekking, net als eind 2024, 49,1%"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-04-23",
+  "pagina": 84
+ },
+ "invaardatum": {
+  "datum": "2027-01-01",
+  "status": "gepland",
+  "pagina": 23
+ },
+ "opmerkingen": "AUM = eindstand beleggingen voor risico fonds (p130, € mln, incl. derivaten); beschikbaar vermogen is 533.134 (2024 542.223); excl. derivaten 545.505. VPV in meerjarenoverzicht 428.571 vs technische voorzieningen 431.828 (incl. voorziening operationele kosten, sinds 2025 apart) - dekkingsgraad 123,5% is op 431.828 gebaseerd. Reële dekkingsgraad = BDG / toekomstbestendige indexatiegrens (p116). Kerncijfers 2024-VPV in toelichting p138 481.711 vs 485.471 in meerjarenoverzicht (herclassificatie operationele kosten). Vereiste dekkingsgraad als 'Vereist eigen vermogen (+100)'."
+}

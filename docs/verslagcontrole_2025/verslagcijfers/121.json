@@ -1,0 +1,83 @@
+{
+ "fund_id": 121,
+ "naam": "PostNL",
+ "pad": "data/annual_reports/121_PostNL_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -3.5,
+   "2024": 7.1,
+   "pagina": 7,
+   "letterlijk": "Jaarrendement in % 2025 -3,5 | 2024 7,1"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 134.4,
+   "2024": 132.1,
+   "pagina": 7,
+   "letterlijk": "Beleidsdekkingsgraad in % 2025 134,4 | 2024 132,1"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 135.6,
+   "2024": 129.8,
+   "pagina": 7,
+   "letterlijk": "Dekkingsgraad in % 2025 135,6 | 2024 129,8"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 102.0,
+   "2024": 101.0,
+   "pagina": 76,
+   "letterlijk": "Reële dekkingsgraad 31-12-2025 102,0% | 31-12-2024 101,0%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 115.2,
+   "2024": 115.6,
+   "pagina": 7,
+   "letterlijk": "Vereiste dekkingsgraad in % 2025 115,2 | 2024 115,6"
+  },
+  "aum_euro_bn": {
+   "2025": 9.475992,
+   "2024": 10.099686,
+   "pagina": 59,
+   "letterlijk": "Beleggingen voor risico pensioenfonds (bedragen x 1.000) 31-12-2025 9.475.992 | 31-12-2024 10.099.686"
+  },
+  "deelnemers_actief": {
+   "2025": 17111,
+   "2024": 17734,
+   "pagina": 7,
+   "letterlijk": "Deelnemers, actief en voortgezet 2025 17.111 | 2024 17.734"
+  },
+  "deelnemers_slapers": {
+   "2025": 37969,
+   "2024": 38657,
+   "pagina": 7,
+   "letterlijk": "Gewezen deelnemers (slapers) 2025 37.969 | 2024 38.657"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 37867,
+   "2024": 36519,
+   "pagina": 7,
+   "letterlijk": "Pensioengerechtigden 2025 37.867 | 2024 36.519"
+  },
+  "deelnemers_totaal": {
+   "2025": 92947,
+   "2024": 92910,
+   "pagina": 7,
+   "letterlijk": "Totaal aantal deelnemers 2025 92.947 | 2024 92.910"
+  },
+  "rente_afdekking_pct": {
+   "2025": 120.0,
+   "2024": null,
+   "pagina": 27,
+   "letterlijk": "Van dit risico dekt het pensioenfonds strategisch ultimo 2025 120% af"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-05-22",
+  "pagina": 96
+ },
+ "invaardatum": {
+  "datum": "2026-06-01",
+  "status": "gepland",
+  "pagina": 12
+ },
+ "opmerkingen": "Invaardatum eerst 1-1-2026, uitgesteld naar 1-4-2026, in feb 2026 naar 1-6-2026 (p12; p5 'transitie per 1 juni 2026'). AUM: balans beleggingen voor risico pensioenfonds 9.476 mln (bruto, excl. 11,2 mln risico deelnemers); p34 'Beleggingen volgens balans' 8.779.818 (netto na derivaten-passiva 696.174). Renteafdekking: strategisch 120% ultimo 2025; p33 'gedurende het grootste deel van het jaar 100%, in laatste kwartaal verhoogd naar 118%-120%'; geen 2024-cijfer gevonden. Rendementsportefeuille +4,7%, matching -41,9% (p34)."
+}

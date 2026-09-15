@@ -1,0 +1,83 @@
+{
+ "fund_id": 115,
+ "naam": "Metro",
+ "pad": "data/annual_reports/115_Metro_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 101.0,
+   "2024": 107.6,
+   "pagina": 34,
+   "letterlijk": "Beleidsdekkingsgraad 101,0% 107,6%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 101.0,
+   "2024": 100.9,
+   "pagina": 34,
+   "letterlijk": "Actuele dekkingsgraad UFR 101,0% 100,9%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 98.8,
+   "2024": 107.5,
+   "pagina": 34,
+   "letterlijk": "Reële dekkingsgraad 98,8% 107,5%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": 34,
+   "letterlijk": "Vereiste dekkingsgraad n.v.t. n.v.t."
+  },
+  "aum_euro_bn": {
+   "2025": null,
+   "2024": null,
+   "pagina": 57,
+   "letterlijk": "Balans x € 1.000: geen beleggingen; Herverzekeringsdeel technische voorzieningen 543.107"
+  },
+  "deelnemers_actief": {
+   "2025": 142,
+   "2024": 165,
+   "pagina": 34,
+   "letterlijk": "Actieve deelnemers 142 (2024: 165)"
+  },
+  "deelnemers_slapers": {
+   "2025": 5827,
+   "2024": 6074,
+   "pagina": 34,
+   "letterlijk": "Gewezen deelnemers 5.827 (2024: 6.074)"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 2314,
+   "2024": 2241,
+   "pagina": 34,
+   "letterlijk": "Pensioengerechtigden 2.314 (2024: 2.241)"
+  },
+  "deelnemers_totaal": {
+   "2025": 8283,
+   "2024": 8480,
+   "pagina": 34,
+   "letterlijk": "Subtotaal 8.283 (2024: 8.480)"
+  },
+  "rente_afdekking_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-19",
+  "pagina": 85
+ },
+ "invaardatum": {
+  "datum": null,
+  "status": "vaart niet in",
+  "pagina": 15
+ },
+ "opmerkingen": "Fonds volledig herverzekerd (buy-in/garantiecontract NN sinds 6-3-2024), beleggingen in 2024 geliquideerd: geen belegd vermogen, geen beleggingsrendement (alleen dekkingsgraadeffect 'Rendement op beleggingen -2,2' op p72, geen rendement). Vereiste dekkingsgraad n.v.t. Renteafdekking: p76 beschrijft oud beleid 65-70%, niet van toepassing ultimo 2025. Besluit niet in te varen (p15); collectieve waardeoverdracht naar Nationale-Nederlanden per 1-4-2026, fonds in liquidatie. Actieven = premievrij opbouwende arbeidsongeschikten. Vaststelling jaarrekening 19 juni 2026 (p85)."
+}

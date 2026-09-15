@@ -1,0 +1,83 @@
+{
+ "fund_id": 12,
+ "naam": "Banden- en Wielenbranche (Tire and Wheel Branch)",
+ "pad": "data/annual_reports/12_Banden_en_Wielenbranche_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -11.6,
+   "2024": 8.52,
+   "pagina": 5,
+   "letterlijk": "Rendement -11,60% 8,52%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 111.5,
+   "2024": 107.3,
+   "pagina": 6,
+   "letterlijk": "Beleidsdekkingsgraad 111,5% 107,3%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 116.6,
+   "2024": 105.9,
+   "pagina": 6,
+   "letterlijk": "Actuele dekkingsgraad 116,6% 105,9%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 78.3,
+   "2024": 78.3,
+   "pagina": 6,
+   "letterlijk": "Reële dekkingsgraad 78,3% 78,3%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 114.8,
+   "2024": 115.2,
+   "pagina": 6,
+   "letterlijk": "Vereiste dekkingsgraad 114,8% 115,2%"
+  },
+  "aum_euro_bn": {
+   "2025": 1.249048,
+   "2024": 0.861224,
+   "pagina": 59,
+   "letterlijk": "Beleggingen voor risico pensioenfonds ... 1.249.048 861.224 (x EUR 1.000)"
+  },
+  "deelnemers_actief": {
+   "2025": 7165,
+   "2024": 7136,
+   "pagina": 5,
+   "letterlijk": "Actieve deelnemers 7.165 7.136"
+  },
+  "deelnemers_slapers": {
+   "2025": 13858,
+   "2024": 12715,
+   "pagina": 5,
+   "letterlijk": "Gewezen deelnemers 13.858 12.715"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 2068,
+   "2024": 1889,
+   "pagina": 5,
+   "letterlijk": "Pensioengerechtigden 2.068 1.889"
+  },
+  "deelnemers_totaal": {
+   "2025": 23247,
+   "2024": 21912,
+   "pagina": 5,
+   "letterlijk": "Totaal aantal deelnemers en aspiranten 23.247 21.912"
+  },
+  "rente_afdekking_pct": {
+   "2025": 87.0,
+   "2024": null,
+   "pagina": 76,
+   "letterlijk": "De feitelijke renteafdekking op basis van de DNB-methodiek bedraagt 87,0% eind 2025"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-25",
+  "pagina": 62
+ },
+ "invaardatum": {
+  "datum": "2026-07-01",
+  "status": "gepland",
+  "pagina": 4
+ },
+ "opmerkingen": "PDF met versleutelingsfout bij pdfinfo, tekst wel leesbaar. Reële dekkingsgraad: kerncijfers 78,3% maar p.14 'Ultimo 2025 bedroeg de reële dekkingsgraad 78,4%'. Beleidsdekkingsgraad p.76 noemt 111,4% i.p.v. 111,5%. AUM: balanspost 1.249.048 bevat derivaten 425.235 positief (met 483.412 overige schulden); kerncijfer 'Belegd vermogen (incl. negatieve derivaten)' is 766.806 (2024: 874.462) - groot verschil, controleer welke definitie de database volgt. Totaal deelnemers 23.247 is incl. aspiranten (156); mutatieoverzicht p.19 excl. aspiranten: 23.091. Renteafdekking strategisch 90% (verhoogd van 80% in oktober 2025). Invaardatum uitgesteld van 1 januari 2026 naar 1 juli 2026."
+}

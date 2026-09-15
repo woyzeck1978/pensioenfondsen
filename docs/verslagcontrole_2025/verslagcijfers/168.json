@@ -1,0 +1,83 @@
+{
+ "fund_id": 168,
+ "naam": "Kring D (De Nationale)",
+ "pad": "data/annual_reports/66_De_Nationale_APF_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -1.9,
+   "2024": 9.9,
+   "pagina": 12,
+   "letterlijk": "Rendement op basis van total return -1,9%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 122.5,
+   "2024": 113.5,
+   "pagina": 12,
+   "letterlijk": "Beleidsdekkingsgraad 122,5%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 130.4,
+   "2024": 113.6,
+   "pagina": 12,
+   "letterlijk": "Aanwezige dekkingsgraad 130,4%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 88.4,
+   "2024": 83.7,
+   "pagina": 86,
+   "letterlijk": "Reële dekkingsgraad 88,4%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 115.5,
+   "2024": 117.0,
+   "pagina": 12,
+   "letterlijk": "Vereiste dekkingsgraad 115,5%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.377901,
+   "2024": 0.395003,
+   "pagina": 12,
+   "letterlijk": "Belegd vermogen 377.901 (Financiële gegevens in duizenden euro)"
+  },
+  "deelnemers_actief": {
+   "2025": 25,
+   "2024": 29,
+   "pagina": 12,
+   "letterlijk": "Actieve deelnemers 25"
+  },
+  "deelnemers_slapers": {
+   "2025": 5729,
+   "2024": 5912,
+   "pagina": 12,
+   "letterlijk": "Gewezen deelnemers 5.729"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 1361,
+   "2024": 1241,
+   "pagina": 12,
+   "letterlijk": "Pensioengerechtigden 1.361"
+  },
+  "deelnemers_totaal": {
+   "2025": 7115,
+   "2024": 7182,
+   "pagina": 12,
+   "letterlijk": "Totaal 7.115"
+  },
+  "rente_afdekking_pct": {
+   "2025": 73.7,
+   "2024": null,
+   "pagina": 272,
+   "letterlijk": "De werkelijke afdekking van het renterisico op basis van de DNB-systematiek is 73,7%"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-17",
+  "pagina": 379
+ },
+ "invaardatum": {
+  "datum": null,
+  "status": "geen datum genoemd",
+  "pagina": 94
+ },
+ "opmerkingen": "Kerncijferpagina 12 (Kring D (TrueBlue)), kolom 2025 gecontroleerd tegen tabel dekkingsgraden p86 (31-12-2025/31-12-2024 komen overeen). Belegd vermogen uit meerjarenoverzicht (in duizenden euro, excl. beleggingsgerelateerde overlopende posten en liquide middelen); de tekst bij de financiele positie noemt een afwijkend 'circa'-bedrag (circa 378 miljoen euro (2024: circa 395 miljoen)). Vereiste dekkingsgraad = kerncijferregel 'Vereiste dekkingsgraad' = strategisch vereist (SVEV); feitelijk vereist (FVEV) is 117,4% (2024: 117,8%). Renteafdekking = werkelijke afdekking op DNB-systematiek (strategisch 80,0%); 2024-waarde niet genoemd. Vaststellingsdatum = 'Ondertekening jaarrekening, Den Haag, 17 juni 2026'; afzonderlijke datum voor het bestuursverslag niet gevonden. Invaardatum: geen datum genoemd; p94 zegt alleen dat het implementatieplan 'uiterlijk in 2026 bij DNB' wordt ingediend."
+}

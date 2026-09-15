@@ -1,0 +1,83 @@
+{
+ "fund_id": 227,
+ "naam": "Kring Holland Casino (Stap)",
+ "pad": "data/annual_reports/227_Holland_Casino_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -10.8,
+   "2024": 11.8,
+   "pagina": 5,
+   "letterlijk": "Beleggingsrendement Per jaar -10,8% 11,8% 12,0% (kop 2025 2024 2023 2022 2021)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": null,
+   "2024": 128.8,
+   "pagina": 5,
+   "letterlijk": "Beleidsdekkingsgraad n.v.t. 128,8% 124,8%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 101.9,
+   "2024": 128.1,
+   "pagina": 5,
+   "letterlijk": "Feitelijke dekkingsgraad 101,9% 128,1% 123,9%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": 95.3,
+   "pagina": 25,
+   "letterlijk": "Reële dekkingsgraad n.v.t. 95,3"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": 123.0,
+   "pagina": 5,
+   "letterlijk": "Vereiste dekkingsgraad n.v.t. 123,0% 123,1%"
+  },
+  "aum_euro_bn": {
+   "2025": 2.250602,
+   "2024": 2.305038,
+   "pagina": 62,
+   "letterlijk": "Balans (bedragen x € 1.000) Beleggingen 2.250.602 (Wtp regeling) / 2.305.038 (FTK regeling)"
+  },
+  "deelnemers_actief": {
+   "2025": 3913,
+   "2024": 4103,
+   "pagina": 5,
+   "letterlijk": "Actieven en arbeidsongeschikten 3.913 4.103 3.870"
+  },
+  "deelnemers_slapers": {
+   "2025": 5679,
+   "2024": 5188,
+   "pagina": 5,
+   "letterlijk": "Gewezen deelnemers 5.679 5.188 5.146"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 1486,
+   "2024": 1367,
+   "pagina": 5,
+   "letterlijk": "Pensioengerechtigden 1.486 1.367 1.236"
+  },
+  "deelnemers_totaal": {
+   "2025": 11078,
+   "2024": 10658,
+   "pagina": 5,
+   "letterlijk": "Totaal 11.078 10.658 10.252"
+  },
+  "rente_afdekking_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-16",
+  "pagina": 99
+ },
+ "invaardatum": {
+  "datum": "2025-05-01",
+  "status": "ingevaren",
+  "pagina": 17
+ },
+ "opmerkingen": "Kring is per 1 mei 2025 ingevaren in solidaire premieregeling (SPR); daarom 2025 geen beleids-, reële of vereiste dekkingsgraad (n.v.t.). Feitelijke dekkingsgraad 101,9% ultimo 2025 is SPR-dekkingsgraad, niet vergelijkbaar met FTK 128,1%; minimaal vereiste dekkingsgraad 100,2%. Rendement -10,8% = -9,4% (1 jan-30 apr) en -1,4% (na 1 mei). AUM: balanspost Beleggingen (collectieve portefeuille incl. risico deelnemers). Rente-afdekking: p18 'rond het strategisch target van 100% gefluctueerd' (lijkt pre-invaren); p54 strategisch percentage per kring in gedraaide tabel niet betrouwbaar aan Holland Casino toe te wijzen -> null. Vaststelling: 'Het bestuur heeft op 16 juni 2026 deze financiële opstelling vastgesteld' (p99). Dit is een deel-jaarverslag van Stap."
+}

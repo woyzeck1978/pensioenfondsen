@@ -1,0 +1,83 @@
+{
+ "fund_id": 84,
+ "naam": "Cargill",
+ "pad": "data/annual_reports/84_Cargill_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -4.0,
+   "2024": 5.52,
+   "pagina": 43,
+   "letterlijk": "Feitelijk rendement -4,00% 5,52% (2025, 2024); p.7: 'Het totale beleggingsrendement in 2025 was -4,0%'"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 123.0,
+   "2024": 119.4,
+   "pagina": 5,
+   "letterlijk": "Beleidsdekkingsgraad 123,0% 119,4%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 127.9,
+   "2024": 117.4,
+   "pagina": 5,
+   "letterlijk": "Dekkingsgraad 127,9% 117,4%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 89.8,
+   "2024": 88.4,
+   "pagina": 6,
+   "letterlijk": "Reële dekkingsgraad 89,8% 88,4%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 110.4,
+   "2024": 111.6,
+   "pagina": 6,
+   "letterlijk": "Vereiste dekkingsgraad 110,4% 111,6%"
+  },
+  "aum_euro_bn": {
+   "2025": 1.048071,
+   "2024": 1.17326,
+   "pagina": 5,
+   "letterlijk": "(in duizenden euro) Belegd vermogen voor risico pensioenfonds 1.048.071 1) 1.173.260"
+  },
+  "deelnemers_actief": {
+   "2025": 745,
+   "2024": 895,
+   "pagina": 5,
+   "letterlijk": "Deelnemers 745 895"
+  },
+  "deelnemers_slapers": {
+   "2025": 1756,
+   "2024": 1701,
+   "pagina": 5,
+   "letterlijk": "Gewezen deelnemers 1.756 1.701"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 1347,
+   "2024": 1276,
+   "pagina": 5,
+   "letterlijk": "Uitkeringsgerechtigden 1.347 1.276"
+  },
+  "deelnemers_totaal": {
+   "2025": 3848,
+   "2024": 3872,
+   "pagina": 5,
+   "letterlijk": "Totaal 3.848 3.872"
+  },
+  "rente_afdekking_pct": {
+   "2025": 95.2,
+   "2024": null,
+   "pagina": 104,
+   "letterlijk": "De feitelijke afdekking van het renterisico ultimo 2025 is 95,2% op basis van de swapcurve."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-05-28",
+  "pagina": 57
+ },
+ "invaardatum": {
+  "datum": "2027-07-01",
+  "status": "gepland",
+  "pagina": 7
+ },
+ "opmerkingen": "Fonds is per 1-1-2026 via CWO overgedragen aan Kring Cargill bij De Nationale APF en is in liquidatie; het invaren in de Wtp gebeurt onder DNAPF: oorspronkelijk 1-1-2027, volgens p.7 'uitgesteld naar 1 juli 2027' (p.35 noemt nog 1-1-2027). AUM exclusief collateral in kortlopende vorderingen (voetnoot 1); balans-activazijde 1.170.320 duizend, portefeuille Q4-rapportage 1.168,1 mln (p.44). Renteafdekking tegenstrijdig: risicoparagraaf p.104 noemt strategisch 90,0% en feitelijk 95,2% (swapcurve) ultimo 2025, terwijl bestuursverslag (p.7/26/28/34) zegt dat in november 2025 besloten is de afdekking naar 100% te verhogen en de gevoeligheidsanalyse per 31-12-2025 uitgaat van 100%. Renteafdekking 2024 niet eenduidig gevonden. Vaststelling: 'Vastgesteld te Schiphol, 28 mei 2026' onder bestuursverslag (p.57), ook voorwoord p.8."
+}

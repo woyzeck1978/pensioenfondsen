@@ -1,0 +1,83 @@
+{
+ "fund_id": 93,
+ "naam": "Essity",
+ "pad": "data/annual_reports/93_Essity_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -0.8,
+   "2024": 9.8,
+   "pagina": 8,
+   "letterlijk": "Totaal beleggingsportefeuille risico fonds -0,8% 9,8%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 124.5,
+   "2024": 117.3,
+   "pagina": 7,
+   "letterlijk": "Beleidsdekkingsgraad 124,5% 117,3%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 131.3,
+   "2024": 117.1,
+   "pagina": 7,
+   "letterlijk": "Actuele dekkingsgraad 131,3% 117,1%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 93.1,
+   "2024": 88.7,
+   "pagina": 7,
+   "letterlijk": "Reële dekkingsgraad 93,1% 88,7%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 116.6,
+   "2024": 118.3,
+   "pagina": 7,
+   "letterlijk": "Vereiste dekkingsgraad conform geldende FTK 116,6% 118,3%"
+  },
+  "aum_euro_bn": {
+   "2025": 0.608976,
+   "2024": 0.607162,
+   "pagina": 7,
+   "letterlijk": "Belegd vermogen Risico pensioenfonds (Bedragen in euro x € 1.000) 608.976 607.162"
+  },
+  "deelnemers_actief": {
+   "2025": 1539,
+   "2024": 1481,
+   "pagina": 7,
+   "letterlijk": "actieve deelnemers 1.539 1.481"
+  },
+  "deelnemers_slapers": {
+   "2025": 1492,
+   "2024": 1500,
+   "pagina": 7,
+   "letterlijk": "gewezen deelnemers 1.492 1.500"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 1021,
+   "2024": 946,
+   "pagina": 7,
+   "letterlijk": "pensioengerechtigden 1.021 946"
+  },
+  "deelnemers_totaal": {
+   "2025": 4052,
+   "2024": 3927,
+   "pagina": 7,
+   "letterlijk": "Totaal deelnemers 4.052 3.927"
+  },
+  "rente_afdekking_pct": {
+   "2025": 81.4,
+   "2024": null,
+   "pagina": 92,
+   "letterlijk": "De feitelijke renteafdekking op basis van de DNB-methodiek bedraagt 81,4% eind 2025."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-29",
+  "pagina": 59
+ },
+ "invaardatum": {
+  "datum": "2027-07-01",
+  "status": "gepland",
+  "pagina": 20
+ },
+ "opmerkingen": "Dekkingsgraden in kerncijfers zijn 'totaal fonds (DB & DC)'; alleen risico fonds (DB): beleidsdg 127,6% (119,2%), actueel 135,6% (119,1%), reëel 92,2% (87,8%), vereist 118,9% (120,3%) (p79). AUM = belegd vermogen risico pensioenfonds; incl. risico deelnemers 670.912k (664.954k). Rendement life-cycles (DC) 7,1%. Strategische renteafdekking 80% (swapcurve). 2024 renteafdekking niet gevonden. Invaardatum: 'voornemens om op 1 juli 2027 in te varen' (p20)."
+}

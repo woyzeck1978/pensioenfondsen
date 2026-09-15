@@ -1,0 +1,83 @@
+{
+ "fund_id": 239,
+ "naam": "Shell Nederland (SNPS)",
+ "pad": "data/annual_reports/239_Shell_Nederland_SNPS_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 102.5,
+   "2024": 102.7,
+   "pagina": 20,
+   "letterlijk": "Feitelijke dekkingsgraad 102,5% (2024: 102,7%); p.69: 'De beleidsdekkingsgraad is gelijk aan de feitelijke dekkingsgraad.'"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 102.5,
+   "2024": 102.7,
+   "pagina": 20,
+   "letterlijk": "Feitelijke dekkingsgraad 2025 102,5% | 2024 102,7%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 101.2,
+   "2024": 101.2,
+   "pagina": 20,
+   "letterlijk": "Minimaal vereiste dekkingsgraad 101,2%; p.69: 'De vereiste dekkingsgraad is gelijk aan de minimaal vereiste dekkingsgraad.'"
+  },
+  "aum_euro_bn": {
+   "2025": 0.803,
+   "2024": 0.663,
+   "pagina": 8,
+   "letterlijk": "Het belegd vermogen van SNPS is in 2025 gestegen tot € 803 miljoen (2024: € 663 miljoen)."
+  },
+  "deelnemers_actief": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "deelnemers_slapers": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "deelnemers_totaal": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  },
+  "rente_afdekking_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-05-27",
+  "pagina": 53
+ },
+ "invaardatum": {
+  "datum": "2026-01-01",
+  "status": "ingevaren",
+  "pagina": 53
+ },
+ "opmerkingen": "Zuivere premieregeling (bruto + netto regeling), geen DB-dekkingsgraad in gewone zin. Geen totaal beleggingsrendement gerapporteerd, alleen per module (Rendement 11,8%, Rente 1,6%, Matching -10,8%, CVP Bruto -3,9%, CVP Netto -3,2%). Deelnemers alleen per regeling (p.19): bruto actief 4.248 (2024 4.545), gewezen 1.803 (1.290), pensioengerechtigd 40 (39), totaal 6.091 (5.874); netto actief 3.120 (3.626), gewezen 2.486 (2.124), pensioengerechtigd 547 (445), totaal 6.153 (6.195). Geen fondsbreed totaal genoemd; netto regeling bevat ook SSPF-deelnemers (overlap), daarom velden null. Beleidsdekkingsgraad gelijkgesteld aan feitelijke (vrijstelling maandrapportage). Geen renteafdekkingspercentage. Bestuursverslag en jaarrekening vastgesteld 27 mei 2026 (p.53, p.84)."
+}

@@ -1,0 +1,83 @@
+{
+ "fund_id": 194,
+ "naam": "Pensioenkring Wolters Kluwer NL (Hnp)",
+ "pad": "data/annual_reports/165_Kring_Arcadis_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": 0.71,
+   "2024": null,
+   "pagina": 30,
+   "letterlijk": "Beleggingsrendement (in %) 0,71%"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 134.1,
+   "2024": null,
+   "pagina": 29,
+   "letterlijk": "Beleidsdekkingsgraad (in %) 134,1%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 139.0,
+   "2024": null,
+   "pagina": 29,
+   "letterlijk": "Aanwezige dekkingsgraad (in %) 139,0%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 101.6,
+   "2024": null,
+   "pagina": 29,
+   "letterlijk": "Reële dekkingsgraad (in %) 101,6%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 115.5,
+   "2024": null,
+   "pagina": 29,
+   "letterlijk": "Vereiste dekkingsgraad (in %) 115,5%"
+  },
+  "aum_euro_bn": {
+   "2025": 1.06182,
+   "2024": null,
+   "pagina": 30,
+   "letterlijk": "Totaal beleggingen 1.061.820 (x EUR 1.000)"
+  },
+  "deelnemers_actief": {
+   "2025": 750,
+   "2024": null,
+   "pagina": 29,
+   "letterlijk": "Aantal actieve deelnemers 750"
+  },
+  "deelnemers_slapers": {
+   "2025": 3326,
+   "2024": null,
+   "pagina": 29,
+   "letterlijk": "Aantal gewezen deelnemers 3.326"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 3094,
+   "2024": null,
+   "pagina": 29,
+   "letterlijk": "Aantal pensioengerechtigden 3.094"
+  },
+  "deelnemers_totaal": {
+   "2025": 7170,
+   "2024": null,
+   "pagina": 29,
+   "letterlijk": "7.170"
+  },
+  "rente_afdekking_pct": {
+   "2025": 88.8,
+   "2024": null,
+   "pagina": 401,
+   "letterlijk": "De feitelĳke afdekking per ultimo 2025 bedroeg 88,8%. Die afwĳking valt iets buiten de toegestane bandbreedte"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-30",
+  "pagina": 911
+ },
+ "invaardatum": {
+  "datum": "2028-01-01",
+  "status": "gepland",
+  "pagina": 410
+ },
+ "opmerkingen": "Cijfers uit het eigen kerncijferhoofdstuk van de kring (Jaarverslag 2025 Stichting Het Nederlandse Pensioenfonds, bedragen x EUR 1.000). AUM = 'Totaal beleggingen' uit de kerncijfers (na aftrek negatieve derivaten). Nominale dekkingsgraad = 'Aanwezige dekkingsgraad'. Vaststellingsdatum = ondertekening jaarrekening (Badhoevedorp, 30 juni 2026, p.911; ondertekening bestuursverslag p.438 zelfde datum). Renteafdekking 2024 niet opgezocht/genoemd. Kring 'Pensioenkring Wolters Kluwer Nederland' opgericht 1 januari 2025: kerncijfers tonen alleen 2025, dus alle 2024-waarden null. Renteafdekking-norm 85%. 'Uitgangspunt ... is een nieuwe pensioenregeling ingaande op 1 januari 2028' (p.410); implementatieplan streefdatum indienen 1 januari 2027."
+}

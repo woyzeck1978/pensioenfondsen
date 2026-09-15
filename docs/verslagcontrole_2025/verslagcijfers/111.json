@@ -1,0 +1,21 @@
+{
+ "fund_id": 111,
+ "naam": "KPN",
+ "pad": "data/annual_reports/111_KPN_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {"2025": -3.2, "2024": 9.7, "pagina": 7, "letterlijk": "Jaarrendement portefeuille -3,2% 9,7% 7,5% (kop 2025 2024 2023)"},
+  "beleidsdekkingsgraad_pct": {"2025": 129.6, "2024": 126.8, "pagina": 6, "letterlijk": "Beleidsdekkingsgraad 129,6% 126,8% 123,7%"},
+  "nominale_dekkingsgraad_pct": {"2025": 131.9, "2024": 126.1, "pagina": 6, "letterlijk": "Actuele dekkingsgraad 131,9% 126,1% 122,8%"},
+  "reele_dekkingsgraad_pct": {"2025": 101.6, "2024": 99.6, "pagina": 129, "letterlijk": "Reële dekkingsgraad 101,6% 99,6% (31-12-2025 31-12-2024)"},
+  "vereiste_dekkingsgraad_pct": {"2025": 114.3, "2024": null, "pagina": 129, "letterlijk": "Omdat de beleidsdekkingsgraad per 31 december 2025 (129,6%) ook hoger is dan de vereiste dekkingsgraad (114,3%)"},
+  "aum_euro_bn": {"2025": 10.079, "2024": 10.643, "pagina": 7, "letterlijk": "Beleggingen risico pensioenfonds (Bedragen x € 1,0 miljoen) 10.079 10.643 9.907"},
+  "deelnemers_actief": {"2025": 10573, "2024": 10952, "pagina": 6, "letterlijk": "Deelnemers, actief en voortgezet 10.573 10.952 11.055"},
+  "deelnemers_slapers": {"2025": 35265, "2024": 36155, "pagina": 6, "letterlijk": "Gewezen deelnemers 35.265 36.155 36.511"},
+  "deelnemers_pensioengerechtigd": {"2025": 25498, "2024": 24720, "pagina": 6, "letterlijk": "Pensioengerechtigden 25.498 24.720 23.926"},
+  "deelnemers_totaal": {"2025": 71336, "2024": 71827, "pagina": 6, "letterlijk": "Totaal aantal verzekerden 71.336 71.827 71.492"},
+  "rente_afdekking_pct": {"2025": 98.9, "2024": null, "pagina": 141, "letterlijk": "Per eind van 2025 is 98,9% van het renterisico afgedekt door middel van een combinatie van de vastrentende waarden en renteswaps."}
+ },
+ "vaststellingsdatum": {"datum": "2026-04-30", "pagina": 113},
+ "invaardatum": {"datum": "2026-10-01", "status": "gepland", "pagina": 9},
+ "opmerkingen": "Rendement -3,2% is totaal incl. derivaten/dekkingsgraadbescherming (-7,9%) en excl. BPR-regeling en premiedepot; rendement uit beleggingen alleen 1,9% (p9). De -6,4% op p139 is het effect op de dekkingsgraad. AUM kerncijfers 10.079 mln = balanswaarde incl. derivaten en vorderingen/schulden inzake beleggingen (voetnoot 7); excl. beleggingen risico deelnemer 1.320. Vereiste dekkingsgraad niet in kerncijfers (alleen VEV in euro's), 114,3% uit tekst p129; 2024-percentage niet gevonden. Rente-afdekking: strategisch vast niveau 100%; feitelijk 98,9% eind 2025; p141 noemt ook 'mate van renteafdekking in FTK-scenario circa 99,7% (2024: 98,8%)' en 'gerealiseerde afdekking over 2025 circa 93% (2024: 86%)' - drie verschillende maatstaven, daarom 2024 null. Jaarrekening opgemaakt 30 april 2026 (p113); bestuursverslag Amersfoort, 30 april 2026. Invaren gepland 1 oktober 2026, invaarbesluit 16 oktober 2025 naar DNB."
+}

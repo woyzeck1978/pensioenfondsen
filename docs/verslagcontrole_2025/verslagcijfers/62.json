@@ -1,0 +1,83 @@
+{
+ "fund_id": 62,
+ "naam": "Vlakglas, Verf, Glasbewerking- en het Glazeniersbedrijf / BPFV (Flat Glass, Paint, and Glazing)",
+ "pad": "data/annual_reports/62_Vlakglas_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -7.35,
+   "2024": 10.96,
+   "pagina": 8,
+   "letterlijk": "Totale portefeuille rendement in % -7,35 10,96 9,23 (kop 2025 2024 2023)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 128.0,
+   "2024": 121.3,
+   "pagina": 8,
+   "letterlijk": "Beleidsdekkingsgraad 128,0% 121,3% 115,4%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 132.0,
+   "2024": 120.9,
+   "pagina": 8,
+   "letterlijk": "Aanwezige dekkingsgraad 132,0% 120,9% 116,2%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 91.8,
+   "2024": 88.8,
+   "pagina": 8,
+   "letterlijk": "Reële dekkingsgraad 91,8% 88,8% 82,6%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 108.7,
+   "2024": 115.8,
+   "pagina": 8,
+   "letterlijk": "Vereiste dekkingsgraad 108,7% 115,8% 115,7%"
+  },
+  "aum_euro_bn": {
+   "2025": 1.772386,
+   "2024": 1.861405,
+   "pagina": 7,
+   "letterlijk": "Beleggingsportefeuille (in duizenden euro) Totaal 1.772.386 1.861.405"
+  },
+  "deelnemers_actief": {
+   "2025": 12591,
+   "2024": 12474,
+   "pagina": 7,
+   "letterlijk": "Deelnemers (incl. arbeidsongeschikten) 12.591 12.474 12.472"
+  },
+  "deelnemers_slapers": {
+   "2025": 27186,
+   "2024": 26707,
+   "pagina": 7,
+   "letterlijk": "Gewezen deelnemers 27.186 26.707 26.485"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 10811,
+   "2024": 10281,
+   "pagina": 7,
+   "letterlijk": "Pensioengerechtigden 10.811 10.281 9.802"
+  },
+  "deelnemers_totaal": {
+   "2025": 50588,
+   "2024": 49462,
+   "pagina": 7,
+   "letterlijk": "Totaal aantal verzekerden 50.588 49.462 48.759"
+  },
+  "rente_afdekking_pct": {
+   "2025": 99.7,
+   "2024": null,
+   "pagina": 50,
+   "letterlijk": "De werkelijke renteafdekking komt per eind december 2025 uit op 99,7%."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-25",
+  "pagina": 112
+ },
+ "invaardatum": {
+  "datum": "2026-07-01",
+  "status": "gepland",
+  "pagina": 97
+ },
+ "opmerkingen": "Actieve deelnemers inclusief arbeidsongeschikten. Rendement -7,35% is totale portefeuille (incl. matching; rendementsportefeuille 7,8%). Renteafdekking 2024: alleen strategisch 75,0% genoemd ('100,0% (2024: 75,0%)', p105), geen werkelijk ultimo-2024 cijfer -> null; per 1 april 2025 verhoogd van 75% naar 100%. Vereist eigen vermogen risicoparagraaf 2024 244.875 (p104) vs balans 224.875 (p95) — interne tegenstrijdigheid, raakt de 115,8% niet. Vaststelling: 'Vastgesteld te Heerlen, 25 juni 2026' (p112; ook voorwoord p6). Invaren: 'Per 1 juli 2026 zal het fonds overgaan naar het nieuwe pensioenstelsel', positieve DNB-beschikking eind mei 2026 (p97); per verslagdatum nog gepland."
+}

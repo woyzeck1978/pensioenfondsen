@@ -1,0 +1,83 @@
+{
+ "fund_id": 89,
+ "naam": "DHL Nederland",
+ "pad": "data/annual_reports/89_DHL_Nederland_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -5.2,
+   "2024": 12.8,
+   "pagina": 9,
+   "letterlijk": "Rendement op basis van total return -5,20% 12,80% 4,96% (kop 2025 2024 2023 2022 2021)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 142.2,
+   "2024": 138.5,
+   "pagina": 9,
+   "letterlijk": "Beleidsdekkingsgraad 142,2% 138,5% 137,3%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 145.2,
+   "2024": 137.8,
+   "pagina": 9,
+   "letterlijk": "Dekkingsgraad FTK 145,2% 137,8% 131,8%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 105.2,
+   "2024": 104.1,
+   "pagina": 27,
+   "letterlijk": "Ultimo 2025 bedroeg de reële dekkingsgraad 105,2% (ultimo 2024 was dit 104,1%)."
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 119.3,
+   "2024": 119.8,
+   "pagina": 9,
+   "letterlijk": "Vereist eigen vermogen 119,3% 119,8% 121,8%"
+  },
+  "aum_euro_bn": {
+   "2025": 1.219667,
+   "2024": 1.312278,
+   "pagina": 9,
+   "letterlijk": "Financiële gegevens (in duizenden euro) Belegd vermogen 1.219.667 1.312.278"
+  },
+  "deelnemers_actief": {
+   "2025": 3031,
+   "2024": 2989,
+   "pagina": 9,
+   "letterlijk": "Actieve deelnemers 1) 3.031 2.989 2.958"
+  },
+  "deelnemers_slapers": {
+   "2025": 7982,
+   "2024": 8147,
+   "pagina": 9,
+   "letterlijk": "Gewezen deelnemers 7.982 8.147 8.232"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 5081,
+   "2024": 4958,
+   "pagina": 9,
+   "letterlijk": "Pensioengerechtigden 5.081 4.958 4.898"
+  },
+  "deelnemers_totaal": {
+   "2025": 16094,
+   "2024": 16094,
+   "pagina": 9,
+   "letterlijk": "Totaal aantal deelnemers 16.094 16.094 16.088"
+  },
+  "rente_afdekking_pct": {
+   "2025": 102.7,
+   "2024": null,
+   "pagina": 103,
+   "letterlijk": "De feitelijke renteafdekking op basis van de DNB-methodiek bedraagt 102,7% eind 2025."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-17",
+  "pagina": 108
+ },
+ "invaardatum": {
+  "datum": "2027-01-01",
+  "status": "gepland",
+  "pagina": 7
+ },
+ "opmerkingen": "Vereiste dekkingsgraad staat in meerjarenoverzicht als regel 'Vereist eigen vermogen 119,3%' (strategisch). Dekkingsgraad incl. indexatieverplichting per 1 januari volgend jaar (voetnoot 3). Tabel p26 noemt in de kolom 'Aanwezige dekkingsgraad 2024' eindstand 131,8%, terwijl meerjarenoverzicht 137,8% voor 2024 geeft (lijkt kolom 2023) - interne inconsistentie. Totaal deelnemers 2024 en 2025 beide 16.094 (klopt met optelling per jaar). Rente-afdekking: strategisch 110% swapcurve = 108,2% DNB-methodiek; feitelijk 102,7% (DNB-methodiek) gekozen; geen ultimo-2024-cijfer. Invaren: invaarbesluit 17 december 2025, implementatieplan 19 december 2025 ingediend; 'zal op 1 januari 2027 het pensioenfonds overgaan naar het nieuwe stelsel' (p7). Vaststelling: 'Vastgesteld te Utrecht, d.d. 17 juni 2026' (jaarrekening p108; bestuursverslag p76)."
+}

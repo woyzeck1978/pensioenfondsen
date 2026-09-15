@@ -1,0 +1,21 @@
+{
+ "fund_id": 34,
+ "naam": "Recreatie (Recreation)",
+ "pad": "data/annual_reports/34_Recreatie_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {"2025": -8.5, "2024": 8.4, "pagina": 10, "letterlijk": "Gemiddeld rendement op totale beleggingen -8,5% 8,4% 8,7% (kop 2025 2024 2023)"},
+  "beleidsdekkingsgraad_pct": {"2025": 123.4, "2024": 118.4, "pagina": 9, "letterlijk": "Beleidsdekkingsgraad 123,4% 118,4% 115,9%"},
+  "nominale_dekkingsgraad_pct": {"2025": 131.2, "2024": 115.7, "pagina": 9, "letterlijk": "Aanwezige dekkingsgraad 131,2% 115,7% 115,9%"},
+  "reele_dekkingsgraad_pct": {"2025": 86.2, "2024": 86.3, "pagina": 9, "letterlijk": "Reële dekkingsgraad 86,2% 86,3% 83,3%"},
+  "vereiste_dekkingsgraad_pct": {"2025": 118.2, "2024": 114.7, "pagina": 10, "letterlijk": "Vereiste dekkingsgraad 118,2% 114,7% 115,1%"},
+  "aum_euro_bn": {"2025": 1.122934, "2024": 1.172945, "pagina": 84, "letterlijk": "Beleggingen voor risico pensioenfonds (x € 1.000) 1.122.934 1.172.945"},
+  "deelnemers_actief": {"2025": 24059, "2024": 23907, "pagina": 9, "letterlijk": "Deelnemers [2] 24.059 23.907 20.645"},
+  "deelnemers_slapers": {"2025": 50200, "2024": 47659, "pagina": 9, "letterlijk": "Gewezen deelnemers 50.200 47.659 44.124"},
+  "deelnemers_pensioengerechtigd": {"2025": 4883, "2024": 4575, "pagina": 9, "letterlijk": "Pensioengerechtigden: 4.883 4.575 4.097"},
+  "deelnemers_totaal": {"2025": null, "2024": null, "pagina": null, "letterlijk": ""},
+  "rente_afdekking_pct": {"2025": 76.1, "2024": null, "pagina": 22, "letterlijk": "Rente-afdekking (marktrente) 76,0% 76,1% (kolommen strategisch / feitelijk ultimo 2025)"}
+ },
+ "vaststellingsdatum": {"datum": "2026-06-29", "pagina": 87},
+ "invaardatum": {"datum": "2026-01-01", "status": "ingevaren", "pagina": 44},
+ "opmerkingen": "Ingevaren per 1 januari 2026; cijfers ultimo 2025 zijn FTK. Rente-afdekking: tabel p22 heeft twee kolommen zonder duidelijke kop in de tekstextractie; de rijen erboven (aandelen 28,5% / 39,6%) matchen met de strategische mix op p23 in de eerste kolom, dus 76,0% = strategisch en 76,1% = feitelijk (interpretatie, niet letterlijk gelabeld). Tekst p23: strategisch afdekkingsniveau statisch 76% gedurende het jaar. p26 noemt 'gerealiseerde renteafdekking' 72,9% (2024: 29,1%) - dat is een effectiviteitsmaat over het jaar, daarom niet gebruikt en 2024 null. Rendement: 'gemiddeld rendement op totale beleggingen' (matching -34,0%, return 5,2%). Deelnemersaantal is incl. ambtshalve context; geen totaal genoemd. Jaarrekening vastgesteld 29 juni 2026 (p87)."
+}

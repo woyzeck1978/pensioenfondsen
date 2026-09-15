@@ -1,0 +1,83 @@
+{
+ "fund_id": 80,
+ "naam": "Avery Dennison",
+ "pad": "data/annual_reports/80_Avery_Dennison_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -2.6,
+   "2024": 9.8,
+   "pagina": 8,
+   "letterlijk": "Beleggingsrendement voor risico fonds (%) Totaal rendement 2025 -2,6 | 2024 9,8"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 139.2,
+   "2024": 133.9,
+   "pagina": 7,
+   "letterlijk": "Beleidsdekkingsgraad 2025 139,2 | 2024 133,9"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 144.4,
+   "2024": 130.6,
+   "pagina": 7,
+   "letterlijk": "Actuele dekkingsgraad 2025 144,4 | 2024 130,6"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 101.9,
+   "2024": 100.0,
+   "pagina": 34,
+   "letterlijk": "De reële dekkingsgraad van het fonds bedraagt ultimo 2025: 101,9% (2024: 100,0%)"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 116.1,
+   "2024": 117.3,
+   "pagina": 7,
+   "letterlijk": "Vereiste dekkingsgraad 2025 116,1 | 2024 117,3"
+  },
+  "aum_euro_bn": {
+   "2025": 0.443078,
+   "2024": 0.456856,
+   "pagina": 7,
+   "letterlijk": "Belegd vermogen: Beleggingen (x € 1.000) 2025 443.078 | 2024 456.856"
+  },
+  "deelnemers_actief": {
+   "2025": 487,
+   "2024": 473,
+   "pagina": 7,
+   "letterlijk": "Deelnemers 2025 487 | 2024 473"
+  },
+  "deelnemers_slapers": {
+   "2025": 1208,
+   "2024": 1188,
+   "pagina": 7,
+   "letterlijk": "Gewezen deelnemers 2025 1.208 | 2024 1.188"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 708,
+   "2024": 704,
+   "pagina": 7,
+   "letterlijk": "Pensioengerechtigden 2025 708 | 2024 704"
+  },
+  "deelnemers_totaal": {
+   "2025": 2403,
+   "2024": 2365,
+   "pagina": 7,
+   "letterlijk": "(totaalregel) 2025 2.403 | 2024 2.365"
+  },
+  "rente_afdekking_pct": {
+   "2025": 88.1,
+   "2024": null,
+   "pagina": 37,
+   "letterlijk": "De mate van renteafdekking per eind december 2025 bedroeg 88,1% op basis van de niet-geïndexeerde kasstromen"
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-08",
+  "pagina": 50
+ },
+ "invaardatum": {
+  "datum": "2027-07-01",
+  "status": "gepland",
+  "pagina": 20
+ },
+ "opmerkingen": "Strategische renteafdekking per 1-9-2025 verhoogd van 75% naar 90% (na balansdatum naar 100%); feitelijke 88,1% ultimo 2025, 2024-feitelijk niet gevonden. Invaren beoogd 1-7-2027 ('uiterlijk 1 januari 2028', p19). Totaalregel deelnemers staat zonder label in kerncijfers. Jaarrekening p92 ook vastgesteld 8 juni 2026."
+}

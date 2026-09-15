@@ -1,0 +1,83 @@
+{
+ "fund_id": 21,
+ "naam": "Koopvaardij (Merchant Navy)",
+ "pad": "data/annual_reports/21_Koopvaardij_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -3.3,
+   "2024": 6.6,
+   "pagina": 6,
+   "letterlijk": "Rendement -3,3% 6,6% (kerncijfers, kolommen 2025 2024)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 123.1,
+   "2024": 119.4,
+   "pagina": 5,
+   "letterlijk": "Beleidsdekkingsgraad 3) 123,1% 119,4%"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 129.2,
+   "2024": 117.8,
+   "pagina": 5,
+   "letterlijk": "Dekkingsgraad (f = e / a) 129,2% 117,8%"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 92.2,
+   "2024": 90.5,
+   "pagina": 5,
+   "letterlijk": "Reële dekkingsgraad 4) 92,2% 90,5%"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 112.2,
+   "2024": 111.6,
+   "pagina": 5,
+   "letterlijk": "Vereiste dekkingsgraad 112,2% 111,6%"
+  },
+  "aum_euro_bn": {
+   "2025": 3.370974,
+   "2024": 3.700307,
+   "pagina": 6,
+   "letterlijk": "Actuele waarde belegd vermogen 3.370.974 3.700.307 (x 1 duizend Euro)"
+  },
+  "deelnemers_actief": {
+   "2025": 4770,
+   "2024": 4635,
+   "pagina": 5,
+   "letterlijk": "Actieve deelnemers 4.770 4.635"
+  },
+  "deelnemers_slapers": {
+   "2025": 18243,
+   "2024": 17885,
+   "pagina": 5,
+   "letterlijk": "Gewezen deelnemers 1) 18.243 17.885"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 24876,
+   "2024": 25455,
+   "pagina": 5,
+   "letterlijk": "Pensioengerechtigden 24.876 25.455"
+  },
+  "deelnemers_totaal": {
+   "2025": 47889,
+   "2024": 47975,
+   "pagina": 5,
+   "letterlijk": "Totaal deelnemers 47.889 47.975"
+  },
+  "rente_afdekking_pct": {
+   "2025": 81.0,
+   "2024": 83.2,
+   "pagina": 119,
+   "letterlijk": "De renteafdekking van het fonds per 31 december 2025 is 81,0% op basis van de actuele rentetermijnstructuur (2024: 83,2%)."
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-06-24",
+  "pagina": 137
+ },
+ "invaardatum": {
+  "datum": "2026-01-01",
+  "status": "ingevaren",
+  "pagina": 3
+ },
+ "opmerkingen": "Bestuursverslag ondertekend 'Den Haag, 17 juni 2026' (p81); jaarrekening/overige gegevens ondertekend 'Den Haag, 24 juni 2026' (p137, accountant ook 24 juni) - laatste datum gekozen. Gewezen deelnemers inclusief ambtshalve uitkeringen. Invaren per 1-1-2026, administratief afgerond maart 2026. AUM = kerncijfer 'Actuele waarde belegd vermogen'."
+}

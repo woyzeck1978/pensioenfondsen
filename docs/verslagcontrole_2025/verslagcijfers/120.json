@@ -1,0 +1,83 @@
+{
+ "fund_id": 120,
+ "naam": "Pon",
+ "pad": "data/annual_reports/120_Pon_2025.pdf",
+ "velden": {
+  "beleggingsrendement_pct": {
+   "2025": -0.98,
+   "2024": 12.84,
+   "pagina": 5,
+   "letterlijk": "Beleggingsrendement -0,98 12,84 11,72 (kop 2025 2024 2023)"
+  },
+  "beleidsdekkingsgraad_pct": {
+   "2025": 117.1,
+   "2024": 111.3,
+   "pagina": 5,
+   "letterlijk": "Beleidsdekkingsgraad (in %) 117,1 111,3 110,5"
+  },
+  "nominale_dekkingsgraad_pct": {
+   "2025": 122.6,
+   "2024": 110.3,
+   "pagina": 5,
+   "letterlijk": "Aanwezige dekkingsgraad (in %) 122,6 110,3 110,0"
+  },
+  "reele_dekkingsgraad_pct": {
+   "2025": 86.5,
+   "2024": 85.1,
+   "pagina": 5,
+   "letterlijk": "Reële dekkingsgraad (in %) 86,5 85,1 83,6"
+  },
+  "vereiste_dekkingsgraad_pct": {
+   "2025": 109.0,
+   "2024": 110.1,
+   "pagina": 5,
+   "letterlijk": "Vereiste dekkingsgraad (in %) 109,0 110,1 109,3"
+  },
+  "aum_euro_bn": {
+   "2025": 0.609163,
+   "2024": 0.592984,
+   "pagina": 5,
+   "letterlijk": "Beleggingsportefeuille (x € 1.000) Beleggingen voor risico fonds 609.163 592.984"
+  },
+  "deelnemers_actief": {
+   "2025": 4372,
+   "2024": 4181,
+   "pagina": 5,
+   "letterlijk": "Deelnemers 4.372 4.181 4.116"
+  },
+  "deelnemers_slapers": {
+   "2025": 5482,
+   "2024": 5714,
+   "pagina": 5,
+   "letterlijk": "Gewezen deelnemers 5.482 5.714 5.523"
+  },
+  "deelnemers_pensioengerechtigd": {
+   "2025": 1303,
+   "2024": 1309,
+   "pagina": 5,
+   "letterlijk": "Pensioengerechtigden 1.303 1.309 1.220"
+  },
+  "deelnemers_totaal": {
+   "2025": 11157,
+   "2024": 11204,
+   "pagina": 5,
+   "letterlijk": "Totaal deelnemers 11.157 11.204 10.859"
+  },
+  "rente_afdekking_pct": {
+   "2025": null,
+   "2024": null,
+   "pagina": null,
+   "letterlijk": ""
+  }
+ },
+ "vaststellingsdatum": {
+  "datum": "2026-08-31",
+  "pagina": 62
+ },
+ "invaardatum": {
+  "datum": "2028-01-01",
+  "status": "gepland",
+  "pagina": 47
+ },
+ "opmerkingen": "AUM = beleggingen voor risico fonds, exclusief herverzekeringsdeel TV (€ 515,9 mln bij Nationale-Nederlanden) en beleggingen risico deelnemer (18.482); pensioenvermogen 1.117.152 (x € 1.000). Rendement 2025 negatief (-0,98%) door LDI-portefeuille -22,37%. Maandoverzicht p38 geeft DG december 122,5% vs 122,6% in kerncijfers (kerncijfers op basis jaarrekening). Rente-afdekking: alleen strategische norm genoemd (verhoogd van 50% naar 60% per 31-10-2025, 'bleef dicht bij de strategische norm', p30) -> geen gerealiseerd ultimo-percentage, null. Invaren: 'beoogde transitiedatum van 1 januari 2028' (p47), invaarbesluit nog te nemen in 2026."
+}
