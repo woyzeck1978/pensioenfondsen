@@ -1,0 +1,302 @@
+<title>ETF-alternatieven Enhanced ESG Passief</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Libre+Franklin:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: één notitiekolom (max 1040px); tabellen breed met eigen scroll; de kostenrekenaar is het enige "werkende" blok. */
+:root{--bg:#f6f6f3;--surface:#ffffff;--ink:#1a2230;--ink2:#56606e;--ink3:#8b93a0;--line:#dadde2;--accent:#1b3a5c;--accent-soft:#e6ecf3;--q:#eef0ec;
+ --conv:#2a78d6;--light:#1baf7a;--ctb:#eda100;--pab:#eb6834;--sri:#e87ba4;--fgr:#4a3aa7;--warn:#b45309;
+ --display:"Lora",Georgia,"Times New Roman",serif;--body:"Libre Franklin","Helvetica Neue",Arial,sans-serif;--mono:"IBM Plex Mono",Menlo,Consolas,monospace}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#151920;--surface:#1d222b;--ink:#eceef2;--ink2:#b3bac6;--ink3:#7d8694;--line:#333a46;--accent:#8fb4dc;--accent-soft:#1f2d3e;--q:#232933;--conv:#3987e5;--light:#199e70;--ctb:#c98500;--pab:#d95926;--sri:#d55181;--fgr:#9085e9;--warn:#f59e0b;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#151920;--surface:#1d222b;--ink:#eceef2;--ink2:#b3bac6;--ink3:#7d8694;--line:#333a46;--accent:#8fb4dc;--accent-soft:#1f2d3e;--q:#232933;--conv:#3987e5;--light:#199e70;--ctb:#c98500;--pab:#d95926;--sri:#d55181;--fgr:#9085e9;--warn:#f59e0b;color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding-block:32px 64px;padding-inline:16px}
+header.kop{border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:24px}
+.eyebrow{text-transform:uppercase;letter-spacing:.08em;font-size:12px;color:var(--accent);font-weight:600}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(28px,4.2vw,40px);line-height:1.15;margin:8px 0 10px;text-wrap:balance}
+h2{font-family:var(--display);font-weight:600;font-size:26px;margin:44px 0 10px;text-wrap:balance;scroll-margin-top:16px}
+h3{font-size:17px;font-weight:600;margin:22px 0 8px}
+p,li{max-width:70ch}
+.lead{font-size:18px;color:var(--ink2)}
+nav.toc{font-size:14px;display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:14px} nav.toc a{color:var(--accent);text-decoration:none}
+.tw{overflow-x:auto;margin:12px 0 18px}
+table{border-collapse:collapse;font-size:14px;min-width:100%}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top;font-variant-numeric:tabular-nums}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink2);font-weight:600}
+td.num,th.num{text-align:right}
+.links{display:block;font-size:12px;margin-top:2px} a.lnk{color:var(--accent);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--accent) 40%,transparent)} a.lnk:hover,a.lnk:focus{border-bottom-color:var(--accent)}
+.gesloten{display:inline-block;font-size:11.5px;font-weight:600;color:#fff;background:var(--warn);padding:0 6px;border-radius:3px;margin-left:6px;vertical-align:middle}
+.isin{font-family:var(--mono);font-size:12.5px;color:var(--ink2);white-space:nowrap}
+.chip{display:inline-block;font-size:12px;font-weight:600;padding:1px 8px;border-radius:999px;color:#fff;white-space:nowrap}
+.chip.conv{background:var(--conv)} .chip.light{background:var(--light)} .chip.ctb{background:var(--ctb)} .chip.pab{background:var(--pab)} .chip.sri{background:var(--sri)} .chip.fgr{background:var(--fgr)}
+.frame{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:18px 0}
+.frame div{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px}
+.frame b{display:block;font-family:var(--display);font-size:18px;margin-bottom:4px} .frame span{font-size:14px;color:var(--ink2)}
+.fig{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px;margin:18px 0}
+.fig h4{margin:0 0 4px;font-size:15px;font-weight:600} .fig .sub{color:var(--ink2);font-size:13px;margin:0 0 10px}
+.fig canvas{max-width:100%}
+.calc{background:var(--accent-soft);border-radius:6px;padding:16px;margin:18px 0}
+.calc label{font-weight:600;font-size:14px} .calc input{font:inherit;font-family:var(--mono);padding:6px 10px;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--ink);width:120px;margin:0 8px}
+.calc .uitleg{font-size:13px;color:var(--ink2);margin:6px 0 0}
+.matrix td:not(:first-child){text-align:center}
+.lvl{display:inline-block;min-width:92px;padding:2px 8px;border-radius:4px;font-size:12.5px;font-weight:500}
+.l0{background:var(--q);color:var(--ink2)} .l1{background:color-mix(in srgb,var(--ctb) 22%,var(--surface));color:var(--ink)} .l2{background:color-mix(in srgb,var(--pab) 32%,var(--surface));color:var(--ink)}
+.note{border-left:3px solid var(--warn);background:var(--q);padding:10px 14px;margin:14px 0;font-size:14px}
+.note p{margin:0;max-width:none}
+.beslis td:first-child{font-weight:600}
+q{quotes:"‘" "’"}
+.mono{font-family:var(--mono);font-size:12.5px}
+footer{margin-top:40px;border-top:1px solid var(--line);padding-top:12px;font-size:13px;color:var(--ink2)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+<div class="wrap">
+<header class="kop">
+<div class="eyebrow">DPS · beleggingsnotitie · wereldwijd ontwikkelde aandelen</div>
+<h1>Alternatieven voor het Enhanced ESG Passief mandaat</h1>
+<p class="lead">Representatieve UCITS-ETF's die voor Europese institutionele beleggers beschikbaar zijn als vervanging of maatstaf voor een passief wereldwijd aandelenmandaat met ESG-verbetering: conventionele indextrackers, ESG-varianten in vier intensiteiten, de kostenopslag per variant, waarom de ESG-varianten anders renderen dan MSCI World, en de Nederlandse FGR-fondsen van Northern Trust als derde route naast ETF en mandaat.</p>
+<nav class="toc"><a href="#frame">Beslisframe</a><a href="#conv">1 Conventioneel</a><a href="#esg">2 ESG-varianten</a><a href="#kosten">3 Kosten</a><a href="#rendement">4 Rendementsverschil</a><a href="#praktijk">5 Praktijk voor een pensioenfonds</a><a href="#fgr">6 Northern Trust FGR</a><a href="#drie">7 Drie aanbieders</a><a href="#keuze">8 Keuzetabel</a></nav>
+</header>
+
+<section id="frame">
+<p>Een enhanced-ESG passief mandaat doet drie dingen tegelijk: de wereldindex volgen, een eigen uitsluitingslijst en CO2-pad toepassen, en dat tegen mandaatkosten. Een ETF kan elk van die drie vervangen, maar niet in dezelfde combinatie. De vier vragen hieronder bepalen welke kolom in de tabellen telt.</p>
+<div class="frame">
+<div><b>Hoeveel ESG?</b><span>Van lichte screening (ongeveer 1.170 namen) tot SRI best-in-class (ongeveer 370 namen). Hoe strenger, hoe groter de afwijking van MSCI World.</span></div>
+<div><b>Welke kosten?</b><span>Conventioneel 0,05 tot 0,12% TER; ESG 0,12 tot 0,30%. De opslag is 5 tot 25 basispunten.</span></div>
+<div><b>Welke tracking error?</b><span>Lichte screening blijft dicht bij de index; SRI en Paris-aligned geven een structurele technologie-overweging en energie-onderweging.</span></div>
+<div><b>Welke structuur?</b><span>Iers ETF, Nederlands FGR of eigen mandaat: bronbelasting, uitleen, stemrecht en maatwerk verschillen per vorm. Voor een pensioenfonds weegt dit vaak zwaarder dan de TER.</span></div>
+</div>
+</section>
+
+<h2 id="conv">1. Conventionele trackers op MSCI World en FTSE Developed</h2>
+<p>De maatstaf voor kosten en tracking. Alle acht zijn accumulerend of hebben een accumulerende aandelenklasse, UCITS, en breed verhandeld op Europese beurzen.</p>
+<div class="tw"><table>
+<thead><tr><th>ETF</th><th>ISIN</th><th>Benchmark</th><th>Replicatie</th><th class="num">TER</th><th>Beoordeling</th></tr></thead>
+<tbody>
+<tr><td>Invesco MSCI World UCITS ETF Acc<span class="links"><a class="lnk" href="https://www.invesco.com/content/dam/invesco/emea/en/product-documents/etf/share-class/kid/IE00B60SX394_kid_en.pdf" title="Officiële KID van de aanbieder">KID</a> · <a class="lnk" href="https://www.justetf.com/en/etf-profile.html?isin=IE00B60SX394" title="justETF-profiel op ISIN">profiel</a></span></td><td class="isin">IE00B60SX394</td><td>MSCI World Net Return</td><td>Synthetisch, unfunded swap</td><td class="num">0,05%</td><td>Goedkoopste gevestigde optie; brengt swap-tegenpartijrisico mee</td></tr>
+<tr><td>UBS Core MSCI World UCITS ETF USD Acc<span class="links"><a class="lnk" href="https://www.justetf.com/en/etf-profile.html?isin=IE00BD4TXV59" title="justETF-profiel op ISIN">profiel</a></span></td><td class="isin">IE00BD4TXV59</td><td>MSCI World Net Return</td><td>Fysiek, volledig</td><td class="num">0,06%</td><td>Sterke combinatie van lage kosten, schaal en fysieke replicatie</td></tr>
+<tr><td>Franklin FTSE Developed World UCITS ETF<span class="links"><a class="lnk" href="https://www.franklintempleton.co.uk/download/en-gb/factsheet/e68fd57b-791c-47bc-8973-32ace4faa3c6/Factsheet-FranklinFTSEDevelopedWorldUCITSETF-40162-FF-GB-en-GB.PDF" title="Officiële factsheet van de aanbieder">factsheet</a> · <a class="lnk" href="https://www.justetf.com/en/etf-profile.html?isin=IE000CVOSY02" title="justETF-profiel op ISIN">profiel</a></span></td><td class="isin">IE000CVOSY02</td><td>FTSE Developed</td><td>Fysiek</td><td class="num">0,09%</td><td>Lage fee, maar beduidend kleiner en korter trackrecord</td></tr>
+<tr><td>State Street SPDR MSCI World UCITS ETF Acc<span class="links"><a class="lnk" href="https://www.ssga.com/uk/en_gb/institutional/etfs/spdr-msci-world-ucits-etf-sppw-gy" title="Officiële productpagina van de aanbieder">productpagina</a> · <a class="lnk" href="https://www.justetf.com/en/etf-profile.html?isin=IE00BFY0GT14" title="justETF-profiel op ISIN">profiel</a></span></td><td class="isin">IE00BFY0GT14</td><td>MSCI World Net Return</td><td>Fysiek, geoptimaliseerd</td><td class="num">0,12%</td><td>Groot, liquide en historisch zeer nauwe tracking</td></tr>
+<tr><td>Amundi Core MSCI World UCITS ETF Acc<span class="links"><a class="lnk" href="https://www.amundietf.co.uk/en/professional/products/equity/amundi-core-msci-world-ucits-etf-acc/ie000bi8ot95" title="Officiële productpagina van de aanbieder">productpagina</a> · <a class="lnk" href="https://www.justetf.com/en/etf-profile.html?isin=IE000BI8OT95" title="justETF-profiel op ISIN">profiel</a></span></td><td class="isin">IE000BI8OT95</td><td>MSCI World Net Return</td><td>Fysiek</td><td class="num">0,12%</td><td>Groot fonds en efficiënte tracking; kortere live-historie</td></tr>
+<tr><td>Vanguard FTSE Developed World UCITS ETF Acc<span class="links"><a class="lnk" href="https://www.vanguard.co.uk/professional/product/etf/equity/9675/ftse-developed-world-ucits-etf-usd-accumulating" title="Officiële productpagina van de aanbieder">productpagina</a> · <a class="lnk" href="https://www.justetf.com/en/etf-profile.html?isin=IE00BK5BQV03" title="justETF-profiel op ISIN">profiel</a></span></td><td class="isin">IE00BK5BQV03</td><td>FTSE Developed</td><td>Fysiek, geoptimaliseerd</td><td class="num">0,12%</td><td>Breder aantal namen dan MSCI World en grote schaal</td></tr>
+<tr><td>HSBC MSCI World UCITS ETF<span class="links"><a class="lnk" href="https://www.assetmanagement.hsbc.nl/api/v1/download/document/ie00b4x9l533/nl/en/factsheet" title="Officiële factsheet van de aanbieder">factsheet</a> · <a class="lnk" href="https://www.justetf.com/en/etf-profile.html?isin=IE00B4X9L533" title="justETF-profiel op ISIN">profiel</a></span></td><td class="isin">IE00B4X9L533</td><td>MSCI World Net Return</td><td>Fysiek, geoptimaliseerd</td><td class="num">0,15%</td><td>Groot en gevestigd, maar niet meer bij de goedkoopste</td></tr>
+<tr><td>iShares Core MSCI World UCITS ETF Acc<span class="links"><a class="lnk" href="https://www.ishares.com/uk/individual/en/products/251882/ishares-msci-world-ucits-etf-acc-fund" title="Officiële productpagina van de aanbieder">productpagina</a> · <a class="lnk" href="https://www.justetf.com/en/etf-profile.html?isin=IE00B4L5Y983" title="justETF-profiel op ISIN">profiel</a></span></td><td class="isin">IE00B4L5Y983</td><td>MSCI World Net Return</td><td>Fysiek, geoptimaliseerd</td><td class="num">0,20%</td><td>Veruit de grootste en zeer liquide, maar relatief duur</td></tr>
+</tbody></table></div>
+<p>FTSE Developed telt ruim 2.000 namen tegen ongeveer 1.400 voor MSCI World, vooral door kleinere mid-caps en Korea als ontwikkelde markt. Voor een mandaat dat tegen MSCI World wordt afgerekend geeft een FTSE-tracker een structurele, zij het kleine, afwijking.</p>
+
+<h2 id="esg">2. ESG-varianten op wereldwijd ontwikkelde aandelen</h2>
+<p>Geordend van licht naar streng. Het aantal namen is de snelste maat voor hoe ver een variant van de moederindex afstaat.</p>
+<div class="tw"><table>
+<thead><tr><th>ESG-intensiteit</th><th>ETF</th><th>ISIN</th><th>Benchmark</th><th class="num">Namen</th><th class="num">TER</th><th>Beoordeling</th></tr></thead>
+<tbody>
+<tr><td><span class="chip light">Lichte screening</span></td><td>iShares MSCI World Screened UCITS ETF<span class="links"><a class="lnk" href="https://www.ishares.com/uk/professionals/en/products/305418/ishares-msci-world-esg-screened-ucits-etf" title="Officiële productpagina van de aanbieder">productpagina</a> · <a class="lnk" href="https://www.justetf.com/en/etf-profile.html?isin=IE00BFNM3K80" title="justETF-profiel op ISIN">profiel</a></span></td><td class="isin">IE00BFNM3K80</td><td>MSCI World Screened</td><td class="num">1.174</td><td class="num">0,20%</td><td>Dichtste ESG-substituut voor MSCI World</td></tr>
+<tr><td><span class="chip ctb">Klimaattransitie</span></td><td>Amundi MSCI World ESG Climate Net Zero Ambition CTB<span class="links"><a class="lnk" href="https://www.amundietf.nl/en/individual/products/equity/amundi-msci-world-esg-climate-net-zero-ambition-ctb-ucits-etf-dist/ie000pb4lro2" title="Officiële productpagina van de aanbieder">productpagina</a> · <a class="lnk" href="https://www.justetf.com/en/etf-profile.html?isin=IE000PB4LRO2" title="justETF-profiel op ISIN">profiel</a></span></td><td class="isin">IE000PB4LRO2</td><td>MSCI World ESG Broad CTB Select</td><td class="num">ca. 1.143</td><td class="num">0,20%</td><td>Brede dekking met klimaattransitie-restricties</td></tr>
+<tr><td><span class="chip pab">Paris-aligned</span></td><td>SPDR MSCI World Climate Paris Aligned UCITS ETF<span class="gesloten">gesloten 2 dec 2025</span><span class="links"><a class="lnk" href="https://www.ssga.com/nl/en_gb/intermediary/etfs/spdr-msci-world-climate-paris-aligned-ucits-etf-acc-spfw-gy" title="Officiële productpagina van de aanbieder">productpagina</a> · <a class="lnk" href="https://www.justetf.com/en/etf-profile.html?isin=IE00BYTH5594" title="justETF-profiel op ISIN">profiel</a></span></td><td class="isin">IE00BYTH5594</td><td>MSCI World Climate Paris Aligned</td><td class="num">ca. 461</td><td class="num">0,15%</td><td>Sterke klimaatdoelstelling, maar klein fonds. <strong>Per 2 december 2025 gesloten</strong> (aandeelhoudersbericht State Street van 31 oktober 2025); staat hier als referentie voor het PAB-profiel, niet als belegbaar alternatief.</td></tr>
+<tr><td><span class="chip sri">SRI best-in-class</span></td><td>iShares MSCI World SRI UCITS ETF<span class="links"><a class="lnk" href="https://www.ishares.com/uk/professionals/en/products/290846/ishares-msci-world-sri-ucits-etf-eur-acc-fund" title="Officiële productpagina van de aanbieder">productpagina</a> · <a class="lnk" href="https://www.justetf.com/en/etf-profile.html?isin=IE00BYX2JD69" title="justETF-profiel op ISIN">profiel</a></span></td><td class="isin">IE00BYX2JD69</td><td>MSCI World SRI Select Reduced Fossil Fuel</td><td class="num">372</td><td class="num">0,20%</td><td>Gevestigd en groot, maar geconcentreerd</td></tr>
+<tr><td><span class="chip sri">SRI best-in-class</span></td><td>UBS MSCI World Socially Responsible UCITS ETF<span class="links"><a class="lnk" href="https://www.justetf.com/en/etf-profile.html?isin=IE00BK72HJ67" title="justETF-profiel op ISIN">profiel</a></span></td><td class="isin">IE00BK72HJ67</td><td>MSCI World SRI Low Carbon Select 5% Capped</td><td class="num">ca. 360</td><td class="num">0,19 tot 0,22%</td><td>Vergelijkbare SRI-exposure, met begrenzing per uitgever</td></tr>
+</tbody></table></div>
+<p>Let op: de SPDR Paris Aligned-tracker in de tabel is per 2 december 2025 gesloten; de rij blijft staan als referentie voor het PAB-profiel. De CTB- en PAB-indices zijn de EU-klimaatbenchmarks: CTB vraagt 30% lagere intensiteit en 7% jaarlijkse reductie, PAB 50% lagere intensiteit met dezelfde 7% en strengere fossiele uitsluitingen. Een mandaat met een pad van min 55% in 2030 ten opzichte van 2016, zoals PDN en SPF rapporteren, zit qua ambitie tussen CTB en PAB in.</p>
+
+<h2 id="kosten">3. Kosten: de ESG-opslag en wat die in euro's betekent</h2>
+<div class="fig"><h4>Lopende kosten per ETF</h4><p class="sub">TER zoals aangeleverd; kleur = categorie. UBS SRI op het midden van de opgegeven bandbreedte; de twee Northern Trust FGR-fondsen met de OCF van de factsheetklasse.</p><canvas id="c-ter" height="420"></canvas></div>
+<div class="tw"><table>
+<thead><tr><th>Exposure</th><th>Concurrerende TER-bandbreedte</th><th>Opslag t.o.v. goedkoopste conventionele ETF</th></tr></thead>
+<tbody>
+<tr><td>Conventioneel MSCI World / FTSE Developed</td><td>0,05 tot 0,12%</td><td>basis</td></tr>
+<tr><td>Lichte ESG-screening</td><td>0,12 tot 0,20%</td><td>ongeveer +5 tot +15 bp</td></tr>
+<tr><td>ESG-tilt / klimaattransitie</td><td>0,15 tot 0,25%</td><td>ongeveer +10 tot +20 bp</td></tr>
+<tr><td>SRI / best-in-class</td><td>0,18 tot 0,25%</td><td>ongeveer +10 tot +20 bp</td></tr>
+<tr><td>Paris-aligned</td><td>0,15 tot 0,30%</td><td>ongeveer +10 tot +25 bp</td></tr>
+</tbody></table></div>
+<div class="calc">
+<label for="bedrag">Omvang van het mandaat</label><span>€</span><input id="bedrag" type="number" inputmode="decimal" min="1" step="10" value="500"><span>mln</span>
+<p class="uitleg">Jaarlijkse lopende kosten per ETF bij deze omvang, en de meerkosten ten opzichte van de goedkoopste conventionele tracker (Invesco, 0,05%). Alleen TER; bronbelasting, uitleen en transactiekosten staan in paragraaf 5.</p>
+<div class="tw"><table id="calc-tabel"><thead><tr><th>ETF</th><th>Categorie</th><th class="num">TER</th><th class="num">Kosten per jaar</th><th class="num">Meerkosten per jaar</th></tr></thead><tbody></tbody></table></div>
+</div>
+
+<h2 id="rendement">4. Waarom de ESG-varianten anders renderen dan MSCI World</h2>
+<p>Het rendementsverschil is geen ruis maar een structurele factorpositie: minder energie, meer technologie en kwaliteit, en bij SRI een veel kleiner universum. De tabel zet de drijfveren per intensiteit naast elkaar.</p>
+<div class="tw"><table class="matrix">
+<thead><tr><th>Drijfveer</th><th><span class="chip light">Lichte screening</span></th><th><span class="chip sri">SRI / best-in-class</span></th><th><span class="chip pab">Paris-aligned</span></th></tr></thead>
+<tbody>
+<tr><td>Aantal uitsluitingen</td><td><span class="lvl l0">laag</span></td><td><span class="lvl l2">hoog</span></td><td><span class="lvl l1">matig tot hoog</span></td></tr>
+<tr><td>Technologie-overweging</td><td><span class="lvl l0">meestal bescheiden</span></td><td><span class="lvl l2">vaak materieel</span></td><td><span class="lvl l2">vaak materieel</span></td></tr>
+<tr><td>Energie-onderweging</td><td><span class="lvl l1">matig</span></td><td><span class="lvl l2">hoog</span></td><td><span class="lvl l2">zeer hoog of nul fossiel</span></td></tr>
+<tr><td>Financials / industrials</td><td><span class="lvl l0">klein verschil</span></td><td><span class="lvl l1">mogelijk materieel</span></td><td><span class="lvl l1">afhankelijk van klimaatscore</span></td></tr>
+<tr><td>Concentratie per aandeel</td><td><span class="lvl l0">dicht bij moederindex</span></td><td><span class="lvl l2">hoger</span></td><td><span class="lvl l1">matig tot hoog</span></td></tr>
+<tr><td>Verwachte tracking error t.o.v. World</td><td><span class="lvl l0">laag</span></td><td><span class="lvl l2">middel tot hoog</span></td><td><span class="lvl l2">middel tot hoog</span></td></tr>
+<tr><td>Gevoeligheid voor olieprijsrally's</td><td><span class="lvl l0">licht negatief</span></td><td><span class="lvl l1">duidelijk negatief</span></td><td><span class="lvl l2">sterk negatief</span></td></tr>
+<tr><td>Gevoeligheid voor groei/kwaliteit-factoren</td><td><span class="lvl l0">licht positief</span></td><td><span class="lvl l2">materieel positief</span></td><td><span class="lvl l1">vaak positief</span></td></tr>
+</tbody></table></div>
+<p>Voor de beoordeling van een enhanced-ESG mandaat is dit de kern: het mandaat verkoopt een lage tracking error ten opzichte van World <em>met</em> een ESG-verbetering. De lichte screening (iShares Screened, 1.174 namen) is de enige ETF die dat profiel benadert; CTB komt het dichtst bij een klimaatpad zonder het universum te halveren.</p>
+
+<h2 id="praktijk">5. Wat voor een pensioenfonds zwaarder weegt dan de TER</h2>
+<ul>
+<li><strong>Bronbelasting op dividend.</strong> Een Iers UCITS-fonds betaalt 15% Amerikaanse bronbelasting die het niet terugkrijgt. Een Nederlands pensioenfonds dat rechtstreeks of via een Nederlands FGR belegt heeft onder het belastingverdrag recht op 0% op Amerikaanse dividenden. Bij ongeveer 70% VS-gewicht en een dividendrendement rond 1,8% is dat een verschil in de orde van 15 tot 20 basispunten per jaar, dus even groot als of groter dan het hele TER-verschil tussen de goedkoopste en de duurste tracker. Dit is het eerste punt om door de fiscalist te laten doorrekenen. De Northern Trust FGR-fondsen in paragraaf 6 zijn precies om dit verschil heen gebouwd.</li>
+<li><strong>Net-Return-benchmark.</strong> ETF's meten zich tegen de Net Return-index, die bronbelasting tegen het hoogste tarief aftrekt. Dat laat de tracking van een ETF beter lijken dan wat een pensioenfonds met verdragstarieven in een mandaat zou realiseren. Vergelijk daarom op het eigen benchmarkniveau van het mandaat, niet op de ETF-factsheet.</li>
+<li><strong>Stemrecht en engagement.</strong> In een ETF stemt de aanbieder. Het engagement- en escalatiebeleid dat PDN en SPF in hun verslagen beschrijven is in een ETF niet uitvoerbaar; in een mandaat wel.</li>
+<li><strong>Eigen uitsluitingslijst en CO2-pad.</strong> Een ETF volgt de uitsluitingen van de indexaanbieder. Het fonds kan er geen eigen namen aan toevoegen en het reductiepad niet zelf sturen. Een maatwerkindex in een mandaat kan dat wel, tegen de meerkosten van het mandaat.</li>
+<li><strong>Effectenuitleen en swaps.</strong> Fysieke ETF's lenen effecten uit en delen de opbrengst deels met het fonds; de synthetische Invesco-tracker vervangt dat door een swap met tegenpartijrisico. Beide vragen een eigen risicokader en passen niet vanzelf in het bestaande uitleenbeleid.</li>
+<li><strong>Schaal en verhandelbaarheid.</strong> Een order van enkele honderden miljoenen vraagt om een fonds met voldoende omvang en een primaire markt (creation/redemption) die zo'n volume aankan. Dat spreekt voor de grootste trackers (iShares Core, SPDR, Amundi Core) en tegen de kleinere ESG-varianten zoals SPDR Paris Aligned.</li>
+<li><strong>Rapportage.</strong> SFDR-, taxonomie- en CO2-rapportage vereisen look-through op de holdings. Grote aanbieders leveren dat; de kwaliteit en frequentie verschillen en zijn een selectiecriterium op zich.</li>
+</ul>
+<div class="note"><p>Rekenvoorbeeld bronbelasting: 70% VS-gewicht × 1,8% dividendrendement × 15% niet-terugvorderbare belasting ≈ 0,19% per jaar. Aannames ter illustratie; het werkelijke verschil hangt af van de regio- en dividendmix van de gekozen index en van de fiscale structuur van DPS.</p></div>
+
+
+<h2 id="fgr">6. Het Nederlandse alternatief: de Northern Trust FGR-fondsen</h2>
+<p>Voor een Nederlands pensioenfonds is de relevante vergelijking niet alleen ETF tegen mandaat. Er is een derde vorm die in de jaarverslagen 2025 veruit het vaakst voorkomt: het <strong>fonds voor gemene rekening (FGR)</strong> van Northern Trust Asset Management. In de analyse van 173 jaarverslagen is Northern Trust de meest genoemde aandelenbeheerder (30 fondsen, 41 mandaten), vrijwel uitsluitend via deze FGR-reeks.</p>
+<h3>Wat een FGR anders maakt dan een ETF</h3>
+<ul>
+<li><strong>Fiscale positie.</strong> De NT FGR-fondsen zijn Nederlandse fondsen met de status van fiscale beleggingsinstelling (FBI). Northern Trust rapporteert de rendementen expliciet voor <q>Nederlandse vrijgestelde beleggers die de 15% Nederlandse dividendbelasting terugkrijgen</q>. Daarmee valt het grootste nadeel van een Iers UCITS-ETF uit paragraaf 5, de niet-terugvorderbare buitenlandse bronbelasting, grotendeels weg. De exacte werking (afdrachtvermindering, teruggaaf) blijft werk voor de fiscalist.</li>
+<li><strong>Geen beursnotering.</strong> Dagelijks handelen tegen intrinsieke waarde met een deadline op de dag vóór de handelsdag; geen bied-laatspread en geen creation/redemption-markt. Grote orders zijn daardoor eenvoudiger dan in een kleine ESG-ETF, tegen de prijs van een dag vertraging.</li>
+<li><strong>Maatwerk-ESG als standaard.</strong> De indices zijn MSCI-maatwerkindices met de uitsluitingslijst van Northern Trust (UN Global Compact, tabak, wapens, fossiel: steenkool, schalie, teerzand, Arctische olie en gas). Een eigen uitsluitingslijst van het fonds is niet mogelijk; wel is er keuze in intensiteit (Custom ESG, SDG Screened Low Carbon, Paris-aligned).</li>
+<li><strong>Stembeleid en engagement</strong> lopen via Northern Trust en Hermes EOS, net als bij een ETF; het fonds stemt niet zelf.</li>
+<li><strong>Geen effectenuitleen</strong> in de wereldwijde FGR-fondsen (factsheet: Securities Lending: No). Dat scheelt een risicokader, maar ook de uitleenopbrengst die fysieke ETF's deels doorgeven.</li>
+<li><strong>Feeder-structuur.</strong> De FGR's zijn feeders die ten minste 85% beleggen in een Iers UCITS Common Contractual Fund als master; de OCF omvat ook de masterkosten.</li>
+</ul>
+<h3>De wereldwijde aandelenfondsen in de FGR-reeks</h3>
+<div class="tw"><table>
+<thead><tr><th>FGR-fonds</th><th>ISIN (klasse)</th><th>Benchmark</th><th class="num">Namen</th><th class="num">Vermogen</th><th class="num">OCF</th><th>Profiel</th></tr></thead>
+<tbody>
+<tr><td>Northern Trust World Custom ESG Equity Index UCITS FGR Feeder Fund<span class="links"><a class="lnk" href="https://www.northerntrust.com/content/dam/northerntrust/pws/nt/documents/funds/intl/factsheets/northern-trust-world-custom-esg-equity-index-ucits-fgr-feeder-fund-nlfw-sha-eur-re-en.pdf">factsheet</a> · <a class="lnk" href="https://www.northerntrust.com/documents/funds/intl/ntfgr/prospectus-en/ntfgr-ucits-prospectus-en.pdf">prospectus</a></span></td><td class="isin">NL0011225305 (A)</td><td>MSCI World Custom ESG Index</td><td class="num">1.349</td><td class="num">€ 7,5 mld</td><td class="num">0,15%</td><td><span class="chip light">Lichte screening</span> 70 namen uitgesloten (4% van de marktkapitalisatie); CO2-intensiteit 87 tegen 97 voor MSCI World</td></tr>
+<tr><td>NT World SDG Screened Low Carbon Index FGR Fund<span class="links"><a class="lnk" href="https://www.northerntrust.com/content/dam/northerntrust/pws/nt/documents/funds/intl/factsheets/nt-world-sdg-screened-low-carbon-index-fgr-fund-nlfkw-shb-eur-re-en.pdf">factsheet</a></span></td><td class="isin">NL00150005Q0 (B)</td><td>MSCI World Select ESG Leaders Low Carbon Impact G Series</td><td class="num">607</td><td class="num">€ 0,48 mld</td><td class="num">0,13%</td><td><span class="chip sri">Best-in-class + klimaat</span> ESG Leaders-selectie met tilt naar SDG-omzet; CO2-intensiteit 20 tegen 97; SFDR artikel 8</td></tr>
+<tr><td>Northern Trust Emerging Markets Custom ESG Equity Index UCITS FGR Fund<span class="links"><a class="lnk" href="https://www.northerntrust.com/documents/funds/intl/ntfgr/factsheets-en/ntfgr-emerging-markets-custom-esg-equity-index-ucits-fund.pdf">factsheet (2017)</a></span></td><td class="isin">meerdere klassen</td><td>MSCI Emerging Markets Custom ESG Index</td><td class="num"></td><td class="num">€ 0,64 mld (2017)</td><td class="num">0,25%</td><td><span class="chip light">Lichte screening</span> opkomende markten; vaste combinatie met het World-fonds bij de meeste gebruikers</td></tr>
+<tr><td>NT World Natural Capital PAB Index II FGR Fund</td><td class="isin"></td><td>MSCI World Paris Aligned (maatwerk)</td><td class="num"></td><td class="num"></td><td class="num"></td><td><span class="chip pab">Paris-aligned</span> in de FGR-reeks; Avery Dennison noemt een World PAB Plus Equity Select-mandaat <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-80" title="Bronregister aandelenstrategie 2025, fonds 80">[80]</a></td></tr>
+<tr><td>Northern Trust World Small Cap ESG Low Carbon Index FGR Fund</td><td class="isin">NL0013552078 (A)</td><td>MSCI World Small Cap, maatwerk</td><td class="num"></td><td class="num"></td><td class="num"></td><td>Small caps als aanvulling op het World-fonds</td></tr>
+<tr><td>Regiofondsen: Europe, North America, Pacific Custom ESG en de SDG Screened Low Carbon-varianten; Europe Value ESG; High Dividend ESG World</td><td class="isin"></td><td>MSCI-regio-indices, maatwerk</td><td class="num"></td><td class="num"></td><td class="num"></td><td>Voor fondsen die de regiomix zelf sturen (PostNL: World, Europe en EM Low Carbon Plus <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-121" title="Bronregister aandelenstrategie 2025, fonds 121">[121]</a>)</td></tr>
+</tbody></table></div>
+<p>Vermogens, aantallen en OCF's komen van de Northern Trust-factsheets per 30 september 2024 (opkomende markten: factsheet 2017); de OCF verschilt per deelnemingsklasse en per fonds wordt vaak een eigen klasse of een vergoedingsafspraak gehanteerd. Voor DPS is daarom de eigen offerte de maat, niet de factsheet.</p>
+<h3>Wie ze gebruikt, volgens de jaarverslagen 2025</h3>
+<p>Uit de analyse van de jaarverslagen (bronregister in het <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo">verslag over de aandelenstrategie</a>, nummers verwijzen naar het fonds-id daar):</p>
+<div class="tw"><table>
+<thead><tr><th>Pensioenfonds</th><th class="num">Vermogen</th><th>Genoemde Northern Trust-producten</th></tr></thead>
+<tbody>
+<tr><td>PostNL <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-121" title="Bronregister aandelenstrategie 2025, fonds 121">[121]</a></td><td class="num">€ 9,2 mld</td><td>NTCM World, Europe en Emerging Markets Low Carbon Plus Equity Index (FGR)</td></tr>
+<tr><td>Oak <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-181" title="Bronregister aandelenstrategie 2025, fonds 181">[181]</a></td><td class="num">€ 5,3 mld</td><td>Emerging Markets Custom ESG Equity Fund</td></tr>
+<tr><td>StiPP (Personeelsdiensten) <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-31" title="Bronregister aandelenstrategie 2025, fonds 31">[31]</a></td><td class="num">€ 4,4 mld</td><td>World SDG Screened Low Carbon Index Fund; Emerging Markets ESG Leader Index Fund; UCITS FGR EM Sust Select; beheerkosten aandelen 0,06%</td></tr>
+<tr><td>Atos <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-78" title="Bronregister aandelenstrategie 2025, fonds 78">[78]</a></td><td class="num">€ 2,3 mld</td><td>World Custom ESG Equity Index Fund; UCITS FGR Emerging Markets Custom ESG Equity Index Fund</td></tr>
+<tr><td>Delta Lloyd <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-88" title="Bronregister aandelenstrategie 2025, fonds 88">[88]</a></td><td class="num">€ 2,3 mld</td><td>Emerging Markets Custom ESG Equity</td></tr>
+<tr><td>Capgemini <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-83" title="Bronregister aandelenstrategie 2025, fonds 83">[83]</a></td><td class="num">€ 1,1 mld</td><td>World Custom ESG Equity Index Fund; Emerging Markets Custom ESG Equity Index Fund</td></tr>
+<tr><td>Beton <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-14" title="Bronregister aandelenstrategie 2025, fonds 14">[14]</a>, DHL <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-89" title="Bronregister aandelenstrategie 2025, fonds 89">[89]</a>, Rijn- en Binnenvaart <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-198" title="Bronregister aandelenstrategie 2025, fonds 198">[198]</a></td><td class="num">€ 1,2 mld elk</td><td>Developed en Emerging Markets indexfondsen van Northern Trust (ESG)</td></tr>
+<tr><td>Stap APF-kringen (Astellas, Ballast Nedam, GE) <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-67" title="Bronregister aandelenstrategie 2025, fonds 67">[67]</a></td><td class="num"></td><td>World Custom ESG Equity Index Fund; Emerging Markets ESG Fund</td></tr>
+<tr><td>De Nationale APF-kringen (ANWB, AFM, McCain, A, B, D) <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-66" title="Bronregister aandelenstrategie 2025, fonds 66">[66]</a></td><td class="num"></td><td>Paris Aligned / ESG beleggingsfondsen aandelen</td></tr>
+<tr><td>Avery Dennison <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-80" title="Bronregister aandelenstrategie 2025, fonds 80">[80]</a>, Rockwool <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-125" title="Bronregister aandelenstrategie 2025, fonds 125">[125]</a>, Huntsman <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-107" title="Bronregister aandelenstrategie 2025, fonds 107">[107]</a>, Smurfit Kappa <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-128" title="Bronregister aandelenstrategie 2025, fonds 128">[128]</a>, Brocacef <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-81" title="Bronregister aandelenstrategie 2025, fonds 81">[81]</a>, UWV <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-135" title="Bronregister aandelenstrategie 2025, fonds 135">[135]</a>, Ahold Delhaize <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-73" title="Bronregister aandelenstrategie 2025, fonds 73">[73]</a></td><td class="num"></td><td>World PAB Plus Equity Select; CCF World Custom ESG en EM Custom ESG; Northern Trust-fondsen zonder nadere naam</td></tr>
+</tbody></table></div>
+<p>Het patroon is steeds hetzelfde: het World Custom ESG-fonds als kern, het Emerging Markets Custom ESG-fonds ernaast, bij een deel van de fondsen inmiddels vervangen door de SDG Screened Low Carbon- of PAB-variant. StiPP laat zien wat dat kost: 0,06% beheerkosten op de aandelencategorie met drie NT-fondsen, lager dan elke ESG-ETF in paragraaf 2.</p>
+<h3>FGR tegenover ETF en mandaat</h3>
+<div class="tw"><table>
+<thead><tr><th>Kenmerk</th><th>UCITS-ETF (Iers)</th><th>Northern Trust FGR</th><th>Eigen mandaat (Enhanced ESG Passief)</th></tr></thead>
+<tbody>
+<tr><td>Lopende kosten (wereldwijd ontwikkeld, ESG)</td><td>0,12 tot 0,20%</td><td>0,13 tot 0,15% volgens factsheet; institutionele klassen lager</td><td>mandaatafhankelijk; PDN 0,13%, SPF 0,15% voor de categorie aandelen</td></tr>
+<tr><td>Buitenlandse bronbelasting</td><td>15% VS niet terugvorderbaar, ongeveer 0,15 tot 0,20% per jaar</td><td>FBI-structuur, voordeel grotendeels behouden</td><td>verdragstarief, 0% VS</td></tr>
+<tr><td>Eigen uitsluitingen en CO2-pad</td><td>nee</td><td>nee, wel keuze in intensiteit</td><td>ja</td></tr>
+<tr><td>Stemmen en engagement</td><td>aanbieder</td><td>Northern Trust en Hermes EOS</td><td>fonds zelf of fiduciair</td></tr>
+<tr><td>Handel</td><td>beurs, intraday, spread</td><td>dagelijks tegen NAV, deadline dag ervoor</td><td>doorlopend</td></tr>
+<tr><td>Effectenuitleen</td><td>meestal ja</td><td>nee (wereldwijde fondsen)</td><td>eigen beleid</td></tr>
+<tr><td>Rapportage (SFDR, CO2, look-through)</td><td>standaard van de aanbieder</td><td>standaard van de aanbieder, Nederlands georiënteerd</td><td>op maat</td></tr>
+<tr><td>Afhankelijkheid van één partij</td><td>beperkt, wisselbaar</td><td>hoog: NT is beheerder, bewaarder en indexeigenaar van het maatwerk</td><td>beperkt, wisselbaar</td></tr>
+</tbody></table></div>
+<p>Voor de afweging van DPS betekent dit dat de FGR-reeks de natuurlijke tussenstap is: het fiscale voordeel en de lage kosten van een mandaat, de eenvoud van een fonds, maar zonder eigen uitsluitingslijst, eigen CO2-pad en eigen stem. Of dat voldoende is hangt af van hoeveel van het huidige enhanced-ESG-beleid van PDN en SPF (eigen uitsluitingen, pad van min 55% in 2030, engagement-escalatie) men bereid is aan de Northern Trust-standaard over te laten.</p>
+
+
+<h2 id="drie">7. De drie dominante aanbieders in de jaarverslagen 2025</h2>
+<p>Van de 99 fondsen die in hun jaarverslag een aandelenbeheerder bij naam noemen, gebruiken er 66 Northern Trust, BlackRock of Aegon AM. Hieronder hoe hun aanbod er in de praktijk uitziet: welke producten, voor welke klanten, tegen welke kosten, en langs welke weg het fonds erbij komt. Cijfers uit de analyse van 173 jaarverslagen; de nummers verwijzen naar het bronregister in het <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo">verslag over de aandelenstrategie</a>.</p>
+<div class="tw"><table>
+<thead><tr><th></th><th>Northern Trust</th><th>BlackRock</th><th>Aegon AM</th></tr></thead>
+<tbody>
+<tr><td>Fondsen / mandaten</td><td>30 / 41</td><td>18 / 33</td><td>18 / 26</td></tr>
+<tr><td>Stijl van de mandaten</td><td>100% passief</td><td>76% passief, 12% enhanced/factor, 9% actief</td><td>54% passief, 42% actief</td></tr>
+<tr><td>Kernproduct</td><td>World Custom ESG FGR + Emerging Markets Custom ESG FGR</td><td>CCF Developed World ESG Screened of Paris-Aligned Climate Index Fund</td><td>MM World Equity Index SRI Fund + MM Global Emerging Markets Fund (actief)</td></tr>
+<tr><td>Vehikel</td><td>Nederlands FGR met FBI-status</td><td>Iers CCF; bij grote fondsen een maatwerkmandaat</td><td>Nederlandse Aegon/MM-multi-managerfondsen</td></tr>
+<tr><td>Klanttype</td><td>ondernemingsfondsen en APF-kringen van 0,1 tot 9 mld</td><td>breed: van Detailhandel (32 mld) en Philips (18 mld) tot kleine ondernemingsfondsen</td><td>Stap APF-kringen en Aegon-fiduciaire klanten; KPN (10 mld)</td></tr>
+<tr><td>Beheerkosten aandelen, gemiddeld waar genoemd</td><td>0,06% (n=11; 0,01 tot 0,15%)</td><td>0,15% (n=4; 0,04 tot 0,37%)</td><td>0,11% (n=12; 0,03 tot 0,59%)</td></tr>
+<tr><td>Komt binnen via</td><td>de fiduciair: Goldman Sachs AM (7), Aegon AM (5), Van Lanschot Kempen (3); NT zelf één keer</td><td>BlackRock als fiduciair (5), Achmea IM (6), Russell, MN, GSAM</td><td>Aegon AM als fiduciair (16 van 18)</td></tr>
+</tbody></table></div>
+
+<h3>Northern Trust: één productfamilie, altijd passief</h3>
+<ul>
+<li>Alle 41 mandaten zijn passief; 27 van de 30 fondsen zijn als geheel passief. Het aanbod is de FGR-reeks uit paragraaf 6: World Custom ESG als kern, Emerging Markets Custom ESG ernaast, en de nieuwere varianten SDG Screened Low Carbon (StiPP <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-31" title="Bronregister aandelenstrategie 2025, fonds 31">[31]</a>), Low Carbon Plus voor World, Europe en EM (PostNL <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-121" title="Bronregister aandelenstrategie 2025, fonds 121">[121]</a>) en PAB Plus (Avery Dennison <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-80" title="Bronregister aandelenstrategie 2025, fonds 80">[80]</a>).</li>
+<li>Acht kringen van De Nationale APF <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-66" title="Bronregister aandelenstrategie 2025, fonds 66">[66]</a> zitten in "Paris Aligned / ESG beleggingsfondsen aandelen", vier Stap-kringen <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-67" title="Bronregister aandelenstrategie 2025, fonds 67">[67]</a> in World Custom ESG plus Emerging Markets ESG.</li>
+<li>Northern Trust is vrijwel nooit zelf de fiduciair. De keuze komt via Goldman Sachs AM, Aegon AM, Van Lanschot Kempen en Columbia Threadneedle: de standaardbouwsteen die fiduciairs voor hun kleinere klanten inzetten.</li>
+<li>Goedkoopste van de drie: gemiddeld 0,06% op de aandelencategorie bij de elf fondsen die het noemen.</li>
+</ul>
+
+<h3>BlackRock: van index tot factor en actief, ook bij de grote fondsen</h3>
+<ul>
+<li>33 mandaten: 25 passief, 4 enhanced/factor, 3 actief. Het passieve aanbod is de Ierse CCF-reeks: Developed World ESG Screened Index Fund (APF AkzoNobel <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-75" title="Bronregister aandelenstrategie 2025, fonds 75">[75]</a>, Atos <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-78" title="Bronregister aandelenstrategie 2025, fonds 78">[78]</a>, Nederlandse Groothandel <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-27" title="Bronregister aandelenstrategie 2025, fonds 27">[27]</a>), de Paris-Aligned Climate-variant (TNO <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-133" title="Bronregister aandelenstrategie 2025, fonds 133">[133]</a>, Dierenartsen <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-1" title="Bronregister aandelenstrategie 2025, fonds 1">[1]</a>, Verloskundigen <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-8" title="Bronregister aandelenstrategie 2025, fonds 8">[8]</a>) en regionale ESG Screened-fondsen voor Europa, Noord-Amerika en Pacific (Loodsen <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-4" title="Bronregister aandelenstrategie 2025, fonds 4">[4]</a>, Thales <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-132" title="Bronregister aandelenstrategie 2025, fonds 132">[132]</a>).</li>
+<li>Bij de grote fondsen een maatwerkmandaat in plaats van een fonds: Medewerkers Apotheken <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-23" title="Bronregister aandelenstrategie 2025, fonds 23">[23]</a> ("Mandaat Aandelen Wereld"), Philips <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-119" title="Bronregister aandelenstrategie 2025, fonds 119">[119]</a>, Detailhandel <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-17" title="Bronregister aandelenstrategie 2025, fonds 17">[17]</a>.</li>
+<li>Het niet-passieve aanbod zit bij een paar fondsen: Essity <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-93" title="Bronregister aandelenstrategie 2025, fonds 93">[93]</a> met Advantage Europe ex-UK, Sustainable Advantage EM ex China en Russell 2000 Alpha Tilts; Thales met actieve Europese en EM-fondsen en een Systematic China A-strategie.</li>
+<li>Als enige van de drie biedt BlackRock binnen één relatie zowel de ESG-screened als de Paris-Aligned-index, factorstrategieën en actief beheer. Kosten zijn daardoor niet in één getal te vangen: 0,04 tot 0,37% bij de vier fondsen die ze noemen.</li>
+</ul>
+
+<h3>Aegon AM: de huisoplossing van Stap APF</h3>
+<ul>
+<li>Bij 16 van de 18 fondsen is Aegon AM ook de fiduciair. Dit is geen vrije productkeuze maar de standaardinvulling van Stap APF en van Aegon-fiduciaire klanten.</li>
+<li>Vaste combinatie bij de Stap-kringen (Douwe Egberts, Holland Casino, AON, TotalEnergies, Eastman, SVG, Ballast Nedam, GE): MM World Equity Index SRI Fund of MM Developed World Equity Index Fund als passieve kern, plus het actief beheerde MM Global Emerging Markets Fund. "MM" staat voor de multi-managerfondsen van Aegon, met externe beheerders onder de motorkap.</li>
+<li>Buiten Stap: KPN <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-111" title="Bronregister aandelenstrategie 2025, fonds 111">[111]</a> in actieve Aegon-beleggingsfondsen tegen 0,59%, IBM <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-45" title="Bronregister aandelenstrategie 2025, fonds 45">[45]</a> in AAM MSCI Emerging Markets, Avebe <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-79" title="Bronregister aandelenstrategie 2025, fonds 79">[79]</a> in twee actieve MM-wereldfondsen; Citigroup <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-85" title="Bronregister aandelenstrategie 2025, fonds 85">[85]</a> en Molenaars <a class="lnk" href="https://claude.ai/artifact/BuF25GkSXjFQAwjvKxrLuo#bron-26" title="Bronregister aandelenstrategie 2025, fonds 26">[26]</a> passief.</li>
+<li>Gemiddeld 0,11% bij de twaalf fondsen die kosten noemen; de bandbreedte loopt van 0,03% voor de passieve kern tot 0,59% voor een volledig actieve invulling.</li>
+</ul>
+<p>Voor DPS: Northern Trust is de goedkoopste en meest uniforme route en wordt door fiduciairs als standaard neergezet; BlackRock is de enige van de drie die binnen één relatie ook de Paris-Aligned-, factor- en actieve bouwstenen levert; Aegon AM is vooral relevant als een APF-kring in beeld zou komen.</p>
+
+<h2 id="keuze">8. Keuzetabel</h2>
+<div class="tw"><table class="beslis">
+<thead><tr><th>Als het doel is</th><th>Dan is de representatieve ETF</th><th>Let op</th></tr></thead>
+<tbody>
+<tr><td>Laagste kosten, fysiek, schaal</td><td>UBS Core MSCI World (0,06%)</td><td>Geen ESG; eigen uitsluitingen niet mogelijk</td></tr>
+<tr><td>Absoluut laagste TER</td><td>Invesco MSCI World (0,05%)</td><td>Synthetisch; swap-tegenpartij in het risicokader</td></tr>
+<tr><td>ESG met minimale afwijking van World</td><td>iShares MSCI World Screened (0,20%)</td><td>Lichte screening; geen klimaatpad</td></tr>
+<tr><td>Klimaatpad zonder het universum te halveren</td><td>Amundi MSCI World ESG Climate CTB (0,20%)</td><td>Dichtst bij een pad van min 55% in 2030; nog ruim 1.100 namen</td></tr>
+<tr><td>Paris-aligned, strengste klimaatdoel</td><td>SPDR MSCI World Climate Paris Aligned (0,15%) <span class="gesloten">gesloten</span></td><td>Gesloten per 2 december 2025; voor een belegbare PAB-tracker is een vervanger nodig, bijvoorbeeld uit het iShares-, Amundi- of UBS-aanbod op MSCI World Climate Paris Aligned</td></tr>
+<tr><td>Best-in-class SRI</td><td>iShares MSCI World SRI of UBS SRI Low Carbon (ca. 0,20%)</td><td>Geconcentreerd; structurele technologie-overweging</td></tr>
+<tr><td>Fiscaal voordeel van een mandaat met de eenvoud van een fonds, lichte ESG</td><td>Northern Trust World Custom ESG Equity Index FGR (0,15% klasse A)</td><td>FBI-structuur; NT-uitsluitingen, geen eigen lijst; handel op NAV</td></tr>
+<tr><td>Klimaat- en SDG-profiel in FGR-vorm</td><td>NT World SDG Screened Low Carbon Index FGR (0,13% klasse B)</td><td>607 namen, CO2-intensiteit 20 tegen 97; klein fonds (€ 0,5 mld)</td></tr>
+<tr><td>Breder universum dan MSCI World</td><td>Vanguard FTSE Developed World (0,12%)</td><td>Andere benchmark; Korea en meer mid-caps</td></tr>
+</tbody></table></div>
+<p>De praktische conclusie: een ETF is een goede maatstaf om de kosten en tracking van het Enhanced ESG Passief mandaat te toetsen, en een bruikbaar instrument voor tijdelijke of tactische exposure. Als volledige vervanging verliest het fonds drie dingen die het mandaat wel biedt: het verdragstarief op dividend, het eigen stem- en engagementbeleid, en de eigen uitsluitingen en het eigen CO2-pad. Die drie moeten in de afweging in euro's en in beleid naast de TER-besparing worden gezet. De Northern Trust FGR-reeks neemt het eerste verlies weg en is daarmee de vorm waarmee de meeste Nederlandse ondernemingsfondsen en kringen hun passieve ESG-aandelen invullen; de andere twee verliezen blijven ook daar staan.</p>
+
+<footer>
+<p>ISIN's, benchmarks, replicatiemethoden, aantallen namen en TER's zijn overgenomen zoals aangeleverd op 7 oktober 2026 en niet onafhankelijk geverifieerd; controleer de actuele factsheet en het prospectus vóór besluitvorming. De productlinks verwijzen naar de officiële productpagina, factsheet of KID van de aanbieder waar die vindbaar was (UBS: alleen het neutrale justETF-profiel) en naar het justETF-profiel op ISIN als vaste tweede ingang; gecontroleerd op 7 oktober 2026. Gegevens over de Northern Trust FGR-fondsen komen uit de factsheets per 30 september 2024 en het FGR-uitkeringsoverzicht van Northern Trust; het gebruik door Nederlandse fondsen uit hun jaarverslagen 2025. De fiscale en praktische overwegingen in paragraaf 5 zijn algemene aandachtspunten en geen fiscaal of beleggingsadvies.</p>
+</footer>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+const ETFS = [
+  {naam:'Invesco MSCI World', cat:'conv', ter:0.05}, {naam:'UBS Core MSCI World', cat:'conv', ter:0.06},
+  {naam:'Franklin FTSE Developed World', cat:'conv', ter:0.09}, {naam:'SPDR MSCI World', cat:'conv', ter:0.12},
+  {naam:'Amundi Core MSCI World', cat:'conv', ter:0.12}, {naam:'Vanguard FTSE Developed World', cat:'conv', ter:0.12},
+  {naam:'HSBC MSCI World', cat:'conv', ter:0.15}, {naam:'iShares Core MSCI World', cat:'conv', ter:0.20},
+  {naam:'iShares MSCI World Screened', cat:'light', ter:0.20}, {naam:'Amundi MSCI World ESG Climate CTB', cat:'ctb', ter:0.20},
+  {naam:'SPDR MSCI World Climate Paris Aligned (gesloten dec 2025)', cat:'pab', ter:0.15}, {naam:'iShares MSCI World SRI', cat:'sri', ter:0.20},
+  {naam:'UBS MSCI World Socially Responsible', cat:'sri', ter:0.205},
+  {naam:'NT World Custom ESG Equity Index FGR (klasse A)', cat:'fgr', ter:0.15}, {naam:'NT World SDG Screened Low Carbon Index FGR (klasse B)', cat:'fgr', ter:0.13}
+];
+const CAT = {conv:'Conventioneel', light:'Lichte screening', ctb:'Klimaattransitie', pab:'Paris-aligned', sri:'SRI best-in-class', fgr:'Northern Trust FGR'};
+const css = k => getComputedStyle(document.documentElement).getPropertyValue(k).trim();
+const pct = x => x.toFixed(x < 0.1 ? 3 : 2).replace('.', ',') + '%';
+const eur = x => '€ ' + Math.round(x).toLocaleString('nl-NL');
+
+function teken() {
+  if (!window.Chart) return;
+  const kleur = {conv:css('--conv'), light:css('--light'), ctb:css('--ctb'), pab:css('--pab'), sri:css('--sri'), fgr:css('--fgr')};
+  Chart.defaults.color = css('--ink2'); Chart.defaults.borderColor = css('--line'); Chart.defaults.font.family = css('--body');
+  const gesorteerd = [...ETFS].sort((a, b) => a.ter - b.ter);
+  new Chart(document.getElementById('c-ter'), {
+    type: 'bar',
+    data: {labels: gesorteerd.map(e => e.naam), datasets: [{label: 'TER', data: gesorteerd.map(e => e.ter), backgroundColor: gesorteerd.map(e => kleur[e.cat]), borderRadius: 2}]},
+    options: {indexAxis: 'y', responsive: true, barPercentage: .65,
+      scales: {x: {grid: {color: css('--line')}, title: {display: true, text: 'lopende kosten, % per jaar'}, ticks: {callback: v => v.toFixed(2).replace('.', ',') + '%'}}, y: {grid: {display: false}}},
+      plugins: {legend: {display: false}, tooltip: {callbacks: {label: c => `${pct(c.parsed.x)} · ${CAT[gesorteerd[c.dataIndex].cat]}`}}}}
+  });
+}
+teken();
+
+const bedrag = document.getElementById('bedrag');
+const tbody = document.querySelector('#calc-tabel tbody');
+function reken() {
+  const mln = Math.max(0, parseFloat(String(bedrag.value).replace(',', '.')) || 0);
+  const basis = Math.min(...ETFS.map(e => e.ter));
+  tbody.innerHTML = [...ETFS].sort((a, b) => a.ter - b.ter).map(e => {
+    const kosten = mln * 1e6 * e.ter / 100, meer = mln * 1e6 * (e.ter - basis) / 100;
+    return `<tr><td>${e.naam}</td><td><span class="chip ${e.cat}">${CAT[e.cat]}</span></td><td class="num">${pct(e.ter)}</td><td class="num">${eur(kosten)}</td><td class="num">${meer > 0 ? '+ ' + eur(meer) : 'basis'}</td></tr>`;
+  }).join('');
+}
+bedrag.addEventListener('input', reken);
+reken();
+</script>
