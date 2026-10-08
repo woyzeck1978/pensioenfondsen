@@ -1,0 +1,82 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 252.954,
+  "feitelijk_pct": 19.8,
+  "letterlijk": "Tabel 3.6.5 (p. 44): Aandelen ontwikkelde markten: norm 11,0%, feitelijk 13,2%; Aandelen opkomende markten: norm 6,0%, feitelijk 6,6%; Private Equity: norm 3,0%, feitelijk 1,7%. Tabel waardering (p. 91, bedragen x € 1.000): Aandelen level 1 237.249, level 4 (Private Equity) 15.705, totaal Aandelen 252.954; Totaal beleggingsportefeuille 943.590.",
+  "omvat_private_equity": true,
+  "pagina": 44,
+  "private_equity_pct": 1.7,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 17,
+  "totaal_beleggingen_eur_mln": 943.59
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": "Van Lanschot Kempen Investment Management N.V.",
+  "letterlijk": "Het fiduciair management op het gebied van vermogensbeheer is vanaf 1 april 2021 uitbesteed aan Van Lanschot Kempen Investment Management N.V. (verder: VLK IM) (p. 23); Operationeel vermogensbeheer: Diverse beleggingsfondsen (p. 22); Hierbij realiseert het Fonds zich dat het Fonds niet rechtstreeks (zelf) belegt in aandelen (p. 47)",
+  "organisatie": "extern",
+  "pagina": 22
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "best-in-class",
+   "engagement",
+   "stembeleid",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Het Fonds classificeert de pensioenregeling (het financiële product dat het Fonds beheert) dan ook onder artikel 8 van de SFDR. ... Om de doelstelling op het gebied van ESG te realiseren, gebruikt het Fonds de volgende instrumenten: ESG integratie ... 'best-in-class' beleid ... Uitsluitingen ... Uitvoeren van stembeleid en engagement (p. 47)",
+  "omschrijving": "Pensioenfonds Cosun classificeert de pensioenregeling onder SFDR Artikel 8. Voor de aandelenportefeuille worden ESG-indices gevolgd en worden ESG-integratie (met voorkeur voor best-in-class), uitsluitingen, stembeleid en engagement toegepast, gericht op focus-SDG's (3, 7 en 12) en de thema's Klimaat en Gezondheid & Welzijn.",
+  "pagina": 47,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 86,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Kosten vermogensbeheer (p. 36): Aandelen € 808 (x € 1.000, 0,08% van gemiddeld belegd vermogen fonds); Totale beheerkosten vermogensbeheer € 3.445 (0,36%); Vanwege de behaalde resultaten binnen deze private equity beleggingen, bevat de opgaaf van kosten in de categorie ‘aandelen’ een performancevergoeding van € 0,2 mln. (p. 36). Transactiekosten (p. 37): Aandelen € 229 (0,02% van gemiddeld belegd vermogen fonds); Totale transactiekosten € 525 (0,05%).",
+  "pagina": 36,
+  "prestatievergoeding_aandelen_eur_mln": 0.2,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.05,
+  "vermogensbeheerkosten_totaal_pct": 0.36
+ },
+ "opmerkingen": "Pensioenfonds Cosun heeft per 1 januari 2026 de transitie naar het nieuwe pensioenstelsel (Wtp) en invaren voorbereid; op 5 november 2025 is een invaarbeschikking ('geen verbod op invaren') van DNB verkregen. Ter bescherming van de invaardekkingsgraad heeft het bestuur begin 2025 extra risico-afdekkingsmaatregelen genomen: aankoop van een Europese put-optie op de MSCI World voor € 16,6 mln (looptijd tot 2 januari 2026, marktwaarde ultimo 2025 nihil), verhoging van de renteafdekking naar 100% en verhoging van de USD-valuta-afdekking voor zakelijke waarden van 50% naar 100%. De beursgenoteerde aandelenportefeuille wordt extern en passief belegd via beleggingsfondsen met ESG-benchmarks. Van Lanschot Kempen IM N.V. is de fiduciair beheerder; specifieke aandelenbeheerders worden niet genoemd ('Diverse beleggingsfondsen'). De categorie Private Equity (1,7% feitelijk) is 'niet investeerbaar' verklaard en bevindt zich in de uitkeringsfase; op de balans valt PE onder de post Aandelen (€ 15.705 duizend level 4 op totaal € 252.954 duizend) en de categorie aandelen bevat € 0,2 mln aan prestatievergoeding voor private equity.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Tabel 3.6.5 Samenstelling en rendementen returnportefeuille (p. 44): Feitelijk per 31-12-2025: Aandelen ontwikkelde markten 13,2%, Aandelen opkomende markten 6,6% (Norm respectievelijk 11,0% en 6,0%).",
+  "pagina": 44,
+  "verdeling": [
+   {
+    "pct": 13.2,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 6.6,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "MSCI World"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "De beleggingsportefeuille van het Fonds wordt voor een groot deel aangehouden in beleggingsfondsen die passief beheerd worden. Dit wil zeggen dat zij de benchmark zo goed mogelijk proberen na te bootsen... Dit geldt met name bij de beleggingscategorieën ‘aandelen ontwikkelde markten’, ‘aandelen opkomende markten’ (p. 44); een put-optie op de MSCI World (p. 45)",
+  "pagina": 44,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 100,
+  "letterlijk": "Vanaf februari 2025 heeft het Fonds de afdekking voor zakelijke waarden verhoogd van 50% naar 100%. Hiertoe is besloten in het kader van de bescherming van de invaardekkingsgraad. ... In de praktijk heeft het Fonds alleen de blootstelling naar de US-dollar (gedeeltelijk) afgedekt. (p. 45)",
+  "omschrijving": "Het valutarisico op ontwikkelde markten (in de praktijk uitsluitend de US-dollar) werd voor zakelijke waarden in februari 2025 verhoogd van 50% naar 100% afgedekt ter bescherming van de invaardekkingsgraad. Valutarisico van opkomende markten wordt niet afgedekt. Vanaf 2026 wordt de afdekking in de returnportefeuille weer vastgesteld op 50%.",
+  "pagina": 45
+ },
+ "naam": "Cosun / Koninklijke Cosun",
+ "pad": "data/annual_reports/86_Cosun_Koninklijke_Cosun_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

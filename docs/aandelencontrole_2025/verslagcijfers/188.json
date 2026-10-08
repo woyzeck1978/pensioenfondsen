@@ -1,0 +1,88 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": null,
+  "feitelijk_pct": null,
+  "letterlijk": "",
+  "omvat_private_equity": false,
+  "pagina": null,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Aegon AM",
+    "pagina": 40,
+    "product_of_mandaat": "MM World Equity Index SRI Fund",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Northern Trust",
+    "pagina": 41,
+    "product_of_mandaat": "Northern Trust Emerging Markets ESG Fund",
+    "segment": "opkomende markten",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "Aegon AM",
+  "letterlijk": "Het fiduciair beheer voor de beleggingen risico pensioenkring is uitbesteed aan Aegon AM en hiervoor is eveneens een uitbestedingsovereenkomst en een SLA overeengekomen.",
+  "organisatie": "extern",
+  "pagina": 114
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": true,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "eigen ESG-index"
+  ],
+  "letterlijk": "Voor de beleggingen in het Northern Trust Emerging Markets Fund voert de fondsbeheerder stem- en engagement activiteiten uit en bepaalt de fondsbeheerder de uitsluitingslijst. Het Global Sustainable Investing Team van Northern Trust is verantwoordelijk voor het bepalen van de uitsluitingen van ondernemingen die deel uitmaken van de MSCI Emerging Markets. Op basis van de uitsluitingen construeert MSCI de MSCI Emerging Markets Custom ESG Index.",
+  "omschrijving": "Uitsluitingenbeleid (o.a. tabak, wapens, fossiele brandstoffen, UN Global Compact), dialoog en engagement (uitbesteed aan Aegon AM en Northern Trust via Hermes EOS), stembeleid en benchmarkaanpassing via de MSCI Emerging Markets Custom ESG Index.",
+  "pagina": 17,
+  "sfdr_artikel": null
+ },
+ "fund_id": 188,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.06,
+  "letterlijk": "Aandelen 382 386 0,06 0,06 (* Percentage van het gemiddeld belegd vermogen)",
+  "pagina": 21,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": 0.01,
+  "transactiekosten_totaal_pct": 0.03,
+  "vermogensbeheerkosten_totaal_pct": 0.22
+ },
+ "opmerkingen": "Pensioenkring GE Nederland (Stap) belegt in aandelen via twee passieve beleggingsfondsen: MM World Equity Index SRI Fund (ontwikkelde markten) en Northern Trust Emerging Markets ESG Fund (opkomende markten). Fiduciair beheerder is Aegon AM. Valutarisico op ontwikkelde markten aandelen wordt voor 50% afgedekt via een FX overlay; opkomende markten zijn niet afgedekt. Kosten vermogensbeheer worden in de tabel per categorie weergegeven als percentage van het gemiddeld totale belegd vermogen (0,06% voor aandelen; transactiekosten 0,01%). Er zijn geen prestatievergoedingen betaald. De verstrekte uitsnede bevat geen balans of assetallocatietabel van het fondsvermogen.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "MSCI Emerging Markets Custom ESG Index",
+   "MSCI Emerging Markets"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Het MM World Equity Index SRI Fund – EUR en het MM World Equity Index SRI Fund kennen een passieve beleggingsstijl waardoor het rendement in lijn is met het rendement van de benchmark.",
+  "pagina": 40,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 50,
+  "letterlijk": "Aandelen ontwikkelde markten: 50,0%; Aandelen opkomende markten: n.v.t.; Afdekking met een FX overlay: X",
+  "omschrijving": "50,0% van het valutarisico op aandelen ontwikkelde markten wordt afgedekt met een FX overlay; voor aandelen opkomende markten is valuta-afdekking niet van toepassing (n.v.t.).",
+  "pagina": 57
+ },
+ "naam": "Pensioenkring GE Nederland (Stap)",
+ "pad": "data/annual_reports/188_GE_Nederland_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

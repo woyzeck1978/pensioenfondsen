@@ -1,0 +1,100 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 1110.838,
+  "feitelijk_pct": null,
+  "letterlijk": "Aandelen: Stand ultimo 2025: 1.110.838, Totaal beleggingen voor risico pensioenfonds: 2.219.564 (bedragen in duizenden euro's)",
+  "omvat_private_equity": false,
+  "pagina": 120,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 2219.564
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "State Street Global Advisors Europe Limited",
+    "pagina": 18,
+    "product_of_mandaat": "separaat aandelenmandaat (op maat gemaakte MSCI ACWI Climate Transition Benchmark)",
+    "segment": "wereldwijd",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": null,
+  "letterlijk": "Het bestuur heeft het vermogensbeheer bijna volledig uitbesteed aan externe vermogensbeheerders. Aandelen: State Street Global Advisors Europe Limited",
+  "organisatie": "extern",
+  "pagina": 18
+ },
+ "esg": {
+  "co2_doel": "-30% ten opzichte van de reguliere ACWI benchmark en een jaar-op-jaar daling van de CO2 uitstoot van -7%",
+  "eigen_index": true,
+  "instrumenten": [
+   "uitsluitingen",
+   "best-in-class",
+   "engagement",
+   "stembeleid",
+   "eigen ESG-index",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Het fonds belegt conform een voor het fonds op maat gemaakte MSCI All Country World Index Climate Transition Benchmark met een ESG+20% uplift en uitsluitingen. Het fonds streeft een CO2-uitstoot na van de bedrijven waarin het belegt van -30% ten opzichte van de reguliere ACWI benchmark. Verder streeft het fonds via de Climate Transition Benchmark een jaar-op-jaar daling van de CO2 uitstoot van -7% na.",
+  "omschrijving": "Separaat mandaat beheerd door State Street conform een voor het fonds op maat gemaakte MSCI ACWI Climate Transition Benchmark met 20% hogere ESG-score en extra uitsluitingen. Doelstellingen: -30% CO2 t.o.v. reguliere ACWI en -7% per jaar. Stembeleid en engagement worden actief toegepast.",
+  "pagina": 72,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 97,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.02,
+  "letterlijk": "Aandelen: Totale kosten vermogensbeheer 248 (€1.000), 0,02%; Transactiekosten 116 (€1.000), 0,01%; Totaal vermogensbeheer 0,21%; Transactiekosten totaal 0,03%",
+  "pagina": 35,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": 0.01,
+  "transactiekosten_totaal_pct": 0.03,
+  "vermogensbeheerkosten_totaal_pct": 0.21
+ },
+ "opmerkingen": "De aandelenportefeuille wordt volledig passief beheerd door State Street Global Advisors via een separaat mandaat (geen tracking-error-buffer vereist omdat TE <= 1%). Het ESG-beleid is in 2025 herijkt met implementatie in 2026. In 2025 is per saldo € 70 mln aan aandelen verkocht om binnen de bandbreedte te blijven. Waarde aandelen bedraagt op balanspagina 120 € 1.110,8 mln (€ 1.110.838 duizend), terwijl op pagina 66 in de toelichting regionale verdeling € 1.142 mln wordt vermeld.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Regionale verdeling aandelen ultimo 2025: Europa 15.8% (181 mln €), Verenigde Staten 61.1% (698 mln €), Canada 4.5% (51 mln €), Japan 5.8% (66 mln €), Rest Verre Oosten 2.8% (32 mln €), Opkomende markt 10% (114 mln €)",
+  "pagina": 66,
+  "verdeling": [
+   {
+    "pct": 65.6,
+    "regio": "Noord-Amerika"
+   },
+   {
+    "pct": 15.8,
+    "regio": "Europa"
+   },
+   {
+    "pct": 8.6,
+    "regio": "Azië-Pacific"
+   },
+   {
+    "pct": 10,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "MSCI All Country World Index Climate Transition Benchmark"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Dit relatief lage kostenniveau is het gevolg van het overwegend passieve beleggingsbeleid van het fonds. Binnen dit beleid volgen vermogensbeheerders een vooraf vastgestelde index binnen een beperkte bandbreedte...",
+  "pagina": 37,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Afdekken valutarisico: Cardano Risk Management B.V.",
+  "omschrijving": "Het afdekken van het valutarisico is uitbesteed aan Cardano Risk Management B.V. via een valuta-overlay; een specifiek afdekkingspercentage voor de aandelenportefeuille wordt in het verslag niet genoemd.",
+  "pagina": 18
+ },
+ "naam": "Gasunie",
+ "pad": "data/annual_reports/97_Gasunie_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

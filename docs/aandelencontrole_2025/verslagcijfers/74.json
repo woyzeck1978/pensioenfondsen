@@ -1,0 +1,97 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 313.139,
+  "feitelijk_pct": 47.5,
+  "letterlijk": "Tabel Rendement en allocatie 31-dec-25 (p. 38): Developed Markets Equity 43,7%, Emerging Markets Equity 3,8% (samen 47,5%), Private Equity 0,8%. De allocatie naar aandelen van 38,2% naar 43,2% van het vermogen (p. 34). Balans (p. 11, 76, bedragen x € 1.000): Aandelen € 313.139 (waarvan indirecte beleggingen via participaties in beleggingsfondsen € 307.714 en private equity aandelen € 5.425), Totaal beleggingen € 628.825 (Totaal beleggingen activa € 685.584).",
+  "omvat_private_equity": true,
+  "pagina": 38,
+  "private_equity_pct": 0.8,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 43.2,
+  "totaal_beleggingen_eur_mln": 628.825
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "BlackRock",
+    "pagina": 9,
+    "product_of_mandaat": null,
+    "segment": "aandelen",
+    "stijl": "onbekend"
+   }
+  ],
+  "fiduciair_beheerder": "Russell Investments (Ierland)",
+  "letterlijk": "Russell Investments (Ierland) Fiduciair manager Dublin (Ierland); BlackRock Vermogensbeheer (Aandelen) San Francisco (USA) (p. 9); Het pensioenfonds heeft het vermogensbeheer uitbesteed en beziet de vermogensbeheerkosten dan ook in relatie tot het rendement en het risico (p. 42); Daarbij wordt samengewerkt met de externe fiduciaire vermogensbeheerder Russell (p. 57).",
+  "organisatie": "extern",
+  "pagina": 9
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "De pensioenregeling van Pensioenfonds Alliance is geen artikel 8 of artikel 9 product in de zin van de Informatieverschaffingsverordening (p. 36); bedrijven die betrokken zijn bij de productie van clustermunitie zijn uitgesloten. Ook zijn investeringen in organisaties, entiteiten of landen die onder de toepasselijke sanctieregelgeving vallen uitgesloten (p. 34); screening op basis van schendingen van de Global Compact-principes van de VN (p. 35); Voor de passieve invulling kiest het pensioenfonds voor een ESG-benchmark (p. 36); In het geval van actief beheerde beleggingsfondsen... managers die ESG-factoren aantoonbaar integreren in hun beleggingsproces (p. 35); proxy-stem- en engagementbeleid (p. 35).",
+  "omschrijving": "Pensioenfonds Alliance classificeert de pensioenregeling onder SFDR Artikel 6 (geen artikel 8 of artikel 9 product) en houdt geen rekening met PAI (artikel 4 SFDR). Voor aandelen hanteert het fonds uitsluitingen (wettelijke sancties, clustermunitie) en UN Global Compact screening op controversiële bedrijven. Bij actieve beleggingsfondsen worden ESG-factoren geïntegreerd in het selectieproces (met nadruk op governance), en voor passieve invulling wordt gekozen voor een ESG-benchmark. Daarnaast worden actief aandeelhouderschap (stemmen en engagement) en periodieke monitoring toegepast. Er is geen CO2-reductiedoelstelling geformuleerd.",
+  "pagina": 36,
+  "sfdr_artikel": 6
+ },
+ "fund_id": 74,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "In het beleid is opgenomen dat er geen prestatie gerelateerde vergoedingen in de beheer mandaten worden toegestaan. Echter bij twee categorieën is hier wel sprake van, omdat deze categorieën zich typeren voor dergelijke beheervergoedingen. Het betreft indirect vastgoed en private equity (p. 42). In 2025 zijn de kosten van vermogensbeheer gedaald ten opzichte van 2024 omdat er meer is belegd in beleggingsfondsen met een lagere beheerfee (p. 42).",
+  "pagina": 42,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": null,
+  "vermogensbeheerkosten_totaal_pct": null
+ },
+ "opmerkingen": "Stichting Pensioenfonds Alliance (sponsor: Nestlé) behaalde in 2025 binnen de returnportefeuille een rendement op Developed Markets Equity van 7,07% (benchmark 6,25%) en op Emerging Markets Equity van 17,67% (benchmark 17,89%), terwijl private equity een negatief rendement kende van -14,72% (p. 38). De totale returnportefeuille rendeerde 6,43% (benchmark 5,30%) (p. 38). De strategische allocatie naar aandelen is in 2025 verhoogd van 38,2% naar 43,2% van het vermogen in samenhang met een verhoging van de renteafdekking naar 90% (matchingportefeuille van 20% naar 27,5% en vastrentende waarden van 26,8% naar 14,3%) (p. 34). Illiquide beleggingen zoals private equity en niet-beursgenoteerd vastgoed bevinden zich in de afbouwfase en worden niet meer actief bijgekocht (p. 40). Op de balans bedraagt de post Aandelen € 313.139 duizend (waarvan indirect via participaties in beleggingsfondsen € 307.714 duizend en private equity € 5.425 duizend; omvat_private_equity = true) op een totaal aan beleggingen van € 628.825 duizend (activa € 685.584 duizend) (p. 11, 74, 76). Het vermogensbeheer is volledig uitbesteed: Russell Investments fungeert als fiduciair manager, BlackRock als beheerder voor aandelen, Caceis als custodian/administrateur en Cardano voor de rente- en valuta-overlay (p. 9, 90). Prestatievergoedingen zijn contractueel niet toegestaan voor aandelenmandaten (enkel voor indirect vastgoed en private equity) (p. 42). Onder SFDR kwalificeert de pensioenregeling als een Artikel 6 product (geen artikel 8 of 9) en wordt geen rekening gehouden met PAI (p. 36). De Wtp-voorbereidingskosten bedroegen in 2025 € 400 duizend (p. 42).",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Specificatie aandelen naar regio op basis van 'look through' (31-12-2025, p. 86): Noord-Amerika € 205.401 (67,2%), Europa EU € 34.166 (11,1%) en Europa niet-EU € 18.824 (6,2%) [totaal Europa 17,3%], Azië ex Japan € 19.125 (6,3%) en Pacific € 22.609 (7,4%) [totaal Azië-Pacific 13,7%], Midden- en Zuid-Amerika € 2.368 (0,8%) en Overig € 3.149 (1,0%) [totaal Overig 1,8%]; Totaal € 305.642 (100,0%).",
+  "pagina": 86,
+  "verdeling": [
+   {
+    "pct": 67.2,
+    "regio": "Noord-Amerika"
+   },
+   {
+    "pct": 17.3,
+    "regio": "Europa"
+   },
+   {
+    "pct": 13.7,
+    "regio": "Azië-Pacific"
+   },
+   {
+    "pct": 1.8,
+    "regio": "Overig"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "ESG-benchmark"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "Voor de passieve invulling kiest het pensioenfonds voor een ESG-benchmark (p. 36); In het geval van actief beheerde beleggingsfondsen, streeft Alliance ernaar om te beleggen in fondsen die worden beheerd door managers die ESG-factoren aantoonbaar integreren in hun beleggingsproces (p. 35); De fondsbeheerders (zowel actieve als passieve) rapporteren hun actieve eigendomsactiviteiten op zijn minst op jaarlijkse basis (p. 35); Af: Resultaat actief beheer returnportefeuille 0,80% (p. 39); De mate van actief beheer is bepaald aan de hand van de tracking error ten opzichte van de voor de portefeuille vastgestelde benchmark (p. 91).",
+  "pagina": 36,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Het resultaat van de valutahedge bedroeg +1,57% en vormde grotendeels het spiegelbeeld van het positieve valuta-effect op met name de aandelenbeleggingen (p. 39); De matching portefeuille (afdekking rente- en valutarisico) is uitbesteed aan Cardano (p. 90); Met valutatermijncontracten worden valutarisico's afgedekt (p. 76, 91); Tabel valutarisico op basis van 'look through' (p. 86): Amerikaanse Dollar positie voor afdekking € 302.588, valutaderivaten -€ 193.113, nettopositie € 109.475.",
+  "omschrijving": "Het pensioenfonds dekt het valutarisico af met valutaderivaten (valutatermijncontracten), waarbij de uitvoering van de matchingportefeuille (afdekking rente- en valutarisico) is uitbesteed aan Cardano. In 2025 bedroeg het resultaat van de valutahedge +1,57%, wat grotendeels het spiegelbeeld vormde van het positieve valuta-effect op met name de aandelenbeleggingen. Uit het look-through overzicht blijkt dat met name de Amerikaanse dollar voor circa 64% is afgedekt (positie voor afdekking € 302,6 mln, valutaderivaten -€ 193,1 mln, nettopositie € 109,5 mln), maar een specifiek afdekkingspercentage voor de aandelenportefeuille wordt in het verslag niet genoemd.",
+  "pagina": 39
+ },
+ "naam": "Alliance",
+ "pad": "data/annual_reports/74_Alliance_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

@@ -1,0 +1,71 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 1693,
+  "feitelijk_pct": null,
+  "letterlijk": "Aandelen: ultimo 2025 € 1.693 mln, weging 43,9%, Strategische weging 43,9% (binnen Rendementsportefeuille van € 3.853 mln / 49,8%); Totaal beleggingen € 7.735 mln (p. 28)",
+  "omvat_private_equity": false,
+  "pagina": 28,
+  "private_equity_pct": null,
+  "strategisch_basis": "rendementsportefeuille",
+  "strategisch_pct": 43.9,
+  "totaal_beleggingen_eur_mln": 7735
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": "DPS B.V.",
+  "letterlijk": "Pensioenfonds PDN heeft de uitvoering grotendeels uitbesteed aan DPS (100% deelneming). Vermogensbeheer is verdeeld over DPS (€ 4.457 mln) en externe managers (€ 3.224 mln); DPS B.V. treedt op als fiduciair manager (p. 53, 90, 180). Er worden geen individuele externe aandelenbeheerders genoemd.",
+  "organisatie": "gemengd",
+  "pagina": 53
+ },
+ "esg": {
+  "co2_doel": "-55% in 2030 ten opzichte van de benchmark en carbon data per 2016, en net zero (100%) per 2050",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Dit heeft PDN onder andere gedaan met het streven naar een CO2-reductie per 2030 van 55% ten opzichte van de benchmark en carbon data per 2016 (...) voor de beleggingscategorieën aandelen, investment grade credits en high yield US, en een reductie naar net zero (100%) per 2050 (p. 171). Het uitsluitingenbeleid (...) is van toepassing op de gesegregeerde mandaten binnen de beleggingscategorieën aandelen, beursgenoteerd vastgoed en bedrijfsobligaties (p. 171).",
+  "omschrijving": "Pensioenfonds PDN classificeert de pensioenregeling onder SFDR Artikel 8. Voor aandelen hanteert het fonds ESG-integratie in de selectie, uitsluitingen (UN Global Compact, tabak, kolen/teerzand >=5%, controversiële wapens en escalatie bij engagement), actief engagement en stembeleid via Columbia Threadneedle Investments (CTI), en een CO2-reductiedoel van 55% per 2030 (t.o.v. 2016) en net zero in 2050.",
+  "pagina": 171,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 91,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.13,
+  "letterlijk": "Vermogensbeheer per beleggingscategorie 2025: Aandelen Beheerkosten 2.091 (0,13%), Transactiekost. 506 (0,03%); Totaal Vermogensbeheerkosten 29.925 (0,39%), Transactiekosten 3.998 (0,05%) (p. 54).",
+  "pagina": 54,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": 0.03,
+  "transactiekosten_totaal_pct": 0.05,
+  "vermogensbeheerkosten_totaal_pct": 0.39
+ },
+ "opmerkingen": "Pensioenfonds PDN (DSM Nederland) heeft zijn beleggingen verdeeld in een matchingportefeuille en een rendementsportefeuille. Aandelen maken ultimo 2025 € 1.693 mln uit (43,9% van de rendementsportefeuille, tevens strategische norm 43,9% van de rendementsportefeuille; p. 28). De uitvoering van het vermogensbeheer is uitbesteed aan DPS (DSM Pension Services, een 100% deelneming van het fonds) en overige externe managers. In 2025 zijn door allocatiekeuzes binnen de aandelenportefeuille per saldo duurdere mandaten afgebouwd en is het beheer van de valuta-afdekking ondergebracht bij DPS (p. 53). De aandelenportefeuille kent een gemengde stijl: de VS-portefeuille wordt passief beheerd, terwijl Emerging Markets en Europa actief worden ingevuld (p. 32); individuele externe beheerders worden niet genoemd. Het fonds valt onder SFDR Artikel 8 en streeft naar 55% CO2-reductie per 2030 t.o.v. 2016 voor o.a. aandelen.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "Op pagina 32 worden wel de behaalde rendementen per aandelenregio besproken (Emerging Markets 26,8%, Europa 15,4%, Pacific Rim 8,4%, VS 3,4%), maar er wordt geen procentuele verdeling van het vermogen over de regio's genoemd.",
+  "pagina": 32,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "De rendementsportefeuille wordt grotendeels actief en voor een klein deel passief ingevuld (p. 32). De VS portefeuille die passief wordt beheerd, sloot exact in lijn met de benchmark op 3,4% (p. 32). Emerging Markets en Europa worden actief beheerd (selectie-effecten, sectorposities).",
+  "pagina": 32,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "De bijdrage van de valuta-afdekking was positief met 2,4%-punt op het rendement van de rendementsportefeuille. Dit was met name het gevolg van de depreciatie van de US dollar ten opzichte van de Euro. (...) Alle genoemde rendementen zijn in euro, vóór de gedeeltelijke afdekking van valutarisico (p. 32). Daarnaast is het beheer van de valuta-afdekking ondergebracht bij DPS (p. 53).",
+  "omschrijving": "Het valutarisico binnen de aandelenportefeuille wordt gedeeltelijk afgedekt (met name USD ten opzichte van EUR); een exact afdekkingspercentage wordt niet genoemd. Het beheer van de valuta-afdekking is ondergebracht bij DPS.",
+  "pagina": 32
+ },
+ "naam": "DSM Nederland",
+ "pad": "data/annual_reports/91_PDN_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

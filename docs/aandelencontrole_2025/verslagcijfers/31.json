@@ -1,0 +1,97 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 1812.57,
+  "feitelijk_pct": 40.9,
+  "letterlijk": "Aandelen* belegd vermogen 40,9% (p. 34); Balans beleggingen per jaareinde: Aandelen € 1.812.568 duizend op Totaal Beleggingen € 4.415.840 duizend (p. 91)",
+  "omvat_private_equity": false,
+  "pagina": 34,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 4415.84
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Northern Trust",
+    "pagina": 96,
+    "product_of_mandaat": "NT World SDG Screened Low Carbon Index Fund",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Northern Trust",
+    "pagina": 96,
+    "product_of_mandaat": "NT Emerging Markets ESG Leader Index Fund",
+    "segment": "opkomende markten",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Northern Trust",
+    "pagina": 96,
+    "product_of_mandaat": "NT UCITS FGR EM Sust Select SD",
+    "segment": "opkomende markten",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "Van Lanschot Kempen Investment Management",
+  "letterlijk": "Het fonds heeft al zijn werkzaamheden met betrekking tot (pensioen)administratie en vermogensbeheer uitbesteed. ... Fiduciair vermogensbeheerder: Van Lanschot Kempen Investment Management, gevestigd in Amsterdam, voert het fiduciair vermogensbeheer van het fonds.",
+  "organisatie": "extern",
+  "pagina": 129
+ },
+ "esg": {
+  "co2_doel": "in 2050 geen CO2 meer wordt uitgestoten",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "best-in-class",
+   "engagement",
+   "stembeleid",
+   "impactbeleggen",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Onze beleggingen vallen onder artikel 8 van de SFDR. ... Ons MVB-beleid richt zich op de volgende thema’s: Klimaat en duurzame energie, Uitsluitingen, Integratie van ESG ‘best-in-class’-criteria, Stemgedrag, Dialoog, Positieve impact, Landenbeleid ... Climate Transition Benchmark die het fonds gebruikt. Deze benchmark heeft, in lijn met het klimaatakkoord van Parijs, als doel dat er in 2050 geen CO2 meer wordt uitgestoten.",
+  "omschrijving": "StiPP classificeert de beleggingen onder SFDR artikel 8. Het MVB-beleid omvat uitsluitingen, integratie van ESG best-in-class criteria, dialoog/engagement, stembeleid, en impactbeleggen (o.a. in aandelen met gunstige ESG-score). Voor CO2 volgt het fonds een Climate Transition Benchmark met als doel netto nul uitstoot in 2050 in lijn met Parijs.",
+  "pagina": 29,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 31,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.06,
+  "letterlijk": "Aandelen* beheer 0,06%, transacties 0,09%, totaal 0,15% (p. 34); Totale beheerkosten 0,22%, Totale transactiekosten 0,05% (p. 33)",
+  "pagina": 34,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": 0.09,
+  "transactiekosten_totaal_pct": 0.05,
+  "vermogensbeheerkosten_totaal_pct": 0.22
+ },
+ "opmerkingen": "StiPP (Stichting Pensioenfonds voor Personeelsdiensten) belegt via vier strategische portefeuilles passend bij de levenscyclus van deelnemers. Na een ALM-studie is per 1 februari 2025 de levenscyclus offensiever gemaakt (voor jongste deelnemers aandeel zakelijke waarden verhoogd van 70% naar 80%, afbouw start 15 i.p.v. 20 jaar voor pensioendatum). In september 2025 is ter voorbereiding op de Wtp een aparte MVEV-portefeuille opgericht. De aandelenportefeuille wordt 100% passief beheerd via indexfondsen van Northern Trust (ultimo 2025 geen actief-beheerrisico). In 2025 is de positie in het NT Europe Sustainable Select SDG Index Fund beëindigd en is de positie in Emerging Markets substantieel uitgebreid. Vermogensbeheer is integraal uitbesteed met Van Lanschot Kempen als fiduciair beheerder en CACEIS als custodian.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "Geen procentuele regionale verdeling van de aandelenportefeuille genoemd in het verslag (enkel absolute bedragen op p. 26: Aandelen Ontwikkelde landen Wereld € 1.217,6 mln, Europa € 396,9 mln, Opkomende landen € 172,3 mln).",
+  "pagina": 26,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": 0,
+  "benchmarks": [
+   "Climate Transition Benchmark"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Ultimo boekjaar is geen sprake van actief beheer, daarom is er geen buffer aangehouden voor het actief-beheerrisico.",
+  "pagina": 97,
+  "passief_pct": 100,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "De kosten van de valuta-afdekking zijn verwerkt in de kosten voor aandelen.",
+  "omschrijving": "Het fonds past valuta-afdekking toe waarvan het rendement (1,4%) en de kosten zijn verwerkt in de categorie aandelen; een specifiek afdekkingspercentage voor aandelen wordt in het verslag niet genoemd.",
+  "pagina": 34
+ },
+ "naam": "Personeelsdiensten (Personnel Services)",
+ "pad": "data/annual_reports/31_StiPP_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

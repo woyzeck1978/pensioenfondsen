@@ -1,0 +1,91 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 753,
+  "feitelijk_pct": 44.8,
+  "letterlijk": "Aandelen 753,0 44,8 43,0",
+  "omvat_private_equity": false,
+  "pagina": 10,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 43,
+  "totaal_beleggingen_eur_mln": 1682.2
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Aegon Asset Management",
+    "pagina": 36,
+    "product_of_mandaat": "MM World Equity Index SRI Fund",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Aegon Asset Management",
+    "pagina": 37,
+    "product_of_mandaat": "MM Global Emerging Markets Fund",
+    "segment": "opkomende markten",
+    "stijl": "actief"
+   }
+  ],
+  "fiduciair_beheerder": "Aegon AM",
+  "letterlijk": "Het fiduciair beheer voor de beleggingen risico pensioenkring is uitbesteed aan Aegon AM",
+  "organisatie": "extern",
+  "pagina": 106
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen"
+  ],
+  "letterlijk": "Dankzij de overgang naar een SRI-variant van de aandelenportefeuille en een meer actief beheer van de bedrijfsobligaties loopt de pensioenkring voor op dat pad.",
+  "omschrijving": "Aandelenbeleggingen via SRI-indexfonds (ontwikkelde markten) en opkomende markten fonds met uitsluitingsbeleid; portefeuille loopt voor op het de-carbonisatiepad van het Parijs-akkoord.",
+  "pagina": 32,
+  "sfdr_artikel": null
+ },
+ "fund_id": 170,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.06,
+  "letterlijk": "Aandelen 1.081 0,06",
+  "pagina": 17,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": 0.03,
+  "transactiekosten_totaal_pct": 0.07,
+  "vermogensbeheerkosten_totaal_pct": 0.22
+ },
+ "opmerkingen": "Voor het beleggingsplan 2026 zijn de strategische bandbreedtes verruimd om vroegtijdig te kunnen voorsorteren op het invaren binnen de Wtp. De aandelenportefeuille bestaat voor ontwikkelde markten uit het passieve MM World Equity Index SRI Fund en voor opkomende markten uit het actieve MM Global Emerging Markets Fund. Op 23 april 2026 hebben Het Nederlandse Pensioenfonds (HNPF) en Stap hun voornemen tot fusie bekendgemaakt.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Ontwikkelde markten 610,6 36,3 35,5 Opkomende markten 142,3 8,5 7,5",
+  "pagina": 10,
+  "verdeling": [
+   {
+    "pct": 36.3,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 8.5,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "De ex-ante tracking error bedraagt eind 2025 0,2% op jaarbasis.",
+  "pagina": 18,
+  "passief_pct": null,
+  "tracking_error_pct": 0.2
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 50,
+  "letterlijk": "Aandelen ontwikkelde markten 50,0% Aandelen opkomende markten n.v.t.",
+  "omschrijving": "Valutarisico op aandelen ontwikkelde markten is voor 50% afgedekt met een FX overlay (USD, GBP, JPY); opkomende markten wordt niet afgedekt (n.v.t.).",
+  "pagina": 53
+ },
+ "naam": "Kring Douwe Egberts (Stap)",
+ "pad": "data/annual_reports/170_Douwe_Egberts_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

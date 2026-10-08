@@ -1,0 +1,81 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 255.175,
+  "feitelijk_pct": 42.23,
+  "letterlijk": "De return portefeuille belegt in obligaties van opkomende landen (6,6%), bedrijfsobligaties met een lage kredietwaardigheid (High yield) (2,5%) en aandelen (40,9%). De aandelenportefeuille is verder onderverdeeld in 36,6% aandelen ontwikkelde landen en 4,3% aandelen opkomende landen. Ultimo 2025: Aandelen ontwikkelde markten 37,84% en Aandelen opkomende aandelen 4,39% (p. 29); Balans 2025 (x € 1.000): Aandelen 255.175 van Totaal 609.163 (p. 75).",
+  "omvat_private_equity": false,
+  "pagina": 29,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 40.9,
+  "totaal_beleggingen_eur_mln": 609.163
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": "Goldman Sachs Asset Management (GSAM)",
+  "letterlijk": "Het vermogensbeheer is volledig uitbesteed en wordt, op basis van een afgesproken mandaat, verzorgd door de fiduciair beheerder Goldman Sachs Asset Management (GSAM).",
+  "organisatie": "extern",
+  "pagina": 8
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": true,
+  "instrumenten": [
+   "eigen ESG-index",
+   "ESG-integratie in selectie",
+   "stembeleid"
+  ],
+  "letterlijk": "Het bestuur van het Fonds heeft besloten om de pensioenregeling als artikel 8 van de SFDR te classificeren. Tegelijkertijd is gekozen voor een opt-out voor artikel 4 van SFDR. ... MSCI World Custom ESG Index ... MSCI Emerging Markets Custom ESG Index (p. 28, 29); stemrichtlijnen (p. 9)",
+  "omschrijving": "De pensioenregeling is geclassificeerd als SFDR artikel 8 (met opt-out voor artikel 4 PAI). Voor aandelen wordt belegd via maatwerk ESG-indices (MSCI World Custom ESG Index en MSCI Emerging Markets Custom ESG Index), met ESG-integratie in het selectieproces en toepassing van stemrichtlijnen.",
+  "pagina": 28,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 120,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.06,
+  "letterlijk": "Totaal aandelen beheerskosten: 0,06% (€ 182 duizend) (p. 24); Totaal aandelen transactiekosten: 0,02% (€ 47 duizend) (p. 24); Kosten vermogensbeheer: 0,36% (€ 2.077 duizend), Transactiekosten: 0,03% (€ 163 duizend), Totaal vermogensbeheer en transactiekosten: 0,39% (€ 2.240 duizend) (p. 23).",
+  "pagina": 24,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": 0.02,
+  "transactiekosten_totaal_pct": 0.03,
+  "vermogensbeheerkosten_totaal_pct": 0.36
+ },
+ "opmerkingen": "Het vermogensbeheer is volledig uitbesteed aan fiduciair beheerder Goldman Sachs Asset Management (GSAM). Aandelenbeleggingen worden volledig passief uitgevoerd via beleggingsfondsen; specifieke fondsnamen of externe beheerders voor de aandelenportefeuille worden in het verslag niet afzonderlijk genoemd (afgezien van Life-Cycle fondsen van GSAM voor rekening deelnemer). Per 31 oktober 2025 is de strategische asset allocatie gewijzigd: matching/return is aangepast van 40%/60% naar 50%/50% en de strategische renteafdekking is verhoogd van 50% naar 60%. Beheerkosten aandelen stegen in 2025 naar 0,06% (2024: 0,03% gerapporteerd, met voetnoot dat 2024 6 bp te laag was gerapporteerd door een nieuw data-template van de manager) door een wijziging in rapportagewijze. Naast het vermogen in eigen beheer heeft het fonds garantiecontracten bij Nationale-Nederlanden (€ 515,97 mln) waarvan het risico bij NN ligt. Aandelen zijn op p. 29 weergegeven als ontwikkelde markten (37,84%) en opkomende markten (4,39%); op p. 90 worden ze regionaal uitgesplitst in euro's (o.a. Noord-Amerika € 175,8 mln, Europa € 30,6 mln, Opkomende markten € 27,0 mln). Ultimo 2025 is er geen concentratie groter dan 2% van het balanstotaal. Het fonds bereidt zich voor op de Wtp (solidaire premieregeling).",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Aandelen ontwikkelde markten: Portefeuille 37,84% (Norm 36,60%), Aandelen opkomende aandelen: Portefeuille 4,39% (Norm 4,30%) (p. 29); op p. 90 wordt een overzicht van aandelen naar regio per ultimo 2025 enkel in duizenden euro's gegeven (o.a. Noord Amerika € 175.794, Europa € 30.619, Opkomende markten € 27.044, totaal € 255.175)",
+  "pagina": 29,
+  "verdeling": [
+   {
+    "pct": 37.84,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 4.39,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": 0,
+  "benchmarks": [
+   "MSCI World Custom ESG Index (81% Eur hedged en 19% unhedged)",
+   "MSCI Emerging Markets Custom ESG Index"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "De beleggingen in aandelen worden eind 2025 volledig passief belegd. ... MSCI World Custom ESG Index (81% Eur hedged en 19% unhedged) ... MSCI Emerging Markets Custom ESG Index (p. 29)",
+  "pagina": 29,
+  "passief_pct": 100,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 81,
+  "letterlijk": "Aandelen ontwikkelde markten: MSCI World Custom ESG Index (81% Eur hedged en 19% unhedged) (p. 29); Binnen de categorie aandelen ontwikkelde markten wordt gebruik gemaakt van zowel een Euro hedged beleggingsfonds als van een non-Euro hedged beleggingsfonds (p. 90); Voor de afdekking van het valutarisico wordt een streefpercentage van 62,5% gehanteerd (p. 30).",
+  "omschrijving": "Voor aandelen ontwikkelde markten is de benchmark voor 81% afgedekt naar euro (19% unhedged), geïmplementeerd via een Euro hedged en een non-Euro hedged beleggingsfonds. Voor aandelen opkomende markten vindt geen valuta-afdekking plaats. Fondsbreed geldt een streefpercentage van 62,5% voor afdekking van het valutarisico.",
+  "pagina": 29
+ },
+ "naam": "Pon",
+ "pad": "data/annual_reports/120_Pon_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

@@ -1,0 +1,91 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 855.73,
+  "feitelijk_pct": null,
+  "letterlijk": "Tabel Methodiek bepaling marktwaarde (p. 90): Aandelen Stand ultimo 2025 855.730, Totaal belegd vermogen 3.833.727 (bedragen x € 1.000); Tabel Illiquide beleggingen (p. 109): Private equity 355.549 (9,27%).",
+  "omvat_private_equity": false,
+  "pagina": 90,
+  "private_equity_pct": 9.27,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 3833.727
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "MN Services Vermogensbeheer B.V.",
+    "pagina": 109,
+    "product_of_mandaat": "Mn Services Beleggingsfondsen",
+    "segment": "wereldwijd ontwikkeld en opkomende markten",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "MN Services Vermogensbeheer B.V.",
+  "letterlijk": "Ons fonds heeft MN aangesteld als fiduciair vermogensbeheerder. De rechten en plichten van de uitvoeringorganisatie en het fonds zijn vastgelegd in een overeenkomst... MN verricht het feitelijke vermogensbeheer deels zelf en besteedt dit deels uit aan andere vermogensbeheerders wereldwijd. (p. 21) / De Stichting heeft het beheer van de beleggingen uitbesteed aan MN Services Vermogensbeheer B.V. (p. 117) / Binnen een aantal Mn Services Beleggingsfondsen waarin belegd wordt, worden stukken (aandelen en obligaties) uitgeleend (p. 109).",
+  "organisatie": "intern",
+  "pagina": 21
+ },
+ "esg": {
+  "co2_doel": "Daling van de uitstoot-intensiteit van de aandelenportefeuille (sinds 2020 met 76,1% gedaald, in 2025 met 31,0% gedaald naar 3,5 kgCO2e per 100 euro; 36,4% onder benchmark); sectorreductiedoelstellingen voor uitstoot-intensieve sectoren richting 2030",
+  "eigen_index": true,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "eigen ESG-index",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Voor de liquide beleggingen geldt het streven om duurzaamheidskenmerken zoveel mogelijk in de benchmark te implementeren, middels maatwerk ESG benchmarks (p. 144); MN meet jaarlijks de CO2-voetafdruk van de aandelen- en bedrijfsobligatieportefeuilles... Sinds de eerste meting eind 2020 is de uitstoot-intensiteit van de aandelenportefeuille met 76,1% gedaald (p. 35); Bpf MITT is een actief aandeelhouder en MN geeft uitvoering aan deze verantwoordelijkheid middels de volgende instrumenten: Engagement... Stemmen (p. 35); Uitsluiting: Eind 2025 waren er in totaal 17 landen en 640 bedrijven onderdeel van de uitsluitingslijst (p. 37).",
+  "omschrijving": "Bpf MITT classificeert als SFDR Artikel 8 (promoot ecologische en sociale kenmerken). Voor liquide beleggingen (waaronder de aandelenportefeuille) hanteert het fonds maatwerk ESG-benchmarks. MN geeft namens het fonds invulling aan actief aandeelhouderschap via dialoog/engagement (157 bedrijven op thema's energietransitie, biodiversiteit, mensen- en arbeidsrechten, incidenten & controverses) en stemmen op AVA's (20.563 stemmen). Daarnaast gelden uitsluitingen (17 landen, 640 bedrijven), ESG-integratie (Bewuste Selectie 2.0 en meewegen van ESG bij selectie/monitoring van beheerders), en sectorreductiedoelstellingen voor CO2 richting 2030 (uitstoot-intensiteit aandelen is sinds 2020 met 76,1% afgenomen).",
+  "pagina": 35,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 25,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Tabel Vermogensbeheer (p. 24): Kosten in % van het gemiddeld belegd vermogen 0,64%, Transactiekosten 0,03%, Totale kosten 0,67% (67,0 bps); Voor de categorieën Private Equity en Infrastructuur is sprake van prestatievergoedingen (p. 24).",
+  "pagina": 24,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.03,
+  "vermogensbeheerkosten_totaal_pct": 0.64
+ },
+ "opmerkingen": "Bpf MITT (Mode-, Interieur-, Tapijt- en Textielindustrie) heeft het integraal vermogensbeheer ondergebracht bij uitvoeringsorganisatie MN (MN Services Vermogensbeheer B.V.), conform de richtlijn hier geclassificeerd als intern beheer (eigen uitvoerder). Het feitelijk beheer van de aandelen verloopt via beleggingsfondsen van MN (Mn Services Beleggingsfondsen, niveau 4-waardering, stand ultimo 2025: € 855,73 mln op een totale beleggingsportefeuille van € 3.833,73 mln). De aandelenportefeuille wordt passief beheerd ('Er wordt niet actief belegd', buffer actief beheer risico S10 is 0%) en volgt maatwerk ESG-benchmarks. Binnen de zakelijke waarden bedraagt de allocatie naar ontwikkelde markten 32,9% (€ 654,60 mln) en naar opkomende markten 10,1% (€ 201,13 mln); private equity (€ 355,55 mln, 9,27% van de totale portefeuille / 17,9% van de zakelijke waarden) is separaat opgenomen onder overige beleggingen. Het fonds dekt strategisch geen risico op zakelijke waarden af; een specifiek afdekkingspercentage voor valuta op aandelen ontbreekt in het verslag. De totale vermogensbeheerkosten bedroegen 0,64% (€ 28,15 mln incl. directe en indirecte kosten, 67,0 bps in de kostenspecificatie) en transactiekosten 0,03% (3,2 bps); prestatievergoedingen zijn niet van toepassing op aandelen (enkel op private equity en infrastructuur). Opmerkelijk is dat het verantwoordingsorgaan (p. 73) vermeldt dat de vermogensbeheerkosten volgens de CEM-benchmark hoger liggen vanwege 'de keuze voor actief beheer en de samenstelling van de portefeuille' (wat ziet op het totale fonds inclusief illiquide categorieën). In het kader van de Wtp heeft het VO in oktober 2025 en januari 2026 positief geadviseerd over het (aangepaste) invaarbesluit met een beoogde transitiedatum van 1 april 2026.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Tabel Verdeling zakelijke waarden, onroerende zaken en overige beleggingen per categorie (p. 103): Ontwikkelde markten (Mature markets) 32,9% (€ 654.602), Opkomende markten (Emerging markets) 10,1% (€ 201.128).",
+  "pagina": 103,
+  "verdeling": [
+   {
+    "pct": 32.9,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 10.1,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "maatwerk ESG benchmarks"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Er wordt niet actief belegd. Bij de berekening van het vereist eigen vermogen wordt alleen een actief beheer risico becijferd voor de aandelenportefeuille indien de tracking error groter is dan 1%. Voor het fonds resulteert een buffer voor het feitelijk actief beheer risico van 0 (0,0%) en voor het strategisch actief beheer risico van 0 (0,0%) (p. 109).",
+  "pagina": 109,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Strategisch dekt het fonds haar zakelijke waarden risico niet af. (p. 103)",
+  "omschrijving": "Het verslag noemt geen specifiek afdekkingspercentage voor het valutarisico van de aandelenportefeuille; wel wordt op p. 103 vermeld dat het fonds strategisch haar zakelijke waarden risico niet afdekt. In de toelichting (p. 96) zijn valutaderivaten opgenomen (€ 90,0 mln).",
+  "pagina": 103
+ },
+ "naam": "MITT (Fashion, Interior, Carpet, and Textile Industry)",
+ "pad": "data/annual_reports/25_MITT_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

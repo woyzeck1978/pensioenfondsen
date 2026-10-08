@@ -1,0 +1,75 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 303.53,
+  "feitelijk_pct": null,
+  "letterlijk": "Aandelen 303.530 ... 554.144 (bedragen x € 1.000)",
+  "omvat_private_equity": false,
+  "pagina": 7,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 55,
+  "totaal_beleggingen_eur_mln": 554.144
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Aegon Asset Management",
+    "pagina": 58,
+    "product_of_mandaat": null,
+    "segment": "wereldwijd",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "Aegon Asset Management",
+  "letterlijk": "het vermogensbeheer voor beleggingen risico fonds is uitbesteed aan Aegon Investment Management",
+  "organisatie": "extern",
+  "pagina": 95
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [],
+  "letterlijk": "Het MPF kwalificeert onder de SFDR als een artikel 6 fonds. Dit betekent dat het fonds geen duurzame kenmerken of doelen promoot.",
+  "omschrijving": "MPF kwalificeert als een SFDR artikel 6-fonds en streeft geen maatschappelijke of klimaatdoelen na. Het fonds belegt passief in brede marktindices en volgt het duurzaamheidsbeleid van Aegon Asset Management. Uitsluitingen worden niet wenselijk geacht omdat ze risico's zouden vergroten. Er worden geen ecologische of sociale kenmerken meegenomen in het beleggingsbeleid.",
+  "pagina": 42,
+  "sfdr_artikel": 6
+ },
+ "fund_id": 26,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "De beheerkosten bedragen 0,28% (2024: 0,28%) van het gemiddeld belegd vermogen in eigen beheer. ... De transactiekosten bedragen 0,06% (2024: 0,08%) van het gemiddeld belegd vermogen.",
+  "pagina": 58,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.06,
+  "vermogensbeheerkosten_totaal_pct": 0.28
+ },
+ "opmerkingen": "Het pensioenvermogen van MPF is verdeeld over twee depots: een herverzekerd depot bij Aegon en een depot vrij vermogen voor rekening en risico van het fonds. De aandelenportefeuille maakt 55,0% uit van de strategische allocatie van het vrije-vermogen-depot (bandbreedte 45-65%). Het beheer is volledig passief uitbesteed aan Aegon Asset Management via beleggingsfondsen. MPF sprak in 2023 de ambitie uit om te voldoen aan artikel 8 SFDR, maar het bestuur concludeerde eind 2024 dat dit haalbaarheidstechnisch bij de beheerder nog niet mogelijk was, waardoor het fonds ook in 2025 artikel 6 is gebleven. De transitie naar het nieuwe pensioenstelsel (Wtp) staat gepland per 1 januari 2027.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "MSCI All Country World Net Index (GBP, JPY, USD Hedged) (Customized)"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Het beleggingsbeleid met betrekking tot de aandelen is gebaseerd op het passief volgen van indexen, met een zo breed mogelijke spreiding",
+  "pagina": 58,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Wereldwijde aandelen, grotendeels valuta-afgedekt.",
+  "omschrijving": "Wereldwijde aandelen zijn grotendeels valuta-afgedekt; de benchmark is valuta-afgedekt naar GBP, JPY en USD.",
+  "pagina": 45
+ },
+ "naam": "Molenaars (Millers)",
+ "pad": "data/annual_reports/26_Molenaars_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

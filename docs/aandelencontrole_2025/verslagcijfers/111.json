@@ -1,0 +1,76 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": null,
+  "feitelijk_pct": null,
+  "letterlijk": "Eind 2025 bestaat de strategische portefeuille voor 43% uit zakelijke waarden (aandelen, vastgoed en private equity). De overige 57% is belegd in vastrentende waarden (...) Aandelen Ontwikkelde markten 30%, Private Equity 4,5%, Niet-beursgenoteerd vastgoed 8,5%.",
+  "omvat_private_equity": false,
+  "pagina": 19,
+  "private_equity_pct": 4.5,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 30,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Aegon Asset Management",
+    "pagina": 148,
+    "product_of_mandaat": "Aegon AM-beleggingsfondsen",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "actief"
+   }
+  ],
+  "fiduciair_beheerder": "Aegon Asset Management",
+  "letterlijk": "p. 101: Aegon AM blijft de activiteiten vanuit Nederland uitvoeren. De fiduciaire dienstverlening, een kritieke uitbesteding van het pensioenfonds, wordt correct uitgevoerd; p. 148: Het pensioenfonds heeft de genoemde werkzaamheden uitbesteed aan TKP en Aegon AM. (...) Dit geldt zowel voor de Aegon AM-beleggingsfondsen als voor de individuele managers.",
+  "organisatie": "extern",
+  "pagina": 101
+ },
+ "esg": {
+  "co2_doel": "-55% in 2030 ten opzichte van 2017 (tussendoel -45% in 2025, net-zero in 2050)",
+  "eigen_index": false,
+  "instrumenten": [
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "We hebben een CO2-reductietarget van -55% in 2030 ten opzichte van 2017. (...) Daarnaast is er een tussendoelstelling van -45% in 2025 gedefinieerd en een net-zero doelstelling voor 2050 vastgesteld. (p. 41) De aandelenportefeuille betreft een actieve beleggingscategorie waarbij ESG-criteria een belangrijke rol spelen in het investeringsproces. (p. 42)",
+  "omschrijving": "De aandelenportefeuille betreft een actieve beleggingscategorie waarbij ESG-criteria een belangrijke rol spelen in het investeringsproces. Er geldt een CO2-reductietarget van -55% in 2030 t.o.v. 2017 (met tussendoel -45% in 2025 en net-zero in 2050). Ultimo 2025 is de CO2-voetafdruk van aandelen, bedrijfsobligaties en high yield gezamenlijk met 68% gedaald.",
+  "pagina": 41,
+  "sfdr_artikel": null
+ },
+ "fund_id": 111,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.59,
+  "letterlijk": "Tabel vermogensbeheerkosten inclusief transactiekosten in 2025 (p. 51): Aandelen gem. belegd vermogen € 2.941.239 duizend, beheervergoeding € 5.748 duizend, prestatievergoeding € 1.973 duizend, transactiekosten € 8.877 duizend, totale kosten € 17.488 duizend (0,59% van gem. belegd vermogen). DB vermogensbeheerkosten totaal 0,74% (waarvan transactiekosten 0,14%); fondsbreed inclusief BPR 0,71% (p. 60).",
+  "pagina": 51,
+  "prestatievergoeding_aandelen_eur_mln": 1.973,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.14,
+  "vermogensbeheerkosten_totaal_pct": 0.74
+ },
+ "opmerkingen": "In het laatste kwartaal van 2025 heeft het fonds binnen de aandelenportefeuille de aparte allocaties naar Long Term Investing (wegens niet behalen 5-jaarsdoelstelling en afnemend onderscheidend MVB-profiel) en Opkomende markten (wegens achterblijvend rendement) beëindigd en samengevoegd in het wereldwijde aandelenfonds conform de wereldwijde benchmark. De aandelen worden actief beheerd via multi-manager fondsen van fiduciair beheerder Aegon Asset Management. In 2025 bleven de actieve rendementen achter bij de benchmark door o.a. onderweging in Big Tech/AI en relatieve voorkeur voor kleinere Europese aandelen. Het invaarbesluit onder de Wtp is op 16 oktober 2025 ingediend bij DNB met beoogde transitiedatum 1 oktober 2026; het renterisico is ter voorbereiding reeds voor 100% afgedekt.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "Daarom hebben we in het laatste kwartaal van 2025 binnen de aandelenportefeuille afscheid genomen van de beleggingsstrategie ‘long term investing’ en van de regio ‘opkomende markten’. (...) Daarom heeft het pensioenfonds besloten de aandelen aan te laten sluiten bij de wereldwijde benchmark. Een expliciete procentuele regioverdeling van de aandelenportefeuille ontbreekt in het verslag.",
+  "pagina": 25,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "actief",
+  "letterlijk": "Onze aandelenportefeuilles worden actief beheerd. De door ons aangestelde portefeuillemanagers krijgen een mandaat en een benchmark mee waartegen hun prestaties worden afgemeten. (p. 24)",
+  "pagina": 24,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 50,
+  "letterlijk": "Binnen de categorie aandelen wordt de valuta exposure naar de Amerikaanse dollar, het Britse pond en de Japanse yen voor de helft afgedekt.",
+  "omschrijving": "Het valutarisico binnen de categorie aandelen voor de Amerikaanse dollar (USD), het Britse pond (GBP) en de Japanse yen (JPY) wordt voor de helft (50%) afgedekt naar euro.",
+  "pagina": 142
+ },
+ "naam": "KPN",
+ "pad": "data/annual_reports/111_KPN_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

@@ -1,0 +1,91 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 346.005,
+  "feitelijk_pct": 32.5,
+  "letterlijk": "Aandelen: Weging 31 december 2025: 32,50%, Norm 2025: 33,20%, Belegd vermogen (* 1.000): 346.005; Totaal portefeuille Belegd vermogen: 1.065.742",
+  "omvat_private_equity": false,
+  "pagina": 59,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 33.2,
+  "totaal_beleggingen_eur_mln": 1065.742
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": "Columbia Threadneedle Investments",
+  "letterlijk": "Het bestuur heeft voor de uitvoering van het fiduciair management een overeenkomst voor onbepaalde tijd afgesloten met Columbia Threadneedle Investments.",
+  "organisatie": "extern",
+  "pagina": 17
+ },
+ "esg": {
+  "co2_doel": "initieel een 30% lagere CO2-uitstoot had dan een reguliere benchmark en een jaarlijkse CO2-reductiedoelstelling van 8%",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Het kiest voor een artikel 8 SFDR-classificatie (p. 59). [...] Voor de activaklasse aandelen ontwikkelde markten is een beleggingsfonds geselecteerd dat een Climate Transition Benchmark volgt. Dit betekende dat de portefeuille initieel een 30% lagere CO2-uitstoot had dan een reguliere benchmark en een jaarlijkse CO2-reductiedoelstelling van 8% (p. 161).",
+  "omschrijving": "Pensioenfonds Kappers classificeert de pensioenregeling onder SFDR artikel 8. Voor aandelen hanteert het fonds een uitsluitingsbeleid (o.a. UN Global Compact, tabak, controversiële/conventionele/kernwapens, thermische steenkool en niet-conventionele olie/gas), engagement en stembeleid. Beide aandelencategorieën volgen een Climate Transition Benchmark met een CO2-reductiedoelstelling (initieel -30%, jaarlijks -8%), waarbij voor opkomende markten tevens een aanvullende ESG-screening/integratie geldt om te beleggen in bedrijven met een hogere ESG-rating.",
+  "pagina": 161,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 20,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Vermogensbeheerkosten 3.597 0,33%, Transactiekosten 327 0,03%, Totale vermogensbeheerkosten 3.924 0,36% (p. 47). Tabel per categorie (in € 1.000): Aandelen beheerkosten 147, transactiekosten 101, prestatievergoeding 0.",
+  "pagina": 47,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.03,
+  "vermogensbeheerkosten_totaal_pct": 0.33
+ },
+ "opmerkingen": "Het pensioenfonds belegt in aandelen via twee passieve externe beleggingsfondsen (één voor ontwikkelde markten en één voor opkomende markten); specifieke fonds- of beheerdersnamen worden in het verslag niet genoemd. Columbia Threadneedle Investments (CTI) treedt op als fiduciair beheerder. In de kostentabel (p. 47) worden kosten voor aandelen alleen in bedragen van € 1.000 vermeld (€ 147k beheerkosten, € 101k transactiekosten, € 0 prestatievergoeding), geen percentages. Fondsbreed bedragen de vermogensbeheerkosten 0,33% en transactiekosten 0,03% (samen 0,36%). De aandelenportefeuille bedraagt ultimo 2025 € 346,0 mln (32,5% feitelijk vs. 33,2% norm; p. 59). In de toelichting (p. 127) wordt een aandelentotaal van € 334,3 mln gespecificeerd naar regio en naar markt (74,8% developed markets, 25,2% emerging markets). Het fonds valt onder SFDR art. 8 en volgt Climate Transition Benchmarks.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Specificatie aandelen naar regio (31-12-2025): Europa EU 9,3%, Europa non EU 4,8% (totaal Europa 14,1%), Noord-Amerika 50,5%, Azie exclusief Japan 24,3%, Pacific 6,2% (totaal Azië-Pacific 30,5%), Centraal & Zuid Amerika 2,3%, Overige 2,6% (totaal Overig 4,9%). Specificatie aandelen naar markt: Aandelen emerging markets 25,2%, Aandelen developed markets 74,8%.",
+  "pagina": 127,
+  "verdeling": [
+   {
+    "pct": 50.5,
+    "regio": "Noord-Amerika"
+   },
+   {
+    "pct": 14.1,
+    "regio": "Europa"
+   },
+   {
+    "pct": 30.5,
+    "regio": "Azië-Pacific"
+   },
+   {
+    "pct": 4.9,
+    "regio": "Overig"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "Climate Transition Benchmark",
+   "ESG-enhanced Climate Transition Benchmark"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Het pensioenfonds heeft een passief beleggingsbeleid waarmee het bestuur mede beoogt het aantal transacties te beperken en de kosten laag te houden. [...] Het pensioenfonds belegt passief en gebruikt generieke benchmarks",
+  "pagina": 47,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Het resterende valutarisico wat voortkomt uit ontwikkelde markten wordt afgedekt (dollar, pond, yen). Valuta uit opkomende markten worden niet afgedekt.",
+  "omschrijving": "Het valutarisico uit ontwikkelde markten (dollar, pond, yen) wordt afgedekt naar de euro; valutarisico uit opkomende markten wordt niet afgedekt. Voor de totale beleggingsportefeuille is 69,6% in euro genoteerd voor afdekking en 90,3% na afdekking.",
+  "pagina": 127
+ },
+ "naam": "Kappersbedrijf (Hairdressers)",
+ "pad": "data/annual_reports/20_Kappersbedrijf_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

@@ -1,0 +1,99 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 208.783,
+  "feitelijk_pct": null,
+  "letterlijk": "Stand ultimo 2025 (in duizenden euro): Aandelen beleggingsfondsen 208.783; Totaal beleggingen voor risico pensioenfonds 553.401",
+  "omvat_private_equity": false,
+  "pagina": 73,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 553.401
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "BlackRock",
+    "pagina": 119,
+    "product_of_mandaat": "BlackRock Sustainable Advantage Emerging Markets Ex China Equity Fund",
+    "segment": "opkomende markten",
+    "stijl": "enhanced/factor"
+   },
+   {
+    "naam": "BlackRock",
+    "pagina": 119,
+    "product_of_mandaat": "BlackRock Advantage Europe Ex-UK Equity Fund",
+    "segment": "Europa",
+    "stijl": "enhanced/factor"
+   },
+   {
+    "naam": "BlackRock",
+    "pagina": 119,
+    "product_of_mandaat": "BlackRock Russell 2000 Alpha Tilts Fund",
+    "segment": "small caps",
+    "stijl": "enhanced/factor"
+   },
+   {
+    "naam": "MN",
+    "pagina": 116,
+    "product_of_mandaat": null,
+    "segment": null,
+    "stijl": "actief"
+   }
+  ],
+  "fiduciair_beheerder": "MN",
+  "letterlijk": "SPE heeft het vermogensbeheer uitbesteed aan MN Vermogensbeheer en Blackrock. [...] Fiduciair vermogensbeheer: MN Financiele dienstverlening",
+  "organisatie": "extern",
+  "pagina": 42
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "SPE classificeert zich als een zogeheten artikel 8 fonds conform de SFDR. [...] Het uitsluiten van ongewenste activiteiten [...] Actief aandeelhouderschap [...] Het beperken van negatieve effecten [...] door het betrekken van milieu- en sociale factoren en ondernemingsbestuur (ESG) bij beleggingsbeslissingen",
+  "omschrijving": "SPE is een SFDR Artikel 8 fonds. Uitsluitingen (UN Global Compact, controversiële wapens, tabak, kolen, sanctielanden), engagement (dialoog met 65 ondernemingen via MN) en stembeleid (gestemd op 211 AV's via MN en 859 via BlackRock). ESG-integratie bij managerselectie. CO2-voetafdruk aandelenportefeuille (MN) was 41 tCO2e/mln euro.",
+  "pagina": 26,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 93,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Beheerkosten beleggingen Aandelen: 916.138 [...] Totaal kosten vermogensbeheer: 6.168.431 (1,00%) [...] Transactiekosten: 278.283 (0,05%)",
+  "pagina": 29,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.05,
+  "vermogensbeheerkosten_totaal_pct": 1
+ },
+ "opmerkingen": "Begin 2025 is een deel van de US Large Cap aandelenportefeuille verkocht. Begin december 2025 zijn aandelen Technology Wereldwijd volledig verkocht en aandelen Opkomende Markten afgebouwd ten behoeve van herbalancering naar de matchingportefeuille. In aanloop naar de Wtp-overgang (beoogd per 1 juli 2027) is het balansrisico verlaagd door de renteafdekking te verhogen naar 80% en de US-Dollar afdekking naar 75%. Naast de DB-portefeuille is er een DC-regeling (life-cycles) beheerd door BlackRock.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": true,
+  "hoofdstijl": "actief",
+  "letterlijk": "Bij de berekening van het actief beheer risico wordt alleen een buffer becijferd voor de aandelenportefeuilles indien de tracking error groter is dan 1%. [...] Dit actief beheer risico wordt becijferd over de categorieën aandelen ontwikkelde markten en aandelen opkomende markten, omdat de tracking errors voor deze categorieën meer dan 1% bedragen.",
+  "pagina": 97,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 75,
+  "letterlijk": "Verder is aan het einde van het derde kwartaal de afdekking van de US-Dollar verhoogd van 50% naar 75%.",
+  "omschrijving": "Aan het einde van het derde kwartaal van 2025 is de afdekking van de US-Dollar verhoogd van 50% naar 75% om het balansrisico te verlagen in aanloop naar de Wtp-transitie.",
+  "pagina": 26
+ },
+ "naam": "Essity",
+ "pad": "data/annual_reports/93_Essity_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

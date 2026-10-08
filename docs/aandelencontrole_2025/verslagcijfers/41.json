@@ -1,0 +1,94 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 53286,
+  "feitelijk_pct": 21.1,
+  "letterlijk": "Aandelen 53.286 21,1%, Private equity 20.890 8,3%, Totaal belegd vermogen 252.036 100,0% (p. 58); 3D Aandelen 19,8%, Aandelen klassiek opkomende markten 2,2% (p. 146)",
+  "omvat_private_equity": false,
+  "pagina": 58,
+  "private_equity_pct": 8.3,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 22,
+  "totaal_beleggingen_eur_mln": 252036
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "PGGM Vermogensbeheer",
+    "pagina": 146,
+    "product_of_mandaat": "3D Aandelen",
+    "segment": "wereldwijd (ontwikkelde en opkomende markten)",
+    "stijl": "actief"
+   },
+   {
+    "naam": "PGGM Vermogensbeheer",
+    "pagina": 146,
+    "product_of_mandaat": "Aandelen klassiek opkomende markten",
+    "segment": "opkomende markten",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "PGGM Vermogensbeheer",
+  "letterlijk": "Uitbesteding vermogensbeheer: De overeenkomst met PGGM Vermogensbeheer wordt in 2026 geëvalueerd (p. 94); Van de totale aandelen- en private equity-beleggingen is € 20.308 miljoen belegd in PGGM beleggingsfondsen (p. 126)",
+  "organisatie": "intern",
+  "pagina": 94
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "ESG-integratie in selectie",
+   "engagement"
+  ],
+  "letterlijk": "De wijziging vraagt van de vermogensbeheerders dat zij alleen beleggingen opnemen waarbij duidelijk kan worden toegelicht waarom deze in de portefeuille thuishoren... én om de manier waarop de belegging aansluit bij de duurzaamheidsdoelstellingen (p. 59); engagement worden ingezet (p. 94); afgestemd op de gepromote milieu en sociale kenmerken: aandelen 99,1% (p. 203)",
+  "omschrijving": "PFZW voert een 3D-beleggingsbeleid (rendement, risico, impact) waarbij beleggingen moeten aansluiten bij duurzaamheidsdoelstellingen (ESG-integratie in selectie). Engagement wordt ingezet bij beleggingen. Het fonds valt onder SFDR Artikel 8, waarbij 99,1% van de aandelen is afgestemd op de gepromote milieu- en sociale kenmerken.",
+  "pagina": 203,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 41,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.1,
+  "letterlijk": "Aandelen kosten 0,1% (p. 58); Totale kosten vermogensbeheer 0,37% (waarvan beheervergoeding 0,27% en prestatievergoeding 0,10%), transactiekosten 0,08% van het gemiddeld belegd vermogen (p. 62, 64)",
+  "pagina": 58,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.08,
+  "vermogensbeheerkosten_totaal_pct": 0.37
+ },
+ "opmerkingen": "In mei 2025 heeft PFZW als onderdeel van de overgang naar het beleggingsbeleid voor 2030 (Wtp-voorbereiding) het aandelenmandaat herzien naar een 3D-invulling (rendement, risico en duurzaamheid/impact), waarbij vermogensbeheerders opnames expliciet moeten motiveren. Het 3D Aandelen-mandaat kent als enige mandaat een tracking error > 1%. Participaties in PGGM-fondsen zijn voor aandelen en private equity teruggebracht van € 63.169 mln naar € 20.308 mln ten gunste van directe marktnoteringen (€ 52.595 mln beursgenoteerde aandelen ultimo 2025). De portefeuille bleef na de overgang in mei 2025 achter bij de strategische benchmark (netto 8,0% vs 9,0%). Transactiekosten stegen mede door deze portefeuilleombouw.",
+ "regio": {
+  "basis": "strategisch",
+  "letterlijk": "3D Aandelen bestaat (strategisch) voor afgerond 90,1% uit ontwikkelde markten en 9,9% uit opkomende markten.",
+  "pagina": 146,
+  "verdeling": [
+   {
+    "pct": 90.1,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 9.9,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "FTSE All World index (customized)"
+  ],
+  "factorbeleggen": null,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "Slechts een beperkt deel van de beursgenoteerde aandelen- en vastgoedportefeuilles kent actief beheer. 3D Aandelen heeft als enige mandaat een tracking error groter dan 1% (p. 149); Strategische benchmark aandelen: FTSE All World index (customized) (p. 198)",
+  "pagina": 149,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "USD: dynamische afdekking 40% - 60%",
+  "omschrijving": "Geen specifiek afdekkingspercentage voor de aandelenportefeuille gerapporteerd; voor de totale portefeuille/strategische benchmark geldt voor USD een dynamische afdekking van 40% - 60%.",
+  "pagina": 198
+ },
+ "naam": "Zorg en Welzijn / PFZW (Healthcare and Welfare)",
+ "pad": "data/annual_reports/41_PFZW_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

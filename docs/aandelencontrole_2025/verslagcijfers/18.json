@@ -1,0 +1,81 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 435.706,
+  "feitelijk_pct": 34,
+  "letterlijk": "Stand per 31 december 2025: Aandelen 435.706, Totaal 1.171.878 (x € 1.000); Beleggingsportefeuille ultimo 2025: Aandelen wereldwijd ontwikkelde landen 28%, Aandelen wereldwijd opkomende landen 6%",
+  "omvat_private_equity": false,
+  "pagina": 47,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 30.6,
+  "totaal_beleggingen_eur_mln": 1171.878
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": null,
+  "letterlijk": "Het vermogensbeheer is in 2025 uitbesteed aan: - Black Rock Investment Management; - Achmea Real Estate; - Achmea Mortgage; - Aberdeen Group; - T. Rowe Price Group, Inc; - Legal & General Group; - Northern Trust Asset Management.",
+  "organisatie": "extern",
+  "pagina": 12
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid"
+  ],
+  "letterlijk": "Bpf HiBiN classificeert de pensioenregeling als een financieel product met duurzame kenmerken (artikel 8). (...) Voor de beleggingscategorieën: aandelen ontwikkelde en opkomende landen (...) zijn ESG-benchmarks het uitgangspunt",
+  "omschrijving": "Het fonds classificeert de pensioenregeling als SFDR Artikel 8. De aandelenportefeuille is passief belegd in ESG-gescreende fondsen met uitsluitingen (o.a. UN Global Compact schendingen, clustermunitie, sancties, tabak en fossiele brandstoffen zoals thermische kolen en arctische/onconventionele olie en gas). Stem- en engagementactiviteiten worden door de vermogensbeheerders namens het fonds uitgevoerd. In 2025 is gekozen voor een mandaatoplossing conform de Climate Transition Benchmark (CTB), te implementeren in 2026.",
+  "pagina": 25,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 18,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Totale vermogensbeheerkosten € 3.532.371 0,28% (...) Transactiekosten € 462.253 0,04%",
+  "pagina": 7,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.04,
+  "vermogensbeheerkosten_totaal_pct": 0.28
+ },
+ "opmerkingen": "Het vermogensbeheer is volledig extern belegd bij 7 partijen (o.a. BlackRock, Northern Trust, Legal & General, T. Rowe Price, Aberdeen), maar het verslag noemt geen specifieke fondsnamen of beheerderstoewijzingen per aandelencategorie. In 2025 heeft het bestuur besloten over te stappen van beleggingsfondsen naar een wereldwijd aandelenmandaat conform de Climate Transition Benchmark (CTB) waarbij een nieuwe vermogensbeheerder is geselecteerd (implementatie in 2026). Kosten worden niet per beleggingscategorie uitgesplitst. In voorbereiding op de transitie naar het nieuwe pensioenstelsel (solidaire premieregeling) is per februari 2025 de renteafdekking verhoogd naar 80%.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Specificatie aandelen naar regio: Europa 60.351 (14,2%); Noord-Amerika 228.917 (53,9%)",
+  "pagina": 52,
+  "verdeling": [
+   {
+    "pct": 14.2,
+    "regio": "Europa"
+   },
+   {
+    "pct": 53.9,
+    "regio": "Noord-Amerika"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "MSCI World NTC Screened 100% Hedged to EUR Index (Net Dividend)",
+   "MSCI Emerging Markets NTC Screened Index (net dividend)"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Aandelen ontwikkelde markten: MSCI World NTC Screened 100% Hedged to EUR Index (Net Dividend); Aandelen opkomende markten: MSCI Emerging Markets NTC Screened Index (net dividend); De resultaten van deze passieve beleggingen lagen in de buurt van de benchmark, conform verwachting.",
+  "pagina": 26,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "binnen het aandelenfonds ontwikkelde markten wordt het valutarisico vrijwel geheel afgedekt. - binnen het aandelenfonds opkomende markten en het vastgoedaandelenfonds wordt het valutarisico niet afgedekt.",
+  "omschrijving": "Binnen het aandelenfonds ontwikkelde markten wordt het valutarisico vrijwel geheel afgedekt (benchmark 100% hedged naar EUR; afdekkingsbandbreedte ontwikkelde markten 60-90%). Binnen het aandelenfonds opkomende markten wordt het valutarisico niet afgedekt.",
+  "pagina": 27
+ },
+ "naam": "HiBiN (Building Materials Trade)",
+ "pad": "data/annual_reports/18_HiBiN_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

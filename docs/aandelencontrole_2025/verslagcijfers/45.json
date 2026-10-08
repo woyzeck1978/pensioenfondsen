@@ -1,0 +1,95 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": null,
+  "feitelijk_pct": null,
+  "letterlijk": "Tabel 5 Samenstelling beleggingen DB-regeling: Matching producten 93,30% (strategisch 90,00%), Return producten: Private equity 6,70% (strategisch 10,00%) (p. 18); de DB-portefeuille kent geen beursgenoteerde aandelen (p. 28). Binnen de DC-regeling wordt belegd in aandelen via cohorten (5% tot 100% aandelen) (p. 22); marktwaarde DC-aandelenfondsen: Cardano ESG Transition Enhanced Index Equity Global € 264,4 mln, AAM Emerging Markets Equity € 38,5 mln op totaal DC-beleggingen € 616,3 mln (p. 23).",
+  "omvat_private_equity": false,
+  "pagina": 18,
+  "private_equity_pct": 6.7,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Cardano",
+    "pagina": 21,
+    "product_of_mandaat": "Cardano ESG Transition Enhanced Index Equity Global",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "AAM",
+    "pagina": 21,
+    "product_of_mandaat": "AAM MSCI Emerging Markets",
+    "segment": "opkomende markten",
+    "stijl": "actief"
+   }
+  ],
+  "fiduciair_beheerder": null,
+  "letterlijk": "Tabel 7 Beleggingen DC-pensioenregelingen: Aandelen: Cardano ESG Transition Enhanced Index Equity Global (vaste verhouding 87,5%, passief, benchmark MSCI World Net Dividend) en AAM MSCI Emerging Markets (vaste verhouding 12,5%, actief, benchmark MSCI Emerging Markets Net Dividend) (p. 21). De beleggingen zijn uitbesteed aan externe vermogensbeheerders (p. 22); Northern Trust fungeert als custodian en Cardano als overlaymanager (p. 64).",
+  "organisatie": "extern",
+  "pagina": 21
+ },
+ "esg": {
+  "co2_doel": "tussentijdse doelstelling scope 1&2 van 43 ton CO2e per geïnvesteerde miljoen euro (economische emissie-intensiteit, actueel 24) en sturen op reductie van CO2e voor beursgenoteerde aandelen",
+  "eigen_index": false,
+  "instrumenten": [
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "In 2024 is het DVB-beleid geactualiseerd. Daarbij is onderzoek gedaan naar een mogelijke herclassificatie van artikel 6 naar artikel 8 onder SFDR. In 2025 is het besluit genomen om de DB- en DC-regelingen voortaan als artikel 8 te classificeren. (p. 23); Tabel 16 CO2e-uitstoot DC: Beursgenoteerde aandelen Scope 1&2 Economische emissie-intensiteit 24, Tussentijdse doelstelling scope 1&2 43 (p. 28); Omdat we voor DC voor zowel beursgenoteerde aandelen als bedrijfsobligaties doelen hebben gesteld en sturen op reductie van CO2e zullen we voor die categorieën een korte toelichting geven (p. 28).",
+  "omschrijving": "In 2025 is besloten om de DB- en DC-regelingen van SPIN voortaan als SFDR Artikel 8 te classificeren (voorheen artikel 6). Binnen de DC-regeling wordt voor aandelen belegd in het Cardano ESG Transition Enhanced Index Equity Global fonds. Voor beursgenoteerde aandelen geldt een CO2-reductiedoel met een tussentijdse doelstelling voor Scope 1&2 economische emissie-intensiteit van 43 ton CO2e per geïnvesteerde miljoen euro (de actuele stand bedroeg 24 ton CO2e/€ mln in 2025, een afname van 15,8% in absolute emissies t.o.v. 2024). In 2026 worden een investment framework voor impact investments en een klimaatrisicoanalyse afgerond.",
+  "pagina": 23,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 45,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Tabel 36 Kosten vermogensbeheer (x 1.000 Euro): Aandelen: Beheerkosten 340, Performance gerelateerde kosten -, Transactiekosten 167 (p. 74); Tabel 37 Kosten vermogensbeheer (% van het belegd vermogen): Totaal beheerskosten 0,23% (beheerkosten exclusief performance fees 0,25%), Transactiekosten 0,03%, Totaal 0,26% (p. 74).",
+  "pagina": 74,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.03,
+  "vermogensbeheerkosten_totaal_pct": 0.23
+ },
+ "opmerkingen": "SPIN voert zowel een DB-regeling als een DC-regeling. De DB-portefeuille kent geen beursgenoteerde aandelen (p. 28); de returnportefeuille van de DB-regeling bestaat uitsluitend uit private equity (strategisch 10,00%, feitelijk 6,70% ultimo 2025, p. 18). De aandelenbeleggingen van SPIN vinden plaats binnen de DC-regeling via beleggingscohorten in de lifecycle (waarbij het aandelengewicht varieert van 5% tot 100% afhankelijk van het leeftijdscohort en het profiel Behoudend/Neutraal/Ambitieus, p. 21-22). Binnen het aandelendeel van de DC-regeling geldt een vaste strategische verhouding van 87,5% Cardano ESG Transition Enhanced Index Equity Global (passief/hedged to €) en 12,5% AAM MSCI Emerging Markets (actief/unhedged) (p. 21). De marktwaarde bedroeg ultimo 2025 respectievelijk € 264,4 mln en € 38,5 mln op een totaal van € 616,3 mln aan DC-fondsen (p. 23). Cardano behaalde een rendement van 16,4% (benchmark 16,7%) en AAM 11,5% (benchmark 17,8%) (p. 23). In 2025 zijn er geen wijzigingen geweest in de DC-portefeuille (p. 22). Vermogensbeheer is uitbesteed aan externe beheerders; Northern Trust is custodian en Cardano overlaymanager (p. 64). In 2025 zijn de DB- en DC-regelingen hergeclassificeerd naar SFDR Artikel 8 (p. 23). Aandelenbeheerkosten bedroegen € 340 duizend en transactiekosten € 167 duizend (geen performance fee) (p. 74); totale fondsbrede vermogensbeheerkosten waren 0,23% (excl. transactiekosten) / 0,26% (incl. transactiekosten 0,03%) van circa € 4,3 mrd belegd vermogen (p. 74). De transitie naar het nieuwe pensioenstelsel (Wtp) staat gepland voor 1 januari 2028; in 2025 zijn het implementatieplan en transitie-communicatieplan opgesteld (p. 76).",
+ "regio": {
+  "basis": "strategisch",
+  "letterlijk": "Tabel 7 Beleggingen DC-pensioenregelingen: Aandelen: Cardano ESG Transition Enhanced Index Equity Global Vaste verhouding 87,5%, AAM MSCI Emerging Markets Vaste verhouding 12,5% (p. 21); Tabel 8: Aandelen wereldwijd 87,5% en aandelen opkomende markten 12,5% (streefgewichten) (p. 22).",
+  "pagina": 21,
+  "verdeling": [
+   {
+    "pct": 87.5,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 12.5,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": 12.5,
+  "benchmarks": [
+   "MSCI World Net Dividend (hedged to €)",
+   "MSCI Emerging Markets Net Dividend (unhedged)"
+  ],
+  "factorbeleggen": true,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "Tabel 7 Beleggingen DC-pensioenregelingen: Cardano ESG Transition Enhanced Index Equity Global: vaste verhouding 87,5%, beheertype passief, benchmark MSCI World Net Dividend (hedged to €); AAM MSCI Emerging Markets: vaste verhouding 12,5%, beheertype actief, benchmark MSCI Emerging Markets Net Dividend (unhedged) (p. 21).",
+  "pagina": 21,
+  "passief_pct": 87.5,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Tabel 7 Beleggingen DC-pensioenregelingen: Cardano ESG Transition Enhanced Index Equity Global: (hedged to €); AAM MSCI Emerging Markets: (unhedged) (p. 21); Binnen enkele van de beleggingsfondsen wordt beperkt gebruik gemaakt van derivaten, voornamelijk ten behoeve van het afdekken van valutarisico (p. 22).",
+  "omschrijving": "Binnen de DC-aandelenportefeuille is het wereldwijde aandelenfonds (Cardano ESG Transition Enhanced Index Equity Global, 87,5% vaste verhouding) afgedekt naar de euro ('hedged to €'), terwijl het opkomende markten fonds (AAM MSCI Emerging Markets, 12,5% vaste verhouding) niet-afgedekt is ('unhedged'). Binnen enkele van de beleggingsfondsen wordt beperkt gebruikgemaakt van derivaten voor het afdekken van valutarisico. Voor de DB-portefeuille hanteert het fonds een currency overlay uitgevoerd door Cardano.",
+  "pagina": 21
+ },
+ "naam": "IBM (SPIN) / IBM Nederland",
+ "pad": "data/annual_reports/45_IBM_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

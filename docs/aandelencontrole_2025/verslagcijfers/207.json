@@ -1,0 +1,65 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 0,
+  "feitelijk_pct": null,
+  "letterlijk": "Meerjarenoverzicht van kerncijfers en kengetallen (Bedragen in duizenden €): Beleggingsportefeuille 2025: Aandelen -, Vastrentende waarden -, Derivaten -, Balanswaarde beleggingen -",
+  "omvat_private_equity": false,
+  "pagina": 5,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 0
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": null,
+  "letterlijk": "Het vermogensbeheer was tot het moment van de verkoop van de beleggingen in mei 2025 uitbesteed aan Northern Trust Asset Management (NTAM) en First Liability Matching N.V. (FLM).",
+  "organisatie": "extern",
+  "pagina": 13
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [],
+  "letterlijk": "Het beleid inzake duurzaam beleggen was tot aan de herverzekering nog van toepassing. De onderliggende beleggingen van dit financiële product houden geen rekening met de EU-criteria voor ecologisch duurzame economische activiteiten.",
+  "omschrijving": "Het beleid inzake duurzaam beleggen was van kracht tot aan de herverzekering per 1 mei 2025. De beleggingen hielden geen rekening met de EU-criteria voor ecologisch duurzame economische activiteiten (SFDR artikel 6). Sinds 1 mei 2025 is het ESG-beleid niet meer van toepassing en heeft DNB vrijstelling verleend voor de ESG-risicoanalyse.",
+  "pagina": 20,
+  "sfdr_artikel": 6
+ },
+ "fund_id": 207,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Tabel Vermogensbeheer (p. 16): Aandelen 2025: Beheerkosten in euro -, Transactiekosten in euro -, Beheerkosten in basispunten -, Transactiekosten in basispunten -; Kosten als percentage van het gemiddeld belegde vermogen 0,09%, Transactiekosten 0,23%; 'Er is in 2025, net als in voorgaande jaren, geen sprake geweest van enige prestatievergoeding'",
+  "pagina": 16,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.23,
+  "vermogensbeheerkosten_totaal_pct": 0.09
+ },
+ "opmerkingen": "Stichting Pensioenfonds British American Tobacco heeft in maart 2024 een derisking-beleid ingevoerd, waardoor het reguliere strategische beleggingsbeleid niet meer van toepassing was en de aandelenallocatie naar nihil werd afgebouwd (saldo aandelen ultimo 2024 en 2025 bedroeg € 0 mln). Per 1 mei 2025 zijn alle pensioenaanspraken, pensioenrechten, toekomstige toeslagverlening en nieuwe pensioenopbouw herverzekerd bij Aegon Levensverzekering N.V. (a.s.r. / Aegon). In mei 2025 zijn alle resterende beleggingen (inclusief rentehedge en derivaten) verkocht ter voldoening van de koopsom. Het resterende vermogen werd tijdelijk in een geldmarktfonds aangehouden en vanaf augustus 2025 als liquide middelen geclassificeerd. Ultimo 2025 bedraagt de balanswaarde van de beleggingen nihil (€ 0). Het vermogensbeheer was tot mei 2025 uitbesteed aan Northern Trust Asset Management (NTAM) en First Liability Matching (FLM); de overeenkomsten met vermogensbeheerders en custodian The Northern Trust Corporation zijn in 2025 opgezegd en de beleggingsadviescommissie is opgeheven. Het ESG-beleid was van kracht tot 1 mei 2025 (SFDR artikel 6); per die datum is het vervallen en heeft DNB vrijstelling verleend voor de ESG-risicoanalyse.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Er is sprake van passief beheer, waardoor de kosten van de beleggingsfondsen relatief laag liggen.",
+  "pagina": 17,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "",
+  "omschrijving": "In het verslag wordt geen melding gemaakt van valuta-afdekking voor aandelen; in 2025 hield het fonds geen aandelenbeleggingen aan wegens het in 2024 ingezette derisking-beleid en de verkoop van alle beleggingen in mei 2025 ter financiering van de herverzekering.",
+  "pagina": null
+ },
+ "naam": "Pensioenfonds British American Tobacco",
+ "pad": "data/annual_reports/207_Pensioenfonds_British_Am_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

@@ -1,0 +1,91 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 723.625,
+  "feitelijk_pct": null,
+  "letterlijk": "Aandelen 723.625 ... Stand per 31 december 2025 2.819.047 (bedragen x € 1.000); normportefeuille 2026: Aandelen Ontwikkelde Markten 24,4%, Aandelen Opkomende Markten 2,8%; Private Equity allocatie 0,15% ultimo 2025",
+  "omvat_private_equity": true,
+  "pagina": 85,
+  "private_equity_pct": 0.15,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 27.2,
+  "totaal_beleggingen_eur_mln": 2819.047
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "BlackRock",
+    "pagina": 81,
+    "product_of_mandaat": "BlackRock Emerging Markets Index Fund",
+    "segment": "Opkomende markten",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "Goldman Sachs Asset Management (GSAM)",
+  "letterlijk": "Het vermogensbeheer is uitbesteed aan 10 vermogensbeheerders ... De rol van fiduciair adviseur is ondergebracht bij Goldman Sachs Asset Management (GSAM).",
+  "organisatie": "extern",
+  "pagina": 16
+ },
+ "esg": {
+  "co2_doel": "realisatie van een CO₂-reductie van 55% in 2030 en uiterlijk in 2050 een netto-nul emissie in de beleggingsportefeuille",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "ESG-integratie in selectie",
+   "CO2-reductiedoel",
+   "Paris-aligned benchmark"
+  ],
+  "letterlijk": "realisatie van een CO₂-reductie van 55% in 2030 en uiterlijk in 2050 een netto-nul emissie in de beleggingsportefeuille ... doelstelling mee om een ESG-score van de beleggingsportefeuille te realiseren die leidt tot een 20%-30% hoger duurzaamheidsgehalte dan de brede marktindex",
+  "omschrijving": "Het fonds hanteert uitsluitingen (controversiële wapens, VN Global Compact/OESO, kolen/fossiel), stemmen via ISS en normatief engagement via Sustainalytics. Voor ontwikkelde markten geldt een Paris-aligned benchmark/aanpak met een CO2-reductiedoel van 55% in 2030 (netto-nul in 2050) en een 20-30% hogere ESG-score dan de brede marktindex. Opkomende markten en private equity hebben geen specifieke duurzaamheidswaarborgen.",
+  "pagina": 135,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 28,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "De totale vermogensbeheerkosten exclusief transactiekosten bedragen € 7.179. Uitgedrukt in de gemiddelde marktwaarde van de beleggingen is dit 0,24% ... De transactiekosten bedragen 0,05% van het gemiddeld belegd vermogen en zijn onderdeel van de indirecte vermogensbeheerkosten 0,05%",
+  "pagina": 47,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.05,
+  "vermogensbeheerkosten_totaal_pct": 0.24
+ },
+ "opmerkingen": "De aandelenportefeuille bestaat uit ontwikkelde markten (discretionair mandaat met Paris-aligned benchmark) en opkomende markten (BlackRock Emerging Markets Index Fund). De beheerder van het discretionaire mandaat ontwikkelde markten wordt in het verslag niet met naam genoemd (vermogensbeheer is verdeeld over 10 externe partijen). Private equity betreft een afbouwende legacy-portefeuille (0,15% allocatie ultimo 2025; strategisch gewicht 0,0%), maar staat op de balans nog onder 'Aandelen' verantwoord (€ 3,12 mln). In de verslaguitsnede is geen uitsplitsing van vermogensbeheerkosten per beleggingscategorie opgenomen.",
+ "regio": {
+  "basis": "strategisch",
+  "letterlijk": "Aandelen Ontwikkelde Markten 24,4% ... Aandelen Opkomende Markten 2,8%",
+  "pagina": 30,
+  "verdeling": [
+   {
+    "pct": 24.4,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 2.8,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "Paris aligned benchmark"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Het rendement op de wereldwijde aandelenportefeuille bedroeg 0,32%, iets onder de Paris aligned benchmark ... BlackRock Emerging Markets Index Fund",
+  "pagina": 31,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 100,
+  "letterlijk": "Het valutarisico van beleggingen in ontwikkelde aandelenmarkten wordt volledig afgedekt door valuta’s die een materiële impact kunnen hebben op de waarde van de portefeuille. Het betreft de Amerikaanse dollar (USD), de Japanse yen (JPY) en de Britse pond (GBP). Het valutarisico van beleggingen in opkomende markten en private equity wordt niet afgedekt.",
+  "omschrijving": "Het valutarisico van beleggingen in ontwikkelde aandelenmarkten wordt volledig (100%) afgedekt voor USD, JPY en GBP via een valuta-overlaymandaat uitgevoerd door Cardano. Valutarisico van beleggingen in opkomende markten en private equity wordt niet afgedekt.",
+  "pagina": 76
+ },
+ "naam": "Notariaat (Notaries)",
+ "pad": "data/annual_reports/28_Notariaat_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

@@ -1,0 +1,105 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 307.42,
+  "feitelijk_pct": 37.16,
+  "letterlijk": "Return portefeuille (tabel Portefeuillewaarde x € 1.000): Aandelen wereldwijd ontwikkelde markten 267.800 (32,37%), Aandelen opkomende markten 39.620 (4,79%), Totaal inclusief portefeuille ter afdekking valutarisico 827.230. Strategische norm binnen return portefeuille: Aandelen wereldwijd ontwikkelde markten 75,60%, Aandelen opkomende markten 9,80% (totaal aandelen 85,40% van returnportefeuille).",
+  "omvat_private_equity": false,
+  "pagina": 43,
+  "private_equity_pct": null,
+  "strategisch_basis": "rendementsportefeuille",
+  "strategisch_pct": 85.4,
+  "totaal_beleggingen_eur_mln": 827.23
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "BNP Paribas",
+    "pagina": 42,
+    "product_of_mandaat": "Discreet aandelenmandaat wereldwijd ontwikkelde markten (MSCI World SRI)",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "UBS",
+    "pagina": 42,
+    "product_of_mandaat": "UBS ETF (LU) MSCI Emerging Markets Socially Responsible",
+    "segment": "opkomende markten",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "Columbia Threadneedle Investments",
+  "letterlijk": "De uitvoering van de duurzame beleggingen in aandelen ontwikkelde markten vindt plaats via een passief mandaat dat wordt uitgevoerd door BNP Paribas... Voor de belegging in duurzame aandelen in Emerging Markets is een beleggingsfonds c.q. ETF geselecteerd en wel het UBS ETF (LU) MSCI Emerging Markets Socially Responsible... Columbia Threadneedle Investment (CTI) is sinds 1 april 2024 de vermogens- / fiduciair beheerder van het fonds.",
+  "organisatie": "extern",
+  "pagina": 42
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "best-in-class",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "BPZ heeft gekozen voor duurzame indexen voor haar aandelenbeleggingen. Het beleid is om de index te volgen en daar om heen geen aanvullende handelingen uit te voeren of expliciete keuzes te maken. De duurzaamheid komt alleen terug bij de keuze voor de te volgen benchmark... De indexen hanteren een 'best-in-class' selectiebenadering om zich te richten op de top 25% bedrijven in elke sector volgens hun MSCI ESG-ratings... Hierin heeft BPZ in 2025 besloten om het pensioenproduct te positioneren als \"artikel-8 product\".",
+  "omschrijving": "BPZ belegt passief via duurzame MSCI SRI-indices met een best-in-class benadering (top 25% ESG-scores per sector, minimale ESG controversies score van 4, uitsluiting van o.a. controversiële wapens en schendingen van UN Global Compact; bij opkomende markten tevens Low Carbon Select). Het fonds is gekwalificeerd als SFDR Artikel 8.",
+  "pagina": 43,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 43,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "De totale kosten vermogensbeheer inclusief transactiekosten en aan- en verkoopkosten zijn € 2.833.000 in 2025. In procenten van het gemiddeld belegd vermogen (€ 836.384.982) zijn deze kosten 0,339% [0,34% in meerjarentabel pag 47]. De totale kosten vermogensbeheer exclusief transactiekosten en aan- en verkoopkosten zijn € 2.803.000 in 2025. In procenten ten opzichte van het gemiddeld belegd vermogen is dat 0,335%. De transactiekosten en aan- en verkoopkosten zijn samen € 30.000 in 2025, wat in procenten van het gemiddeld belegd 0,004% is. BPZ kent geen prestatie gerelateerde vergoedingen toe aan de vermogensbeheerder. De prestatie gerelateerde kosten zijn daarom nihil. Tabel kosten per beleggingscategorie (x € 1.000): Aandelen beheerkosten 230, transactiekosten 12, aan- en verkoopkosten 20, totaal 262.",
+  "pagina": 46,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.004,
+  "vermogensbeheerkosten_totaal_pct": 0.34
+ },
+ "opmerkingen": "(1) Concentratielimiet VS en benchmarkwijziging: Om het concentratierisico naar één land te beperken tot maximaal 50% (gewicht VS was ca. 70%), is de benchmark voor aandelen ontwikkelde markten eind 2025 aangepast naar een samengestelde benchmark van 70% MSCI World SRI 5% Issuer Capped en 30% MSCI World ex USA SRI (met kwartaallijkse herbalancering). (2) Aandelenbescherming via putopties: Eind januari 2025 zijn putopties (uitoefenprijs 90%) over de gehele aandelenportefeuille aangekocht en het hele jaar aangehouden om het neerwaartse risico richting de Wtp-transitie af te dekken met behoud van opwaarts potentieel. (3) Valuta-afdekking USD: In april 2025 is de USD-afdekking in aandelen ontwikkelde markten verhoogd van 50% naar 73% (vastgesteld op 75% in beleggingsplan 2026). (4) Wtp-transitie per 1 januari 2026: Overgang naar solidaire premieregeling met collectieve portefeuille en maandelijkse lifecycle-sturing.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Specificatie aandelen naar regio (PDF pag 96, per 31-12-2025): Azië ex Japan 10,4%, Europa EU 12,5%, Europa niet-EU 6,2% (samen Europa 18,7%), Midden- en Zuid Amerika 0,9%, Noord-Amerika 60,5%, Pacific 1,6% (samen Azië-Pacific 12,0%), Overig 7,9% (samen Overig 8,8%). Totaal 100,0%. Strategische norm returnportefeuille (pag 43): Aandelen wereldwijd ontwikkelde markten 75,60%, Aandelen opkomende markten 9,80%.",
+  "pagina": 96,
+  "verdeling": [
+   {
+    "pct": 60.5,
+    "regio": "Noord-Amerika"
+   },
+   {
+    "pct": 18.7,
+    "regio": "Europa"
+   },
+   {
+    "pct": 12,
+    "regio": "Azië-Pacific"
+   },
+   {
+    "pct": 8.8,
+    "regio": "Overig"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": 0,
+  "benchmarks": [
+   "MSCI World SRI 5% Issuer Capped Index",
+   "MSCI World ex USA SRI",
+   "MSCI Emerging Markets SRI Low Carbon Select 5% Issuer Capped Index"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "De return portefeuille wordt passief belegd. Daarom wordt op voorhand verwacht dat het rendement van de returnportefeuille heel dicht bij het rendement van de benchmark ligt... Er zal in de gebruikte aandelenfondsen in principe sprake zijn van passief beheer (index tracking), tenzij dat niet mogelijk of niet efficiënt is. Deze aanpak komt tot uiting in een lage ex-ante tracking error. Het bestuur heeft een limiet van 1,0 gesteld aan de ex-ante tracking error binnen het eigen aandelen mandaat aandelen wereldwijd ontwikkelde markten.",
+  "pagina": 43,
+  "passief_pct": 100,
+  "tracking_error_pct": 1
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 73,
+  "letterlijk": "Het bestuur heeft in april 2025 het besluit genomen om voor aandelen de valuta-afdekking te verhogen van 50% naar 73% om het risico van een verdere verzwakking van de Amerikaanse dollar te verminderen. Het overige valutarisico binnen de returnportefeuille wordt niet afgedekt. Strategisch dekte BPZ in 2025 de positie in de Amerikaanse dollar voor 50% van het wereldwijde aandelenfonds af (bandbreedte 25-75%).",
+  "omschrijving": "In april 2025 is de afdekking van het Amerikaanse dollarrisico binnen aandelen ontwikkelde markten verhoogd van 50% naar 73% (bandbreedte 25-75%; in Beleggingsplan 2026 vastgesteld op 75%). Overige valuta binnen de returnportefeuille worden niet afgedekt.",
+  "pagina": 43
+ },
+ "naam": "Zuivel- en aanverwante industrie / BPZ (Dairy Industry)",
+ "pad": "data/annual_reports/43_Zuivel_en_aanverwante_in_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

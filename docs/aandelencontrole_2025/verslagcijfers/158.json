@@ -1,0 +1,91 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 113.6,
+  "feitelijk_pct": 24.2,
+  "letterlijk": "Aandelen 113,6 24,2 20,0",
+  "omvat_private_equity": false,
+  "pagina": 12,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 20,
+  "totaal_beleggingen_eur_mln": 469.4
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Robeco Institutional Asset Management",
+    "pagina": 12,
+    "product_of_mandaat": "Robeco QI Institutional Global Developed 3D Active Equity Fund",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "enhanced/factor"
+   },
+   {
+    "naam": "Towers Watson",
+    "pagina": 12,
+    "product_of_mandaat": "Towers Watson Global Equity Focus Fund",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "actief"
+   }
+  ],
+  "fiduciair_beheerder": "Aegon AM",
+  "letterlijk": "Het fiduciair beheer voor de beleggingen risico pensioenkring is uitbesteed aan Aegon AM",
+  "organisatie": "extern",
+  "pagina": 101
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": true,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid"
+  ],
+  "letterlijk": "Voor de beleggingen in het Robeco QI Institutional Global Developed 3D Active Equity Fund, het Towers Watson Global Equity Focus Fund en het Robeco Global multi-factor Credits Fund voeren de fondsbeheerders stem- en engagement activiteiten uit en bepalende fondsbeheerders de uitsluitingslijst.",
+  "omschrijving": "Fondsbeheerders Robeco en Towers Watson voeren uitsluitingen, engagement en stembeleid uit. Voor Robeco construeert MSCI aangepaste indices op basis van uitsluitingen (49 ondernemingen uitgesloten in het MSCI World universum). Towers Watson voert engagement uit o.a. via Hermes EOS.",
+  "pagina": 15,
+  "sfdr_artikel": null
+ },
+ "fund_id": 158,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.03,
+  "letterlijk": "Aandelen 142 0,03; Totaal 3.086 0,65",
+  "pagina": 18,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": null,
+  "vermogensbeheerkosten_totaal_pct": 0.65
+ },
+ "opmerkingen": "Pensioenkring IFF is per 1 oktober 2025 gestart binnen Stap APF. De beleggingsresultaten en vermogensbeheerkosten (0,65%) hebben daarom betrekking op de periode 1 oktober 2025 tot en met 31 december 2025. Er wordt uitsluitend belegd in aandelen ontwikkelde markten via twee actieve beleggingsfondsen (Robeco en Towers Watson). In december 2025 is het beleggingsplan 2026 vastgesteld.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Aandelen 113,6 24,2 20,0; Ontwikkelde markten 113,6 24,2 20,0",
+  "pagina": 12,
+  "verdeling": [
+   {
+    "pct": 100,
+    "regio": "Wereld ontwikkeld"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "MSCI World"
+  ],
+  "factorbeleggen": true,
+  "hoofdstijl": "actief",
+  "letterlijk": "Robeco QI Institutional Global Developed 3D Active Equity Fund ... Towers Watson Global Equity Focus Fund",
+  "pagina": 12,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 100,
+  "letterlijk": "Aandelen ontwikkelde markten ... 100,0%",
+  "omschrijving": "Valutarisico op aandelen ontwikkelde markten wordt voor 100% afgedekt (zonder aparte FX-overlay). Op stichtingsniveau geldt als uitgangspunt een gedeeltelijke afdekking van USD, GBP en JPY.",
+  "pagina": 52
+ },
+ "naam": "IFF",
+ "pad": "data/annual_reports/158_IFF_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

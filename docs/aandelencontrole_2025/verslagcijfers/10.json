@@ -1,0 +1,74 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": null,
+  "feitelijk_pct": null,
+  "letterlijk": "",
+  "omvat_private_equity": false,
+  "pagina": null,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": "Columbia Threadneedle Investments B.V.",
+  "letterlijk": "Fiduciary management Columbia Threadneedle Investments B.V.",
+  "organisatie": "extern",
+  "pagina": 116
+ },
+ "esg": {
+  "co2_doel": "These benchmarks follow a carbon reduction pathway in line with the Paris Climate agreement",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "Paris-aligned benchmark",
+   "CO2-reductiedoel"
+  ],
+  "letterlijk": "Climate transition benchmarks have been selected for the equity and corporate bond portfolios. These benchmarks follow a carbon reduction pathway in line with the Paris Climate agreement.",
+  "omschrijving": "PfAB valt onder SFDR Artikel 8 en past op aandelen uitsluitingen toe (o.a. controversiële wapens, tabak, steenkool, teerzand, ernstige OESO-schendingen), engagement en stembeleid (via Columbia Threadneedle Investments) en Climate transition benchmarks die een CO2-reductiepad volgen in lijn met het Klimaatakkoord van Parijs.",
+  "pagina": 130,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 10,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "",
+  "pagina": null,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": null,
+  "vermogensbeheerkosten_totaal_pct": null
+ },
+ "opmerkingen": "In 2025 zijn niet-lineaire derivaten aangekocht om het neerwaartse aandelenrisico af te dekken met behoud van opwaarts potentieel, met het oog op de beoogde invaardatum onder de Wtp (uitbesteed aan CTI, p. 40). Het beleggingsbeleid voor aandelen is overwegend passief (p. 31, 32). Externe vermogensbeheerders worden genoemd op p. 49 en 116 (o.a. Amundi, Fidelity, Schroder, State Street, UBS, Achmea Real Estate, Bouwinvest), maar de uitsnede bevat geen specificatie van individuele aandelenmandaten, noch een balans of kostentabel per categorie.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "Climate transition benchmarks",
+   "MSCI World Index"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "which is in line with the Fund’s predominantly passive investment policy.",
+  "pagina": 32,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Emerging market equities were the top performers, with a return of 17.3% on a euro‑unhedged basis, narrowly ahead of developed market equities (16.8% euro‑hedged).",
+  "omschrijving": "Het verslag vermeldt valutarisicoafdekking bij de rendementsportefeuille en noemt rendementen van ontwikkelde markten op euro-hedged basis en opkomende markten op euro-unhedged basis, maar specificeert geen exact afdekkingspercentage voor de aandelenportefeuille.",
+  "pagina": 28
+ },
+ "naam": "Architectenbureaus (Architecture Firms)",
+ "pad": "data/annual_reports/10_Architectenbureaus_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

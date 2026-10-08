@@ -1,0 +1,105 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 350,
+  "feitelijk_pct": 21,
+  "letterlijk": "Aandelen Bedrag 350 Percentage 21%, Totaal 1.647 100% (Portefeuillewaarde, bedragen x € 1.000.000, p. 53); op p. 8 staat Aandelen 350.184 en Totaal beleggingen 1.646.514 (x € 1.000)",
+  "omvat_private_equity": false,
+  "pagina": 53,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 1647
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "BlackRock",
+    "pagina": 52,
+    "product_of_mandaat": "BlackRock CCF Developed World Index Fund (Paris Aligned Benchmark variant)",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "Achmea IM",
+  "letterlijk": "Daarnaast is, in het kader van het MVB-beleid, ook het BlackRock CCF Developed World Index Fund omgezet naar de Paris Aligned Benchmark (PAB) variant (p. 52); Achmea IM treedt op als fiduciair beheerder (p. 54, 65, 70)",
+  "organisatie": "extern",
+  "pagina": 52
+ },
+ "esg": {
+  "co2_doel": "50% minder CO2-uitstoot dan de moederindex en jaarlijks minimaal 7% extra emissiereductie (via Paris Aligned Benchmark)",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "ESG-integratie in selectie",
+   "Paris-aligned benchmark",
+   "CO2-reductiedoel"
+  ],
+  "letterlijk": "SPD classificeert haar pensioenregeling als een artikel 8 product. Dat doet het pensioenfonds door MVB-instrumenten in te zetten, zoals engagement, stemmen op aandeelhoudersvergaderingen, ESG-integratie en uitsluiting (p. 60); BlackRock CCF Developed World Index Fund omgezet naar Paris Aligned Benchmark (PAB) variant (p. 52)",
+  "omschrijving": "Pensioenregeling classificeert als SFDR artikel 8. SPD past uitsluitingen, stemmen, engagement en ESG-integratie toe. Voor aandelen ontwikkelde markten is overgestapt naar een Paris Aligned Benchmark (PAB) fonds met klimaatcriteria (50% minder CO2-uitstoot en jaarlijks minimaal 7% extra emissiereductie).",
+  "pagina": 60,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 1,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Kosten % (excl. transactiekosten) 0,41%, Transactiekosten % 0,13% (p. 44); Aandelen transactiekosten € 0,9 miljoen (p. 48); De performance gerelateerde kosten van SPD beperken zich tot de performance fee voor direct vastgoed en alternatieve beleggingen vermogensbeheer (p. 44)",
+  "pagina": 44,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.13,
+  "vermogensbeheerkosten_totaal_pct": 0.41
+ },
+ "opmerkingen": "In december 2025 is de beleggingsportefeuille aangepast naar de doelportefeuille van de Flexibele PremieRegeling (FPR) ter voorbereiding op het invaren per 1 januari 2026. Hierbij is de renteafdekking afgebouwd en de aandelenpositie vergroot (aankopen in ontwikkelde en opkomende markten). In het kader van het MVB-beleid is het BlackRock CCF Developed World Index Fund omgezet naar de Paris Aligned Benchmark (PAB) variant. De portefeuille is sinds 1 juli 2024 geünitiseerd in modules (waaronder Module Rendement en Module Rente). Private equity (IPPE II / Atlas Venture Fund VIII) bevindt zich in de afbouwfase en valt onder alternatieve beleggingen.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Specificatie aandelen naar regio (31-12-2025): Europa 16,6%, Noord-Amerika 63,0%, Wereldwijd 0,1%, Opkomende markten 13,7%, Azië Pacific 5,5%, Australazië 1,1% (p. 108)",
+  "pagina": 108,
+  "verdeling": [
+   {
+    "pct": 63,
+    "regio": "Noord-Amerika"
+   },
+   {
+    "pct": 16.6,
+    "regio": "Europa"
+   },
+   {
+    "pct": 13.7,
+    "regio": "Opkomende markten"
+   },
+   {
+    "pct": 5.5,
+    "regio": "Azië-Pacific"
+   },
+   {
+    "pct": 1.2,
+    "regio": "Overig"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "MSCI World Index",
+   "MSCI Emerging Market Index",
+   "Paris Aligned Benchmark (PAB)"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "SPD belegt passief in aandelen. De doelstelling van een passieve strategie is het zo nauwkeurig mogelijk volgen van het rendement van de geselecteerde benchmark (p. 48); Voor de aandelenmandaten en EMD HC is dit passief ingericht (p. 66)",
+  "pagina": 48,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Het valutarisico werd (gedeeltelijk) afgedekt naar de euro binnen de beleggingsinstellingen van de beleggingscategorieën Aandelen Wereld (Ontwikkelde Markten) (p. 54)",
+  "omschrijving": "Het valutarisico binnen Aandelen Wereld (Ontwikkelde Markten) wordt binnen de beleggingsinstelling(en) gedeeltelijk afgedekt naar euro's met behulp van valutaderivaten. Valutarisico van opkomende markten aandelen wordt niet actief afgedekt.",
+  "pagina": 54
+ },
+ "naam": "Dierenartsen (SPD - Veterinarians)",
+ "pad": "data/annual_reports/1_Dierenartsen_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

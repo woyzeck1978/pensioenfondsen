@@ -1,0 +1,88 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 0,
+  "feitelijk_pct": 0,
+  "letterlijk": "Tabel Beleggingsplan Wegingen (p. 36): Aandelen strategisch 35,0%, feitelijk per 31-12-2025 0,0%. Balans (p. 85, in duizenden euro): Stand ultimo 2025 Aandelen beleggingsfondsen 0, Totaal beleggingen voor risico pensioenfonds 0.",
+  "omvat_private_equity": false,
+  "pagina": 36,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 35,
+  "totaal_beleggingen_eur_mln": 0
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Northern Trust",
+    "pagina": 30,
+    "product_of_mandaat": "Wereldwijd ESG (indexfonds)",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Northern Trust",
+    "pagina": 30,
+    "product_of_mandaat": "Opkomende markten ESG (aandelenfonds)",
+    "segment": "opkomende markten",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": null,
+  "letterlijk": "p. 30: 'Return - Aandelen: Wereldwijd ESG - Northern Trust; Opkomende markten ESG - Northern Trust'; p. 31: 'Het pensioenfonds belegt in wereldwijde aandelen gehedged naar euro via een indexfonds'; p. 112: 'Het vermogensbeheer was in het verslagjaar ondergebracht bij de volgende dienstverleners: [...] Northern Trust'.",
+  "organisatie": "extern",
+  "pagina": 30
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "stembeleid",
+   "engagement",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "p. 36: 'beleggen we niet in bedrijven die controversiële wapens maken [...] En we beleggen niet in de tabaksindustrie. We gaan, via onze vermogensbeheerders, ook in gesprek met ondernemingen'; 'Volgens de Europese regels (SFDR) mogen we onze pensioenregeling en beleggingsmix niet ‘duurzaam’ noemen'; p. 37: 'Het pensioenfonds belegt in beursgenoteerde aandelen en vastgoedaandelen via beleggingsfondsen van Northern Trust [...] sluiten ons aan bij het stembeleid/de stemrichtlijnen van Northern Trust [...] Zowel de belegging in aandelen in ontwikkelde markten als de belegging in aandelen in opkomende markten zijn ESG-screened. Ook is er een voting- en engagementbeleid van toepassing.'",
+  "omschrijving": "Uitsluitingen van controversiële wapens en tabak; selectiecriteria conform UNPRI en OESO-richtsnoer; stembeleid en engagement via Northern Trust beleggingsfondsen. Geen duurzame beleggingsmix volgens SFDR (artikel 6).",
+  "pagina": 36,
+  "sfdr_artikel": 6
+ },
+ "fund_id": 198,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "p. 47: 'Aandelen: Vermogensbeheerkosten 356, Transactiekosten 71' (in duizend euro; geen percentages genoemd voor categorie aandelen). Totaal: 'Vermogensbeheerkosten als percentage van het gemiddeld beheerd vermogen: 0,43%', 'Transactiekosten als percentage van het gemiddeld beheerd vermogen: 0,09%'. p. 46: 'Bij het pensioenfonds is geen sprake van performance-gerelateerde kosten.'",
+  "pagina": 47,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.09,
+  "vermogensbeheerkosten_totaal_pct": 0.43
+ },
+ "opmerkingen": "Per 1 december 2025 heeft een volledige collectieve waardeoverdracht (CWO) plaatsgevonden naar Pensioenfonds Vervoer. Ultimo 2025 houdt het fonds geen beleggingen meer aan (feitelijk saldo aandelen per 31-12-2025 is € 0 mln, 0,0%). Het fonds bevindt zich in liquidatie. Tot de overdracht werd de aandelenportefeuille passief en extern beheerd door Northern Trust via twee ESG-gescreende indexfondsen.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "Het verslag onderscheidt wel 'Wereldwijd ESG' (ontwikkelde markten) en 'Opkomende markten ESG' (p. 30, 35, 37), maar noemt geen regionale procentuele verdeling of gewichten van de aandelenportefeuille.",
+  "pagina": 30,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "MSCI World NTC screened 100% hedged to Euro Index",
+   "MSCI Emerging Markets NTC screened Index"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "p. 30: Wereldwijd ESG benchmark 'MSCI World NTC screened 100% hedged to Euro Index', Opkomende markten ESG benchmark 'MSCI Emerging Markets NTC screened Index'; p. 31: 'Het pensioenfonds belegt in wereldwijde aandelen gehedged naar euro via een indexfonds'.",
+  "pagina": 30,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "p. 30: 'MSCI World NTC screened 100% hedged to Euro Index'; p. 31, voetnoot 4: 'Het pensioenfonds belegt in wereldwijde aandelen gehedged naar euro via een indexfonds'; voetnoot 5: 'Inclusief 55% afdekking van het valutarisico binnen het aandelenfonds opkomende markten via US Dollar.'",
+  "omschrijving": "Wereldwijde aandelen 100% afgedekt naar euro via indexfonds; binnen het aandelenfonds opkomende markten geldt een 55% afdekking van het valutarisico via US Dollar. Geen totaal afdekkingspercentage voor de gehele aandelenportefeuille genoemd.",
+  "pagina": 31
+ },
+ "naam": "Rijn- en Binnenvaart",
+ "pad": "data/annual_reports/198_RijnEnBinnenvaart_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

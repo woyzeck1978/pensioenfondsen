@@ -1,0 +1,97 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 8845.759,
+  "feitelijk_pct": null,
+  "letterlijk": "Tabel 6.1 Beleggingen voor risico deelnemers (bedragen x EUR 1.000): Stand ultimo 2025 Zakelijke waarden Aandelenbeleggingsfondsen 8,845,759; Totaal belegd vermogen voor risico deelnemers 12,897,193.",
+  "omvat_private_equity": false,
+  "pagina": 31,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 12897.193
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Goldman Sachs Asset Management",
+    "pagina": 54,
+    "product_of_mandaat": "First Class Return Index Fund",
+    "segment": "wereldwijd ontwikkeld en opkomende markten",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Goldman Sachs Asset Management",
+    "pagina": 47,
+    "product_of_mandaat": "First Class Return Fund",
+    "segment": "wereldwijd ontwikkeld en opkomende markten",
+    "stijl": "actief"
+   },
+   {
+    "naam": "Goldman Sachs Asset Management",
+    "pagina": 62,
+    "product_of_mandaat": "First class sustainable return Fund",
+    "segment": "wereldwijd",
+    "stijl": "actief"
+   }
+  ],
+  "fiduciair_beheerder": null,
+  "letterlijk": "De beleggingsadministratie van BeFrank PPI is uitbesteed aan Goldman Sachs Asset Management (GSAM)... De overstap hangt samen met de verkoop van NN Investment Partners aan GSAM (p. 12); De beleggingen bestaan uitsluitend uit participaties in beleggingsfondsen (p. 28); Het First Class Return Fund belegde in aandelen, emerging markets aandelen (p. 47); Het First Class Return Index Fund belegde in aandelen, emerging markets aandelen (p. 54); First class sustainable return Fund (p. 62).",
+  "organisatie": "extern",
+  "pagina": 12
+ },
+ "esg": {
+  "co2_doel": "In het fonds een lagere CO2 footprint te realiseren dan de benchmark MSCI World",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "best-in-class",
+   "engagement",
+   "stembeleid",
+   "impactbeleggen",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "De drie lifecycles van BeFrank promoten ecologische en/of sociale kenmerken, zoals beschreven in Artikel 8 van de Sustainable Finance Disclosure Regulation (SFDR). [...] uitsluitingen toe die gebaseerd zijn op ons normenkader [...] uitoefenen van stemrecht en engagement [...] In het fonds een lagere CO2 footprint te realiseren dan de benchmark MSCI World (p. 44).",
+  "omschrijving": "De drie lifecycles van BeFrank PPI (passief, actief en duurzaam) zijn geclassificeerd als SFDR Artikel 8. BeFrank past uitsluitingen toe op basis van internationale normen (UN Global Compact, OESO) en controversiële activiteiten (o.a. wapens, tabak, fossiele brandstoffen/kolen, winstgerichte gevangenissen, palmolie). Voor alle lifecycles worden stembeleid, engagement en ESG-integratie toegepast. Daarnaast wordt gestreefd naar een lagere CO2-voetafdruk dan de MSCI World benchmark. In de duurzame lifecycle wordt geselecteerd op basis van een positieve bijdrage aan transitiethema's en SDG's (impactbeleggen). Zelf Beleggen promoot geen ecologische/sociale kenmerken.",
+  "pagina": 13,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 140,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Kosten vermogensbeheer per beleggingscategorie 2025: Aandelen Beheerkosten 12.878; Performance gerelateerde kosten: 0 (bedragen x EUR 1.000). Transactiekosten zijn verwerkt in de waarde van de beleggingen. De hoogte van deze transactiekosten zijn niet apart gespecificeerd, omdat deze kosten niet met zekerheid vastgesteld kunnen worden.",
+  "pagina": 12,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": null,
+  "vermogensbeheerkosten_totaal_pct": null
+ },
+ "opmerkingen": "BeFrank PPI N.V. is een premiepensioeninstelling (100% dochter van Nationale-Nederlanden Levensverzekering Maatschappij N.V.) die uitsluitend beschikbare premieregelingen (DC) uitvoert, waarbij beleggingsrisico's volledig bij deelnemers liggen. Beleggingen vinden uitsluitend plaats via participaties in beleggingsfondsen (€ 12.897,193 mln totaal ultimo 2025, waarvan € 8.845,759 mln in aandelenbeleggingsfondsen verdeeld over Mature markets en Emerging markets). Deelnemers beleggen via lifecycles (Passieve Lifecycle, Actieve Lifecycle of Duurzame Lifecycle) of via Zelf Beleggen. Aandelenbeleggingen worden ingevuld via het First Class Return Index Fund (passief), het First Class Return Fund (actief) en het First class sustainable return Fund (duurzaam). De beleggingsadministratie is uitbesteed aan Goldman Sachs Asset Management (GSAM), maar verhuist in 2026 naar een nieuwe dienstverlener (en nieuwe bewaarinstelling) vanwege de eerdere verkoop van NN Investment Partners aan GSAM en de beëindiging van deze dienstverlening door GSAM. De drie lifecycles classificeren als SFDR Artikel 8 en hanteren uitsluitingen, ESG-integratie, stemrecht, engagement en een CO2-voetafdrukdoelstelling onder de MSCI World benchmark. Kosten vermogensbeheer voor aandelen bedroegen in 2025 € 12,878 mln (beheerkosten); transactiekosten zijn verwerkt in de koersen en worden niet afzonderlijk gespecificeerd, en er golden geen prestatievergoedingen (€ 0).",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "Aandelenbeleggingen zijn onder te verdelen in beleggingen in ‘Mature markets’ en ‘Emerging markets’.",
+  "pagina": 31,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "MSCI World"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "Passieve Lifecycle [...] Actieve Lifecycle (p. 11); Duurzame Lifecycle (p. 12); Voor de lifecycles is geen index aangewezen als referentiebenchmark (p. 13); In het fonds een lagere CO2 footprint te realiseren dan de benchmark MSCI World (p. 44).",
+  "pagina": 11,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Per balansdatum heeft BeFrank PPI enkel posities in euro’s, inkomende gelden ten behoeve van deelnemers in andere valuta worden vrijwel direct omgewisseld naar euro’s.",
+  "omschrijving": "BeFrank PPI heeft per balansdatum uitsluitend posities in euro's; inkomende gelden ten behoeve van deelnemers in andere valuta worden vrijwel direct omgewisseld naar euro's. Een specifiek afdekkingspercentage voor de aandelenportefeuille wordt niet genoemd.",
+  "pagina": 33
+ },
+ "naam": "BeFrank PPI",
+ "pad": "data/annual_reports/140_BeFrank_PPI_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

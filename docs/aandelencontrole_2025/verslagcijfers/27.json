@@ -1,0 +1,116 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 144.343,
+  "feitelijk_pct": null,
+  "letterlijk": "p. 73: Zakelijke waarden 144.343, Totaal 331.343 (in duizenden euro's); p. 25: Weging zakelijke waarden (aandelen) 40%",
+  "omvat_private_equity": false,
+  "pagina": 73,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 40,
+  "totaal_beleggingen_eur_mln": 331.343
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "BlackRock",
+    "pagina": 29,
+    "product_of_mandaat": "CCF Developed World (ESG Screened) Index Fund",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "BlackRock",
+    "pagina": 34,
+    "product_of_mandaat": "BlackRock fondsen (opkomende landen)",
+    "segment": "opkomende markten",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Goldman Sachs",
+    "pagina": 24,
+    "product_of_mandaat": "beleggingsmandaat verzekerd deel NN",
+    "segment": "aandelen",
+    "stijl": "actief"
+   },
+   {
+    "naam": "Aegon Asset Management",
+    "pagina": 30,
+    "product_of_mandaat": "SAF Equity",
+    "segment": "aandelen",
+    "stijl": "actief"
+   }
+  ],
+  "fiduciair_beheerder": "Achmea Investment Management",
+  "letterlijk": "p. 33: SPNG heeft het vermogensbeheer van het eigen beheer deel uitbesteed aan Achmea Investment Management B.V. (Achmea IM). Achmea IM geeft als fiduciair manager van SPNG... invulling; p. 34: Naast de Achmea fondsen belegt SPNG in aandelen via BlackRock fondsen (wereld en opkomende landen)",
+  "organisatie": "extern",
+  "pagina": 33
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement"
+  ],
+  "letterlijk": "p. 32: De pensioenregelingen van SPNG hebben geen duurzaamheidsdoelstelling... classificeren derhalve als artikel 6 regelingen; p. 33: Maatschappelijk verantwoord beleggen wordt gedaan op verschillende manieren: – Het uitsluiten van bepaalde beleggingen. – Het in gesprek gaan met bedrijven waarin belegd wordt (engagement).",
+  "omschrijving": "SPNG classificeert als SFDR artikel 6 en volgt het ESG-beleid van de onderliggende beleggingsfondsen (BlackRock). Het MVB-beleid omvat uitsluitingen (omstreden wapens, tabak, schendingen VN Global Compact, gesanctioneerde landen) en engagement. Geen CO2-doelstelling.",
+  "pagina": 32,
+  "sfdr_artikel": 6
+ },
+ "fund_id": 27,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "p. 38: Kosten vermogensbeheer in % van het gemiddeld belegd vermogen: 0,254%; Transactiekosten in % van het gemiddeld belegd vermogen: 0,033%",
+  "pagina": 38,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.033,
+  "vermogensbeheerkosten_totaal_pct": 0.254
+ },
+ "opmerkingen": "SPNG onderscheidt een verzekerd deel (garantiecontracten bij NN en ASR, actief beheerd door Goldman Sachs en Aegon AM) en eigen beheer (vanaf 2013). Binnen eigen beheer (DB en premieregeling) worden aandelen passief belegd via BlackRock indexfondsen, met Achmea IM als fiduciair manager voor het DB-deel. Het verslag noemt geen afzonderlijk totaalgewicht voor feitelijk_pct van aandelen; binnen eigen beheer DB is de weging Wereld 36,48% en Opkomende markten 7,28% (samen 43,76%), bij € 144,343 mln zakelijke waarden op € 331,343 mln totale beleggingen eigen beheer. In de regioverdeling omvat Azië-Pacific (8,2%) zowel Azië (6,8%) als Australië (1,4%). Wtp-voorbereidingen zijn gaande.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "p. 93: Europa 15,8%, Noord Amerika 61,4%, Azië 6,8%, Australië 1,4%, Opkomende markten 14,6% (Totaal 144.343 duizend euro)",
+  "pagina": 93,
+  "verdeling": [
+   {
+    "pct": 61.4,
+    "regio": "Noord-Amerika"
+   },
+   {
+    "pct": 15.8,
+    "regio": "Europa"
+   },
+   {
+    "pct": 14.6,
+    "regio": "Opkomende markten"
+   },
+   {
+    "pct": 8.2,
+    "regio": "Azië-Pacific"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "MSCI World ex Select Controversies EUR NET Index"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "p. 29: Daarom is voor passieve beleggingsoplossingen gekozen. – Zakelijke waarden: CCF Developed World (ESG Screened) Index Fund (benchmark: MSCI World ex Select Controversies EUR NET Index); p. 24: Beide vermogens-beheerders (Goldman Sachs... en Aegon Asset Management...) hanteren binnen het mandaat een ‘actieve’ beleggingsstijl.",
+  "pagina": 29,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 75,
+  "letterlijk": "p. 25: Daarnaast wordt vanuit strategisch oogpunt het valutarisico binnen de beleggingscategorie Aandelen Wereld voor 75% afgedekt voor de Amerikaanse dollar, het Britse pond en de Japanse Yen. De overige valuta’s worden niet afgedekt.",
+  "omschrijving": "Voor de beleggingscategorie Aandelen Wereld wordt het valutarisico voor 75% strategisch afgedekt naar de euro voor USD, GBP en JPY. Overige valuta's worden niet afgedekt.",
+  "pagina": 25
+ },
+ "naam": "Nederlandse Groothandel / SPNG (Dutch Wholesale)",
+ "pad": "data/annual_reports/27_SPNG_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

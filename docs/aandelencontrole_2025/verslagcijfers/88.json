@@ -1,0 +1,97 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 492.521,
+  "feitelijk_pct": null,
+  "letterlijk": "Beleggingen (x € 1.000): Actuele waarde (actiiva en passiva) 2.979.416; Aandelen 492.521",
+  "omvat_private_equity": false,
+  "pagina": 10,
+  "private_equity_pct": null,
+  "strategisch_basis": "rendementsportefeuille",
+  "strategisch_pct": 63.5,
+  "totaal_beleggingen_eur_mln": 2979.416
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Goldman Sachs Asset Management",
+    "pagina": 144,
+    "product_of_mandaat": "Goldman Sachs Enhanced Index Sustainable",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "enhanced/factor"
+   },
+   {
+    "naam": "Northern Trust",
+    "pagina": 144,
+    "product_of_mandaat": "Northern Trust - Emerging Markets Custom ESG Equity",
+    "segment": "opkomende markten",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "Goldman Sachs Asset Management (GSAM)",
+  "letterlijk": "Het afdekken van de rente door middel van swaps voert de fiduciair vermogensbeheerder (GSAM) uit.",
+  "organisatie": "extern",
+  "pagina": 86
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Het Pensioenfonds heeft de pensioenregeling onder SFDR geclassificeerd als een artikel 8-product, waarmee wordt aangegeven dat het Pensioenfonds duurzame kenmerken promoot.",
+  "omschrijving": "Het fonds classificeert onder SFDR als artikel 8. Omdat het fonds uitsluitend via beleggingsfondsen belegt, past het uitsluitingen toe bij fondsselectie en -evaluatie, vereist het PRI-ondertekening voor ESG-integratie en toetst het op aanwezigheid van een engagement- en stembeleid bij beheerders.",
+  "pagina": 65,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 88,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Kosten vermogensbeheer als % gemiddeld belegd vermogen 0,25%; Transactiekosten als % gemiddeld belegd vermogen 0,07%; De vergoedingen die zijn betaald aan de vermogensbeheerders zijn niet gerelateerd aan de prestaties van de vermogensbeheerders.",
+  "pagina": 51,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.07,
+  "vermogensbeheerkosten_totaal_pct": 0.25
+ },
+ "opmerkingen": "In het kader van de verbeterde dekkingsgraad en de voorbereiding op een mogelijke buy-out is het risico in 2025 versneld afgebouwd boven een dekkingsgraad van 130%. Omdat de illiquide vastgoedportefeuille niet op korte termijn kon worden verkocht, zijn ter compensatie extra aandelen ontwikkelde markten afgebouwd. Naar aanleiding van de SAA-studie 2025 is besloten om in 2026 de aandelenallocatie verder met 2,5% te verlagen ten gunste van de LDI-portefeuille.",
+ "regio": {
+  "basis": "strategisch",
+  "letterlijk": "Wereldwijde aandelen 59,4%; Opkomende landen aandelen 7,3%",
+  "pagina": 62,
+  "verdeling": [
+   {
+    "pct": 59.4,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 7.3,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "MSCI World net total return",
+   "MSCI Emerging markets net total return"
+  ],
+  "factorbeleggen": true,
+  "hoofdstijl": "passief",
+  "letterlijk": "We beleggen passief, en als we actief beleggen beoordelen we de tracking error.",
+  "pagina": 86,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 0,
+  "letterlijk": "De valutarisico’s in de rendementsportefeuille worden niet afgedekt.",
+  "omschrijving": "Het valutarisico in de rendementsportefeuille (waaronder de aandelenportefeuille valt) wordt niet afgedekt. Het fonds beschouwt de Amerikaanse dollar als safe haven die dempend werkt bij wereldwijde marktschokken.",
+  "pagina": 82
+ },
+ "naam": "Delta Lloyd",
+ "pad": "data/annual_reports/88_DeltaLloyd_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

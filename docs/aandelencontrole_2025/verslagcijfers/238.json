@@ -1,0 +1,92 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 191.7,
+  "feitelijk_pct": 37.9,
+  "letterlijk": "Aandelen: in € miljoen 191,7, Actuele mix in % 37,9, Strategische mix in % 36,0. Private equity: 21,7 (4,3%). Totaal: in € miljoen 506,4 (100,0%).",
+  "omvat_private_equity": false,
+  "pagina": 12,
+  "private_equity_pct": 4.3,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 36,
+  "totaal_beleggingen_eur_mln": 506.4
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Aegon AM",
+    "pagina": 39,
+    "product_of_mandaat": "MM Developed World Equity Index Fund",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Aegon AM",
+    "pagina": 40,
+    "product_of_mandaat": "MM Global Emerging Markets Fund",
+    "segment": "opkomende markten",
+    "stijl": "actief"
+   }
+  ],
+  "fiduciair_beheerder": "Aegon AM",
+  "letterlijk": "Het fiduciair beheer voor de beleggingen risico pensioenkring is uitbesteed aan Aegon AM (p. 111). Beleggingen in aandelen vinden plaats via MM Developed World Equity Index Fund (passief) en MM Global Emerging Markets Fund (actief) (p. 13, 39-40).",
+  "organisatie": "extern",
+  "pagina": 111
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Het uitsluitingsbeleid behorend bij het beleid inzake Maatschappelijk Verantwoord Beleggen had dit jaar een negatieve impact op het relatieve rendement van circa 0,3% (p. 39). Daarnaast had het fonds, vanwege het minder duurzame karakter van veel bedrijven in deze sector, een onderweging naar de sterk presterende sector grondstoffen (p. 40).",
+  "omschrijving": "Stap past voor Pensioenkring TotalEnergies Nederland een MVB-uitsluitingsbeleid toe op de aandelenportefeuille (impact -0,3% op relatief rendement ontwikkelde markten). Binnen het MM Global Emerging Markets Fund vindt ESG-integratie plaats via bottom-up aandelenselectie, resulterend in een onderweging van minder duurzame sectoren zoals grondstoffen.",
+  "pagina": 39,
+  "sfdr_artikel": null
+ },
+ "fund_id": 238,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.06,
+  "letterlijk": "Kosten vermogensbeheer Aandelen 312 (0,06% van gemiddeld belegd vermogen), Totaal 1.952 (0,38%) (p. 20); Transactiekosten Aandelen 92 (0,02%), Totaal 404 (0,08%) (p. 21). Prestatievergoedingen op totaalniveau 0,00% (met name veroorzaakt door vastgoed) (p. 21).",
+  "pagina": 20,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": 0.02,
+  "transactiekosten_totaal_pct": 0.08,
+  "vermogensbeheerkosten_totaal_pct": 0.38
+ },
+ "opmerkingen": "Pensioenkring TotalEnergies Nederland is ondergebracht bij Stichting Algemeen Pensioenfonds Stap. Het vermogensbeheer is fiduciair uitbesteed aan Aegon AM. De aandelenportefeuille (€ 191,7 mln ultimo 2025, 37,9% feitelijk vs 36,0% strategisch) is verdeeld over twee multi-manager fondsen: passief belegd in ontwikkelde markten via het MM Developed World Equity Index Fund (€ 160,1 mln / 31,7%) en actief belegd in opkomende markten via het MM Global Emerging Markets Fund (€ 31,6 mln / 6,2%) met externe bottom-up managers. In december 2025 is het beleggingsplan 2026 vastgesteld zonder wijzigingen in de strategische allocatie. Valutarisico in ontwikkelde markten is voor 50,0% afgedekt via een FX-overlay (inclusief Canadese dollars specifiek voor deze kring). Private equity (€ 21,7 mln / 4,3%) en vastgoed worden separaat verantwoord en maken geen deel uit van de aandelenpost. Aandelen behaalden in 2025 een rendement van 6,3% tegen 8,7% voor de benchmark.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Actuele mix in % (2025): Ontwikkelde markten 31,7 (160,1 mln), Opkomende markten 6,2 (31,6 mln). Totaal aandelen 37,9 (191,7 mln).",
+  "pagina": 12,
+  "verdeling": [
+   {
+    "pct": 31.7,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 6.2,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "Voor de meeste beleggingscategorieën wordt passief belegd (p. 14). MM Developed World Equity Index Fund kent een passieve beleggingsstijl (p. 39). MM Global Emerging Markets Fund managers maken gebruik van bottom-up aandelenselectie (p. 40). Op totaalniveau bedraagt de ex-ante tracking error 0,2% op jaarbasis (p. 21).",
+  "pagina": 14,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 50,
+  "letterlijk": "Aandelen ontwikkelde markten 50,0%; Aandelen opkomende markten n.v.t.; Afdekking met een FX overlay X; * Deze pensioenkring heeft ook een afdekking van het valutarisico voor Canadese dollars. (p. 56)",
+  "omschrijving": "Valutarisico op aandelen ontwikkelde markten wordt voor 50,0% afgedekt met een FX-overlay (valutatermijncontracten), gericht op gedeeltelijke afdekking van USD, GBP, JPY en specifiek voor TotalEnergies tevens Canadese dollars (CAD). Voor aandelen opkomende markten is valuta-afdekking n.v.t.",
+  "pagina": 56
+ },
+ "naam": "Kring TotalEnergies NL (Stap)",
+ "pad": "data/annual_reports/238_Kring_TotalEnergies_NL_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

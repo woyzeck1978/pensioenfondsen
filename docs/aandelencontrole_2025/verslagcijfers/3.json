@@ -1,0 +1,85 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 319,
+  "feitelijk_pct": null,
+  "letterlijk": "Stand per 31 december 2025: Aandelen 319 [...] Totaal 1.119",
+  "omvat_private_equity": false,
+  "pagina": 144,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 1119
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Achmea Investment Management",
+    "pagina": 19,
+    "product_of_mandaat": "Coördinerend vermogensbeheer",
+    "segment": "Aandelen ontwikkelde en opkomende markten",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "Achmea Investment Management",
+  "letterlijk": "Het coördinerend vermogensbeheer is uitbesteed aan Achmea Investment Management (AIM). De custodian service is belegd bij JP Morgan (JPM).",
+  "organisatie": "extern",
+  "pagina": 19
+ },
+ "esg": {
+  "co2_doel": "CO₂-voetafdruk van de portefeuille in 2030 ruim 50% lager dan die van de benchmark in 2019 (reductiepad 7% per jaar); klimaatneutraal in 2050",
+  "eigen_index": true,
+  "instrumenten": [
+   "uitsluitingen",
+   "best-in-class",
+   "engagement",
+   "stembeleid",
+   "eigen ESG-index",
+   "CO2-reductiedoel",
+   "Paris-aligned benchmark",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Dit gebeurt aan de hand van een best-in-class beleid dat op ESG-maatwerk benchmarks is toegepast voor de beleggingscategorieën aandelen ontwikkelde markten, aandelen opkomende markten [...] CO₂-voetafdruk van de portefeuille in 2030 ruim 50% lager dan die van de benchmark in 2019.",
+  "omschrijving": "Huisarts & Pensioen classificeert haar pensioenregelingen als SFDR Artikel 8. Aandelen (ontwikkelde en opkomende markten) worden passief belegd tegen ESG-maatwerkbenchmarks met een best-in-class beleid en uitsluitingen (onder meer controversiële wapens, tabak, kolen, schendingen UN Global Compact/OESO en PAB-uitsluitingen). Daarnaast is er een aandelenportefeuille gericht op de thema's 'Groener, Gezonder, Veiliger en Eerlijker'. Er geldt een reductiepad van 7% per jaar (ruim 50% reductie in 2030 t.o.v. 2019) en een net-zero ambitie voor 2050. Er wordt actief gestemd en geëngageerd.",
+  "pagina": 85,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 3,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "De vermogensbeheerkosten (exclusief transactiekosten) stijgen van 0,25 procent in 2024 naar 0,30 procent in 2025. De stijging wordt veroorzaakt door hogere vergoedingen voor de aandelenportefeuille [...] De transactiekosten bedroegen in 2025 € 7,0 miljoen. Dat komt neer op 0,07 procent van het gemiddeld belegd vermogen.",
+  "pagina": 62,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.07,
+  "vermogensbeheerkosten_totaal_pct": 0.3
+ },
+ "opmerkingen": "SPH voert meerdere regelingen: de premieregeling (DC), het stabiel uitkeringscollectief (DB) en de collectief variabele pensioenregeling (CVP). Op pagina 144 worden de aandelenbeleggingen op look-through basis per 31-12-2025 gerapporteerd voor de Module Rendement (€ 319 mln op een totaal van € 1.119 mln, geen expliciet percentage genoemd; 319/1119 = 28,5%). In het kostenoverzicht op pagina 63 valt de categorie onder 'Liquide zakelijke waarden' met een gemiddeld belegd vermogen van € 2.413,8 mln en een beheervergoeding van € 3.584.000 (transactiekosten € 3.908.000 op p. 64; geen percentages per categorie vermeld). Coördinerend vermogensbeheer is uitbesteed aan Achmea Investment Management (AIM), pensioenadministratie aan APS en custody aan JP Morgan. Binnen de rendementsportefeuille voert BlackRock de valuta-afdekking uit. Aandelenfondsen worden passief gemanaged tegen ESG-maatwerkbenchmarks.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "ESG-maatwerk benchmarks (aandelen ontwikkelde markten en opkomende markten)",
+   "Paris-aligned benchmark"
+  ],
+  "factorbeleggen": null,
+  "hoofdstijl": "passief",
+  "letterlijk": "Omdat er door de vermogensbeheerders passief wordt belegd tegen deze maatwerkbenchmarks heeft de portefeuille een betere ESG-score dan de marktbenchmark.",
+  "pagina": 85,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Black Rock: valuta-afdekking",
+  "omschrijving": "Het jaarverslag vermeldt geen specifiek afdekkingspercentage voor de aandelenportefeuille. Wel wordt valuta-afdekking voor de rendementsportefeuille uitgevoerd door BlackRock.",
+  "pagina": 63
+ },
+ "naam": "Huisartsen (SPH - General Practitioners)",
+ "pad": "data/annual_reports/3_Huisartsen_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

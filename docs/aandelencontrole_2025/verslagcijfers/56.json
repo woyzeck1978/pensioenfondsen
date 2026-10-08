@@ -1,0 +1,99 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 403.057,
+  "feitelijk_pct": 22.6,
+  "letterlijk": "Normportefeuille ultimo 2025 (p. 30): Return feitelijk 39,1% (norm 35%), daarbinnen Aandelen ontwikkeld feitelijk 48,9% (subnorm 49,0%) en Aandelen opkomend feitelijk 8,9% (subnorm 9,0%), samen 58,0% norm binnen de rendementsportefeuille. Tabel grootste beleggingen ultimo 2025 (p. 112): L&G ESG Paris Aligned World Equity Index 19,12% van activa en Amundi MSCI Emerging ESG Leaders 3,48% van activa (samen 22,60%). Tabel zakelijke waarden (p. 81, x € 1.000): Ontwikkelde markten € 345.088, Opkomende markten € 57.150, Private equity € 819 (0,2%), Totaal zakelijke waarden € 403.057.",
+  "omvat_private_equity": true,
+  "pagina": 30,
+  "private_equity_pct": 0.2,
+  "strategisch_basis": "rendementsportefeuille",
+  "strategisch_pct": 58,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Legal & General Investment Management (LGIM)",
+    "pagina": 105,
+    "product_of_mandaat": "L&G ESG Paris Aligned World Equity Index",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Amundi",
+    "pagina": 105,
+    "product_of_mandaat": "Amundi MSCI Emerging ESG Leaders",
+    "segment": "opkomende markten",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": null,
+  "letterlijk": "De aandelen opkomende markten worden door Amundi beheerd en de aandelen ontwikkelde markten door LGIM. Beide aandelenfondsen hebben een MVB-oogmerk (p. 29); De aandelen opkomende markten portefeuille wordt beheerd door Amundi. Legal & General Investment Management (LGIM) is aangesteld als beheerder voor de portefeuille van voor staatsobligaties uit opkomende landen (ofwel EMD) en aandelen ontwikkelde landen (p. 105); L&G ESG Paris Aligned World Equity Index ... Amundi MSCI Emerging ESG Leaders (p. 112).",
+  "organisatie": "extern",
+  "pagina": 105
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "best-in-class",
+   "engagement",
+   "stembeleid",
+   "Paris-aligned benchmark",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "De aandelen en EMD-fondsen binnen de returnportefeuille worden passief beheerd. BPF Foodservice selecteert beleggingsfondsen die passen bij het uitsluitingenbeleid ... positieve selectie op basis van ESG-scores ... aandelen opkomende markten fonds (p. 32); stemmen (voting) en ... dialoog (engagement) (p. 107); Solactive Developed Market Paris Aligned Index (p. 30).",
+  "omschrijving": "Het pensioenfonds hanteert een SFDR Artikel 8-classificatie. De aandelenportefeuille is passief belegd: ontwikkelde markten volgt een Paris-Aligned Benchmark (Solactive Developed Market Paris Aligned Index via LGIM) en opkomende markten volgt een ESG Leaders index (MSCI Emerging Markets ESG Leaders via Amundi met positieve selectie op ESG-scores). Uitsluitingen worden toegepast (o.a. controversiële wapens en UN Global Compact-schenders). Engagement en stembeleid worden uitbesteed aan de vermogensbeheerders.",
+  "pagina": 32,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 56,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Kosten vermogensbeheer 0,19%, Transactiekosten 0,07%, Totaal kosten vermogensbeheer 0,26% van het gemiddeld belegd vermogen (p. 39). Tabel p. 40 toont per mandaat: LGIM - Ontwikkelde markten beheerkosten 0,02% en transactiekosten 0,04%; Amundi - Opkomende markten beheerkosten 0,07% en transactiekosten 0,12% (geen geconsolideerde rij aandelen). Er zijn geen performance gerelateerde kosten gemaakt (p. 39).",
+  "pagina": 39,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.07,
+  "vermogensbeheerkosten_totaal_pct": 0.19
+ },
+ "opmerkingen": "In 2024 zijn selectietrajecten afgerond waarbij BPF Foodservice is overgestapt naar een Paris-Aligned fonds voor ontwikkelde markten (LGIM) en een ESG Leaders fonds voor opkomende markten (Amundi); van voormalig beheerder SSGA werd nog een kostenrestitutie ontvangen. De aandelenportefeuille wordt volledig passief beheerd via beleggingsfondsen. Het pensioenfonds belegt bewust niet in private equity (afgezien van een resterende afwikkelpositie van 0,2%), hedge funds of commodities om de kosten laag te houden. In het kader van de Wtp-voorbereiding is de renteafdekking verhoogd naar 110% en is begin 2026 een putoptiestrategie geïmplementeerd.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "In onderstaande tabel wordt de verdeling naar de verschillende aandelen categorieën getoond: Ontwikkelde markten (Mature markets) 345.088 (85,6%), Opkomende markten (Emerging markets) 57.150 (14,2%), Private equity 819 (0,2%) (p. 81)",
+  "pagina": 81,
+  "verdeling": [
+   {
+    "pct": 85.6,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 14.2,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": 0,
+  "benchmarks": [
+   "Solactive Developed Market Paris Aligned Index",
+   "MSCI Emerging Markets ESG Leaders 5% issuer cap"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "De aandelen en EMD-fondsen binnen de returnportefeuille worden passief beheerd (p. 32); Het in aandelen belegd vermogen van BPF Foodservice wordt belegd in passief beheerde aandelenfondsen waarvan de tracking error ten opzichte van de manager benchmark laag is (p. 51); Solactive Developed Market Paris Aligned Index ... MSCI Emerging Markets ESG Leaders 5% issuer cap (p. 30).",
+  "pagina": 30,
+  "passief_pct": 100,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "minus de kosten voor valuta-afdekking binnen de beleggingsfondsen (65) (p. 40)",
+  "omschrijving": "Het verslag vermeldt geen specifiek afdekkingspercentage voor het valutarisico van de aandelenportefeuille. Wel wordt op pagina 40 gemeld dat er kosten voor valuta-afdekking binnen de beleggingsfondsen zijn gemaakt (€ 65,1 duizend).",
+  "pagina": 40
+ },
+ "naam": "Foodservice & Groothandel in Levensmiddelen (Foodservice & Wholesale)",
+ "pad": "data/annual_reports/56_Foodservice_Groothandel_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

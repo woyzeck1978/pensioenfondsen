@@ -1,0 +1,97 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 108.56,
+  "feitelijk_pct": 32.8,
+  "letterlijk": "Aandelen (LGIM) incl. valutatermijncontracten (Caceis): Feitelijk 32,8%, Norm 30,0% (p. 25); Balans toelichting Stand ultimo 2025: Aandelen € 108.560 duizend, Totaal beleggingen voor risico pensioenfonds € 330.709 duizend (p. 79)",
+  "omvat_private_equity": false,
+  "pagina": 25,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 30,
+  "totaal_beleggingen_eur_mln": 330.709
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Legal & General Investment Management (LGIM)",
+    "pagina": 25,
+    "product_of_mandaat": "SFDR artikel 8 breed gespreid aandelenfonds",
+    "segment": "wereldwijd",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Cardano",
+    "pagina": 25,
+    "product_of_mandaat": "Cardano aandelenmandaat (tot september 2025)",
+    "segment": "wereldwijd",
+    "stijl": "actief"
+   }
+  ],
+  "fiduciair_beheerder": null,
+  "letterlijk": "Het pensioenfonds heeft het vermogensbeheer van de beleggingen in 2025 uitbesteed aan vier partijen [...] en LGIM die een passief mandaat voor de aandelenportefeuille uitvoert [...] sinds september 2025 als opvolger van Cardano.",
+  "organisatie": "extern",
+  "pagina": 14
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "ESG-integratie in selectie",
+   "engagement",
+   "stembeleid"
+  ],
+  "letterlijk": "Binnen het artikel‑8 aandelenfonds waarin SPKB sinds september 2025 belegt, past LGIM uitgebreide ESG‑screening toe op basis van internationale normen en sector‑specifieke duurzaamheidscriteria. Daarnaast hanteert LGIM een uitgesproken engagement‑ en stembeleid [...] ESG‑factoren zijn integraal onderdeel van het beleggingsproces en worden structureel meegenomen in de bedrijfsanalyses en portefeuilleconstructie.",
+  "omschrijving": "De aandelenportefeuille is in september 2025 overgestapt naar een passief SFDR artikel 8-fonds van LGIM. LGIM past ESG-screening en uitsluitingen toe op basis van internationale normen, integreert ESG-factoren structureel in de selectie en portefeuilleconstructie, en voert een actief engagement- en stembeleid. Tot september 2025 paste voorganger Cardano uitsluitingen, engagement en stembeleid toe.",
+  "pagina": 27,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 110,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "In onderstaande tabellen zijn de kosten (x € 1.000) voor 2025 en 2024 weergegeven: Beheerkosten Aandelen 200, Transactiekosten Aandelen 265; geen percentages genoemd in de kostentabellen.",
+  "pagina": 30,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": null,
+  "vermogensbeheerkosten_totaal_pct": null
+ },
+ "opmerkingen": "In september 2025 is de aandelenportefeuille na een selectietraject volledig overgegaan van een actief mandaat bij Cardano naar een passief SFDR artikel 8-fonds bij LGIM om het actieve risico en de tracking error te verlagen. De benchmark van het LGIM-fonds is de MSCI ACWI ex Selected Securities A Index, maar voor geheel 2025 is de benchmarkperformance berekend op basis van de oude Cardano-benchmark (MSCI ACWI). Valutarisico wordt separaat afgedekt via CACEIS. Het pensioenfonds is in liquidatie en bereidt een collectieve waardeoverdracht voor naar De Nationale APF in 2026.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Verdeling Aandelen en Vastgoed per categorie: Ontwikkelde markten (Mature markets) 91,1%, Opkomende markten (Emerging markets) 8,9%",
+  "pagina": 95,
+  "verdeling": [
+   {
+    "pct": 91.1,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 8.9,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "MSCI ACWI ex Selected Securities A Index",
+   "MSCI All Country World Index"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "de overstap in september 2025 van het Cardano mandaat naar een passief LGIM fonds voor de aandelenportefeuille [...] de benchmark van het LGIM-fonds is MSCI ACWI ex Selected Securities A Index, maar het benchmarkrendement wordt nog berekend op basis van de benchmark van het Cardano aandelenmandaat, namelijk de MSCI All Country World Index.",
+  "pagina": 25,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Het pensioenfonds kiest er daarom voor om (een gedeelte) van haar buitenlandse valuta’s af te dekken [...] Aandelen (LGIM) incl. valutatermijncontracten (Caceis)",
+  "omschrijving": "Valutarisico wordt voor een gedeelte afgedekt via valutatermijncontracten uitgevoerd door CACEIS (CBNB). De aandelenportefeuille wordt als hedged aangeduid, maar een specifiek afdekkingspercentage voor aandelen wordt niet gekwantificeerd.",
+  "pagina": 95
+ },
+ "naam": "KAS BANK",
+ "pad": "data/annual_reports/110_KAS_BANK_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

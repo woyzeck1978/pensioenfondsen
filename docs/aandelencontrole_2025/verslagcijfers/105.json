@@ -1,0 +1,75 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 1608,
+  "feitelijk_pct": 33.6,
+  "letterlijk": "Aandelen: % van het feitelijk belegde vermogen eind 2025 33,6%, % van belegde vermogen (norm voor 2025) 32,0%; p. 5/109: Aandelen 1.608, Totaal 4.828 (Bedragen x € 1 miljoen)",
+  "omvat_private_equity": false,
+  "pagina": 24,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 32,
+  "totaal_beleggingen_eur_mln": 4828
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": null,
+  "letterlijk": "performance van de externe managers in de beleggingscategorieën aandelen, hypotheken en hedgefunds ten opzichte van de benchmark",
+  "organisatie": "extern",
+  "pagina": 24
+ },
+ "esg": {
+  "co2_doel": "gemiddelde ‘reële’ reductie doelstelling van 4% per jaar voor de CO2e-voetafdruk (vooralsnog alleen voor Aandelen Ontwikkelde Markten)",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "impactbeleggen",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Het HPF ziet MVB als een integraal onderdeel van het beleggingsproces, en zet hiervoor de geëigende instrumenten in: ESG-integratie, actief beleggerschap, uitsluiting en impact investing.",
+  "omschrijving": "Focus op klimaat, water en mensenrechten via ESG-integratie, actief beleggerschap (engagement via Sustainalytics en stembeleid beheerder), uitsluitingen (wapens, OESO, mensenrechten score 0) en impactbeleggen (1% Waterfonds). Reëel CO2-reductiedoel van 4%/jaar op voetafdruk aandelen ontwikkelde markten. SFDR artikel 8.",
+  "pagina": 28,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 105,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.03,
+  "letterlijk": "Aandelen: Beheervergoeding € 1.217 duizend (0,03% van gem. belegd vermogen), prestatieafhankelijke vergoeding -; p. 40: transactiekosten aandelen € 192 duizend (-); totaal vermogensbeheer 0,71%, transactiekosten totaal 0,09%",
+  "pagina": 37,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.09,
+  "vermogensbeheerkosten_totaal_pct": 0.71
+ },
+ "opmerkingen": "In 2025 is de aandelenstrategie gewijzigd: de multi-factor index is vervangen door de market-cap gewogen MSCI World index. Dit leidde tot lagere CO2- en wateruitstootcijfers. Daarnaast belegt het fonds voor 1% in een Waterfonds (impact investing) en voor 0,007% in werkgever HEINEKEN N.V. via het aandelenmandaat. In verband met de Wtp (invaren per 1-1-2026) is het strategisch beleid verlengd tot en met 2025.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "De aandelenportefeuille wordt aangeduid als 'Aandelen ontwikkelde markten' (benchmark MSCI World index), maar een expliciete procentuele uitsplitsing naar regio's ontbreekt in het verslag.",
+  "pagina": 24,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "MSCI World index",
+   "multi-factor index"
+  ],
+  "factorbeleggen": true,
+  "hoofdstijl": "passief",
+  "letterlijk": "De afname werd met name veroorzaakt door de wijziging in de beleggingsstrategie om de multi-factor index, met een relatief groot aandeel in de industrie en nutssector, te vervangen door de MSCI World index (market cap) met een groter aandeel in de technologiesector.",
+  "pagina": 157,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "De gedeeltelijke afdekking van de US dollar exposure van de aandelenportefeuille en alternative credits heeft tevens positief bijgedragen aan het totale beleggingsrendement.",
+  "omschrijving": "Gedeeltelijke afdekking van de US dollar exposure van de aandelenportefeuille via een valuta-overlay; exact afdekkingspercentage voor aandelen niet gekwantificeerd.",
+  "pagina": 24
+ },
+ "naam": "Heineken",
+ "pad": "data/annual_reports/105_Heineken_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

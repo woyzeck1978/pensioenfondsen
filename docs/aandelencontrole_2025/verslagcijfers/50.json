@@ -1,0 +1,86 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 377.4,
+  "feitelijk_pct": 30.5,
+  "letterlijk": "Marktwaarde portefeuille (€ miljoen): Aandelen 377,4; Totaal beleggingsportefeuille 1.234,8; gewicht eind 2025: 30,5%; strategische normweging: 30,0%",
+  "omvat_private_equity": false,
+  "pagina": 23,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 30,
+  "totaal_beleggingen_eur_mln": 1234.8
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": "Goldman Sachs Asset Management (GSAM)",
+  "letterlijk": "De uitvoering van het beleggingsbeleid is door het bestuur uitbesteed aan de externe fiduciair beheerder. [...] Fiduciair beheerder Goldman Sachs Asset Management (GSAM) monitort de behaalde resultaten en rapporteert hierover aan het bestuur.",
+  "organisatie": "extern",
+  "pagina": 49
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "stembeleid",
+   "engagement"
+  ],
+  "letterlijk": "Ons MVB-beleid is gericht op het vermijden van bepaalde duurzaamheidsrisico’s, maar niet op het promoten van specifieke duurzaamheidskenmerken. Daarom classificeert Mhpf de pensioenregeling voorlopig als een financieel product dat duurzaamheidskenmerken promoot, noch ten doel stelt (artikel 6 SFDR).",
+  "omschrijving": "Het MVB-beleid is gericht op het vermijden van duurzaamheidsrisico's (artikel 6 SFDR). Mhpf oefent actief stemrecht uit op aandelen (op eigen naam en via een standaard stemprofiel voor de passieve wereldwijde fondsbelegging) en staat open voor collectieve engagement, al zijn in 2025 geen casussen geïdentificeerd.",
+  "pagina": 28,
+  "sfdr_artikel": 6
+ },
+ "fund_id": 50,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.39,
+  "letterlijk": "Kengetallen kosten vermogensbeheer 2025: Totale beheerkosten 0,50%, Totale transactiekosten 0,04%, Totale kosten vermogensbeheer 0.54% (gemiddeld belegd vermogen € 1.253.294.000). Aandelen beheerkosten: 0,39%.",
+  "pagina": 29,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.04,
+  "vermogensbeheerkosten_totaal_pct": 0.54
+ },
+ "opmerkingen": "Binnen aandelen werd de strategische allocatie in 2025 aangepast: Noord-Amerika van 5% naar 4%, wereldwijd van 12% naar 11% en Europa van 9% naar 11%. Ter bescherming van de invaardekkingsgraad (Wtp) zijn putopties op aandelen aangekocht. In 2024 is het multi-factor aandelenmandaat beëindigd (geen factorbeleggen in 2025) en vervangen door een passieve wereldwijde fondsbelegging. De Amerikaanse aandelenportefeuille presteerde teleurstellend en wordt voorjaar 2026 gereviewed.",
+ "regio": {
+  "basis": "strategisch",
+  "letterlijk": "Voor 2025 werd binnen aandelen de allocatie naar Noord-Amerikaanse aandelen teruggebracht van 5% naar 4% en die naar wereldwijde aandelen verlaagd van 12% naar 11%. De allocatie naar Europese aandelen werd verhoogd van 9% naar 11%.",
+  "pagina": 22,
+  "verdeling": [
+   {
+    "pct": 4,
+    "regio": "Noord-Amerika"
+   },
+   {
+    "pct": 11,
+    "regio": "Europa"
+   },
+   {
+    "pct": 11,
+    "regio": "Wereld ontwikkeld"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "MSCI World DM Net (unhedged)",
+   "MSCI Europe Net (unhedged)",
+   "MSCI North America Net (unhedged)",
+   "MSCI Emerging Markets Net"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "actief",
+  "letterlijk": "Mhpf gelooft in actief beheer en kiest daarom bewust voor actief beheer in alle onderdelen van de beleggingsportefeuille, waaronder in elk geval aandelen.",
+  "pagina": 88,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 60,
+  "letterlijk": "Op aandelen en high yield is valutahedging van toepassing. Het doel daarvan is om Mhpf te beschermen tegen verzwakking van de USD waarin delen van de Mhpf-beleggingsportefeuille genoteerd zijn. De hoogte van de hedge is gekoppeld aan het renteverschil tussen EUR en USD. Het afdekkingspercentage werd in 2025 verhoogd van 55% tot 60%. Resultaten op de valutahedging door Mhpf worden volledig toegerekend aan de aandelenportefeuille.",
+  "omschrijving": "Enkel het USD-risico wordt dynamisch afgedekt op basis van het renteverschil tussen EUR en USD. De hedge voor aandelen en high yield werd eind 2025 verhoogd van 55% naar 60%. Overige valuta worden niet afgedekt. Valutahedge-resultaten worden volledig aan de aandelenportefeuille toegerekend.",
+  "pagina": 26
+ },
+ "naam": "Mediahuis Nederland (Mhpf)",
+ "pad": "data/annual_reports/50_Mediahuis_Nederland_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

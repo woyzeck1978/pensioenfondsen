@@ -1,0 +1,100 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 317.415,
+  "feitelijk_pct": 43.5,
+  "letterlijk": "Aandelen feitelijk 43,5% (strategisch 38,5%, p. 31); tabel p. 8 (x € 1.000): aandelen € 317.415 (42,0%) en totaal beleggingen € 755.673 (100,0%)",
+  "omvat_private_equity": false,
+  "pagina": 31,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 38.5,
+  "totaal_beleggingen_eur_mln": 755.673
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Legal & General Investment Management",
+    "pagina": 37,
+    "product_of_mandaat": "L&G ESG Paris Aligned World Equity Index",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Irish Life Investment Management",
+    "pagina": 37,
+    "product_of_mandaat": "ILIM New World Indexed Emerging Market Equity Fund",
+    "segment": "opkomende markten",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": null,
+  "letterlijk": "L&G ESG Paris Aligned World Equity Index; ILIM New World Indexed Emerging Market Equity Fund (p. 37)",
+  "organisatie": "extern",
+  "pagina": 37
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "Paris-aligned benchmark",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "STIP heeft voor de uitvoering van het MVB-beleid verschillende instrumenten. Het maakt gebruik van ESG-integratie, actief aandeelhouderschap en uitsluitingen... Dit is onder meer het resultaat van een nieuwe aandelenstrategie die volgens de Europese principes van een 'klimaatbenchmark', de zogenaamde Paris Aligned Benchmark wordt beheerd.",
+  "omschrijving": "STIP hanteert een SFDR artikel 8-classificatie. Het MVB-beleid omvat ESG-integratie in het selectie- en evaluatieproces, uitsluitingen (o.a. controversiële wapens, tabak, steenkool, olie en gas, UN Global Compact schendingen), engagement en stemmen via beheerders L&G en ILIM, en voor ontwikkelde markten een Solactive Paris Aligned Benchmark.",
+  "pagina": 35,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 46,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "De vermogensbeheerkosten van STIP zijn in euro's gedaald in 2025 en bedragen 0,23% van het totaal gemiddeld belegd vermogen... Er zijn geen performance related fees. De transactiekosten zijn gestegen naar 0,07% van het gemiddeld belegd vermogen",
+  "pagina": 44,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.07,
+  "vermogensbeheerkosten_totaal_pct": 0.23
+ },
+ "opmerkingen": "De aandelenportefeuille wordt volledig passief beheerd via institutionele indexfondsen bij Legal & General (ontwikkelde markten) en ILIM (opkomende markten). ILIM heeft afgezien van stemmen vanwege hoge kosten in het betreffende UCITS-fonds en kende een underperformance van 0,9% door Indiase vermogenswinstbelasting die niet in de benchmark zit. Het bestuur signaleert een sterk opgelopen concentratierisico naar Amerikaanse technologieaandelen (Nvidia, Apple en Microsoft maken samen 17% uit van de portefeuille aandelen ontwikkeld) en onderzoekt beheersmaatregelen. Met het oog op het pensioenakkoord en het voorgenomen invaren onderzoekt het fonds bescherming van de dekkingsgraad via verhoging van de renteafdekking en/of vermindering van het aandelenrisico.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Aandelen 43,5% · Aandelen ontwikkeld 36,8% · Aandelen opkomend 6,7%",
+  "pagina": 31,
+  "verdeling": [
+   {
+    "pct": 36.8,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 6.7,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": 0,
+  "benchmarks": [
+   "Solactive L&G Developed Markets Paris Aligned ESG SDG Index",
+   "Solactive ILIM New World Emerging Market Equity Index NTR",
+   "MSCI World",
+   "MSCI Emerging Markets"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "De categorieën aandelen en vastgoed worden passief beheerd, waardoor de kosten relatief laag zijn.",
+  "pagina": 45,
+  "passief_pct": 100,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 0,
+  "letterlijk": "Voor de niet-euro belangen is als beleid geformuleerd dat het valutarisico niet wordt afgedekt. In de aandelenfondsen bij L&G en ILIM wordt het valutarisico dan ook niet afgedekt.",
+  "omschrijving": "Valutarisico op niet-euro aandelen wordt niet afgedekt. In de aandelenfondsen bij L&G en ILIM wordt het valutarisico niet afgedekt.",
+  "pagina": 32
+ },
+ "naam": "IKEA (STIP)",
+ "pad": "data/annual_reports/46_IKEA_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

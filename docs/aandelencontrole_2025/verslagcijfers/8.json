@@ -1,0 +1,110 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 120.232,
+  "feitelijk_pct": 27.2,
+  "letterlijk": "Aandelen 120.232 27,2 [...] Totaal beleggingen 441.377 100,0 (x € 1.000)",
+  "omvat_private_equity": false,
+  "pagina": 9,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 441.377
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "BlackRock",
+    "pagina": 54,
+    "product_of_mandaat": "BlackRock CCF Developed World Paris-Aligned Climate Index Fund",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Achmea Investment Management",
+    "pagina": 54,
+    "product_of_mandaat": "Achmea IM ESG Transition Emerging Markets Equity Fund",
+    "segment": "opkomende markten",
+    "stijl": "onbekend"
+   }
+  ],
+  "fiduciair_beheerder": "Achmea Investment Management",
+  "letterlijk": "Het vermogensbeheer en de vermogensadministratie (hierna: vermogensbeheer) zijn uitbesteed aan Achmea Investment Management B.V. te Zeist (Achmea IM).",
+  "organisatie": "extern",
+  "pagina": 18
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "Paris-aligned benchmark",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Omdat wij rekening houden met duurzaamheidsaspecten in ons beleggingsbeleid betekent dit dat ons fonds onder artikel 8 van de SFDR valt. [...] Voor de aandelenfondsen geldt daarnaast dat de vermogensbeheerders een stembeleid en engagementbeleid toepassen.",
+  "omschrijving": "SPV belegt in aandelen via beleggingsfondsen die vallen onder SFDR artikel 8. Er geldt een uitsluitingsbeleid (controversiële wapens, tabak, UN Global Compact/OESO-normschenders). Voor aandelenfondsen passen de beheerders een stem- en engagementbeleid toe. Het ontwikkelde markten fonds volgt een Paris-Aligned Benchmark (PAB).",
+  "pagina": 54,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 8,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Kosten % (excl. transactiekosten) 0,44% Transactiekosten % 0,05% [...] Aandelen Beheerkosten 89,6 Performance gerelateerd - Transactiekosten 25.7 (in € x 1.000)",
+  "pagina": 60,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.05,
+  "vermogensbeheerkosten_totaal_pct": 0.44
+ },
+ "opmerkingen": "In 2024 is aandelenmanager Robeco vervangen door BlackRock, waardoor de aandelenportefeuille nu overwegend passief wordt beheerd en de beheerkosten aanzienlijk zijn gedaald. In 2025 zijn er geen wijzigingen in managers of onderliggende beleggingen doorgevoerd. Ter voorbereiding op de Wtp is de portefeuille omgezet naar een inrichting met twee modules (rente en rendement), waarbij aandelen onder de module Rendement vallen. Balans/vermogensopstelling (p. 9) toont ultimo 2025 € 120,2 mln (27,2% van € 441,4 mln totaal); de beleggingsparagraaf (p. 50) rapporteert € 119,6 mln (25,7% van € 464,8 mln). Kosten per categorie worden in tabel 2 enkel in duizenden euro's gerapporteerd (€ 89,6k beheerkosten en € 25,7k transactiekosten), niet in procenten.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Specificatie aandelen naar regio: Europa 13,8%, Noord-Amerika 54,0%, Asia Pacific 6,3%, Emerging Markets 24,9%, Australazië 1,0%",
+  "pagina": 100,
+  "verdeling": [
+   {
+    "pct": 54,
+    "regio": "Noord-Amerika"
+   },
+   {
+    "pct": 13.8,
+    "regio": "Europa"
+   },
+   {
+    "pct": 24.9,
+    "regio": "Opkomende markten"
+   },
+   {
+    "pct": 6.3,
+    "regio": "Azië-Pacific"
+   },
+   {
+    "pct": 1,
+    "regio": "Overig"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "MSCI World Index",
+   "MSCI Emerging Market Index"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "SPV belegt overwegend passief, nadat de portefeuille van Robeco naar Blackrock is overgedragen, wat leidt tot een lager kostenniveau.",
+  "pagina": 61,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 75,
+  "letterlijk": "Belangrijke buitenlandse valuta’s waarin belegd wordt, zijn de Amerikaanse dollar, Britse pond en Japanse yen. Het valutarisico hiervan wordt voor 75% afgedekt naar de euro binnen Aandelen Wereld en Aandelen Opkomende Markten.",
+  "omschrijving": "Het valutarisico van de belangrijkste buitenlandse valuta's (zoals USD, GBP en JPY) wordt voor 75% afgedekt naar de euro binnen Aandelen Wereld en Aandelen Opkomende Markten. Overige valuta's worden niet afgedekt.",
+  "pagina": 51
+ },
+ "naam": "Verloskundigen (SPV - Midwives)",
+ "pad": "data/annual_reports/8_Verloskundigen_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

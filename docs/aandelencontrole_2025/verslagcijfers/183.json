@@ -1,0 +1,91 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 225.8,
+  "feitelijk_pct": 27.2,
+  "letterlijk": "Aandelen in € miljoen 225,8 Actuele mix in % 27,2 Strategische mix in % 26,0 ... Totaal 829,3 100,0",
+  "omvat_private_equity": false,
+  "pagina": 13,
+  "private_equity_pct": 0.1,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 26,
+  "totaal_beleggingen_eur_mln": 829.3
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Aegon AM",
+    "pagina": 40,
+    "product_of_mandaat": "MM World Equity Index SRI Fund",
+    "segment": "ontwikkelde markten",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Aegon AM",
+    "pagina": 41,
+    "product_of_mandaat": "MM Global Emerging Markets Fund",
+    "segment": "opkomende markten",
+    "stijl": "actief"
+   }
+  ],
+  "fiduciair_beheerder": "Aegon AM",
+  "letterlijk": "Het fiduciair beheer voor de beleggingen risico pensioenkring is uitbesteed aan Aegon AM (p. 112); Aandelen ontwikkelde markten (MM World Equity Index SRI Fund); Aandelen opkomende markten (MM Global Emerging Markets Fund) (p. 14, 40).",
+  "organisatie": "extern",
+  "pagina": 112
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen"
+  ],
+  "letterlijk": "Het uitsluitingsbeleid behorend bij het beleid inzake Maatschappelijk Verantwoord Beleggen had dit jaar een negatieve impact op het relatieve rendement van circa 0,3% (p. 40); Daarnaast is MVB een vast onderdeel van de investment cases (p. 59).",
+  "omschrijving": "Pensioenkring 2 belegt in aandelen via het passieve MM World Equity Index SRI Fund (ontwikkelde markten) en het actieve MM Global Emerging Markets Fund. Er geldt een uitsluitingsbeleid in het kader van Maatschappelijk Verantwoord Beleggen (MVB), en MVB is een vast onderdeel van de investment cases voor het beleggingsbeleid.",
+  "pagina": 40,
+  "sfdr_artikel": null
+ },
+ "fund_id": 183,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.05,
+  "letterlijk": "Aandelen 391 € [duizend] 0,05%; Totaal 2.365 € [duizend] 0,28% (p. 20); Transactiekosten: Aandelen 147 € [duizend] 0,02%; Totaal 506 € [duizend] 0,06% (p. 21).",
+  "pagina": 20,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": 0.02,
+  "transactiekosten_totaal_pct": 0.06,
+  "vermogensbeheerkosten_totaal_pct": 0.28
+ },
+ "opmerkingen": "Pensioenkring 2 (Multi-client Pensioenkring 2 van algemeen pensioenfonds Stap) belegt in aandelen via twee beleggingsfondsen van Aegon AM: passief in ontwikkelde markten via het MM World Equity Index SRI Fund (€ 185,6 mln, 22,4% feitelijk vs. 21,5% strategisch) en actief met bottom-up selectie in opkomende markten via het MM Global Emerging Markets Fund (€ 40,2 mln, 4,8% feitelijk vs. 4,5% strategisch). Private equity wordt apart geadministreerd (€ 0,7 mln / 0,1%) en afgebouwd via fondsen van Unigestion. Aegon AM is de fiduciair vermogensbeheerder; pensioenuitvoering is uitbesteed aan TKP. Valutarisico op ontwikkelde markten is voor 50% afgedekt met een FX-overlay. Op portefeuilleniveau bedraagt de ex-ante tracking error 0,1% op jaarbasis. In december 2025 is het beleggingsplan 2026 vastgesteld zonder wijzigingen in de strategische allocatie. In 2025 vonden tevens voorbereidingen plaats voor de Wet toekomst pensioenen (Wtp) en DORA.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Ontwikkelde markten 185,6 in € miljoen (22,4%), Opkomende markten 40,2 in € miljoen (4,8%)",
+  "pagina": 13,
+  "verdeling": [
+   {
+    "pct": 22.4,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 4.8,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "Voor de meeste beleggingscategorieën wordt passief belegd (p. 14); Een deel van de beleggingsportefeuille wordt namelijk actief beheerd (p. 21); De ex-ante tracking error bedraagt eind 2025 op jaarbasis 0,1% (p. 21).",
+  "pagina": 21,
+  "passief_pct": null,
+  "tracking_error_pct": 0.1
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 50,
+  "letterlijk": "Aandelen ontwikkelde markten 50,0%, Aandelen opkomende markten n.v.t., Afdekking met een FX overlay: X (p. 57); Per saldo leidde de afdekking van het valutarisico tot een positieve bijdrage aan het rendement van 2,0%-punt (p. 15).",
+  "omschrijving": "Het valutarisico voor aandelen ontwikkelde markten wordt voor 50,0% afgedekt via een FX-overlay (USD, GBP, JPY). Voor aandelen opkomende markten is afdekking niet van toepassing (n.v.t.). De valuta-afdekking leverde in 2025 een positieve bijdrage van 2,0%-punt op, met name door het afdekken van de verzwakkende Amerikaanse dollar.",
+  "pagina": 57
+ },
+ "naam": "Pensioenkring 2 (Stap)",
+ "pad": "data/annual_reports/183_Pensioenkring_2_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

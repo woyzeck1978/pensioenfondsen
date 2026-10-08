@@ -1,0 +1,90 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": null,
+  "feitelijk_pct": null,
+  "letterlijk": "",
+  "omvat_private_equity": false,
+  "pagina": null,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Aegon AM",
+    "pagina": 37,
+    "product_of_mandaat": "MM World Equity Index SRI Fund - EUR",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Aegon AM",
+    "pagina": 37,
+    "product_of_mandaat": "MM World Equity Index SRI Fund",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Aegon AM",
+    "pagina": 38,
+    "product_of_mandaat": "MM Global Emerging Markets Fund",
+    "segment": "opkomende markten",
+    "stijl": "actief"
+   }
+  ],
+  "fiduciair_beheerder": "Aegon AM",
+  "letterlijk": "Het fiduciair beheer voor de beleggingen risico pensioenkring is uitbesteed aan Aegon AM en hiervoor is eveneens een uitbestedingsovereenkomst en een SLA overeengekomen.",
+  "organisatie": "extern",
+  "pagina": 110
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement"
+  ],
+  "letterlijk": "Eind 2025 werd met 12 bedrijven, waarin de pensioenkring via de MM-beleggingsfondsen belegt, een dialoog gevoerd. Het voeren van de dialoog heeft Stap uitbesteed aan Aegon AM.",
+  "omschrijving": "Stap voert voor Pensioenkring Eastman screening en dialoog (engagement op UN Global Compact principes) uit via Aegon AM. De aandelenfondsen in ontwikkelde markten zijn SRI-fondsen met uitsluitingen.",
+  "pagina": 14,
+  "sfdr_artikel": null
+ },
+ "fund_id": 171,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.03,
+  "letterlijk": "Aandelen 52 52 0,03 0,03; Transactiekosten Aandelen 42 30 0,02 0,02; Totale kosten vermogensbeheer 1.007 0,54; Totale transactiekosten 132 0,07",
+  "pagina": 18,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": 0.02,
+  "transactiekosten_totaal_pct": 0.07,
+  "vermogensbeheerkosten_totaal_pct": 0.54
+ },
+ "opmerkingen": "Pensioenkring Eastman (onderdeel van algemeen pensioenfonds Stap) belegt in aandelen via drie MM-beleggingsfondsen: passief in ontwikkelde markten (zowel valuta-afgedekt als onafgedekt) en actief via bottom-up aandelenselectie in opkomende markten. Integraal/fiduciair vermogensbeheer is uitbesteed aan Aegon AM. De feitelijke en strategische balansallocatie van aandelen zijn in de verstrekte verslagpagina's niet gespecificeerd.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "Het MM World Equity Index SRI Fund – EUR en het MM World Equity Index SRI Fund kennen een passieve beleggingsstijl waardoor het rendement in lijn is met het rendement van de benchmark.",
+  "pagina": 37,
+  "passief_pct": null,
+  "tracking_error_pct": 0.2
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 50,
+  "letterlijk": "Aandelen ontwikkelde markten 50,0%; Aandelen opkomende markten n.v.t.",
+  "omschrijving": "Het valutarisico voor aandelen ontwikkelde markten wordt voor 50,0% afgedekt (via het MM World Equity Index SRI Fund - EUR). Voor aandelen opkomende markten is afdekking niet van toepassing (n.v.t.). De Amerikaanse dollar, het Britse pond en de Japanse yen worden gedeeltelijk afgedekt.",
+  "pagina": 54
+ },
+ "naam": "Kring Eastman (Stap)",
+ "pad": "data/annual_reports/171_Kring_Eastman_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

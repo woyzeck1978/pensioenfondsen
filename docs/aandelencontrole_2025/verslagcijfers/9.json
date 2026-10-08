@@ -1,0 +1,89 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": null,
+  "feitelijk_pct": null,
+  "letterlijk": "Strategische gewichten (o.b.v. Strategisch Investment Plan) 2024-2026: Aandelen ontwikkelde landen 28,0%, Aandelen opkomende landen 4,0%, Aandelen 32,0%; Private Equity 6,0%; Totaal belegd vermogen 100,0%",
+  "omvat_private_equity": false,
+  "pagina": 29,
+  "private_equity_pct": 6,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 32,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "APG Asset Management N.V.",
+    "pagina": 29,
+    "product_of_mandaat": "op maat gemaakte index (ABP aandelenuniversum)",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "APG Asset Management N.V.",
+  "letterlijk": "De Stichting heeft het beheer en de administratie van de beleggingen en het pensioenbeheer en de pensioenadministratie uitbesteed aan APG Asset Management N.V. (p. 163). Voor vermogensbeheer zal APG op termijn alleen voor ABP werken, waarbij beide organisaties een integrale beleggingsketen vormen (p. 19). Daarnaast is een nieuw extern, actief beheerd mandaat geïmplementeerd waarvoor door APG nieuwe, lagere vergoedingen zijn afgesproken met de externe managers (p. 72).",
+  "organisatie": "intern",
+  "pagina": 163
+ },
+ "esg": {
+  "co2_doel": "verlaging van 50% van de CO2-uitstoot van onze beleggingen in 2030 (ten opzichte van 2019), om in 2050 een klimaatneutrale portefeuille te bereiken",
+  "eigen_index": true,
+  "instrumenten": [
+   "uitsluitingen",
+   "eigen ESG-index",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "De aandelenportefeuille ontwikkelde landen wordt sinds 2024 volgens een voor ABP op maat gemaakte index belegd. Deze index wordt samengesteld op basis van het ABP aandelenuniversum. Het grootste deel van de portefeuille wordt vrijwel exact volgens deze index belegd (p. 29). Geen beleggingen in bedrijven (ontwikkelde markten) die niet aan onze minimumcriteria voldoen (p. 195).",
+  "omschrijving": "Aandelenportefeuille ontwikkelde markten wordt belegd volgens een op maat gemaakte index op basis van het eigen ABP Universum met insluitings- en minimumcriteria (in 2025 uitgebreid naar opkomende markten). Toepassing van uitsluitingen, ESG-integratie en CO2-reductiedoelstelling (-50% in 2030 t.o.v. 2019). Geen impactbeleggingen in beursgenoteerde aandelen (SFDR art. 8: promoot ecologische kenmerken).",
+  "pagina": 29,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 9,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.12,
+  "letterlijk": "Aandelen: Totaal vergoeding in % 0,12%, Beheervergoeding € 199 mln, Prestatievergoeding € -3 mln (p. 72). Transactiekosten aandelen € 81 mln, totaal transactiekosten € 414 mln (in € mln vermeld, niet in %, p. 73). Totaal vermogensbeheerkosten in % gemiddeld belegd vermogen 0,40% (p. 72).",
+  "pagina": 72,
+  "prestatievergoeding_aandelen_eur_mln": -3,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": null,
+  "vermogensbeheerkosten_totaal_pct": 0.4
+ },
+ "opmerkingen": "ABP belegt het grootste deel van de aandelen ontwikkelde markten via indexbeleggen volgens een op maat gemaakte index op basis van het eigen ABP Universum (ingevoerd eind 2024, passief beheer als strategische keuze). Daarnaast is er een meer geconcentreerde actieve aandelenstrategie waarvoor in 2025 een nieuw extern actief mandaat is geïmplementeerd. De vermogensbeheerorganisatie is intern (APG fungeert als captive beheerder en vormt een integrale beleggingsketen met ABP), waarbij ABP in 2025 tevens de eigen regiefunctie op strategisch beleggingsbeleid heeft versterkt. De balans/samenstellingstabel ultimo 2025 ontbreekt in de verstrekte pagina's; het gemiddeld belegd vermogen in aandelen over 2025 bedroeg € 161.888 mln op een totaal van € 530.394 mln. Transactiekosten worden in het verslag uitsluitend in miljoenen euro's genoemd (€ 81 mln voor aandelen, € 414 mln totaal), niet als percentage. In het kader van de Wtp sorteert ABP voor op een verschuiving van liquide naar illiquide beleggingen per 2027.",
+ "regio": {
+  "basis": "strategisch",
+  "letterlijk": "Strategische gewichten (o.b.v. Strategisch Investment Plan) 2024-2026: Aandelen ontwikkelde landen 28,0%, Aandelen opkomende landen 4,0%",
+  "pagina": 29,
+  "verdeling": [
+   {
+    "pct": 28,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 4,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "voor ABP op maat gemaakte index (ABP aandelenuniversum)"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Het grootste deel van de portefeuille wordt vrijwel exact volgens deze index belegd. Deze vorm van indexbeleggen is een directe vertaling van onze beleggingsovertuigingen (p. 29). Ook wordt in passief beheerde portefeuilles (een van de strategische beleidskeuzes van ABP) minder gehandeld (p. 73). Daarnaast: achterblijvende performance in de meer geconcentreerde actieve aandelenstrategie (p. 68) en nieuw extern actief beheerd mandaat (p. 72).",
+  "pagina": 29,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 25,
+  "letterlijk": "In 2025 was de strategische afdekking van het valutarisico van de zakelijke waarden op de US Dollar, Zwitserse Frank, de Japanse Yen, de Canadese en Australische Dollar en het Britse Pond 25%, behalve voor grondstoffen, daarvan wordt het valutarisico niet afgedekt.",
+  "omschrijving": "Strategische afdekking van het valutarisico van zakelijke waarden (waaronder aandelen) op de USD, CHF, JPY, CAD, AUD en GBP bedroeg 25% in 2025. Valutarisico van opkomende markten wordt niet afgedekt.",
+  "pagina": 119
+ },
+ "naam": "ABP (Government and Education)",
+ "pad": "data/annual_reports/9_ABP_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

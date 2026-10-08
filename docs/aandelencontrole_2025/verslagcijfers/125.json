@@ -1,0 +1,95 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": null,
+  "feitelijk_pct": 29.7,
+  "letterlijk": "Strategische allocatie per 31-12-2025: Vastrentende waarden (inclusief liquiditeiten) 70,0% 65,7% | Aandelen 25,0% 29,7% | Vastgoed 5,0% 4,6%",
+  "omvat_private_equity": false,
+  "pagina": 29,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 25,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Northern Trust",
+    "pagina": 85,
+    "product_of_mandaat": "Northern Trust CCF World Custom ESG EQ I EUR",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Northern Trust",
+    "pagina": 85,
+    "product_of_mandaat": "Northern Trust EMK MKT CSTM EQU IN-E EUR",
+    "segment": "opkomende markten",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "GSAM",
+  "letterlijk": "Het fonds heeft GSAM als fiduciair manager aangesteld. (...) De portefeuille wordt ingevuld met ‘Custom ESG’ fondsen van Northern Trust.",
+  "organisatie": "extern",
+  "pagina": 44
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": true,
+  "instrumenten": [
+   "uitsluitingen",
+   "eigen ESG-index",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "In 2025 is de keuze voor een SFDR 6 of SFDR 8 classificatie besproken (...). Het pensioenfonds heeft ervoor gekozen de SFDR 6 classificatie te handhaven. (...) Deze fondsen sluiten de bedrijven met de meest slechte ESG-scores uit om te komen tot een ‘Custom ESG’-benchmark.",
+  "omschrijving": "Het fonds handhaaft SFDR artikel 6. Aandelen worden belegd in Northern Trust Custom ESG fondsen die de slechtste ESG-scores uitsluiten op basis van een maatwerk/Custom ESG-benchmark, met beperkte ESG-integratie.",
+  "pagina": 27,
+  "sfdr_artikel": 6
+ },
+ "fund_id": 125,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Kosten in % van het gemiddeld belegd vermogen: 0,22%, transactiekosten: 0,07% (totale kosten vermogensbeheer: 0,29%). Tabel kosten vermogensbeheer per categorie (p. 22): Aandelen beheerkosten € 79 duizend, performancekosten € 0, transactiekosten € 18 duizend.",
+  "pagina": 19,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.07,
+  "vermogensbeheerkosten_totaal_pct": 0.22
+ },
+ "opmerkingen": "Pensioenfonds Rockwool voert een eenvoudig beleggingsbeleid met nadruk op lage kosten en een sterke voorkeur voor passief beleggen via twee Northern Trust Custom ESG fondsen. In 2025 is geëvalueerd over SFDR 6 versus SFDR 8 en besloten om artikel 6 te handhaven. Het MVB-beleid is in 2025 minder ambitieus geformuleerd omdat de implementatie afhankelijk is gemaakt van transactiekosten. Intern toezicht signaleert dat de BAC kijkt naar het concentratierisico in Amerikaanse techbedrijven. De uitvoeringskosten per deelnemer zijn sterk gestegen door Wtp-voorbereidingskosten.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Verdeling aandelen en vastgoed per categorie: Ontwikkelde markten (Mature markets) 111.925 75,2, Opkomende markten (Emerging markets) 13.244 8,9",
+  "pagina": 81,
+  "verdeling": [
+   {
+    "pct": 75.2,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 8.9,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "Custom ESG-benchmark"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Sterke voorkeur voor passief beleggen (p. 27). Het pensioenfonds belegt binnen de returnportefeuille naast twee passieve aandelenfondsen (p. 30). Aangezien het pensioenfonds geen actief beheer voert, hoeft hiervoor geen buffer aan te worden gehouden (p. 86).",
+  "pagina": 27,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Voor de afdekking van het valutarisico van aandelen in ontwikkelde landen maakt het fonds gebruik van zogenaamde ‘Eurohedged’ beleggingsfondsen, waarbij de afdekking van het valutarisico binnen het beleggingsfonds plaatsvindt.",
+  "omschrijving": "Het valutarisico voor aandelen in ontwikkelde markten wordt afgedekt binnen het fonds via een Eurohedged fondsklasse (Northern Trust CCF World Custom ESG EQ). Er is geen specifiek afdekkingspercentage voor de aandelenportefeuille genoemd.",
+  "pagina": 42
+ },
+ "naam": "Rockwool",
+ "pad": "data/annual_reports/125_Rockwool_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

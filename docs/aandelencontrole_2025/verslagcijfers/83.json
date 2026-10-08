@@ -1,0 +1,91 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 195.5,
+  "feitelijk_pct": 28.7,
+  "letterlijk": "– Aandelen 195,5 28,7% 27,5% (Markt Waarde x € 1 miljoen; Totaal 681,0 100,0%)",
+  "omvat_private_equity": false,
+  "pagina": 25,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 27.5,
+  "totaal_beleggingen_eur_mln": 681
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Northern Trust",
+    "pagina": 30,
+    "product_of_mandaat": "Northern Trust – World Custom ESG Equity Index Fund",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Northern Trust",
+    "pagina": 30,
+    "product_of_mandaat": "Northern Trust – Emerging Markets Custom ESG Eq. Index Fund",
+    "segment": "opkomende markten",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "NN Investment Partners",
+  "letterlijk": "De uitvoering van het vermogensbeheer, voor zowel de uitkeringsregeling als voor de premieregeling, is belegd bij Nationale-Nederlanden Investment Partners (p. 121); In de volgende fondsen is belegd (return portefeuille): Northern Trust – World Custom ESG Equity Index Fund, Northern Trust – Emerging Markets Custom ESG Eq. Index Fund (p. 30)",
+  "organisatie": "extern",
+  "pagina": 121
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Het pensioenfonds heeft zichzelf geclassificeerd als artikel 6 instelling (grijs). Daarnaast maakt het fonds gebruik van de opt-out mogelijkheid voor artikel 4 (p. 31); Wij hebben in 2025 alle vermogensbeheerders, waarvan wij diensten afnemen, geëvalueerd op hun ESG-beleid (p. 30)",
+  "omschrijving": "Het pensioenfonds heeft zichzelf geclassificeerd als artikel 6 instelling (grijs) en maakt gebruik van de opt-out voor artikel 4 (PAI). Alle vermogensbeheerders worden periodiek geëvalueerd op hun ESG-beleid (hoog/gemiddeld/laag commitment).",
+  "pagina": 31,
+  "sfdr_artikel": 6
+ },
+ "fund_id": 83,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Kosten per beleggingscategorie 2025 (Bedragen in de tabel x € 1.000,-): Aandelen Beheerkosten 132, Performance gerelateerde kosten –, Transactiekosten 28 (p. 41); Vermogensbeheer: Kosten 0,20%, Transactiekosten -0,01% van het gemiddeld belegd vermogen (p. 39)",
+  "pagina": 41,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": -0.01,
+  "vermogensbeheerkosten_totaal_pct": 0.2
+ },
+ "opmerkingen": "Het fonds voert een gesloten DB-uitkeringsregeling en een DC-premieregeling. Het fonds bereidt liquidatie voor (verwacht in Q2 2027) in het kader van de overgang naar het nieuwe pensioenstelsel: per 1 januari 2026 vindt nieuwe pensioenopbouw plaats bij BeFrank PPI N.V., waaraan de DC-beleggingen per 1 april 2026 zijn overgedragen. De DB-regeling en ingegane pensioenen worden naar verwachting per 1 oktober 2026 overgedragen aan De Nationale APF. Alle aandelen worden passief belegd (in de DC-regeling via Northern Trust Custom ESG indexfondsen).",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Ontwikkelde markten (Mature markets) 173.697 85,2; Opkomende markten (Emerging markets) 20.991 10,3",
+  "pagina": 95,
+  "verdeling": [
+   {
+    "pct": 85.2,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 10.3,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": 0,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "De aandelen zijn passief belegd (p. 26); Het pensioenfonds belegt passief tenzij (p. 23)",
+  "pagina": 26,
+  "passief_pct": 100,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Ook in de returnportefeuille dekken wij in principe het valutarisico af... Concreet dekken we voor de beleggingscategorieën Aandelen Opkomende Markten en Obligaties Opkomende Markten LC het valutarisico niet af. Waar mogelijk dekken wij valutarisico’s af door te beleggen in fondsen waarbinnen het valutarisico al wordt afgedekt (euro hedged).",
+  "omschrijving": "In de returnportefeuille wordt het valutarisico in principe afgedekt, waar mogelijk door te beleggen in fondsen waarin het valutarisico al wordt afgedekt (euro hedged). Voor Aandelen Opkomende Markten wordt het valutarisico specifiek niet afgedekt. Er wordt geen overkoepelend afdekkingspercentage voor aandelen genoemd.",
+  "pagina": 28
+ },
+ "naam": "Capgemini / Capgemini Nederland",
+ "pad": "data/annual_reports/83_Capgemini_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

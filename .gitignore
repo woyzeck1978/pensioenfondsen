@@ -53,3 +53,6 @@ data/_broken/
 
 # Back-ups van de sync-scripts; de vorige staat zit in de git-historie
 data/processed/pension_funds.backup-*.db
+
+# ruwe agy-taakbestanden (12 MB geknipte verslagtekst), herleidbaar uit de PDF's
+docs/aandelencontrole_2025/agy_aandelen/

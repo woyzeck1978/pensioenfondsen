@@ -1,0 +1,106 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 1609.7,
+  "feitelijk_pct": null,
+  "letterlijk": "Per 31 december 2025 ... Aandelen 1.609,7 ... Totaal 5.130,5",
+  "omvat_private_equity": false,
+  "pagina": 103,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 5130.5
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Robeco",
+    "pagina": 37,
+    "product_of_mandaat": "aandelenportefeuille ontwikkelde landen",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "actief"
+   },
+   {
+    "naam": "BlackRock",
+    "pagina": 42,
+    "product_of_mandaat": "BlackRock CCF Developed World (ESG screened) Index Fund",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "BlackRock",
+    "pagina": 42,
+    "product_of_mandaat": "BlackRock Aandelen opkomende landen iShares",
+    "segment": "opkomende markten",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "Achmea Investment Management",
+  "letterlijk": "De stichting heeft het beheer van de beleggingen en de pensioenadministratie uitbesteed aan respectievelijk Achmea Investment Management N.V. en Achmea Pensioenservices N.V.",
+  "organisatie": "extern",
+  "pagina": 148
+ },
+ "esg": {
+  "co2_doel": "Het doel van dit akkoord is de CO2 uitstoot in 2030 met 49% verminderen vergeleken met 1990. In 2050 moet de uitstoot van broeikasgassen met 95% afgenomen zijn",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "best-in-class",
+   "engagement",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Daarom heeft de portefeuille als doelstelling de CO2-voetafdruk te verkleinen in lijn met het Klimaatakkoord van Parijs. ... Een CO2-reductiedoelstelling is geïmplementeerd voor de beleggingscategorieën aandelen ontwikkelde landen",
+  "omschrijving": "APF hanteert uitsluitingen (controversiële wapens, tabak, fossiele brandstoffen, VN Global Compact/OESO normschenders). Binnen aandelen ontwikkelde landen geldt ESG-integratie (streefscore minimaal 5-7% beter dan benchmark) en een CO2-reductiedoelstelling in lijn met Parijs (-49% in 2030 t.o.v. 1990). Tevens wordt een engagement specialist ingezet.",
+  "pagina": 159,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 75,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Totale kosten toegewezen aan vermogensbeheer: € 24,5 miljoen, 0,46% van het gemiddeld belegd vermogen ... transactiekosten ... 0,13%",
+  "pagina": 39,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.13,
+  "vermogensbeheerkosten_totaal_pct": 0.46
+ },
+ "opmerkingen": "Ter voorbereiding op de Wtp/FPR is de portefeuille administratief opgedeeld in de modules Rente en Rendement. De hoofdmoot van de aandelenportefeuille wordt actief beheerd (Robeco voor ontwikkelde markten en 3 niet met naam genoemde managers voor opkomende markten). Daarnaast is er een BP-regeling die passief belegd is via BlackRock indexfondsen (80% ontwikkelde markten, 20% opkomende markten met 100% valuta-afdekking). Per ultimo 2025 bedragen de aandelen € 1.609,7 mln op een totaal van € 5.130,5 mln aan beleggingen.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Aandelen wereld 42,2% ... Aandelen opkomende landen 9,9%",
+  "pagina": 37,
+  "verdeling": [
+   {
+    "pct": 42.2,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 9.9,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "MSCI World Index",
+   "MSCI World ex Select Controversies Index",
+   "MSCI Emerging Markets Index"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "actief",
+  "letterlijk": "De manager kiest bedrijven uit die goed scoren op deze punten en die hun CO2-uitstoot extra verminderen vergeleken met de standaard benchmark, de MSCI World Index.",
+  "pagina": 37,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 75,
+  "letterlijk": "Voor de beleggingscategorieën aandelen (wereld en opkomende markten) en indirect vastgoed wordt het valutarisico van een aantal valuta strategisch voor 75% afgedekt",
+  "omschrijving": "Voor aandelen wereld en opkomende markten wordt het valutarisico van een aantal valuta (USD, GBP, JPY) strategisch voor 75% afgedekt via valutatermijncontracten.",
+  "pagina": 118
+ },
+ "naam": "APF (AkzoNobel, Nouryon, Nobian, Salt)",
+ "pad": "data/annual_reports/75_Pensioenfonds_APF_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

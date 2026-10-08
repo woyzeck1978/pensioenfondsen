@@ -1,0 +1,81 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": null,
+  "feitelijk_pct": null,
+  "letterlijk": "vermogen dat daalde van 516.895 tot 477.591 per ultimo 2025 in de Kring Deutsche Bank NL (geen uitsplitsing tabel aandelen)",
+  "omvat_private_equity": false,
+  "pagina": 370,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "DWS",
+    "pagina": 69,
+    "product_of_mandaat": "Aandelen Wereld mandaat",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "onbekend"
+   }
+  ],
+  "fiduciair_beheerder": "Achmea Investment Management",
+  "letterlijk": "Voor Kring Deutsche Bank Nederland geldt dat een aantal beleggingen (fondsen en mandaten) zĳn ondergebracht bĳ DWS.",
+  "organisatie": "extern",
+  "pagina": 69
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "impactbeleggen",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "In de Centraal Beheer beleggingsfondsen zĳn ESG-factoren in het beleggingsproces geïntegreerd. Dit wordt gedaan voor de aandelen-, bedrĳfsobligaties- en staatsobligatiebeleggingen.",
+  "omschrijving": "Achmea IM voert voor Centraal Beheer APF het MVB-beleid uit met uitsluitingen (wapens, tabak, fossiele brandstoffen, normschenders), engagement, stembeleid, ESG-integratie (MSCI ESG, ISS ESG) en impactbeleggingen. SFDR Artikel 8.",
+  "pagina": 66,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 218,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Tabel Vermogensbeheerkosten per kring (in € 1.000): Deutsche Bank NL Beheerkosten 901, Transactiekosten 391, Totaal 2.655",
+  "pagina": 81,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": null,
+  "vermogensbeheerkosten_totaal_pct": null
+ },
+ "opmerkingen": "Kring Deutsche Bank NL heeft een afwijkende portefeuille ondergebracht bij DWS, waaronder een Aandelen Wereld mandaat met afwijkende benchmark met restricties. Hanteert een discretionaire valuta-afdekkingsportefeuille voor USD, GBP en JPY. Rente-afdekking geschiedt op basis van UFR vermenigvuldigd met de dekkingsgraad. In 2025 was er een inhaaleffect van € 600.000 aan vermogensbeheerkosten (waarvan € 418.000 voor voorgaande jaren).",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "MSCI Wereldindex (afwijkende benchmark met restricties)"
+  ],
+  "factorbeleggen": null,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "De afwĳking van de benchmark is vooral te wĳten aan het Aandelen Wereld mandaat dat een afwĳkende benchmark kent met restricties, ten opzichte van de generieke benchmark in de tabel",
+  "pagina": 370,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 50,
+  "letterlijk": "De kringen HPE en Deutsche Bank NL hanteren dezelfde afdekkingspercentages voor valutarisico per activaklasse. Deze kringen maken voor de valuta-afdekking echter gebruik van een discretionaire valuta-afdekkingsportefeuille.",
+  "omschrijving": "Kring Deutsche Bank NL hanteert 50% valuta-afdekking voor aandelen via een discretionaire valuta-afdekkingsportefeuille (alleen USD, GBP en JPY afgedekt; andere valuta's en opkomende markten niet).",
+  "pagina": 69
+ },
+ "naam": "Kring Deutsche Bank Nederland (Centraal Beheer)",
+ "pad": "data/annual_reports/65_Centraal_Beheer_APF_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

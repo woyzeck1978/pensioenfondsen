@@ -1,0 +1,81 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 2412.854,
+  "feitelijk_pct": null,
+  "letterlijk": "Aandelen: 2.412.854; Stand per 31 december 2025: 8.519.539 (bedragen x € 1.000, p. 99). Private Equity beleggingen betreffen de beleggingen in Blue Triangles Private Markets Investments C.V. Deze portefeuille vertegenwoordigt 18,4 procent van de totale beleggingen in aandelen (p. 96).",
+  "omvat_private_equity": true,
+  "pagina": 99,
+  "private_equity_pct": 18.4,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 8519.539
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Northern Trust",
+    "pagina": 71,
+    "product_of_mandaat": "Aandelen opkomende markten (fondsstructuur)",
+    "segment": "opkomende markten",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "Van Lanschot Kempen",
+  "letterlijk": "Van Lanschot Kempen (VLK) is onze fiduciair manager (p. 45). De eerste omzetting heeft plaats gevonden in 2025: het mandaat Aandelen opkomende markten is omgezet naar een fondsstructuur (Northern Trust) (p. 71).",
+  "organisatie": "extern",
+  "pagina": 45
+ },
+ "esg": {
+  "co2_doel": "Paris Aligned Benchmark",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "impactbeleggen",
+   "CO2-reductiedoel",
+   "Paris-aligned benchmark",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Ons fonds heeft op het gebied van het thema klimaat een concrete CO2-reductie doelstelling geformuleerd, namelijk de Paris Aligned Benchmark. (...) Binnen het MVB-beleid van ons fonds worden de volgende instrumenten toegepast: dialoog, stemgedrag-, uitsluitingen, ESG-integratie (middels ESG benchmarks en ESG due diligence) en impact beleggen (p. 54).",
+  "omschrijving": "Het MVB-beleid richt zich op de thema's klimaat en arbeid ('do good'). Voor klimaat is een CO2-reductiedoelstelling geformuleerd via de Paris Aligned Benchmark en ESG-benchmarks. Daarnaast past het fonds uitsluitingen toe (wapens, mensenrechten, arbeidsrechten, fossiele winning, tabak), stembeleid en engagement (via CTI).",
+  "pagina": 54,
+  "sfdr_artikel": null
+ },
+ "fund_id": 135,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.01,
+  "letterlijk": "Vermogensbeheerkosten per categorie 2025: Aandelen 0,63 mln € (0,01%). Totaal vermogensbeheerkosten 38,05 mln € (0,42%). Prestatieafhankelijke vergoedingen 2025 bedroegen in totaal 10,18 mln € (0,06 mln € voor niet genoteerd vastgoed en 10,12 mln € voor private markets; aandelen nihil) (p. 66).",
+  "pagina": 66,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": null,
+  "vermogensbeheerkosten_totaal_pct": 0.42
+ },
+ "opmerkingen": "In 2025 is het mandaat Aandelen opkomende markten omgezet naar een fondsstructuur bij Northern Trust (transitiekosten 31,3 bp). De balanspost Aandelen omvat tevens private equity via Blue Triangles Private Markets Investments C.V. (18,4% van de totale aandelenpost). In voorbereiding op de Wtp wordt in 2026 een transitievermogensbeheerplan opgesteld. Collateral management is per 1 oktober 2025 overgedragen aan LDI-manager Cardano.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Vanuit deze overwegingen kiezen we voor passief beheer van een groot deel van onze beleggingsportefeuille. (...) De volgende mandaten worden passief beheerd: (...) aandelen ontwikkelde markten, aandelen opkomende landen (p. 29). Aandelenrendement 2025 was 7,0% vs benchmark 6,7% (p. 31).",
+  "pagina": 29,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 50,
+  "letterlijk": "We dekten de blootstelling van de beleggingen aan de Amerikaanse dollar, de Japanse yen en het Britse pond voor 50 procent af (p. 32). Het risico van waarden uitgegeven in Amerikaanse dollar, Japanse yen of Britse pond wordt strategisch voor 50 procent afgedekt in de rendementsportefeuille en de vastgoedportefeuille (p. 111).",
+  "omschrijving": "Het valutarisico op beleggingen in USD, JPY en GBP binnen de rendementsportefeuille (waar aandelen onder vallen) wordt strategisch voor 50% afgedekt met termijncontracten (beheerd door Cardano).",
+  "pagina": 32
+ },
+ "naam": "UWV",
+ "pad": "data/annual_reports/135_UWV_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

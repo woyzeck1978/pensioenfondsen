@@ -1,0 +1,72 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": null,
+  "feitelijk_pct": null,
+  "letterlijk": "",
+  "omvat_private_equity": false,
+  "pagina": null,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": null,
+  "letterlijk": "De portefeuille aandelen uit ontwikkelde landen bestaat voor het merendeel uit twee indexfondsen (wereldwĳd en Europees) en voor een klein deel uit een actieve aandelenmanager met een specifieke ESG-opdracht. [...] De categorie aandelen uit opkomende landen wordt ingevuld met een passief aandelenfonds.",
+  "organisatie": "extern",
+  "pagina": 123
+ },
+ "esg": {
+  "co2_doel": "30% reductie ten opzichte van 2019 en vervolgens een jaarlĳkse afname van ten minste 7% in lĳn met de klimaatdoelstellingen van Parĳs",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "best-in-class",
+   "engagement",
+   "stembeleid",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Dit fonds belegt passief op basis van een ESG-benchmark. Dat betekent dat bepaalde bedrĳven worden uitgesloten. Ook wordt gekozen voor bedrĳven die binnen hun sector beter scoren op duurzaamheid (best-in-class). Daarnaast sturen we op minder CO2-uitstoot en op bĳdragen aan bepaalde duurzame doelen (SDG's).",
+  "omschrijving": "Voor aandelen past het fonds uitsluitingen toe, best-in-class selectie en sturing op minder CO2-uitstoot en SDG's (waardoor o.a. niet volledig in de Magnificent 7 wordt belegd). HNPF hanteert daarnaast fondsbreed engagement en stembeleid en heeft een CO2-reductiedoel van 30% reductie t.o.v. 2019 en ten minste 7% per jaar conform Parijs.",
+  "pagina": 123,
+  "sfdr_artikel": null
+ },
+ "fund_id": 229,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "",
+  "pagina": null,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": null,
+  "vermogensbeheerkosten_totaal_pct": null
+ },
+ "opmerkingen": "Collectiviteitkring Flexibele regeling is een afzonderlijke pensioenkring binnen Stichting Het Nederlandse Pensioenfonds (HNPF). De aandelenportefeuille voor ontwikkelde landen bestaat voor het merendeel uit twee indexfondsen (wereldwijd en Europees) en voor een klein deel uit een actieve manager met een ESG-opdracht. Opkomende markten is passief ingevuld via een ESG-indexfonds. Door ESG-keuzes (uitsluitingen, best-in-class, sturen op lagere CO2 en SDG's, waardoor niet volledig in de Magnificent 7 werd belegd) bleef het rendement op ontwikkelde markten in 2025 achter bij de brede benchmark (-2,2%-punt: 7,0% vs 9,2%), terwijl opkomende markten outperformde (+1,0%-punt: 18,8% vs 17,8%). Kwantitatieve gegevens over vermogensallocatie, kosten en valuta-afdekking voor deze kring ontbreken in de aangeleverde uitsnede.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "De portefeuille aandelen uit ontwikkelde landen bestaat voor het merendeel uit twee indexfondsen (wereldwĳd en Europees) en voor een klein deel uit een actieve aandelenmanager met een specifieke ESG-opdracht. [...] De categorie aandelen uit opkomende landen wordt ingevuld met een passief aandelenfonds.",
+  "pagina": 123,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "",
+  "omschrijving": "Niet genoemd in de beschikbare pagina's voor Kring Flexibele regeling.",
+  "pagina": null
+ },
+ "naam": "Kring Flexibele Regeling (HNPF)",
+ "pad": "data/annual_reports/229_Kring_Flexibele_Regeling_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

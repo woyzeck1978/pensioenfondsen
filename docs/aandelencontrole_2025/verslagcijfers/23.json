@@ -1,0 +1,95 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": null,
+  "feitelijk_pct": 27.3,
+  "letterlijk": "Tabel 21 (p. 39): Aandelen Feitelijk 27,3%, Benchmark 27,5%; Ontwikkelde landen 18,4% (Benchmark 18,3%), Opkomende landen 8,9% (Benchmark 9,2%), Private Equity 0,4% (Benchmark 0,4%). In de tabel zijn geen bedragen in euro's opgenomen.",
+  "omvat_private_equity": false,
+  "pagina": 39,
+  "private_equity_pct": 0.4,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 27.5,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "BlackRock",
+    "pagina": 114,
+    "product_of_mandaat": "Mandaat Aandelen Wereld (Ontwikkelde Markten)",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Achmea IM",
+    "pagina": 114,
+    "product_of_mandaat": "Aandelen opkomende markten beleggingsfonds",
+    "segment": "opkomende markten",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "Achmea IM",
+  "letterlijk": "Bijlage 4 (p. 114): Aandelen DM 21,0% Mandaat BlackRock Passief; Aandelen EM 9,0% Fonds Achmea IM Passief; p. 41: Binnen de aandelenportefeuille wordt via twee beheerders belegd in bedrijven in respectievelijk ontwikkelde (67%) en opkomende landen (33%).",
+  "organisatie": "extern",
+  "pagina": 114
+ },
+ "esg": {
+  "co2_doel": "In 2030 tenminste 50% lager dan de CO2-voetafdruk van de generieke benchmark per ultimo 2020 (klimaatneutraal in 2050)",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "De pensioenregeling van PAM hanteert een CO2-reductiedoelstelling voor de beursgenoteerde aandelen- en bedrijfsobligatieportefeuilles. Daarbij geldt dat de CO2-voetfdruk van deze portefeuilles in 2030 tenminste 50% lager moet zijn dan de CO2-voetafdruk van de generieke benchmark per ultimo 2020. (p. 116) / PMA classificeert hiermee als een zogeheten SFDR Artikel 8 product (p. 38).",
+  "omschrijving": "PMA classificeert als SFDR Artikel 8. Voor aandelen hanteert PMA uitsluitingen (controversiële wapens, normschenders en ondernemingen met scores B-CCC in het wereldmandaat via MSCI-methodologie), normatief en thematisch engagement, stembeleid, ESG-integratie en een CO2-reductiedoel van ten minste 50% reductie in 2030 t.o.v. ultimo 2020.",
+  "pagina": 116,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 23,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.07,
+  "letterlijk": "Tabel 7 (p. 21): Aandelen gemiddeld vermogen € 856,4 mln, beheerkosten € 0,6 mln (0,07%), transactiekosten € 0,3 mln (0,03%); Tabel 6 (p. 20) / p. 13: vermogensbeheerkosten totaal 0,39%, transactiekosten totaal 0,08%.",
+  "pagina": 21,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": 0.03,
+  "transactiekosten_totaal_pct": 0.08,
+  "vermogensbeheerkosten_totaal_pct": 0.39
+ },
+ "opmerkingen": "PMA belegt via twee externe beheerders in aandelen: BlackRock (ontwikkelde markten via mandaat) en Achmea IM (opkomende markten via fonds). Beide mandaten zijn passief. In 2024 vond een fondswissel plaats voor opkomende markten, waardoor de transactiekosten in 2025 normaliseerden. In de asset allocatietabel (Tabel 21, p. 39) worden aandelen (27,3% feitelijk, 27,5% benchmark) en private equity (0,4% feitelijk, 0,4% benchmark) gescheiden gerapporteerd; op p. 79 wordt wel vermeld dat de niveau 3-waardering bij aandelen durfkapitaal betreft. In Bijlage 4 (p. 114) wordt de strategische allocatie naar aandelen DM (21%) en EM (9%) op 30% gesteld. In de verstrekte uitsneden ontbreken balansbedragen ultimo 2025 in euro's; de kostentabel (Tabel 7) hanteert een gemiddeld belegd vermogen van € 856,4 mln voor aandelen en € 3.224,1 mln in totaal.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Binnen de aandelenportefeuille wordt via twee beheerders belegd in bedrijven in respectievelijk ontwikkelde (67%) en opkomende landen (33%). (p. 41)",
+  "pagina": 41,
+  "verdeling": [
+   {
+    "pct": 67,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 33,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": 0,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Bijlage 4 (p. 114): Aandelen DM Passief, Aandelen EM Passief; p. 23: passief beheer voor aandelen en obligaties in volwassen markten; p. 79: PMA belegt grotendeels in fondsen en mandaten die de index volgen.",
+  "pagina": 114,
+  "passief_pct": 100,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 75,
+  "letterlijk": "Het valutarisico van deze valuta’s wordt binnen de categorieën Aandelen Wereld, Beursgenoteerd vastgoed, Niet-beursgenoteerd vastgoed, Private Equity en infrastructuur voor 75% afgedekt naar de euro. (p. 41) / Thans dekt PMA 75% van de exposure af naar USD, JPY en GBP binnen de categorieën aandelen ontwikkelde markten... (p. 83)",
+  "omschrijving": "Binnen Aandelen Wereld (ontwikkelde markten) wordt het valutarisico voor USD, GBP en JPY voor 75% afgedekt naar de euro.",
+  "pagina": 41
+ },
+ "naam": "Medewerkers Apotheken / PMA (Pharmacy Employees)",
+ "pad": "data/annual_reports/23_Medewerkers_Apotheken_PM_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

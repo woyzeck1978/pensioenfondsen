@@ -1,0 +1,84 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 4469,
+  "feitelijk_pct": null,
+  "letterlijk": "Strategische spreiding vermogen over beleggingscategorieën 2025: Aandelen 38,5% (pagina 14); Aandelen 4.469, TOTAAL 10.928 (pagina 50, bedragen in miljoen €)",
+  "omvat_private_equity": false,
+  "pagina": 14,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 38.5,
+  "totaal_beleggingen_eur_mln": 10928
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": null,
+  "letterlijk": "In het beheer van de aandelenportefeuille wordt enerzijds gebruikgemaakt van passieve index-beleggingen, anderzijds bestaat de portefeuille uit enkele actieve mandaten. ... Een gedeelte van de Europese aandelen wordt intern beheerd.",
+  "organisatie": "gemengd",
+  "pagina": 103
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "stembeleid"
+  ],
+  "letterlijk": "Het bestuur heeft daarnaast besloten gebruik te maken van de opt-out binnen de SFDR-richtlijn, wat leidt tot een aanzienlijke beperking van rapportageverplichtingen.",
+  "omschrijving": "Het fonds maakt gebruik van de opt-out binnen de SFDR-richtlijn (artikel 6). Corporate governance en stemgedrag worden toegepast op de beleggingsportefeuille.",
+  "pagina": 33,
+  "sfdr_artikel": 6
+ },
+ "fund_id": 106,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Kosten in % van het gemiddeld belegd vermogen: Vermogensbeheerkosten 0,37, Transactiekosten 0,07",
+  "pagina": 16,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.07,
+  "vermogensbeheerkosten_totaal_pct": 0.37
+ },
+ "opmerkingen": "Ultimo 2025 was 41% van de aandelenportefeuille passief belegd (gestegen van 27% in 2024 door omzetting van actief naar passief beheer). Een deel van de Europese aandelen wordt intern beheerd. Het rendement van de aandelenportefeuille bleef in 2025 met 7,8% achter bij de benchmark (12,3%), voornamelijk door defensieve positionering/focus op kwaliteitsaandelen en onderweging in banken en defensie in Europa, en dollarverzwakking in de VS. Het fonds past de opt-out binnen de SFDR-richtlijn toe. Wtp-transitievoorbereidingen zijn gaande.",
+ "regio": {
+  "basis": "strategisch",
+  "letterlijk": "Strategische regioverdeling van aandelenportefeuille 2025: Europa 40%, Verenigde Staten 35%, Opkomende markten 15%, Pacific (inclusief Japan) 10%",
+  "pagina": 102,
+  "verdeling": [
+   {
+    "pct": 40,
+    "regio": "Europa"
+   },
+   {
+    "pct": 35,
+    "regio": "Noord-Amerika"
+   },
+   {
+    "pct": 15,
+    "regio": "Opkomende markten"
+   },
+   {
+    "pct": 10,
+    "regio": "Azië-Pacific"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "Ultimo 2025 was 41% (ultimo 2024: 27%) van de beleggingen in aandelen passief belegd. De stijging is in lijn met lopende beleidsontwikkelingen.",
+  "pagina": 77,
+  "passief_pct": 41,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 0,
+  "letterlijk": "Het valutarisico van Amerikaanse aandelen dekken we doelbewust niet af. Contra-cyclische valuta’s als de Amerikaanse dollar boden in het verleden namelijk vaak bescherming tijdens crises op financiële markten.",
+  "omschrijving": "Valutarisico van Amerikaanse aandelen wordt doelbewust niet afgedekt (0%) vanwege de contra-cyclische bescherming van de dollar tijdens crises.",
+  "pagina": 14
+ },
+ "naam": "Hoogovens",
+ "pad": "data/annual_reports/106_Hoogovens_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

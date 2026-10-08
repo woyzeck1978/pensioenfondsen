@@ -1,0 +1,94 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 1920.047,
+  "feitelijk_pct": null,
+  "letterlijk": "p. 108: Aandelen 1.920.047, Stand per 31 december 2025: 5.320.487 (bedragen x € 1.000); p. 57: Aandelen (ontwikkelde en opkomende landen) 34%, besloten niet te investeren in private equity.",
+  "omvat_private_equity": false,
+  "pagina": 108,
+  "private_equity_pct": 0,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 34,
+  "totaal_beleggingen_eur_mln": 5320.487
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "State Street",
+    "pagina": 169,
+    "product_of_mandaat": "aandelenportefeuille ontwikkelde landen",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Northern Trust",
+    "pagina": 125,
+    "product_of_mandaat": "Northern Trust Emerging markets Custom ESG Equity Fund",
+    "segment": "opkomende markten",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Neuberger Berman",
+    "pagina": 125,
+    "product_of_mandaat": "Neuberger Berman Emerging Markets Equity Fund",
+    "segment": "opkomende markten",
+    "stijl": "actief"
+   }
+  ],
+  "fiduciair_beheerder": "BlackRock",
+  "letterlijk": "p. 156: Beleggingen in de returnportefeuille worden beheerd door State Street, Northern Trust, Neuberger Berman, Legal & General, Insight en T-Row Price. Het bestuur heeft BlackRock aangesteld als fiduciair vermogensbeheerder. p. 169: beheerder van de aandelenportefeuille ontwikkelde landen State Street; p. 125: Northern Trust Emerging markets Custom ESG Equity Fund, Neuberger Berman Emerging Markets Equity Fund.",
+  "organisatie": "extern",
+  "pagina": 156
+ },
+ "esg": {
+  "co2_doel": "In 2030 50% CO2 reductie ten opzichte van 2019",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "best-in-class",
+   "engagement",
+   "stembeleid",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "p. 169: Oak Pensioenfonds kiest voor een artikel 8 classificatie; In 2030 50% CO2 reductie ten opzichte van 2019; p. 173: CO2-reductie in de wereldwijde aandelenportefeuille ontwikkelde landen met 30% ten opzichte van de benchmark via uitsluiting; positieve screening binnen wereldwijde aandelenportefeuille ontwikkelde landen.",
+  "omschrijving": "SFDR artikel 8 pensioenregeling. Uitsluitingen (clustermunitie, UNGC, tabak, kolen/teerzand/schalie), positieve screening/insluiting (SSGA R-factor op ontwikkelde markten), engagement en stembeleid via State Street, en CO2-reductiedoelstellingen (-50% in 2030 t.o.v. 2019; -30% voor ontwikkelde aandelen t.o.v. benchmark via uitsluiting).",
+  "pagina": 169,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 181,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "p. 75: Als percentage van het beheerd vermogen zijn de vermogensbeheerkosten gestegen naar 274 basispunten. De beheerkosten zijn in 2025 gestegen van 9.263 naar 9.672. Totale transactiekosten gedaald van 7.589 naar 6.664. Tabel kosten per beleggingscategorie ontbreekt in het verslag.",
+  "pagina": 75,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": null,
+  "vermogensbeheerkosten_totaal_pct": 2.74
+ },
+ "opmerkingen": "Oak Pensioenfonds voert een 'passief tenzij' beleggingsbeleid en kiest bewust voor een relatief eenvoudige, grotendeels passief beheerde portefeuille. Private equity is uitgesloten vanwege beperkte liquiditeit, complexiteit en kostenstructuur. Het vermogensbeheer is volledig extern belegd met BlackRock als fiduciair beheerder (tevens verantwoordelijk voor matchingportefeuille, valuta-afdekking en herbalancering). Aandelenbeheer is verdeeld over State Street (ontwikkelde markten) en Northern Trust (Custom ESG Equity Fund) en Neuberger Berman (Emerging Markets Equity Fund). T-Row Price wordt genoemd als beheerder binnen de returnportefeuille maar het verslag noemt het specifieke segment niet (vermoedelijk vastrentend/high yield). Per 1 juli 2025 is de custodian gewijzigd van BNY Mellon naar BNP Paribas waardoor vorderingen niet meer direct onder beleggingen vallen. SFDR artikel 8 met CO2-doel van 50% reductie in 2030. Met het oog op de Wtp-transitie in 2026 is het strategisch beleid 2022-2024 gehandhaafd voor 2025.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "p. 57: . Aandelen (ontwikkelde en opkomende landen) 34% (geen nadere procentuele verdeling over regio's genoemd)",
+  "pagina": 57,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "p. 75: Vanuit de strategische heroriëntatie in 2018 heeft het bestuur bewust gekozen voor een relatief eenvoudige en grotendeels passief beheerde portefeuille; p. 166: Oak Pensioenfonds hanteert een 'passief tenzij' model.",
+  "pagina": 75,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 100,
+  "letterlijk": "p. 57: Valuta afdekking *: 100% (* Met uitzondering van aandelen Emerging Markets, obligaties Emerging Markets lokale valuta en Pacific); p. 164-165: wisselkoersrisico’s geheel afgedekt, met uitzondering van de valuta waar dit niet efficiënt en tegen redelijke kosten voor mogelijk is (valuta van opkomende landen).",
+  "omschrijving": "Wisselkoersrisico wordt strategisch voor 100% afgedekt, met uitzondering van aandelen opkomende markten (en Pacific) waar afdekking niet efficiënt en tegen redelijke kosten mogelijk is.",
+  "pagina": 57
+ },
+ "naam": "Oak",
+ "pad": "data/annual_reports/181_Oak_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

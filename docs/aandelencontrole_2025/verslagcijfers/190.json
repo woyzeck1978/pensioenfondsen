@@ -1,0 +1,81 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": null,
+  "feitelijk_pct": null,
+  "letterlijk": "Allocatie strategisch beleid (in %): Rendementsportefeuille 52, Aandelen ontwikkelde landen 23,4, Aandelen opkomende landen 2,6, Totaal 100",
+  "omvat_private_equity": false,
+  "pagina": 269,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 26,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": null,
+  "letterlijk": "De categorie aandelen ontwikkelde landen wordt ingevuld met een passief aandelenfonds.",
+  "organisatie": "extern",
+  "pagina": 269
+ },
+ "esg": {
+  "co2_doel": "30% reductie ten opzichte van 2019 en vervolgens een jaarlijkse afname van ten minste 7% in lijn met de klimaatdoelstellingen van Parijs",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "best-in-class",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie",
+   "engagement",
+   "stembeleid"
+  ],
+  "letterlijk": "Dat beleid gaat over de integratie van MVB-factoren in beleggingsbeslissingen, de dialoog met ondernemingen om gedragsverandering te bewerkstelligen (engagement), stemrecht bij aandeelhoudersvergaderingen en uitsluiting van bedrijven en landen.",
+  "omschrijving": "Passief beleid op basis van ESG-keuzes en ESG-benchmark met uitsluitingen, best-in-class selectie, sturing op lagere CO2-uitstoot en SDG-bijdragen; fondsbreed engagement en stembeleid.",
+  "pagina": 270,
+  "sfdr_artikel": null
+ },
+ "fund_id": 190,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "",
+  "pagina": null,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": null,
+  "vermogensbeheerkosten_totaal_pct": null
+ },
+ "opmerkingen": "Kring van Het Nederlandse Pensioenfonds (Hnp). Strategische aandelenallocatie is 26,0% (23,4% ontwikkelde landen en 2,6% opkomende landen). Beide aandelencategorieën zijn passief ingevuld met ESG-keuzes/ESG-benchmark. Valutarisico van USD en GBP wordt voor 75% afgedekt.",
+ "regio": {
+  "basis": "strategisch",
+  "letterlijk": "Aandelen ontwikkelde landen 23,4 ... Aandelen opkomende landen 2,6",
+  "pagina": 269,
+  "verdeling": [
+   {
+    "pct": 23.4,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 2.6,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "De categorie aandelen ontwikkelde landen wordt ingevuld met een passief aandelenfonds. De categorie aandelen uit opkomende landen wordt ingevuld met een passief aandelenfonds.",
+  "pagina": 269,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 75,
+  "letterlijk": "Voor Pensioenkring PepsiCo dekten we in 2025 het valutarisico van de Amerikaanse dollar en het Britse pond voor 75% af.",
+  "omschrijving": "Het valutarisico van de Amerikaanse dollar en het Britse pond werd in 2025 voor 75% afgedekt.",
+  "pagina": 270
+ },
+ "naam": "Pensioenkring PepsiCo (Hnp)",
+ "pad": "data/annual_reports/165_Kring_Arcadis_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

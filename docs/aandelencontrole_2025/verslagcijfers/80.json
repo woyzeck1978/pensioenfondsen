@@ -1,0 +1,88 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 139.211,
+  "feitelijk_pct": 31.4,
+  "letterlijk": "Aandelen 139.211 (x € 1.000) 31,4% Strategische mix in % 31,5% Totaal 443.081 (x € 1.000)",
+  "omvat_private_equity": false,
+  "pagina": 37,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 31.5,
+  "totaal_beleggingen_eur_mln": 443.081
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Northern Trust Global Investments Limited",
+    "pagina": 39,
+    "product_of_mandaat": "Northern Trust World PAB Plus Equity Select Index Fund",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "Goldman Sachs Asset Management B.V. (GSAM)",
+  "letterlijk": "Voor de organisatie van de beleggingen maakt het fonds gebruik van de diensten van een fiduciair beheerder, Goldman Sachs Asset Management B.V. (GSAM). ... De beleggingen in aandelen ontwikkelde markten zijn overgeheveld naar het World PAB Plus Equity Select Index Fund van Northern Trust.",
+  "organisatie": "extern",
+  "pagina": 19
+ },
+ "esg": {
+  "co2_doel": "De benchmark verlaagt jaarlijks de blootstelling naar broeikasgasemissie met 7%, met een initiële reductie van 50%. De reductie is afgestemd op het 1,5 graden scenario van het Intergovernmental Panel on Climate Change (IPCC).",
+  "eigen_index": true,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "eigen ESG-index",
+   "CO2-reductiedoel",
+   "Paris-aligned benchmark",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "De beleggingen in aandelen ontwikkelde markten zijn overgeheveld naar het World PAB Plus Equity Select Index Fund van Northern Trust. Dit fonds belegt in lijn met de klimaatbenchmark van MSCI om klimaatrisico's te reduceren en klimaat gerelateerd duurzaam beleggen te stimuleren. De benchmark verlaagt jaarlijks de blootstelling naar broeikasgasemissie met 7%, met een initiële reductie van 50%.",
+  "omschrijving": "Aandelen zijn belegd in het Northern Trust World PAB Plus Equity Select Index Fund, passend bij een Paris-aligned klimaatbenchmark van MSCI met een initiële reductie van 50% en jaarlijks 7% verdere CO2-reductie. Er geldt een uitsluitingsbeleid en Northern Trust voert namens het fonds het stembeleid en de dialoog/engagement (via Hermes EOS) uit.",
+  "pagina": 39,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 80,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.08,
+  "letterlijk": "Aandelen: Vermogensbeheerkosten 2025: 0,08% (2024: 0,11%), Transactiekosten 2025: 0,04% (2024: 0,05%). Totaal: Vermogensbeheerkosten 0,28%, Transactiekosten 0,10%. Er worden geen prestatievergoedingen toegekend.",
+  "pagina": 26,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": 0.04,
+  "transactiekosten_totaal_pct": 0.1,
+  "vermogensbeheerkosten_totaal_pct": 0.28
+ },
+ "opmerkingen": "In 2024 is het actieve aandelenmandaat opkomende markten verkocht wegens een negatief eindoordeel; in 2025 bestaat de aandelenportefeuille volledig uit één passief mandaat in ontwikkelde markten via Northern Trust. Hierdoor zijn de vermogensbeheerkosten voor aandelen gedaald naar 0,08% en is de FTK-buffer voor actief beheer (S10) per ultimo 2025 nihil (€ 0). De normportefeuille is in 2025 ongewijzigd gebleven. Wtp-transitie staat gepland voor 1 juli 2027 (uiterlijk 1 januari 2028).",
+ "regio": {
+  "basis": "strategisch",
+  "letterlijk": "Return portefeuille: Aandelen ontwikkelde markten: Strategisch gewicht 31,5%",
+  "pagina": 37,
+  "verdeling": [
+   {
+    "pct": 31.5,
+    "regio": "Wereld ontwikkeld"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "klimaatbenchmark van MSCI"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Binnen deze categorie heeft het fonds alleen een wereldwijd aandelenmandaat. ... Dit wordt veroorzaakt door het feit dat de beheerkosten voor het in 2024 verkochte, actieve, emerging markets aandelen mandaat hoger lagen dan de beheerkosten van het passief beheerde, wereldwijde aandelenmandaat.",
+  "pagina": 25,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 75,
+  "letterlijk": "om het balansrisico te minimaliseren wordt het valutarisico van ontwikkelde landen voor 75% afgedekt (uniform afdekkingspercentage); er geldt een bandbreedte van 60% - 80% rondom de gewenste afdekking van 75%; het valutarisico van opkomende landen wordt niet afgedekt",
+  "omschrijving": "Het valutarisico van ontwikkelde markten wordt voor 75% afgedekt (bandbreedte 60% - 80%) door in de beleggingsfondsen een combinatie van EUR hedged en unhedged share classes aan te houden. Opkomende markten worden niet afgedekt.",
+  "pagina": 45
+ },
+ "naam": "Avery Dennison",
+ "pad": "data/annual_reports/80_Avery_Dennison_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

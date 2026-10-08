@@ -1,0 +1,88 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": null,
+  "feitelijk_pct": null,
+  "letterlijk": "Van de belegde waarde in aandelen staat de waarde van private equity beleggingen, infrastructuur- en impactfondsen opgenomen als vastgesteld op basis van 'waarderingsmodellen en -technieken'.",
+  "omvat_private_equity": true,
+  "pagina": 118,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Russell Investments",
+    "pagina": 77,
+    "product_of_mandaat": "Actieve multi-manager strategie aandelen (Middelloonregeling)",
+    "segment": "wereldwijd",
+    "stijl": "actief"
+   },
+   {
+    "naam": "Achmea Investment Management",
+    "pagina": 77,
+    "product_of_mandaat": "Kwantitatieve multi-factorstrategie beleggingsfondsen (Beschikbarepremieregeling en Nettopensioenregeling)",
+    "segment": "wereldwijd ontwikkeld en opkomende markten",
+    "stijl": "enhanced/factor"
+   }
+  ],
+  "fiduciair_beheerder": "Achmea Investment Management",
+  "letterlijk": "Achmea Investment Management (AIM): Fiduciair manager, beleggingsadministrateur Middelloonregeling en beheerder LDI-portefeuille. Russell Investments: Manager of Managers en de MVB-coördinator: Stelt namens SBZ Pensioen uitvoerende vermogensbeheerders aan voor het beheer van de verschillende onderdelen van de beleggingsportefeuille (inzake de Middelloonregeling)",
+  "organisatie": "extern",
+  "pagina": 14
+ },
+ "esg": {
+  "co2_doel": "een gemiddelde jaarlijkse reductie van 7% in CO2-equivalent uitstoot te realiseren (gemeten vanaf 2019) en streven naar een klimaatneutrale portefeuille in 2050",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Voor beursgenoteerde aandelen en bedrijfsobligaties blijft het fonds de koolstofintensiteit en gefinancierde emissies monitoren en gebruikt het engagement, stemmen en uitsluitingen als belangrijkste implementatie-instrumenten. In 2024 en 2025 voldoet SBZ Pensioen aan haar streven om een gemiddelde jaarlijkse reductie van 7% in CO2-equivalent uitstoot te realiseren (gemeten vanaf 2019).",
+  "omschrijving": "SBZ Pensioen past op aandelen uitsluitingen toe (5,61% van MSCI ACWI uitgesloten), ESG-integratie bij selectie en monitoring van beheerders, actief aandeelhouderschap via stembeleid en engagement door Robeco en Russell Investments, en streeft naar een gemiddelde jaarlijkse CO2-reductie van 7% (vanaf 2019) richting een klimaatneutrale portefeuille in 2050.",
+  "pagina": 183,
+  "sfdr_artikel": null
+ },
+ "fund_id": 42,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.257,
+  "letterlijk": "Aandelen: 3.333 (x € 1.000), 25,7 bps; Transactiekosten vermogensbeheerders Aandelen: 2.150 (x € 1.000), 16,6 bps",
+  "pagina": 51,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": 0.166,
+  "transactiekosten_totaal_pct": 0.068,
+  "vermogensbeheerkosten_totaal_pct": 0.283
+ },
+ "opmerkingen": "Het aandelenbeheer verschilt wezenlijk tussen de DB-regeling (Middelloonregeling) en de DC-regeling (Beschikbarepremieregeling en Nettopensioenregeling). In DB treedt Russell Investments op als Manager of Managers met een actieve multi-manager strategie en valuta-afdekking via een separate overlay. In DC voert Achmea IM het beleid uit via beleggingsfondsen met voor ontwikkelde markten een kwantitatieve multi-factorstrategie (outperformance van ca. 10% in 2025). In de jaarrekening omvat de belegde waarde in aandelen tevens private equity-, infrastructuur- en impactfondsen. In het kader van de Wtp is de impactportefeuille in 2025 niet uitgebreid in afwachting van het nieuwe impactkader voor de Flexibele Premieregeling (FPR).",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "MSCI ACWI"
+  ],
+  "factorbeleggen": true,
+  "hoofdstijl": "actief",
+  "letterlijk": "In de DB-regeling wordt de aandelenportefeuille ingevuld via een mandaat dat via een actieve multi-manager strategie wordt beheerd. ... In de DC-regeling wordt actief in aandelen belegd via meerdere beleggingsfondsen, waarbij voor aandelen in ontwikkelde markten een kwantitatieve multi-factorstrategie wordt gehanteerd.",
+  "pagina": 77,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "In de DB-regeling wordt de aandelenportefeuille ingevuld via een mandaat dat via een actieve multi-manager strategie wordt beheerd. Hierbij wordt het valutarisico door middel van een (separate) overlay afgedekt. ... In de DC-regeling wordt actief in aandelen belegd via meerdere beleggingsfondsen, waarbij voor aandelen in ontwikkelde markten een kwantitatieve multi-factorstrategie wordt gehanteerd. Het valutarisico in ontwikkelde landen wordt (deels) binnen een van de beleggingsfondsen afgedekt",
+  "omschrijving": "In de DB-regeling wordt het valutarisico van de aandelenportefeuille afgedekt via een separate valuta-overlay binnen de module Zakelijk Return. In de DC-regeling wordt het valutarisico in ontwikkelde landen deels afgedekt binnen een van de beleggingsfondsen.",
+  "pagina": 77
+ },
+ "naam": "Zorgverzekeraars / SBZ (Health Insurers)",
+ "pad": "data/annual_reports/42_SBZ_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

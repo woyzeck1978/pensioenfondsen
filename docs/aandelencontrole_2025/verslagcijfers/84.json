@@ -1,0 +1,95 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 230,
+  "feitelijk_pct": 18.7,
+  "letterlijk": "Aandelen Europa 74,1 6,3 Noord-Amerika 73,8 6,3 Verre Oosten 32,8 2,8 Opkomende landen 47,9 4,1 | 230,0 18,7 ... Overige beleggingen Private Equity 1,8 0,2 ... Totaal 1.168,1 100,0",
+  "omvat_private_equity": false,
+  "pagina": 44,
+  "private_equity_pct": 0.2,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 1168.1
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "MN",
+    "pagina": 44,
+    "product_of_mandaat": "MN beleggingsfonds",
+    "segment": "Europa",
+    "stijl": "onbekend"
+   }
+  ],
+  "fiduciair_beheerder": "MN",
+  "letterlijk": "Aandelen Europa MN fonds 2) [voetnoot 2: MN beleggingsfonds beheerd door MN]; Noord-Amerika, Verre Oosten, Opkomende landen MN fonds 3) [voetnoot 3: MN beleggingsfonds beheerd buiten MN] (p. 44); Fiduciair MN heeft namens Pensioenfonds Cargill engagement gevoerd (p. 148)",
+  "organisatie": "extern",
+  "pagina": 44
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "In 2025 stond de verdere ontwikkeling van ESG-integratie en de uitbreiding van actief aandeelhouderschap centraal. MN heeft, namens Pensioenfonds Cargill, actief deelgenomen aan engagementprogramma’s en trad in dialoog met 157 bedrijven... Daarnaast werden er namens het fonds 20.563 stemmen uitgebracht (p. 45); daling van 26,5% van de uitstoot-intensiteit van de aandelenportefeuille (p. 46)",
+  "omschrijving": "Pensioenfonds Cargill hanteert een ESG-beleid via fiduciair MN met uitsluitingen (landen en ondernemingen), thematische engagementprogramma's, uitoefening van stemrecht (20.563 stemmen op aandeelhoudersvergaderingen in 2025) en ESG-integratie via selectiecriteria en drempelwaarden. De CO2-intensiteit van de aandelenportefeuille daalde in 2025 met 26,5% (-71,3% sinds eind 2020). Het fonds rapporteert volgens de SFDR Artikel 8-vereisten (promotie van ecologische en sociale kenmerken).",
+  "pagina": 45,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 84,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.056,
+  "letterlijk": "p. 40: Aandelen Beheer-kosten 5,6 bp, Totale Prestatievergoeding (1.164) / (0,1) bp (volledig toe te rekenen aan Private Equity; beursgenoteerde aandelensegmenten blanco), Transactie Kosten 1,3 bp; p. 37: Vermogensbeheer Kosten in % van het gemiddeld belegd vermogen 0,27%, Transactiekosten 0,04%",
+  "pagina": 40,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": 0.013,
+  "transactiekosten_totaal_pct": 0.04,
+  "vermogensbeheerkosten_totaal_pct": 0.27
+ },
+ "opmerkingen": "Stichting Pensioenfonds Cargill B.V. is in liquidatie in verband met de collectieve waardeoverdracht (CWO) naar DNAPF en de Wtp-transitie. De aandelenportefeuille (€ 230,0 mln, 18,7% ultimo 2025) is belegd in vier MN Services Beleggingsfondsen (Europa, Noord-Amerika, Verre Oosten en Opkomende markten). Alleen Europa wordt door MN zelf beheerd; de overige drie fondsen worden beheerd buiten MN (externe beheerders worden niet met naam genoemd). Het fonds geeft aan dat actief beheer beperkt wordt toegepast. Valutarisico wordt strategisch voor 100% afgedekt voor USD, GBP en JPY (65,9% van alle niet-euro belangen); er wordt geen specifiek percentage voor alleen aandelen genoemd.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Concentratierisico en prijsrisico - Zakelijke waarden, onroerend goed private equity en infrastructuur - Verdeling per regio: Aandelen Europa 32,1%, Aandelen Noord-Amerika 32,0%, Aandelen Verre Oosten 14,2%, Aandelen Emerging Markets 20,8% (Private equity 0,8%)",
+  "pagina": 109,
+  "verdeling": [
+   {
+    "pct": 32.1,
+    "regio": "Europa"
+   },
+   {
+    "pct": 32,
+    "regio": "Noord-Amerika"
+   },
+   {
+    "pct": 14.2,
+    "regio": "Azië-Pacific"
+   },
+   {
+    "pct": 20.8,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": null,
+  "hoofdstijl": "passief",
+  "letterlijk": "Bij het fonds is de mate waarin actief beheer wordt toegepast beperkt. (p. 30)",
+  "pagina": 30,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Strategisch streeft ons fonds naar een afdekking van 100,0% van de valuta-exposure naar Amerikaanse dollar, Britse pond en Japanse yen. Andere buitenlandse valuta worden niet afgedekt. Eind 2025 zou dit betekenen dat strategisch 65,9% van de niet-euro belangen wordt afgedekt. (p. 105)",
+  "omschrijving": "Het fonds dekt strategisch 100,0% van de valuta-exposure naar Amerikaanse dollar, Britse pond en Japanse yen af; overige buitenlandse valuta worden niet afgedekt (strategisch 65,9% van de totale niet-euro belangen afgedekt). Er wordt in het verslag geen afzonderlijk afdekkingspercentage voor uitsluitend de aandelenportefeuille vermeld.",
+  "pagina": 105
+ },
+ "naam": "Cargill",
+ "pad": "data/annual_reports/84_Cargill_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

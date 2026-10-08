@@ -1,0 +1,96 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 173.568,
+  "feitelijk_pct": 34,
+  "letterlijk": "Totaal aandelen 173.568 34% 70,0% ... Totale Portefeuille 510.179 (bedragen in duizenden euro's)",
+  "omvat_private_equity": false,
+  "pagina": 46,
+  "private_equity_pct": null,
+  "strategisch_basis": "rendementsportefeuille",
+  "strategisch_pct": 70,
+  "totaal_beleggingen_eur_mln": 510.179
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Vanguard",
+    "pagina": 11,
+    "product_of_mandaat": null,
+    "segment": null,
+    "stijl": "passief"
+   },
+   {
+    "naam": "Capital Group",
+    "pagina": 11,
+    "product_of_mandaat": null,
+    "segment": null,
+    "stijl": "onbekend"
+   }
+  ],
+  "fiduciair_beheerder": "Columbia Threadneedle Investments",
+  "letterlijk": "Als vermogensbeheerder is de internationale vermogensbeheeractviteit van Ameriprise Financial Inc. (handelend onder de naam Columbia Threadneedle Investments) aangesteld. Daarnaast beheren Vanguard en Capital Group beleggingsfondsen waarin het pensioenfonds belegd is.",
+  "organisatie": "extern",
+  "pagina": 11
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid"
+  ],
+  "letterlijk": "Het fonds kwalificeert zich als een SFDR‑artikel 6 fonds. Dit betekent dat binnen de pensioenregeling geen rekening wordt gehouden met ESG‑kenmerken en dat duurzaamheid geen expliciete rol speelt in het beleggingsbeleid.",
+  "omschrijving": "Het fonds kwalificeert als een SFDR-artikel 6 fonds en houdt zich aan minimale wet- en regelgeving (uitsluiting van controversiële wapens en sancties). Duurzaamheid weegt niet mee in investeringsbeslissingen. Invulling van het ESG-beleid is uitbesteed aan de vermogensbeheerders van de beleggingsfondsen via voting en engagement conform UN Global Compact en UNPRI.",
+  "pagina": 27,
+  "sfdr_artikel": 6
+ },
+ "fund_id": 70,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Subtotaal 0,25% Transactiekosten 0,05% Totale kosten procentueel 0,30%",
+  "pagina": 35,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.05,
+  "vermogensbeheerkosten_totaal_pct": 0.25
+ },
+ "opmerkingen": "Het pensioenfonds belegt zijn returnportefeuille grotendeels passief via beleggingsfondsen; matching en totaal beleggingsmandaat worden uitgevoerd door Columbia Threadneedle Investments (CTI). In oktober 2025 is de portefeuille geherbalanceerd naar de strategische mix nadat de feitelijke gewichten in Q3 eenmaal buiten de bandbreedtes traden. Sinds 1 januari 2025 is SPAN een gesloten fonds. In 2025 is een partij geselecteerd voor een ALM-studie. De visitatiecommissie merkt op dat de investment beliefs inzake het valutabeleid in oktober 2025 zijn herijkt, wat nog niet synchroon loopt met de ABTN. Kosten per beleggingscategorie zijn in het verslag alleen voor 2024 opgenomen in absolute bedragen.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Equity World 156.907 30,8% 63,0% Equity Emerging markets 16.662 3,3% 7,0% Totaal aandelen 173.568 34% 70,0%",
+  "pagina": 46,
+  "verdeling": [
+   {
+    "pct": 30.8,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 3.3,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": 0,
+  "benchmarks": [
+   "MSCI World Index NR USD (hedged to EUR)",
+   "MSCI Emerging Markets Index NR USD"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Alle beleggingsfondsen, met uitzondering van staatsobligaties van opkomende markten (EMD), worden passief beheerd. De behaalde relatieve performance is, doordat de benchmark zo goed mogelijk wordt gevolgd, dan ook beperkt.",
+  "pagina": 45,
+  "passief_pct": 100,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Benchmark (1. Return Portfolio) 63% MSCI World Index NR USD (hedged to EUR) + 7% MSCI Emerging Markets Index NR USD",
+  "omschrijving": "Valutarisico op ontwikkelde markten aandelen (Equity World) is afgedekt naar euro volgens de benchmark MSCI World Index NR USD (hedged to EUR). Aandelen opkomende markten (Equity Emerging Markets) zijn onafgedekt. In oktober 2025 zijn de investment beliefs omtrent valutabeleid herijkt.",
+  "pagina": 46
+ },
+ "naam": "Abbott / Abbott Nederland",
+ "pad": "data/annual_reports/70_Abbott_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

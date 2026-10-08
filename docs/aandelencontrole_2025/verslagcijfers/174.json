@@ -1,0 +1,99 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 766,
+  "feitelijk_pct": null,
+  "letterlijk": "bedragen in miljoenen euro's ... Beleggingen ... Aandelen 766 ... Totaal belegd vermogen 5.227",
+  "omvat_private_equity": true,
+  "pagina": 57,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 5227
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "U-FCP",
+    "pagina": 55,
+    "product_of_mandaat": "World Equity Fund (U-FCP WEF)",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": null,
+  "letterlijk": "Wij hebben bij 28 van de 28 externe vermogensbeheerders de integratie van gepromote ecologische of sociale kenmerken getoetst. ... Developed Markets (U-FCP WEF, USD) Sector: Aandelen 11,0%",
+  "organisatie": "extern",
+  "pagina": 55
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "In lijn met artikel 11 van de SFDR zetten wij hieronder uiteen in welke mate wij ecologische en sociale kenmerken promoten (artikel 8 SFDR) ... 54,1% van de beleggingen is afgestemd op de ecologische of sociale kenmerken in de zin van artikel 8 van SFDR",
+  "omschrijving": "In lijn met artikel 8 SFDR promoot Progress ecologische en sociale kenmerken (54,1% van de beleggingen afgestemd op artikel 8). Toepassing van uitsluitingen, engagement en stemgedrag, en toetsing van ESG-integratie bij alle 28 externe beheerders. Er wordt gerapporteerd over CO2-uitstoot via WACI; er wordt geen SFDR-referentiebenchmark gehanteerd.",
+  "pagina": 55,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 174,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "In 2025 hebben we voor het beheer van onze beleggingen (exclusief transactiekosten) € 19,3 miljoen uitgegeven. Dat is 0,36% van het gemiddeld belegd vermogen van € 5.366,6 miljoen. De transactiekosten over 2025 zijn € 2,6 miljoen; 0,05% van het gemiddeld belegd vermogen. De totale kosten voor vermogensbeheer bedragen in 2025 € 21,9 miljoen (2024: € 22,5 miljoen), als percentage van het gemiddeld belegd vermogen 0,41%",
+  "pagina": 51,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.05,
+  "vermogensbeheerkosten_totaal_pct": 0.36
+ },
+ "opmerkingen": "Progress is een gesloten kring binnen Unilever APF met een relatief hoge gemiddelde deelnemersleeftijd. In 2025 kwam de beleidsdekkingsgraad boven de derisking-trigger van TBI+40 uit, waardoor de strategische beleggingsmix is gewijzigd van 50%/50% naar 58% Stable Return en 42% Diversified Income. In 2026 staat een ALM-studie gepland. De aandelenportefeuille (€ 766 mln ultimo 2025) omvat € 754,1 mln beursgenoteerde aandelen en € 11,5 mln private equity (een daling t.o.v. € 1.192 mln in 2024). Progress belegt in aandelen onder meer via de Luxemburgse pool Developed Markets (U-FCP WEF, USD; 11,0% van het totale belegd vermogen), maar de 28 externe beheerders worden niet individueel bij naam genoemd in het verslag. Voor de aandelenportefeuille ontbreekt in de uitsneden een tabel met kosten per beleggingscategorie (de tabel op pag. 39 betreft kring Forward); fondsbrede kosten voor vermogensbeheer bedragen 0,36% (36 bp) exclusief transactiekosten (totale vermogensbeheerkosten 0,41%) en 0,05% (5 bp) aan transactiekosten. Regio Europa (13%) betreft Europa ex-VK (10%) plus VK (3%).",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Europa ex Verenigd Koninkrijk 10%, Vereningd Koninkrijk 3%, Noord-Amerika 58%, Asia Pacific 11%, Emerging markets 18%",
+  "pagina": 105,
+  "verdeling": [
+   {
+    "pct": 58,
+    "regio": "Noord-Amerika"
+   },
+   {
+    "pct": 13,
+    "regio": "Europa"
+   },
+   {
+    "pct": 11,
+    "regio": "Azië-Pacific"
+   },
+   {
+    "pct": 18,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "Customized aandelen benchmark",
+   "STOXX Developed World Index USD net return index",
+   "STOXX Emerging Markets USD net return Index"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Progress streeft ernaar om zoveel mogelijk (semi)passief te beleggen. Echter een beperkt deel van de portefeuille wordt wel actief belegd omdat wordt verwacht dat dit waarde toevoegt",
+  "pagina": 49,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 80,
+  "letterlijk": "Voor de belangrijkste beleggingscategorieën dekken wij 80% van het risico van de Amerikaanse dollar af. Staatsobligaties en credits worden voor 100% afgedekt voor alle valuta-effecten.",
+  "omschrijving": "Voor de belangrijkste beleggingscategorieën (waaronder aandelen) wordt het risico van de Amerikaanse dollar strategisch voor 80% afgedekt.",
+  "pagina": 53
+ },
+ "naam": "Kring Progress (Unilever)",
+ "pad": "data/annual_reports/68_Unilever_APF_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

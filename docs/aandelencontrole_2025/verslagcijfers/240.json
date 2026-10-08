@@ -1,0 +1,91 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 1266.47,
+  "feitelijk_pct": null,
+  "letterlijk": "Ultimo 2025 ... Aandelen 1.266.470 ... Totaal 3.865.431 (bedragen x € 1.000)",
+  "omvat_private_equity": false,
+  "pagina": 77,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 3865.43
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "SSGA",
+    "pagina": 25,
+    "product_of_mandaat": "passief discretionair wereldwijd aandelenmandaat",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Berenberg",
+    "pagina": 25,
+    "product_of_mandaat": "discretionair mandaat voor Europese small caps",
+    "segment": "Europese small caps",
+    "stijl": "actief"
+   }
+  ],
+  "fiduciair_beheerder": null,
+  "letterlijk": "discretionaire aandelenmandaten (SSGA en Berenberg)",
+  "organisatie": "extern",
+  "pagina": 13
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen"
+  ],
+  "letterlijk": "Deze discretionaire portefeuille belegt niet in bedrijven en landen waarvan het bij wet is verboden om in te beleggen. Zo belegt ons pensioenfonds niet in landen die zijn geplaatst op de sanctielijsten van de Verenigde Naties en/of de Europese Unie. Ook beleggen we niet in: Partijen die betrokken zijn bij de handel in en productie van (controversiële) wapens. De lijst van uitgesloten landen voor beleggingen. De lijst van uitgesloten bedrijven voor beleggingen.",
+  "omschrijving": "Uitsluitingen van controversiële wapens, VN/EU-gesanctioneerde landen en lijsten van uitgesloten landen en bedrijven voor discretionaire mandaten. Externe fondsen hanteren een eigen ESG-beleid.",
+  "pagina": 27,
+  "sfdr_artikel": null
+ },
+ "fund_id": 240,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Vermogensbeheerkosten 8.725 (= 0,23% van het gemiddeld belegd vermogen) [...] Transactiekosten 0,03% [...] Aandelen 2.990",
+  "pagina": 49,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.03,
+  "vermogensbeheerkosten_totaal_pct": 0.23
+ },
+ "opmerkingen": "Aandelen worden volledig extern beheerd (ontwikkelde markten passief via SSGA, Europese small caps via Berenberg, Japanse small caps via een beleggingsfonds en opkomende markten via twee actieve beleggingsfondsen). Op p. 13 worden Robeco, Invesco en M&G genoemd onder beleggingsfondsen, maar het verslag koppelt hen niet expliciet aan specifieke aandelenfondsen. Er is geen fondsbrede fiduciair beheerder. Wtp-transitie is in voorbereiding met € 1,8 mln projectkosten in 2025.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Ontwikkelde markten (Mature markets) 1.251.732 76,5% / Opkomende markten (Emerging markets) 14.738 1,0%",
+  "pagina": 92,
+  "verdeling": [
+   {
+    "pct": 76.5,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 1,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "Het grootste deel van de return portefeuille bestaat uit aandelen ontwikkelde markten. Dat heeft de vorm van een passief discretionair wereldwijd aandelenmandaat. [...] Tevens participeert ons pensioenfonds in twee actief beheerde beleggingsfondsen in aandelen opkomende markten.",
+  "pagina": 25,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "De reële waarde van valutatermijntransacties wordt bepaald op basis van de ultimo verslagperiode geldende marktnotering voor de resterende looptijd.",
+  "omschrijving": "Het fonds maakt gebruik van valutaderivaten (valutatermijntransacties), maar het afdekkingspercentage voor de aandelenportefeuille wordt in het verslag niet genoemd.",
+  "pagina": 73
+ },
+ "naam": "ING CDC Pensioenfonds",
+ "pad": "data/annual_reports/240_ING_CDC_Pensioenfonds_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

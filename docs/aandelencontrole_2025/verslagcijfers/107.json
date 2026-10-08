@@ -1,0 +1,85 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 154.644,
+  "feitelijk_pct": 27.2,
+  "letterlijk": "Aandelen 154.644 (27,2%, norm 34,0), totaal vermogen 568.858 (p. 79, bedragen x € 1.000); ALM-norm / strategische weging aandelen 24,5% (p. 23, 24; feitelijk 27,1% op p. 24)",
+  "omvat_private_equity": false,
+  "pagina": 79,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 24.5,
+  "totaal_beleggingen_eur_mln": 568.858
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Northern Trust",
+    "pagina": 19,
+    "product_of_mandaat": "Northern Trust fondsen",
+    "segment": "ontwikkelde en opkomende markten",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "Goldman Sachs Asset Management",
+  "letterlijk": "In 2025 is de fiduciair beheerder GSAM uitgebreid geëvalueerd (p. 15); vereenvoudigde opzet van de aandelenportefeuille met alleen nog allocatie naar Northern Trust fondsen (p. 19)",
+  "organisatie": "extern",
+  "pagina": 15
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "engagement",
+   "stembeleid"
+  ],
+  "letterlijk": "Het pensioenfonds kwalificeert derhalve onder SFDR als een artikel 6 fonds. Ongunstige effecten van beleggingsbeslissingen op duurzaamheidsfactoren worden niet in aanmerking worden genomen in het beleggingsbeleid (p. 24)",
+  "omschrijving": "Het fonds kwalificeert onder SFDR als artikel 6; ongunstige effecten op duurzaamheidsfactoren worden niet meegenomen. Voor engagement en stembeleid sluit het fonds aan bij het beleid van de externe beheerders.",
+  "pagina": 24,
+  "sfdr_artikel": 6
+ },
+ "fund_id": 107,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.062,
+  "letterlijk": "Categorie Aandelen: Beheervergoeding 6,2 bps, Overige kosten 0,0 bps, Transactiekosten 1,7 bps (p. 19); vermogensbeheerkosten totaal 0,24%, transactiekosten totaal 0,05% (p. 18)",
+  "pagina": 19,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": 0.017,
+  "transactiekosten_totaal_pct": 0.05,
+  "vermogensbeheerkosten_totaal_pct": 0.24
+ },
+ "opmerkingen": "De aandelenportefeuille is in 2025 vereenvoudigd met alleen nog allocatie naar Northern Trust fondsen, waardoor de overige kosten voor aandelen naar nul zijn gegaan. Er wordt geen buffer meer aangehouden voor actief beheer risico (tracking error <= 1%). Het fonds voert geen Wtp-regeling uit en bereidt zich voor op een beoogde sluiting per 1 januari 2028.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Verdeling Aandelen en Vastgoed per markt/categorie: Ontwikkelde markten (Mature markets) 134.578 (72,4%), Opkomende markten (Emerging markets) 14.235 (7,6%)",
+  "pagina": 64,
+  "verdeling": [
+   {
+    "pct": 72.4,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 7.6,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "vereenvoudigde opzet van de aandelenportefeuille met alleen nog allocatie naar Northern Trust fondsen (p. 19); er wordt geen buffer meer aangehouden voor het actief beheer risico (p. 69)",
+  "pagina": 19,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 75,
+  "letterlijk": "De strategische afdekking van het valutarisico van beleggingen in Amerikaanse dollar, Britse pond en Japanse yen bleef gedurende het verslagjaar ongewijzigd op 75%.",
+  "omschrijving": "Strategische afdekking van het valutarisico van beleggingen in Amerikaanse dollar, Britse pond en Japanse yen is 75%.",
+  "pagina": 23
+ },
+ "naam": "Huntsman Rozenburg",
+ "pad": "data/annual_reports/107_Huntsman_Rozenburg_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

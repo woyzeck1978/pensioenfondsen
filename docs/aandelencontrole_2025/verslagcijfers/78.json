@@ -1,0 +1,106 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 980.016,
+  "feitelijk_pct": null,
+  "letterlijk": "Strategische allocatie naar beleggingscategorieën: Aandelen ontwikkelde markten 36,60%, Aandelen opkomende markten 4,20% (p. 33); Beursgenoteerde aandelenbeleggingsfondsen 980.016 (x € 1.000, p. 59)",
+  "omvat_private_equity": false,
+  "pagina": 33,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 40.8,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "BlackRock",
+    "pagina": 75,
+    "product_of_mandaat": "BlackRock CCF Developed World ESG Screened Index Fund",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Northern Trust Asset Management",
+    "pagina": 75,
+    "product_of_mandaat": "Northern Trust World Custom ESG Equity Index Fund",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Northern Trust Asset Management",
+    "pagina": 75,
+    "product_of_mandaat": "Northern Trust UCITS FGR Fund - Emerging Markets Custom ESG Equity Index Fund",
+    "segment": "opkomende markten",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "Russell Investments",
+  "letterlijk": "SPA heeft zijn vermogensbeheer volledig uitbesteed. (p. 73); Russell Investments Fiduciaire ondersteuning (p. 31); BlackRock CCF Developed World ESG Screened Index Fund (Aandelen) 440.818, Northern Trust World Custom ESG Equity Index Fund (Aandelen) 438.821, Northern Trust UCITS FGR Fund - Emerging Markets Custom ESG Equity Index Fund (Aandelen) 100.377 (p. 75)",
+  "organisatie": "extern",
+  "pagina": 75
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen"
+  ],
+  "letterlijk": "SPA kwalificeert als een Artikel 6-fonds in de zin van de SFDR. Dit betekent dat het fonds geen duurzame beleggingen als doelstelling heeft en evenmin ecologische of sociale kenmerken promoot in de zin van Artikel 8 SFDR. [...] Het bestuur heeft vastgesteld dat de bestaande ESG-screened fondsen en de huidige invulling van het beleid in belangrijke mate aansluiten bij deze voorkeuren [...] waarbij de nadruk ligt op uitsluiting, monitoring en risicobeheersing",
+  "omschrijving": "SPA kwalificeert als een SFDR Artikel 6-fonds. Het beleggingsbeleid richt zich op uitsluitingen (ESG-screened fondsen), monitoring en risicobeheersing, zonder specifieke duurzaamheids- of impactdoelstellingen of CO2-reductiedoelen.",
+  "pagina": 35,
+  "sfdr_artikel": 6
+ },
+ "fund_id": 78,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Vermogensbeheerskosten 0,23% Transactiekosten 0,02% Totale vermogenskosten 0,25%",
+  "pagina": 11,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.02,
+  "vermogensbeheerkosten_totaal_pct": 0.23
+ },
+ "opmerkingen": "In 2025 is een nieuwe ALM-studie afgerond die per eind oktober 2025 leidde tot een herijking van de strategische asset allocatie: de returnportefeuille werd verhoogd van 55% naar 60% (aandelen ontwikkelde markten strategisch van 24,75% naar 36,60%, aandelen opkomende markten van 8,25% naar 4,20%). Per 1 april 2025 ging de valuta-overlay over naar Cardano en werd de valuta-afdekking aangepast (GBP en JPY niet langer afgedekt, USD voor 50%). De aandelenportefeuille wordt volledig passief beheerd via indexfondsen van BlackRock en Northern Trust (het iShares Emerging Markets fonds uit 2024 is beëindigd). Wegens de kortere horizon belegt het fonds terughoudend en niet in private equity of niet-beursgenoteerd vastgoed. Naast het fondsvermogen kent SPA een DC-regeling (BP-regeling) van € 216,4 mln die actief belegt via Oriflex-fondsen met 100% valuta-afdekking.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Specificatie aandelen naar regio op basis van 'look through': Europa EU 10,7%, Europa niet-EU 5,8%, Noord-Amerika 66,0%, Midden- en Zuid-Amerika 0,9%, Azië, excl. Japan 8,2%, Pacific 7,2%, Overige 1,2%",
+  "pagina": 72,
+  "verdeling": [
+   {
+    "pct": 66,
+    "regio": "Noord-Amerika"
+   },
+   {
+    "pct": 16.5,
+    "regio": "Europa"
+   },
+   {
+    "pct": 15.4,
+    "regio": "Azië-Pacific"
+   },
+   {
+    "pct": 2.1,
+    "regio": "Overig"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Momenteel zijn zowel de beheerkosten als de transactiekosten op het niveau dat past bij passieve vermogensbeheerders en dat past bij de strategie van het pensioenfonds. Het bestuur streeft naar het hebben van passieve vermogensbeheerders die in staat zijn om het rendement van de benchmark te volgen tegen zo laag mogelijke kosten met een beperkte tracking error. (p. 13); doordat de aandelenportefeuille de index volgt (p. 75)",
+  "pagina": 13,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 50,
+  "letterlijk": "Voor de wereldwijde aandelenportefeuille wordt 50% van de blootstelling naar de Amerikaanse Dollar afgedekt, terwijl voor bedrijfsobligaties de afdekking voor deze valuta 100% is. Voor wereldwijde aandelen en bedrijfsobligaties worden de Britse pond en Japanse yen niet langer beleidsmatig afgedekt.",
+  "omschrijving": "Voor de wereldwijde aandelenportefeuille wordt 50% van het valutarisico naar de Amerikaanse Dollar afgedekt met valutatermijncontracten. GBP en JPY worden sinds 2025 niet langer beleidsmatig afgedekt. Opkomende markten worden niet afgedekt.",
+  "pagina": 34
+ },
+ "naam": "Atos",
+ "pad": "data/annual_reports/78_Atos_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

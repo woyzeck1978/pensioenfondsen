@@ -1,0 +1,83 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 87.235,
+  "feitelijk_pct": null,
+  "letterlijk": "Stand per 31 december 2025: Aandelen 87.235, Totaal 239.605 (Bedragen in € 1.000, doorkijk); onderdeel van Module Rendement (119.403)",
+  "omvat_private_equity": false,
+  "pagina": 732,
+  "private_equity_pct": null,
+  "strategisch_basis": "rendementsportefeuille",
+  "strategisch_pct": 71,
+  "totaal_beleggingen_eur_mln": 239.605
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": "Achmea Investment Management",
+  "letterlijk": "Centraal Beheer APF heeft de uitvoering van deze MVB-instrumenten uitbesteed aan de specialisten van Achmea Investment Management.",
+  "organisatie": "extern",
+  "pagina": 66
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "impactbeleggen",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "In de Centraal Beheer beleggingsfondsen zĳn ESG-factoren in het beleggingsproces geïntegreerd. Dit wordt gedaan voor de aandelen-, bedrĳfsobligaties- en staatsobligatiebeleggingen.",
+  "omschrijving": "Achmea IM voert voor Centraal Beheer APF het MVB-beleid uit met uitsluitingen (wapens, tabak, fossiele brandstoffen, normschenders), engagement, stembeleid, ESG-integratie (MSCI ESG, ISS ESG) en impactbeleggingen. SFDR Artikel 8.",
+  "pagina": 66,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 222,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Tabel Vermogensbeheerkosten per kring (in € 1.000): HP NL Beheerkosten 449, Transactiekosten 355, Totaal 932",
+  "pagina": 81,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": null,
+  "vermogensbeheerkosten_totaal_pct": null
+ },
+ "opmerkingen": "Kring HPNL is per april 2025 overgestapt naar de centrale modules (Module Rendement en Module Rente), waardoor de separate valuta-afdekking is vervallen. Doorkijk per 31 december 2025 toont € 87,235 mln aan aandelen op een totaal belegd vermogen van € 239,605 mln (binnen Module Rendement van € 119,403 mln).",
+ "regio": {
+  "basis": "strategisch",
+  "letterlijk": "Portefeuille Robuust Rendement: Aandelen ontwikkelde landen Strat. Gewicht 58%, Aandelen opkomende landen Strat. Gewicht 13%",
+  "pagina": 73,
+  "verdeling": [
+   {
+    "pct": 58,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 13,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "MSCI Wereldindex",
+   "MSCI Emerging Market Index"
+  ],
+  "factorbeleggen": true,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "Deze zĳn wat gestegen vanwege de overstap van passieve beleggingen naar een breder gediversifieerde portefeuille met o.a. meer vastgoedbeleggingen.",
+  "pagina": 327,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 50,
+  "letterlijk": "Binnen de module Robuust Rendement wordt voor de beleggingscategorie Aandelen Wereld 50% van het valutarisico afgedekt. ... Het risico naar valuta’s in opkomende landen wordt niet afgedekt.",
+  "omschrijving": "Binnen de module Robuust Rendement wordt voor de beleggingscategorie Aandelen Wereld 50% van het valutarisico afgedekt binnen de beleggingsinstellingen; valuta's van opkomende markten worden niet afgedekt.",
+  "pagina": 69
+ },
+ "naam": "Kring HP Nederland (Centraal Beheer)",
+ "pad": "data/annual_reports/65_Centraal_Beheer_APF_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

@@ -1,0 +1,87 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": null,
+  "feitelijk_pct": 30.7,
+  "letterlijk": "Portefeuillesamenstelling per jaareinde: Aandelen Werkelijk 30,7% Strategisch 30,0%, Totaal 100,0% (p. 95)",
+  "omvat_private_equity": false,
+  "pagina": 95,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 30,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Northern Trust Global Investors",
+    "pagina": 96,
+    "product_of_mandaat": null,
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Northern Trust Global Investors",
+    "pagina": 96,
+    "product_of_mandaat": null,
+    "segment": "opkomende markten",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "Achmea Investment Management",
+  "letterlijk": "Aandelen ontwikkelde markten: Northern Trust Global Investors (passief); Aandelen opkomende markten: Northern Trust Global Investors (passief) (p. 96); De dagelijkse uitvoering van het beleid is uitbesteed aan onze fiduciair manager, Achmea Investment Management (p. 18).",
+  "organisatie": "extern",
+  "pagina": 96
+ },
+ "esg": {
+  "co2_doel": "minstens 50% lager in 2030 t.o.v. benchmark in 2021 (volledig klimaatneutraal in 2050)",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "best-in-class",
+   "engagement",
+   "stembeleid",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Uiterlijk in 2030 moet de CO2-uitstoot van onze beleggingen minstens 50% lager zijn dan die van onze benchmark in 2021 (p. 27); C. SFDR RTS artikel 8 (p. 102); We sluiten uit ... gestemd op 3.159 aandeelhoudersvergaderingen ... met 114 bedrijven gesprekken gevoerd (p. 27-28).",
+  "omschrijving": "Ahold Delhaize Pensioen classificeert onder SFDR Artikel 8. Voor aandelen hanteert het fonds uitsluitingen (controversiële wapens, tabak, bepaalde fossiele brandstoffen, VN Global Compact-overtreders en uitgesloten landen), uitoefening van het stemrecht (3.159 vergaderingen), dialoog/engagement (114 bedrijven) en ESG-toetsing/best-in-class selectie gericht op een CO2-reductie van minimaal 50% in 2030 ten opzichte van de benchmark in 2021 en een klimaatneutrale portefeuille in 2050.",
+  "pagina": 27,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 73,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Aandelen: Beheerkosten € 882 duizend, Transactiekosten € 1.990 duizend, performance gerelateerde beheerkosten nihil. Totaal beheerkosten 0,20% (20 bps), transactiekosten 0,05% (5 bps) van het gemiddeld belegd vermogen (p. 19, 97).",
+  "pagina": 97,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.05,
+  "vermogensbeheerkosten_totaal_pct": 0.2
+ },
+ "opmerkingen": "De aandelenportefeuille wordt volledig passief beheerd door Northern Trust Global Investors (gesplitst in ontwikkelde en opkomende markten); vanaf 2019 wordt binnen aandelen niet meer actief belegd (p. 76, 96). De beleggingen zijn eerder omgezet van beleggingsfondsen naar eigen mandaten om het eigen uitsluitingsbeleid toe te passen en kosten te verlagen (p. 19, 99, 103). Per 1 januari 2025 is de strategische verdeling aangepast naar 48,5% matching en 51,5% return (met een strategische norm van 30,0% aandelen van het totale vermogen) om de introductie van impactbeleggen mogelijk te maken (doel € 300 mln in 2025-2027) (p. 18, 28, 95). Ter bescherming van de dekkingsgraad in aanloop naar het invaren in het nieuwe pensioenstelsel per 1 januari 2028 is de renteafdekking in 2025 verhoogd naar 100% van de verplichtingen (p. 19, 46). Het fiduciair vermogensbeheer is uitbesteed aan Achmea Investment Management. Valutarisico op USD in aandelen wordt voor 50% afgedekt (p. 19). Het belang in het aandeel Koninklijke Ahold Delhaize N.V. bedraagt minder dan 1% van de portefeuille (p. 76).",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": 0,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Binnen de aandelenportefeuille wordt vanaf 2019 niet meer actief belegd (p. 76); Aandelen ontwikkelde markten: passief, Aandelen opkomende markten: passief (p. 96).",
+  "pagina": 76,
+  "passief_pct": 100,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 50,
+  "letterlijk": "Het valutarisico dekken we alleen af voor valuta die meer dan 2,5% van het totale vermogen vertegenwoordigen. In 2025 gold dit alleen voor de Amerikaanse dollar. Bij obligaties dekken we het valutarisico volledig af en bij aandelen voor 50%.",
+  "omschrijving": "Het valutarisico wordt uitsluitend afgedekt voor valuta die meer dan 2,5% van het totale vermogen vertegenwoordigen; in 2025 betrof dit alleen de Amerikaanse dollar (USD). Voor aandelen wordt het valutarisico voor 50% afgedekt.",
+  "pagina": 19
+ },
+ "naam": "Ahold Delhaize",
+ "pad": "data/annual_reports/73_Ahold_Delhaize_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

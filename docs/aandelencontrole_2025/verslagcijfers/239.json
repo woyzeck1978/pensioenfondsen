@@ -1,0 +1,71 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 419.913,
+  "feitelijk_pct": null,
+  "letterlijk": "Tabel Gehanteerde waarderingsmethodiek per 31 december 2025: Aandelen 419.913, Totaal 803.302 (bedragen in duizenden euro's); Module Rendement (p. 16): 'Deze portefeuille, die voor 60% bestaat uit aandelen, 10% infrastructuur en 30% obligaties'",
+  "omvat_private_equity": false,
+  "pagina": 66,
+  "private_equity_pct": null,
+  "strategisch_basis": "rendementsportefeuille",
+  "strategisch_pct": 60,
+  "totaal_beleggingen_eur_mln": 803.302
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": "Achmea Investment Management",
+  "letterlijk": "De vermogensbeheerkosten die voor rekening van SNPS zijn, bestaan uit de vergoeding die aan Achmea Investment Management (AIM) wordt betaald voor de uitbestedingsovereenkomst en de vaste vergoeding aan de custodian (BNY Mellon, effecten bewaarbank).",
+  "organisatie": "extern",
+  "pagina": 22
+ },
+ "esg": {
+  "co2_doel": "CO2-voetafdruk met 15% te verlagen ten opzichte van de generieke benchmark",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Module Rendement (p. 110): 'ESG-integratie: De pensioenregeling integreert op structurele wijze ESG-risico’s en ESG-factoren in het beleggingsproces. (...) CO₂-reductie: (...) doelstelling om de CO2-voetafdruk met 15% te verlagen ten opzichte van de generieke benchmark. Uitsluitingsbeleid: Ondernemingen die controversiële wapens produceren worden uitgesloten...'; p. 114: Engagement en Stemmen; p. 115: Artikel 8 SFDR.",
+  "omschrijving": "SNPS classificeert de modules (waaronder Module Rendement en de CVP-modules) als SFDR Artikel 8. Voor het aandelen wereld mandaat geldt ESG-integratie (portefeuille moet een beter ESG-profiel en hogere governance-score hebben dan de benchmark), een CO2-reductiedoelstelling van 15% t.o.v. de generieke benchmark, uitsluitingen (controversiële wapens, UN Global Compact- en OESO-schenders), normatief en thematisch engagement, en actieve uitoefening van aandeelhoudersrechten (stemmen).",
+  "pagina": 110,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 239,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Tabel per beleggingscategorie (p. 23): Aandelen Betaalde beheervergoedingen 802.686, Betaalde transactiekosten 442.732, Totaal 1.245.418; Tekst p. 23: 'De totale kosten van het vermogensbeheer bedroegen in 2025 € 4,6 miljoen, overeenkomend met 62 basispunten van het belegd vermogen (...). Exclusief transactiekosten kwamen de vermogensbeheerkosten uit op 53 basispunten'; Transactiekosten 0,09% (p. 20, 23).",
+  "pagina": 23,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.09,
+  "vermogensbeheerkosten_totaal_pct": 0.53
+ },
+ "opmerkingen": "Stichting Pensioenfonds Shell Nederland (SNPS) voert een DC-pensioenregeling (beschikbare premieregeling) uit via Life Cycle Portefeuilles (Rente, Matching, Rendement) en Collectief Variabel Pensioen (CVP Bruto en Netto). Aandelen maken deel uit van de Module Rendement (waar de strategische mix 60% aandelen, 10% infrastructuur en 30% obligaties is) en van de CVP-portefeuilles. Ultimo 2025 bedraagt de reële waarde van de aandelen € 419,913 mln (€ 276,553 mln zelfstandig beursgenoteerde aandelen, € 142,222 mln aandelenbeleggingsfondsen en € 1,138 mln beleggingsdebiteuren) op een totale beleggingsportefeuille van € 803,302 mln; een feitelijk allocatiepercentage ultimo jaar over het totaal wordt niet expliciet vermeld. Het vermogensbeheer is uitbesteed aan fiduciair beheerder Achmea Investment Management (AIM) met BNY Mellon als bewaarbank/custodian. Er worden geen specifieke externe fondsbeheerders met naam aan de aandelenfondsen gekoppeld; wel wordt melding gemaakt van discretionair beheerde mandaten (aandelen wereld mandaat) en beleggingsfondsen van Achmea IM alsmede externe beleggingsfondsen. In 2025 werd ter voorbereiding op de overgang naar een flexibele premieregeling per 1 januari 2026 conform de Wtp € 1,8 mln aan transitiekosten gemaakt; tevens kondigde pensioenuitvoerder APS aan per 2030 te stoppen met externe dienstverlening waardoor SNPS een selectietraject startte. Valutarisico wordt afgedekt met FX-forwards en een overlay-fonds (+2,6% rendementsbijdrage). Regionale specificatie met percentages ontbreekt voor aandelen in de uitsnede (enkel vastgoed is per regio gespecificeerd op p. 80).",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "onbekend",
+  "letterlijk": "Onderlinge vergelijkbaarheid is daarbij beperkt door verschillen in risicoprofiel, beleggingsmix en de mate van actief beheer. De door het fonds vastgestelde benchmarks zijn in alle beleggingscategorieën verslagen.",
+  "pagina": 23,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Bijdrage van valuta: Ook het afdekken van valutarisico leverde een bijdrage aan het rendement. Doordat de dollar verzwakte ten opzichte van de euro droeg de afdekkingsstrategie ongeveer 2,6% bij. (p. 16); circa 11,8% (met valuta overlay) (p. 48); FXF derivaten (Rendement module) (p. 66).",
+  "omschrijving": "Het valutarisico wordt afgedekt via een valuta-overlay met FX-forward contracten (FXF derivaten binnen de Module Rendement en het Achmea Overlay fund binnen de CVP-modules). Doordat de US dollar daalde ten opzichte van de euro leverde de valuta-afdekking in 2025 een positieve bijdrage van circa 2,6% op aan het rendement. Een specifiek afdekkingspercentage voor aandelen wordt in het verslag niet genoemd.",
+  "pagina": 16
+ },
+ "naam": "Shell Nederland (SNPS)",
+ "pad": "data/annual_reports/239_Shell_Nederland_SNPS_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

@@ -1,0 +1,87 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 1166.412,
+  "feitelijk_pct": 29.4,
+  "letterlijk": "Aandelen: 1.166.412 (29,4%), Private equity: 516.463 (13,0%), Totaal: 3.970.511 (bedragen in duizenden euro’s). Normportefeuille 2025: Aandelen 26,0%, Private equity 11,0%",
+  "omvat_private_equity": false,
+  "pagina": 60,
+  "private_equity_pct": 13,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 26,
+  "totaal_beleggingen_eur_mln": 3970.511
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "BlackRock",
+    "pagina": 68,
+    "product_of_mandaat": "Developed World Paris-Aligned Climate Index Fund",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": null,
+  "letterlijk": "spreekt Pensioenfonds TNO voor het nieuwe Developed World Paris-Aligned Climate Index Fund van BlackRock stemvoorkeuren uit",
+  "organisatie": "extern",
+  "pagina": 68
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "stembeleid",
+   "engagement",
+   "Paris-aligned benchmark"
+  ],
+  "letterlijk": "Binnen het aandelengedeelte van de portefeuille hebben 2 fondsen een SFDR 8 classificatie... Developed World Paris-Aligned Climate Index Fund van BlackRock stemvoorkeuren uit. Hierbij volgt Pensioenfonds TNO het SRI Policy van ISS. De vermogensbeheerders van de liquide beleggingen engagen ook",
+  "omschrijving": "Het fonds belegt in een Paris-Aligned indexfonds voor ontwikkelde markten en een ESG-aandelenfonds met ESG-overlay voor opkomende markten (beide SFDR Artikel 8). Er gelden uitsluitingen (UN Global Compact, tabak, controversiële wapens, fossiel), stembeleid via ISS SRI Policy en engagement door vermogensbeheerders.",
+  "pagina": 68,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 133,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.04,
+  "letterlijk": "Aandelen: Gemiddeld belegd vermogen € 1.074,47 mln, Vermogensbeheerkosten € 0,47 mln (0,04% van belegd vermogen, 0,01% van totaal), Prestatieafhankelijke vergoedingen -; Totaal vermogensbeheerkosten (inclusief transactiekosten) 1,04%, Transactiekosten 0,10%",
+  "pagina": 54,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.1,
+  "vermogensbeheerkosten_totaal_pct": 1.04
+ },
+ "opmerkingen": "In 2025 hebben zich geen wijzigingen voorgedaan in de aandelenportefeuille (p. 61). De normweging was 26,0% aandelen (22% World, 4% EM) en 11,0% private equity. Feitelijk was aandelen 29,4% en private equity 13,0%. Vanwege de aanhoudende bandbreedte-overschrijding bij private equity is het feitelijke gewicht van beursgenoteerde aandelen verlaagd ter compensatie (p. 62). Begin 2025 is besloten JPY en GBP niet langer af te dekken (p. 79). Beide aandelenfondsen kwalificeren als SFDR Artikel 8 (p. 201). De beoogde overgang naar het nieuwe pensioenstelsel (Wtp) is per 1 juli 2026.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Verdeling aandelen per categorie: Ontwikkelde markten (Mature markets) 870.532 (79,5%), Opkomende markten (Emerging markets) 225.161 (20,5%), Totaal 1.095.692 (100,0%)",
+  "pagina": 144,
+  "verdeling": [
+   {
+    "pct": 79.5,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 20.5,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "doordat de aandelenportefeuille grotendeels passief wordt belegd",
+  "pagina": 53,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "100% van de Amerikaanse dollar positie in de liquide portefeuille wordt afgedekt met valuta-termijntransacties. Het valutarisico in de overige valuta’s en in de illiquide portefeuille worden niet afgedekt. Onder de liquide beleggingen vallen de beursgenoteerde aandelen- en obligatieportefeuilles.",
+  "omschrijving": "100% van de Amerikaanse dollar in de liquide portefeuille (waaronder beursgenoteerde aandelen) wordt afgedekt met termijntransacties. Overige valuta's (sinds begin 2025 worden JPY en GBP niet meer afgedekt) en opkomende markten worden niet afgedekt. Fondsbreed streeft men naar circa 50% afdekking.",
+  "pagina": 79
+ },
+ "naam": "TNO",
+ "pad": "data/annual_reports/133_TNO_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

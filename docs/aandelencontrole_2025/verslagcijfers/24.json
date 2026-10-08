@@ -1,0 +1,76 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 20873,
+  "feitelijk_pct": 25,
+  "letterlijk": "Samenstelling vermogen (in %): Aandelen (inclusief private equity) 32* (bandbreedte 25% – 35%), waarvan Beursgenoteerde aandelen 25 en Private equity 7 (p. 46); Marktwaardebepaling ultimo 2025: Beursgenoteerde aandelen € 20.873 mln, Private equity € 5.712 mln, Totaal belegd vermogen € 85.780 mln (p. 121).",
+  "omvat_private_equity": false,
+  "pagina": 46,
+  "private_equity_pct": 7,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 85780
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "MN",
+    "pagina": 47,
+    "product_of_mandaat": "specifieke beleggingsmandaten",
+    "segment": null,
+    "stijl": "onbekend"
+   }
+  ],
+  "fiduciair_beheerder": "MN",
+  "letterlijk": "MN is de fiduciaire vermogensbeheerder van PMT, maar beheert ook circa de helft van het PMT-vermogen in specifieke beleggingsmandaten die door PMT zijn verstrekt. We hebben –naast het formele contract –onze uitvoeringsbeginselen ten aanzien van de samenwerking met MN vastgelegd. Het gaat dan bijvoorbeeld om de selectie en monitoring van de vermogensbeheerders van PMT door MN (p. 47); Stichting Pensioenfonds Metaal en Techniek staat aan het hoofd van een groep van entiteiten, waaronder MN Services N.V. (p. 151).",
+  "organisatie": "intern",
+  "pagina": 47
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Portefeuilleconstructie (uitsluitingen en ESG-integratie): PMT sluit bepaalde landen, sectoren of individuele bedrijven uit op basis van het uitsluitingsbeleid. Dit beleid is van toepassing op alle beleggingen van PMT en wordt op periodieke kwartaalbasis vastgesteld (p. 168). Beursgenoteerde aandelen en bedrijfsobligaties: indicatoren worden onderliggend meegenomen in de MSCI IVA ESG rating, de MSCI Low Carbon Transition score, en de aanvullende screening van PMT voor de aandelenportefeuille met drempelwaarden (p. 172).",
+  "omschrijving": "PMT kwalificeert onder SFDR Artikel 8 (promotie van ecologische en sociale kenmerken). Voor beursgenoteerde aandelen hanteert PMT een kwartaallijks uitsluitingsbeleid en ESG-integratie via screening met drempelwaarden op basis van de MSCI IVA ESG rating (score 6,95 in 2025) en de MSCI Low Carbon Transition score op geprioriteerde thema's (energietransitie, arbeidstransitie, biodiversiteit). Er is geen eigen ESG-index of gekwantificeerd CO2-doel genoemd in de uitsnede.",
+  "pagina": 168,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 24,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.497,
+  "letterlijk": "Tabel kosten per beleggingscategorie (p. 57): Aandelen Totale kosten 51,1 bp, Beheerkosten 49,7 bp (0,497%), Transactiekosten 1,4 bp (0,014%) (waarvan Aandelen ontwikkelde landen 3,0 bp beheer en 0,4 bp transactie; Aandelen opkomende landen 10,2 bp beheer en 3,4 bp transactie; Private equity 209,1 bp beheer en 3,9 bp transactie). Ontwikkeling totale kosten vermogensbeheer (p. 56): vermogensbeheerkosten excl. transactiekosten 0,33% (€ 288,2 mln / 33,1 bp op p. 57), transactiekosten 0,04% (€ 32,0 mln / 3,7 bp op p. 57).",
+  "pagina": 57,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": 0.014,
+  "transactiekosten_totaal_pct": 0.04,
+  "vermogensbeheerkosten_totaal_pct": 0.33
+ },
+ "opmerkingen": "PMT heeft in het najaar van 2025 besloten om de totale aandelenexposure binnen de geldende bandbreedtes (25%–35%) tijdelijk te verlagen van ruim 33% naar circa 26% om de dekkingsgraad te stabiliseren in de aanloop naar de Wtp-overgang per 1 januari 2026 (p. 47). Het cluster aandelen (inclusief private equity) behaalde in 2025 een rendement van 11,3% (p. 46; bruto 11,82% / netto 11,31% op gemiddeld belegd vermogen van € 28.210 mln tegen benchmark 11,02%, p. 57). Binnen het aandelencluster maakte private equity eind 2025 22% uit (7% van totale portefeuille), waarvoor een meerjarig afbouwplan geldt inclusief een verkooptransactie van circa € 400 mln in 2025 (p. 47). Ultimo 2025 bedragen beursgenoteerde aandelen € 20.873 mln en private equity € 5.712 mln op een totaal belegd vermogen van € 85.780 mln (p. 121). MN Services N.V. is de captive vermogensbeheerder (dochterentiteit van PMT) die circa de helft direct beheert in specifieke mandaten en selectie/monitoring van externe managers uitvoert (p. 47, 151). Per medio 2024 is het pensioenbeheer ondergebracht bij PGGM; op 9 december 2025 heeft het bestuur de 'Rode Lijn' geaccordeerd voor een beheerste overgang naar het nieuwe pensioenstelsel per 1 januari 2026 (p. 60).",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "Tabel kosten per beleggingscategorie (p. 57) vermeldt gemiddeld belegd vermogen voor Aandelen ontwikkelde landen (€ 19.933 mln) en Aandelen opkomende landen (€ 1.827 mln), maar noemt geen percentuele regionale verdeling voor de aandelenportefeuille.",
+  "pagina": 57,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "onbekend",
+  "letterlijk": "Actief beheer risico: Bij PMT wordt actief beheer bij de beursgenoteerde vastgoed portefeuille toegepast met een maximale tracking error van 3% (p. 120). Voor de aandelenportefeuille wordt geen verdeling passief/actief of specifieke benchmarknaam genoemd (p. 57 vermeldt enkel 'Benchmark' met 12,04% voor ontwikkelde en 20,08% voor opkomende markten).",
+  "pagina": 120,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Valuta afdekking: gemiddeld belegd vermogen € 262 mln (binnen returnportefeuille, p. 57); Valutaderivaten netto contante waarde ultimo 2025 € 393 mln (p. 121); Het resultaat op valuta-afdekkingen en andere derivaten is verantwoord onder de categorie 'derivaten' (p. 123).",
+  "omschrijving": "PMT maakt gebruik van valuta-afdekking en valutaderivaten (waarde € 393 mln ultimo 2025; categorie 'Valuta afdekking' binnen returnportefeuille met € 262 mln gemiddeld belegd vermogen), maar noemt in de verstrekte pagina's geen specifiek afdekkingspercentage voor de aandelenportefeuille.",
+  "pagina": 57
+ },
+ "naam": "Metaal & Techniek / PMT (Metal & Technique)",
+ "pad": "data/annual_reports/24_PMT_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

@@ -1,0 +1,121 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 341.9,
+  "feitelijk_pct": 27.4,
+  "letterlijk": "Aandelen: beleggingsplan 2025 26,0%, 31 dec 2025 27,4%; Private equity 4,1%; Stand ultimo 2025 zakelijke waarden aandelen EUR 341.900 duizend, belegd vermogen EUR 1.197.321 duizend",
+  "omvat_private_equity": false,
+  "pagina": 12,
+  "private_equity_pct": 4.1,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 26,
+  "totaal_beleggingen_eur_mln": 1197.321
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "BlackRock",
+    "pagina": 13,
+    "product_of_mandaat": "discretionair mandaat",
+    "segment": "Europa",
+    "stijl": "actief"
+   },
+   {
+    "naam": "BlackRock",
+    "pagina": 13,
+    "product_of_mandaat": "beleggingsfonds",
+    "segment": "Noord-Amerika",
+    "stijl": "passief"
+   },
+   {
+    "naam": "BlackRock",
+    "pagina": 13,
+    "product_of_mandaat": "beleggingsfonds",
+    "segment": "Azië-Pacific",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Schroders",
+    "pagina": 13,
+    "product_of_mandaat": "beleggingsfonds",
+    "segment": "Opkomende markten",
+    "stijl": "actief"
+   }
+  ],
+  "fiduciair_beheerder": "BlackRock",
+  "letterlijk": "Aandelen Europa: discretionair - actief, BlackRock; Aandelen Noord Amerika: beleggingsfonds - passief, BlackRock; Aandelen Azië-Pacific: beleggingsfonds - passief, BlackRock; Aandelen opkomende markten: beleggingsfonds - actief, Schroders; De operationele aansturing van deze vermogensbeheerders ligt in handen van de fiduciair vermogensbeheerder.",
+  "organisatie": "extern",
+  "pagina": 13
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Het beleid duurzaamheid beleggingen komt op dit moment in de beleggingsportefeuille tot uitdrukking middels: een uitsluitingenlijst voor de discretionaire mandaten... een ESG-screening voor de passieve aandelenfondsen... het stem- en engagementbeleid van de externe vermogensbeheerders. Onze pensioenregeling kwalificeren wij voorts als een artikel 6 product.",
+  "omschrijving": "Het fonds kwalificeert als SFDR artikel 6 en hanteert een volgend beleid. Voor aandelen worden uitsluitingen toegepast (controversiële wapens en ESG-screening voor passieve fondsen), stem- en engagementbeleid via externe beheerders, en ESG-selectiecriteria (UNPRI).",
+  "pagina": 15,
+  "sfdr_artikel": 6
+ },
+ "fund_id": 136,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.37,
+  "letterlijk": "Aandelen kosten vermogensbeheer 2025: 0,37%, transactiekosten 2025: 0,07%; Totaal kosten vermogensbeheer 0,42%, transactiekosten 0,10%",
+  "pagina": 26,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": 0.07,
+  "transactiekosten_totaal_pct": 0.1,
+  "vermogensbeheerkosten_totaal_pct": 0.42
+ },
+ "opmerkingen": "Pensioenfonds Vopak bereidt de overgang voor naar de solidaire premieregeling per 1 juli 2026 onder de Wtp; het beleggingsplan 2025 is ongewijzigd doorgerold tot de transitiedatum. De aandelenportefeuille wordt extern beheerd door BlackRock en Schroders, waarbij BlackRock tevens optreedt als fiduciair vermogensbeheerder. Duurzaamheid is ingericht als volger (SFDR art. 6), met ESG-screening op passieve fondsen en uitsluitingen op actieve/discretionaire mandaten.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Aandelen Noord Amerika 33,0%, Aandelen Europa 17,1%, Aandelen Azië-Pacific 9,1%, Aandelen opkomende markten 11,0% (tabel zakelijke waarden p. 66; op p. 12 uitgedrukt als % van totale portefeuille: 13,1%, 6,6%, 4,2%, 3,5%)",
+  "pagina": 66,
+  "verdeling": [
+   {
+    "pct": 33,
+    "regio": "Noord-Amerika"
+   },
+   {
+    "pct": 17.1,
+    "regio": "Europa"
+   },
+   {
+    "pct": 11,
+    "regio": "Opkomende markten"
+   },
+   {
+    "pct": 9.1,
+    "regio": "Azië-Pacific"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "MSCI Europe Net Total Return",
+   "MSCI North America ex Select Controversies Net (50% USD hedged)",
+   "MSCI Asia Pacific ex Select Controversies Net",
+   "MSCI Emerging Markets Free Net Total Return"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "Aandelen Europa: MSCI Europe Net Total Return; Aandelen Noord Amerika: MSCI North America ex Select Controversies Net (50% USD hedged); Aandelen Azië-Pacific: MSCI Asia Pacific ex Select Controversies Net; Aandelen opkomende markten: MSCI Emerging Markets Free Net Total Return",
+  "pagina": 14,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 50,
+  "letterlijk": "In 2025 hebben wij de Amerikaanse dollar voor de belegging in aandelen voor 50% afgedekt.",
+  "omschrijving": "De Amerikaanse dollar is voor de belegging in aandelen voor 50% afgedekt. Overige vreemde valuta's (zoals in opkomende markten) worden niet afgedekt.",
+  "pagina": 10
+ },
+ "naam": "Vopak",
+ "pad": "data/annual_reports/136_Vopak_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

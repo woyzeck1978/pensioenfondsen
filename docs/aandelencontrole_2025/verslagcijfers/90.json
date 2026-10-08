@@ -1,0 +1,65 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 13.771,
+  "feitelijk_pct": null,
+  "letterlijk": "Aandelen: Stand ultimo 2025 13.771 [...] Totaal beleggingen: Stand ultimo 2025 2.000.913 (in duizenden euro)",
+  "omvat_private_equity": true,
+  "pagina": 76,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 2000.913
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": "Neuberger Berman Ireland Ltd",
+  "letterlijk": "De beheervergoeding voor aandelen is met 100% gedaald ten opzichte van het voorgaande jaar, aangezien alle aandelenmandaten zijn beëindigd. [...] Het pensioenfonds heeft een Investment Management Agreement (IMA) en Service Level Agreement (SLA) met Neuberger Berman Ireland Ltd.",
+  "organisatie": "extern",
+  "pagina": 35
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [],
+  "letterlijk": "Met het oog daarop beschouwt het pensioenfonds zichzelf als ressorterend onder artikel 6 van de Sustainability Finance Disclosure Regulation (SFDR).",
+  "omschrijving": "Duurzaam beleggen is geen primaire doelstelling; het fonds valt onder SFDR artikel 6. Aandelenmandaten zijn beëindigd; ESG-factoren worden door Neuberger Berman meegenomen in het algemene beleggingsproces en vastrentende waarden.",
+  "pagina": 29,
+  "sfdr_artikel": 6
+ },
+ "fund_id": 90,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0,
+  "letterlijk": "Aandelen: Managementvergoedingen 0, Performancevergoedingen 0, Transactiekosten 0, Totaal 0; Kosten vermogensbeheer in % van het gemiddeld belegd vermogen 0,14%, Transactiekosten 0,07%",
+  "pagina": 34,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": 0,
+  "transactiekosten_totaal_pct": 0.07,
+  "vermogensbeheerkosten_totaal_pct": 0.14
+ },
+ "opmerkingen": "Alle aandelenmandaten zijn beëindigd in het kader van risicoreductie en de voorgenomen collectieve waardeoverdracht naar een verzekeraar (gesloten fonds i.v.m. Wtp). Op de balans ultimo 2025 staat onder de post 'Aandelen' een bedrag van € 13,771 mln, maar uit de specificatie naar soort (pagina 78) blijkt dat dit volledig private equity betreft; beursgenoteerde aandelen bedragen € 0. Neuberger Berman is aangesteld als vermogensbeheerder (IMA/SLA met Neuberger Berman Ireland Ltd) voor onder andere de matchingportefeuille en tactische asset allocatie.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "Aandelen ontwikkelde markten 0, Aandelen opkomende markten 0 (in duizenden euro; geen procentuele verdeling genoemd, alle aandelenmandaten beëindigd)",
+  "pagina": 78,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": null,
+  "hoofdstijl": "actief",
+  "letterlijk": "voornamelijk door de sluiting van actieve aandelen- en vastrentende mandaten en het overdragen van de opbrengsten naar het nieuwe Neuberger Berman vastrentende mandaat in het voorgaande jaar. De beheervergoeding voor aandelen is met 100% gedaald ten opzichte van het voorgaande jaar, aangezien alle aandelenmandaten zijn beëindigd.",
+  "pagina": 35,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Risico inschatting heeft ertoe geleid dat het valutarisico op ontwikkelde landen door het pensioenfonds voor een groot deel wordt afgedekt, terwijl het valutarisico op opkomende landen niet wordt afgedekt.",
+  "omschrijving": "Valutarisico op ontwikkelde landen wordt voor een groot deel afgedekt, terwijl valutarisico op opkomende landen niet wordt afgedekt. Er wordt geen specifiek percentage voor aandelen genoemd (alle aandelenmandaten zijn beëindigd).",
+  "pagina": 46
+ },
+ "naam": "DOW",
+ "pad": "data/annual_reports/90_DOW_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

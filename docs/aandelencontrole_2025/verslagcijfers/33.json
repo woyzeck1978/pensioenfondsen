@@ -1,0 +1,83 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 6275,
+  "feitelijk_pct": 24.9,
+  "letterlijk": "Tabel 15: Beleggingsportefeuille per 31-12-2025: Aandelen ontwikkelde markten 4.946 (19,6%, strategisch 22,5%), Aandelen opkomende markten 1.329 (5,3%, strategisch 5,1%), Totale portefeuille 25.200 (100,0%). Private Equity 1.620 (6,4%, strategisch 4,5%). Bedragen in miljoenen euro's (zie ook aansluitingstabel Tabel 17 p. 38: Aandelen 6.209).",
+  "omvat_private_equity": false,
+  "pagina": 34,
+  "private_equity_pct": 6.4,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 27.6,
+  "totaal_beleggingen_eur_mln": 25200
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": null,
+  "letterlijk": "Veruit het grootste deel bestaat uit de kosten voor het vermogensbeheer (inclusief de prestatieafhankelijke vergoedingen aan externe beheerders) (p. 39); bandbreedtes (tracking errors) afgesproken tussen Rail & OV en de vermogensbeheerders (p. 116); gesprekken plaats met de externe managers (p. 121); beheerkosten die door vermogensbeheerders in rekening worden gebracht (p. 137).",
+  "organisatie": "extern",
+  "pagina": 39
+ },
+ "esg": {
+  "co2_doel": "-50% in 2030 en Net zero in 2050 t.o.v. 2019",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Tabel Kenmerken Indicatoren (p. 175): Ecologisch: Percentage afname van de CO2-uitstoot (scope 1+2) van de portefeuille t.o.v. 2019: Doelstelling -50% in 2030 en Net zero in 2050 (Aandelen ontwikkeld: -53%, Aandelen opkomend: -76%). Sociaal en Ecologisch: Aantal jaarlijkse gerapporteerde breaches op het uitsluitingenbeleid: Doelstelling 0 breaches (1 passieve breach in 2025). Duurzaamheidsindicatoren meten hoe de ecologische of sociale kenmerken die het financiële product promoot, worden verwezenlijkt.",
+  "omschrijving": "Rail & OV promoot ecologische en sociale kenmerken (SFDR artikel 8). Voor aandelen hanteert het fonds een uitsluitingenbeleid (uitsluitingslijst) en integreert het ESG-karakteristieken in de multifactormandaten. Voor de CO2-uitstoot van de portefeuille geldt als doelstelling -50% in 2030 en Net zero in 2050 ten opzichte van 2019 (per 31-12-2025 bedroeg de afname -53% voor aandelen ontwikkelde markten en -76% voor aandelen opkomende markten).",
+  "pagina": 175,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 33,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Tabel 19 (p. 41): Vermogensbeheerkosten: Aandelen ontwikkelde markten € 8,2 mln (0,13%), Aandelen opkomende markten € 4,8 mln (0,33%); Totaal vermogensbeheerkosten € 119,7 mln (0,48%). Pagina 42: Private equity en infrastructuur werken '(als enige) met prestatievergoedingen'. Tabel 22 en tekst (p. 44): Transactiekosten aandelen € 5,5 mln; totale transactiekosten € 11,0 mln (0,04%).",
+  "pagina": 41,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.04,
+  "vermogensbeheerkosten_totaal_pct": 0.48
+ },
+ "opmerkingen": "Rail & OV bereidt de transitie naar het nieuwe pensioenstelsel per 1 januari 2026 voor; in Q4 2025 is de beleggingsportefeuille reeds aangepast en geherbalanceerd naar de nieuwe strategische mix (p. 28, 34). Aandelen maken deel uit van de returnportefeuille en zijn opgebouwd uit ontwikkelde markten (€ 4.946 mln / 19,6%, strategisch 22,5%) en opkomende markten (€ 1.329 mln / 5,3%, strategisch 5,1%), totaal € 6.275 mln (24,9% werkelijk, 27,6% strategisch) (p. 34). In de RJ-jaarrekening/aansluitingstabel zijn aandelen gewaardeerd op € 6.209 mln (p. 38, 120). De stijl is actief (deels fundamenteel, deels multifactormandaat) met een contractuele tracking error van circa 0,5% (p. 108, 116). Benchmarks zijn FTSE Developed en Emerging indices (aangepast voor uitsluitingen en ESG) (p. 171). Vermogensbeheer is uitbesteed aan externe beheerders (geen fiduciair beheerder genoemd in de uitsnede). Prestatievergoedingen zijn niet van toepassing op aandelen (€ 0 mln; enkel bij private equity en infra). Valutarisico in de returnportefeuille wordt voor 40% afgedekt via een overlay (p. 37).",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Tabel 15 (p. 34): Werkelijke weging per 31-12-2025: Aandelen ontwikkelde markten 19,6%, Aandelen opkomende markten 5,3% (strategische weging respectievelijk 22,5% en 5,1%).",
+  "pagina": 34,
+  "verdeling": [
+   {
+    "pct": 19.6,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 5.3,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "FTSE Developed (exclusief Zuid-Korea, aandelen uit de sector vastgoed en beleggingen op de uitsluitingslijst)",
+   "FTSE Developed Multifactor (value, quality, volatility, size en momentum)",
+   "FTSE Emerging (plus Zuid-Korea en exclusief aandelen uit de sector vastgoed en beleggingen op de uitsluitingslijst)",
+   "FTSE Emerging Multifactor (value, quality, volatility, size en momentum)"
+  ],
+  "factorbeleggen": true,
+  "hoofdstijl": "actief",
+  "letterlijk": "S10 Risico actief beheer: De aandelen en bedrijfsobligaties waarin Rail & OV belegt, worden niet (enkel) gekozen op grond van de samenstelling van een index, maar op grond van verwachtingen ten aanzien van het rendement en risico van de ondernemingen... De allocatie naar de categorie aandelenbeleggingen heeft een tracking error van ongeveer 0,5% (p. 116). De aandelenportefeuille is deels fundamenteel... en deels in een multifactormandaat belegd (p. 108).",
+  "pagina": 116,
+  "passief_pct": null,
+  "tracking_error_pct": 0.5
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 40,
+  "letterlijk": "De valuta-afdekkingsportefeuille is een overlay in de returnportefeuille, waardoor het als een aparte categorie wordt beschouwd. 40% van het belangrijkste valutarisico wordt afgedekt. Met name de verzwakking van de dollar had een negatief effect op de rendementen (gemeten in euro) van de verschillende portefeuilles. Een deel van dit negatieve effect werd gecompenseerd in de valuta-afdekkingsportefeuille, die een rendement behaalde van 1,3% (p. 37).",
+  "omschrijving": "Valutarisico wordt beheerst via een valuta-afdekkingsportefeuille (overlay) binnen de returnportefeuille (waartoe aandelen behoren). 40% van het belangrijkste valutarisico (met name de Amerikaanse dollar) wordt afgedekt met behulp van valutatermijncontracten.",
+  "pagina": 37
+ },
+ "naam": "Rail & Openbaar Vervoer (Rail & Public Transport)",
+ "pad": "data/annual_reports/33_RailOV_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

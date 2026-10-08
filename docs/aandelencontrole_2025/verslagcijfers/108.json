@@ -1,0 +1,78 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 3746,
+  "feitelijk_pct": null,
+  "letterlijk": "Figuur 45 (p. 88): Balans per 31 december 2025 (bedragen in miljoenen euro's): Aandelen 3.746, Totaal 23.685 (Subtotaal 23.668). Figuur 36 (p. 74): Aandelen 3.746 (waarvan Niveau 1 directe marktnotering 3.587 en Niveau 4 159), Totaal 23.668.",
+  "omvat_private_equity": true,
+  "pagina": 88,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 23685
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": "Achmea Investment Management",
+  "letterlijk": "Het feitelijke beleggen laten we over aan gespecialiseerde beheerders (p. 27). Achmea IM Achmea Investment Management (p. 128). Northern Trust treedt op als bewaarder voor liquiditeiten (p. 74).",
+  "organisatie": "extern",
+  "pagina": 27
+ },
+ "esg": {
+  "co2_doel": "Net Zero-klimaatstrategie: ambitie dat onze beleggingen in 2050 geen netto-uitstoot van broeikasgassen meer veroorzaken. Voor al onze beleggingen in aandelen en bedrijfsobligaties zijn langetermijn-CO2-reductiedoelen van toepassing.",
+  "eigen_index": false,
+  "instrumenten": [
+   "engagement",
+   "impactbeleggen",
+   "CO2-reductiedoel"
+  ],
+  "letterlijk": "Onze ambitie is dat onze beleggingen in 2050 geen netto-uitstoot van broeikasgassen meer veroorzaken... Voor al onze beleggingen in aandelen en bedrijfsobligaties zijn langetermijn-CO2-reductiedoelen van toepassing (p. 26). Voor de aandelenbeleggingen stellen we ons op als actief aandeelhouder (p. 27).",
+  "omschrijving": "Net Zero-klimaatstrategie gericht op klimaatneutraliteit in 2050 met langetermijn-CO2-reductiedoelen voor aandelen. Actief aandeelhouderschap via thematisch en normatief engagement. In 2025 is een impactraamwerk opgesteld en impactmandaat ontwikkeld.",
+  "pagina": 26,
+  "sfdr_artikel": null
+ },
+ "fund_id": 108,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.1,
+  "letterlijk": "Figuur 23 (p. 41): Aandelen Kosten € 4,1 mln, % per cat 0,10. Figuur 20 (p. 39): Totale kosten vermogensbeheer 0,319%, Transactiekosten 0,063%. Figuur 21 (p. 39): Transactiekosten aandelen € 1,1 mln.",
+  "pagina": 41,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.063,
+  "vermogensbeheerkosten_totaal_pct": 0.319
+ },
+ "opmerkingen": "Aandelen maken deel uit van de returnportefeuille. De balanspost aandelen bedraagt € 3.746 mln en omvat € 3.587 mln beursgenoteerde aandelen en € 159 mln private equity (die wordt afgebouwd). De aandelenportefeuille wordt actief beheerd via defensieve 'low volatility'-mandaten, waardoor per saldo geen actief-beheerrisicobuffer voor het VEV vereist is. In 2025 is een impactraamwerk vastgesteld (eerste beleggingen voorzien in 2026). Achmea IM staat vermeld in de lijst van afkortingen (p. 128).",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Figuur 55 (p. 95): Ontwikkelde markten 73,0%, Opkomende markten 27,0%. Figuur 56 (p. 96, aandelen excl. private equity): Noord-Amerika 53,9%, Azië 30,7%, Europa 11,5%, Oceanië 2,5%, Midden- en Zuid-Amerika 1,1%, Afrika 0,2%.",
+  "pagina": 95,
+  "verdeling": [
+   {
+    "pct": 73,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 27,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": true,
+  "hoofdstijl": "actief",
+  "letterlijk": "Voor het Fonds is deze benadering niet geschikt vanwege de aard van de actief beheerde portefeuille. De risicoreductie van de zogeheten ‘low volatility’-mandaten ten opzichte van een wereldwijd passief mandaat, compenseert meer dan het risico dat de vermogensbeheerders toevoegen als gevolg van actieve posities ten opzichte van de benchmark (p. 97).",
+  "pagina": 97,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Figuur 37 (p. 75): Valutaderivaten Notional 949, Totale waarde 6. Geen specifiek afdekkingspercentage voor aandelen genoemd.",
+  "omschrijving": "Valutaderivaten worden ingezet voor risicoafdekking (notional € 949 mln ultimo 2025), maar het verslag noemt geen specifiek afdekkingspercentage voor de aandelenportefeuille.",
+  "pagina": 75
+ },
+ "naam": "ING (Stichting Pensioenfonds ING)",
+ "pad": "data/annual_reports/108_ING_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

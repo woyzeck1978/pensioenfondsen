@@ -1,0 +1,83 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": null,
+  "feitelijk_pct": null,
+  "letterlijk": "De verstrekte uitsnede van het jaarverslag bevat voor Kring A geen balans of activaspreidingstabel met de specifieke aandelenallocatie.",
+  "omvat_private_equity": false,
+  "pagina": null,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Northern Trust",
+    "pagina": 42,
+    "product_of_mandaat": "Paris Aligned / ESG beleggingsfondsen aandelen",
+    "segment": "wereldwijd ontwikkeld en opkomende markten",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": null,
+  "letterlijk": "Hiertoe is het principe van de zogenaamde “Paris Aligned Benchmark” omarmd en is in 2022 een beleggingsfonds geselecteerd dat een passende strategie volgt. Alle kringen hebben gebruik gemaakt van de opt-in mogelijkheid tot de omzetting van de portefeuille aandelen ontwikkelde markten naar deze strategie.",
+  "organisatie": "extern",
+  "pagina": 38
+ },
+ "esg": {
+  "co2_doel": "CO2-reductiedoelstelling langs de lijnen van het Akkoord van Parijs (2015)",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "CO2-reductiedoel",
+   "Paris-aligned benchmark",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Voor de aandelenbeleggingen (ontwikkelde markten) is een “EU Paris Aligned” benchmark gehanteerd. Hiermee geeft het Pensioenfonds invulling aan het streven om voor de aandelenportefeuille een decarbonisatiepad te volgen dat in lijn ligt met het klimaatakkoord van Parijs.",
+  "omschrijving": "Kring A (AZL en Unisys) volgt het centrale MVB-beleid van DNAPF (SFDR art. 8) met uitsluitingen (tabak, kolen >20%, normschenders), engagement via Sustainalytics en Northern Trust, stembeleid en ESG-integratie via een EU Paris Aligned benchmark voor aandelen ontwikkelde markten.",
+  "pagina": 415,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 169,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "De totale transactiekosten zijn 0,09% (2024: 0,07%) van het gemiddeld belegd vermogen.",
+  "pagina": 105,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.09,
+  "vermogensbeheerkosten_totaal_pct": null
+ },
+ "opmerkingen": "Kring A / AZL en Unisys (De Nationale). Belegt conform het centrale DNAPF-beleid (passief beheer, opt-in Paris Aligned Benchmark voor ontwikkelde markten). Actief beheer risico buffer bedraagt 3.294 (0,0%). Totale beleggingen ultimo 2025 bedragen € 566,6 mln; de regionale spreiding van de totale beleggingen is Europa 54,7%, Noord-Amerika 28,4%, Opkomende markten 8,4%, Azië 4,1%, Overige 4,4%.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "Het verslag bevat op pagina 218 een tabel 'Verdeling totale beleggingen naar regio' voor Kring A, maar geen uitsplitsing specifiek voor de aandelenportefeuille.",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "EU Paris Aligned benchmark",
+   "ESG benchmarks"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "De “case for active management” na kosten voor vermogensbeheer is niet overtuigend. Daar waar het kan is passief management om die reden te prefereren.",
+  "pagina": 37,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Risicofactoren die geen verwachte premie opleveren worden zoveel mogelijk vermeden of afgedekt, mits de kosten acceptabel zijn en het passend is bij het desbetreffende leeftijdscohort. Voorbeelden van onbeloonde risicofactoren zijn valutarisico en renterisico.",
+  "omschrijving": "Conform het algemene DNAPF-beleid worden onbeloonde risicofactoren zoals valutarisico zoveel mogelijk vermeden of afgedekt mits tegen acceptabele kosten; een specifiek afdekkingspercentage voor aandelen van Kring A wordt niet genoemd.",
+  "pagina": 37
+ },
+ "naam": "Kring A / AZL en Unisys (De Nationale)",
+ "pad": "data/annual_reports/66_De_Nationale_APF_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

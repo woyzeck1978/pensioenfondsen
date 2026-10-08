@@ -1,0 +1,72 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": null,
+  "feitelijk_pct": null,
+  "letterlijk": "",
+  "omvat_private_equity": null,
+  "pagina": null,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": null,
+  "letterlijk": "De portefeuille aandelen uit ontwikkelde landen bestaat uit een wereldwijd aandelenmandaat waarin rekening gehouden wordt met een specifieke ESG-opdracht.",
+  "organisatie": "extern",
+  "pagina": 402
+ },
+ "esg": {
+  "co2_doel": "30% reductie ten opzichte van 2019 en vervolgens een jaarlijkse afname van ten minste 7% in lijn met de klimaatdoelstellingen van Parijs",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "best-in-class",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie",
+   "engagement",
+   "stembeleid"
+  ],
+  "letterlijk": "Dit fonds belegt passief op basis van een ESG-benchmark. Dat betekent dat bepaalde bedrijven worden uitgesloten. Ook wordt gekozen voor bedrijven die binnen hun sector beter scoren op duurzaamheid (best-in-class).",
+  "omschrijving": "Wereldwijd aandelenmandaat met specifieke ESG-opdracht (minder CO2, SDG-bijdragen) en passief fonds opkomende landen met ESG-benchmark (uitsluitingen, best-in-class selectie).",
+  "pagina": 402,
+  "sfdr_artikel": null
+ },
+ "fund_id": 194,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "",
+  "pagina": null,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": null,
+  "vermogensbeheerkosten_totaal_pct": null
+ },
+ "opmerkingen": "Kring van Het Nederlandse Pensioenfonds (Hnp). Aandelen ontwikkelde landen bestaat uit een wereldwijd aandelenmandaat met specifieke ESG-opdracht; opkomende markten is passief ingevuld met een ESG-benchmark.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "De portefeuille aandelen uit ontwikkelde landen bestaat uit een wereldwijd aandelenmandaat waarin rekening gehouden wordt met een specifieke ESG-opdracht. De categorie aandelen uit opkomende landen wordt ingevuld met een passief aandelenfonds.",
+  "pagina": 402,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "De grootste bijdragen aan het positieve absolute rendement van de rendementsportefeuille werden geleverd door de categorie aandelen ontwikkeld en de valuta-afdekking.",
+  "omschrijving": "Valuta-afdekking wordt toegepast op de rendementsportefeuille, maar een specifiek afdekkingspercentage voor aandelen wordt in het verslag niet genoemd.",
+  "pagina": 402
+ },
+ "naam": "Pensioenkring Wolters Kluwer NL (Hnp)",
+ "pad": "data/annual_reports/165_Kring_Arcadis_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

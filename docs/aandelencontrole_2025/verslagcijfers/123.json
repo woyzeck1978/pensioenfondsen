@@ -1,0 +1,75 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 5898.8,
+  "feitelijk_pct": null,
+  "letterlijk": "Per 31 december 2025: Aandelen 5.898,8 ... Totaal 21.796,3 (in miljoenen euro)",
+  "omvat_private_equity": false,
+  "pagina": 114,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 21796.3
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": "Achmea Investment Management BV",
+  "letterlijk": "Fiduciair vermogensbeheer • Achmea Investment Management BV",
+  "organisatie": "extern",
+  "pagina": 21
+ },
+ "esg": {
+  "co2_doel": "CO2-intensiteit van de aandelenportefeuille 50% lager dan in het basisjaar 2019; stapsgewijs verlagen richting een klimaatneutraal niveau in 2050",
+  "eigen_index": true,
+  "instrumenten": [
+   "uitsluitingen",
+   "best-in-class",
+   "engagement",
+   "stembeleid",
+   "eigen ESG-index",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "We hanteren voor onze aandelenbeleggingen een maatwerkindex. Hierin zijn criteria verwerkt voor een hogere ESG-score en een lagere CO2-intensiteit. Uitgangspunt is dat we niet beleggen in de 25% slechtst presterende bedrijven op het gebied van ESG-scores. Afspraak was dat de CO2-intensiteit van de aandelenportefeuille 50% lager is dan in het basisjaar 2019.",
+  "omschrijving": "Voor de aandelenbeleggingen hanteert het fonds een passieve maatwerkindex (FTSE Custom All-World ESG Low Carbon Index) waarin criteria zijn verwerkt voor een hogere ESG-score en lagere CO2-intensiteit (uitsluiting van de 25% slechtste ESG-presteerders, best-in-class). De CO2-intensiteit is gehalveerd t.o.v. 2019 en per 2026 volgt een reductiepad conform de EU Climate Transition Benchmark richting klimaatneutraal in 2050. Daarnaast worden uitsluitingen, engagement en stembeleid toegepast.",
+  "pagina": 68,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 123,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Totale vermogensbeheerkosten 0,41 ... Transactiekosten 0,06 (als % van het gemiddeld belegd vermogen in 2025)",
+  "pagina": 51,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.06,
+  "vermogensbeheerkosten_totaal_pct": 0.41
+ },
+ "opmerkingen": "In 2025 is het fonds overgegaan op beleggen in modules (Rendement, Rente en Matching). Aandelen vallen onder de module Rendement en worden passief belegd tegen de maatwerkindex FTSE Custom All-World ESG Low Carbon Index. In de eerste helft van 2025 heeft op basis van het balansrisicoraamwerk een afbouw van het aandelenrisico plaatsgevonden via total return swaps. De afbouw van risk parity is deels geheralloceerd naar aandelen. Vanaf 2026 wordt een CO2-reductiepad conform de EU Climate Transition Benchmark geïmplementeerd.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "FTSE Custom All-World ESG Low Carbon Index, net total return"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Wij beleggen passief tegen een op maat gemaakte benchmark. De doelstelling van een passieve strategie is het zo nauwkeurig mogelijk volgen van het rendement van de geselecteerde benchmark.",
+  "pagina": 54,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "De kosten voor de valuta-afdekking waren iets hoger dan vorig jaar, de transactiekosten stegen van € 50.000 naar € 100.000, omdat er meer gehandeld moest worden door de volatiliteit van de Amerikaanse dollar.",
+  "omschrijving": "Valutarisico wordt beheerd via een overlay (met name dollar-afdekking), maar er wordt geen specifiek afdekkingspercentage voor de aandelenportefeuille genoemd.",
+  "pagina": 54
+ },
+ "naam": "Rabobank",
+ "pad": "data/annual_reports/123_Rabobank_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

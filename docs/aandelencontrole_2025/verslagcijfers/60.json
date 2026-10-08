@@ -1,0 +1,89 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 2345.1,
+  "feitelijk_pct": 25.8,
+  "letterlijk": "Tabel 5 (p. 27): Aandelen ontwikkelde markten: € 970,1 mln (10,7%), Aandelen opkomende markten: € 295,9 mln (3,3%), Alternatieve aandelenstrategieën: € 1.079,1 mln (11,8%), Totaal beleggingen: € 9.110,0 mln (bedragen in € x 1 mln). Noot 3.3 (p. 86): post Aandelen omvat tevens private equity (€ 16.788 duizend).",
+  "omvat_private_equity": true,
+  "pagina": 27,
+  "private_equity_pct": 0.2,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 9110
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Amundi",
+    "pagina": 106,
+    "product_of_mandaat": "Amundi EM equity fonds",
+    "segment": "Opkomende markten",
+    "stijl": "actief"
+   },
+   {
+    "naam": "Robeco",
+    "pagina": 106,
+    "product_of_mandaat": "Robeco beleggingsfonds",
+    "segment": "Wereld ontwikkeld",
+    "stijl": "actief"
+   }
+  ],
+  "fiduciair_beheerder": "Van Lanschot Kempen",
+  "letterlijk": "Van Lanschot Kempen: Strategisch en fiduciair advies, MVB, herbalancering, selectie, mandatering en monitoring externe vermogensbeheerders, portefeuille- en fondsenbeheer, privaat vastgoed (p. 37). Actief beheer (S10): Voor BPF Schilders zijn dit het Amundi EM equity fonds en het Robeco beleggingsfonds (p. 106).",
+  "organisatie": "extern",
+  "pagina": 37
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": null,
+  "instrumenten": [],
+  "letterlijk": "BPF Schilders streeft naar een goed pensioen met een meetbaar verminderde negatieve impact van beleggingen op mens, maatschappij en milieu. Het bestuur heeft het nieuwe MVB-beleid in juni 2025 definitief vastgesteld. Meer informatie... is te vinden in het separate MVB-jaarverslag 2025 (p. 17).",
+  "omschrijving": "BPF Schilders streeft naar een meetbaar verminderde negatieve impact van beleggingen op mens, maatschappij en milieu. In juni 2025 is een nieuw MVB-beleid vastgesteld na een deelnemersonderzoek in 2024. Monitoring geschiedt via KPI/KRI-rapportages door Van Lanschot Kempen. Details zijn opgenomen in het separate MVB-jaarverslag 2025.",
+  "pagina": 17,
+  "sfdr_artikel": null
+ },
+ "fund_id": 60,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "De kosten van vermogensbeheer, exclusief transactiekosten, daalden in 2025 naar 0,25%... In 2025 bedroegen de transactiekosten €5,0 miljoen, wat neerkomt op 0,06% van het gemiddeld belegd vermogen (p. 28). Geen uitsplitsing van beheerkosten per beleggingscategorie.",
+  "pagina": 28,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.06,
+  "vermogensbeheerkosten_totaal_pct": 0.25
+ },
+ "opmerkingen": "In 2025 is in het kader van de Wtp-overgang per 1 januari 2026 een vermogensmutatieplan opgesteld en uitgevoerd en is extra dekkingsgraadbescherming geïmplementeerd; het aandelenrisico is daartoe deels afgebouwd via equity total return swaps (expiratie 2 januari 2026). Tevens is de valuta-afdekking van het Britse pond en de Japanse yen tegen het einde van het jaar geleidelijk afgebouwd. De totale aandelenportefeuille bestaat uit ontwikkelde markten (10,7%), opkomende markten (3,3%) en alternatieve aandelenstrategieën/factor (11,8%), samen 25,8% (€ 2.345,1 mln in Tabel 5; op de balans ultimo 2025 staat Aandelen op € 2.368,8 mln). In toelichting S10 worden het Amundi EM equity fonds en het Robeco beleggingsfonds genoemd.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Tabel 5 (p. 27): Aandelen ontwikkelde markten 10,7%, Aandelen opkomende markten 3,3% (Alternatieve aandelenstrategieën 11,8%).",
+  "pagina": 27,
+  "verdeling": [
+   {
+    "pct": 10.7,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 3.3,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": true,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "Beursgenoteerde aandelen in ontwikkelde markten (passief en factor) maken een groot deel uit van de strategische beleggingsmix van BPF Schilders (p. 103). Tabel 5: Alternatieve aandelenstrategieën 11,8% (p. 27). Voor BPF Schilders zijn dit het Amundi EM equity fonds en het Robeco beleggingsfonds (p. 106).",
+  "pagina": 103,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Zo wordt 70% van het valutarisico van de Amerikaanse dollar ten opzichte van de euro afgedekt, evenals 100% van het valutarisico van het Britse pond en de Japanse yen. Tegen het einde van het jaar is besloten de afdekking van het Britse pond en de Japanse yen geleidelijk af te bouwen, vooruitlopend op de transitie naar het nieuwe pensioenstelsel. Het valutarisico van opkomende markten wordt niet afgedekt (p. 26).",
+  "omschrijving": "Valutarisico op ontwikkelde markten wordt grotendeels afgedekt: USD voor 70%, Britse pond en Japanse yen voor 100%. Tegen jaareinde 2025 is de afdekking van GBP en JPY geleidelijk afgebouwd i.v.m. de transitie naar het nieuwe pensioenstelsel. Het valutarisico van opkomende markten wordt niet afgedekt (0%).",
+  "pagina": 26
+ },
+ "naam": "Schilders-, Afwerkings- en Glaszetbedrijf (Painters and Glaziers)",
+ "pad": "data/annual_reports/60_Schilders_Afwerkings_en_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

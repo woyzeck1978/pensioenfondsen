@@ -1,0 +1,81 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 357.402,
+  "feitelijk_pct": 30,
+  "letterlijk": "Op p. 40 staat Aandelen op 30% (% van de portefeuille). Op p. 30 staat onder Liquide returnportefeuille: Aandelen weging 31-12-2025 79,5%, Norm* 2025 78,6%, belegd vermogen 357.402 (x € 1.000) op een totaal portefeuille belegd vermogen van 1.189.245 (x € 1.000).",
+  "omvat_private_equity": false,
+  "pagina": 30,
+  "private_equity_pct": null,
+  "strategisch_basis": "rendementsportefeuille",
+  "strategisch_pct": 78.6,
+  "totaal_beleggingen_eur_mln": 1189.245
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Northern Trust",
+    "pagina": 33,
+    "product_of_mandaat": "Aandelenfondsen Northern Trust (Aandelen Developed Markets en Emerging Markets)",
+    "segment": "wereldwijd ontwikkeld en opkomende markten",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "Columbia Threadneedle",
+  "letterlijk": "Fiduciair manager: Columbia Threadneedle (CTI) (p. 122). De uitvoering van het stembeleid vindt plaats binnen de fondsen van Northern Trust; Daarnaast worden binnen de aandelenfondsen van Northern Trust ondernemingen uitgesloten (p. 33). Aandelen = Aandelen Developed Markets + Aandelen Emerging Markets (p. 40).",
+  "organisatie": "extern",
+  "pagina": 33
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "De implementatie van het MVB-beleid vindt plaats via drie hoofdinstrumenten: engagement, stembeleid op aandeelhoudersvergaderingen en uitsluitingsbeleid (p. 31). Fondsen die zichzelf als artikel 8 classificeren (p. 33). De toepassing van ESG-criteria wordt door Bpf Beton meegewogen bij de selectie en periodieke evaluatie van externe vermogensbeheerders (p. 134). Bpf Beton heeft geen referentiebenchmark om te voldoen aan de ecologische of sociale kenmerken (p. 138).",
+  "omschrijving": "Bpf Beton hanteert voor de aandelenportefeuille uitsluitingen (o.a. tabak, thermische kolen/teerzanden, controversiële wapens, onconventionele olie/gas, commerciële gevangenissen en UN Global Compact-schendingen), engagement uitgevoerd door Columbia Threadneedle met prioriteit voor klimaat en arbeidsomstandigheden, stembeleid binnen de fondsen van Northern Trust en ESG-integratie bij selectie van vermogensbeheerders (SFDR Artikel 8).",
+  "pagina": 33,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 14,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.12,
+  "letterlijk": "Tabel p. 40 (Overzicht kosten vermogensbeheer in percentage van het belegd vermogen per beleggingscategorie): Aandelen beheer kosten 0,12%, transactie kosten 0,02% (totale kosten 0,14%). Totaal: beheer kosten 0,39%, transactie kosten 0,08%, totale kosten vermogensbeheer 0,47%. Prestatievergoeding: 'Er is geen sprake van performance gerelateerde beheerskosten' (p. 41).",
+  "pagina": 40,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": 0.02,
+  "transactiekosten_totaal_pct": 0.08,
+  "vermogensbeheerkosten_totaal_pct": 0.39
+ },
+ "opmerkingen": "De aandelenportefeuille valt binnen de liquide returnportefeuille en wordt extern belegd via indexvolgende beleggingsfondsen van Northern Trust (ontwikkelde en opkomende markten). Columbia Threadneedle (CTI) treedt op als fiduciair beheerder en voert het engagementprogramma uit. De Wtp-transitie (invaren) was voorzien voor 1 januari 2026 maar is uitgesteld naar 1 juli 2026 vanwege waarborgen bij de pensioenuitvoerder; in het nieuwe stelsel verschuiven onder meer de hypotheken naar de matchingportefeuille.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "Aandelen = Aandelen Developed Markets + Aandelen Emerging Markets (p. 40); het verslag vermeldt geen percentuele geografische/regionale verdeling van de aandelenportefeuille.",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "MSCI World Index",
+   "MSCI Emerging Markets Index"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "MSCI World Index steeg met 19,5% in lokale valuta; De MSCI Emerging Markets Index realiseerde een rendement van 30,6% (p. 27). Beleggingen in door derden beheerde fondsen die een index volgen (p. 34). Actief beheerrisico: geen buffer behoeft te worden aangehouden (p. 92).",
+  "pagina": 27,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Aandelen uit opkomende markten behaalden het hoogste rendement (17,3% in euro’s niet-valuta-afgedekt), gevolgd door aandelen uit ontwikkelde markten (16,8%, valuta-afgedekt) (p. 27). Illiquide returnportefeuille: Valuta overlay 1,2% / belegd vermogen € 3.296 (x € 1.000) (p. 30).",
+  "omschrijving": "Aandelen uit ontwikkelde markten zijn valuta-afgedekt en aandelen uit opkomende markten zijn niet-valuta-afgedekt; daarnaast hanteert het fonds een valuta-overlay. Er is geen gewogen totaal afdekkingspercentage voor de gehele aandelenportefeuille genoemd.",
+  "pagina": 27
+ },
+ "naam": "Beton / Betonproductenindustrie (Concrete Industry)",
+ "pad": "data/annual_reports/14_Beton_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

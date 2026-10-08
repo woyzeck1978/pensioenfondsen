@@ -1,0 +1,69 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 1402,
+  "feitelijk_pct": 35,
+  "letterlijk": "Aandelen EUR 2025 1.402, Percentage 2025 35,0%; Totaal belegd EUR 2025 4.007, Percentage 2025 100,0% (Tabel: beleggingsportefeuille naar categorieën per ultimo 2025, bedragen in miljoenen euro's)",
+  "omvat_private_equity": true,
+  "pagina": 21,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 4007
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": "Achmea Investment Management",
+  "letterlijk": "Achmea Investment Management is de fiduciair vermogensbeheerder van het pensioenfonds. [...] Het operationele beheer van de beleggingen is uitbesteed aan gespecialiseerde externe vermogensbeheerders.",
+  "organisatie": "extern",
+  "pagina": 7
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid"
+  ],
+  "letterlijk": "Het pensioenfonds geeft hieraan opvolging door het gehanteerde uitsluitingenbeleid en het betrokken aandeelhouderschap. Uitsluitingen: Het pensioenfonds sloot per 31 december 2025 in totaal 258 bedrĳven uit van beleggingen.",
+  "omschrijving": "Het pensioenfonds classificeert onder SFDR artikel 8 (met 96,4% afgestemd op E/S-kenmerken). Het MVB-beleid omvat uitsluitingen (258 bedrijven ultimo 2025, o.a. wegens controversiële wapens) en betrokken aandeelhouderschap (engagement en stembeleid). Er wordt in de uitsnede geen specifiek CO2-reductiedoel gekwantificeerd.",
+  "pagina": 22,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 48,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Aandelen: Gemiddeld belegd vermogen 1.732, Kosten 1,4, Relatief % 0,08; Totaal 4.140, Kosten 3,8, Relatief % 0,09; Kosten vermogensbeheer -0,4%",
+  "pagina": 43,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": 0.08,
+  "transactiekosten_totaal_pct": 0.09,
+  "vermogensbeheerkosten_totaal_pct": 0.4
+ },
+ "opmerkingen": "In 2025 heeft Blue Sky Group haar vermogensbeheeractiviteiten overgedragen aan Achmea Investment Management, die nu optreedt als fiduciair en operationeel beheerder. Ter voorbereiding op het invaren per 1 januari 2026 onder de Wtp heeft het fonds besloten de aandelenblootstelling met 7,5%-punt te verlagen ter bescherming van de dekkingsgraad (initieel deels via derivaten, maar na de DNB-invaarbeschikking in december 2025 definitief via de verkoop van fysieke aandelen), waardoor de feitelijke aandelenallocatie daalde van 43,7% (€ 1.867 mln) naar 35,0% (€ 1.402 mln). Aandelen worden grotendeels gepoold met de andere KLM-fondsen. De aandelenpost omvat tevens private equity (indirect via fund-of-funds), maar deze wordt op de balans niet apart gespecificeerd. De tabel met vermogensbeheerkosten per beleggingscategorie (p. 42) ontbreekt in de uitsnede; de transactiekosten voor aandelen bedroegen 0,08% (€ 1,4 mln).",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": null,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "Binnen aandelen presteerden, net zoals in de voorgaande jaren, opkomende markten beter dan de benchmark dankzĳ de actieve invulling. [...] Binnen de beleggingsportefeuille is sprake van zowel actief als passief beheer.",
+  "pagina": 20,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Het pensioenfonds maakt gebruik van de volgende derivaten: valutatermĳncontracten, aandelenfutures en interest rate swaps.",
+  "omschrijving": "Het pensioenfonds maakt gebruik van valutatermijncontracten om valutarisico's af te dekken, maar noemt in de uitsnede geen specifiek afdekkingspercentage voor de aandelenportefeuille.",
+  "pagina": 80
+ },
+ "naam": "KLM Cabinepersoneel (Cabin Crew)",
+ "pad": "data/annual_reports/48_KLM_Cabinepersoneel_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

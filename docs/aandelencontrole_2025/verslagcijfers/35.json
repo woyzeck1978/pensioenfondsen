@@ -1,0 +1,83 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 785.519,
+  "feitelijk_pct": null,
+  "letterlijk": "Aandelen: 785.519, Totaal beleggingsportefeuille: 2.680.765 (bedragen x € 1.000); Beleid 2025: Aandelen ontwikkelde landen 17%, Aandelen opkomende landen 5%",
+  "omvat_private_equity": true,
+  "pagina": 6,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 22,
+  "totaal_beleggingen_eur_mln": 2680.765
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": "Van Lanschot Kempen Investment Management",
+  "letterlijk": "Het Bestuur heeft: ... Het fiduciair vermogensbeheer uitbesteed aan Van Lanschot Kempen Investment Management.",
+  "organisatie": "extern",
+  "pagina": 10
+ },
+ "esg": {
+  "co2_doel": "Begin 2020 een reductie in CO2-uitstoot ten opzichte van de markt van 50%; vervolgens jaarlijks een reductie van de CO2-uitstoot van 7% ten opzichte van het voorgaande jaar; ultimo 2025 betekent dit een reductie van 68%",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "best-in-class",
+   "engagement",
+   "stembeleid",
+   "impactbeleggen",
+   "CO2-reductiedoel",
+   "Paris-aligned benchmark",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Het pensioenfonds is een artikel 8 fonds. ... Harde uitsluiting geldt voor ondernemingen met een CCC-rating conform de MSCI ESG Rating systematiek. ... streven naar het behalen van de “Paris Aligned Benchmark” voor wat betreft CO2-reductie.",
+  "omschrijving": "Artikel 8 SFDR pensioenfonds. ESG-beleid met uitsluitingen (MSCI ESG CCC-rating, ambitie voor B), engagement (o.a. Climate Action 100+ en Nature Action 100+), uitoefening van stemrecht, best-in-class selectie, impactbeleggen (klimaat en waterschaarste, € 144 mln), ESG-integratie bij de selectie van vermogensbeheerders en een CO2-reductiepad conform de Paris Aligned Benchmark (50% in 2020, 7% per jaar, 68% ultimo 2025).",
+  "pagina": 42,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 35,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Kosten vermogensbeheer als % van het gemiddeld belegd vermogen (excl. Transactiekosten): 0,65%; Transactiekosten als % van het gemiddeld belegd vermogen: 0,12%",
+  "pagina": 6,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.12,
+  "vermogensbeheerkosten_totaal_pct": 0.65
+ },
+ "opmerkingen": "In het najaar van 2025 besloot het bestuur in aanloop naar de beoogde Wtp-transitie per 1 januari 2026 het aandelenrisico tijdelijk te verminderen via de aankoop van aandelenderivaten (total return swaps). Na het no-go besluit voor de transitie per 2026 is deze derivatenpositie weer verkocht; het bestuur overweegt dit opnieuw voor de nieuwe transitiedatum per 1 januari 2027. Binnen het beleggingsbeleid 2025 waren aandelen opkomende landen onderwogen wegens geopolitieke risico's. De balanspost aandelen omvat naast beursgenoteerde aandelenfondsen (€ 783,0 mln) ook een klein bedrag aan private equity aandelen (€ 775.000). In april 2025 is Cardano aangesteld als nieuwe LDI-manager voor de matchingportefeuille.",
+ "regio": {
+  "basis": "strategisch",
+  "letterlijk": "Aandelen ontwikkelde landen 17%, Aandelen opkomende landen 5%",
+  "pagina": 40,
+  "verdeling": [
+   {
+    "pct": 17,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 5,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "De S10 is eind 2017 op nul gesteld aangezien er na de ESG-transitie in het vierde kwartaal, geen aandelenbeleggingsfonds meer is met een tracking error hoger dan 1.",
+  "pagina": 86,
+  "passief_pct": null,
+  "tracking_error_pct": 1
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 50,
+  "letterlijk": "Het resterende risico naar de Amerikaanse Dollar en Britse Pond wordt voor 50% afgedekt.",
+  "omschrijving": "Het valutarisico naar de Amerikaanse dollar en de Britse pond wordt voor 50% afgedekt.",
+  "pagina": 44
+ },
+ "naam": "Slagersbedrijf (Butchers)",
+ "pad": "data/annual_reports/35_Slagersbedrijf_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

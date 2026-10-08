@@ -1,0 +1,86 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": null,
+  "feitelijk_pct": null,
+  "letterlijk": "Binnen de rendementsportefeuille geldt per 31 december 2025 de volgende verdeling en worden de volgende benchmarks toegepast: Aandelen: Normgewicht (%) 20,0",
+  "omvat_private_equity": false,
+  "pagina": 16,
+  "private_equity_pct": null,
+  "strategisch_basis": "rendementsportefeuille",
+  "strategisch_pct": 20,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": "BNP Paribas Asset Management",
+  "letterlijk": "De vermogensbeheerder van het fonds is BNP Paribas Investment Partners (BNP). De vermogensbeheerder is verantwoordelijk voor het fiduciair vermogensbeheer en selectie en timing van de transacties in de door hen beheerde portefeuilles binnen de geldende mandaten.",
+  "organisatie": "extern",
+  "pagina": 8
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Hoewel duurzaamheid meewoog, is het fonds geclassificeerd als artikel 6 SFDR en promootte het geen expliciete ecologische of sociale doelen. Door de beperkte omvang van het fonds en de – naar verwachting - korte resterende looptijd werden ESG-activiteiten beperkt. Wel gold uitsluiting van beleggingen in ondernemingen die betrokken waren bij clustermunitie en kregen ESG-fondsen bij gelijke voorwaarden de voorkeur.",
+  "omschrijving": "Het fonds is geclassificeerd als SFDR Artikel 6 en promoot geen expliciete ecologische of sociale doelen. ESG-activiteiten zijn beperkt vanwege de naderende overdracht en beperkte omvang. Wel geldt uitsluiting van clustermunitie (tevens ex Controversial Weapons benchmark) en krijgen ESG-fondsen bij gelijke voorwaarden de voorkeur.",
+  "pagina": 28,
+  "sfdr_artikel": 6
+ },
+ "fund_id": 77,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Aandelen: Beheerkosten 251, Performance gerelateerde kosten 0, Transactiekosten exclusief aan- en verkoopkosten 18, Aan- en verkoopkosten 105 (bedragen in € duizend); Totale vermogensbeheerkosten in % van het gemiddeld belegd vermogen 0,61%, Transactiekosten in % 0,22%",
+  "pagina": 14,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.22,
+  "vermogensbeheerkosten_totaal_pct": 0.61
+ },
+ "opmerkingen": "In 2025 is met het oog op de voorgenomen collectieve waardeoverdracht (CWO) naar Zwitserleven per 1 april 2026 de strategische assetallocatie gewijzigd: de aandelenblootstelling is verlaagd van 32% naar 14% van de totale portefeuille (respectievelijk naar 20,0% binnen de rendementsportefeuille, die 68% van het totaal vormt). Het fonds belegt uitsluitend in beleggingsfondsen en niet rechtstreeks in aandelen; individuele externe aandelenmanagers/fondsen worden niet bij naam genoemd. BNP Paribas fungeert als fiduciair vermogensbeheerder en Northern Trust als bewaarder/custodian. De kosten voor aandelen worden per categorie uitsluitend in duizenden euro's gerapporteerd (€ 251k beheer en € 123k transactiekosten, € 0 prestatievergoeding), niet in percentages. Binnen de aandelenportefeuille is sprake van 10,0% passief en 10,0% actief beheer (50/50), met factorbeleggen via Global Large Cap Low Volatility. Geen invaren in Wtp vanwege overdracht naar verzekeraar en liquidatie.",
+ "regio": {
+  "basis": "strategisch",
+  "letterlijk": "Large cap Europe 5,0 ... Small cap Europe 5,0 ... Large cap World, low volatility 5,0 ... Emerging markets equities Global 5,0",
+  "pagina": 16,
+  "verdeling": [
+   {
+    "pct": 10,
+    "regio": "Europa"
+   },
+   {
+    "pct": 5,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 5,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "MSCI Europe ex Controversial Weapons NR Euro",
+   "MSCI Europe Small Cap NR USD",
+   "MSCI World NR EUR",
+   "MSCI EM Custom ESG NR USD"
+  ],
+  "factorbeleggen": true,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "Large cap Europe: 5,0 Passief (MSCI Europe ex Controversial Weapons NR Euro), Small cap Europe: 5,0 Actief (MSCI Europe Small Cap NR USD), Large cap World, low volatility: 5,0 Actief (MSCI World NR EUR), Emerging markets equities Global: 5,0 Passief (MSCI EM Custom ESG NR USD)",
+  "pagina": 16,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 0,
+  "letterlijk": "Besloten is het valutarisico niet af te dekken, vanwege de beheersing door de vermogensbeheerder van de risico’s, de verwachte uitmiddeling op lange termijn, het verbonden kostenaspect en de verwachting dat de afdekking van het valutarisico geen extra rendement oplevert.",
+  "omschrijving": "Het valutarisico in de aandelenportefeuille wordt niet afgedekt (0%). Wel is in 2025 besloten de blootstelling aan het USD-risico aanzienlijk te verlagen in het kader van de naderende collectieve waardeoverdracht.",
+  "pagina": 22
+ },
+ "naam": "AT&T Nederland",
+ "pad": "data/annual_reports/77_AT_T_Nederland_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

@@ -1,0 +1,102 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 1118.4,
+  "feitelijk_pct": 33.3,
+  "letterlijk": "Tabel Overzicht totale beleggingsportefeuille (p. 30-31, in EUR miljoen): Aandelen ontwikkelde markten 901,5 (26,7%, SAA 27,2%), Aandelen opkomende markten 222,1 (6,6%, SAA 6,5%), samen 33,3% (SAA 33,7%); Totaal beleggingen 3.317,8 (100,0%). Tabel Kerncijfers (p. 6) en Toelichting Aandelen (p. 89): Aandelen 1.118,4 mln op totaal beleggingen 3.317,8 mln.",
+  "omvat_private_equity": false,
+  "pagina": 31,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 33.7,
+  "totaal_beleggingen_eur_mln": 3317.8
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Cardano",
+    "pagina": 89,
+    "product_of_mandaat": "CARDANO SUST IX FUND EQTY",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "JPMorgan Asset Management",
+    "pagina": 89,
+    "product_of_mandaat": "JPM F- EMR MK SS EQ-XEURACC",
+    "segment": "opkomende markten",
+    "stijl": "actief"
+   },
+   {
+    "naam": "Goldman Sachs Asset Management",
+    "pagina": 89,
+    "product_of_mandaat": "GS EM EQ ESG PORT-I ACC EUR",
+    "segment": "opkomende markten",
+    "stijl": "actief"
+   }
+  ],
+  "fiduciair_beheerder": "Goldman Sachs Asset Management",
+  "letterlijk": "Het vermogensbeheer is via een zogeheten fiduciaire vermogensbeheerovereenkomst en een aantal mandaten uitbesteed aan Goldman Sachs Asset Management (GSAM). (p. 18); GSAM selecteert en monitort voor en namens het pensioenfonds de vermogensbeheerders (p. 29); Tabel posities aandelenbeleggingsfondsen: CARDANO SUST IX FUND EQTY (€ 896,3 mln), JPM F- EMR MK SS EQ-XEURACC (€ 110,7 mln), GS EM EQ ESG PORT-I ACC EUR (€ 111,4 mln) (p. 89); Cardano beheerder van het aandelen ontwikkelde markten beleggingsfondsen (p. 70).",
+  "organisatie": "extern",
+  "pagina": 18
+ },
+ "esg": {
+  "co2_doel": "expliciete doelstellingen voor CO2-intensiteit voor de gecombineerde aandelen- en bedrijfsobligatie-blootstelling (geen specifiek streefcijfer genoemd in uitsnede)",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "T.a.v. CO2-intensiteit en ESG-scores heeft het pensioenfonds expliciete doelstellingen voor de gecombineerde aandelen en bedrijfsobligatie-blootstelling gehanteerd (p. 143); Stem- en engagementbeleid: beleggen via beleggingsfondsen (p. 37); Net als vorige jaren voldoen de mandaatbeleggingen aan de uitsluitingscriteria (p. 135).",
+  "omschrijving": "Het pensioenfonds classificeert de pensioenregeling onder SFDR Artikel 8 (promotie van ecologische en sociale kenmerken). Voor aandelen belegt het fonds indirect via beleggingsfondsen, waarbij uitsluitingen worden getoetst bij de managerselectie en evaluatie, en de beheerders stemrecht en engagement uitvoeren. Daarnaast geldt ESG-integratie waarbij expliciete doelstellingen worden gehanteerd voor de CO2-intensiteit en ESG-risicoscores van de gecombineerde aandelen- en bedrijfsobligatieportefeuille.",
+  "pagina": 143,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 129,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.15,
+  "letterlijk": "Tabel Vermogensbeheerkosten (in % van gemiddeld belegd vermogen per assetcategorie, p. 46): Aandelen 0,15%, Totaal 0,30%. Tabel Transactiekosten (in EUR miljoen, p. 47): Aandelen 0,6, Totaal 1,7. Tabel Totale kosten en Kengetallen Pensioenfederatie (p. 6, 47): Vermogensbeheerkosten 0,36% van het gemiddeld belegd vermogen, Transactiekosten 0,05%.",
+  "pagina": 46,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.05,
+  "vermogensbeheerkosten_totaal_pct": 0.36
+ },
+ "opmerkingen": "De aandelenportefeuille van Pensioenfonds SNS REAAL (balanswaarde ultimo 2025: € 1.118,4 mln op € 3.317,8 mln totaal belegd vermogen, p. 6, 89) maakt deel uit van de returnportefeuille. Binnen de totale portefeuille bedraagt de feitelijke weging ultimo 2025 26,7% voor ontwikkelde markten (€ 901,5 mln) en 6,6% voor opkomende markten (€ 222,1 mln), samen 33,3% tegenover een SAA 2025 norm van 33,7% (27,2% ontwikkeld en 6,5% opkomend) (p. 31). Door de stijging van de dekkingsgraad in 2025 is conform het dynamisch balansrisicomanagement de allocatie naar de returnportefeuille verhoogd en de matchingportefeuille afgebouwd, wat aansluit bij de voorbereiding op de overgang naar de Wtp (beoogde transitie per 1 januari 2028, p. 29, 31, 70). Het beheer van de aandelen is indirect via participaties in drie institutionele beleggingsfondsen: Cardano Sustainable Index Fund Equity (€ 896,3 mln, passief, ontwikkelde markten) en voor opkomende markten JPM Emerging Markets Sustainable Equity (€ 110,7 mln, actief) en Goldman Sachs Emerging Markets Equity ESG Portfolio (€ 111,4 mln, actief) (p. 30, 70, 89). GSAM fungeert als fiduciair beheerder en financieel balansrisicomanager (p. 18, 29). Aandelen ontwikkelde markten behaalden in 2025 een rendement van +6,42% (benchmark 6,07%) en aandelen opkomende markten +16,59% (benchmark 16,90%, underperformance door aandelenselectie) (p. 36). Beheerkosten voor aandelen bedroegen 0,15% van het belegd vermogen in aandelen (p. 46) en transactiekosten aandelen € 0,6 mln (p. 47); fondsbreed waren de vermogensbeheerkosten 0,36% en transactiekosten 0,05% (p. 6, 47). Het fonds rapporteert onder SFDR Artikel 8 en dekt het valutarisico van ontwikkelde markten (USD, GBP, JPY) voor 75% af naar de euro, terwijl opkomende markten niet worden afgedekt (p. 30, 36, 143).",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Tabel Overzicht totale beleggingsportefeuille (p. 31): Aandelen ontwikkelde markten 26,7% (SAA 27,2%), Aandelen opkomende markten 6,6% (SAA 6,5%).",
+  "pagina": 31,
+  "verdeling": [
+   {
+    "pct": 26.7,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 6.6,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "De meeste aandelenbeleggingsfondsen hanteren een passieve beleggingsstrategie, waarbij de beleggingen de samenstelling van een gekozen ‘benchmark’ zo nauwgezet mogelijk volgen. Een beperkt deel van de geselecteerde aandelenbeleggingsfondsen in de categorie aandelen Emerging Markets (opkomende markten) past een actieve beleggingsstrategie toe (p. 30); In de solvabiliteitstoets van DNB wordt alleen rekening gehouden met het actieve risico in de aandelenportefeuille (p. 107).",
+  "pagina": 30,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 75,
+  "letterlijk": "Voor de valutarisico-afdekking binnen de aandelenportefeuille ontwikkelde markten wordt een structurele afdekking ter grootte van 75% van het valutarisico van de posities in US-dollar, Britse pond en Japanse yen gehanteerd. ... Overige posities in vreemde valuta worden conform het valutabeleid niet afgedekt, dit betreft de belegging in aandelen opkomende markten. (p. 30)",
+  "omschrijving": "Voor de aandelenportefeuille ontwikkelde markten geldt een structurele afdekking van 75% van het valutarisico van de posities in US-dollar, Britse pond en Japanse yen via valutaderivaten. Posities in aandelen opkomende markten worden conform het valutabeleid niet afgedekt. In 2025 leverde de valuta-afdekking een positief resultaat op van € 50 mln ter compensatie van de daling van de dollar.",
+  "pagina": 30
+ },
+ "naam": "SNS REAAL",
+ "pad": "data/annual_reports/129_SNS_REAAL_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

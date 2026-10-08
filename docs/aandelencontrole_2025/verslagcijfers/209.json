@@ -1,0 +1,83 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": null,
+  "feitelijk_pct": null,
+  "letterlijk": "Portefeuille Rendement DC: Aandelen ontwikkelde landen Strat. Gewicht 80%, Aandelen opkomende landen Strat. Gewicht 20%, Totaal 100%",
+  "omvat_private_equity": false,
+  "pagina": 73,
+  "private_equity_pct": null,
+  "strategisch_basis": "rendementsportefeuille",
+  "strategisch_pct": 100,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": "Achmea Investment Management",
+  "letterlijk": "Centraal Beheer APF heeft de uitvoering van deze MVB-instrumenten uitbesteed aan de specialisten van Achmea Investment Management.",
+  "organisatie": "extern",
+  "pagina": 66
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "impactbeleggen",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "SFDR annex IV: Kring DC 8_7_15_10_5. Monitoren en sturen van de fondsportefeuille door het bepalen van de CO2 voetafdruk ... Uitsluiten: het op voorhand identificeren van bepaalde sectoren en producten",
+  "omschrijving": "Voor Kring DC gerapporteerd conform SFDR Annex IV (Artikel 8). Toepassing van ESG-integratie (CO2-reductiepad, EVIC-methode), uitsluitingen (controversiële wapens, tabak, fossiele brandstoffen >5%, normschenders), normatief engagement en stembeleid.",
+  "pagina": 897,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 209,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Tabel Vermogensbeheerkosten per kring (in € 1.000): DC Beheerkosten 2.174, Transactiekosten 1.530, Totaal 4.326",
+  "pagina": 81,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": null,
+  "vermogensbeheerkosten_totaal_pct": null
+ },
+ "opmerkingen": "Kring DC belegt in de Portefeuille Rendement DC (strategisch 80% ontwikkelde landen, 20% opkomende landen aandelen) en kende eind 2025 als enige kring nog de Portefeuille Inflatie. Rendement Pool Aandelen bedroeg 17,33% in 2025 (benchmark 9,39%). SFDR Annex IV periodieke informatieverschaffing gerapporteerd.",
+ "regio": {
+  "basis": "strategisch",
+  "letterlijk": "Portefeuille Rendement DC: Aandelen ontwikkelde landen Strat. Gewicht 80%, Aandelen opkomende landen Strat. Gewicht 20%",
+  "pagina": 73,
+  "verdeling": [
+   {
+    "pct": 80,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 20,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "MSCI Wereldindex",
+   "MSCI Emerging Market Index"
+  ],
+  "factorbeleggen": true,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "Een positief jaar voor value en momentum, defensieve factoren in mineur: Value en momentum waren met afstand de best presterende factoren in 2025.",
+  "pagina": 73,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 50,
+  "letterlijk": "Het pensioenfonds heeft als doel het valutarisico grotendeels af te dekken. Binnen de module Robuust Rendement wordt voor de beleggingscategorie Aandelen Wereld 50% van het valutarisico afgedekt.",
+  "omschrijving": "Het pensioenfonds heeft als doel het valutarisico grotendeels af te dekken. Voor Aandelen Wereld geldt 50% valuta-afdekking binnen de kernportefeuilles; risico naar valuta's in opkomende landen wordt niet afgedekt.",
+  "pagina": 69
+ },
+ "naam": "Kring DC (Centraal Beheer)",
+ "pad": "data/annual_reports/65_Centraal_Beheer_APF_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

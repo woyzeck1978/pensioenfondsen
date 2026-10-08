@@ -1,0 +1,77 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 3792.2,
+  "feitelijk_pct": 36.7,
+  "letterlijk": "Aandelen 3.792,2 36,7% ... Totaal 10.330,6 100,0%",
+  "omvat_private_equity": false,
+  "pagina": 26,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 10330.6
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": "Achmea Investment Management",
+  "letterlijk": "Ook de overgang van het vemogensbeheer naar Achmea Investment Management is meermaals aan bod gekomen.",
+  "organisatie": "extern",
+  "pagina": 27
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": true,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "impactbeleggen",
+   "eigen ESG-index",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "In 2025 heeft het pensioenfonds uitvoering gegeven aan zijn beleid voor Maatschappelijk Verantwoord Beleggen (MVB) langs de volgende instrumenten: uitsluiten, stemmen, engagement, ESG-integratie en impactbeleggen.",
+  "omschrijving": "Het fonds voert een MVB-beleid met uitsluitingen (UN Global Compact, controversiële wapens), stemmen, engagement, ESG-integratie en impactbeleggen. Binnen de aandelenportefeuilles zijn maatwerk Climate Transition Benchmarks geïmplementeerd om te sturen op CO2-reductie.",
+  "pagina": 27,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 47,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Aandelen: Gemiddeld belegd vermogen 3.838,5, Kosten 2,5, Relatief % 0,1% ... Kosten vermogensbeheer -0,4% ... Transactiekosten -0,1%",
+  "pagina": 49,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": 0.1,
+  "transactiekosten_totaal_pct": 0.1,
+  "vermogensbeheerkosten_totaal_pct": 0.4
+ },
+ "opmerkingen": "In 2025 vond de transitie van het vermogensbeheer naar Achmea Investment Management plaats (ook stemmen en engagement per Q4 2025 ondergebracht bij Achmea IM). Ter voorbereiding op het invaren per 1 januari 2026 onder de Wtp is de beleggingsportefeuille gesplitst in een rendements- en beschermingsportefeuille en vanaf de zomer stapsgewijs aangepast. Om de dekkingsgraad te beschermen richting het invaren is een putoptie op 50% van de aandelenportefeuille gekocht (ruim € 40 mln premie), die per eind december zonder restwaarde afliep door gestegen beurskoersen. Aandelenbeleggingen worden deels gepoold met pensioenfondsen voor KLM Vliegend Personeel en Cabinepersoneel.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "Climate Transition Benchmark",
+   "MSCI wereld index",
+   "MSCI opkomende landen index"
+  ],
+  "factorbeleggen": null,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "Binnen de beleggingsportefeuille is sprake van zowel actief als passief beheer. De mate van actief beheer of passief beheer is stuurbaar.",
+  "pagina": 47,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "De Amerikaanse dollar stond in 2025 flink onder druk vanwege de handelsperikelen en daalde versus de euro met meer dan 10% in waarde. Dat raakt de beleggingen die in euro’s worden gerapporteerd. Tegelijkertijd dekt het pensioenfonds een groot deel van dat valutarisico af.",
+  "omschrijving": "Het pensioenfonds dekt een groot deel van het valutarisico af (o.a. op de Amerikaanse dollar), maar noemt geen exact afdekkingspercentage specifiek voor de aandelenportefeuille.",
+  "pagina": 25
+ },
+ "naam": "KLM Algemeen (Ground Staff)",
+ "pad": "data/annual_reports/47_KLM_Algemeen_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

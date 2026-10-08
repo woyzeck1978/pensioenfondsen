@@ -1,0 +1,80 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 1448.562,
+  "feitelijk_pct": null,
+  "letterlijk": "Aandelen: Beusgenoteerde aandelen 1.227.050, Private equity 216.446, Vorderingen 5.066, Totaal 1.448.562 (bedragen x € 1.000, p. 83); Strategische verdeling Beleggingsplan 2025: Aandelen 24,0% (Ontwikkelde markten 20,0%, Opkomende markten 4,0%), Private Equity 6,0% (p. 22)",
+  "omvat_private_equity": true,
+  "pagina": 83,
+  "private_equity_pct": 6,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 24,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": "Goldman Sachs Asset Management",
+  "letterlijk": "De beleggingsportefeuille is bij Goldman Sachs Asset Management ondergebracht. Deze partij is de Fiduciair Manager. Met Goldman Sachs Asset Management is een overeenkomst en een service level agreement gesloten. De afhankelijkheid van deze partij wordt beheerst doordat de bewaring van de stukken uit de portefeuille is ondergebracht bij custodian Bank of New York Mellon. (p. 99); De mandaten zijn gericht op actief vermogensbeheer. (p. 92)",
+  "organisatie": "extern",
+  "pagina": 99
+ },
+ "esg": {
+  "co2_doel": "decarbonisatiepad richting 2050",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "De ecologische en sociale kenmerken waren van toepassing op de beleggingen in beursgenoteerde aandelen op naam van het Pensioenfonds... Voor deze portefeuilles werden het uitsluitingsbeleid, een CO₂-reductiedoelstelling en/of een allocatie naar groene beleggingen toegepast (p. 147); door voor de aandelen-, bedrijfsobligatie- en vastgoedportefeuille een decarbonisatiepad richting 2050 te volgen... actief aandeelhouderschap toegepast door middel van stemmen op aandeelhoudersvergaderingen en engagement (p. 141); uitsluitingsbeleid wordt onverkort toegepast op alle beleggingsmandaten (p. 35)",
+  "omschrijving": "Het fonds classificeert zijn pensioenregeling onder SFDR Artikel 8 (promoot ecologische en sociale kenmerken). Voor de aandelenportefeuille hanteert het fonds een uitsluitingsbeleid (o.a. controversiële wapens en schendingen van VN Global Compact/OESO-richtlijnen), een decarbonisatiepad richting 2050 (CO2-reductiedoelstelling), integratie van ESG-factoren bij de managerselectie en beheeropdrachten, en actief aandeelhouderschap via stembeleid en engagement.",
+  "pagina": 141,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 11,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.24,
+  "letterlijk": "Kosten per beleggingscategorie in basispunten van het gemiddeld belegd vermogen: Aandelen 24 bp, Totaal 53 bp (p. 42); Directe en indirecte kosten vermogensbeheer 0,45%, transactiekosten 0,09%, totaal kosten vermogensbeheer 0,54% (p. 38); Aandelen beheerkosten € 6.289 duizend, performance gerelateerde kosten € 2.284 duizend, transactiekosten € 19 duizend (p. 41)",
+  "pagina": 42,
+  "prestatievergoeding_aandelen_eur_mln": 2.284,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.09,
+  "vermogensbeheerkosten_totaal_pct": 0.45
+ },
+ "opmerkingen": "Bpf Bakkers bereidt de transitie naar het nieuwe pensioenstelsel (Wtp) voor per 1 januari 2026, inclusief een beoogd fusietraject met Bpf Zoetwaren; de Wtp-implementatiekosten bij uitvoerder TKP bedroegen € 4,57 mln in 2025. In het Beleggingsplan 2026 wordt de strategische allocatie naar aandelen substantieel verhoogd met 13,3%-punt van 24,0% naar 37,2% (ontwikkelde markten naar 31,7% en opkomende markten naar 5,5%), ten koste van de beschermingsportefeuille. De aandelenportefeuille wordt actief beheerd via externe mandaten onder regie van fiduciair beheerder Goldman Sachs Asset Management (bewaring bij BNY Mellon). De aandelenportefeuille behaalde in 2025 een rendement van 11,8% (+3,8%-punt t.o.v. de benchmark). Op de balans en in de kostenstaten valt private equity (€ 216,4 mln balanswaarde, € 6,6 mln kosten waarvan € 2,3 mln performance fee) onder de categorie Aandelen (totaal € 1.448,56 mln, waarvan beursgenoteerd € 1.227,05 mln).",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "De portefeuille beursgenoteerde aandelen bestaat ultimo 2025 voor 85,0% uit aandelen ontwikkelde markten en voor 15,0% uit aandelen opkomende markten. (p. 34)",
+  "pagina": 34,
+  "verdeling": [
+   {
+    "pct": 85,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 15,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "actief",
+  "letterlijk": "De mandaten zijn gericht op actief vermogensbeheer. (p. 92); Het fonds heeft voor de verschillende aandelenmandaten limieten opgesteld voor de tracking error en de toegestane afwijkingen van de benchmark. Deze limieten zijn onderdeel van de contracten met de vermogensbeheerders. De betreffende vermogensbeheerders hebben aan deze richtlijnen voldaan. (p. 99)",
+  "pagina": 92,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "In de aandelenportefeuille wordt het valutarisico dat wordt gelopen op de posities in Amerikaanse dollar, het Britse pond en de Japanse yen afgedekt. Het percentage dat niet in euro's wordt belegd bedraagt ultimo 2025 circa 31,4% (2024: 30,1%) van de beleggingsportefeuille en is voor 14,8% (2024: 16,8%) afgedekt naar de euro. Onafgedekt is derhalve 16,6% (2024: 13,3%). (p. 95)",
+  "omschrijving": "In de aandelenportefeuille wordt het valutarisico op posities in Amerikaanse dollar (USD), Brits pond (GBP) en Japanse yen (JPY) afgedekt naar de euro. Overige valuta's (zoals Hong Kong dollar, Canadese dollar en Zwitserse frank) worden niet afgedekt. Er wordt in het verslag geen specifiek afdekkingspercentage voor de aandelenportefeuille genoemd (fondsbreed is 14,8% van de 31,4% niet-eurobeleggingen afgedekt).",
+  "pagina": 95
+ },
+ "naam": "Bakkersbedrijf (Bakeries)",
+ "pad": "data/annual_reports/11_Bakkersbedrijf_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

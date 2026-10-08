@@ -1,0 +1,72 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 1924.607,
+  "feitelijk_pct": 28.44,
+  "letterlijk": "Tabel 7 De beleggingsportefeuille van het fonds (bedragen in € 1.000): Aandelen 1.924.607 (28,44%, Normportefeuille 26,00%); Totaal 6.767.376 (100,00%)",
+  "omvat_private_equity": false,
+  "pagina": 22,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 26,
+  "totaal_beleggingen_eur_mln": 6767.376
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": "Achmea IM",
+  "letterlijk": "Pensioenfonds Schoonmaak belegt het pensioengeld niet zelf. Hiervoor werken we met vermogensbeheerders. (p. 25) We maken daarbij ook gebruik van onze fiduciair vermogensbeheerder Achmea IM. (p. 29)",
+  "organisatie": "extern",
+  "pagina": 25
+ },
+ "esg": {
+  "co2_doel": "minimaal 50% reductie van de gefinancierde CO2-emissies in het jaar 2030 ten opzichte van de standaard marktbenchmark ultimo 2020",
+  "eigen_index": true,
+  "instrumenten": [
+   "uitsluitingen",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie",
+   "eigen ESG-index"
+  ],
+  "letterlijk": "Het pensioenfonds past ESG integratie toe binnen aandelen via een aangepaste klimaatbenchmark. Hierin worden, aan de hand van klimaatdata, ondernemingen met grootste transitierisico’s uitgesloten en daarnaast herweging toegepast naar ondernemingen die goed gepositioneerd zijn voor de energietransitie. - CO2-reductie. Specifiek streeft het pensioenfonds binnen de aandelen en credit portefeuille naar een portefeuille waar minimaal 50% reductie van de gefinancierde CO2-emissies in het jaar 2030 is behaald ten opzichte van de standaard marktbenchmark ultimo 2020.",
+  "omschrijving": "Het fonds promoot ecologische en sociale kenmerken (SFDR Artikel 8). Binnen aandelen wordt ESG-integratie toegepast via een aangepaste klimaatbenchmark (CTB) met uitsluitingen (controversiële wapens, VN Global Compact/OESO-schenders, tabak, fossiele brandstoffen, hoogrisicolanden, slecht bestuur) en herweging. Het CO2-doel streeft naar minimaal 50% reductie in 2030 t.o.v. de marktbenchmark per ultimo 2020 en klimaatneutraliteit uiterlijk in 2050. Duurzame beleggingen voldoen tevens aan PAB-uitsluitingen.",
+  "pagina": 123,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 61,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Tabel 10 Gemiddeld belegd vermogen: Totale kosten vermogensbeheer als % gemiddeld belegd vermogen 0,25%, Waarvan kosten vermogensbeheer 0,21%, Waarvan transactiekosten 0,04% (p. 29). De vermogensbeheerkosten bedroegen 0,21 procent (0,19 procent in 2024) en de transactiekosten bedroegen 0,04 procent (0,04 procent in 2024) (p. 30).",
+  "pagina": 29,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.04,
+  "vermogensbeheerkosten_totaal_pct": 0.21
+ },
+ "opmerkingen": "Aandelen worden extern en passief belegd via een maatwerkmandaat met een aangepaste klimaatbenchmark (CTB). Achmea IM is de fiduciair vermogensbeheerder en ESG-dienstverlener; APG en Northern Trust worden op p. 40 genoemd als uitvoeringsorganisaties, maar specifieke externe vermogensbeheerders of individuele fondsen/mandaten voor aandelen worden in de uitsnede niet met naam genoemd. In 2025 is de exposure naar de VS afgebouwd vanwege onrust aldaar. De kostenspecificatietabel per beleggingscategorie over 2025 ontbreekt in de verstrekte pagina's (p. 101 toont uitsluitend 2024). Private equity wordt afgebouwd en maakt geen deel uit van de beursgenoteerde aandelenportefeuille. Ter voorbereiding op de nieuwe pensioenregeling per 1 januari 2026 is de renterisicoafdekking stapsgewijs verlaagd en is de beleggingsmix langzaam aangepast.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "Climate Transition Benchmark (CTB)"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Het beleggen in aandelen doen we passief. Dat betekent dat het beleid de markt volgt. (p. 27) Voor de beleggingen in beursgenoteerde aandelen wordt een passieve beleggingstrategie gevolgd die een CTB benchmark volgt. (p. 126)",
+  "pagina": 27,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Op dit moment doen we dat alleen voor de Amerikaanse dollar. De beleggingen in andere landen zijn zo klein dat de kosten van het beperken van het risico er niet tegen opwegen. In 2025 werd de Amerikaanse dollar minder waard ten opzichte van de euro. Het pensioenfonds had dat risico afgedekt, waardoor het resultaat positief was.",
+  "omschrijving": "Valutarisico wordt uitsluitend afgedekt voor de Amerikaanse dollar. Voor andere valuta wegen de afdekkingskosten volgens het fonds niet op tegen de risicobeperking. Er wordt in het verslag geen specifiek afdekkingspercentage genoemd.",
+  "pagina": 27
+ },
+ "naam": "Schoonmaak- en Glazenwassersbedrijf",
+ "pad": "data/annual_reports/61_Schoonmaak_en_Glazenwass_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

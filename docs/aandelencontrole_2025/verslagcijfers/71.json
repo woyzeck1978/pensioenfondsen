@@ -1,0 +1,84 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 4776,
+  "feitelijk_pct": 18.9,
+  "letterlijk": "Aandelen: marktwaarde 4.776 mln (18,9% van marktwaarde totaal); Impact beleggen aandelen 394 mln (1,6%); Totaal marktwaarde beleggingen 25.239 mln",
+  "omvat_private_equity": false,
+  "pagina": 58,
+  "private_equity_pct": null,
+  "strategisch_basis": "rendementsportefeuille",
+  "strategisch_pct": 55,
+  "totaal_beleggingen_eur_mln": 25239
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": null,
+  "letterlijk": "Het pensioenfonds kent geen vergoedingen voor fiduciair beheer en/of prestatie afhankelijke vergoedingen. Onder de beheervergoedingen vallen de vergoedingen die vanuit het pensioenfonds aan de externe vermogensmanagers worden betaald",
+  "organisatie": "extern",
+  "pagina": 72
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": true,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "impactbeleggen",
+   "eigen ESG-index",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "In de Bijlage SFDR RTS artikel 8 staat in welke mate het pensioenfonds de karakteristieken realiseert die het voor de basisregeling ‘promoot’ in zijn ‘Beleidsplan verantwoord beleggen’.",
+  "omschrijving": "Het fonds classificeert onder SFDR artikel 8. Voor aandelen worden maatwerk multi-factor en ESG-benchmarks gebruikt (passief belegd), aangevuld met uitsluitingen (UN Global Compact, controversiële wapens), engagement, stembeleid en twee impactportefeuilles in beursgenoteerde aandelen gericht op klimaatverandering.",
+  "pagina": 61,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 71,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Beheervergoedingen per beleggingscategorie: Aandelen directe beleggingen 2.740, Transactiekosten 2.052 (in duizenden euro's). Totale kosten vermogensbeheer over 2025 bedragen 0,12%, transactiekosten 0,04%. Geen vergoedingen voor fiduciair beheer en/of prestatie afhankelijke vergoedingen.",
+  "pagina": 71,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.04,
+  "vermogensbeheerkosten_totaal_pct": 0.12
+ },
+ "opmerkingen": "Naast de reguliere aandelenportefeuille (€ 4.776 mln / 18,9%) heeft het fonds twee impactportefeuilles in beursgenoteerde aandelen klimaat (€ 394 mln / 1,6%). In Q1 2025 is de USD-afdekking binnen aandelen ontwikkelde markten tijdelijk verhoogd van 50% naar 75%. De strategische aandelenallocatie is gedefinieerd als percentage van de returnportefeuille (40% ontwikkelde markten, 15% opkomende markten; samen 55% van RP). Het fonds heeft geen fiduciair beheerder en betaalt geen prestatievergoedingen. Individuele beheerders voor de aandelenportefeuilles worden in het verslag niet bij naam genoemd.",
+ "regio": {
+  "basis": "strategisch",
+  "letterlijk": "Aandelen ontwikkelde markten 40,0%, Aandelen opkomende markten 15,0% (Streefgewicht % van RP)",
+  "pagina": 57,
+  "verdeling": [
+   {
+    "pct": 40,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 15,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "Een maatwerk multi-factor en ESG-aandelen index voor ontwikkelde markten",
+   "Een maatwerk multi-factor en ESG-aandelen index voor opkomende markten"
+  ],
+  "factorbeleggen": true,
+  "hoofdstijl": "passief",
+  "letterlijk": "Aandelen ontwikkelde markten: Een maatwerk multi-factor en ESG-aandelen index voor ontwikkelde markten; Aandelen opkomende markten: Een maatwerk multi-factor en ESG-aandelen index voor opkomende markten. Op basis van deze benchmarks worden vervolgens de verschillende portefeuilles passief belegd.",
+  "pagina": 57,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 50,
+  "letterlijk": "Aandelen Ontwikkelde markten: Afdekking 50%* (+/- 10%), Aandelen Opkomende markten: 0%. *= als gevolg van een risicobeheersmaatregel, wordt de Amerikaanse dollar tijdelijk voor 75% afgedekt binnen de categorie Aandelen Ontwikkelde Markten.",
+  "omschrijving": "Strategisch wordt 50% van het valutarisico op aandelen ontwikkelde markten afgedekt (toegestane afwijking +/- 10%), waarbij de Amerikaanse dollar tijdelijk voor 75% is afgedekt. Aandelen opkomende markten worden niet afgedekt (0%).",
+  "pagina": 58
+ },
+ "naam": "ABN AMRO",
+ "pad": "data/annual_reports/71_ABN_AMRO_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

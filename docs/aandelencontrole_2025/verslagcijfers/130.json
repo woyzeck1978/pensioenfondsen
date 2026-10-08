@@ -1,0 +1,85 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 88.286,
+  "feitelijk_pct": 44.8,
+  "letterlijk": "Eigen beheer (p. 34): 'Het vermogen wordt ultimo 2025 belegd in een mix met 44,8% in wereldwijde aandelen, 50,2% in vastrentende waarden en 5,0% in vastgoed.' Strategisch aandelen/zakelijke waarden 45,0%. Stand per 31-12-2025 (p. 5, x € 1.000): Eigen beheer aandelen 88.286, totaal beleggingen 196.937. Herverzekerde portefeuille (p. 33): feitelijk aandelen 28,8%, strategisch 29,0% (p. 5: aandelen 24.114, totaal beleggingen 83.218).",
+  "omvat_private_equity": false,
+  "pagina": 34,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 45,
+  "totaal_beleggingen_eur_mln": 196.937
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Aegon Asset Management",
+    "pagina": 34,
+    "product_of_mandaat": "Aegon World Equity Fund (EUR)",
+    "segment": "wereldwijd",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Aegon Asset Management",
+    "pagina": 33,
+    "product_of_mandaat": "Aegon World Equity Fund (EUR)",
+    "segment": "wereldwijd",
+    "stijl": "actief"
+   }
+  ],
+  "fiduciair_beheerder": "Aegon Asset Management B.V.",
+  "letterlijk": "Vermogensbeheerder Aegon Asset Management B.V. te Den Haag (p. 16); Het fonds heeft voor het vermogensbeheer een vermogensbeheerovereenkomst met Aegon Asset Management B.V. afgesloten (p. 74); Eigen beheer: Aegon World Equity Fund (EUR), passief beleid (p. 34); Herverzekerde portefeuille: Aegon World Equity Fund (EUR), actieve beleggingsstijl met via Aegon AM ingehuurde externe managers (p. 31, 33, 34).",
+  "organisatie": "extern",
+  "pagina": 16
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Het pensioenfonds vult zijn ESG-beleid in door: 1. uitsluitingen; 2. stembeleid; 3. dialoog (engagement); 4. ESG-integratie; 5. voor zover mogelijk: impactbeleggingen (p. 38). Impactbeleggingen zijn gealloceerd naar staatsgelieerde leningen (p. 39). SFDR periodieke openbaarmaking E/S-kenmerken (p. 97-106; 89,71% afgestemd op E/S-kenmerken, p. 103).",
+  "omschrijving": "Het pensioenfonds classificeert conform SFDR Artikel 8 (periodieke openbaarmaking E/S-kenmerken p. 97-106, 89,71% afgestemd op E/S-kenmerken). Voor aandelen worden uitsluitingen (controversiële wapens, tabak, palmolie, controversiële overheden), stembeleid op AV's, engagement/dialoog conform internationale verdragen en ESG-integratie toegepast via vermogensbeheerder Aegon AM. Impactbeleggingen worden uitsluitend toegepast bij staatsgelieerde leningen (vastrentende waarden).",
+  "pagina": 38,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 130,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.31,
+  "letterlijk": "Beleggingen eigen beheer Aandelen: beheerkosten 270, beheerkosten in % vermogen 0,31%, resultaatafhankelijke vergoeding - (p. 31). Totaal vermogensbeheerkosten 0,48% (€ 1.324 duizend) en transactiekosten 0,06% (€ 168 duizend) (p. 31, 32). Herverzekerd depot kosten nihil wegens negatieve overrente conform garantiecontract ASR (p. 31, 32).",
+  "pagina": 31,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.06,
+  "vermogensbeheerkosten_totaal_pct": 0.48
+ },
+ "opmerkingen": "Sportfondsen kent twee beleggingsdepots: het eigen beheer depot (beleggingen voor risico fonds, vrije vermogen en premies; € 88,29 mln aandelen, passief via Aegon World Equity Fund EUR) en het verzekerd depot (garantiecontract Aegon Levensverzekering/a.s.r., premievrij; € 24,11 mln aandelen, actief via externe managers). In 2025 is de opdracht voor de Wtp-overstap naar een Solidaire Premieregeling (beoogde transitiedatum 1 januari 2028) aanvaard en is een ALM-light studie uitgevoerd voor 2026-2027. Voor het eigen beheer depot is in 2025 een nieuw dynamisch renteafdekkingsbeleid vastgesteld (afdekking per ultimo 2025: 70%). Het garantiecontract met a.s.r. wordt vooralsnog in stand gehouden.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "Eigen beheer (p. 34): 'Voor de aandelenportefeuille wordt een passief beleid gevoerd.' Herverzekerde portefeuille (p. 33): 'Er wordt namens SSP een ‘actieve’ beleggingsstijl gehanteerd. [...] Ten aanzien van aandelen heeft het actieve beleid betrekking op landen, sectoren en individuele bedrijven.' Benchmarkrendement aandelen bedroeg 16,53% in 2025 (p. 35; benchmarknaam niet genoemd).",
+  "pagina": 34,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Aandelen: Aegon World Equity Fund (EUR) (p. 34); Met de directe en indirecte beleggingsopbrengsten zijn verrekend de aan de opbrengsten gerelateerde transactiekosten, provisies, valutaverschillen e.d. (p. 60).",
+  "omschrijving": "Het pensioenfonds belegt in het Aegon World Equity Fund (EUR). Het verslag vermeldt geen specifiek afdekkingspercentage voor het valutarisico van de aandelenportefeuille.",
+  "pagina": 34
+ },
+ "naam": "Sportfondsen",
+ "pad": "data/annual_reports/130_Sportfondsen_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

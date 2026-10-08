@@ -1,0 +1,83 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": null,
+  "feitelijk_pct": null,
+  "letterlijk": "",
+  "omvat_private_equity": false,
+  "pagina": null,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "MM",
+    "pagina": 39,
+    "product_of_mandaat": "MM World Equity Index SRI Fund",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "MM",
+    "pagina": 40,
+    "product_of_mandaat": "MM Global Emerging Markets Fund",
+    "segment": "opkomende markten",
+    "stijl": "actief"
+   }
+  ],
+  "fiduciair_beheerder": "Aegon AM",
+  "letterlijk": "Het fiduciair beheer voor de beleggingen risico pensioenkring is uitbesteed aan Aegon AM en hiervoor is eveneens een uitbestedingsovereenkomst en een SLA overeengekomen.",
+  "organisatie": "extern",
+  "pagina": 113
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Daarnaast had het fonds, vanwege het minder duurzame karakter van veel bedrijven in deze sector, een onderweging naar de sterk presterende sector grondstoffen.",
+  "omschrijving": "Holland Casino belegt in het MM World Equity Index SRI Fund en het MM Global Emerging Markets Fund. Binnen het opkomende markten fonds vindt ESG-integratie plaats via bottom-up aandelenselectie met onderweging van niet-duurzame sectoren zoals grondstoffen. Stap hanteert tevens een MVB-uitsluitingsbeleid.",
+  "pagina": 40,
+  "sfdr_artikel": null
+ },
+ "fund_id": 227,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.06,
+  "letterlijk": "Aandelen 1.078 1.275 0,06 0,07; Aandelen 744 348 0,04 0,02; Totale kosten van vermogensbeheer 4.604 4.894 0,25 0,26; Totaal transactiekosten 2.567 974 0,14 0,05",
+  "pagina": 22,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": 0.04,
+  "transactiekosten_totaal_pct": 0.14,
+  "vermogensbeheerkosten_totaal_pct": 0.25
+ },
+ "opmerkingen": "Pensioenkring Holland Casino is per 1 mei 2025 ingevaren naar een solidaire premieregeling (SPR) onder de Wtp. Deze transitie leidde onder meer tot een stijging van de transactiekosten. Aandelenbeleggingen vinden plaats via multi-manager fondsen (ontwikkelde markten passief SRI, opkomende markten actief). De positie in Tesla-aandelen (ultimo 2024 nog 2,2% van het balanstotaal) was ultimo 2025 0%. De tracking error van de aandelenportefeuille bedroeg ultimo 2025 0,88%.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "Voor Pensioenkring Holland Casino bedraagt de tracking error van de aandelenportefeuille per eind december 0,88% (2024: 0,82%).",
+  "pagina": 90,
+  "passief_pct": null,
+  "tracking_error_pct": 0.88
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 50,
+  "letterlijk": "Aandelen ontwikkelde markten 50,0%; Afdekking met een FX overlay X",
+  "omschrijving": "Valutarisico op aandelen ontwikkelde markten wordt voor 50,0% afgedekt met een FX overlay (valutaforwards), gericht op gedeeltelijke afdekking van USD, GBP en JPY. Voor aandelen opkomende markten is valuta-afdekking n.v.t.",
+  "pagina": 56
+ },
+ "naam": "Kring Holland Casino (Stap)",
+ "pad": "data/annual_reports/227_Holland_Casino_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

@@ -1,0 +1,87 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 711.3,
+  "feitelijk_pct": null,
+  "letterlijk": "Transponatietabel ... Aandelen 711,3 ... Totaal 2.957,3 (in € mln.)",
+  "omvat_private_equity": false,
+  "pagina": 93,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 2957.3
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": null,
+  "letterlijk": "De externe beheerkosten namen iets af door regionale allocatiekeuzes binnen de aandelenportefeuille.",
+  "organisatie": "extern",
+  "pagina": 71
+ },
+ "esg": {
+  "co2_doel": "-55% voor aandelen en investment grade credits en -40% beursgenoteerd vastgoed benodigd voor de 2030 doelstelling",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "CO2-reductiedoel"
+  ],
+  "letterlijk": "Voor deze portefeuilles ligt de CO2-intensiteit nu onder het lineaire reductiepad benodigd voor de 2030 doelstelling (-55% voor aandelen en investment grade credits en -40% beursgenoteerd vastgoed).",
+  "omschrijving": "SPF promoot ecologische en sociale kenmerken (SFDR artikel 8) en past op aandelen uitsluitingen toe (o.a. VN Global Compact, controversiële wapens, tabak, kolen/teerzand, gokken), voert een actief engagementprogramma via Columbia Threadneedle Investments met escalatieladder, stemt op aandeelhoudersvergaderingen en hanteert een CO2-reductiedoelstelling voor 2030 (-55% t.o.v. nulmeting 2016).",
+  "pagina": 166,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 126,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.15,
+  "letterlijk": "Aandelen Beheerkosten 1.038 0,15% Transactiekost. 231 0,03% | Totale beheerkosten 14.760 0,50% Transactiekost. 1.620 0,05%",
+  "pagina": 71,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": 0.03,
+  "transactiekosten_totaal_pct": 0.05,
+  "vermogensbeheerkosten_totaal_pct": 0.5
+ },
+ "opmerkingen": "De aandelenportefeuille (€711,3 mln) bestaat uit beursgenoteerde aandelen (€519,6 mln, 73%) en beleggingsfondsen (€191,7 mln, 27%). SPF hanteert een actieve defensieve beleggingsstijl ('aandelen met een solide karakter' die neerwaartse bescherming bieden) via mandaten voor Europa en de VS. In 2025 is het beheer van de valuta-afdekking gewijzigd. Het engagement-escalatiebeleid leidde in 2025 voor het eerst tot een uitsluiting na 3 jaar onvoldoende voortgang. Daarnaast vindt securities lending plaats via custodian CACEIS - Kasbank (€534 mln ultimo 2025). Er waren geen posities in aandelenfutures.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Europa 272,0 38%, Noord Amerika 251,9 35%, Azië / Pacific 111,4 16%, Emerging Markets 76,0 11%",
+  "pagina": 89,
+  "verdeling": [
+   {
+    "pct": 38,
+    "regio": "Europa"
+   },
+   {
+    "pct": 35,
+    "regio": "Noord-Amerika"
+   },
+   {
+    "pct": 16,
+    "regio": "Azië-Pacific"
+   },
+   {
+    "pct": 11,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "actief",
+  "letterlijk": "Daarnaast hanteert SPF in vergelijking met de vergelijkingsgroep een actieve beleggingsstijl binnen aandelen.",
+  "pagina": 73,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 70,
+  "letterlijk": "Het valutarisico dekt SPF strategisch voor 70% af met valutatermijncontracten (FX-forwards).",
+  "omschrijving": "Het valutarisico op beleggingen buiten de eurozone wordt strategisch voor 70% afgedekt met valutatermijncontracten (FX-forwards) op kwartaalbasis. In 2025 is het beheer van de valuta-afdekking gewijzigd.",
+  "pagina": 92
+ },
+ "naam": "SABIC",
+ "pad": "data/annual_reports/126_SABIC_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

@@ -1,0 +1,72 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": null,
+  "feitelijk_pct": null,
+  "letterlijk": "",
+  "omvat_private_equity": null,
+  "pagina": null,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": null,
+  "letterlijk": "De portefeuille aandelen ontwikkelde landen bestaat uit twee indexfondsen (wereldwĳd en Europees) met een specifieke ESG-opdracht. [...] De categorie aandelen uit opkomende landen wordt ingevuld met een passief aandelenfonds.",
+  "organisatie": "extern",
+  "pagina": 182
+ },
+ "esg": {
+  "co2_doel": "30% reductie ten opzichte van 2019 en vervolgens een jaarlĳkse afname van ten minste 7% in lĳn met de klimaatdoelstellingen van Parĳs",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "best-in-class",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie",
+   "engagement",
+   "stembeleid"
+  ],
+  "letterlijk": "Dit fonds belegt passief op basis van een ESG-benchmark. Dat betekent dat bepaalde bedrĳven worden uitgesloten. Ook wordt gekozen voor bedrĳven die binnen hun sector beter scoren op duurzaamheid (best-in-class). Daarnaast sturen we op minder CO2-uitstoot en op bĳdragen aan bepaalde duurzame doelen (SDG's).",
+  "omschrijving": "Voor aandelen ontwikkelde landen wordt belegd in twee indexfondsen met specifieke ESG-opdracht (sturen op lagere CO2-uitstoot, SDG's en onderweging van de Magnificent 7). Aandelen opkomende landen belegt passief via een ESG-benchmark met uitsluitingen, best-in-class selectie en CO2-/SDG-sturing. Fondsbreed hanteert HNPF een CO2-reductiedoel (30% reductie t.o.v. 2019 en ten minste 7% per jaar in lijn met Parijs) alsmede engagement en stembeleid.",
+  "pagina": 182,
+  "sfdr_artikel": null
+ },
+ "fund_id": 230,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "",
+  "pagina": null,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": null,
+  "vermogensbeheerkosten_totaal_pct": null
+ },
+ "opmerkingen": "Pensioenkring Cargill Bioindustrial is een kring binnen algemeen pensioenfonds Het Nederlandse Pensioenfonds (HNPF). De aandelenportefeuille is volledig passief ingericht: ontwikkelde markten bestaat uit twee indexfondsen (wereldwijd en Europees) met een specifieke ESG-opdracht, en opkomende markten bestaat uit een passief ESG-indexfonds (in tegenstelling tot diverse andere kringen van HNPF is er geen actieve aandelenmanager). In 2025 behaalde aandelen ontwikkelde markten 7,8% (underperformance van 1,4%-punt t.o.v. de benchmark van 9,2%, mede door ESG-keuzes zoals onderweging van de 'Magnificent 7'). Aandelen opkomende markten behaalde 18,8% (outperformance van 1,0%-punt t.o.v. benchmark 17,8%). Kwantitatieve allocatiecijfers, eurobedragen, specifieke beheerdersnamen en uitsplitsing van kosten voor deze kring ontbreken in de aangeleverde verslagpagina's.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "De portefeuille aandelen ontwikkelde landen bestaat uit twee indexfondsen (wereldwĳd en Europees) met een specifieke ESG-opdracht. [...] De categorie aandelen uit opkomende landen wordt ingevuld met een passief aandelenfonds.",
+  "pagina": 182,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "De grootste bĳdragen aan het positieve absolute rendement van de rendementsportefeuille werden geleverd door de categorie aandelen ontwikkeld en de valuta-afdekking.",
+  "omschrijving": "Valuta-afdekking wordt toegepast op de rendementsportefeuille en droeg positief bij aan het rendement, maar een specifiek afdekkingspercentage voor de aandelenportefeuille wordt in het verslag niet gekwantificeerd.",
+  "pagina": 182
+ },
+ "naam": "Pensioenkring Cargill (HNPF)",
+ "pad": "data/annual_reports/230_Pensioenkring_Cargill_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

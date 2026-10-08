@@ -1,0 +1,89 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 304.627,
+  "feitelijk_pct": null,
+  "letterlijk": "Onderstaande tabel beschrijft de strategische asset allocatie en gehanteerde benchmarks zoals opgenomen in het Beleggingsplan: Aandelen Ontwikkelde markten Norm % 32,7 (p. 21). Tabel verdeling aandelen per sector (p. 95): Totaal 304.627 (bedragen x € 1.000, oftewel € 304,627 mln). Tabel verdeling aandelen en vastgoed per categorie (p. 92): Ontwikkelde markten 301.084 (83,0%), Opkomende markten 3.543 (1,0%), Private Equity 0 (0,0%), totaal € 362.864 duizend. Totaal belegd vermogen bedraagt ultimo 2025 € 872.992 duizend (p. 6, p. 21) respectievelijk € 873.509 duizend (p. 92), maar een balans of tabel samenstelling beleggingen met zowel aandelen als totaal beleggingen ontbreekt in het uittreksel.",
+  "omvat_private_equity": false,
+  "pagina": 21,
+  "private_equity_pct": 0,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 32.7,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Northern Trust",
+    "pagina": 20,
+    "product_of_mandaat": null,
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "Goldman Sachs Asset Management (GSAM)",
+  "letterlijk": "Het belegd vermogen is ultimo 2025 ondergebracht bij verschillende vermogensbeheerders (GSAM, Northern Trust, Abrdn, Syntrus Achmea Real Estate & Finance, PGGM, State Street Global Advisors en Robeco). De returnportefeuille is op onderstaande wijze uitgezet: Aandelen ontwikkelde markten wordt belegd middels een beleggingsfonds van Northern Trust. De valuta-overlay wordt uitgevoerd door GSAM. (p. 20); fiduciair beheerder GSAM (p. 20, 22).",
+  "organisatie": "extern",
+  "pagina": 20
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Het pensioenfonds kiest ervoor het effect van duurzaamheidsrisico’s te integreren in haar beleggingsbeslissingen. Het pensioenfonds heeft daarmee de pensioenregeling onder de SFDR geclassificeerd als een Artikel 8 product (p. 25). MVB-instrumenten (via selectiebeleid): 1. Uitsluitingsbeleid, 2. Betrokkenheidsbeleid (engagement- en stembeleid), 3. ESG-integratie, 4. Impactbeleggen (p. 25); Inzet referentieperiode (p. 118): Uitsluitingenbeleid voor alle aandelen en bedrijfsobligaties (VN Global Compact, OESO, controversiële wapens, wapenembargo's) en Betrokkenheidsbeleid (engagement- en stembeleid).",
+  "omschrijving": "Het fonds classificeert de pensioenregeling onder de SFDR als Artikel 8 en heeft gekozen voor een opt-in op artikel 4 (PAI-rapportage). Het fonds belegt via beleggingsfondsen en past uitsluitingen toe (grove schenders VN Global Compact/OESO, controversiële wapens, wapenembargo's), selecteert beheerders met een engagement- en stembeleid en integreert ESG-factoren in het selectiebeleid. Er zijn geen specifieke CO2-reductiedoelen of duurzame beleggingen nagestreefd.",
+  "pagina": 25,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 128,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Meerjarenoverzicht 2025 (p. 6): Kosten vermogensbeheer 0,27%, Transactiekosten 0,05%, Totale kosten vermogensbeheer 0,32% (zie ook p. 40-41: totale kosten € 2,7 mln / 0,32%). Tabel beheervergoeding (p. 39) toont enkel cijfers over 2024 (kolomkop 2024: Ontwikkelde markten 5 bps / 0,05%, Opkomende markten 8 bps / 0,08%); de uitsplitsing over 2025 ontbreekt in het uittreksel. Transactiekosten over 2025 (p. 40) vermelden enkel Returnportefeuille totaal (€ 115 duizend). Prestatieafhankelijke vergoeding over 2025 bedroeg -/- € 4.998 en betrof uitsluitend privaat vastgoed (aandelen: € 0, p. 40).",
+  "pagina": 6,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.05,
+  "vermogensbeheerkosten_totaal_pct": 0.27
+ },
+ "opmerkingen": "Het vermogensbeheer is volledig uitbesteed; Goldman Sachs Asset Management (GSAM) treedt op als fiduciair beheerder (en verzorgt de renteafdekking, geldmarktfondsen en de valuta-overlay), terwijl EY Actuarissen optreedt als onafhankelijke balansrisicomanager. Aandelen ontwikkelde markten wordt passief uitgevoerd via een beleggingsfonds van Northern Trust (benchmark MSCI World NTR Index). De allocatie naar aandelen opkomende markten is in oktober 2024 beëindigd (hoewel per ultimo 2025 nog een restant van € 3,5 mln resteert). In 2025 is een ALM-studie uitgevoerd in het kader van de Wtp; GSAM stelt hiervoor een implementatieplan op. Het Verantwoordingsorgaan (VO) adviseert het bestuur om meer in zakelijke waarden (40% i.p.v. de beoogde 35%) te beleggen om koopkrachtbehoud voor gepensioneerden mogelijk te maken. In februari 2026 is na balansdatum besloten tot redemptie van de belegging in het privaat vastgoedfonds van PGGM. In de kostenparagraaf ontbreekt de kostentabel per beleggingscategorie over 2025 (enkel de tabel over 2024 met 5 bps voor aandelen mature markets is opgenomen in het uittreksel).",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Verdeling aandelen en vastgoed per categorie (p. 92): Ontwikkelde markten (Mature markets) 301.084 (83,0%), Opkomende markten (Emerging markets) 3.543 (1,0%). Strategische allocatie (p. 21): Aandelen Ontwikkelde markten 32,7%; de strategische allocatie naar opkomende markten is in oktober 2024 beëindigd (p. 39).",
+  "pagina": 92,
+  "verdeling": [
+   {
+    "pct": 83,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 1,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": 0,
+  "benchmarks": [
+   "MSCI World NTR Index"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Aandelen Ontwikkelde markten: Norm % 32,7, Strategische benchmark MSCI World NTR Index (p. 21); Actief beheer risico: Het pensioenfonds hanteert een passieve beleggingsstrategie en er is derhalve geen sprake van een actief beheer risico. (p. 95); Het pensioenfonds belegt daarom passief (p. 37).",
+  "pagina": 21,
+  "passief_pct": 100,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 65,
+  "letterlijk": "Het pensioenfonds heeft als doelstelling om het valutarisico van de Amerikaanse dollar, Japanse yen en Brits pond voor aandelen in ontwikkelde markten en voor niet-beursgenoteerd vastgoed tussen 50% en 75% af te dekken. (...) Momenteel heeft het pensioenfonds de normweging voor de afdekking van deze valuta vastgesteld op 65%. Het valutarisico van andere valuta’s wordt niet afgedekt. (p. 23); Strategisch dekt het fonds 44,1% van haar niet-euro beleggingen af (p. 92).",
+  "omschrijving": "Het pensioenfonds heeft als doelstelling om het valutarisico van de Amerikaanse dollar, Japanse yen en Brits pond voor aandelen in ontwikkelde markten (en privaat vastgoed) tussen 50% en 75% af te dekken via een separate valuta-overlay door GSAM. De normweging voor de afdekking van deze drie valuta's is vastgesteld op 65%. Overige valuta's worden niet afgedekt. Fondsbreed is strategisch 44,1% van alle niet-euro beleggingen afgedekt.",
+  "pagina": 23
+ },
+ "naam": "Smurfit Kappa",
+ "pad": "data/annual_reports/128_Smurfit_Kappa_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

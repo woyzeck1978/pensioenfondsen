@@ -1,0 +1,76 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": null,
+  "feitelijk_pct": 26.8,
+  "letterlijk": "Aandelen | 32,7% | 32,7% | 26,8% | 29,3%",
+  "omvat_private_equity": false,
+  "pagina": 22,
+  "private_equity_pct": 8.7,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 32.7,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": "APG Asset Management (per 1 januari 2027 Van Lanschot Kempen Investment Management)",
+  "letterlijk": "De beleggingsportefeuille is ondergebracht bĳ APG Asset Management N.V. Daarmee heeft SPW een vermogensbeheerovereenkomst afgesloten.",
+  "organisatie": "extern",
+  "pagina": 136
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "In onze beleggingsbeslissingen houden wĳ dan ook nadrukkelĳk rekening met milieu, maatschappĳ en goed ondernemingsbestuur.",
+  "omschrijving": "SPW hanteert vier centrale MVB-thema's (klimaatverandering, behoud van biodiversiteit, goed bestuur en respect voor mensenrechten) en integreert ESG in de beleggingsbeslissingen. Binnen opkomende markten aandelen wordt een duurzame index passief gevolgd.",
+  "pagina": 23,
+  "sfdr_artikel": null
+ },
+ "fund_id": 39,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Tabel Beheer- en prestatievergoedingen: Aandelen beheervergoedingen 8,6 mln euro, prestatievergoedingen 0,0 mln euro; Totaal 2025 kosten 114,3 mln euro (0,74%). Tabel Transactiekosten (p. 43): Totaal 27,5 mln euro (0,18%).",
+  "pagina": 41,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.18,
+  "vermogensbeheerkosten_totaal_pct": 0.74
+ },
+ "opmerkingen": "In 2025 is de aandelenallocatie verlaagd richting de onderkant van de bandbreedte (feitelijk 26,8% vs strategische norm 32,7%) ter voorbereiding op het invaren per 1 januari 2026 onder de Wtp. Binnen aandelen ontwikkelde markten wordt de exposure naar de VS vanaf 2026 gemaximeerd op 50% ter verlaging van geopolitiek en concentratierisico. Ontwikkelde markten kende underperformance door bottom-up aandelenselectie in small/midcaps en onderweging in de 'Magnificent Seven'. Opkomende markten aandelen bestaat uit drie strategieën (fundamenteel, kwantitatief en passief duurzame index). Het fiduciair beheer gaat per 1 januari 2027 over van APG naar Van Lanschot Kempen Investment Management. Beleggingen in APG Pools/FGR zijn afgebouwd naar separate mandaten met externe managers.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Aandelen: - Ontwikkelde markten 19,9%, - Opkomende markten 6,9%",
+  "pagina": 22,
+  "verdeling": [
+   {
+    "pct": 19.9,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 6.9,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "SPW kent een deels actief beheerde aandelenportefeuille voor ontwikkelde en opkomende markten. Door dit actieve beleid kunnen de rendementen van de beleggingen afwĳken van de relevante benchmark.",
+  "pagina": 28,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Er worden ook derivaten aangehouden voor de (gedeeltelĳke) afdekking van het valutarisico binnen zakelĳke waarden en obligaties opkomende markten. Gedurende 2025 zĳn de beleggingen in Amerikaanse dollar, Britse pond, Zwitserse frank, Canadese dollar, Australische dollar en Japanse yen deels afgedekt.",
+  "omschrijving": "Gedeeltelijke afdekking van het valutarisico binnen zakelijke waarden en aandelen ontwikkelde markten (o.a. USD, GBP, CHF, CAD, AUD, JPY) via derivaten in de overlayportefeuille. In 2025 is het valutabeleid herijkt waarbij de afdekking van de Amerikaanse dollar ongewijzigd bleef.",
+  "pagina": 27
+ },
+ "naam": "Woningcorporaties / SPW (Housing Corporations)",
+ "pad": "data/annual_reports/39_SPW_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

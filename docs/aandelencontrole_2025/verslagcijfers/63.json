@@ -1,0 +1,85 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 1374.38,
+  "feitelijk_pct": null,
+  "letterlijk": "Ontwikkelde markten (Mature markets) 1.196.561 74,4 Opkomende markten (Emerging markets) 177.821 11,1 Private equity 4.984 0,3 ... Totaal beleggingen naar valuta: 3.890.437 (bedragen x € 1.000,-)",
+  "omvat_private_equity": false,
+  "pagina": 116,
+  "private_equity_pct": 0.3,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 3890.44
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": "Columbia Threadneedle Investments",
+  "letterlijk": "De huidige verwachte rendementen van fiduciair beheerder Columbia Threadneedle Investments... Omdat pensioenfonds VLEP grotendeels in beleggingsfondsen belegt (in plaats van in discretionaire mandaten) is pensioenfonds VLEP voor zijn ESG-beleid afhankelijk van de fondsen waar het in belegt.",
+  "organisatie": "extern",
+  "pagina": 51
+ },
+ "esg": {
+  "co2_doel": "aandelen ontwikkelde markten: een initiële CO₂-reductie van 30%, gevolgd door een jaarlijkse reductie van 7%, gericht op netto nul in 2050",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "aandelen ontwikkelde markten: een initiële CO₂-reductie van 30%, gevolgd door een jaarlijkse reductie van 7%, gericht op netto nul in 2050 ... Voor de aandelen- en bedrijfsobligatieportefeuilles is gekozen voor MSCI-benchmarks die voldoen aan de Europese vereisten voor EU Climate Transition Benchmarks.",
+  "omschrijving": "VLEP promoot ecologische en sociale kenmerken (artikel 8 SFDR) via uitsluitingen (controversiële wapens, tabak, kolen/teerzanden, schenders UN Global Compact/OESO), stemmen en engagement (uitgevoerd door fiduciair CTI), ESG-integratie in managerselectie en een CO2-reductiedoel voor aandelen ontwikkelde markten van -30% initieel en -7% per jaar richting netto nul in 2050.",
+  "pagina": 150,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 63,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Aandelen Beheerkosten 806 Performance gerelateerde kosten – Transactiekosten 339 Totaal 2025 1.145 (bedragen x € 1.000,-). Totale kosten vermogensbeheer als percentage van het gemiddeld belegd vermogen: 0,20%, transactiekosten 0,02% (in toelichting 0,024%), totaal 0,22%.",
+  "pagina": 58,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.02,
+  "vermogensbeheerkosten_totaal_pct": 0.2
+ },
+ "opmerkingen": "VLEP hanteert een 'passief, tenzij'-model voor het vermogensbeheer en belegt grotendeels via beleggingsfondsen. Columbia Threadneedle Investments treedt op als fiduciair vermogensbeheerder. Het strategisch beleggingsplan 2022-2024 is gehandhaafd in afwachting van de Wtp-overgang (beoogde overstap naar de solidaire premieregeling per 1 januari 2027). In de toelichting (p. 116) worden aandelen gepresenteerd onder 'Verdeling Aandelen en Vastgoed per categorie' (ontwikkelde markten 74,4% en opkomende markten 11,1%), zonder vermelding van een afzonderlijk percentage aandelen van de totale beleggingen.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Ontwikkelde markten (Mature markets) 1.196.561 74,4 Opkomende markten (Emerging markets) 177.821 11,1",
+  "pagina": 116,
+  "verdeling": [
+   {
+    "pct": 74.4,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 11.1,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "MSCI USA euro-hedged NR",
+   "MSCI Europe euro-hedged NR",
+   "MSCI Emerging Markets euro NR",
+   "MSCI EU Climate Transition Benchmarks"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Dit is mede mogelijk door toepassing van het \"passief, tenzij\"-model. ... Voor de aandelen- en bedrijfsobligatieportefeuilles is gekozen voor MSCI-benchmarks die voldoen aan de Europese vereisten voor EU Climate Transition Benchmarks.",
+  "pagina": 83,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 55.3,
+  "letterlijk": "Strategisch streeft het fonds naar een afdekking van 55,3% van de valuta-exposure naar de Amerikaanse dollar, de Britse pond en de Japanse yen. Andere buitenlandse valuta worden niet afgedekt. Eind 2025 zou dit betekenen dat strategisch 44,7% van de niet-euro belangen wordt afgedekt.",
+  "omschrijving": "Strategisch streeft het fonds naar een afdekking van 55,3% van de valuta-exposure naar USD, GBP en JPY via een overlay; overige vreemde valuta worden niet afgedekt. Ultimo 2025 betekent dit strategisch een afdekking van 44,7% van alle niet-euro belangen.",
+  "pagina": 116
+ },
+ "naam": "Vlees, Vleeswaren, Gemaksvoeding en Pluimveevlees / VLEP (Meat and Poultry)",
+ "pad": "data/annual_reports/63_VLEP_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

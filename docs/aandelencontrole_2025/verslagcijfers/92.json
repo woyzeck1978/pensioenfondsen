@@ -1,0 +1,78 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 53.856,
+  "feitelijk_pct": 38.5,
+  "letterlijk": "De beleggingsportefeuille van het pensioenfonds ter waarde van € 140 miljoen, bestond op 31 december 2025 uit: [...] Aandelenfonds 38,5% (pagina 32); Balans per 31 december 2025 (in € 1.000): Aandelen 53.856, Financiële beleggingen 139.858 (pagina 60)",
+  "omvat_private_equity": false,
+  "pagina": 32,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 139.858
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "State Street Investment Management",
+    "pagina": 71,
+    "product_of_mandaat": "SSIM CCF World ESG Screened Index Equity Fund",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": null,
+  "letterlijk": "Het vermogensbeheer van de aandelenportefeuille en de twee obligatieportefeuilles is uitbesteed aan SSIM (pagina 7); De beleggingen in aandelen betreffen uitsluitend het SSIM CCF World ESG Screened Index Equity Fund. (pagina 71)",
+  "organisatie": "extern",
+  "pagina": 7
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "stembeleid"
+  ],
+  "letterlijk": "Voor aandelen ontwikkelde landen heeft het pensioenfonds de MSCI ex Select Securities benchmark geïmplementeerd. Hiermee wordt gestuurd op het mitigeren van ESG-risico’s binnen de aandelen portefeuille ten opzichte van de MSCI World (belegbaar universum zonder additionele uitsluitingen). Zo worden bedrijven die actief zijn in de tabaksindustrie, die betrokken zijn bij de ontwikkeling van controversiële- en nucleaire wapens en die zich schuldig maken aan ernstige schending van de UNGC principes uitgesloten. (pagina 35)",
+  "omschrijving": "Het pensioenfonds belegt passief in het SSIM CCF World ESG Screened Index Equity Fund met de MSCI ex Select Securities benchmark, waarbij uitsluitingen gelden voor tabak, controversiële en nucleaire wapens en UNGC-schendingen. Voor actief aandeelhouderschap volgt het fonds het stembeleid van de vermogensbeheerder.",
+  "pagina": 35,
+  "sfdr_artikel": null
+ },
+ "fund_id": 92,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Totaal vermogensbeheerskosten 447 0,32% [...] Transactiekosten 4 0,00% (pagina 31); Kosten vermogensbeheer per type belegging (in € 1.000): Aandelen 38 (pagina 97)",
+  "pagina": 31,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0,
+  "vermogensbeheerkosten_totaal_pct": 0.32
+ },
+ "opmerkingen": "Het pensioenfonds bereidt een collectieve waardeoverdracht voor naar een verzekeraar (buy-out). De aandelenportefeuille bestaat uitsluitend uit één niet-beursgenoteerd passief indexfonds (SSIM CCF World ESG Screened Index Equity Fund). Valutarisico op USD, GBP en JPY is voor 100% afgedekt via CACEIS. Er zijn in 2025 geen wijzigingen aangebracht in de allocatie of samenstelling van de aandelenportefeuille.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": 0,
+  "benchmarks": [
+   "MSCI ex Select Securities"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "De aandelenportefeuille wordt beheerd door State Street Investment Management (‘SSIM’) op basis van passief beheer. Dat wil zeggen, dat de benchmark ‘gevolgd’ dient te worden en dat er geen outperformance ten opzichte van de benchmark wordt nagestreefd. (pagina 33); Voor aandelen ontwikkelde landen heeft het pensioenfonds de MSCI ex Select Securities benchmark geïmplementeerd. (pagina 35)",
+  "pagina": 33,
+  "passief_pct": 100,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 100,
+  "letterlijk": "Matching/valutarisico: Valutarisico is voor de belangrijkste valuta’s (dollar, pond en yen) voor 100% afgedekt. (pagina 46)",
+  "omschrijving": "Het valutarisico ten opzichte van de dollar (USD), het pond (GBP) en de yen (JPY) is voor 100% afgedekt door middel van valutatermijncontracten via CACEIS.",
+  "pagina": 46
+ },
+ "naam": "Ecolab",
+ "pad": "data/annual_reports/92_Ecolab_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

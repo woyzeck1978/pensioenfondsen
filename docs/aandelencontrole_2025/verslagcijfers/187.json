@@ -1,0 +1,67 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": null,
+  "feitelijk_pct": null,
+  "letterlijk": "",
+  "omvat_private_equity": null,
+  "pagina": null,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": null,
+  "letterlijk": "De portefeuille aandelen uit ontwikkelde landen bestaat uit drie passieve aandelenfondsen. [...] De categorie aandelen uit opkomende landen wordt ingevuld met twee actieve aandelenfondsen.",
+  "organisatie": "extern",
+  "pagina": 211
+ },
+ "esg": {
+  "co2_doel": "30% reductie ten opzichte van 2019 en vervolgens een jaarlijkse afname van ten minste 7% in lijn met de klimaatdoelstellingen van Parijs",
+  "eigen_index": false,
+  "instrumenten": [
+   "CO2-reductiedoel"
+  ],
+  "letterlijk": "wordt gereduceerd ten opzichte van de brede markt, met als uitgangspunt 30% reductie ten opzichte van 2019 en vervolgens een jaarlijkse afname van ten minste 7% in lijn met de klimaatdoelstellingen van Parijs.",
+  "omschrijving": "Op fondsniveau (Stichting Het Nederlandse Pensioenfonds) geldt voor aandelen een CO2-reductiedoel van 30% t.o.v. 2019 en vervolgens minimaal 7% per jaar in lijn met Parijs. Voor Pensioenkring CRH specifiek worden op pagina 211 geen afzonderlijke ESG-keuzes of -benchmarks voor aandelen genoemd.",
+  "pagina": 56,
+  "sfdr_artikel": null
+ },
+ "fund_id": 187,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "",
+  "pagina": null,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": null,
+  "vermogensbeheerkosten_totaal_pct": null
+ },
+ "opmerkingen": "Pensioenkring CRH wijkt binnen Het Nederlandse Pensioenfonds opvallend af van de andere kringen: aandelen ontwikkelde landen bestaat uit drie passieve aandelenfondsen (rendement 12,8% vs benchmark 12,8%), terwijl aandelen opkomende landen actief is ingevuld met twee actieve aandelenfondsen (rendement 30,6% vs benchmark 17,8%, een outperformance van 12,8%-punt dankzij actief beheer). Waar bij andere kringen een negatief relatief rendement ontstond door ESG-keuzes (zoals onderweging van de Magnificent 7), ontbreken dergelijke ESG-effecten bij CRH. Valutarisico op de USD werd voor 86% afgedekt. Concrete allocatiepercentages, eurobedragen, specifieke beheerdersnamen en uitsplitsing van kosten worden voor deze kring niet genoemd in de uitsnede.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "De portefeuille aandelen uit ontwikkelde landen bestaat uit drie passieve aandelenfondsen. De categorie aandelen uit ontwikkelde landen behaalde in 2025 een rendement van 12,8% versus eveneens 12,8% van de benchmark. [...] De categorie aandelen uit opkomende landen wordt ingevuld met twee actieve aandelenfondsen. In 2025 behaalde de categorie aandelen uit opkomende landen een positief rendement van 30,6%. De benchmark behaalde 17,8%. Het fonds behaalde daarmee een forse outperformance van 12,8 procentpunt boven de benchmark dankzij het actief gevoerde beleggingsbeleid.",
+  "pagina": 211,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 86,
+  "letterlijk": "Voor Pensioenkring CRH dekten we in 2025 het valutarisico van de Amerikaanse dollar voor 86% af.",
+  "omschrijving": "Het valutarisico van de Amerikaanse dollar werd voor Pensioenkring CRH in 2025 voor 86% afgedekt.",
+  "pagina": 211
+ },
+ "naam": "Pensioenkring CRH (Hnp)",
+ "pad": "data/annual_reports/187_Pensioenkring_CRH_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

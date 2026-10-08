@@ -1,0 +1,78 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": null,
+  "feitelijk_pct": null,
+  "letterlijk": "aandelen ontwikkelde landen 24 aandelen opkomende landen 4",
+  "omvat_private_equity": false,
+  "pagina": 376,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 28,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": "niet genoemd",
+  "letterlijk": "Het marktrisico wordt op dagelĳkse basis beheerst door de fiduciair manager in overeenstemming met de vastgestelde beleidskaders en richtlĳnen.",
+  "organisatie": "extern",
+  "pagina": 829
+ },
+ "esg": {
+  "co2_doel": "30% reductie ten opzichte van 2019 en vervolgens een jaarlĳkse afname van ten minste 7% in lĳn met de klimaatdoelstellingen van Parĳs",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "best-in-class",
+   "CO2-reductiedoel"
+  ],
+  "letterlijk": "Dat betekent dat bepaalde bedrĳven worden uitgesloten en dat binnen sectoren wordt geselecteerd op ondernemingen die relatief goed presteren op het gebied van duurzaamheid (best-in-class). Daarnaast sturen wĳ via dit fonds op een lagere CO2-uitstoot en op bĳdragen aan geselecteerde duurzame doelen (SDG's).",
+  "omschrijving": "Voor ontwikkelde landen wordt belegd in een wereldwijd indexfonds met een specifieke ESG-opdracht (onder meer sturen op minder CO2-uitstoot en SDG-bijdragen, onderwogen in de Magnificent 7). Voor opkomende markten belegt een passief fonds op basis van een ESG-benchmark met uitsluitingen, best-in-class selectie en CO2-sturing.",
+  "pagina": 377,
+  "sfdr_artikel": null
+ },
+ "fund_id": 193,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "",
+  "pagina": null,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": null,
+  "vermogensbeheerkosten_totaal_pct": null
+ },
+ "opmerkingen": "2025 was het eerste jaar waarin Pensioenkring Van Lanschot was aangesloten bij Het Nederlandse Pensioenfonds (overgekomen van Stichting Pensioenfonds F. van Lanschot). Per ultimo 2025 is het strategisch beleid gewijzigd naar 38% zakelijke waarden en 100% renteafdekking ter voorbereiding op het invaren in het nieuwe pensioenstelsel. ESG-keuzes (onderweging Magnificent 7) zorgden in 2025 voor 1,1 procentpunt underperformance bij ontwikkelde markten.",
+ "regio": {
+  "basis": "strategisch",
+  "letterlijk": "aandelen ontwikkelde landen 24 aandelen opkomende landen 4",
+  "pagina": 376,
+  "verdeling": [
+   {
+    "pct": 24,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 4,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "De portefeuille aandelen ontwikkelde landen bestaat uit een indexfonds (wereldwĳd) met een specifieke ESG-opdracht.",
+  "pagina": 377,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 50,
+  "letterlijk": "50% afdekking van het valutarisico op de Amerikaanse dollar, de Japanse yen en het Britse pond",
+  "omschrijving": "50% afdekking van het valutarisico op de Amerikaanse dollar, de Japanse yen en het Britse pond",
+  "pagina": 373
+ },
+ "naam": "Kring Van Lanschot (HNPF)",
+ "pad": "data/annual_reports/193_Kring_Van_Lanschot_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

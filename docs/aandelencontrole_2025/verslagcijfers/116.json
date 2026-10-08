@@ -1,0 +1,83 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": null,
+  "feitelijk_pct": 52.8,
+  "letterlijk": "Zakelijke waarden (norm 47,5% met bandbreedtes van +5,0% en -/- 5,0% 1) ): 52,8% – Aandelen 52,8% • Merck CCF fund 52,8%",
+  "omvat_private_equity": false,
+  "pagina": 54,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 47.5,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": null,
+  "letterlijk": "Het Merck CCF fonds is specifiek opgericht voor een aantal verschillende MSD en Merck pensioenfondsen en is gevestigd in Ierland. De portefeuille is verdeeld over meerdere vermogensbeheerders. De aandelen beleggingen worden (eind 2025) verzorgd door zes beheerders: één voor de large cap developed markets, drie voor de small cap developed markets en twee voor de emerging markets.",
+  "organisatie": "extern",
+  "pagina": 45
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Conform de SFDR-regels heeft Pensioenfonds MSD haar pensioenregelingen gecategoriseerd als een artikel 6 product ook wel aangeduid als een ‘grijs’ of ‘overig’ product... Het pensioenfonds belegt niet in ondernemingen die deze verantwoordelijkheden structureel schenden of actief zijn in controversiële wapens, noch in landen die onderworpen zijn aan internationale sancties.",
+  "omschrijving": "Pensioenfonds MSD classificeert zijn pensioenregeling conform SFDR als artikel 6 ('grijs' product) met een opt-out voor artikel 4 (PAI). Het ESG-beleid omvat uitsluitingen (controversiële wapens, schendingen UN Global Compact, sanctielanden), ESG-integratie bij de selectie en aansturing van vermogensbeheerders, en dialoog (engagement) en stembeleid uitgevoerd via de vermogensbeheerders.",
+  "pagina": 46,
+  "sfdr_artikel": 6
+ },
+ "fund_id": 116,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "De totale procentuele kosten van het vermogensbeheer bedroegen in 2025 0,28% van het gemiddeld belegd vermogen in het boekjaar (€ 3.516.803.000,-)... De procentuele transactiekosten zijn in 2025 gedaald t.o.v. 2024: 0,07%... Het fonds heeft geen performance-gerelateerde kosten.",
+  "pagina": 30,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.07,
+  "vermogensbeheerkosten_totaal_pct": 0.28
+ },
+ "opmerkingen": "De aandelenportefeuille is volledig ondergebracht in het Merck CCF Fund (een Ierse Common Contractual Fund pool voor MSD/Merck fondsen, aangestuurd door het MSD Investment Committee waarin Pensioenfonds MSD twee zetels heeft). Het beheer is verdeeld over 6 externe beheerders (1 passief voor large caps, 3 actief voor small caps, 2 actief voor emerging markets), wier individuele namen niet in het verslag vermeld worden. Ultimo 2025 bedroeg de feitelijke allocatie naar aandelen 52,8% (boven de strategische bandbreedte van 47,5% ± 5%), waarna per 30 januari 2026 is geherbalanceerd. Begin 2026 heeft het bestuur besloten de strategische weging van aandelen te verlagen naar 42,5% (doorgevoerd in maart 2026). Sociale partners hebben gekozen voor een Wtp-transitie per 1 januari 2028 zonder invaren; de bijstortingsgarantie met de sponsor is verlengd tot 2028 en vervolgens voor 5 jaar (tot 2033) voor het gesloten FTK-deel.",
+ "regio": {
+  "basis": "strategisch",
+  "letterlijk": "Zakelijke waarden: – Merck CCF Fund: 47,5% • worldwide equity 70% • small caps 15% • emerging markets 15%",
+  "pagina": 44,
+  "verdeling": [
+   {
+    "pct": 70,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 15,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": 30,
+  "benchmarks": [
+   "MSCI ACWI",
+   "MSCI World",
+   "MSCI Emerging Markets"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "De aandelenportefeuille, ondergebracht in het Merck CCF Fund, bestaat uit 70% wereldwijde large developed caps, 15% small developed caps en 15% emerging markets caps... De aandelenportefeuille wordt grotendeels passief beheerd; alleen de emerging markets en small cap aandelen worden actief beheerd.",
+  "pagina": 30,
+  "passief_pct": 70,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 50,
+  "letterlijk": "Dit komt erop neer dat voor aandelen ontwikkelde markten 50% wordt afgedekt, voor aandelen opkomende markten 0% en vastrentende waarden 100% afdekking. Binnen het Merck CCF Fund worden posities in non-euro valuta ingenomen. De valutaposities in de ontwikkelde markten worden hierbij voor 50% afgedekt naar euro... De valutaposities binnen de opkomende markten worden niet afgedekt.",
+  "omschrijving": "Binnen het Merck CCF Fund worden de non-euro valutaposities in ontwikkelde markten voor 50% afgedekt naar euro (met een maximale bandbreedte van 10% per valuta). Valutaposities in opkomende markten worden niet afgedekt (0%).",
+  "pagina": 60
+ },
+ "naam": "MSD",
+ "pad": "data/annual_reports/116_MSD_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

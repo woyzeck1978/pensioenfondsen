@@ -1,0 +1,92 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 1021.239,
+  "feitelijk_pct": null,
+  "letterlijk": "Aandelen: Genoteerde marktprijzen 743.538, NCW -, Andere methode(n) 277.701, Totaal 1.021.239; Totaal beleggingen 3.824.836 (bedragen in duizenden euro's per 31 december 2025)",
+  "omvat_private_equity": true,
+  "pagina": 143,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 3824.836
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "UBS",
+    "pagina": 69,
+    "product_of_mandaat": "passief beheerd aandelenmandaat met een maatwerk MSCI World ESG benchmark",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Russell Investments",
+    "pagina": 69,
+    "product_of_mandaat": "wereldwijd aandelenfonds",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "actief"
+   }
+  ],
+  "fiduciair_beheerder": "Achmea Investment Management B.V.",
+  "letterlijk": "Achmea Investment Management B.V. (Achmea IM) is de vermogensbeheerder voor de overige beleggingen (beheerrol en fiduciaire rol) en voert ook de vermogensadministratie uit (p. 19). Het actieve mandaat bij Russell Investments is afgebouwd en overgeheveld naar het bestaande passieve mandaat bij UBS (p. 27, 69).",
+  "organisatie": "extern",
+  "pagina": 19
+ },
+ "esg": {
+  "co2_doel": "initiële CO₂-reductiedoelstelling van 30% meegegeven ten opzichte van de benchmark en 7% in de daarop volgende jaren",
+  "eigen_index": true,
+  "instrumenten": [
+   "uitsluitingen",
+   "best-in-class",
+   "engagement",
+   "stembeleid",
+   "eigen ESG-index",
+   "CO2-reductiedoel",
+   "Paris-aligned benchmark",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "SPF classificeert haar pensioenregeling als een artikel 8 product (p. 65). Het pensioenfonds past bij het beheer van de aandelenportefeuille Wereld (ontwikkelde markten) ESG-screened een best-in-class benadering toe... Bij de samenstelling van de aandelenportefeuille ontwikkelde markten wordt een initiële CO₂-reductiedoelstelling van 30% meegegeven ten opzichte van de benchmark en 7% in de daarop volgende jaren (p. 201).",
+  "omschrijving": "SPF classificeert de pensioenregeling als SFDR Artikel 8. Voor aandelen ontwikkelde markten wordt belegd via een passief mandaat bij UBS met een maatwerk MSCI World ESG benchmark. Hierbij wordt een best-in-class benadering toegepast (uitsluiting ratings B en CCC, minimaal 15% betere ESG-score dan de benchmark), een CO2-reductiepad (-30% initieel, 7% per jaar) en uitsluitingen conform Paris-Aligned Benchmark (PAB), UN Global Compact, wapens, tabak en fossiele brandstoffen. Daarnaast worden ESG-integratie, engagement en stembeleid toegepast.",
+  "pagina": 201,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 2,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Kosten 2025 per beleggingscategorie (Staat J402): Beheerkosten 0,56%, Performance gerel. Kosten 0,07%, Transactiekosten 0,13%, Totaal a 0,76%; Aandelen: beheerkosten € 2.387 duizend, transactiekosten € 2.645 duizend, performance fee nihil (p. 55); in overeenkomsten aandelen geen performance fee afgesproken (p. 65)",
+  "pagina": 55,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.13,
+  "vermogensbeheerkosten_totaal_pct": 0.56
+ },
+ "opmerkingen": "SPF is per 1 oktober 2025 ingevaren in het nieuwe pensioencontract (Flexibele Premieregeling, FPR). In aanloop daarnaartoe was het aandelenrisico tijdelijk beschermd met putopties op de S&P 500, Euro STOXX 50 en MSCI EM, die per 1 oktober 2025 zijn afgebouwd. In juni 2025 is het actieve wereldwijde aandelenmandaat bij Russell Investments na evaluatie volledig afgebouwd en overgeheveld naar het passieve mandaat bij UBS met maatwerk ESG-index. Voor opkomende markten belegt SPF in een aandelenfonds (beheerder niet bij naam genoemd). Op de balans per 31-12-2025 omvat de post Aandelen (€ 1.021,239 mln) zowel beursgenoteerde aandelen (€ 743,538 mln) als private equity (€ 277,701 mln onder 'andere methoden'); feitelijke en strategische allocatiepercentages voor aandelen worden in het verslag niet genoemd. Kostenpercentages voor aandelen zijn evenmin vermeld (wel absolute beheerkosten van € 2,4 mln en transactiekosten van € 2,6 mln, die stegen door de overgang van Russell naar UBS en Wtp-herallocaties).",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "maatwerk MSCI World ESG benchmark",
+   "MSCI opkomende landen index"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Voor aandelen wereld ontwikkelde landen beleggen we, sinds de algehele verkoop van het wereldwijde aandelenfonds van Russell, geheel in een passief mandaat met een aangepaste ESG-benchmark (p. 66). Het actieve mandaat bij Russell Investments is afgebouwd en overgeheveld naar het bestaande passieve mandaat bij UBS (p. 27).",
+  "pagina": 66,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "De rente- en valuta overlay portefeuilles zijn eveneens aangepast, volgens de hiervoor aangepaste beleggingsrichtlijnen, zoals hiervoor toegelicht.",
+  "omschrijving": "Het verslag vermeldt geen specifiek afdekkingspercentage voor valutarisico in de aandelenportefeuille. Wel wordt vermeld dat de rente- en valuta overlay portefeuilles bij het invaren in de FPR per 1 oktober 2025 zijn aangepast conform herziene beleggingsrichtlijnen.",
+  "pagina": 63
+ },
+ "naam": "Fysiotherapeuten (SPF - Physiotherapists)",
+ "pad": "data/annual_reports/2_Fysiotherapeuten_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

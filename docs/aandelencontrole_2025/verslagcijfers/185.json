@@ -1,0 +1,88 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 188.061,
+  "feitelijk_pct": null,
+  "letterlijk": "Aandelen ... Beursgenoteerde en niet beursgenoteerde beleggingsinstellingen die beleggen in aandelen: 188.061 (bedragen x € 1.000)",
+  "omvat_private_equity": false,
+  "pagina": 69,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Northern Trust",
+    "pagina": 13,
+    "product_of_mandaat": "Northern Trust World Custom ESG Equity Index Fund",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Northern Trust",
+    "pagina": 13,
+    "product_of_mandaat": "Northern Trust Emerging Markets ESG Fund",
+    "segment": "opkomende markten",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "Aegon AM",
+  "letterlijk": "Het fiduciair beheer voor de beleggingen risico pensioenkring is uitbesteed aan Aegon AM",
+  "organisatie": "extern",
+  "pagina": 114
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": true,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "eigen ESG-index"
+  ],
+  "letterlijk": "Voor de beleggingen in het Northern Trust World Custom ESG Equity Index Fund, het Northern Trust Emerging Markets ESG Fund... voeren de fondsbeheerders stem- en engagement activiteiten uit en bepalen de fondsbeheerders de uitsluitingslijst. Het Global Sustainable Investing Team van Northern Trust is verantwoordelijk voor het bepalen van de uitsluitingen van ondernemingen die deel uitmaken van de benchmarks. Op basis van de uitsluitingen construeert MSCI de aangepaste indices.",
+  "omschrijving": "Northern Trust voert voor de aandelenfondsen stem- en engagementactiviteiten uit (mede via Hermes EOS) en stelt uitsluitingslijsten op (o.a. tabak, wapens, fossiele brandstoffen, UN Global Compact), op basis waarvan MSCI aangepaste (custom) ESG-indices berekent.",
+  "pagina": 15,
+  "sfdr_artikel": null
+ },
+ "fund_id": 185,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.03,
+  "letterlijk": "Aandelen: 124, 0,03% van het gemiddeld belegd vermogen; Totaal vermogensbeheerkosten: 1.120, 0,24%",
+  "pagina": 19,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": null,
+  "vermogensbeheerkosten_totaal_pct": 0.24
+ },
+ "opmerkingen": "Pensioenkring Astellas is een pensioenkring binnen APF Stap. De aandelenportefeuille is passief belegd via twee Northern Trust ESG-indexfondsen (ontwikkelde markten en opkomende markten). Ontwikkelde markten aandelen zijn 100% afgedekt naar euro via een EUR hedged share class. Het fiduciair beheer is uitbesteed aan Aegon AM en de pensioenadministratie aan TKP. Er zijn voorbereidende werkzaamheden verricht voor de transitie naar de Wet toekomst pensioenen (Wtp).",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "MSCI World",
+   "MSCI Emerging Markets"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Het Northern Trust World Custom ESG EUR hedged Equity Index fonds is een passief beleggingsfonds dat als doel heeft het rendement van de benchmark zo nauwkeurig mogelijk te benaderen.",
+  "pagina": 37,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 100,
+  "letterlijk": "Aandelen ontwikkelde markten: 100,0%, Aandelen opkomende markten: n.v.t.",
+  "omschrijving": "Valutarisico op aandelen ontwikkelde markten wordt voor 100% afgedekt naar euro (via hedged share class); voor aandelen opkomende markten is valuta-afdekking niet van toepassing (n.v.t.).",
+  "pagina": 54
+ },
+ "naam": "Pensioenkring Astellas (Stap)",
+ "pad": "data/annual_reports/185_Astellas_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

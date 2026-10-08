@@ -1,0 +1,134 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": null,
+  "feitelijk_pct": null,
+  "letterlijk": "",
+  "omvat_private_equity": false,
+  "pagina": null,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Aegon AM",
+    "pagina": 430,
+    "product_of_mandaat": "MM Developed World Equity Index Fund",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Aegon AM",
+    "pagina": 430,
+    "product_of_mandaat": "MM World Equity Index SRI Fund",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Aegon AM",
+    "pagina": 430,
+    "product_of_mandaat": "MM World Equity Index SRI Fund - EUR",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Northern Trust",
+    "pagina": 430,
+    "product_of_mandaat": "Northern Trust World Custom ESG Equity Index Fund",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Robeco",
+    "pagina": 430,
+    "product_of_mandaat": "Robeco QI Institutional Global Developed 3D Active Equity Fund",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "enhanced/factor"
+   },
+   {
+    "naam": "Towers Watson",
+    "pagina": 430,
+    "product_of_mandaat": "Towers Watson Global Equity Focus Fund",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "actief"
+   },
+   {
+    "naam": "Aegon AM",
+    "pagina": 430,
+    "product_of_mandaat": "MM Global Emerging Markets Fund",
+    "segment": "opkomende markten",
+    "stijl": "actief"
+   },
+   {
+    "naam": "Northern Trust",
+    "pagina": 430,
+    "product_of_mandaat": "Northern Trust Emerging Markets ESG Fund",
+    "segment": "opkomende markten",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "Aegon AM",
+  "letterlijk": "Het fiduciair beheer voor de beleggingen risico pensioenkring is uitbesteed aan Aegon AM en hiervoor is eveneens een uitbestedingsovereenkomst en een SLA overeengekomen. De beleggingen voor risico deelnemer is voor Pensioenkring Astellas uitbesteed aan Visma Idella. (p. 871) De pensioenkring belegt het grootste deel van het belegd vermogen in de multi-manager beleggingsfondsen beheerd door Aegon AM. (p. 245)",
+  "organisatie": "extern",
+  "pagina": 871
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": true,
+  "instrumenten": [
+   "uitsluitingen",
+   "best-in-class",
+   "engagement",
+   "stembeleid",
+   "eigen ESG-index",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Aandelen: Stemmen, Screening en engagement, Uitsluitingen, ESG-integratie. Het uitgangspunt voor beleggingen in aandelen ontwikkelde markten is passief beheer. Voor beleggingen in aandelen ontwikkelde markten heeft Stap daarom voor de meeste pensioenkringen de MSCI World SRI Index als benchmark geselecteerd... Daarbij wordt er uitsluitend belegd in de 25% van de ondernemingen die het hoogst op ESG-criteria scoren... In geval van actief beheerde mandaten nemen de geselecteerde vermogensbeheerders ESG-factoren integraal mee in hun beleggingsproces. (p. 62)",
+  "omschrijving": "Stap hanteert voor aandelen ESG-integratie, uitsluitingen (o.a. controversiële wapens, tabak, kolen/teerzand, UN Global Compact), screening en engagement (uitbesteed aan Aegon AM en via Hermes EOS), en stembeleid. Voor ontwikkelde markten fungeert voor de meeste kringen de MSCI World SRI Index als benchmark (best-in-class: beste 25% op ESG-criteria). Bepaalde kringen beleggen via maatwerk-ESG-indices zoals de MSCI Emerging Markets Custom ESG Index en Northern Trust World Custom ESG Equity Index. Bij actieve mandaten nemen beheerders ESG-factoren integraal mee in hun selectieproces.",
+  "pagina": 62,
+  "sfdr_artikel": null
+ },
+ "fund_id": 67,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "De totale kosten vermogensbeheer in 2025 bedroegen 0,54% van het gemiddeld belegd vermogen. Van deze totale kosten bestaat 0,00%-punt (afgerond; 2024: 0,02%-punt) uit prestatieafhankelijke vergoedingen. (p. 88) Tabel transactiekosten: Aandelen 42 (0,02%), Totaal 132 (0,07% van het gemiddeld belegd vermogen) (p. 88).",
+  "pagina": 88,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": 0.02,
+  "transactiekosten_totaal_pct": 0.07,
+  "vermogensbeheerkosten_totaal_pct": 0.54
+ },
+ "opmerkingen": "Stap APF omvat meerdere pensioenkringen (Eastman, SVG, Holland Casino, Douwe Egberts, Ballast Nedam, GE Nederland, TotalEnergies Nederland, Aon Groep Nederland, Astellas, IFF, Multi-client 2). Het beleggingsbeleid verschilt deels per kring: voor ontwikkelde markten wordt voornamelijk passief belegd via MM World Equity Index SRI Fund en MM Developed World Equity Index Fund (Aegon AM) of Northern Trust World Custom ESG (Astellas), terwijl opkomende markten actief (MM Global Emerging Markets via bottom-up selectie) of passief (Northern Trust Emerging Markets ESG) worden ingevuld. Pensioenkring IFF is per 1 oktober 2025 gestart met actieve/kwantitatieve factorfondsen (Robeco QI 3D Active Equity en Towers Watson Global Equity Focus). Een pensioenkring (p. 148) is per 1 mei 2025 ingevaren naar een solidaire premieregeling onder de Wtp. Fiduciar beheerder voor risico pensioenkring is Aegon AM; administratie TKP; risico deelnemer Astellas via Visma Idella. De uitsnede bevat geen balans- of vermogensallocatietabel met eurobedragen of wegingen voor de aandelenportefeuille.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "MSCI World SRI Index",
+   "MSCI World",
+   "MSCI Emerging Markets Custom ESG Index",
+   "MSCI Emerging Markets"
+  ],
+  "factorbeleggen": true,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "Het uitgangspunt voor beleggingen in aandelen ontwikkelde markten is passief beheer. Voor beleggingen in aandelen ontwikkelde markten heeft Stap daarom voor de meeste pensioenkringen de MSCI World SRI Index als benchmark geselecteerd. (p. 62) Een deel van de beleggingsportefeuille wordt namelijk actief beheerd... Op totaalniveau is het actief risico in de beleggingsportefeuille beperkt. De ex-ante tracking error bedraagt eind 2025 0,2% op jaarbasis (p. 88).",
+  "pagina": 62,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Per saldo leidde de valutarisico-afdekking tot een positieve bijdrage aan het rendement van 2,0%. Dit is met name een gevolg van het afdekken van de Amerikaanse dollar die zwakker werd ten opzichte van de euro. (p. 208) Het Northern Trust World Custom ESG EUR hedged Equity Index fonds is een passief beleggingsfonds (p. 430).",
+  "omschrijving": "Valutarisico wordt beheerst via FX-forwards in een overlayportefeuille en door beleggingen in valuta-afgedekte fondsklassen (zoals Northern Trust World Custom ESG EUR Hedged en MM World Equity Index SRI Fund - EUR). Het afdekken van de Amerikaanse dollar leverde in 2025 een positieve bijdrage op door de waardedaling van de dollar ten opzichte van de euro. In de uitsnede wordt geen specifiek fondsbreed percentage voor de aandelenportefeuille genoemd.",
+  "pagina": 208
+ },
+ "naam": "Stap APF",
+ "pad": "data/annual_reports/67_Stap_APF_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

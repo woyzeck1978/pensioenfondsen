@@ -1,0 +1,81 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 2112.145,
+  "feitelijk_pct": null,
+  "letterlijk": "Normwegingen rendementsportefeuille: Aandelen ontwikkelde landen: Normweging 2025 40,7% (Strategisch beleid 32,3%), Weging ultimo 2025 42,4%; Aandelen opkomende landen: Normweging 2025 5,8% (Strategisch beleid 10,8%), Weging ultimo 2025 6,1%; Private equity 0,0% (p. 20); Stand ultimo 2025 (in duizenden euro's): Aandelen 2.112.145, Totaal beleggingen 5.743.041 (p. 85); de omvang [van private equity] bedraagt nog slechts 0,01% van de portefeuille (p. 22)",
+  "omvat_private_equity": false,
+  "pagina": 20,
+  "private_equity_pct": 0.01,
+  "strategisch_basis": "rendementsportefeuille",
+  "strategisch_pct": 46.5,
+  "totaal_beleggingen_eur_mln": 5743.041
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": "Van Lanschot Kempen (VLK IM)",
+  "letterlijk": "Het fonds heeft het beheer van de integrale beleggingsportefeuille inclusief (aansturing van de) afdekking van rente- en valutarisico uitbesteed aan de fiduciair manager. (p. 19); VLK IM verzorgt als fiduciair manager de uitvoering van het MVB-beleid (p. 24); De stichting heeft het beheer van de beleggingen en de pensioenadministratie uitbesteed aan respectievelijk Van Kempen Lanschot N.V., Northern Trust en AZL N.V. (p. 114)",
+  "organisatie": "extern",
+  "pagina": 24
+ },
+ "esg": {
+  "co2_doel": "Per 2050 moeten alle beleggingen klimaatneutraal zijn, conform het door BPFL onderschreven klimaatakkoord",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "best-in-class",
+   "engagement",
+   "stembeleid",
+   "ESG-integratie in selectie",
+   "CO2-reductiedoel"
+  ],
+  "letterlijk": "De instrumenten die BPFL gebruikt bij de implementatie van MVB-beleid zijn screening, uitsluiting, best-in-class, positieve selectie, stemmen en engagement. In het managerselectietraject wordt beoordeeld hoe de vermogensbeheerders MVB in het beleggingsproces integreren. (p. 24); Per 2050 moeten alle beleggingen klimaatneutraal zijn, conform het door BPFL onderschreven klimaatakkoord (p. 24); Het pensioenfonds ziet de pensioenregeling en beleggingsportefeuille als een financieel product dat duurzaamheid promoot (het zogenaamde Artikel 8) (p. 24); Er is geen index als referentiebenchmark aangewezen. (p. 128)",
+  "omschrijving": "BPFL classificeert de pensioenregeling onder SFDR Artikel 8. Voor de aandelenportefeuille hanteert het fonds uitsluitingen (o.a. controversiële wapens, thermische kolen, tabak en onconventionele olie- en gaswinning), best-in-class selectie, positieve selectie gericht op vier prioritaire SDG's (SDG 7, 8, 12 en 13), stembeleid op aandeelhoudersvergaderingen en engagement/dialoog (o.a. via Climate Action 100+ en Nature Action 100+ uitgevoerd door fiduciair manager VLK IM). Tevens geldt het doel dat per 2050 alle beleggingen klimaatneutraal moeten zijn.",
+  "pagina": 24,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 22,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.07,
+  "letterlijk": "Tabel 'De uitsplitsing van de beheerkosten per beleggingscategorie' (p. 26): Beursgenoteerde aandelen: Beheerkosten € 568 duizend, Transactiekosten € 782 duizend, Totaal kosten € 1.350 duizend, Gemiddeld belegd vermogen € 2.036.500 duizend, Kosten als percentage gemiddeld belegd vermogen 0,07% (ontwikkelde landen 0,04%, opkomende landen 0,27%); Prestatievergoedingen: alleen infrastructuur, onderhandse leningen en alternative credit, geen prestatievergoeding aandelen (p. 25); Kosten vermogensbeheer 2025: Totale kosten excl. Transactiekosten 0,30%, Transactiekosten 0,08%, Totale kosten 0,38% (p. 25)",
+  "pagina": 26,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.08,
+  "vermogensbeheerkosten_totaal_pct": 0.3
+ },
+ "opmerkingen": "De aandelenportefeuille maakt onderdeel uit van de rendementsportefeuille (normweging 63% van de totale portefeuille, feitelijk 68,1% per ultimo 2025). Binnen aandelen is de strategische verhouding tussen ontwikkelde en opkomende markten 87,5% / 12,5% (gewijzigd in 2024 en gecontinueerd in 2025); in de normportefeuille 2025 is de weging 40,7% ontwikkelde markten en 5,8% opkomende markten binnen de rendementsportefeuille. De vrijgevallen allocatie van de afgeschafte categorie alternative credit is verdeeld over aandelen en bedrijfsobligaties. Aandelen realiseerden in 2025 sterke rendementen: ontwikkelde markten +10,3% en opkomende markten +15,8%. Het integraal vermogensbeheer is uitbesteed aan fiduciair beheerder Van Lanschot Kempen (VLK IM); het liquide deel van de portefeuille wordt voornamelijk passief belegd. Northern Trust treedt op als bewaarder (custodian). Private equity is in afbouw en bedraagt nog slechts 0,01% van de portefeuille. In het kader van de Wtp heeft het bestuur een voorlopig besluit genomen over invaren per 1 januari 2027 naar een solidaire premieregeling; DNB heeft op 24 september 2025 een besluit van geen bezwaar afgegeven.",
+ "regio": {
+  "basis": "strategisch",
+  "letterlijk": "Binnen aandelen is begin 2024 de allocatie in de normportefeuille naar ontwikkelde landen verhoogd ten laste van opkomende landen om beter aan te sluiten bij de actuele marktkapitalisatieverhoudingen. De verhouding ontwikkelde markten / opkomend markten is gewijzigd van 75/25 maar 87,5/12,5. Dit is in 2025 gecontinueerd. (p. 19)",
+  "pagina": 19,
+  "verdeling": [
+   {
+    "pct": 87.5,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 12.5,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Het liquide deel van de portefeuille wordt voornamelijk passief belegd. (p. 19); Volgens de aanlevering van de vermogensbeheerder zijn de tracking errors voor het pensioenfonds in 2024 lager dan 1% en wordt er dus geen actief beheer risico becijferd. (p. 106)",
+  "pagina": 19,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Het fonds heeft het beheer van de integrale beleggingsportefeuille inclusief (aansturing van de) afdekking van rente- en valutarisico uitbesteed aan de fiduciair manager. (p. 19); De twee belangrijke risico’s die in de beleggingsportefeuille worden afgedekt zijn het renterisico en het valutarisico. (p. 20); Valuta-afdekking contributie aan rendement 2,18 (p. 23)",
+  "omschrijving": "Het fonds heeft de aansturing van de afdekking van het valutarisico uitbesteed aan de fiduciair manager (VLK IM). Valutarisico wordt afgedekt met behulp van valutaderivaten (positie ultimo 2025 bedroeg € 9,9 miljoen) en de valuta-afdekking leverde een positieve contributie van 2,18% op aan het rendement van de rendementsportefeuille. Er wordt in het verslag geen specifiek afdekkingspercentage voor de aandelenportefeuille genoemd.",
+  "pagina": 19
+ },
+ "naam": "Levensmiddelen / BPFL (Food Industry)",
+ "pad": "data/annual_reports/22_Levensmiddelen_BPFL_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

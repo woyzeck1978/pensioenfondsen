@@ -1,0 +1,74 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 3804,
+  "feitelijk_pct": 15,
+  "letterlijk": "Aandelen 3.804 (2024: 3.838), weging 15%; Totaal Vermogen/ Rendement 25.262 (2024: 27.171), weging 100% (bedragen in €miljoen)",
+  "omvat_private_equity": false,
+  "pagina": 20,
+  "private_equity_pct": 11,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 25262
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": "BlackRock",
+  "letterlijk": "Voor SAMCo was het niet mogelijk om de rol van fiduciair in de toekomst te blijven vervullen met de vereisten van de Wtp. Daarom startte SSPF al in 2024 een uitgebreid selectietraject dat leidde tot de keuze voor vermogensbeheerder BlackRock. In juli 2025 vond de daadwerkelijke overgang van de volledige beleggingsportefeuille plaats. SAMCo beheerde de SSPF-portefeuille grotendeels in-house en dus moest het pensioenfonds op zoek gaan naar best-in-class managers voor het beheer van verschillende delen van de portefeuille. Doordat met name andere managers dan BlackRock zijn aangesteld voor het daadwerkelijke beleggen wordt BlackRock veel meer in staat gesteld om als onafhankelijke fiduciair en adviseur van SSPF te fungeren.",
+  "organisatie": "extern",
+  "pagina": 18
+ },
+ "esg": {
+  "co2_doel": "SSPF streeft daarbij naar een verbetering van de CO₂-intensiteit van de portefeuille in de tijd, met als einddoel net zero in 2050.",
+  "eigen_index": true,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "eigen ESG-index",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Het ESG-beleid van SSPF blijft dus ongewijzigd. Dat beleid richt zich op engagement, het voeren van de dialoog met bedrijven, stemmen op aandeelhoudersvergaderingen en het uitsluiten van ondernemingen die structureel normen overtreden of een grote negatieve impact hebben. Ook het klimaatbeleid blijft gelijk. SSPF streeft daarbij naar een verbetering van de CO₂-intensiteit van de portefeuille in de tijd, met als einddoel net zero in 2050. [...] De carbon footprint reductie, groene beleggingen allocatie voor bedrijven en groene, sociale of duurzaamheidsregelateerde obligatie allocatie voor overheden is geïmplementeerd in de portefeuille door het gebruik van aangepaste ESG-benchmarks en manager selectie.",
+  "omschrijving": "SSPF promoot ecologische en sociale kenmerken (SFDR art. 8) door middel van uitsluitingen (controversiële wapens en gedrag VN/OESO), engagement en stembeleid via een externe dienstverlener, implementatie via aangepaste ESG-benchmarks en managerselectie, en een CO2-reductiedoel gericht op net zero in 2050.",
+  "pagina": 18,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 51,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Beheervergoedingen Aandelen 14 € mln (2024: 15). Voor liquide beleggingen (aandelen en vastrentende waarden) zijn geen prestatievergoedingen overeengekomen. [...] Voor 2025 komen de transactiekosten gerelateerd aan het gemiddeld belegd vermogen uit op 0,14% (2024: 0,08%).",
+  "pagina": 46,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.14,
+  "vermogensbeheerkosten_totaal_pct": null
+ },
+ "opmerkingen": "In het kader van de voorbereiding op de Wet toekomst pensioenen (Wtp, overgang per 1 januari 2027) heeft SSPF per 1 juli 2025 afscheid genomen van in-house beheerder en fiduciair SAMCo en het fiduciair beheer overgedragen aan BlackRock. Daarbij is de portefeuille heringericht en zijn/worden voor het daadwerkelijke beheer van portefeuilleonderdelen externe managers aangesteld. 2025 was derhalve een gebroken performancejaar. Aandelen waren in 2025 onderwogen ten opzichte van de strategische weging om een overweging in private equity te compenseren.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "MSCI World"
+  ],
+  "factorbeleggen": null,
+  "hoofdstijl": "actief",
+  "letterlijk": "en de keuze voor actief beheer [...] Zo liet de toonaangevende benchmark MSCI World een rendement zien van 6,8% (gemeten in euro, zonder valuta-afdekking) [...] De mate van actief beheer wordt beperkt door de tracking error target (standaarddeviatie van het verschil tussen benchmark rendement en werkelijk rendement) van 2%.",
+  "pagina": 20,
+  "passief_pct": null,
+  "tracking_error_pct": 2
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "SSPF dekt het valutarisico grotendeels af, maar niet volledig. Door de sterker wordende euro werden beleggingen in Amerika daardoor deels minder waard. [...] Dat dekt SSPF voor een groot deel van het openstaande valutarisico af via derivaten waardoor de impact op de rendementen beperkt is gebleven.",
+  "omschrijving": "Het valutarisico wordt via derivaten grotendeels afgedekt, maar niet volledig; er wordt geen specifiek afdekkingspercentage voor de aandelenportefeuille genoemd.",
+  "pagina": 20
+ },
+ "naam": "Shell (SSPF)",
+ "pad": "data/annual_reports/51_Shell_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

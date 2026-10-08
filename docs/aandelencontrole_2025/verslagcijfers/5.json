@@ -1,0 +1,73 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 3046.159,
+  "feitelijk_pct": 25.4,
+  "letterlijk": "Feitelijke mix: Aandelen 25,4%, Strategische mix: Aandelen 20,9% (p. 5); Wĳze van waardebepaling (x € 1.000): Aandelen 3.046.159, Totaal 11.993.308 (p. 88)",
+  "omvat_private_equity": false,
+  "pagina": 5,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 20.9,
+  "totaal_beleggingen_eur_mln": 11993.308
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": "BlackRock",
+  "letterlijk": "De uitvoering van de pensioenregeling is uitbesteed aan APG, dat verantwoordelĳk is voor het pensioenbeheer. BlackRock verzorgt het fiduciair vermogensbeheer, terwĳl Columbia Threadneedle Investments verantwoordelĳk is voor de uitvoering van het ESG-beleid. (p. 25)",
+  "organisatie": "extern",
+  "pagina": 25
+ },
+ "esg": {
+  "co2_doel": "-50% in 2030 t.o.v. 2019 (eind 2025 reeds behaald met 55% reductie); klimaatneutraal in 2050; jaarlijks ten minste 7% reductie via CTB-benchmarks",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "ESG-integratie in selectie",
+   "CO2-reductiedoel"
+  ],
+  "letterlijk": "Voor de passief beheerde aandelenportefeuilles in Noord-Amerika en Asia-Pacific (inclusief Japan en Australië) wordt sindsdien de Climate Transition Benchmark (CTB) als referentie gebruikt. [...] interim doel van een uitstootreductie van 50 procent in 2030 reeds behaald. (p. 38)",
+  "omschrijving": "SPMS streeft naar een klimaatneutrale portefeuille in 2050 (interimdoel -50% CO2 in 2030 t.o.v. 2019 eind 2025 al overtroffen met -55%). Passieve aandelen (Noord-Amerika en Azië-Pacific) volgen de Climate Transition Benchmark (CTB) met ten minste 7% jaarlijkse CO2-reductie; voor actieve aandelen (Europa large cap) geldt een expliciete CO2-reductiedoelstelling. Daarnaast worden uitsluitingen (controversiële wapens, steenkool, niet-aligned olie & gas), engagement en stembeleid (via Columbia Threadneedle) en ESG-integratie toegepast.",
+  "pagina": 38,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 5,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.22,
+  "letterlijk": "Aandelen: beheer vergoeding € 6,5 mln (0,22%), performance -, transactiekosten € 2,2 mln; Totaal 2025: vermogensbeheerkosten 0,46%, transactiekosten 0,13% (p. 56)",
+  "pagina": 56,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.13,
+  "vermogensbeheerkosten_totaal_pct": 0.46
+ },
+ "opmerkingen": "Transitie naar Wtp: De beoogde transitiedatum is uitgesteld van 1 januari 2027 naar 1 januari 2028 vanwege capaciteitsdruk bij uitvoerder APG. Aandelen behaalden in 2025 een rendement van 9,7% vs benchmark 8,4% (+1,3%), met outperformance in opkomende markten (+6,8%) en Europa (+2,2%). De globale portefeuilleverhouding is circa 60% actief en 40% passief (aandelen Noord-Amerika en Azië-Pacific passief, Europa en opkomende markten actief). In 2025 werd tevens een nieuw beleid voor olie- en gasbedrijven geïmplementeerd. Er vond in 2025 geen securities lending plaats.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": 60,
+  "benchmarks": [
+   "Climate Transition Benchmark (CTB)"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "combinatie van actief en passief beheer, waarbĳ de verhouding ongeveer 60 procent actief en 40 procent passief bedraagt (p. 55); overige regio's worden passief beheerd (p. 36); Climate Transition Benchmark (CTB) als referentie gebruikt (p. 38)",
+  "pagina": 55,
+  "passief_pct": 40,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Liquide beleggingen (incl. valuta-afdekking) [...] - Aandelen (excl. valuta-afdekking) 9,7% [...] - Contributie valuta-afdekking 6,5% (p. 37)",
+  "omschrijving": "Valutarisico (dollarrisico) van liquide beleggingen (waaronder aandelen) wordt economisch afgedekt; de bijdrage van valuta-afdekking op liquide beleggingen was 6,5% in 2025. Er wordt geen specifiek afdekkingspercentage voor de aandelenportefeuille genoemd.",
+  "pagina": 37
+ },
+ "naam": "Medisch Specialisten (SPMS - Medical Specialists)",
+ "pad": "data/annual_reports/5_Medisch_Specialisten_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

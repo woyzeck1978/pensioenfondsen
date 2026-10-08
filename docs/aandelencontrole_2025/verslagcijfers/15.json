@@ -1,0 +1,137 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": null,
+  "feitelijk_pct": 22.2,
+  "letterlijk": "Tabel 12, p. 49: Aandelen Strategische norm 28,0, Norm primo 2025 25,0, Werkelijke verdeling eind 2025 22,2. Tabel 13, p. 60: Aandelen 22,2 (Ontwikkelde markten 18,6, Opkomende markten 3,6), Private Equity 6,2.",
+  "omvat_private_equity": false,
+  "pagina": 49,
+  "private_equity_pct": 6.2,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 28,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "APG Asset Management",
+    "pagina": 49,
+    "product_of_mandaat": "Beleggingspools en separate mandaten (Aandelen ontwikkelde en opkomende markten)",
+    "segment": "wereldwijd ontwikkeld en opkomende markten",
+    "stijl": "onbekend"
+   },
+   {
+    "naam": "APG Asset Management",
+    "pagina": 62,
+    "product_of_mandaat": "Minimum Volatility",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "APG Asset Management",
+    "pagina": 62,
+    "product_of_mandaat": "Responsible Investment",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "APG Asset Management",
+    "pagina": 62,
+    "product_of_mandaat": "Kwantitatieve strategie",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "enhanced/factor"
+   },
+   {
+    "naam": "APG Asset Management",
+    "pagina": 62,
+    "product_of_mandaat": "Global Small Cap",
+    "segment": "small caps",
+    "stijl": "actief"
+   },
+   {
+    "naam": "APG Asset Management",
+    "pagina": 55,
+    "product_of_mandaat": "Impactmandaat beursgenoteerde aandelen",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "actief"
+   },
+   {
+    "naam": "APG Asset Management",
+    "pagina": 62,
+    "product_of_mandaat": "Focus (beëindigd in 2025)",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "actief"
+   },
+   {
+    "naam": "APG Asset Management",
+    "pagina": 62,
+    "product_of_mandaat": "Aandelen opkomende markten",
+    "segment": "opkomende markten",
+    "stijl": "onbekend"
+   }
+  ],
+  "fiduciair_beheerder": "APG Asset Management",
+  "letterlijk": "De uitvoering van het vermogensbeheer heeft het fonds uitbesteed aan APG Asset Management, met uitzondering van het vermogen in vastgoed. Daarbij is het vermogen ondergebracht in beleggingspools en in separate mandaten, beide beheerd door APG. (p. 49)",
+  "organisatie": "intern",
+  "pagina": 49
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "impactbeleggen",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Eind 2025 bevonden zich vrijwel geen bedrijven meer in onze aandelen- of bedrijfsobligatieportefeuilles die niet aan onze minimumcriteria voldeden volgens het aangescherpte insluitingsbeleid. (p. 177)",
+  "omschrijving": "Uitsluitingen (kolenmijnen >1%, teerzandwinning >5%, controversiële wapens, tabak), engagement en stembeleid uitgevoerd door APG AM, minimumcriteria voor ESG-integratie (aangescherpt insluitingsbeleid) in aandelen, en impactmandaten (€ 304 mln belegd in beursgenoteerde aandelen).",
+  "pagina": 177,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 15,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Tabel 16, p. 68: Totaal beheervergoedingen 0,53%, Prestatievergoedingen 0,12%, Totale kosten exclusief transactiekosten 0,65%, Transactiekosten 0,17%, Totale kosten inclusief transactiekosten 0,82%. Tabel 18, p. 74: Transactiekosten ontwikkelde markten 0,03% (€ 4,3 mln), opkomende markten 0,23% (€ 5,0 mln).",
+  "pagina": 68,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.17,
+  "vermogensbeheerkosten_totaal_pct": 0.65
+ },
+ "opmerkingen": "BpfBOUW startte in 2025 een selectietraject voor een nieuwe fiduciair manager naar aanleiding van de strategische herijking van APG. Het actieve risico in aandelen werd gereduceerd en de Focus-strategie werd beëindigd na tegenvallende prestaties. De strategische norm bleef in 2025 ongewijzigd wegens de Wtp-overgang per 1 januari 2026. Tabel 17 met vermogensbeheerkosten per categorie ontbrak in het verstrekte uittreksel.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Tabel 13, p. 60: Relatief belang van portefeuille 31-12-2025: Ontwikkelde markten 18,6, Opkomende markten 3,6.",
+  "pagina": 60,
+  "verdeling": [
+   {
+    "pct": 18.6,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 3.6,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": true,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "Ongeveer de helft van de portefeuille wordt passief belegd, verdeeld over een Minimum Volatility- en een Responsible Investment-strategie. De underperformance ten opzichte van de benchmark hangt voor een belangrijk deel samen met drie geconcentreerde strategieën: Focus, Global Small Cap en Impact. (p. 62)",
+  "pagina": 62,
+  "passief_pct": 50,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Het valutarisico binnen deze categorie wordt gedeeltelijk afgedekt met behulp van derivaten binnen de overlay. (p. 62)",
+  "omschrijving": "Het valutarisico binnen de categorie aandelen ontwikkelde markten wordt gedeeltelijk afgedekt met behulp van derivaten binnen de overlay. In 2025 is naar aanleiding van marktonrust besloten voorlopig de afdekking van het dollarrisico te verhogen.",
+  "pagina": 62
+ },
+ "naam": "Bouw / BPFBouw (Construction)",
+ "pad": "data/annual_reports/15_BPFBouw_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

@@ -1,0 +1,98 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 450.3,
+  "feitelijk_pct": 32,
+  "letterlijk": "Tabel Ontwikkeling beleggingsportefeuille Provisum (p. 39): Aandelen Marktwaarde 31-12-2025 € 450,3 mln, Weging 32,0%, Herbalanceringsbandbreedte neutraal 30,0% (min 26,0%, max 34,0%); Totaal € 1.405,8 mln (100,0%).",
+  "omvat_private_equity": false,
+  "pagina": 39,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 30,
+  "totaal_beleggingen_eur_mln": 1405.8
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "State Street",
+    "pagina": 40,
+    "product_of_mandaat": "passief aandelenmandaat",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "AFAM",
+  "letterlijk": "Provisum heeft voor deze portefeuille een passief aandelenmandaat ingericht bij Statestreet (p. 40); Kosten vermogensbeheerder AFAM (advies- en beheer) (p. 41); Beoordelingscriteria Aandelen: Aantal managers 1 (p. 147); beheerder van het passieve aandelenmandaat, State Street (p. 155).",
+  "organisatie": "extern",
+  "pagina": 40
+ },
+ "esg": {
+  "co2_doel": "CO2-uitstoot lager laten zijn dan de benchmark en de MSCI World Index (optimaliseren van CO2-intensiteit via CO2-overlay)",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "In principe kunnen er geen schendingen van de uitsluitingslijst van Provisum plaatsvinden met betrekking tot het aandelenmandaat dat wordt aangehouden bij State Street (p. 146); De beheerder van het aandelenmandaat, State Street, heeft de opdracht meegekregen om de CO2-intensiteit te optimaliseren (p. 145); met deze CO2-overlay krijgt de beheerder van het mandaat de opdracht om, naast het behalen van rendement, de CO2-uitstoot lager te laten zijn dan de benchmark en de MSCI World Index (p. 155); Eind 2025 was 46,8% van de beleggingsportefeuille zodanig belegd dat daarmee milieu- en sociale kenmerken gepromoot werden. Dit betreft de categorieën aandelen ontwikkelde markten (33,0%) (p. 152).",
+  "omschrijving": "Provisum hanteert voor de aandelenportefeuille (SFDR Artikel 8, categorie ontwikkelde markten) een uitsluitingenbeleid (o.a. controversiële wapens, tabak, gokken, palmolie, steenkool, teerzand, UN Global Compact schenders en gesanctioneerde landen), ESG-integratie bij selectie van managers, en stemrecht en engagement via beheerder State Street en een extra engagement provider. Tevens voert State Street een CO2-overlay uit om de CO2-intensiteit en emissies te optimaliseren zodat deze lager uitkomen dan de MSCI World benchmark.",
+  "pagina": 144,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 122,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Subtotaal vermogensbeheerkosten excl. Transactiekosten: € 4.423 duizend (0,31% van het gemiddeld belegd vermogen); Transactiekosten: € 1.053 duizend (0,07% / 7 bp); Totaal vermogensbeheerkosten: € 5.476 duizend (0,38%) (p. 41). In het verslag worden de vermogensbeheerkosten niet per afzonderlijke beleggingscategorie gespecificeerd (p. 28, 43).",
+  "pagina": 41,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.07,
+  "vermogensbeheerkosten_totaal_pct": 0.31
+ },
+ "opmerkingen": "Provisum belegt zijn aandelenportefeuille (€ 450,3 mln, 32,0% feitelijk vs. 30,0% strategisch neutraal) via één passief mandaat in ontwikkelde markten bij State Street Global Advisors (SSGA). AFAM treedt op als fiduciair vermogensbeheerder (advies en beheer, kosten € 2,56 mln / 0,18%) en JP Morgan als bewaarbank. In 2025 is door State Street uitvoering gegeven aan de in 2024 geïmplementeerde CO2-overlay, waarmee de CO2-intensiteit en -uitstoot lager moeten zijn dan de MSCI World Index benchmark met inachtneming van een risicobudget. De aandelenportefeuille behaalde in 2025 een rendement van 7,0% (beter dan benchmark 6,5%). De aandelenportefeuille promoot ecologische en sociale kenmerken en classificeert onder SFDR Artikel 8. De fondsbrede vermogensbeheerkosten bedroegen 0,31% (€ 4,42 mln) exclusief transactiekosten en 0,38% (€ 5,48 mln) inclusief transactiekosten van 0,07% (€ 1,05 mln); kosten per beleggingscategorie worden niet gerapporteerd. De pensioenbeheerkosten zijn in 2025 gestegen door voorbereidingen op de Wet toekomst pensioenen (Wtp).",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Aandelen beleggingen naar regio per 31-12-2025 (look through): Noord-Amerika € 332,0 mln (73,8%), Europa EU € 50,2 mln (11,2%) en Europa niet-EU € 28,4 mln (6,3%) [samen Europa 17,5%], Pacific € 36,1 mln (8,0%) en Azie ex Japan € 1,0 mln (0,2%) [samen Azië-Pacific 8,2%], Midden- en Zuid-Amerika € 1,1 mln (0,2%) en Overig € 1,5 mln (0,3%) [samen Overig 0,5%]; Totaal € 450,3 mln (100,0%) (p. 82).",
+  "pagina": 82,
+  "verdeling": [
+   {
+    "pct": 73.8,
+    "regio": "Noord-Amerika"
+   },
+   {
+    "pct": 17.5,
+    "regio": "Europa"
+   },
+   {
+    "pct": 8.2,
+    "regio": "Azië-Pacific"
+   },
+   {
+    "pct": 0.5,
+    "regio": "Overig"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": 0,
+  "benchmarks": [
+   "MSCI World Index"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Provisum heeft voor deze portefeuille een passief aandelenmandaat ingericht bij Statestreet. De portefeuille behaalde een rendement van 7,0% en deed het beter dan de benchmark (6,5%) (p. 40); Met deze CO2-overlay krijgt de beheerder van het mandaat de opdracht om, naast het behalen van rendement, de CO2-uitstoot lager te laten zijn dan de benchmark en de MSCI World Index (p. 155).",
+  "pagina": 40,
+  "passief_pct": 100,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 75,
+  "letterlijk": "Strategisch wordt 75% van de posities afgedekt indien het gewicht van de betreffende valutapositie groter is dan 2% van de totale activa. Per ultimo 2025 gold dat alleen voor de USD. Het rendement op afdekking van het valutarisico van 1,8% is grotendeels het gevolg van de daling van de USD ten opzichte van de euro (p. 41).",
+  "omschrijving": "Het pensioenfonds hanteert een strategische valuta-afdekking van 75% via valutatermijncontracten voor posities waarvan het gewicht groter is dan 2% van de totale activa. Per ultimo 2025 gold dit uitsluitend voor de Amerikaanse dollar (USD), die het leeuwendeel van de aandelenportefeuille vormt (Noord-Amerika 73,8%). De valuta-afdekking behaalde een rendement van 1,8% als gevolg van de daling van de USD ten opzichte van de euro.",
+  "pagina": 41
+ },
+ "naam": "Provisum",
+ "pad": "data/annual_reports/122_Provisum_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

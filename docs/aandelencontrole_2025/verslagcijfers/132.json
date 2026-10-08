@@ -1,0 +1,136 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 616.132,
+  "feitelijk_pct": 35.92,
+  "letterlijk": "Tabel 13: Samenstelling totale portefeuille: Aandelen Werkelijk belang 35,92%, Strategische norm 35,30%; Tabel 1 (p. 4): Aandelen 616.132, Totaal beleggingen 1.730.914 in duizenden euro's",
+  "omvat_private_equity": true,
+  "pagina": 37,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 35.3,
+  "totaal_beleggingen_eur_mln": 1730.914
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "BlackRock",
+    "pagina": 102,
+    "product_of_mandaat": "Ccf North America Esg Screened Index Fd",
+    "segment": "Noord-Amerika",
+    "stijl": "passief"
+   },
+   {
+    "naam": "BlackRock",
+    "pagina": 102,
+    "product_of_mandaat": "Ccf Europe Esg Screened Index Fund",
+    "segment": "Europa",
+    "stijl": "passief"
+   },
+   {
+    "naam": "BlackRock",
+    "pagina": 102,
+    "product_of_mandaat": "European Funds",
+    "segment": "Europa",
+    "stijl": "actief"
+   },
+   {
+    "naam": "BlackRock",
+    "pagina": 102,
+    "product_of_mandaat": "Emerging Markets Sustainable Equity Fd",
+    "segment": "Opkomende markten",
+    "stijl": "actief"
+   },
+   {
+    "naam": "BlackRock",
+    "pagina": 102,
+    "product_of_mandaat": "Ccf Pacific Esg Screened Index Fund",
+    "segment": "Azië-Pacific",
+    "stijl": "passief"
+   },
+   {
+    "naam": "BlackRock",
+    "pagina": 102,
+    "product_of_mandaat": "Systematic China A Shares Opportuniti Fd",
+    "segment": "Opkomende markten",
+    "stijl": "enhanced/factor"
+   }
+  ],
+  "fiduciair_beheerder": "BlackRock",
+  "letterlijk": "Het vermogensbeheer wordt uitgevoerd door BlackRock Netherlands B.V. (hierna: BlackRock). Met de vermogensbeheerder zijn overeenkomsten afgesloten waarin onder andere de beleggingsrichtlijnen en de overeengekomen rapportages zijn vastgelegd. Ter controle van performance rapportages en beleggingsadministratie is een contract gesloten met CACEIS.",
+  "organisatie": "extern",
+  "pagina": 13
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Het Pensioenfonds heeft gedurende de referentieperiode invulling gegeven aan de hierboven beschreven ecologische en sociale kenmerken. Er is geen duurzame referentiebenchmark aangewezen op het niveau van de pensioenregeling in de zin van de SFDR.",
+  "omschrijving": "Het fonds classificeert onder SFDR Artikel 8 en past uitsluitingen toe (controversiële activiteiten, wet- en regelgeving), voert dialoog/engagement (993 bedrijven), oefent stemrecht uit op aandeelhoudersvergaderingen (gestemd op 2.107 vergaderingen) en integreert ESG-factoren bij selectie en evaluatie van mandaten.",
+  "pagina": 145,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 132,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.07,
+  "letterlijk": "Tabel 10: Portefeuillebeheerkosten Aandelen: Beheerkosten 1.171 (0,07%), Geschatte transactiekosten 921 (0,05%); Totaal vermogensbeheerkosten (exclusief transactiekosten) 0,30%, Transactiekosten 0,20%",
+  "pagina": 29,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": 0.05,
+  "transactiekosten_totaal_pct": 0.2,
+  "vermogensbeheerkosten_totaal_pct": 0.3
+ },
+ "opmerkingen": "Het vermogensbeheer is integraal uitbesteed aan BlackRock Netherlands B.V., die tevens strategisch adviseur is. De aandelenportefeuille bestaat uit 6 BlackRock-fondsen (combinatie van passieve CCF-indexfondsen en actieve/systematische fondsen). Volgens de grondslagen voor waardering (p. 83) omvat de categorie aandelen ook private equity fondsen, maar er wordt geen afzonderlijk private equity-percentage gerapporteerd. Valutarisico op ontwikkelde aandelenmarkten wordt afgedekt volgens de benchmarkmandaten, terwijl emerging markets unhedged blijven. Het fonds rapporteert onder SFDR Artikel 8.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Tabel 15: Samenstelling aandelenportefeuille ultimo 2025 (in %): Europe 10,36%, North America 14,05%, Asia Pacific 4,89%, Emerging Markets 6,61%, Totaal 35,92%",
+  "pagina": 37,
+  "verdeling": [
+   {
+    "pct": 14.05,
+    "regio": "Noord-Amerika"
+   },
+   {
+    "pct": 10.36,
+    "regio": "Europa"
+   },
+   {
+    "pct": 4.89,
+    "regio": "Azië-Pacific"
+   },
+   {
+    "pct": 6.61,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "MSCI North America net (USD hedged)",
+   "MSCI Europe TR (GBP hedged)",
+   "MSCI Pacific ex Select Controversies (JPY hedged)",
+   "MSCI Emerging Markets",
+   "MSCI China A Onshore"
+  ],
+  "factorbeleggen": true,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "Benchmarks per ultimo 2025: North America MSCI North America net (USD hedged), Europe MSCI Europe TR (GBP hedged), Asia Pacific MSCI Pacific ex Select Controversies (JPY hedged), Emerging Market MSCI Emerging Markets, China MSCI China A Onshore",
+  "pagina": 130,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "De valuta gerelateerd aan de Emerging Market exposure worden niet afgedekt.",
+  "omschrijving": "Valutarisico op ontwikkelde aandelenmarkten wordt afgedekt conform de benchmarks (USD hedged, GBP hedged, JPY hedged). Valuta gerelateerd aan de Emerging Market exposure worden niet afgedekt. Geen afzonderlijk totaal afdekkingspercentage voor aandelen genoemd.",
+  "pagina": 39
+ },
+ "naam": "Thales Nederland",
+ "pad": "data/annual_reports/132_Thales_Nederland_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

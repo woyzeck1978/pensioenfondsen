@@ -1,0 +1,82 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 865.2,
+  "feitelijk_pct": null,
+  "letterlijk": "In onderstaande tabel is per beleggingscategorie de waarde (bedragen in miljoenen euro’s) en het rendement over 2025 weergegeven: Aandelen 865,2 ... TOTAAL 2.276,3",
+  "omvat_private_equity": false,
+  "pagina": 77,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 37.4,
+  "totaal_beleggingen_eur_mln": 2276.3
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Robeco",
+    "pagina": 186,
+    "product_of_mandaat": "Wereldwijde aandelen (separaat account)",
+    "segment": "Wereldwijd",
+    "stijl": "actief"
+   }
+  ],
+  "fiduciair_beheerder": "Aegon Asset Management",
+  "letterlijk": "Daarnaast heeft het pensioenfonds contracten afgesloten met Aegon Asset Management voor fiduciair management, met Caceis als custodian en met Robeco voor het beheer van de aandelenportefeuille.",
+  "organisatie": "extern",
+  "pagina": 148
+ },
+ "esg": {
+  "co2_doel": "Het pensioenfonds sluit zich aan bij de normen uit het klimaatakkoord van Parijs",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "best-in-class",
+   "engagement",
+   "stembeleid",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "In de aandelenportefeuille maakt het pensioenfonds gebruik van SDG’s. Het pensioenfonds kiest ervoor om focus aan te brengen door te sturen op onderstaande SDG’s, te weten 3, 7, 8, 12, 13, 14 en 15. Het pensioenfonds wenst enkel in bedrijven te beleggen die positief bijdragen aan deze SDG’s. Daarbij streeft het pensioenfonds een overweging van tenminste 30% na ten opzichte van de grijze benchmark in de bedrijven die het best scoren op deze SDG’s.",
+  "omschrijving": "Pensioenfonds DNB classificeert de regeling als SFDR artikel 8. In de aandelenportefeuille stuurt het fonds op 7 SDG's (overweging van minstens 30% voor de best scorende ondernemingen). Robeco voert namens het fonds actief aandeelhouderschap uit (stemmen en engagement) en sluit ongewenste beleggingen uit (o.a. wapens en fossiele industrie). Tevens hanteert het fonds een CO2-reductiedoelstelling conform het klimaatakkoord van Parijs.",
+  "pagina": 74,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 87,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Het pensioenfonds is met Robeco een contract aangegaan voor onbepaalde tijd en kan het contract maandelijks opzeggen [...] De vergoeding over 2025 bedraagt € 1,197 miljoen.",
+  "pagina": 148,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": null,
+  "vermogensbeheerkosten_totaal_pct": null
+ },
+ "opmerkingen": "- Strategische allocatie: Het strategisch normgewicht (SNP 2025) voor aandelen was 37,4%. In Q4 2025 is gestart met de opbouw van niet-beursgenoteerd vastgoed gefinancierd vanuit aandelen (tabel 23.3 op p. 186 toont 36,1% voor wereldwijde aandelen en 1,3% voor niet-beursgenoteerd vastgoed). In SNP 2026 daalt aandelen verder naar 31,5% t.g.v. niet-beursgenoteerd vastgoed (3,5%) en impact private debt (4,8%).\n- Balans vs Bestuursverslag: Tabel 12.3 (p. 77) geeft voor aandelen € 865,2 mln op een totaal van € 2.276,3 mln. In de jaarrekening (toelichting marktwaarde p. 140) bedraagt de post aandelen € 823,971 mln op een belegd vermogen van € 2.153,955 mln (bedragen x € 1.000). Private equity (€ 15,423 mln) staat separaat onder overige beleggingen.\n- Valutabeleid gewijzigd: Per 1 maart 2025 dekt het pensioenfonds voor aandelen uitsluitend de Amerikaanse dollar af (strategisch voor 50%) via forward-contracten; de afdekking van overige valuta is afgeschaft.\n- Cap op VS en aandelenput-opties: Eind 2025 besloot het bestuur tot een cap van maximaal 50% op Amerikaanse aandelen (geïmplementeerd begin januari 2026) wegens concentratierisico in Amerikaanse tech/AI. Tevens is eind 2025 gestart met een aandelenhedge d.m.v. put-opties (geïmplementeerd begin 2026) ter bescherming van de hoge dekkingsgraad richting Wtp-invaren per 1 juli 2026.\n- Kosten: Een uitsplitsingstabel van kosten per beleggingscategorie over 2025 ontbreekt in het verslag/de uitsnede; Robeco ontving € 1,197 mln voor aandelenbeheer (p. 148). Pagina 65 toont uitsluitend peergroup-kostenpercentages over 2024.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "MSCI All Countries World"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "actief",
+  "letterlijk": "Deze categorie wordt actief beheerd met het oog op duurzaamheid. Het pensioenfonds baseert zijn beleggingen op een reguliere (niet duurzame) aandelenindex, echter het pensioenfonds maakt binnen dit mandaat ook keuzes die leiden tot een afwijking van de passieve index. In 2025 volgen deze keuzes uit maatschappelijk verantwoord beleggen.",
+  "pagina": 77,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 50,
+  "letterlijk": "Het pensioenfonds dekt nu uitsluitend de Amerikaanse dollar af (strategisch voor 50%).",
+  "omschrijving": "Met ingang van 1 maart 2025 wordt voor de aandelenportefeuille uitsluitend het valutarisico van de Amerikaanse dollar afgedekt (strategisch voor 50%) met behulp van forward-contracten; overige valuta worden niet afgedekt.",
+  "pagina": 20
+ },
+ "naam": "De Nederlandsche Bank",
+ "pad": "data/annual_reports/87_De_Nederlandsche_Bank_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

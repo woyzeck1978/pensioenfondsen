@@ -1,0 +1,76 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 2454,
+  "feitelijk_pct": 25,
+  "letterlijk": "Tabel Beleggingsportefeuille naar categorieën 2025 (p. 31): Aandelen € 2.454 mln (25,0%), Totaal € 9.986 mln (100,0%) (inclusief toeslagdepot € 10.027 mln). Tabel Totaalrendementen hoofdbeleggingscategorieën 2025 (p. 31): Aandelen (incl. private equity) 3,5%.",
+  "omvat_private_equity": true,
+  "pagina": 31,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 9986
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": "Achmea Investment Management",
+  "letterlijk": "De overige kosten zijn met 2,0 miljoen gedaald, onder andere doordat er bij de overname door Achmea IM een lagere fiduciaire fee is afgesproken (p. 51); Het pensioenfonds besteedt de operationele activiteiten grotendeels uit aan Blue Sky B.V. en Achmea Investment Management B.V. (p. 107); ...verzonden naar externe vermogensbeheerders (p. 161).",
+  "organisatie": "extern",
+  "pagina": 51
+ },
+ "esg": {
+  "co2_doel": "initieel minimaal 30% CO2-reductie en vervolgens jaarlijks ten minste 7% aanvullende reductie conform de Climate Transition Benchmark (basisjaar december 2019)",
+  "eigen_index": true,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "eigen ESG-index",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Via een zogenaamde Climate Transition Benchmark wordt gestuurd op een lagere CO2-voetafdruk ten opzichte van de standaard (grijze) benchmark. Binnen de aandelenportefeuilles en voor high yield obligaties zijn dergelijke maatwerk benchmarks geïmplementeerd (p. 160); initiële reductie van ten minste 30% en jaarlijks ten minste 7% aanvullend (p. 153); Conform het MVB-Beleid worden uitsluiten, engagement, stemmen en ESG-integratie toegepast (p. 161).",
+  "omschrijving": "Het fonds promoot ecologische en sociale kenmerken onder SFDR Artikel 8. Voor de aandelenportefeuilles zijn maatwerk Climate Transition Benchmarks geïmplementeerd gericht op CO2-reductie (initieel minimaal 30% reductie en jaarlijks ten minste 7% reductie t.o.v. basisjaar 2019). Daarnaast past het fonds uitsluitingen toe (UN Global Compact, controversiële wapens; 158 bedrijven en 59 overheden uitgesloten ultimo 2025), voert het engagement via Achmea IM en ISS ESG, stemt het op alle aandeelhoudersvergaderingen, en stelt het ESG-integratie-eisen aan externe managers (UN PRI).",
+  "pagina": 160,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 49,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.24,
+  "letterlijk": "Tabel kosten vermogensbeheer per beleggingscategorie 2025 (p. 50): Aandelen beursgenoteerd relatief 0,24% (€ 5,0 mln kosten op € 2.074 mln gemiddeld belegd vermogen, prestatieafhankelijk nihil/-); Niet-beursgenoteerd relatief 1,39% (€ 6,1 mln op € 440 mln, prestatieafhankelijk € 1,5 mln); Totaal aandelen 0,44% (€ 11,1 mln op € 2.514 mln, prestatieafhankelijk € 1,5 mln). Transactiekosten 2025 (p. 51): Aandelen relatief 0,06% (€ 1,5 mln op € 2.514 mln). Totaal vermogensbeheer 0,42% en transactiekosten totaal 0,09% (p. 7, 50, 51).",
+  "pagina": 50,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": 0.06,
+  "transactiekosten_totaal_pct": 0.09,
+  "vermogensbeheerkosten_totaal_pct": 0.42
+ },
+ "opmerkingen": "Pensioenfonds Vliegend Personeel KLM behaalde in 2025 een rendement op beursgenoteerde aandelen van 5,8% (incl. private equity 3,5% vs benchmark 3,4%, p. 30, 31). Aandelen uit opkomende markten presteerden met +2,1%-punt boven benchmark het sterkst, terwijl low volatility achterbleef (p. 30, 31). Ultimo 2025 bedroegen aandelen € 2.454 mln (25,0%) op een totaal belegd vermogen van € 9.986 mln voor risico fonds (p. 31; daarnaast € 105,4 mln voor risico deelnemers, p. 7). Private equity is begrepen in de aandelenpost (omvat_private_equity = true; niet-beursgenoteerd € 440 mln gemiddeld belegd vermogen, rendement -6,8%, p. 30, 50). Het vermogensbeheer is extern georganiseerd; Achmea IM fungeert als fiduciair beheerder (overname leidde tot lagere fiduciaire fee, p. 51, 107) en de aandelenbeleggingen worden deels gepoold met de KLM-zusterfondsen (p. 49). Beheerkosten voor beursgenoteerde aandelen bedroegen 0,24% en transactiekosten 0,06% (p. 50, 51; totale categorie aandelen incl. niet-beursgenoteerd 0,44% beheer en € 1,5 mln prestatievergoeding, p. 50). De totale vermogensbeheerkosten waren 0,42% en transactiekosten 0,09% (p. 7, 50, 51). Onder SFDR Artikel 8 worden maatwerk Climate Transition Benchmarks gehanteerd met een CO2-reductiedoelstelling (p. 153, 160). De Wtp-voorbereidingskosten bedroegen € 2,8 mln (€ 450 per deelnemer) via Blue Sky Group (p. 49). Er loopt een btw-procedure in hoger beroep inzake Blue Sky Group (p. 49).",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "Climate Transition Benchmark",
+   "MSCI-wereldindex",
+   "MSCI opkomende landen index"
+  ],
+  "factorbeleggen": true,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "Binnen de beleggingsportefeuille is sprake van zowel actief als passief beheer. De mate van actief beheer of passief beheer is stuurbaar (p. 49); Het fonds alloceert een deel van zijn vermogen naar actieve mandaten (p. 54); CTB-beleggingen bestaan uit 15% aandelen wereldwijd Large & Mid Cap, 3% aandelen Opkomende Markten, 4% wereldwijd aandelen Low Vol (p. 153); tracking error van de totale portefeuille heeft zich gedurende 2025 rond 0,3% bewogen (p. 107).",
+  "pagina": 49,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Om financiële risico’s te beheersen, worden belangrĳke factoren zoals rente, inflatie en valutarisico’s voor een groot deel afgedekt (p. 30).",
+  "omschrijving": "Het pensioenfonds dekt financiële risico's zoals valutarisico voor een groot deel af met derivaten, maar noemt in de verstrekte uitsnede geen specifiek afdekkingspercentage voor de aandelenportefeuille.",
+  "pagina": 30
+ },
+ "naam": "KLM Vliegend Personeel (Flight Crew)",
+ "pad": "data/annual_reports/49_KLM_Vliegend_Personeel_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

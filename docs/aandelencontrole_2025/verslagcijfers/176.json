@@ -1,0 +1,92 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 176.8,
+  "feitelijk_pct": 31.6,
+  "letterlijk": "Aandelen: Actuele mix 176,8 in € miljoen (31,6%), Strategische mix 31,2%, Totaal 559,9 in € miljoen",
+  "omvat_private_equity": false,
+  "pagina": 10,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 31.2,
+  "totaal_beleggingen_eur_mln": 559.9
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Aegon AM",
+    "pagina": 35,
+    "product_of_mandaat": "MM World Equity Index SRI Fund",
+    "segment": "ontwikkelde markten",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Aegon AM",
+    "pagina": 36,
+    "product_of_mandaat": "MM Global Emerging Markets Fund",
+    "segment": "opkomende markten",
+    "stijl": "actief"
+   }
+  ],
+  "fiduciair_beheerder": "Aegon AM",
+  "letterlijk": "Het fiduciair beheer voor de beleggingen risico pensioenkring is uitbesteed aan Aegon AM",
+  "organisatie": "extern",
+  "pagina": 104
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement"
+  ],
+  "letterlijk": "Screening en engagement: Eind 2025 werd met 12 bedrijven, waarin de pensioenkring via de MM-beleggingsfondsen belegt, een dialoog gevoerd. Het voeren van de dialoog heeft Stap uitbesteed aan Aegon AM.",
+  "omschrijving": "Stap voert voor Pensioenkring SVG een MVB-beleid met uitsluitingen (screening op basis van UN Global Compact principes) en engagement (uitbesteed aan Aegon AM). Daarnaast wordt belegd via het MM World Equity Index SRI Fund.",
+  "pagina": 13,
+  "sfdr_artikel": null
+ },
+ "fund_id": 176,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.05,
+  "letterlijk": "Aandelen 313 € 0,05%, Transactiekosten aandelen 132 € 0,02%, Totale kosten vermogensbeheer 0,34%, Transactiekosten totaal 0,06%",
+  "pagina": 17,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": 0.02,
+  "transactiekosten_totaal_pct": 0.06,
+  "vermogensbeheerkosten_totaal_pct": 0.34
+ },
+ "opmerkingen": "Pensioenkring SVG (Stap) belegt in aandelen via twee MM-beleggingsfondsen: passief in ontwikkelde markten (MM World Equity Index SRI Fund) en actief in opkomende markten (MM Global Emerging Markets Fund). De ex-ante tracking error van 0,2% is gerapporteerd op totaalniveau van de beleggingsportefeuille. Valuta-afdekking bedraagt 50% voor ontwikkelde markten en n.v.t. voor opkomende markten. In 2025 liepen voorbereidingen voor Wtp en DORA.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Ontwikkelde markten 145,9 in € miljoen (26,1%), Opkomende markten 30,9 in € miljoen (5,5%)",
+  "pagina": 10,
+  "verdeling": [
+   {
+    "pct": 26.1,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 5.5,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "Op totaalniveau is het actief risico in de beleggingsportefeuille beperkt. De ex-ante tracking error bedraagt eind 2025 0,2% op jaarbasis.",
+  "pagina": 18,
+  "passief_pct": null,
+  "tracking_error_pct": 0.2
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 50,
+  "letterlijk": "Aandelen ontwikkelde markten 50,0%, Aandelen opkomende markten n.v.t., Afdekking met een FX overlay: X",
+  "omschrijving": "Het valutarisico van aandelen ontwikkelde markten wordt voor 50,0% afgedekt via een FX overlay (USD, GBP, JPY). Voor aandelen opkomende markten is afdekking niet van toepassing (n.v.t.).",
+  "pagina": 52
+ },
+ "naam": "Kring SVG (Stap)",
+ "pad": "data/annual_reports/176_SVG_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

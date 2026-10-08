@@ -1,0 +1,99 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 528.17,
+  "feitelijk_pct": 28,
+  "letterlijk": "Module rendement portefeuille ultimo 2025 30,0% (norm 26,6%), wv aandelen opkomende markten 27,4% (norm 27,1%), wv aandelen wereld 65,9% (norm 64,7%) (p. 26); CCF World ESG Screened Index Fund € 372.760 (19,8%), Achmea IM Emerging Markets Equity Fund € 155.413 (8,2%) (p. 91, x € 1.000, samen 28,0% en € 528,17 mln).",
+  "omvat_private_equity": false,
+  "pagina": 26,
+  "private_equity_pct": null,
+  "strategisch_basis": "rendementsportefeuille",
+  "strategisch_pct": 91.8,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "BlackRock",
+    "pagina": 91,
+    "product_of_mandaat": "CCF World ESG Screened Index Fund Class X1 Hedged",
+    "segment": "Wereld ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Achmea Investment Management",
+    "pagina": 91,
+    "product_of_mandaat": "Achmea IM Emerging Markets Equity Fund",
+    "segment": "Opkomende markten",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "Achmea Investment Management B.V.",
+  "letterlijk": "Het vermogensbeheer wordt eind 2025 uitgevoerd door Achmea Investment Management als fiduciair vermogensbeheerder en Caceis als de custodian. (p. 14); Beleggingen: BlackRock Investment Management Ltd. PIMCO Europe Ltd. (p. 54)",
+  "organisatie": "extern",
+  "pagina": 14
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "CO2-reductiedoel",
+   "Paris-aligned benchmark",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Hier wordt invulling aangegeven via de geselecteerde managers van de beleggingsfondsen middels uitsluiten, engagement, stemmen, ESG-integratie en CO2 reductiedoelstellingen. ... In de selectie van beleggingsfondsen hanteert SPOA een artikel 8 classificatie onder SFDR. (p. 27-28)",
+  "omschrijving": "SPOA hanteert een artikel 8 SFDR-classificatie en een marktconform ESG-beleid. Voor aandelen wordt belegd in fondsen die ESG-integratie, uitsluitingen (tabak, controversiële wapens, steenkool, normschenders VN Global Compact/OESO en hoogrisicolanden), engagement, stembeleid en CO2-reductiedoelstellingen toepassen. Duurzame beleggingen voldoen aan PAB-uitsluitingen.",
+  "pagina": 27,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 6,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Vermogensbeheerkosten als % van het belegd vermogen: 0,25%, Transactiekosten als % van het belegd vermogen: 0,14% (p. 18). Tabel per categorie (p. 19, x € 1.000): Aandelen Beheerkosten 445, Transactiekosten 810, Totaal 1.255 (geen percentages genoemd).",
+  "pagina": 18,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.14,
+  "vermogensbeheerkosten_totaal_pct": 0.25
+ },
+ "opmerkingen": "Ter voorbereiding op de FPR (Wtp) is de portefeuille in 2025 opgesplitst in een Module Rendement en Module Rente met beleggingen in units. Het valuta-overlay mandaat is beëindigd; afdekking vindt plaats binnen de onderliggende fondsen. De aandelenportefeuille wordt volledig passief belegd via twee indexfondsen, waardoor er geen actief beheer risico ontstaat. SPOA bereidt een vertrek voor bij pensioenuitvoerder Idella wegens operationele problemen en het uitblijven van Wtp-transitieondersteuning.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Portefeuille ultimo 2025 (p. 26): Module rendement wv aandelen opkomende markten 27,4% (norm 27,1%), wv aandelen wereld 65,9% (norm 64,7%).",
+  "pagina": 26,
+  "verdeling": [
+   {
+    "pct": 65.9,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 27.4,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": 0,
+  "benchmarks": [
+   "MSCI wereld index",
+   "MSCI opkomende landen index"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Bij de berekening van het vereist eigen vermogen wordt alleen een actief beheer risico becijferd voor de aandelenportefeuille indien de tracking error groter is dan 1%. Er is geen sprake van een actief beheerd mandaat. SPOA loopt derhalve geen actief beheer risico. (p. 92)",
+  "pagina": 92,
+  "passief_pct": 100,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "SPOA dekt de ontwikkelde markt valuta’s af binnen de beleggingsfondsen met niet-euro exposure. De valuta van opkomende markten wordt niet afgedekt. (p. 27); het valuta-overlay mandaat is beëindigd (p. 26).",
+  "omschrijving": "Ontwikkelde markten valuta's worden afgedekt binnen de beleggingsfondsen met niet-euro exposure (o.a. via hedged aandelenklasse); opkomende markten valuta's worden niet afgedekt. Het separate valuta-overlay mandaat is beëindigd.",
+  "pagina": 27
+ },
+ "naam": "Openbare Apothekers (SPOA - Public Pharmacists)",
+ "pad": "data/annual_reports/6_Openbare_Apothekers_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

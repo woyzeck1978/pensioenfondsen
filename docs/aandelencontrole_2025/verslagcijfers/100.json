@@ -1,0 +1,80 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 6.504,
+  "feitelijk_pct": 22.57,
+  "letterlijk": "Aandelen ontwikkelde markten 20,04%, Aandelen opkomende aandelen 2,53% (som 22,57%, norm 21%) (p. 30); Balans G.1 (p. 68): Aandelen 6.504, Totaal 28.819 (x € 1.000)",
+  "omvat_private_equity": false,
+  "pagina": 30,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 21,
+  "totaal_beleggingen_eur_mln": 28.819
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": "Goldman Sachs Asset Management (GSAM)",
+  "letterlijk": "Het vermogensbeheer is volledig uitbesteed en wordt, op basis van een afgesproken mandaat, verzorgd door de fiduciair beheerder Goldman Sachs Asset Management (GSAM).",
+  "organisatie": "extern",
+  "pagina": 10
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": true,
+  "instrumenten": [
+   "eigen ESG-index",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Het bestuur van het Fonds heeft besloten om de pensioenregeling als artikel 8 van de SFDR te classificeren. ... MSCI World Custom ESG Index",
+  "omschrijving": "Pensioenregeling geclassificeerd als SFDR artikel 8 (met opt-out voor art. 4 PAI). Aandelen worden passief belegd volgens op maat gemaakte ESG-indices (MSCI World Custom ESG Index en MSCI Emerging Markets Custom ESG Index). ESG-aspecten vormen een belangrijk criterium bij de selectie van beleggingsoplossingen.",
+  "pagina": 29,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 100,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.06,
+  "letterlijk": "Totaal aandelen 0,06% (beheerskosten, p. 24); Totaal aandelen 0,01% (transactiekosten, p. 25); Kosten vermogensbeheer 0,59%, Transactiekosten 0,03% (p. 23)",
+  "pagina": 24,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": 0.01,
+  "transactiekosten_totaal_pct": 0.03,
+  "vermogensbeheerkosten_totaal_pct": 0.59
+ },
+ "opmerkingen": "In 2025 is voor aandelen opkomende markten overgestapt van actief naar passief beheer, waardoor de aandelenportefeuille eind 2025 volledig passief wordt belegd. Vermogensbeheer is volledig uitbesteed aan GSAM als fiduciair beheerder; aandelen worden via beleggingsfondsen belegd (individuele fondsbeheerders worden niet bij naam genoemd). Pon Holdings heeft geen invaarverzoek gedaan in het kader van de Wtp.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Aandelen ontwikkelde markten 20,04% ... Aandelen opkomende aandelen 2,53%",
+  "pagina": 30,
+  "verdeling": [
+   {
+    "pct": 20.04,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 2.53,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": 0,
+  "benchmarks": [
+   "MSCI World Custom ESG Index",
+   "MSCI Emerging Markets Custom ESG Index"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "De beleggingen in aandelen worden eind 2025 volledig passief belegd.",
+  "pagina": 29,
+  "passief_pct": 100,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 62.5,
+  "letterlijk": "Voor de afdekking van het valutarisico wordt een streefpercentage van 62,5% gehanteerd. ... Binnen de categorie aandelen ontwikkelde markten wordt tevens gebruik gemaakt van een Euro hedged beleggingsfonds.",
+  "omschrijving": "Voor de afdekking van het valutarisico geldt een streefpercentage van 62,5%. Aandelen ontwikkelde markten worden belegd via een Euro hedged beleggingsfonds; voor aandelen opkomende markten vindt geen afdekking plaats.",
+  "pagina": 30
+ },
+ "naam": "Geveke",
+ "pad": "data/annual_reports/100_Geveke_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

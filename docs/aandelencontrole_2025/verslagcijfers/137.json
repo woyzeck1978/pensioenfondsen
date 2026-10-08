@@ -1,0 +1,94 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 77.472,
+  "feitelijk_pct": 34.5,
+  "letterlijk": "Aandelen: Strategische allocatie 31,5 %, Feitelijke allocatie per 31 december 2025 34,5 % (p. 24); Beleggingsportefeuille: Aandelen 77.472, Totaal beleggingen 222.755 (Bedragen x 1.000 EUR, p. 5)",
+  "omvat_private_equity": false,
+  "pagina": 24,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 31.5,
+  "totaal_beleggingen_eur_mln": 222.755
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Vanguard",
+    "pagina": 60,
+    "product_of_mandaat": "SRI FTSE Developed World II CCF Hedged EUR",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Vanguard",
+    "pagina": 60,
+    "product_of_mandaat": "ESG Emerging Markets All Cap Equity Index Fund EUR Acc",
+    "segment": "opkomende markten",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": null,
+  "letterlijk": "Vermogensbeheerders: De beleggingen zijn ondergebracht bij beleggingsfondsen van de vermogensbeheerders Vanguard (staatsobligaties en aandelen) en Achmea (hypotheken).",
+  "organisatie": "extern",
+  "pagina": 24
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Het bestuur kiest ervoor te beleggen in die fondsen die het dichtst bij het gewenste beleid passen. Het fonds is gestart met een ESG risico analyse ter aanvulling op het duurzaamheidsbeleid.",
+  "omschrijving": "Het pensioenfonds kent een beleid voor maatschappelijk verantwoord beleggen gebaseerd op de wensen van deelnemers en sociale partners, en belegt in SRI- en ESG-indexfondsen van Vanguard die het dichtst bij het gewenste beleid passen. In 2025 is een ESG-risicoanalyse gestart.",
+  "pagina": 35,
+  "sfdr_artikel": null
+ },
+ "fund_id": 137,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Aandelen gemiddeld belegd vermogen 74.303, Vermogensbeheerkosten 96, Performance gerelateerde vergoedingen - (* € 1.000); Totaal vermogensbeheerkosten excl. transactiekosten 0,16%, transactiekosten 0,05%",
+  "pagina": 20,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.05,
+  "vermogensbeheerkosten_totaal_pct": 0.16
+ },
+ "opmerkingen": "In november 2025 heeft het bestuur besloten om de renteafdekking strategisch te verhogen van 35% naar 65% in het licht van de geplande invaardatum van 1 januari 2027 in het nieuwe pensioenstelsel (Wtp). Per 1 januari 2026 stapt de pensioenadministratie over van Appel Pensioenuitvoering naar DION Pensioen Services. Het aandelenbeheer is volledig passief ingericht via twee Vanguard indexfondsen en kent geen private equity of prestatievergoedingen.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "De aandelen zijn voor 89,4 % belegd in mature markets (2024: 89,0 %) en voor 10,6 % in emerging markets (2024: 11,0 %).",
+  "pagina": 51,
+  "verdeling": [
+   {
+    "pct": 89.4,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 10.6,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "SRI FTSE Developed World II",
+   "ESG Emerging Markets All Cap"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Het fonds voert waar mogelijk een passieve beleggingsstijl. Dat wil zeggen dat zal worden getracht een rendement te behalen gelijk aan de gekozen benchmark-indices. Dit geldt voor alle beleggingen behalve hypotheken.",
+  "pagina": 24,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Bij beleggingen in aandelen worden de vreemde valuta strategisch gehedged naar de euro, behalve de aandelen emerging markets.",
+  "omschrijving": "Vreemde valuta in de aandelenportefeuille worden strategisch gehedged naar de euro, met uitzondering van aandelen in opkomende markten (emerging markets).",
+  "pagina": 57
+ },
+ "naam": "Witteveen+Bos",
+ "pad": "data/annual_reports/137_Witteveen_Bos_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

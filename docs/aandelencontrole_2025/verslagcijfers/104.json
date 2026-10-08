@@ -1,0 +1,117 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 529.005,
+  "feitelijk_pct": 42,
+  "letterlijk": "Aandelen ontwikkelde markten: strategische mix 35,0%, feitelijke mix 34,7%, x € 1.000: 436.929; Aandelen opkomende markten: strategische mix 7,5%, feitelijke mix 7,3%, x € 1.000: 92.076; Totaal belegd vermogen: 1.260.147",
+  "omvat_private_equity": false,
+  "pagina": 45,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 42.5,
+  "totaal_beleggingen_eur_mln": 1260.147
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Candriam",
+    "pagina": 117,
+    "product_of_mandaat": "Candriam Sustainable Equity Europe",
+    "segment": "Europa",
+    "stijl": "actief"
+   },
+   {
+    "naam": "Candriam",
+    "pagina": 117,
+    "product_of_mandaat": "Cleome Index USA Equities (EUR-Hedged)",
+    "segment": "Noord-Amerika",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Candriam",
+    "pagina": 117,
+    "product_of_mandaat": "Candriam Sustainable Equity Japan (Z-EUR_Hedge)",
+    "segment": "Azië-Pacific",
+    "stijl": "actief"
+   },
+   {
+    "naam": "Robeco",
+    "pagina": 117,
+    "product_of_mandaat": "Robeco Sustainable Water Z EUR Net",
+    "segment": "Wereld ontwikkeld",
+    "stijl": "actief"
+   },
+   {
+    "naam": "Amundi",
+    "pagina": 117,
+    "product_of_mandaat": "Amundi MSCI Emerging Ex China ESG Selection ETF",
+    "segment": "Opkomende markten",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": null,
+  "letterlijk": "Het pensioenfonds heeft de beleggingsportefeuille in intern beheer. Het heeft het beheren van de beleggingsportefeuille niet uitbesteed aan een externe (fiduciaire) beheerder. Het fonds belegt indirect via beleggingsfondsen en een gesepareerd mandaat.",
+  "organisatie": "extern",
+  "pagina": 51
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "best-in-class",
+   "engagement",
+   "stembeleid",
+   "impactbeleggen",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Waar mogelijk kiest SPHDHV voor een best-in-class (BIC) strategie voor het beheer van de aandelenportefeuille van opkomende en ontwikkelde markten (exclusief impact aandelen water).",
+  "omschrijving": "Het fonds hanteert uitsluitingen (wapens, tabak, OESO/UNGC-schenders, belastingcontroverses), best-in-class selectie voor Europa, Japan en opkomende markten, impactbeleggen in water via Robeco, en stembeleid en engagement via de externe fondsbeheerders. Voor aandelen VS wordt tijdelijk belegd in een grijze index.",
+  "pagina": 116,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 104,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Vermogensbeheerkosten (excl. transactiekosten) 0,54%; totale transactiekosten 0,10%; prestatieafhankelijke vergoedingen: Hiervan is geen sprake bij ons fonds; Aandelen beheerkosten: € 636k gefactureerd + € 623k in NAV = € 1.259k, transactiekosten in NAV € 757k (geen percentages voor aandelen genoemd)",
+  "pagina": 51,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.1,
+  "vermogensbeheerkosten_totaal_pct": 0.54
+ },
+ "opmerkingen": "In 2025 zijn twee belangrijke wijzigingen doorgevoerd in de aandelenportefeuille: per eind juni 2025 is de positie in het BlackRock Emerging Markets ESG fonds beëindigd en overgedragen aan Amundi MSCI Emerging Ex China ESG Selection ETF, en medio november 2025 is binnen Candriam voor Amerikaanse aandelen overgestapt van Candriam Sustainable Equity US naar Cleome Index USA Equities (tijdelijk belegd in een grijze index wegens underperformance en verslechterd ESG-sentiment). De RvT heeft aanbevolen om in 2026 de ESG-invulling en beheerderskeuze te evalueren wegens underperformance t.o.v. niet-ESG benchmarks. Het fonds voerde het vermogensbeheer in 2025 intern zonder externe fiduciair beheerder, maar heeft eind 2025 een RFP-selectietraject gestart dat in 2026 leidde tot de aanstelling van een fiduciair manager per 1 juli 2026 (mede in het kader van Wtp-voorbereiding). Wtp-invaardatum staat gepland voor 1 januari 2027.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "feitelijke mix per 31-12-2025: Aandelen ontwikkelde markten 34,7%, Aandelen opkomende markten 7,3%",
+  "pagina": 45,
+  "verdeling": [
+   {
+    "pct": 34.7,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 7.3,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "Voor de aandelenportefeuille opkomende markten, Europa en Japan (exclusief impact aandelen water) heeft SPHDHV gekozen voor een best-in-class benadering. ... Voor aandelen VS worden de mogelijkheden opnieuw onderzocht en wordt daarom tijdelijk belegd in een grijze index.",
+  "pagina": 116,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Cleome Index USA Equities (EUR-Hedged), Candriam Sustainable Equity Japan (Z-EUR_Hedge) ... Candriam Sustainability Equity US (unhedged en hedged) naar het beleggingsfonds Cleome Index USA Equities (unhedged & hedged)",
+  "omschrijving": "Valutarisico van aandelen wordt gedeeltelijk afgedekt via specifieke euro-hedged fondsklassen van de onderliggende beleggingsfondsen (Cleome Index USA Equities EUR-Hedged / unhedged & hedged en Candriam Sustainable Equity Japan Z-EUR_Hedge). Een totaal afdekkingspercentage voor de aandelenportefeuille wordt niet genoemd.",
+  "pagina": 117
+ },
+ "naam": "Haskoning DHV",
+ "pad": "data/annual_reports/104_Haskoning_DHV_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

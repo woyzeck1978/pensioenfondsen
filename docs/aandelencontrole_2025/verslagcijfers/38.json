@@ -1,0 +1,102 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 4011.458,
+  "feitelijk_pct": null,
+  "letterlijk": "Stand per 31-12-2025 (bedragen in € 1.000): Aandelen 4.011.458 (weging 77,7% binnen liquide returnportefeuille), Totaal portefeuille 11.054.260; Private Equity 31.328 (weging 3,4% binnen illiquide returnportefeuille)",
+  "omvat_private_equity": false,
+  "pagina": 25,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 11054.26
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "DWS",
+    "pagina": 35,
+    "product_of_mandaat": "DWS aandelen ontwikkelde markten",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "onbekend"
+   },
+   {
+    "naam": "DWS",
+    "pagina": 35,
+    "product_of_mandaat": "DWS aandelen opkomende markten",
+    "segment": "opkomende markten",
+    "stijl": "onbekend"
+   },
+   {
+    "naam": "UBS",
+    "pagina": 35,
+    "product_of_mandaat": "UBS aandelen ontwikkelde markten",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "onbekend"
+   },
+   {
+    "naam": "UBS",
+    "pagina": 35,
+    "product_of_mandaat": "UBS opkomende markten",
+    "segment": "opkomende markten",
+    "stijl": "onbekend"
+   }
+  ],
+  "fiduciair_beheerder": "Columbia Threadneedle Investments",
+  "letterlijk": "Columbia Threadneedle Investments (CTI) is de fiduciair vermogensbeheerder van PWRI. CTI beheert ook een deel van ons vermogen. DWS en UBS beheren onze reguliere aandelenportefeuille.",
+  "organisatie": "extern",
+  "pagina": 55
+ },
+ "esg": {
+  "co2_doel": "het realiseren van netto-nul CO₂-emissies in 2050; een reductie van 50% in 2030 ten opzichte van eind 2010",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "best-in-class",
+   "engagement",
+   "stembeleid",
+   "impactbeleggen",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Klimaat: De doelstellingen omvatten: het realiseren van netto-nul CO₂-emissies in 2050; een reductie van 50% in 2030 ten opzichte van eind 2010 ... Sociale doelstellingen: PWRI heeft geïnvesteerd in beursgenoteerde ondernemingen die bijdragen aan de werkgelegenheid van mensen met een arbeidsbeperking in Nederland. ... Actief aandeelhouderschap is vormgegeven door middel van stemactiviteiten en engagement.",
+  "omschrijving": "PWRI classificeert als SFDR Artikel 8 en hanteert uitsluitingen (clustermunitie, tabak, ernstige ESG-controverses na langdurig engagement), engagement (uitbesteed aan CTI), stembeleid, selectie op bovengemiddelde duurzaamheidsprestaties (best-in-class), ESG-integratie in mandaten en richtlijnen, impactbeleggen via de insluitingsportefeuille gericht op werkgelegenheid voor mensen met een afstand tot de arbeidsmarkt in Nederland, en een klimaatactieplan gericht op -50% CO2 in 2030 t.o.v. 2010 en netto-nul in 2050.",
+  "pagina": 144,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 38,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "De transactiekosten namen toe met 13,5% waardoor deze stegen van 0,070 naar 0,078% van het gemiddeld beheerd vermogen. ... Wij maken geen afspraken meer over prestatieafhankelijke vergoedingen met onze vermogensbeheerders. We hebben ze eerder wel gemaakt, voor de investeringen in private equity.",
+  "pagina": 33,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.078,
+  "vermogensbeheerkosten_totaal_pct": null
+ },
+ "opmerkingen": "PWRI is per 1 januari 2025 ingevaren naar de vernieuwde pensioenregeling onder de Wtp. Binnen het beleggingsbeleid is de allocatie naar opkomende markten verlaagd ten gunste van ontwikkelde markten en is de valuta-afdekking voor aandelen afgeschaft (0%). De reguliere aandelenportefeuille (€ 4.011,5 mln) wordt discretionair beheerd door UBS en DWS in mandaten voor ontwikkelde markten en opkomende markten; CTI is fiduciair beheerder. Daarnaast heeft het fonds een aparte beursgenoteerde insluitingsportefeuille (€ 164,2 mln) gericht op werkgelegenheid voor mensen met een afstand tot de arbeidsmarkt in Nederland. Private equity (€ 31,3 mln) staat apart onder illiquide return (3,4% daarvan) en is in afbouw; de prestatievergoeding van € 0,1 mln had betrekking op private equity. Specifieke benchmarknamen en een passief/actief-uitsplitsing voor aandelen worden niet vermeld.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "Wel zijn de verdeling binnen aandelen naar ontwikkelde en opkomende landen én het valutabeleid gewijzigd. Sinds 2025 beleggen we minder in aandelen uit opkomende landen",
+  "pagina": 19,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "onbekend",
+  "letterlijk": "Binnen de returnportefeuille bleven aandelen achter bij de benchmark: -0,98%. Dit komt onder andere doordat verschillende ESG- richtlijnen niet van toepassing zijn op de benchmark.",
+  "pagina": 26,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 0,
+  "letterlijk": "Sinds 2025 beleggen we minder in aandelen uit opkomende landen en wordt alleen het valutarisico van nominale beleggingscategorieën, zoals staats- en bedrijfsobligaties, nog afgedekt. Dus niet meer van de reële beleggingscategorieën, zoals aandelen en vastgoed.",
+  "omschrijving": "Sinds 2025 wordt het valutarisico van reële beleggingscategorieën, waaronder aandelen en vastgoed, niet meer afgedekt (0%). Alleen nominale beleggingscategorieën worden nog afgedekt. PWRI onderzoekt nog of het dollarafdekkingsbeleid bijgesteld moet worden.",
+  "pagina": 19
+ },
+ "naam": "Werk- en (re)Integratie / PWRI (Work and Reintegration)",
+ "pad": "data/annual_reports/38_Werk_en_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

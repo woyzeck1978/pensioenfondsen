@@ -1,0 +1,114 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 9822,
+  "feitelijk_pct": 38.62,
+  "letterlijk": "Aandelen: Bedrag 9.822, 38,62%, Normportefeuille 36,00% (Bedragen x € 1.000.000, Totaal 25.433)",
+  "omvat_private_equity": true,
+  "pagina": 60,
+  "private_equity_pct": 0.02,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 36,
+  "totaal_beleggingen_eur_mln": 25433
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "AXA",
+    "pagina": 64,
+    "product_of_mandaat": "Small-capaandelen factorstrategie (relatief laag gewaardeerde aandelen, beter CO2-profiel)",
+    "segment": "small caps",
+    "stijl": "enhanced/factor"
+   },
+   {
+    "naam": "UBS",
+    "pagina": 64,
+    "product_of_mandaat": "Replicatie MSCI World Small Cap Index (met beter CO2-profiel)",
+    "segment": "small caps",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Robeco",
+    "pagina": 65,
+    "product_of_mandaat": "Aandelen opkomende markten",
+    "segment": "opkomende markten",
+    "stijl": "actief"
+   },
+   {
+    "naam": "Edhec",
+    "pagina": 64,
+    "product_of_mandaat": "Edhec-indexstrategie (wereldwijd ontwikkeld met MVO en emissiereductie)",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "enhanced/factor"
+   },
+   {
+    "naam": "FTSE",
+    "pagina": 64,
+    "product_of_mandaat": "FTSE-indexstrategie (wereldwijd ontwikkeld met MVO en emissiereductie)",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "Achmea Investment Management",
+  "letterlijk": "Achmea Investment Management (AIM) voert het fiduciair management uit. Een deel van het geld wordt belegd via mandaten bij AIM. Het merendeel van de gelden is belegd bij externe vermogensbeheerders (p. 27). Small caps factorstrategie bij AXA en UBS (p. 64), opkomende markten bij Robeco (p. 65).",
+  "organisatie": "extern",
+  "pagina": 27
+ },
+ "esg": {
+  "co2_doel": "Voldoen aan de doelstelling om minder emissies te financieren dan nodig is volgens een op de EU Climate Transition Benchmark afgestemd reductiepad (in 2025: 33,7 tCO2/mio euro belegd vermogen)",
+  "eigen_index": true,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "CO2-reductiedoel",
+   "eigen ESG-index",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "De portefeuille van BPL Pensioen voldoet daarmee aan de doelstelling om minder emissies te financieren dan nodig is volgens een op de EU Climate Transition Benchmark afgestemd reductiepad (p. 72). In de constructie van de beide indices is er aandacht voor maatschappelijk verantwoord beleggen (p. 64). Uitsluitingsbeleid (p. 187). Betrokkenheidsbeleid (p. 46).",
+  "omschrijving": "BPL Pensioen hanteert een uitsluitingsbeleid en een betrokkenheidsbeleid (engagement). Voor aandelen wereldwijd belegt het fonds in op maat gemaakte indexstrategieën van Edhec en FTSE met MVO- en broeikasgasreductiecriteria. Bij small caps (AXA, UBS) wordt een beter CO2-profiel dan de benchmark nagestreefd. De aandelen- en bedrijfsobligatieportefeuilles sturen op een reductiepad conform de EU Climate Transition Benchmark.",
+  "pagina": 72,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 16,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Kosten vermogensbeheer % (excl. transactiekosten) 0,24%, Transactiekosten % 0,09% (fondsbreed, p. 44). Aandelen: Beheerkosten € 11.251 duizend, Performance gerelateerde kosten -, Transactiekosten € 13.910 duizend (p. 44).",
+  "pagina": 44,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.09,
+  "vermogensbeheerkosten_totaal_pct": 0.24
+ },
+ "opmerkingen": "De totale aandelenportefeuille bedroeg eind 2025 € 9.822 mln (38,62% van de totale beleggingen van € 25.433 mln, tegenover een normgewicht van 36,00%). Op de balans (toelichting p. 124) staat binnen de post Aandelen ook € 4.199 duizend aan Private equity vermeld; in het bestuursverslag (p. 65) valt private equity onder de alternatieve beleggingen en bevindt het zich in de afbouwfase (nog 0,02% van de portefeuille). Vanwege de naderende Wtp-transitie zijn er in 2025 geen ingrijpende wijzigingen doorgevoerd in de beleggingsportefeuille. Valutarisico in aandelen (USD, GBP, JPY) wordt voor 50% afgedekt naar de euro. Fiduciar beheer is integraal uitbesteed aan Achmea Investment Management.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "MSCI-wereldindex",
+   "MSCI World Small Cap Index",
+   "MSCI Emerging Market Index",
+   "Custom benchmark aandelen",
+   "Edhec custom benchmark",
+   "FTSE custom benchmark"
+  ],
+  "factorbeleggen": true,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "De totale aandelenportefeuille heeft in 2025 een positief rendement behaald van 9,13%. De custom benchmark behaalde een positief rendement van 8,87% (p. 64). Het pensioenfonds zet ook in op small caps. Deze factorstrategie is ondergebracht bij de vermogensbeheerders AXA en UBS (p. 64). Replicatie bij UBS, Robeco voor opkomende markten (p. 64-65).",
+  "pagina": 64,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 50,
+  "letterlijk": "Het valutarisico van deze valuta’s wordt binnen de categorie aandelen voor 50% afgedekt naar de euro.",
+  "omschrijving": "Het valutarisico van de belangrijkste buitenlandse valuta's waarin belegd wordt (Amerikaanse dollar, Britse pond en Japanse yen) wordt binnen de categorie aandelen voor 50% afgedekt naar de euro.",
+  "pagina": 62
+ },
+ "naam": "BPL Pensioen (Agriculture)",
+ "pad": "data/annual_reports/16_BPL_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

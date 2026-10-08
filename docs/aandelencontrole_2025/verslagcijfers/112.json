@@ -1,0 +1,85 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 115.504,
+  "feitelijk_pct": 41.8,
+  "letterlijk": "Aandelen 115.504 41,8% ... Strategisch 31-12-2025 39,0%",
+  "omvat_private_equity": false,
+  "pagina": 55,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 39,
+  "totaal_beleggingen_eur_mln": 276.312
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "BlackRock",
+    "pagina": 107,
+    "product_of_mandaat": "Blackrock ESG SCREENED INDEX",
+    "segment": null,
+    "stijl": "passief"
+   },
+   {
+    "naam": "BlackRock",
+    "pagina": 107,
+    "product_of_mandaat": "Blackrock MSCI world net index",
+    "segment": null,
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": null,
+  "letterlijk": "Het vermogensbeheer is uitbesteed aan Columbia Threadneedle Investments (LDI-portefeuille, credits en optieportefeuille) en BlackRock (aandelen ontwikkelde en opkomende markten, passief beheer).",
+  "organisatie": "extern",
+  "pagina": 54
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen"
+  ],
+  "letterlijk": "Het Fonds classificeert de pensioenregeling nog steeds als een overig product (artikel 6) en niet als een duurzaam financieel product dat ecologische of sociale kenmerken promoot (licht groen, artikel 8). Binnen het aandelenfonds voor Ontwikkelde Markten vindt uitsluiting plaats.",
+  "omschrijving": "Het fonds is geclassificeerd als SFDR artikel 6. Binnen het aandelenfonds voor ontwikkelde markten vindt uitsluiting plaats (o.a. clustermunitie) en het fonds volgt het betrokkenheidsbeleid van zijn externe vermogensbeheerders.",
+  "pagina": 31,
+  "sfdr_artikel": 6
+ },
+ "fund_id": 112,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Kosten als percentage van in verslagjaar gemiddeld belegde vermogen in het betreffende jaar: Vermogensbeheerkosten 0,24%, Transactiekosten 0,02%. De performance gerelateerde kosten zijn 0 en daarom niet opgenomen in bovenstaande tabel.",
+  "pagina": 52,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.02,
+  "vermogensbeheerkosten_totaal_pct": 0.24
+ },
+ "opmerkingen": "In 2025 heeft het bestuur besloten om de strategische allocatie naar zakelijke waarden (aandelen) te verlagen van 44% naar 39% om het dekkingsgraadrisico richting de transitie naar het nieuwe pensioenstelsel (invaren) te beperken. Tevens zijn putopties en renteswaptions aangeschaft binnen het CTI-mandaat. De aandelenportefeuille wordt volledig passief beheerd door BlackRock. Voor de regionale uitsplitsing worden op pagina 116 alleen bedragen in duizenden euro gerapporteerd zonder percentages.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "De samenstelling van de aandelenportefeuille verdeeld naar regio is als volgt: [alleen bedragen in EUR x 1.000 vermeld, geen percentages]",
+  "pagina": 116,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": 0,
+  "benchmarks": [
+   "MSCI world net index",
+   "ESG SCREENED INDEX"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "BlackRock (aandelen ontwikkelde en opkomende markten, passief beheer). Voor de rendementsportefeuille wordt belegd in passieve beleggingsfondsen bij Blackrock.",
+  "pagina": 54,
+  "passief_pct": 100,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Sinds 2024 wordt het valutarisico in het beleggingsfonds bij BlackRock voor ontwikkelde markten binnen dit fonds gehedged. Bij het fonds voor opkomende markten wordt het valutarisico niet afgedekt. Om het valutarisico te beperken, dekt het pensioenfonds binnen de aandelen ontwikkelde landen de dollar af.",
+  "omschrijving": "Het valutarisico (de Amerikaanse dollar) binnen het beleggingsfonds voor ontwikkelde markten wordt binnen het fonds afgedekt; bij het fonds voor opkomende markten wordt het valutarisico niet afgedekt.",
+  "pagina": 107
+ },
+ "naam": "Lloyd's Register Nederland",
+ "pad": "data/annual_reports/112_Lloyd_s_Register_Nederla_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

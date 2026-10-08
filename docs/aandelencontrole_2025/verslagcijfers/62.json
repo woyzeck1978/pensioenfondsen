@@ -1,0 +1,90 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": null,
+  "feitelijk_pct": 37.4,
+  "letterlijk": "Onder de categorie Aandelen valt naast de aandelenportefeuilles ook de aandelenportefeuille-overlay met put-opties voor dekkingsgraadbescherming. Aandelen: 37,4.",
+  "omvat_private_equity": false,
+  "pagina": 52,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Northern Trust",
+    "pagina": 39,
+    "product_of_mandaat": null,
+    "segment": "aandelen",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "Goldman Sachs Asset Management",
+  "letterlijk": "De beheervergoedingen bestaan uit de vergoedingen voor de externe vermogensbeheerders. De kosten fiduciair beheer hebben betrekking op de vergoeding die BPFV aan GSAM betaalt voor de fiduciaire dienstverlening.",
+  "organisatie": "extern",
+  "pagina": 39
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "ESG-integratie in selectie",
+   "engagement",
+   "stembeleid",
+   "Paris-aligned benchmark"
+  ],
+  "letterlijk": "Voor de aandelenportefeuille in ontwikkelde markten en high yield (hoogrentende obligaties) maakt het fonds gebruik van een Paris-Aligned Benchmark (PAB).",
+  "omschrijving": "BPFV classificeert haar pensioenregeling als SFDR artikel 8. Voor aandelen ontwikkelde markten wordt een Paris-Aligned Benchmark (PAB) gehanteerd. Daarnaast past het fonds uitsluitingen toe, integreert het ESG-factoren en selecteert het beleggingsfondsen met een actief engagement- en stembeleid.",
+  "pagina": 140,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 62,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Kosten beheer beleggingen per categorie 2025: Aandelen 467, Transactiekosten 2025: 266 (in € x 1.000). Kosten vermogensbeheer in percentage van het gemiddeld belegd vermogen 0,25%, transactiekosten 0,10%. Er zijn in de afspraken met de vermogensbeheerders geen prestatie gerelateerde vergoedingen overeengekomen.",
+  "pagina": 38,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.1,
+  "vermogensbeheerkosten_totaal_pct": 0.25
+ },
+ "opmerkingen": "De aandelenportefeuille wordt sinds 2019 volledig passief beheerd. Richting het invaren onder de Wtp heeft BPFV in 2025 een aandelenputoptie-overlay geïmplementeerd (looptijd 2 jaar, strike 100%, allocatie 1,0% van de totale portefeuille) ter bescherming van de dekkingsgraad. Aandelen ontwikkelde markten volgt een Paris-Aligned Benchmark (PAB) en is gesplitst in een Euro Hedged tranche (22,7%) en een Euro Unhedged tranche (9,7%), naast opkomende markten (4,0%). Northern Trust wordt vermeld als beheerder voor de aandelen (transactiekosten € 242k).",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Verdeling onroerende zaken en zakelijke waarden: Ontwikkelde markten (Mature markets) 72,0, Opkomende markten (Emerging markets) 8,3",
+  "pagina": 108,
+  "verdeling": [
+   {
+    "pct": 72,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 8.3,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": 0,
+  "benchmarks": [
+   "Paris-Aligned Benchmark"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "BPFV laat de aandelenportefeuille volledig passief beheren.",
+  "pagina": 52,
+  "passief_pct": 100,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Aandelen Ontwikkelde Markten Euro Hedged: 22,7; Aandelen Ontwikkelde Markten Euro Unhedged: 9,7; Het pensioenfonds kiest er daarom voor om (een gedeelte) van haar buitenlandse valuta’s af te dekken.",
+  "omschrijving": "Valutarisico wordt gedeeltelijk afgedekt via derivaten. Binnen aandelen ontwikkelde markten is er een Euro Hedged tranche (22,7% allocatie) en een Euro Unhedged tranche (9,7% allocatie). Er wordt geen vast afdekkingspercentage voor de gehele aandelenportefeuille genoemd.",
+  "pagina": 53
+ },
+ "naam": "Vlakglas, Verf, Glasbewerking- en het Glazeniersbedrijf / BPFV (Flat Glass, Paint, and Glazing)",
+ "pad": "data/annual_reports/62_Vlakglas_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

@@ -1,0 +1,94 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": null,
+  "feitelijk_pct": 5.3,
+  "letterlijk": "Shares (Public Equities) Long Term Investment Policy 5.0% 31-12-2025 interim policy 5.0% End 2025 Asset Allocation 5.3% Unlisted shares (Private Equity) Long Term Investment Policy 12.0% End 2025 Asset Allocation 12.4%",
+  "omvat_private_equity": false,
+  "pagina": 33,
+  "private_equity_pct": 12.4,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 5,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Morgan Stanley",
+    "pagina": 35,
+    "product_of_mandaat": null,
+    "segment": null,
+    "stijl": "actief"
+   },
+   {
+    "naam": "LA Capital",
+    "pagina": 35,
+    "product_of_mandaat": null,
+    "segment": null,
+    "stijl": "actief"
+   }
+  ],
+  "fiduciair_beheerder": null,
+  "letterlijk": "Public Equity slightly underperformed its benchmark for the year, primarily due to the underperformance of Morgan Stanley, whose mandate was terminated on 18 November 2025. All other Public Equity managers outperformed their benchmarks in 2025, with LA Capital beating its benchmark by 9%.",
+  "organisatie": "extern",
+  "pagina": 35
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "engagement",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "To comply with the Sustainable Finance Disclosure Regulation (SFDR) [...] we opt for the “Opt-Out” variant related to reporting (on the website). When making an investment decision, the negative impacts that investment decisions can have on the society/environment are taken into account. We engage with managers on incorporating ESG considerations in the management of their businesses and portfolios",
+  "omschrijving": "MPF kiest onder SFDR voor de opt-out variant (artikel 6). Bij beleggingsbeslissingen worden negatieve effecten op maatschappij en milieu meegewogen. MPF voert engagement met vermogensbeheerders over ESG-integratie en is sinds 2021 aangesloten bij UN PRI.",
+  "pagina": 36,
+  "sfdr_artikel": 6
+ },
+ "fund_id": 113,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.64,
+  "letterlijk": "Shares* Fees (%) 0.64% Transaction costs (%) 0.01% Total Fees (%) 1.75% Transaction costs (%) 0.31% (* Shares includes Public and Privaty Equity)",
+  "pagina": 20,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": 0.01,
+  "transactiekosten_totaal_pct": 0.31,
+  "vermogensbeheerkosten_totaal_pct": 1.75
+ },
+ "opmerkingen": "Na een geactualiseerde ALM-studie in 2025 (Wtp-transitie uitgesteld naar 1 januari 2028) is de strategische allocatie naar beursgenoteerde aandelen verlaagd naar 5,0% (feitelijk 5,3% ultimo 2025). Het aandelenmandaat van Morgan Stanley is op 18 november 2025 beëindigd wegens achterblijvende rendementen; overige aandelenbeheerders (waaronder LA Capital, dat zijn benchmark met 9% versloeg) presteerden bovengemiddeld. Het Tail Risk Hedging (TRH) programma voor aandelen is beëindigd op 17 november 2025. In de financiële risicotoelichtingen (notities 12.8) en de kostentabel worden beursgenoteerde aandelen en private equity samengenomen onder 'Shares'; de kosten per categorie op pagina 20 zijn gerapporteerd als % van Total Plan NAV. Voor het Associate Selection Plan (DC-regeling) is Vanguard de beheerder (uitsluitend indexfondsen).",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Shares – Regions Mature markets 296,930 Emerging Markets 17,074 Total 314,004",
+  "pagina": 78,
+  "verdeling": [
+   {
+    "pct": 94.6,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 5.4,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "MSCI ACWI Net TR index"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "actief",
+  "letterlijk": "On a strategic level MPF manages the impact of price risk by diversifying by investing in different asset classes and by considering only active investment management.",
+  "pagina": 77,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Hedges Currency Long Term Investment Policy 89.5% 31-12-2025 interim policy 89.5% End 2025 Asset Allocation 89.2%",
+  "omschrijving": "Valutarisico wordt niet specifiek voor de aandelenportefeuille afgedekt, maar op fondsniveau (plan level) via een currency overlay: strategische afdekking 89,5% (interim 89,5%), feitelijk ultimo 2025 89,2%. Strategische open valutapositie is 10,6%.",
+  "pagina": 33
+ },
+ "naam": "Mars",
+ "pad": "data/annual_reports/113_Mars_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

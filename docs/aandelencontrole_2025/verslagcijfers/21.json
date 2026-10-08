@@ -1,0 +1,82 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 505.645,
+  "feitelijk_pct": null,
+  "letterlijk": "Tabel: Marktwaardebepaling (x € 1.000) 31-12-2025: Aandelen - Niet-beursgenoteerde aandelen: 8.759; Participaties in beleggingsinstellingen: 505.645; Totaal belegd vermogen: 3.527.087 (p. 109). Onder niet beursgenoteerde aandelen is opgenomen het 5% belang in Mn Services N.V. (p. 99).",
+  "omvat_private_equity": false,
+  "pagina": 109,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 3527.087
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Mn Services Vermogensbeheer B.V.",
+    "pagina": 109,
+    "product_of_mandaat": "beleggingsfondsen van MN die beleggen in aandelen",
+    "segment": "wereldwijd ontwikkeld en opkomende markten",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "Mn Services Vermogensbeheer B.V.",
+  "letterlijk": "Met de vermogensbeheerder Mn Services Vermogensbeheer B.V. (MN) is een fiduciaire beheerovereenkomst voor onbepaalde tijd aangegaan (p. 117); De participaties van het fonds in beleggingsfondsen van MN die beleggen in aandelen, vastrentende waarden en infrastructuur zijn in onderstaande tabel geplaatst onder andere methode (p. 109); De passief beheerde aandelenportefeuilles hebben binnen de returnportefeuille het laagste kostenniveau (p. 73).",
+  "organisatie": "intern",
+  "pagina": 117
+ },
+ "esg": {
+  "co2_doel": "Bpf Koopvaardij wil bijdragen aan het beperken van de opwarming van de aarde tot maximaal 1,5 graden, in lijn met de doelstelling van het Klimaatakkoord van Parijs. Daarvoor wil Bpf Koopvaardij voor 2030 de uitstoot- [intensiteit verlagen]; sinds de eerste meting eind 2020 is de uitstoot-intensiteit van de aandelenportefeuille met 73,6% gedaald (-28,3% in 2025, 34,1% onder benchmark)",
+  "eigen_index": true,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "eigen ESG-index",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Voor de liquide beleggingen geldt het streven om duurzaamheidskenmerken zoveel mogelijk in de benchmark te implementeren, middels maatwerk ESG benchmarks (p. 170); Bpf Koopvaardij is een actief aandeelhouder en MN geeft uitvoering aan deze verantwoordelijkheid middels de volgende instrumenten: Engagement ... Stemmen (p. 48); Bpf Koopvaardij heeft bij de selectie en monitoring van beheerders ook de prestaties op ESG- aspecten meegewogen (p. 170).",
+  "omschrijving": "Bpf Koopvaardij classificeert de pensioenregeling als SFDR Artikel 8 (promoot ecologische en sociale kenmerken). Voor liquide beleggingen (waaronder de aandelenportefeuille) hanteert het fonds maatwerk ESG-benchmarks. MN geeft namens het fonds uitvoering aan actief aandeelhouderschap middels thematisch engagement (klimaat/energietransitie/biodiversiteit, sociaal en incidenten/controverses) en stembeleid op maat. Er geldt een uitsluitingsbeleid (o.a. Russische aandelen). Bpf Koopvaardij streeft naar beperking van de opwarming tot maximaal 1,5 graad conform het Klimaatakkoord van Parijs met CO2-reductiedoelen (uitstoot-intensiteit aandelen daalde in 2025 met 28,3% en sinds 2020 met 73,6%, 34,1% onder benchmark). Bij selectie en monitoring van beheerders worden ESG-prestaties meegewogen.",
+  "pagina": 170,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 21,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.065,
+  "letterlijk": "Tabel Beleggingskosten per beleggingscategorie 2025 (p. 78): Aandelen relatieve beheerkosten 0,065% (€ 243.929), relatieve transactiekosten 0,011% (€ 40.548); Aandelen - opkomende landen relatieve beheerkosten 0,141% (€ 172.800), relatieve transactiekosten 0,049% (€ 59.632). Totaal kosten van vermogensbeheer: 0,390% (€ 14.046.325), transactiekosten: 0,031% (€ 1.126.299 / 0,032% op p. 72). Alleen voor het product infrastructuur waren afspraken over prestatie gerelateerde vergoedingen van toepassing (p. 72).",
+  "pagina": 78,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": 0.011,
+  "transactiekosten_totaal_pct": 0.031,
+  "vermogensbeheerkosten_totaal_pct": 0.39
+ },
+ "opmerkingen": "Het vermogensbeheer en de vermogensadministratie zijn uitbesteed aan Mn Services Vermogensbeheer B.V. (MN), waarin Bpf Koopvaardij een direct aandelenbelang van 5% bezit (balanswaarde € 8,759 mln per 31-12-2025, p. 99, 109). De aandelenbeleggingen vinden plaats via beleggingsfondsen van MN (balanswaarde € 505,645 mln ultimo 2025 op een totaal belegd vermogen van € 3.527,087 mln, p. 109). De aandelenportefeuilles worden passief beheerd (p. 73) tegen maatwerk ESG-benchmarks (p. 170) en zijn onderverdeeld in ontwikkelde markten (GBV € 375,4 mln) en opkomende markten (GBV € 122,3 mln, p. 78). De relatieve beheerkosten bedragen respectievelijk 0,065% en 0,141% en relatieve transactiekosten 0,011% en 0,049% (p. 78); er gelden geen prestatievergoedingen op aandelen (alleen op infrastructuur, p. 72). De totale vermogensbeheerkosten zijn 0,390% (excl. transactiekosten) / 0,421% (incl. transactiekosten) van het GBV en transactiekosten totaal 0,031% (p. 78). Het fonds belegt niet in private equity (p. 99, 109). Effectenlening vindt indirect plaats via onderliggende beleggingsfondsen (€ 225 mln uitgeleend met € 234 mln onderpand, p. 117). De pensioenadministratie is per 1 juli 2024 overgegaan van MN naar PGGM (p. 56, 68). In het kader van de Wtp bereidt het fonds de overgang naar het nieuwe stelsel per 1 januari 2026 voor (p. 56, 61, 126).",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "Het verslag vermeldt geen percentuele geografische of regionale verdeling van de aandelenportefeuille. In de tabel beleggingskosten (p. 78) wordt de categorie enkel gesplitst in Aandelen (GBV € 375.395.453) en Aandelen - opkomende landen (GBV € 122.329.737) zonder percentages.",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "maatwerk ESG benchmarks"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "De passief beheerde aandelenportefeuilles hebben binnen de returnportefeuille het laagste kostenniveau (p. 73); Voor de liquide beleggingen geldt het streven om duurzaamheidskenmerken zoveel mogelijk in de benchmark te implementeren, middels maatwerk ESG benchmarks (p. 170).",
+  "pagina": 73,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Tabel Beleggingskosten per beleggingscategorie (p. 78): Return portefeuille - Valuta afdekking GBV € 4.703.828; De toekomstige kasstromen van de valutaderivaten worden conform het contract afgezet tegen huidige marktprijzen van die kasstromen in de betrokken valuta (p. 109).",
+  "omschrijving": "Bpf Koopvaardij maakt gebruik van valuta-afdekking met valutaderivaten (in de returnportefeuille opgenomen voor een gemiddeld belegd vermogen van € 4,7 mln, p. 78, gewaardeerd tegen actuele marktprijzen van de kasstromen in de betrokken valuta, p. 109). Het verslag vermeldt geen specifiek afdekkingspercentage voor de aandelenportefeuille.",
+  "pagina": 78
+ },
+ "naam": "Koopvaardij (Merchant Navy)",
+ "pad": "data/annual_reports/21_Koopvaardij_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

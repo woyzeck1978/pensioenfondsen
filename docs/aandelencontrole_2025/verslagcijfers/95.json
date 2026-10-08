@@ -1,0 +1,80 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 363.469,
+  "feitelijk_pct": null,
+  "letterlijk": "Stand per 31-12-2025: Aandelen 363.469, Totaal 697.763 (x € 1.000)",
+  "omvat_private_equity": false,
+  "pagina": 124,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 697.763
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": "Van Lanschot Kempen Investment Management N.V.",
+  "letterlijk": "Voor de uitvoering van het beleggingsbeleid hebben we een externe, fiduciaire vermogensbeheerder aangesteld, te weten Van Lanschot Kempen Investment Management N.V. (hierna: “VLK”)",
+  "organisatie": "extern",
+  "pagina": 41
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "best-in-class",
+   "engagement",
+   "stembeleid",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Wij vullen onze aandelenbeleggingen gedeeltelijk in volgens een ‘best-in-class’ aanpak. Hiermee streven wij ernaar om alleen te beleggen in ondernemingen die goed scoren op het gebied van maatschappelijk verantwoord ondernemen.",
+  "omschrijving": "Flexsecurity hanteert uitsluitingen (o.a. controversiële wapens, tabak, kolen/teerzand, sancties), een best-in-class aanpak voor aandelen, ESG-integratie in managerselectie en voert engagement en stembeleid uit via fondsbeheerders. Rapporteert onder SFDR Artikel 8.",
+  "pagina": 47,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 95,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Geschatte kosten van vermogensbeheer 2025 in €: Aandelen Beheerkosten 233.028, Performancegerelateerde kosten -, Transactiekosten 218.410; Totale kosten vermogensbeheer In procenten van het gemiddeld belegde vermogen 0,43%, Transactiekosten 0,05%",
+  "pagina": 64,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.05,
+  "vermogensbeheerkosten_totaal_pct": 0.43
+ },
+ "opmerkingen": "Flexsecurity is een DC-fonds (beschikbare premie) waarbij ca. 85% van het vermogen voor risico van deelnemers wordt belegd via een lifecycle (p. 41). Een fondsbreed strategisch percentage voor aandelen als geheel wordt niet genoemd vanwege het lifecyclebeleid per leeftijdscategorie; binnen de rendementsportefeuille (p. 55) is de weging 66,5% Aandelen ontwikkeld Wereld en 11,8% Aandelen opkomende landen (samen 78,3%). Aandelenbedrag op balansniveau (p. 124) is € 363,469 mln op een totaal van € 697,763 mln (x € 1.000). Halverwege 2025 is een uitvoeringskostenportefeuille geïntroduceerd met 16,2% aandelen ontwikkeld (p. 57). Beheerkosten en transactiekosten voor aandelen zijn uitsluitend in euro's gerapporteerd (€ 233.028 en € 218.410 op p. 64) en ontbreken als percentage in het staafdiagram op p. 65. Valutarisico op aandelen wordt conform strategisch beleid niet afgedekt (0%).",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Rendementsportefeuille Weging: Aandelen ontwikkeld Wereld 66,5%, Aandelen opkomende landen 11,8%",
+  "pagina": 55,
+  "verdeling": [
+   {
+    "pct": 66.5,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 11.8,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "onbekend",
+  "letterlijk": "We kiezen er bewust voor om de resultaten van onze MVB-beleggingen af te zetten tegen de ontwikkeling van marktgewogen benchmarks die geen relatie hebben met MVB-keuzes.",
+  "pagina": 46,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 0,
+  "letterlijk": "Flexsecurity heeft de strategische keuze gemaakt om het valutarisico niet af te dekken, mede vanwege de kosten die dit met zich meebrengt.",
+  "omschrijving": "Flexsecurity heeft de strategische keuze gemaakt om het valutarisico op aandelen niet af te dekken, mede vanwege de kosten die dit met zich meebrengt.",
+  "pagina": 121
+ },
+ "naam": "Flexsecurity (Randstad)",
+ "pad": "data/annual_reports/95_Flexsecurity_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

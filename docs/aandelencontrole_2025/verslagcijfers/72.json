@@ -1,0 +1,91 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 2301,
+  "feitelijk_pct": 21.3,
+  "letterlijk": "Aandelen € 2.301,0 21,3% 22,5% / Totaal inclusief derivaten € 10.815,3 100,0%",
+  "omvat_private_equity": false,
+  "pagina": 32,
+  "private_equity_pct": 2.2,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 22.5,
+  "totaal_beleggingen_eur_mln": 10815.3
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Achmea Investment Management",
+    "pagina": 112,
+    "product_of_mandaat": "Achmea IM Emerging Markets Equity Fund",
+    "segment": "opkomende markten",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "Achmea Investment Management B.V.",
+  "letterlijk": "Pensioenfonds Achmea heeft een deel van het vermogensbeheer en het fiduciair beheer uitbesteed aan Achmea Investment Management B.V.",
+  "organisatie": "extern",
+  "pagina": 113
+ },
+ "esg": {
+  "co2_doel": "in 2030 moet deze ten minste 50% lager zijn dan die van de benchmark in 2020",
+  "eigen_index": true,
+  "instrumenten": [
+   "uitsluitingen",
+   "best-in-class",
+   "engagement",
+   "stembeleid",
+   "eigen ESG-index",
+   "CO2-reductiedoel"
+  ],
+  "letterlijk": "Bij het wereldwijd ontwikkelde landen aandelenmandaat volgen we de best-in-class (customized) MSCI World DC index. Dit beleid houdt in dat we bedrijven met een ESG-rating B of CCC uitsluiten.",
+  "omschrijving": "Het fonds kwalificeert als SFDR Artikel 8. Voor aandelen wereldwijd ontwikkeld geldt een passief mandaat met een aangepaste best-in-class MSCI World DC index (uitsluiting van ESG-rating B en CCC, tabak en fossiel). Daarnaast gelden een CO2-reductiedoelstelling conform het CTB-pad (-48% in 2025, -64% in 2030, -100% in 2050 t.o.v. 2020), engagement en een stembeleid via ISS.",
+  "pagina": 19,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 72,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.06,
+  "letterlijk": "Aandelen: Beheerkosten 1.421 (0,06%), Transactiekosten 776 (0,03%); Totaal: Beheerkosten 41.039 (0,43%), Transactiekosten 6.354 (0,06%), Totale vermogensbeheerkosten 47.393 (0,49%)",
+  "pagina": 44,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": 0.03,
+  "transactiekosten_totaal_pct": 0.06,
+  "vermogensbeheerkosten_totaal_pct": 0.43
+ },
+ "opmerkingen": "In 2025 is de portefeuille vooruitlopend op de Wtp (FPR) gesplitst in een module Rente en een module Rendement (inclusief unitisering per 1 september 2025). Aandelen vallen onder de Module Rendement en worden 100% passief beheerd (ontwikkelde markten via een passief mandaat met customized ESG-benchmark, opkomende markten via het Achmea IM Emerging Markets Equity Fund). Er worden geen prestatievergoedingen afgesproken voor aandelen. In 2025 is het uitsluitingsbeleid aangescherpt voor tabak (0% omzetgrens productie) en fossiele brandstoffen (1% omzetgrens). De strategische allocatie noemt 17,0% aandelen wereld en 5,0% opkomende markten (samen 22,0%), terwijl in de portefeuillewaardetabel de normportefeuille op 22,5% staat. Totale vermogensbeheerkosten bedragen 0,43% (excl. transactiekosten) en 0,49% (incl. transactiekosten).",
+ "regio": {
+  "basis": "strategisch",
+  "letterlijk": "Module Rendement: Aandelen wereld 17,0%, Aandelen opkomende markten 5,0%",
+  "pagina": 32,
+  "verdeling": [
+   {
+    "pct": 17,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 5,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": 0,
+  "benchmarks": [
+   "MSCI World DC index"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "In aandelen beleggen we passief met als doelstelling het zo nauwkeurig mogelijk volgen van het rendement van de geselecteerde (customized) benchmark.",
+  "pagina": 42,
+  "passief_pct": 100,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 75,
+  "letterlijk": "We dekken het valutarisico af voor de beleggingscategorieën Aandelen Wereld voor 75% en 100% voor de categorieën Obligaties Opkomende Markten (HC, harde valuta), Vastgoed, Private Equity, Bankleningen en Infrastructuur. De andere valuta's dekken we niet af.",
+  "omschrijving": "Het valutarisico voor Aandelen Wereld wordt voor 75% afgedekt voor de USD, GBP en JPY. Overige valuta's (waaronder die in opkomende markten) worden niet afgedekt.",
+  "pagina": 34
+ },
+ "naam": "Achmea",
+ "pad": "data/annual_reports/72_Achmea_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

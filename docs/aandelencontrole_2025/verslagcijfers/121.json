@@ -1,0 +1,113 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 2469.191,
+  "feitelijk_pct": null,
+  "letterlijk": "Stand per 31 december 2025 (bedragen x 1.000): Aandelen 2.469.191, Stand per 31 december 2025 Totaal 8.779.818",
+  "omvat_private_equity": false,
+  "pagina": 73,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 8779.818
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Northern Trust",
+    "pagina": 71,
+    "product_of_mandaat": "NTCM World Low Carbon Plus Equity Index",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Northern Trust",
+    "pagina": 71,
+    "product_of_mandaat": "NTCM EUROPE LOW CARBON PLUS EQUITY INDEX",
+    "segment": "Europa",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Mirova",
+    "pagina": 71,
+    "product_of_mandaat": "Bestselect-Mirova Global Equity",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "actief"
+   },
+   {
+    "naam": "M&G Investments",
+    "pagina": 71,
+    "product_of_mandaat": "Bestselect-M&G Positive Impact Equity",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "actief"
+   },
+   {
+    "naam": "TKP Investments",
+    "pagina": 71,
+    "product_of_mandaat": "TKPI MM Emerging Markets Fund - Class A",
+    "segment": "Opkomende markten",
+    "stijl": "actief"
+   },
+   {
+    "naam": "Northern Trust",
+    "pagina": 71,
+    "product_of_mandaat": "NTCM Emerging Markets Low Carbon Plus Equity Index FGR Fund",
+    "segment": "Opkomende markten",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "Van Lanschot Kempen Investment Management N.V.",
+  "letterlijk": "Het fiduciair management is ondergebracht bij VLK IM en het operationele vermogensbeheer is uitbesteed aan derden vermogensbeheerders.",
+  "organisatie": "extern",
+  "pagina": 19
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": true,
+  "instrumenten": [
+   "uitsluitingen",
+   "impactbeleggen",
+   "eigen ESG-index",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Deze indicatoren worden gebruikt om te beoordelen in hoeverre de beleggingen bijdragen aan de gepromote ecologische karakteristieken en sociale kenmerken, inclusief indicatoren van belangrijke nadelige effecten.",
+  "omschrijving": "Het fonds promoot ecologische en sociale kenmerken (SFDR art. 8) door middel van screening en uitsluitingen (controversiële wapens, VN Global Compact/OESO), ESG-integratie in selectie, maatwerk NTCM Low Carbon Plus indexfondsen en actieve impactbeleggingen (M&G Positive Impact Equity).",
+  "pagina": 131,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 121,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.04,
+  "letterlijk": "Kosten vermogensbeheer Aandelen 4.146 (0,04%), Totaal 44.148 (0,47%); Transactiekosten Aandelen 2.182 (0,02%), Totaal 6.238 (0,07%)",
+  "pagina": 41,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": 0.02,
+  "transactiekosten_totaal_pct": 0.07,
+  "vermogensbeheerkosten_totaal_pct": 0.47
+ },
+ "opmerkingen": "In 2025 is een nieuw actief aandelenfonds toegevoegd (Bestselect-Mirova Global Equity) ter vervanging van twee beëindigde mandaten. De methodologie van de passieve indexfondsen (NTCM Low Carbon Plus) is in 2025 aangepast voor een lagere tracking error t.o.v. de gewone wereldwijde aandelenmarkt. De beoogde tracking error op pensioenfondsniveau bedraagt 5,0%. Het pensioenfonds heeft het vermogensbeheer volledig uitbesteed met VLK IM als fiduciair beheerder en BNP Paribas als custodian. In verband met de pensioenhervorming (Wtp) zijn extra risicomaatregelen in het ALM-beleid geformuleerd.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "De wereldwijde aandelenbeleggingen kennen een actieve en een passieve benadering. De Europese beleggingen in beleggingsfondsen worden uitsluitend passief beheerd.",
+  "pagina": 30,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Voor alle beleggingscategorieën wordt een actief valutabeleid gevoerd. Uitgangspositie is een gedeeltelijke afdekking van de Amerikaanse dollar, het Britse pond en de Japanse yen.",
+  "omschrijving": "Actief valutabeleid met als uitgangspositie een gedeeltelijke afdekking van USD, GBP en JPY voor alle beleggingscategorieën; overige valuta (o.a. opkomende markten) worden niet afgedekt. Geen specifiek afdekkingspercentage voor aandelen genoemd.",
+  "pagina": 84
+ },
+ "naam": "PostNL",
+ "pad": "data/annual_reports/121_PostNL_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

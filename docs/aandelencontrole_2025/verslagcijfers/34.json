@@ -1,0 +1,99 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": null,
+  "feitelijk_pct": 39.6,
+  "letterlijk": "Tabel 2.2.1 (p. 22): Aandelen Strategische weging eind 2025 28,5%, Feitelijke weging eind 2025 39,6% (Ontwikkelde markten 30,9%, Opkomende markten 2,8%, Small Cap EAFE 3,2%, Small Cap US 2,7%); Totaal 100,0%. Het pensioenfonds belegde eind 2025 strategisch 28,5% van het vermogen in een wereldwijd gespreide portefeuille van aandelen (p. 22). In deze tabel zijn geen bedragen in euro's opgenomen (op p. 113 bedraagt het totaal van de aandelenportefeuille € 411.095 duizend).",
+  "omvat_private_equity": false,
+  "pagina": 22,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 28.5,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "BlackRock",
+    "pagina": 40,
+    "product_of_mandaat": "beleggingsfondsen (B-funds en CCF)",
+    "segment": "wereldwijd",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": null,
+  "letterlijk": "De beheerkosten voor aandelen (BlackRock) zijn in lijn met de ontwikkeling van de portefeuille... BlackRock brengt bij het pensioenfonds een management fee (voor de B-funds) en een base fee (voor de CCF) in rekening (p. 40); Het vermogensbeheer werd in 2025 uitgevoerd door BlackRock, Cardano, a.s.r. vermogensbeheer, Achmea Mortgages en Aegon Asset Management. BlackRock draagt zorg voor en volledige administratie van de bij hen ondergebrachte beleggingsportefeuilles (p. 147); Het bestuur heeft Cardano aangesteld als nieuwe aandelenmanager. Vanaf 2026 zal Cardano de aandelenportefeuille gaan beheren (p. 21).",
+  "organisatie": "extern",
+  "pagina": 40
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "In 2024 heeft het bestuur het MVB-beleid geëvalueerd en besloten om de pensioenregeling als een artikel 8 product volgens de SFDR te classificeren (p. 21); Daarnaast heeft het pensioenfonds gekozen om de aandelenportefeuille in te richten middels een mandaat met een CO₂-reductiestrategie. Hiervoor is een andere aandelenmanager gekozen. Begin 2026 zal het pensioenfonds beleggen in deze aandelenfondsen (p. 23); uitsluitingenbeleid ... ESG-factoren geïntegreerd te zijn in het beleggingsproces van de fondsmanagers (p. 23).",
+  "omschrijving": "Pensioenfonds Recreatie classificeert de pensioenregeling onder SFDR artikel 8. Voor aandelen hanteert het fonds een uitsluitingenbeleid (o.a. clustermunitie, sancties/zwarte lijst en VN Global Compact/OESO-principes). Daarnaast worden ESG-factoren geïntegreerd in het beleggingsproces en de selectie van fondsmanagers, die de UN PRI moeten hebben ondertekend. Het pensioenfonds heeft gekozen om de aandelenportefeuille in te richten via een mandaat met een CO₂-reductiestrategie, waarvoor Cardano als nieuwe aandelenmanager vanaf 2026 is aangesteld. Een nulmeting naar de ESG-indicatoren wordt in 2026 uitgevoerd.",
+  "pagina": 23,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 34,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Tabel vermogensbeheerkosten 2025 (p. 39): Gemiddeld belegd vermogen 1.075.720, Kosten vermogensbeheer 2.568 (0,24%), Transactiekosten 474 (0,04%); Tabel Look-through kosten per beleggingscategorie (p. 40, in € 1.000): Aandelen beheerkosten 338, transactiekosten - (geen percentages voor aandelen vermeld); geen prestatievergoeding genoemd.",
+  "pagina": 39,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.04,
+  "vermogensbeheerkosten_totaal_pct": 0.24
+ },
+ "opmerkingen": "In 2025 is binnen de vastgestelde bandbreedtes (18,5% - 38,5%) voorgesorteerd op de strategische assetallocatie onder de solidaire premieregeling (Wtp per 1 januari 2026), waardoor aandelen ultimo 2025 overwogen was (feitelijk 39,6% vs. strategisch 28,5%; p. 21-22). Ter vereenvoudiging en verduurzaming van de aandelenportefeuille heeft het bestuur in 2025 Cardano geselecteerd en aangesteld als nieuwe aandelenmanager (met CO2-reductiestrategie); Cardano zal de portefeuille vanaf 2026 beheren (p. 21, 23). In 2025 werd de aandelenportefeuille extern beheerd door BlackRock via passieve fondsen (B-funds en CCF) (p. 40, 147). Omdat uitsluitend in passieve fondsen wordt belegd, is het actief-beheerrisico (S10) op nihil gesteld (p. 117). Aandelen behaalden in 2025 een rendement van 8,0% (benchmark 7,3%; p. 25). De pensioenregeling is geclassificeerd als SFDR artikel 8 (p. 21). Het fonds belegt niet in private equity en niet in vastgoed als aparte beleggingscategorie (vastgoed betreft beursgenoteerde vastgoedaandelen binnen de aandelenfondsen; p. 40).",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "De segmentatie van de aandelenportefeuille naar regio is als volgt (2025, bedragen x € 1.000): Europa (EU) 46.317 (11,3%), Europa (niet-EU) 25.697 (6,3%) [totaal Europa 17,6%], Noord-Amerika 263.413 (64,1%), Azië 26.927 (6,5%), Pacific 38.984 (9,5%) [totaal Azië-Pacific 16,0%], Centraal & Zuid-Amerika 4.395 (1,1%), Overig 5.362 (1,2%) [totaal Overig 2,3%]; Totaal 411.095 (100,0%) (p. 113).",
+  "pagina": 113,
+  "verdeling": [
+   {
+    "pct": 64.1,
+    "regio": "Noord-Amerika"
+   },
+   {
+    "pct": 17.6,
+    "regio": "Europa"
+   },
+   {
+    "pct": 16,
+    "regio": "Azië-Pacific"
+   },
+   {
+    "pct": 2.3,
+    "regio": "Overig"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "MSCI World ex. Controversies",
+   "MSCI Emerging Markets",
+   "MSCI EAFE Small Cap",
+   "MSCI USA Small Cap"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Tabel p. 25: Aandelen Ontwikkelde landen (benchmark: MSCI World ex. Controversies), Opkomende Landen (benchmark: MSCI Emerging Markets), Small Cap EAFE (benchmark: MSCI EAFE Small Cap), Small Cap US (benchmark: MSCI USA Small Cap); Het pensioenfonds belegt voornamelijk in passieve beleggingsfondsen en heeft geen rechtstreekse invloed op de keuze in welke ondernemingen wordt belegd (p. 23); Voor het pensioenfonds geldt dat belegd wordt in passieve beleggingsfondsen, hierdoor hoeft de S10 niet te worden bepaald en is deze op nihil gesteld (p. 117).",
+  "pagina": 25,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 75,
+  "letterlijk": "De strategische valuta-afdekking is bepaald op 75% voor uitsluitend de US Dollar. Eind 2025 was dit nog steeds de enige materiële positie in vreemde valuta (p. 27); Valuta-afdekking USD: Strategische weging 75,0%, Feitelijke weging eind 2025 76,0% (p. 22); Binnen de aandelenportefeuille wordt valutarisico gelopen. Binnen de vastrentende waardenportefeuille wordt uitsluitend belegd in Euro-titels en deze kent derhalve geen valutarisico (p. 112).",
+  "omschrijving": "Het pensioenfonds dekt het valutarisico strategisch voor 75% af (+/- 10% bandbreedte, feitelijk ultimo 2025: 76,0%), uitsluitend voor de Amerikaanse Dollar (USD). Overige vreemde valuta (GBP, JPY, CHF, AUD) worden strategisch voor 0% afgedekt. Aangezien de vastrentende portefeuille uitsluitend eurotitels bevat, is het valutarisico volledig afkomstig uit de aandelenportefeuille. De valuta-afdekking wordt als overlay uitgevoerd door Cardano.",
+  "pagina": 27
+ },
+ "naam": "Recreatie (Recreation)",
+ "pad": "data/annual_reports/34_Recreatie_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

@@ -1,0 +1,82 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 218.6,
+  "feitelijk_pct": 27.2,
+  "letterlijk": "Waarde x €1 miljoen: Aandelen 218,6, Weging 27,2%, Norm 40,0%; Totale portefeuille 805,7, Weging 100,0%, Norm 100,0%",
+  "omvat_private_equity": false,
+  "pagina": 22,
+  "private_equity_pct": null,
+  "strategisch_basis": "rendementsportefeuille",
+  "strategisch_pct": 40,
+  "totaal_beleggingen_eur_mln": 805.7
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": "Van Lanschot Kempen Investment Management N.V.",
+  "letterlijk": "Het fiduciair beheer van het vermogen is uitbesteed aan Van Lanschot Kempen Investment Management (VLK).",
+  "organisatie": "extern",
+  "pagina": 45
+ },
+ "esg": {
+  "co2_doel": "concrete klimaatdoelstelling voor de komende jaren afgesproken, op basis van de zogenaamde “Paris Aligned benchmark”",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "best-in-class",
+   "engagement",
+   "stembeleid",
+   "CO2-reductiedoel",
+   "Paris-aligned benchmark",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Het fonds heeft een concrete klimaatdoelstelling voor de komende jaren afgesproken, op basis van de zogenaamde “Paris Aligned benchmark”. Binnen een “best-in-class” aanpak wordt ernaar gestreefd om alleen te beleggen in ondernemingen die goed scoren op het gebied van MVB.",
+  "omschrijving": "Het fonds valt onder SFDR Artikel 8 en hanteert voor aandelen een best-in-class aanpak, uitsluitingen (o.a. controversiële wapens, tabak, kolen en ondernemingen met ernstige schade of hoge CO2-uitstoot), dialoog/engagement en stembeleid. Er is een concrete klimaatdoelstelling afgesproken op basis van een Paris-Aligned benchmark en externe beheerders worden geselecteerd en gemonitord op ESG-integratie.",
+  "pagina": 26,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 12,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "De relatieve totale kosten van vermogensbeheer (beheer en transactiekosten) zijn met 0,53% iets hoger uitgekomen dan vorig jaar (2024 0,47%). ... Totale transactiekosten € 876 0,10% (p. 34); tabel gemiddelde beheerkosten per categorie vermeldt ontwikkelde landen 0,06% en opkomende landen 0,09%, geen geaggregeerd percentage voor aandelen (p. 35). Direct lending kent als enige categorie een performance fee (p. 34).",
+  "pagina": 34,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.1,
+  "vermogensbeheerkosten_totaal_pct": 0.53
+ },
+ "opmerkingen": "Per 31 januari 2025 is de aandelenportefeuille geherbalanceerd naar 90% ontwikkelde markten en 10% opkomende markten op basis van marktkapitalisatie. Met het oog op het invaren in het nieuwe pensioenstelsel (Wtp, transitie uitgesteld van 1 januari naar 1 juli 2026) is eind oktober 2025 een aandelen-putoptie strategie aangekocht om de dekkingsgraad te beschermen tegen koersdalingen van aandelen. Private equity betreft een kleine restpositie van € 1,188 mln (p. 76).",
+ "regio": {
+  "basis": "strategisch",
+  "letterlijk": "Als onderdeel van deze herbalancering heeft het pensioenfonds de regioverdeling binnen aandelen aangepast, van 80% aandelen ontwikkeld en 20% aandelen opkomend naar een verhouding van 90% aandelen ontwikkeld en 10% aandelen opkomend",
+  "pagina": 25,
+  "verdeling": [
+   {
+    "pct": 90,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 10,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Het grootste deel van de beleggingsportefeuille wordt passief belegd waarbij de beheerkosten laag zijn. Dit betreffen de liquide, aan de beursgenoteerde beleggingen in aandelen",
+  "pagina": 34,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 50,
+  "letterlijk": "Ook de Britse pond (–5%) en de Japanse yen (–12%) daalden ten opzichte van de euro. Het pensioenfonds dekt 50% van de beleggingsblootstelling aan deze valuta's af.",
+  "omschrijving": "Het pensioenfonds dekt 50% van de beleggingsblootstelling aan de Amerikaanse dollar, Britse pond en Japanse yen af.",
+  "pagina": 25
+ },
+ "naam": "Banden- en Wielenbranche (Tire and Wheel Branch)",
+ "pad": "data/annual_reports/12_Banden_en_Wielenbranche_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

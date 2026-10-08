@@ -1,0 +1,73 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 0,
+  "feitelijk_pct": null,
+  "letterlijk": "Kerncĳfers (bedragen in duizenden euro's): Beleggingen 2025: Aandelen -, Vastrentende waarden 4.042, Overig, per saldo 113, Totaal beleggingen voor risico pensioenfonds 4.155 (p. 5); Toelichting op de balans: Aandelen 2025 - (p. 55)",
+  "omvat_private_equity": false,
+  "pagina": 5,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 4.155
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": null,
+  "letterlijk": "De belangrijkste risico’s betreffen de uitbesteding van het pensioenbeheer, van het vermogensbeheer en de custodian. (p. 25) ...conform het in samenspraak met de BCC en de fiduciair manager opgestelde plan (p. 30). De enige relevante uitbestedingspartijen waarmee het pensioenfonds ultimo 2025 nog contracten heeft, zijn BSG en Informatel. (p. 26)",
+  "organisatie": "extern",
+  "pagina": 25
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "best-in-class",
+   "engagement",
+   "stembeleid",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Verder had het pensioenfond gekozen voor een ESG-Leaders index in de wereldwĳde aandelen. Hierdoor sloot het pensioenfonds slechter presterende partĳen in de aandelenportefeuille uit. [...] Het pensioenfonds had zichzelf geen reductiedoel opgelegd [...] Vanaf 1 juli 2025 is dit [SFDR] niet meer van toepassing omdat het pensioenfonds op genoemde datum alle pensioenaanspraken en -rechten middels een collectieve waardeoverdracht aan Aegon Levensverzekeringen N.V. heeft overgedragen. (p. 36)",
+  "omschrijving": "Staples koos voor een passieve ESG-Leaders index voor wereldwijde aandelen (best-in-class en uitsluiting van slechter presterende partijen). Het MVB-beleid omvatte uitsluitingen (internationale verdragen, sanctielijsten), dialoog/engagement via Sustainalytics en CACEIS, stembeleid uitgevoerd door vermogensbeheerders, en ESG-integratie bij managerselectie. Het fonds had zichzelf geen CO2-reductiedoel opgelegd. SFDR is per 1 juli 2025 niet meer van toepassing wegens de buy-out naar Aegon.",
+  "pagina": 36,
+  "sfdr_artikel": null
+ },
+ "fund_id": 177,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Kostenratio’s (p. 6): Kosten vermogensbeheer / gemiddeld belegd vermogen 0,56%; Transactiekosten / gemiddeld belegd vermogen 0,11% (voor 2025 berekend voor de periode januari - juni). Beleggingsopbrengsten (p. 75, bedragen in duizenden euro's): Aandelen beheerkosten -45, transactiekosten -27 (geen percentages per categorie vermeld; prestatievergoeding niet genoemd).",
+  "pagina": 6,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.11,
+  "vermogensbeheerkosten_totaal_pct": 0.56
+ },
+ "opmerkingen": "Stichting Pensioenfonds Staples i.l. bevond zich in 2025 in liquidatie. Per 1 juli 2025 zijn alle pensioenrechten en -aanspraken via een buy-out (collectieve waardeoverdracht conform art. 84 PW) overgedragen aan Aegon Levensverzekeringen N.V. Na ontvangst van de VVGB van DNB is de beleggingsportefeuille maximaal ontdaan van marktrisico; alle direct verhandelbare beleggingen (waaronder de volledige aandelenportefeuille) zijn voor 1 juli 2025 verkocht (ruim 80% per 4 juni 2025) en herbelegd in korte staatsleningen voor 'in kind' overdracht. Ultimo 2025 bedroeg de balanswaarde van aandelen nihil (€ 0 mln); het resterende fondsvermogen (€ 4.155 duizend) was belegd in een geldmarktfonds (BNP Paribas Insticash EUR 1D, € 4.042 duizend) en overige liquiditeiten (€ 113 duizend) ter afwikkeling van de liquidatie. De overeenkomsten met de meeste vermogensbeheerders zijn in de tweede helft van 2025 beëindigd.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "De samenstelling van de onderliggende portefeuille op basis van doorkijk (uitgedrukt in percentages) naar regio was als volgt: 2025: Europa -, Noord-Amerika -, Midden- en Zuid-Amerika -, Azië en Pacific -, Overig -, Totaal - (p. 56)",
+  "pagina": 56,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "ESG-Leaders index"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Voor wat de posities binnen een categorie betreft, werd het beheerst door een algemene voorkeur voor passief beheer en begrenzing van de toegestane tracking error (p. 25). Verder had het pensioenfond gekozen voor een ESG-Leaders index in de wereldwijde aandelen (p. 36).",
+  "pagina": 25,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 65,
+  "letterlijk": "Conform ons strategisch beleggingsbeleid dekte het pensioenfonds in 2025 ongewĳzigd ten opzichte van vorig jaar alleen de Amerikaanse dollar gedeeltelĳk af (75% gemiddeld – 65% voor returnportefeuille en 100% voor matchingportefeuille) door middel van valutatermĳncontracten. (p. 25) ...De valuta-afdekking werd op datzelfde ogenblik afgebouwd, in lĳn met de afname van het exposure naar vreemde valuta (p. 30).",
+  "omschrijving": "Conform het strategisch beleggingsbeleid dekte het pensioenfonds in 2025 alleen de Amerikaanse dollar gedeeltelijk af via valutatermijncontracten: 65% voor de returnportefeuille (waaronder aandelen vielen) en 100% voor de matchingportefeuille (gemiddeld 75% voor het totale fonds). Overige valuta werden niet afgedekt. In de aanloop naar de overdracht per 1 juli 2025 is de valuta-afdekking gelijktijdig met de verkoop van de beleggingsportefeuille afgebouwd; per balansdatum bedroeg de valuta-afdekking nihil (-).",
+  "pagina": 25
+ },
+ "naam": "Staples (SPS, in liquidatie)",
+ "pad": "data/annual_reports/177_Staples_in_liquidatie_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

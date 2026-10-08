@@ -1,0 +1,95 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 126.674,
+  "feitelijk_pct": 76.4,
+  "letterlijk": "De verdeling van de beleggingsportefeuille per 31 december 2025 en 2024 is als volgt: Aandelen 76,4% [...] heeft geleid tot het besluit om de eigen norm aan te passen naar 80% (p. 22). Balans (bedragen x €1.000): Aandelen 126.674, Totaal beleggingen 165.956 (p. 6).",
+  "omvat_private_equity": false,
+  "pagina": 22,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 80,
+  "totaal_beleggingen_eur_mln": 165.956
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Vanguard",
+    "pagina": 44,
+    "product_of_mandaat": "Vanguard Selected Screened FTSE Developed World II Common Contractual Fund",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": null,
+  "letterlijk": "Het belang in beursgenoteerde aandelen dat wordt gehouden via het Vanguard Selected Screened FTSE Developed World II Common Contractual Fund bedraagt €126.673.715 (2024: €107.895.336). In 2024 is de portefeuille zakelijke waarden, die was ondergebracht bij Selectum, herbelegd in het Vanguard Selected Screened FTSE Developed World II Common Contractual Fund. Daarmee zijn alle aandelenbeleggingen van het Fonds belegd in het genoemde fonds van Vanguard.",
+  "organisatie": "extern",
+  "pagina": 44
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "De pensioenregelingen van het Fonds classificeren hierdoor onder SFDR als een artikel 6 product. Dit betekent dat het Fonds duurzaamheidsrisico's integreert in de beleggingsbeslissingen, maar geen specifieke ecologische of sociale kenmerken promoot (artikel 8) of duurzame beleggingen als doel heeft (artikel 9).",
+  "omschrijving": "Het fonds classificeert onder SFDR als artikel 6 en integreert ESG-risico's kwalitatief in beleggingsbeslissingen en monitoring. Aandelen zijn belegd in een Vanguard-indexfonds dat uitsluitingen hanteert op basis van sectoren (tabak, controversiële wapens waaronder clustermunitie) en UN Global Compact criteria. Er zijn geen kwantitatieve ESG- of CO2-doelstellingen.",
+  "pagina": 23,
+  "sfdr_artikel": 6
+ },
+ "fund_id": 103,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.28,
+  "letterlijk": "Aandelen: Beheerkosten 0,28%, Prestatieafhankelijke vergoedingen -, Transactiekosten 0,05%. Gemiddeld belegd vermogen: Beheerkosten 0,28%, Transactiekosten 0,04%.",
+  "pagina": 21,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": 0.05,
+  "transactiekosten_totaal_pct": 0.04,
+  "vermogensbeheerkosten_totaal_pct": 0.28
+ },
+ "opmerkingen": "In de tweede helft van 2024 is het actief beheerde aandelenfonds (Selectum) verkocht en zijn alle aandelenbeleggingen herbelegd in het passief beheerde Vanguard Selected Screened FTSE Developed World II Common Contractual Fund. Hierdoor zijn de beheerkosten voor aandelen gedaald van 0,63% naar 0,28%. In Q3 2025 steeg het aandelenbelang door koersstijgingen boven de norm van 75%, waarop het bestuur de norm heeft verhoogd naar 80%. De Visitatiecommissie en het bestuur signaleren een verhoogd concentratierisico in de VS (69% van het fonds) en Big Tech (tech-sector 32%), hetgeen wordt onderzocht in een eind 2025 gestarte ALM-studie. Wtp-ontwikkelingen en strategische toekomstperspectieven worden gemonitord.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "De verdeling van de beleggingen is als volgt: Aandelen: Nederland 0,8%, Europa overig 11,5%, Noord-Amerika 55,4%, Wereld overig 8,7%, Totaal 76,4%",
+  "pagina": 48,
+  "verdeling": [
+   {
+    "pct": 55.4,
+    "regio": "Noord-Amerika"
+   },
+   {
+    "pct": 11.5,
+    "regio": "Europa"
+   },
+   {
+    "pct": 8.7,
+    "regio": "Overig"
+   },
+   {
+    "pct": 0.8,
+    "regio": "Nederland"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": 0,
+  "benchmarks": [
+   "FTSE Russell"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Doordat het Bestuur gekozen heeft voor een belegging in een passief beheerd aandelenfonds en een buy-and-hold aanpak hanteert, zijn de vermogensbeheerkosten relatief laag. De door het Fonds gebruikte benchmark, de FTSE Russell, heeft over 2025 een performance behaald van 18,32%.",
+  "pagina": 21,
+  "passief_pct": 100,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Het valutarisico wordt beperkt door te beleggen in activa die in euro zijn genoteerd. In het incidentele geval dat er een verplichting wordt aangegaan in een andere valuta zal ter afdekking belegd worden in activa in dezelfde valuta. Het Fonds heeft op balansdatum alleen beleggingen in euro’s.",
+  "omschrijving": "Het valutarisico wordt beperkt door te beleggen in activa genoteerd in euro's; het fonds houdt op balansdatum alleen beleggingen in euro's aan. Een specifiek afdekkingspercentage voor de aandelenportefeuille wordt niet genoemd (wel worden 'hedgingkosten' als verklaring genoemd voor performanceverschillen t.o.v. de benchmark).",
+  "pagina": 48
+ },
+ "naam": "HAL",
+ "pad": "data/annual_reports/103_HAL_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

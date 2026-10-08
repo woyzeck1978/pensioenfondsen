@@ -1,0 +1,72 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": null,
+  "feitelijk_pct": null,
+  "letterlijk": "",
+  "omvat_private_equity": null,
+  "pagina": null,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": null,
+  "letterlijk": "De portefeuille aandelen ontwikkelde landen bestaat grotendeels uit twee indexfondsen (wereldwijd en Europees) en voor een kleiner deel uit een actieve aandelenmanager met een specifieke ESG-opdracht.",
+  "organisatie": "extern",
+  "pagina": 240
+ },
+ "esg": {
+  "co2_doel": "30% reductie ten opzichte van 2019 en vervolgens een jaarlijkse afname van ten minste 7% in lijn met de klimaatdoelstellingen van Parijs",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "best-in-class",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie",
+   "engagement",
+   "stembeleid"
+  ],
+  "letterlijk": "Dit fonds belegt passief op basis van een ESG-benchmark. Dat betekent dat bepaalde bedrijven worden uitgesloten en dat binnen sectoren wordt geselecteerd op ondernemingen die relatief goed presteren op het gebied van duurzaamheid (best-in-class).",
+  "omschrijving": "Ontwikkelde landen via twee indexfondsen en actieve ESG-manager (minder CO2, SDG-bijdragen); opkomende markten passief met ESG-benchmark (uitsluitingen, best-in-class); fondsbreed engagement, stembeleid en CO2-doel.",
+  "pagina": 240,
+  "sfdr_artikel": null
+ },
+ "fund_id": 189,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "",
+  "pagina": null,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": null,
+  "vermogensbeheerkosten_totaal_pct": null
+ },
+ "opmerkingen": "Kring van Het Nederlandse Pensioenfonds (Hnp). Portefeuille aandelen ontwikkelde landen bestaat grotendeels uit twee indexfondsen (wereldwijd en Europees) en voor een kleiner deel uit een actieve manager met ESG-opdracht. Opkomende markten passief ingevuld met ESG-benchmark.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "De portefeuille aandelen ontwikkelde landen bestaat grotendeels uit twee indexfondsen (wereldwijd en Europees) en voor een kleiner deel uit een actieve aandelenmanager met een specifieke ESG-opdracht. De categorie aandelen opkomende landen wordt ingevuld met een passief aandelenfonds.",
+  "pagina": 240,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "",
+  "omschrijving": "Niet vermeld in de verstrekte pagina voor deze kring.",
+  "pagina": null
+ },
+ "naam": "Pensioenkring OWASE (Hnp)",
+ "pad": "data/annual_reports/165_Kring_Arcadis_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

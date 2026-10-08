@@ -1,0 +1,81 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 4146,
+  "feitelijk_pct": 23.1,
+  "letterlijk": "Aandelen: Omvang in € mln: 4.146, % van totaal: 23%; Totaal excl rente-afdekking: 17.956 mln (100%); Totaal incl rente-afdekking: 17.654 mln; Private equity: 0 mln (0%) (pagina 98); Aandelen Feitelijke omvang: 23,1% (pagina 59)",
+  "omvat_private_equity": false,
+  "pagina": 98,
+  "private_equity_pct": 0,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 17956
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "BlackRock",
+    "pagina": 98,
+    "product_of_mandaat": null,
+    "segment": "wereldwijd",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "BlackRock",
+  "letterlijk": "Het Fonds heeft het beheer van de beleggingen uitbesteed aan de vermogensbeheerder BlackRock (pagina 98); Voor fiduciair beheer... is met BlackRock een aparte vergoeding afgesproken (pagina 99); BlackRock (Master Manager) zorgt dat het beleid wordt uitgevoerd door de onderliggende vermogensbeheerders (pagina 66)",
+  "organisatie": "extern",
+  "pagina": 98
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": true,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "eigen ESG-index"
+  ],
+  "letterlijk": "Voor de beursgenoteerde aandelenportefeuilles voor aandelen uit ontwikkelde markten en voor aandelen uit opkomende markten zijn aangepaste benchmarks toegepast en gerepliceerd gedurende het afgelopen jaar. De benchmarks zijn aangepast om CO2-reductie en bijdrage door bedrijven aan de SDGs 3, 11, 12 en 13 na te streven (pagina 234); uitsluitingsbeleid, dialoog en stemmen (pagina 66-67, 234)",
+  "omschrijving": "Het fonds promoot ecologische en sociale kenmerken (SFDR art. 8) door middel van uitsluitingen, engagement (dialoog), stembeleid en maatwerk iSTOXX PPF benchmarks gericht op CO2-reductie en bijdrage aan SDGs 3, 11, 12 en 13.",
+  "pagina": 234,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 119,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Transactiekosten Als percentage van het gemiddeld belegd vermogen: 0,17% (pagina 96); Als percentage van het gemiddeld belegd vermogen zijn de kosten gelijk gebleven: 0,31% in zowel 2025 als 2024 (pagina 99); Voor aan- en verkoopkosten bij aandelen- en futuretransacties zijn de werkelijk betaalde broker- en commissiekosten opgenomen voor een totaalbedrag van € 1,1 miljoen (pagina 101)",
+  "pagina": 96,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.17,
+  "vermogensbeheerkosten_totaal_pct": 0.31
+ },
+ "opmerkingen": "Aandelenportefeuille van Philips Pensioenfonds (€ 4.146 mln, 23,1% feitelijk) wordt 100% passief en direct beheerd door BlackRock (tevens fiduciair beheerder) tegen maatwerk iSTOXX PPF benchmarks voor ontwikkelde en opkomende markten met SDG- en CO2-doelstellingen (SFDR artikel 8). Tracking error ligt onder 1% (0-1%). Geen private equity (0%). Valutarisico is selectief afgedekt (75% USD, 50% overige belangrijke valuta's). Strategisch gewicht voor aandelen afzonderlijk wordt niet genoemd (wel 34,0% voor zakelijke waarden totaal). Regioverdeling in % wordt niet vermeld in het verslag.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "zowel bij de aandelenportefeuille ontwikkelde markten als bij de aandelenportefeuille opkomende markten (pagina 66); geen procentuele gewichten of regionale verdeling genoemd",
+  "pagina": 66,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": 0,
+  "benchmarks": [
+   "iSTOXX PPF Responsible SDG Developed Markets Index Net Return",
+   "iSTOXX Responsible SDG Emerging Markets Index Net Return"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "De allocatie naar aandelen is geheel passief belegd. De tracking errors van deze mandaten liggen geheel 2025 tussen 0% en 1% (pagina 191); iSTOXX PPF Responsible SDG Developed Markets Index Net Return, iSTOXX Responsible SDG Emerging Markets Index Net Return (pagina 58)",
+  "pagina": 191,
+  "passief_pct": 100,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Voor de beleggingscategorie aandelen geldt dat het USD-valutarisico voor 75% is afgedekt, terwijl het risico van andere belangrijke valuta’s voor 50% is afgedekt (pagina 58).",
+  "omschrijving": "Voor de beleggingscategorie aandelen geldt dat het USD-valutarisico voor 75% is afgedekt, terwijl het risico van andere belangrijke valuta’s voor 50% is afgedekt.",
+  "pagina": 58
+ },
+ "naam": "Philips",
+ "pad": "data/annual_reports/119_Philips_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

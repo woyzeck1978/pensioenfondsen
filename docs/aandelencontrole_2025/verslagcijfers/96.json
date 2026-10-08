@@ -1,0 +1,101 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": null,
+  "feitelijk_pct": 30.5,
+  "letterlijk": "Eind van 2025 was 33,5% belegd in vastrentende waarden, 30,5% in aandelen, 20,5% in hoogrentende waarden.",
+  "omvat_private_equity": false,
+  "pagina": 29,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 30,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "MN",
+    "pagina": 29,
+    "product_of_mandaat": null,
+    "segment": "aandelen",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "MN",
+  "letterlijk": "In opdracht van het fonds belegt MN, daar waar mogelijk, voornamelijk op een passieve wijze.",
+  "organisatie": "extern",
+  "pagina": 29
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": true,
+  "instrumenten": [
+   "uitsluitingen",
+   "eigen ESG-index",
+   "ESG-integratie in selectie",
+   "engagement",
+   "stembeleid"
+  ],
+  "letterlijk": "Voor de liquide beleggingen geldt het streven om duurzaamheidskenmerken zoveel mogelijk in de benchmark te implementeren, middels maatwerk ESG benchmarks.",
+  "omschrijving": "Pensioenfonds Forbo hanteert uitsluitingen (17 landen, 640 bedrijven), ESG-integratie via maatwerk ESG-benchmarks (Custom MSCI-indices) en actief aandeelhouderschap door middel van engagement en stembeleid uitgevoerd door MN.",
+  "pagina": 132,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 96,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Beheerkosten beleggingen – Aandelen 113.516; Kosten vermogensbeheer 1.367.175 0,28%; Transactiekosten 240.771 0,05%",
+  "pagina": 34,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.05,
+  "vermogensbeheerkosten_totaal_pct": 0.28
+ },
+ "opmerkingen": "Vanaf begin 2025 hanteert het fonds de MSCI ACWI als leidraad voor de regionale spreiding van het cluster aandelen; de weging naar opkomende markten is afgebouwd ten gunste van Noord-Amerika. Het fonds bereidt de Wtp-transitie voor naar een solidaire premieregeling per 1 juli 2027.",
+ "regio": {
+  "basis": "strategisch",
+  "letterlijk": "Europa 7,5% Custom MSCI Europe Net Total Return Index; Noord Amerika 16,5% Custom MSCI North America Gross Net Total Return Index; Verre Oosten 3,0% Custom MSCI Pacific Net Total Return Index; Opkomende Landen 3,0% Custom MSCI Emerging Markets Net Total Return Index",
+  "pagina": 28,
+  "verdeling": [
+   {
+    "pct": 16.5,
+    "regio": "Noord-Amerika"
+   },
+   {
+    "pct": 7.5,
+    "regio": "Europa"
+   },
+   {
+    "pct": 3,
+    "regio": "Azië-Pacific"
+   },
+   {
+    "pct": 3,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "Custom MSCI Europe Net Total Return Index",
+   "Custom MSCI North America Gross Net Total Return Index",
+   "Custom MSCI Pacific Net Total Return Index",
+   "Custom MSCI Emerging Markets Net Total Return Index"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "In opdracht van het fonds belegt MN, daar waar mogelijk, voornamelijk op een passieve wijze.",
+  "pagina": 29,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Daarnaast is het valutabeleid beoordeeld, waarbij is besloten dit ongewijzigd voort te zetten.",
+  "omschrijving": "Het valutabeleid is in 2025 beoordeeld en ongewijzigd voortgezet; een specifiek afdekkingspercentage voor de aandelenportefeuille wordt in het verslag niet genoemd.",
+  "pagina": 15
+ },
+ "naam": "Forbo",
+ "pad": "data/annual_reports/96_Forbo_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

@@ -1,0 +1,83 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 774.267,
+  "feitelijk_pct": 29.8,
+  "letterlijk": "Aandelen ontwikkelde markten 665.442 (25,6%, norm 24,1%), Aandelen opkomende markten 108.825 (4,2%, norm 3,7%), totaal 2.600.818 (in € 1.000,-)",
+  "omvat_private_equity": false,
+  "pagina": 36,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 27.8,
+  "totaal_beleggingen_eur_mln": 2600.818
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": "Goldman Sachs Asset Management B.V.",
+  "letterlijk": "De Stichting heeft het beheer van de beleggingen uitbesteed aan Goldman Sachs Asset Management B.V.",
+  "organisatie": "extern",
+  "pagina": 139
+ },
+ "esg": {
+  "co2_doel": "in 2050 CO2-netto-neutraal",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Voor de aandelenbeleggingen in ontwikkelde markten geldt dat deze aansluiten bij de doelen van het klimaatakkoord van Parijs. De aandelenbeleggingen worden belegd op basis van de Europese klimaatbenchmark, de zogenaamde Climate Transition Benchmark. Dat betekent dat de ondernemingen in deze portefeuille vanaf nu tot 2050 steeds minder CO2 mogen uitstoten, zodat ze in 2050 CO2-netto-neutraal zijn.",
+  "omschrijving": "POB classificeert zichzelf als lichtgroen (SFDR artikel 8). Voor aandelen past het fonds uitsluitingen toe, een eigen engagementbeleid en een actief stembeleid via ISS SRI. Aandelen ontwikkelde markten worden belegd volgens de EU Climate Transition Benchmark met het doel om in 2050 CO2-netto-neutraal te zijn. Tevens vindt ESG-integratie plaats bij selectie van fondsen en beheerders.",
+  "pagina": 40,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 29,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "De totale kosten van vermogensbeheer zonder de transactiekosten bedroegen daarmee € 4.765 ... Dit komt overeen met 0,18% ... transactiekosten bedroegen 0,02% ... verdeling van de totale kosten van het vermogensbeheer inclusief transactiekosten per beleggingscategorie: Aandelen € 484 (duizend), 0,02%",
+  "pagina": 51,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.02,
+  "vermogensbeheerkosten_totaal_pct": 0.18
+ },
+ "opmerkingen": "POB is per 1 juli 2025 ingevaren in de Wtp met een solidaire premieregeling. De portefeuille is verdeeld in een beschermingsportefeuille (52,2%) en een rendementsportefeuille (47,8%); aandelen maken volledig deel uit van de rendementsportefeuille. Met de overgang naar de Wtp is ook het valuta-afdekkingsbeleid gewijzigd (voorheen 75% van USD, GBP, JPY; per 1 juli 2025 50% van alleen USD). In de uitsnede worden geen specifieke onderliggende aandelenbeheerders genoemd (wel Goldman Sachs Asset Management B.V. als fiduciair beheerder). Voor aandelenkosten toont pagina 51 € 484 duizend en 0,02% als aandeel van de totale portefeuille inclusief transactiekosten; een uitsplitsing in % van het aandelenvermogen ontbreekt.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Aandelen ontwikkelde markten 25,6%, Aandelen opkomende markten 4,2%",
+  "pagina": 36,
+  "verdeling": [
+   {
+    "pct": 25.6,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 4.2,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": 0,
+  "benchmarks": [
+   "Climate Transition Benchmark",
+   "Morgan Stanley Capital International indices"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Met uitzondering van de beleggingen in bedrijfsobligaties en green bonds worden alle liquide beleggingen passief ingevuld.",
+  "pagina": 43,
+  "passief_pct": 100,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 50,
+  "letterlijk": "in 2025 was onze strategie tot invaren in de Wtp om het valutarisico binnen wereldwijde aandelenportefeuille strategisch voor 75% af te dekken voor beleggingen in Amerikaanse dollars, Britse ponden en Japanse yens. Na invaren in de Wtp op 1 juli 2025 wordt uitsluitend het valutarisico op de Amerikaanse dollar afgedekt, voor 50%.",
+  "omschrijving": "Tot invaren in de Wtp op 1 juli 2025 werd het valutarisico binnen de wereldwijde aandelenportefeuille strategisch voor 75% afgedekt voor USD, GBP en JPY. Na invaren per 1 juli 2025 wordt uitsluitend het valutarisico op de Amerikaanse dollar afgedekt, voor 50%.",
+  "pagina": 43
+ },
+ "naam": "Openbare Bibliotheken / POB (Public Libraries)",
+ "pad": "data/annual_reports/29_Openbare_Bibliotheken_PO_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

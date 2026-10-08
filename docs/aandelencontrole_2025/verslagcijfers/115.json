@@ -1,0 +1,65 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": null,
+  "feitelijk_pct": null,
+  "letterlijk": "De koopsom voor de verzekering is door het pensioenfonds aan Nationale-Nederlanden betaald door het liquide maken van alle beleggingen. De belegging in het aandelenfonds Blackrock en de staatsobligatie bij CACEIS zijn verkocht.",
+  "omvat_private_equity": false,
+  "pagina": 26,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": null,
+  "letterlijk": "Door het aangaan van het garantiecontract werden de overeenkomsten met betrekking tot bewaarneming en vermogensbeheer in de eerste helft van 2024 beëindigd. [...] Tot begin 2024 waren Columbia Threadneedle (liability driven investment looptijdfondsen en geldmarktfondsen), Blackrock (aandelen) en ASR (Nederlandse woninghypotheken) vermogensbeheerder.",
+  "organisatie": "extern",
+  "pagina": 9
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [],
+  "letterlijk": "",
+  "omschrijving": "Het jaarverslag vermeldt geen specifiek ESG-beleid of SFDR-classificatie voor de aandelenbeleggingen; alle beleggingen zijn begin 2024 geliquideerd in het kader van het garantiecontract met Nationale-Nederlanden.",
+  "pagina": null,
+  "sfdr_artikel": null
+ },
+ "fund_id": 115,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "De kosten voor de beleggingsadministratie en voor adviezen en rapportages over het beleggingsbeleid zijn niet in het bovenstaande overzicht begrepen. Deze worden als onderdeel van de vermogensbeheerskosten verantwoord. Door het liquideren van de beleggingen in 2024 bedroegen deze in 2025 nihil. In 2024 was dit nog € 220.000.",
+  "pagina": 38,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": null,
+  "vermogensbeheerkosten_totaal_pct": null
+ },
+ "opmerkingen": "Stichting Metro Pensioenfonds heeft begin 2024 alle beleggingen geliquideerd ter voldoening van de koopsom voor een garantiecontract (buy-in) bij Nationale-Nederlanden, waarmee alle pensioenaanspraken en -rechten zijn verzekerd. Hierdoor liep het fonds in 2025 geen beleggings- en marktrisico's meer en bedroegen de vermogensbeheerkosten in 2025 nihil (€ 0). Tot begin 2024 traden Columbia Threadneedle (LDI en geldmarktfondsen), Blackrock (aandelen) en ASR (woninghypotheken) op als vermogensbeheerder en CACEIS als bewaarder, administrateur en valuta-afdekker; al deze overeenkomsten zijn in de eerste helft van 2024 beëindigd en het aandelenfonds Blackrock is verkocht. Op 12 december 2025 besloot het bestuur tot voorgenomen liquidatie en een collectieve waardeoverdracht (CWO) van alle pensioenverplichtingen naar Nationale-Nederlanden per 1 april 2026, waarna het fonds per die datum in liquidatie is getreden.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "onbekend",
+  "letterlijk": "",
+  "pagina": null,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Tot begin 2024 was CACEIS de bewaarder van de beleggingen (custodian) en verzorgde de valuta-afdekking en de beleggingsadministratie.",
+  "omschrijving": "Tot begin 2024 was CACEIS bewaarder en verzorgde de valuta-afdekking. Door het aangaan van het garantiecontract bij Nationale-Nederlanden zijn alle beleggingen begin 2024 liquide gemaakt en zijn de marktrisico's (waaronder het valutarisico) herverzekerd.",
+  "pagina": 9
+ },
+ "naam": "Metro",
+ "pad": "data/annual_reports/115_Metro_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

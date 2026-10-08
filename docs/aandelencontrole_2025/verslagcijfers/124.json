@@ -1,0 +1,117 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 384.142,
+  "feitelijk_pct": null,
+  "letterlijk": "Aandelen (...) Totaal 384.142 (in % 100,0; bedragen x € 1.000)",
+  "omvat_private_equity": true,
+  "pagina": 77,
+  "private_equity_pct": 0.1,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Robeco",
+    "pagina": 77,
+    "product_of_mandaat": "Robeco QI Inst. Global Devel. Enhanced Index",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "enhanced/factor"
+   },
+   {
+    "naam": "Robeco",
+    "pagina": 77,
+    "product_of_mandaat": "Robeco QI Inst. Conservative Equity Fonds",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "enhanced/factor"
+   },
+   {
+    "naam": "Robeco",
+    "pagina": 77,
+    "product_of_mandaat": "Robeco Sustainable Global Stars Equities fund",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "actief"
+   },
+   {
+    "naam": "Robeco",
+    "pagina": 77,
+    "product_of_mandaat": "Robeco QI Inst. Emerg.Markets Enhanced Index",
+    "segment": "opkomende markten",
+    "stijl": "enhanced/factor"
+   },
+   {
+    "naam": "Robeco",
+    "pagina": 77,
+    "product_of_mandaat": "Robeco Emerging Markets Conservative Equity",
+    "segment": "opkomende markten",
+    "stijl": "enhanced/factor"
+   },
+   {
+    "naam": "Stafford",
+    "pagina": 77,
+    "product_of_mandaat": "Stafford Global Private Equity III",
+    "segment": "overig",
+    "stijl": "actief"
+   }
+  ],
+  "fiduciair_beheerder": "Goldman Sachs Asset Management (GSAM)",
+  "letterlijk": "Het fiduciair vermogensbeheer was in het boekjaar uitbesteed aan Goldman Sachs Asset Management (GSAM).",
+  "organisatie": "extern",
+  "pagina": 14
+ },
+ "esg": {
+  "co2_doel": "in lijn met de net zero ambitie van onze sponsor Robeco",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Tevens ambiëren we voor de CDC-regeling om als SFDR artikel 8 geclassificeerd te staan (...) We hebben de ambitie om te handelen in lijn met de net zero ambitie van onze sponsor Robeco.",
+  "omschrijving": "Het fonds classificeert de CDC-regeling als SFDR Artikel 8 en past uitsluitingen toe (controversiële wapens, VN Global Compact/OESO-richtlijnen, palmolie, wapenembargo's), ESG-integratie in managerselectie en het beleggingsproces, actief aandeelhouderschap via engagement en stembeleid, en streeft naar handelen in lijn met de net-zero ambitie van sponsor Robeco.",
+  "pagina": 38,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 124,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.23,
+  "letterlijk": "Aandelen: Beheervergoeding 0,23, Performance gerelateerde kosten 0,00, 2025: 0,23%; Totale vermogensbeheerkosten 0,34%; Transactiekosten 0,12%",
+  "pagina": 27,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.12,
+  "vermogensbeheerkosten_totaal_pct": 0.34
+ },
+ "opmerkingen": "De beursgenoteerde aandelenportefeuille wordt vrijwel volledig (99,5%) belegd via fondsen van sponsor Robeco (RIAM), verdeeld over Enhanced Indexing, Low-Volatility factorbeleggen (Conservative Equity) en actief beheer (Global Stars). In de aandelenspecificatie op pagina 77 is tevens een klein belang opgenomen in Stafford Global Private Equity III (0,1%, € 0,42 mln) en Goldman Duration Matching XL NL I (0,4%, € 1,42 mln). De tracking error bedroeg ultimo 2025 1,7% (VEV actief beheerrisico geldt uitsluitend voor aandelen). Met het oog op de Wtp-transitie (vertraagd bij Appel/Lumera) wordt in 2026 het beheer van de DC-beleggingen overgezet naar GSAM met Northern Trust als administrateur, en staat een herziening van de SAA gepland voor de collectieve uitkeringsportefeuille na invaren.",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "MSCI World Net TR Index",
+   "MSCI Emerg.Markets Net TR Index",
+   "MSCI All Countries Net TR Index"
+  ],
+  "factorbeleggen": true,
+  "hoofdstijl": "actief",
+  "letterlijk": "De tracking error ultimo 2025 is 1,7% (2024: 0,97%). (...) Verder wordt het VEV voor actief beheer alleen aangehouden over de aandelen.",
+  "pagina": 91,
+  "passief_pct": null,
+  "tracking_error_pct": 1.7
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Specificatie naar soort: Valutaderivaten 1.573",
+  "omschrijving": "Het fonds maakt gebruik van valutaderivaten (ultimo 2025: € 1.573 duizend op de balans), maar vermeldt geen specifiek afdekkingspercentage voor de aandelenportefeuille.",
+  "pagina": 77
+ },
+ "naam": "Robeco",
+ "pad": "data/annual_reports/124_Robeco_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

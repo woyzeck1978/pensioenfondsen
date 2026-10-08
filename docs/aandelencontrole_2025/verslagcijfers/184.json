@@ -1,0 +1,91 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 249.6,
+  "feitelijk_pct": 34.3,
+  "letterlijk": "Aandelen 249,6 34,3 32,0",
+  "omvat_private_equity": false,
+  "pagina": 11,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 32,
+  "totaal_beleggingen_eur_mln": 726.8
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "MM",
+    "pagina": 36,
+    "product_of_mandaat": "MM Developed World Equity Index Fund",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "MM",
+    "pagina": 37,
+    "product_of_mandaat": "MM Global Emerging Markets Fund",
+    "segment": "opkomende markten",
+    "stijl": "actief"
+   }
+  ],
+  "fiduciair_beheerder": "Aegon AM",
+  "letterlijk": "Het fiduciair beheer voor de beleggingen risico pensioenkring is uitbesteed aan Aegon AM",
+  "organisatie": "extern",
+  "pagina": 106
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen"
+  ],
+  "letterlijk": "Het uitsluitingsbeleid behorend bij het beleid inzake Maatschappelijk Verantwoord Beleggen had dit jaar een negatieve impact op het relatieve rendement van circa 0,3%.",
+  "omschrijving": "Uitsluitingsbeleid behorend bij het MVB-beleid (had circa -0,3% impact op het fonds ontwikkelde markten). MVB is daarnaast onderdeel van de investment cases.",
+  "pagina": 36,
+  "sfdr_artikel": null
+ },
+ "fund_id": 184,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.06,
+  "letterlijk": "Aandelen 427 318 0,06 0,05",
+  "pagina": 18,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": 0.02,
+  "transactiekosten_totaal_pct": 0.04,
+  "vermogensbeheerkosten_totaal_pct": 0.26
+ },
+ "opmerkingen": "Pensioenkring Aon Groep Nederland belegt binnen aandelen via twee fondsen: MM Developed World Equity Index Fund (passief) en MM Global Emerging Markets Fund (actief via bottom-up aandelenselectie door externe managers). Ultimo 2025 was het valutarisico op ontwikkelde markten voor 100% afgedekt met een FX overlay; per 1 januari 2026 is besloten dit te verlagen naar 50%. Fiduciair beheer is uitbesteed aan Aegon AM. Voorbereidende werkzaamheden voor de transitie naar de Wtp zijn gaande.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Ontwikkelde markten 191,2 26,3 25,5; Opkomende markten 58,5 8,0 6,5",
+  "pagina": 11,
+  "verdeling": [
+   {
+    "pct": 26.3,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 8,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "De ex-ante tracking error bedraagt eind 2025 0,2% op jaarbasis.",
+  "pagina": 19,
+  "passief_pct": null,
+  "tracking_error_pct": 0.2
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 100,
+  "letterlijk": "Aandelen ontwikkelde markten 100,0%",
+  "omschrijving": "Valutarisico van aandelen ontwikkelde markten was ultimo 2025 voor 100% afgedekt met een FX overlay; voor opkomende markten n.v.t. In het beleggingsplan 2026 is besloten de afdekking per 1 januari 2026 te verlagen naar 50%.",
+  "pagina": 53
+ },
+ "naam": "Pensioenkring AON (Stap)",
+ "pad": "data/annual_reports/184_Pensioenkring_AON_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

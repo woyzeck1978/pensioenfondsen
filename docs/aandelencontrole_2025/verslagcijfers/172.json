@@ -1,0 +1,82 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 204.692,
+  "feitelijk_pct": null,
+  "letterlijk": "Tabel Kerncijfers laatste 10 jaar – Beleggingen (in '000 euro's, p. 44): Aandelen 204.692 (€ 204,692 mln); Totaal belegd vermogen 701.576 (€ 701,576 mln). Een feitelijk allocatiepercentage per ultimo 2025 voor de totale aandelenportefeuille wordt niet genoemd in de tabel (Developed Markets U-FCP WEF bedraagt 23,2% van de totale portefeuille, p. 42).",
+  "omvat_private_equity": false,
+  "pagina": 44,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 701.576
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "U-FCP",
+    "pagina": 42,
+    "product_of_mandaat": "World Equity Fund (U-FCP WEF)",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": null,
+  "letterlijk": "Wij hebben bij 19 van de 19 externe vermogensbeheerders de integratie van gepromote ecologische of sociale kenmerken getoetst. Al deze managers voldoen aan onze criteria (p. 42); Grootste beleggingen: Developed Markets (U-FCP WEF, USD) Sector: Aandelen 23,2% Land: Lux (p. 42); Driejaarlijkse reviews van het World Equity Fund (p. 27); Kosten fiduciair beheer € 210 duizend (p. 39). De fiduciair beheerder en individuele externe beheerders worden niet bij naam genoemd.",
+  "organisatie": "extern",
+  "pagina": 42
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "In lijn met artikel 11 van de SFDR zetten wij hieronder uiteen in welke mate wij ecologische en sociale kenmerken promoten (artikel 8 SFDR) (p. 42); 46,2% van de beleggingen is afgestemd op de ecologische of sociale kenmerken in de zin van artikel 8 van SFDR (p. 42); We spraken wereldwijd 463 ondernemingen aan op hun beleid over 2.320 ESG-onderwerpen ... Wereldwijd stemden we op 3.169 aandeelhoudersvergaderingen over 30.526 resoluties (p. 42); Wij hebben bij 19 van de 19 externe vermogensbeheerders de integratie van gepromote ecologische of sociale kenmerken getoetst (p. 42); Tot slot meten en rapporteren we over de CO2-uitstoot van onze beleggingen op basis van de Weighted Average Carbon Intensity (WACI) (p. 42); In de zin van SFDR-wetgeving hanteert Unilever APF geen referentiebenchmark (p. 42).",
+  "omschrijving": "Kring Forward promoot ecologische en sociale kenmerken onder SFDR Artikel 8 (46,2% van de totale beleggingen is afgestemd op E/S-kenmerken). Het beleid verantwoord beleggen omvat uitsluitingen van ondernemingen en landen, actief aandeelhouderschap via wereldwijde engagement (463 ondernemingen aangesproken op 2.320 onderwerpen) en stembeleid (gestemd op 3.169 aandeelhoudersvergaderingen over 30.526 resoluties), en toetsing van de integratie van E/S-kenmerken bij alle 19 externe vermogensbeheerders. Er wordt gerapporteerd over de CO2-uitstoot via de Weighted Average Carbon Intensity (WACI); er wordt geen SFDR-referentiebenchmark gehanteerd.",
+  "pagina": 42,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 172,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.06,
+  "letterlijk": "Tabel 2025 Kosten per beleggingscategorie in '000 euro's (p. 39): Aandelen Beheerkosten € 423 (0,06% van gemiddeld belegd vermogen), Prestatieafhankelijke vergoeding –, Transactiekosten € 23 (0,00% van gemiddeld belegd vermogen). Kosten vermogensbeheer (p. 38, 39): Kosten vermogensbeheer exclusief transactiekosten 0,40% (€ 2,8 mln / € 2.759 duizend), Transactiekosten 0,06% (€ 0,4 mln / € 411 duizend), Totale kosten 0,46% (€ 3,2 mln / € 3.170 duizend).",
+  "pagina": 39,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": 0,
+  "transactiekosten_totaal_pct": 0.06,
+  "vermogensbeheerkosten_totaal_pct": 0.4
+ },
+ "opmerkingen": "Kring Forward is een open kring binnen Stichting Algemeen Pensioenfonds Unilever Nederland. Op 16 december 2025 heeft het bestuur formeel de opdracht aanvaard voor de transitie naar de nieuwe solidaire premieregeling onder de Wtp (p. 27). In het kader van de Wtp-voorbereiding is specifieke aandacht besteed aan grote portefeuilleswitches, zoals de afbouw van Nederlandse hypotheken en de rol van aandelen, en zijn de investment beliefs herijkt (p. 27). Om de dekkingsgraad te beschermen van begin juli 2025 tot begin januari 2027 zijn swaptions en aandelen-putopties toegevoegd, wat leidde tot extra kosten in euro's (p. 38, 44, 45). De aandelenportefeuille bedroeg ultimo 2025 € 204,692 mln op een totaal belegd vermogen van € 701,576 mln (p. 44). Aandelen worden grotendeels belegd via de Luxemburgse pool Developed Markets (U-FCP WEF, USD; 23,2% van het totale belegde vermogen, p. 42), naast Global Emerging Markets (p. 45), maar de 19 externe vermogensbeheerders worden niet individueel bij naam genoemd. Forward promoot E/S-kenmerken onder SFDR Artikel 8 (46,2% afgestemd) met uitsluitingen, engagement, stembeleid en ESG-integratietoetsing. De vermogensbeheerkosten voor aandelen bedroegen in 2025 € 423 duizend aan beheerkosten (0,06% van gemiddeld belegd vermogen) en € 23 duizend aan transactiekosten (0,00%); prestatievergoedingen waren nihil. Fondsbrede kosten voor vermogensbeheer bedroegen 0,40% exclusief transactiekosten (totale kosten 0,46%) en 0,06% aan transactiekosten (p. 38, 39). Een nadere regionale specificatie van de aandelenportefeuille is in de uitsneden voor Forward niet opgenomen (de tabel op pag. 105 betreft kring Progress).",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "In de verstrekte uitsneden voor kring Forward ontbreekt een regionale uitsplitsing van de aandelenportefeuille (de specificatie naar regio op pag. 105 betreft toelichting op de balans van kring Progress; op pag. 45 worden bij de strategische benchmarks Developed Markets en Global Emerging Markets onderscheiden).",
+  "pagina": null,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "Customized Diversified Growth",
+   "STOXX Developed World Index USD exposure monthly hedged (to EUR)",
+   "STOXX Emerging Markets USD net return Index"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Investment beliefs (p. 43): Onze basispositie met betrekking tot beleggen is dat wij geloven in passief management gebaseerd op de veronderstelling dat rendement op lange termijn de neiging heeft om naar een langetermijngemiddelde te gaan. Aangezien de financiële markten echter niet volledig efficiënt zijn, kan actief beheer waarde toevoegen voor specifieke subportefeuilles; Strategische benchmarkbeschrijving Diversified Growth (p. 45): Developed Markets: STOXX Developed World Index USD exposure monthly hedged (to EUR); Global Emerging Markets: STOXX Emerging Markets USD net return Index.",
+  "pagina": 45,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Bij Forward wordt het valutarisico gedeeltelijk afgedekt door te beleggen in fondsen waarbinnen het valutarisico al wordt afgedekt. Het resterende valutarisico is klein (p. 18); Developed Markets: STOXX Developed World Index USD exposure monthly hedged (to EUR) (p. 45).",
+  "omschrijving": "Bij Forward wordt het valutarisico in de aandelenportefeuille gedeeltelijk afgedekt door te beleggen in fondsen waarbinnen het valutarisico reeds wordt afgedekt (de benchmark voor Developed Markets behelst een maandelijkse hedge van de USD-exposure naar euro). Het resterende valutarisico is klein. Een specifiek afdekkingspercentage voor de aandelenportefeuille wordt voor Forward in het verslag niet genoemd (in tegenstelling tot Progress waar de USD strategisch voor 80% wordt afgedekt).",
+  "pagina": 18
+ },
+ "naam": "Kring Forward (Unilever)",
+ "pad": "data/annual_reports/172_Kring_Forward_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

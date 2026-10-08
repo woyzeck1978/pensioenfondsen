@@ -1,0 +1,80 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 178.5,
+  "feitelijk_pct": null,
+  "letterlijk": "Beleggingsportefeuille: Aandelen 178,5 ... Totaal 1.362,3 (bedragen in EUR 1 miljoen); strategisch: Aandelen wereldwijd 14,5%, Aandelen multi-factor (‘smart beta’) 4,1%",
+  "omvat_private_equity": false,
+  "pagina": 6,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 18.6,
+  "totaal_beleggingen_eur_mln": 1362.3
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": "Goldman Sachs Asset Management",
+  "letterlijk": "Het beheer van de beleggingsportefeuille is ondergebracht bij fiduciair manager Goldman Sachs Asset Management.",
+  "organisatie": "extern",
+  "pagina": 85
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "stembeleid"
+  ],
+  "letterlijk": "In het passieve wereldwijde aandelenmandaat wordt de MSCI World Low Carbon Target Index gehanteerd waarbij ondernemingen met een hoge CO2-uitstoot worden uitgesloten.",
+  "omschrijving": "Aandelen worden passief belegd met uitsluiting van ondernemingen met een hoge CO2-uitstoot via de MSCI World Low Carbon Target Index en specifieke ESG-restricties. Het stemrecht als aandeelhouder wordt gewaarborgd. 93,7% van de totale portefeuille is SFDR-artikel 8; het pensioenproduct zelf is gepositioneerd als overig product (artikel 6).",
+  "pagina": 35,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 82,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "De totale kosten van het vermogensbeheer (exclusief transactiekosten) bedragen als percentage van het gemiddeld belegd vermogen 0,35%... De transactiekosten als percentage van het gemiddeld belegd vermogen bedragen 0,10%... Aandelen: Beheerkosten 163, Resultaatafhankelijke beloningen -, Transactiekosten 195",
+  "pagina": 40,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.1,
+  "vermogensbeheerkosten_totaal_pct": 0.35
+ },
+ "opmerkingen": "In 2025 heeft het bestuur de beleggingsportefeuille sterk vereenvoudigd en het risico verlaagd (strategische verhouding aangepast naar 20% return generating en 80% liability matching; renteafdekking verhoogd naar 100%). De mandaten aandelen emerging markets, aandelen small cap en aandelen infrastructuur zijn in 2025 beëindigd. Ultimo 2025 resteert enkel wereldwijde aandelen (passief) en smart beta multi-factor (passief). Het pensioenfonds bereidt een overdracht (buy-out) naar een verzekeraar voor.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "De aandelen zijn voor 97,5% belegd in ontwikkelde markten (2024: 89,2%) en 2,5% in emerging markets (2024: 10,8%).",
+  "pagina": 69,
+  "verdeling": [
+   {
+    "pct": 97.5,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 2.5,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": 0,
+  "benchmarks": [
+   "MSCI World",
+   "MSCI World Low Carbon Target Index"
+  ],
+  "factorbeleggen": true,
+  "hoofdstijl": "passief",
+  "letterlijk": "Alle mandaten en beleggingsfondsen worden passief beheerd.",
+  "pagina": 32,
+  "passief_pct": 100,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 80,
+  "letterlijk": "Het valutarisico van de in vreemde valuta genoteerde beleggingen in wereldwijde aandelen, aandelen small cap, aandelen public infrastructuur en indirect vastgoed wordt voor 80% afgedekt.",
+  "omschrijving": "Volgens het beleggingsbeleid wordt het valutarisico op wereldwijde aandelen voor 80% afgedekt (risicogrens op p. 53 vermeldt 70%). Op jaareinde 2025 was door de vereenvoudiging/risicoreductie per saldo 0,0% afgedekt via valutatransacties. Valutarisico van aandelen opkomende markten wordt niet afgedekt.",
+  "pagina": 29
+ },
+ "naam": "Campina",
+ "pad": "data/annual_reports/82_Campina_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

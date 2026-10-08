@@ -1,0 +1,84 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": null,
+  "feitelijk_pct": null,
+  "letterlijk": "",
+  "omvat_private_equity": false,
+  "pagina": null,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "State Street Global Advisors",
+    "pagina": 29,
+    "product_of_mandaat": "discretionaire portefeuille",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "GSAM",
+  "letterlijk": "In September van afgelopen jaar is het beheer van de matching en return portefeuille overgedragen van het interne bestuursbureau naar een externe fiduciaire beheerder GSAM.",
+  "organisatie": "extern",
+  "pagina": 27
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen"
+  ],
+  "letterlijk": "Deze discretionaire portefeuille belegt niet in bedrijven en landen waarvan het bij wet is verboden om in te beleggen. Zo belegt ons pensioenfonds niet in landen die zijn geplaatst op de sanctielijsten van de Verenigde Naties en/of de Europese Unie. Ook beleggen we niet in partijen die betrokken zijn bij de handel en productie van (controversiële) wapens.",
+  "omschrijving": "Het fonds past uitsluitingen toe op basis van VN- en EU-sanctielijsten en sluit controversiële wapens uit. Er geldt een SFDR artikel 4 opt-out.",
+  "pagina": 29,
+  "sfdr_artikel": null
+ },
+ "fund_id": 118,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "In totaal bedroegen deze kosten in 2025 € 3.128 (= 0,33% van het gemiddeld belegd vermogen). [...] Transactiekosten (%) 0,04%",
+  "pagina": 21,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.04,
+  "vermogensbeheerkosten_totaal_pct": 0.33
+ },
+ "opmerkingen": "Het fonds bevindt zich in liquidatie (Stichting NN CDC Pensioenfonds in liquidatie) ter voorbereiding op een collectieve waardeoverdracht (CWO) naar De Nationale APF (DN APF) per 1 januari 2026. In september 2025 is het fiduciair beheer overgedragen aan GSAM. Gedurende 2025 zijn de actieve managers voor opkomende markten vervangen door een passieve ETF (IEMA) vanwege het ontbreken van vertrouwen en de korte beleggingshorizon (p. 37). Het fonds past de opt-out toe voor SFDR artikel 4. Bestuursondersteuning is uitbesteed aan Montae & Partners.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Ontwikkelde markten (Mature markets) 283.889 70,8 | Opkomende markten (Emerging markets) 3.818 1,0",
+  "pagina": 63,
+  "verdeling": [
+   {
+    "pct": 70.8,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 1,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Het grootste deel van de return portefeuille bestaat uit aandelen ontwikkelde markten in de vorm van een passief discretionair wereldwijd aandelenmandaat. Ook participeert het pensioenfonds in twee actief beheerde beleggingsfondsen in aandelen opkomende markten.",
+  "pagina": 28,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Valutarisico: er wordt wereldwijd in aandelen en vastgoed belegd. Het hieraan verbonden valutarisico wordt voor de zes belangrijkste valuta voor 50% tot 110% afgedekt.",
+  "omschrijving": "Valutarisico van wereldwijde beleggingen in aandelen en vastgoed wordt voor de zes belangrijkste valuta afgedekt binnen een bandbreedte van 50% tot 110% met behulp van valutatermijncontracten.",
+  "pagina": 19
+ },
+ "naam": "NN CDC",
+ "pad": "data/annual_reports/118_NN_CDC_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

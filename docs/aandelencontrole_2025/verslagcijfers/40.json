@@ -1,0 +1,82 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 1202.767,
+  "feitelijk_pct": 38.5,
+  "letterlijk": "Vermogensopbouw (p. 27): Aandelen 38,5%, Marktwaarde in miljoenen euro’s 3.196,4; Toelichting op de balans (p. 81, bedragen x € 1.000): Aandelen: Beursgenoteerde aandelen 1.198.604, Niet beursgenoteerde aandelen 1.478, Vorderingen 2.685, Totaal 1.202.767.",
+  "omvat_private_equity": true,
+  "pagina": 27,
+  "private_equity_pct": null,
+  "strategisch_basis": "niet genoemd",
+  "strategisch_pct": null,
+  "totaal_beleggingen_eur_mln": 3196.4
+ },
+ "beheer": {
+  "beheerders": [],
+  "fiduciair_beheerder": "Goldman Sachs Asset Management",
+  "letterlijk": "Het bestuur heeft Goldman Sachs Asset Management (GSAM) als Coördinator Vermogensbeheer aangesteld. GSAM is operationeel verantwoordelijk voor de invulling en het beheer van de beleggingsportefeuille, inclusief de selectie van gespecialiseerde vermogensbeheerders voor onderdelen van de portefeuille. De selectie en monitoring van de beheerders wordt uitgevoerd door XIG (voorheen Altis), een gespecialiseerde dochteronderneming van GSAM. (p. 46); De beleggingsportefeuille is ondergebracht bij fiduciair beheerder GSAM. Hiermee is een overeenkomst en service level agreement gesloten. De bewaring van de stukken uit de portefeuille is ondergebracht bij Custodian BNY Mellon. (p. 98)",
+  "organisatie": "extern",
+  "pagina": 46
+ },
+ "esg": {
+  "co2_doel": "decarbonisatiepad richting 2050",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Gedurende de referentieperiode heeft het Pensioenfonds maatregelen getroffen om te voldoen aan de gepromote ecologische en sociale kenmerken. ... Ten eerste heeft het Pensioenfonds een uitsluitingsbeleid toegepast voor ondernemingen en landen die betrokken waren bij maatschappelijk ongewenste activiteiten of gedragingen. Daarnaast heeft het Pensioenfonds duurzaamheidsaspecten geïntegreerd in de beleggingsbeslissingen ... en door voor de aandelen- en bedrijfsobligatieportefeuille een decarbonisatiepad richting 2050 te volgen. ... Verder heeft het Pensioenfonds actief aandeelhouderschap toegepast door middel van stemmen op aandeelhoudersvergaderingen en engagement ... Tot slot heeft het Pensioenfonds bij de selectie van beleggingsfondsen het stembeleid, engagementbeleid en uitsluitingsbeleid van de fondsbeheerder beoordeeld ... (p. 140)",
+  "omschrijving": "Bpf Zoetwaren promoot ecologische en sociale kenmerken onder SFDR Artikel 8. Voor de aandelenportefeuille hanteert het fonds een uitsluitingsbeleid (ondernemingen en overheden betrokken bij maatschappelijk ongewenste activiteiten), volgt het een decarbonisatiepad richting 2050 (CO2-reductiedoelstelling), integreert het duurzaamheidsaspecten in beleggingsbeslissingen (bij voorkeur fondsen/mandaten met gunstige ESG-scores), voert het actief aandeelhouderschap via stemmen op aandeelhoudersvergaderingen en engagement, en hanteert het voor ontwikkelde markten een MSCI-index conform Europese wetgeving inzake klimaatbenchmarks.",
+  "pagina": 140,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 40,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "De totale vermogensbeheerkosten als percentage van het gemiddeld belegd vermogen zijn in 2025 gelijk gebleven met 0,38% (p. 19). Kosten per beleggingscategorie (bedragen x € 1.000): Aandelen Beheerkosten 1.779, Transactiekosten 766, Totaal 2.545; Totaal kosten: Beheerkosten 10.886, Transactiekosten 1.339, Totaal 12.225 (p. 19). Gemiddeld belegd vermogen: 3.193.364 (x € 1.000, p. 19).",
+  "pagina": 19,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": null,
+  "vermogensbeheerkosten_totaal_pct": 0.38
+ },
+ "opmerkingen": "Bpf Zoetwaren bereidt de transitie naar het nieuwe pensioenstelsel (Wtp) voor per 1 januari 2026 via een solidaire premieregeling (SPR) met lifecycles; in december 2025 is een positieve invaarbeschikking van DNB ontvangen (p. 14, 35). Daarnaast is gestart met voorbereidingen voor een fusie/samengaan met Bpf Bakkers per 1 januari 2027 (p. 14, 40). Goldman Sachs Asset Management (GSAM) treedt op als Coördinator Vermogensbeheer / fiduciair beheerder (p. 46, 98), waarbij dochter XIG (voorheen Altis) de managerselectie en -monitoring verzorgt. Custody berust bij BNY Mellon en pensioenadministratie bij TKP (p. 14, 46). De mandaten zijn overwegend gericht op passief vermogensbeheer (p. 91), maar voor aandelen wordt tevens een buffer actief beheer (S10-opslag 0,4%, afgeleid van tracking error) aangehouden (p. 92, 98). Aandelen behaalden over 2025 een rendement van 11,5% (+3,7%-punt t.o.v. de benchmark van 7,8%), opgebouwd uit ontwikkelde markten (+9,8%) en opkomende markten (+21,6%) (p. 28). Op de balans bedragen aandelen € 1.202,767 mln (waarvan € 1.198,604 mln beursgenoteerd en € 1,478 mln niet-beursgenoteerd/private equity) (p. 81); in de vermogensopbouw bedraagt de weging 38,5% op € 3.196,4 mln marktwaarde (p. 27). Vanaf dit boekjaar past het fonds het doorkijkprincipe (look-through) toe (p. 81, 91). Voor 2026 wordt gewerkt aan een nieuwe allocatie naar Infra Equity (p. 40).",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "De portefeuille beursgenoteerde aandelen bestaat ultimo 2025 voor 85,0% uit aandelen ontwikkelde markten en voor 15,0% uit aandelen opkomende markten. De aandelenportefeuille van ontwikkelde markten rendeerde in 2025 met 9,8% positief. Het rendement van aandelen opkomende markten was met 21,6% sterk positief. (p. 28)",
+  "pagina": 28,
+  "verdeling": [
+   {
+    "pct": 85,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 15,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "index van MSCI die voldoet aan de Europese wetgeving ten aanzien van klimaatbenchmarks"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "Deze uitgangspunten zijn vastgelegd in investment management agreements met de vermogensbeheerders. Deze overeenkomsten zijn overwegend gericht op passief vermogensbeheer. (p. 91); Actief risico (S10): Het pensioenfonds kiest voor actief beheer wanneer er gegronde redenen zijn om daar een meerwaarde van te verwachten. Waar dat niet het geval is, wordt voor een passieve oplossing gekozen. ... Er wordt gerekend met een opslag voor actief beheer voor de categorie aandelen (beursgenoteerd). De hoogte van de buffer wordt hierbij afgeleid van de tracking error (p. 98); Voor de allocatie naar aandelen ontwikkelde markten hanteren we een index van MSCI die voldoet aan de Europese wetgeving ten aanzien van klimaatbenchmarks. (p. 141)",
+  "pagina": 91,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Valutarisico (S3): Het deel dat buiten de euro wordt belegd betreft ultimo 2025 circa 42% (2024: 39%) van de beleggingsportefeuille. Hiervan is 61% afgedekt (2024: 63%). De nettorisicopositie betreft 16% (2024: 14%). (p. 93); Voor de uitvoering van het beleggingsbeleid wordt gebruikgemaakt van financiële derivaten. Het pensioenfonds gebruikt derivaten voornamelijk om het valutarisico en het renterisico af te dekken. (p. 81)",
+  "omschrijving": "Het pensioenfonds gebruikt financiële derivaten (valutatermijncontracten/derivaten) om valutarisico af te dekken. Voor de totale beleggingsportefeuille is ultimo 2025 circa 42% buiten de euro belegd, waarvan 61% is afgedekt naar de euro (nettorisico 16%). Een specifiek afdekkingspercentage voor uitsluitend de aandelenportefeuille wordt in het verslag niet genoemd.",
+  "pagina": 93
+ },
+ "naam": "Zoetwarenindustrie (Confectionery Industry)",
+ "pad": "data/annual_reports/40_Zoetwaren_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

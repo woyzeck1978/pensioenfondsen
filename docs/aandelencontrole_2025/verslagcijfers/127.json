@@ -1,0 +1,80 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 129.979,
+  "feitelijk_pct": 38,
+  "letterlijk": "Tabel Belegd vermogen (p. 16, bedragen x 1.000 euro): Aandelen 129.979 (38,0%), Totaal 341.773 (100,0%). Op p. 12 vermeldt het verslag tevens: 'Ultimo 2025 bedragen de aandelen 38,9% van de beleggingsportefeuille' (waarbij de balanspost Overig is toegewezen). Strategische norm aandelen 37,5% (p. 12).",
+  "omvat_private_equity": false,
+  "pagina": 16,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 37.5,
+  "totaal_beleggingen_eur_mln": 341.773
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Northern Trust Management Services (Ireland) Limited",
+    "pagina": 5,
+    "product_of_mandaat": "MSCI EMU",
+    "segment": "Europa",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "Northern Trust Management Services (Ireland) Limited",
+  "letterlijk": "Het beheren van de beleggingen is in zijn geheel uitbesteed aan Northern Trust Management Services (Ireland) Limited, een grote internationale vermogensbeheerder. (p. 5) De vermogensbeheerder heeft de opdracht om de “MSCI EMU”-index te volgen. (p. 12)",
+  "organisatie": "extern",
+  "pagina": 5
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [],
+  "letterlijk": "In het beleid worden de wettelijke eisen voor duurzaam beleggen in acht genomen, maar bij beleggingsbeslissingen wordt niet apart met duurzaamheidsrisico’s rekening gehouden of met eventuele ongunstige effecten op duurzaamheidsfactoren... De pensioenregeling valt daarmee onder artikel 6 van de SFDR. (p. 13)",
+  "omschrijving": "Het pensioenfonds voert een passief beleggingsbeleid dat de MSCI EMU-index volgt en houdt bij beleggingsbeslissingen niet apart rekening met duurzaamheidsrisico's of ongunstige effecten op duurzaamheidsfactoren. De pensioenregeling valt onder SFDR artikel 6.",
+  "pagina": 13,
+  "sfdr_artikel": 6
+ },
+ "fund_id": 127,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Kosten vermogensbeheer (inclusief transactiekosten): 0,16%, transactiekosten: 0,03% van het gemiddeld belegd vermogen (p. 6, 19). Specificatie kosten vermogensbeheer (p. 19, 43): Aandelen beheerkosten € 186.000, transactiekosten € 10.000, totaal € 196.000 (0,06% van het gemiddeld belegd vermogen van het gehele fonds). Kosten in % van het belegd vermogen in aandelen zelf zijn niet vermeld. Prestatievergoeding niet genoemd.",
+  "pagina": 19,
+  "prestatievergoeding_aandelen_eur_mln": null,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.03,
+  "vermogensbeheerkosten_totaal_pct": 0.16
+ },
+ "opmerkingen": "De volledige aandelenportefeuille wordt passief beheerd door Northern Trust via een mandaat dat de MSCI EMU-index volgt. Er wordt uitsluitend in eurolanden belegd, waardoor er geen valutarisico is (S3-buffer is 0). Northern Trust mag binnen het mandaat tot maximaal 5% gebruikmaken van STOXX 50 futures om liquide middelen en dividenden efficiënt te beleggen (onderliggende waarde ultimo 2025: € 2,745 mln, p. 12, 31, 36). De grootste individuele positie is ASML Holding met € 7,444 mln (5,7% van de aandelen, p. 36). Tevens is er een belang van € 156.000 in verbonden partij Rexel S.A. vanwege indexopname (p. 36). De uitvoeringsovereenkomst met Rexel Nederland B.V. is per 31 december 2025 beëindigd met een verzoek tot collectieve waardeoverdracht (p. 49).",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Alle aandelen betreffen aandelen in mature markets, zijn uitsluitend belegd in eurolanden en staan ter vrije beschikking. (p. 36) De aandelenportefeuille bestaat uit in Euro genoteerde aandelen in de EMU landen. (p. 12)",
+  "pagina": 36,
+  "verdeling": [
+   {
+    "pct": 100,
+    "regio": "Europa"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": 0,
+  "benchmarks": [
+   "MSCI EMU"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Het pensioenfonds kent een passief beleggingsbeleid. (p. 9) De vermogensbeheerder heeft de opdracht om de “MSCI EMU”-index te volgen. (p. 12) Het pensioenfonds heeft voor de gehele beleggingsportefeuille gekozen voor passief beleggen. Er is geen sprake van een actief beleid. (p. 13) Actief beheer risico (S10): 0 (p. 49)",
+  "pagina": 12,
+  "passief_pct": 100,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Valutabeleid. De strategie van het pensioenfonds is om niet te beleggen in vreemde valuta. De aandelenportefeuille bestaat uit in Euro genoteerde aandelen in de EMU landen. (p. 12) Valutarisico (S3): 0 (p. 49)",
+  "omschrijving": "Niet van toepassing; het fonds belegt uitsluitend in euro / EMU-landen en belegt conform strategie niet in vreemde valuta.",
+  "pagina": 12
+ },
+ "naam": "Sagittarius",
+ "pad": "data/annual_reports/127_Sagittarius_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

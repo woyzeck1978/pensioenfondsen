@@ -1,0 +1,120 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 16867,
+  "feitelijk_pct": 28.6,
+  "letterlijk": "Tabel Kosten vermogensbeheer en rendement per beleggingscategorie 2025 (p. 44): Aandelen ontwikkelde landen € 13.838 mln (23,5%), Aandelen opkomende landen € 3.029 mln (5,1%), Private equity € 3.829 mln (6,5%); Tabel p. 62: Aandelen Normportefeuille eind 2025 27,6% (Strategische portefeuille 2025: 25%), Private equity 6,8% (Strategische portefeuille 5%), Totaal 100%. Expliciete totaalregel in EUR mln ontbreekt in tabel p. 44.",
+  "omvat_private_equity": false,
+  "pagina": 44,
+  "private_equity_pct": 6.5,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 27.6,
+  "totaal_beleggingen_eur_mln": null
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "MN",
+    "pagina": 67,
+    "product_of_mandaat": "ESG-indexportefeuille",
+    "segment": "Europa en Noord-Amerika",
+    "stijl": "passief"
+   },
+   {
+    "naam": "UBS",
+    "pagina": 67,
+    "product_of_mandaat": "ESG-indexportefeuille",
+    "segment": "Verre Oosten",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Neuberger Berman",
+    "pagina": 66,
+    "product_of_mandaat": "ESG-focusportefeuille Noord-Amerika",
+    "segment": "Noord-Amerika",
+    "stijl": "actief"
+   },
+   {
+    "naam": "Lazard",
+    "pagina": 66,
+    "product_of_mandaat": "ESG-focusportefeuille Noord-Amerika",
+    "segment": "Noord-Amerika",
+    "stijl": "actief"
+   },
+   {
+    "naam": "Candriam",
+    "pagina": 66,
+    "product_of_mandaat": "Europese ESG-focusportefeuille",
+    "segment": "Europa",
+    "stijl": "actief"
+   }
+  ],
+  "fiduciair_beheerder": "MN",
+  "letterlijk": "PME heeft besloten de ESG-indexportefeuille voortaan te laten beheren door twee in plaats van drie vermogensbeheerders. Die twee beheerders zijn MN (de regio's Europa en Noord-Amerika) en UBS (regio Verre Oosten) (p. 67); definitieve aanstelling van zowel Lazard als Neuberger Berman als beheerders van de ESG-focusportefeuille Noord-Amerika, ieder voor een bedrag van EUR 1,1 miljard (p. 66); In 2024 selecteerden we Candriam als de beste kandidaat voor de Europese ESG-focusportefeuille (p. 66); vermogensbeheerder MN (p. 184).",
+  "organisatie": "gemengd",
+  "pagina": 67
+ },
+ "esg": {
+  "co2_doel": "-50% in 2030 t.o.v. 2019 (en netto nul in 2050)",
+  "eigen_index": true,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "eigen ESG-index",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "In 2024 is met succes dit ESG-raamwerk als nieuwe customized benchmark geïmplementeerd in de ESG-indexportefeuille aandelen ontwikkelde markten (p. 66); PME wil uiterlijk per 2050 een portefeuille met netto nul uitstoot... Voor 2030 is de doelstelling om de absolute CO₂-uitstoot te reduceren met 50%. Deze doelstelling is van toepassing op de aandelen- en bedrijfsobligatieportefeuilles (p. 229); MN voert namens PME het thematisch engagement uit... EOS voert het brede engagement uit (p. 75); Bij bedrijven waarvan we aandelen houden hebben we stemrecht (p. 75); MSCI IVA ESG screening en de aanvullende screening van PME voor het grootste deel van de aandelenportefeuille (p. 250).",
+  "omschrijving": "PME past voor de aandelenportefeuille het concept Portefeuille van Morgen toe met een eigen ESG-selectieraamwerk en een customized benchmark voor de ESG-indexportefeuille. Daarnaast richt PME actieve ESG-focusportefeuilles in. Als instrumenten worden uitsluitingen (o.a. olie- en gasbedrijven en escalatie bij niet-succesvolle dialoog), thematisch en breed engagement (via MN en EOS), stembeleid op AVA's, ESG-integratie in selectie (MSCI IVA rating met drempelwaarden) en een CO2-reductiedoel (-50% absolute emissie in 2030 t.o.v. 2019, netto nul in 2050) toegepast onder SFDR Artikel 8.",
+  "pagina": 66,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 58,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Integrale beheerkosten in 2025 0,414%... absolute vermogensbeheerkosten exclusief de transactiekosten € 219,9 miljoen... De relatieve vermogensbeheerkosten exclusief de transitiekosten stegen naar 0,373%... transactiekosten in totaal € 24,1 miljoen... 0,041% van het gemiddeld belegd vermogen (p. 43); Tabel p. 44: Aandelen ontwikkelde landen kosten 0,06%, Aandelen opkomende landen kosten 0,04% (excl. transactiekosten, p. 45); prestatieafhankelijke vergoedingen (€ 36,6 mln) betreffen uitsluitend private equity (p. 43-44).",
+  "pagina": 43,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.041,
+  "vermogensbeheerkosten_totaal_pct": 0.373
+ },
+ "opmerkingen": "PME richt de aandelenportefeuille in volgens de 'Portefeuille van Morgen', met een combinatie van een brede ESG-indexportefeuille (ca. 1.000 bedrijven) en actieve, geconcentreerde ESG-focusportefeuilles. In 2025 is na evaluatie afscheid genomen van BlackRock als beheerder van de ESG-indexportefeuille ontwikkelde markten; het indexbeheer is geconcentreerd bij MN (Europa en Noord-Amerika) en UBS (Verre Oosten). Voor de ESG-focusportefeuille Noord-Amerika zijn na uitvoering van een thematische RSA Geopolitieke ontwikkelingen Neuberger Berman en Lazard definitief aangesteld (ieder voor € 1,1 miljard). Candriam beheert de focusportefeuille Europa; de managerselectie voor de focusportefeuille opkomende markten loopt tot medio 2026. In het kader van de Wtp-transitie (invaren per 1 januari 2027) is een ALM-studie verricht; de toekomstige SAA kent een grotere returnportefeuille en een hogere renteafdekking, terwijl de huidige SAA 2025 met één jaar is verlengd voor 2026.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Tabel Kosten vermogensbeheer en rendement per beleggingscategorie 2025 (p. 44): Aandelen ontwikkelde landen Allocatie in % 23,5%, Aandelen opkomende landen Allocatie in % 5,1%.",
+  "pagina": 44,
+  "verdeling": [
+   {
+    "pct": 23.5,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 5.1,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "customized benchmark (PME ESG-raamwerk)",
+   "MSCI"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "In 2024 is met succes dit ESG-raamwerk als nieuwe customized benchmark geïmplementeerd in de ESG-indexportefeuille aandelen ontwikkelde markten... De ESG-indexportefeuille bestaat uit circa 1.000 bedrijven... overzetten naar meer geconcentreerde focusportefeuilles (p. 66); S10 Actief beheer risico: Bij PME wordt beperkt gebruik gemaakt van actief beheerde beleggingsstrategieën. Het ex-ante budget voor actief risico zoals vooraf is vastgesteld in het Beleggingsplan 2025 bedraagt maximaal 0,75% (p. 184).",
+  "pagina": 66,
+  "passief_pct": null,
+  "tracking_error_pct": 0.75
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "Ten aanzien van de strategische afdekking van de Amerikaanse dollar zag het bestuur geen aanleiding tot aanpassing (p. 64); Daarnaast onderzocht de ALM-studie de impact van aanpassingen in de afdekking van rente- en valutarisico’s... Er is geen aanleiding tot aanpassing van de huidige valuta-afdekking (p. 64).",
+  "omschrijving": "PME hanteert een strategische afdekking van het valutarisico op de Amerikaanse dollar, maar vermeldt in de uitsnede geen specifiek afdekkingspercentage voor de aandelenportefeuille. De valuta-afdekking is in 2025 geëvalueerd in een ALM-studie en RSA Geopolitieke ontwikkelingen; het bestuur concludeerde dat er geen aanleiding was tot aanpassing.",
+  "pagina": 64
+ },
+ "naam": "Metalektro / PME",
+ "pad": "data/annual_reports/58_Metalektro_PME_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

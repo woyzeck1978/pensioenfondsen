@@ -1,0 +1,111 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 541.006,
+  "feitelijk_pct": 43.5,
+  "letterlijk": "Aandelen: werkelijke allocatie 31-12-2025 € 541.006 (43,50%), strategische allocatie 41,00%, totaal belegd vermogen € 1.243.691 (bedragen in duizendtallen / x € 1.000)",
+  "omvat_private_equity": false,
+  "pagina": 36,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 41,
+  "totaal_beleggingen_eur_mln": 1243.691
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Aegon Asset Management",
+    "pagina": 16,
+    "product_of_mandaat": null,
+    "segment": null,
+    "stijl": "onbekend"
+   },
+   {
+    "naam": "Robeco",
+    "pagina": 32,
+    "product_of_mandaat": "Robecofonds",
+    "segment": "opkomende markten",
+    "stijl": "actief"
+   },
+   {
+    "naam": "Fidelity International",
+    "pagina": 32,
+    "product_of_mandaat": "actieve Fidelity-mandaat (small-capmandaat)",
+    "segment": "small caps",
+    "stijl": "actief"
+   },
+   {
+    "naam": "Northern Trust",
+    "pagina": 32,
+    "product_of_mandaat": "passieve strategie bij Northern Trust met wereldwijde spreiding",
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "Aegon Asset Management",
+  "letterlijk": "Aegon Asset Management (Aegon AM) is de fiduciair manager... De aandelen van het pensioenfonds zijn belegd in aandelenfondsen van Aegon, Northern Trust en Robeco.",
+  "organisatie": "extern",
+  "pagina": 16
+ },
+ "esg": {
+  "co2_doel": "aansluiting aan de doelstelling van Parijs in 2030 gerealiseerd te hebben",
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "CO2-reductiedoel",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "pensioenregeling met ingang van 2024 te classificeren als een product in artikel 8 van de SFDR-regelgeving... We streven ernaar om de aansluiting aan de doelstelling van Parijs in 2030 gerealiseerd te hebben.",
+  "omschrijving": "PF DHL classificeert de regeling onder SFDR Artikel 8. Belegt via beleggingsfondsen en past uitsluitingen, engagement, stembeleid en ESG-integratie toe. Streeft naar aansluiting bij de doelstelling van Parijs in 2030; carbon footprint ligt 47,9% lager dan de grijze benchmark.",
+  "pagina": 35,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 89,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.15,
+  "letterlijk": "Aandelen: Beheer & bewaar 0,15%, Performance gerelateerde kosten 0,00%, Transactiekosten 0,01%, Totaal 0,16%",
+  "pagina": 46,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": 0.01,
+  "transactiekosten_totaal_pct": 0.03,
+  "vermogensbeheerkosten_totaal_pct": 0.33
+ },
+ "opmerkingen": "Aegon AM treedt op als fiduciair manager. PF DHL belegt uitsluitend via beleggingsfondsen en geeft geen afzonderlijke mandaten. In 2025 is besloten om het actieve small-capmandaat (bij Fidelity) te vervangen door een passieve wereldwijde strategie bij Northern Trust. De actieve mandaten (Robeco emerging markets, Fidelity en het Low Risk mandaat) bleven in 2025 achter bij hun benchmarks.",
+ "regio": {
+  "basis": "feitelijk",
+  "letterlijk": "Ontwikkelde markten (Mature markets) 642.531 75,9 | Opkomende markten (Emerging markets) 49.647 5,9",
+  "pagina": 103,
+  "verdeling": [
+   {
+    "pct": 75.9,
+    "regio": "Wereld ontwikkeld"
+   },
+   {
+    "pct": 5.9,
+    "regio": "Opkomende markten"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": null,
+  "benchmarks": [
+   "MSCI ACWI"
+  ],
+  "factorbeleggen": true,
+  "hoofdstijl": "gemengd",
+  "letterlijk": "Over het hele jaar bleven zowel het Robecofonds als het actieve Fidelity-mandaat ruim achter bij hun respectieve benchmarks. PF DHL heeft dit jaar het besluit genomen om het small-capmandaat te vervangen door een passieve strategie bij Northern Trust met wereldwijde spreiding.",
+  "pagina": 32,
+  "passief_pct": null,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 50,
+  "letterlijk": "Voor de beleggingen in landen buiten de Europese Unie geldt, dat het valutarisico naar de belangrijkste buitenlandse valuta bij aandelen voor 50% wordt afgedekt... Het valutarisico op emerging market aandelen wordt, gezien de hoge kosten, niet afgedekt.",
+  "omschrijving": "Het valutarisico naar de belangrijkste buitenlandse valuta bij aandelen buiten de EU wordt voor 50% afgedekt; emerging market aandelen worden niet afgedekt.",
+  "pagina": 61
+ },
+ "naam": "DHL Nederland",
+ "pad": "data/annual_reports/89_DHL_Nederland_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

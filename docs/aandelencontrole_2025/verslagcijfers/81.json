@@ -1,0 +1,87 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 113.958,
+  "feitelijk_pct": null,
+  "letterlijk": "Tabel 5 Beleggingen voor risico pensioenfonds (p. 54, in EUR duizenden): Stand per 31 december 2025: Aandelen 113.958, Totaal 349.501 (waarvan Vastgoed 36.795 en Vastrentende waarden 198.748). Tabel Beleggingsmixen (p. 20): Zakelijke waarden Norm 30,00% (minimaal 26,00%, maximaal 34,00%), Vastrentende waarden Norm 60,00%, Beursgenoteerd vastgoed Norm 10,00%.",
+  "omvat_private_equity": false,
+  "pagina": 54,
+  "private_equity_pct": null,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 30,
+  "totaal_beleggingen_eur_mln": 349.501
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "Northern Trust Asset Management",
+    "pagina": 55,
+    "product_of_mandaat": null,
+    "segment": "wereldwijd ontwikkeld",
+    "stijl": "passief"
+   },
+   {
+    "naam": "Goldman Sachs Asset Management",
+    "pagina": 55,
+    "product_of_mandaat": null,
+    "segment": "opkomende markten",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "Goldman Sachs Asset Management (GSAM)",
+  "letterlijk": "De uitvoering van het vermogensbeheer is uitbesteed aan Goldman Sachs Asset Management (GSAM), Northern Trust Asset Management (NTAM), Robeco en Neuberger Berman. [...] Voor de ondersteuning van het beleggingsproces is gekozen voor de fiduciair beheerder Goldman Sachs Asset Management (GSAM) (p. 12). De aandelen volwassen markten zijn ondergebracht bij Northern Trust Asset Management en het beheer is passief [...]. Het beheer van de aandelen opkomende markten is passief en ondergebracht bij GSAM (p. 55).",
+  "organisatie": "extern",
+  "pagina": 12
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "stembeleid",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "Het pensioenproduct promoot ecologische en sociale kenmerken en is zodoende geclassificeerd als “Artikel 8”-product uit hoofde van de SFDR (p. 34); voor aandelen ontwikkelde markten en aandelen opkomende markten geldt dat de ‘grijze’ benchmark (MSCI World en MSCI EM) in de rapportage is opgenomen, terwijl het fonds tegen een ‘groene’ benchmark wordt gemanaged. De impact van de keuze van de Stichting om deze categorieën in te vullen met een strategie met ESG-integratie wordt op deze manier ook inzichtelijk (p. 33); uitsluiten van beleggingen in ondernemingen gerelateerd aan clustermunitie (p. 33); Omdat het fonds uitsluitend belegd in beleggingsfondsen, heeft het geen stemrecht. Dit komt toe aan de fondsbeheerders (p. 33-34).",
+  "omschrijving": "Brocacef classificeert de regeling onder SFDR Artikel 8 (geen duurzame beleggingsdoelstelling) en houdt rekening met de PAI op grond van Artikel 4 SFDR. Het MVB-beleid richt zich op milieu & klimaat, mensenrechten en bestuurssamenstelling/diversiteit. Voor beursgenoteerde aandelen geldt dat de portefeuilles (ontwikkelde markten en opkomende markten) worden gemanaged tegen een zogeheten ‘groene’ benchmark met ESG-integratie. Uitsluitingen worden toegepast conform wet- en regelgeving (clustermunitie conform art. 21a Besluit marktmisbruik Wft en sanctiewetgeving). Stemrecht wordt uitgeoefend door de fondsbeheerders omdat het pensioenfonds uitsluitend in beleggingsfondsen participeert. Er is geen gekwantificeerd CO2-reductiedoel geformuleerd.",
+  "pagina": 34,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 81,
+ "kosten": {
+  "beheerkosten_aandelen_pct": 0.09,
+  "letterlijk": "Tabel kosten per beleggingscategorie (p. 25): Aandelen gemiddeld belegd vermogen € 108.941 (duizend), Vermogensbeheerfee € 102 (duizend), Vermogensbeheerfee t.o.v gemiddeld belegd vermogen 0,09%. Onze vermogensbeheerkosten zijn 0,33% waarvan transactiekosten 0,11% van het gemiddeld belegd vermogen (p. 24). Er is geen sprake van prestatiebeloningen (p. 12, 25).",
+  "pagina": 25,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.11,
+  "vermogensbeheerkosten_totaal_pct": 0.33
+ },
+ "opmerkingen": "Stichting Brocacef Pensioenfonds heeft het vermogensbeheer volledig extern uitbesteed aan Goldman Sachs Asset Management (GSAM, tevens fiduciair beheerder, matchingsportefeuille en aandelen opkomende markten), Northern Trust Asset Management (aandelen volwassen markten en beursgenoteerd vastgoed), Robeco en Neuberger Berman (beide uitsluitend vastrentende waarden) (p. 12, 54, 55, 77). De aandelenportefeuille bedroeg ultimo 2025 € 113,958 mln (waarvan € 93,326 mln volwassen markten en € 20,632 mln opkomende markten) op een totale beleggingsportefeuille van € 349,501 mln (p. 54-55). Het strategisch normgewicht voor zakelijke waarden (aandelen) bedraagt 30,00% met een bandbreedte van 26,00% tot 34,00% (naast vastrentende waarden 60,00% en vastgoed 10,00%) (p. 20). Het beheer van de aandelen is 100% passief; er worden geen onderdelen actief beheerd (p. 25, 55, 77). Aandelen worden feitelijk beheerd tegen een ‘groene’ benchmark met ESG-integratie, terwijl in de verslaglegging wordt gerapporteerd tegen de reguliere ‘grijze’ benchmarks MSCI World en MSCI EM (p. 33). Het fonds classificeert onder SFDR Artikel 8 en sluit clustermunitie en sanctielanden/entiteiten uit (p. 33-34). Vermogensbeheerkosten voor aandelen bedroegen 0,09% (€ 102 duizend op € 108,941 mln gemiddeld vermogen) (p. 25); er zijn geen prestatievergoedingen (p. 12, 25); totale vermogensbeheerkosten bedroegen 0,33% waarvan 0,11% transactiekosten (p. 24). Valutarisico in aandelen volwassen markten wordt voor 100% afgedekt in het NTAM-fonds voor USD, GBP en JPY, terwijl opkomende markten onafgedekt blijft (p. 39, 56, 73). In het kader van de Wtp bereidt het fonds de overgang voor naar een solidaire premieregeling (SPR) met Lifecycles; Wtp-projectkosten over 2025 bedroegen € 425 duizend (p. 20, 24).",
+ "regio": {
+  "basis": "niet genoemd",
+  "letterlijk": "Geen procentuele regionale verdeling van de aandelenportefeuille genoemd in het verslag (pagina 69 toont uitsluitend de regionale segmentatie van de totale portefeuille inclusief vastrentende waarden en vastgoed; pagina 70 toont grafieken zonder percentages; pagina 55 toont enkel absolute balansbedragen in duizenden EUR: Aandelen Volwassen markten 93.326 en Aandelen Opkomende markten 20.632 op een totaal van 113.958).",
+  "pagina": 55,
+  "verdeling": []
+ },
+ "stijl": {
+  "actief_pct": 0,
+  "benchmarks": [
+   "MSCI World",
+   "MSCI EM"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "Het bestuur van het fonds heeft een overwegend passieve beleggingsstijl voor vastrentende waarden, aandelen opkomende markten (GSAM) en vastgoed en aandelen volwassen markten (NTAM) met als doel de benchmark te volgen (p. 25). Bijvoorbeeld voor aandelen ontwikkelde markten en aandelen opkomende markten geldt dat de ‘grijze’ benchmark (MSCI World en MSCI EM) in de rapportage is opgenomen, terwijl het fonds tegen een ‘groene’ benchmark wordt gemanaged (p. 33). Op dit moment worden er geen onderdelen van de portefeuille actief beheerd welke onder het actief beheer risico vallen (p. 77).",
+  "pagina": 25,
+  "passief_pct": 100,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": null,
+  "letterlijk": "De beleggingen die luiden in Amerikaanse dollar, Japanse yen, Britse pond worden voor 100% afgedekt volgens de waardering van de beheerders voor de beleggingsmandaten: - Northern Trust Asset Management aandelen en vastgoed (USD, GBP, JPY en overige valuta’) (p. 73); Valuta afdekking v.w.b. de aandelen volwassen markten vindt plaats binnen het fonds. De overige categorieën niet afgedekt (p. 39); Door de overstap van GSAM naar Northern Trust Asset Management v.w.b. aandelenfonds volwassen markten (afdekking valutarisico in het fonds) is er op 31 december 2025 geen ongerealiseerde valutahedge en is het resultaat 0 (p. 56).",
+  "omschrijving": "Binnen het aandelenfonds volwassen markten (ondergebracht bij Northern Trust Asset Management) wordt het valutarisico voor posities in Amerikaanse dollar (USD), Britse pond (GBP) en Japanse yen (JPY) voor 100% afgedekt binnen het fonds. Voor aandelen opkomende markten (ondergebracht bij GSAM) wordt het valutarisico niet afgedekt. Voor de totale portefeuille is ultimo 2025 ca. 43,4% belegd in vreemde valuta, waarvan 87,06% is afgedekt via valutaswaps. Een specifiek gewogen afdekkingspercentage voor de totale aandelenportefeuille wordt niet genoemd.",
+  "pagina": 73
+ },
+ "naam": "Brocacef",
+ "pad": "data/annual_reports/81_Brocacef_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}

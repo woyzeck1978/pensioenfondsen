@@ -1,0 +1,121 @@
+{
+ "allocatie": {
+  "feitelijk_eur_mln": 463.17,
+  "feitelijk_pct": 41.18,
+  "letterlijk": "In deze assetcategorie werd eind 2025 belegd (procenten van totaal belegd vermogen): Aandelen Pacific ESG 3,11%, Aandelen Noord Amerika ESG 28,17%, Aandelen Europa ESG 5,58%, Aandelen Opkomende Markten 4,32% (p. 47). Marktwaarde aandelen: € 463.170 duizend (waarvan genoteerd € 428.697 duizend en private equity € 34.473 duizend); Totaal per 31 december 2025 Wtp: € 1.004.804 duizend (p. 115). Strategische weging totaal Aandelen Wereld (ACWI): 39,1% (p. 43).",
+  "omvat_private_equity": true,
+  "pagina": 47,
+  "private_equity_pct": 3.42,
+  "strategisch_basis": "totale portefeuille",
+  "strategisch_pct": 39.1,
+  "totaal_beleggingen_eur_mln": 1004.8
+ },
+ "beheer": {
+  "beheerders": [
+   {
+    "naam": "BlackRock",
+    "pagina": 47,
+    "product_of_mandaat": "BlackRock CCF North America ESG Screened Equity",
+    "segment": "Noord-Amerika",
+    "stijl": "passief"
+   },
+   {
+    "naam": "BlackRock",
+    "pagina": 47,
+    "product_of_mandaat": "BlackRock CCF European ESG Screened Equity",
+    "segment": "Europa",
+    "stijl": "passief"
+   },
+   {
+    "naam": "BlackRock",
+    "pagina": 47,
+    "product_of_mandaat": "BlackRock CCF Pacific ESG Screened Equity",
+    "segment": "Azië-Pacific",
+    "stijl": "passief"
+   },
+   {
+    "naam": "BlackRock",
+    "pagina": 47,
+    "product_of_mandaat": "iShares Emerging Market Screened Equity",
+    "segment": "Opkomende markten",
+    "stijl": "passief"
+   }
+  ],
+  "fiduciair_beheerder": "BlackRock",
+  "letterlijk": "BlackRock is aangesteld als fiduciair beheerder. Naast de strategische advisering, verzorgt BlackRock ook het selecteren en monitoren van managers en het balans- en risicomanagement, inclusief het beheer van de rente- en valuta-afdekking.",
+  "organisatie": "extern",
+  "pagina": 21
+ },
+ "esg": {
+  "co2_doel": null,
+  "eigen_index": false,
+  "instrumenten": [
+   "uitsluitingen",
+   "engagement",
+   "stembeleid",
+   "ESG-integratie in selectie"
+  ],
+  "letterlijk": "BPL classificeert haar pensioenregeling als een duurzaam product dat ecologische of sociale kenmerken promoot (artikel 8 SFDR). ... Er is voor deze portefeuilles gekozen voor ESG-screened MSCI benchmarks met uitsluitingen. ... In totaal belegde BPL in 4 aandelenfondsen en is er dus voor alle aandelenfondsen gestemd en aan engagement gedaan.",
+  "omschrijving": "De 4 passieve aandelenfondsen vallen onder SFDR Artikel 8 (licht-groen). De gehanteerde MSCI ESG Screened benchmarks sluiten controversiële en nucleaire wapens, civiele vuurwapens, fossiele brandstoffen, tabak en UN Global Compact-overtreders uit. Voor alle 4 aandelenfondsen wordt actief gestemd en engagement gevoerd via vermogensbeheerder BlackRock. ESG-criteria worden tevens geïntegreerd bij de managerselectie en -monitoring.",
+  "pagina": 163,
+  "sfdr_artikel": 8
+ },
+ "fund_id": 4,
+ "kosten": {
+  "beheerkosten_aandelen_pct": null,
+  "letterlijk": "Totaal kosten vermogensbeheer 0,57%, Totaal transactiekosten 0,07%, Performance fee 0,00%; Tabel kosten per beleggingscategorie: Aandelen beheerkosten € 254.957, transactiekosten € 219.773.",
+  "pagina": 79,
+  "prestatievergoeding_aandelen_eur_mln": 0,
+  "transactiekosten_aandelen_pct": null,
+  "transactiekosten_totaal_pct": 0.07,
+  "vermogensbeheerkosten_totaal_pct": 0.57
+ },
+ "opmerkingen": "Per 1 januari 2025 is BPL overgegaan naar de solidaire premieregeling (SPR), waarbij het vermogen is verdeeld in een Rendementsportefeuille (streef 56,7% / post-rebalance 56,4%) en een Beschermingsportefeuille (streef 43,3% / post-rebalance 43,6%). De beursgenoteerde aandelenportefeuille is 100% passief belegd in vier regionale fondsen van BlackRock/iShares. Beursgenoteerde aandelen en private equity worden gezamenlijk gestuurd (norm 79% minus werkelijk gewicht private equity). In de jaarrekening (RJ 290) valt private equity (€ 34,5 mln) onder de balanspost Aandelen (totaal € 463,2 mln, waarvan € 428,7 mln genoteerd).",
+ "regio": {
+  "basis": "benchmark",
+  "letterlijk": "De onderstaande tabel geeft de gewichten weer van de regionale aandelenbeleggingen, waarbij de gewichten afgeleid zijn van de MSCI All Country World Index: North America Equity 68,9%, Europe Equity 13,7%, EM Equity 10,1%, Pacific Equity 7,3%.",
+  "pagina": 46,
+  "verdeling": [
+   {
+    "pct": 68.9,
+    "regio": "Noord-Amerika"
+   },
+   {
+    "pct": 13.7,
+    "regio": "Europa"
+   },
+   {
+    "pct": 10.1,
+    "regio": "Opkomende markten"
+   },
+   {
+    "pct": 7.3,
+    "regio": "Azië-Pacific"
+   }
+  ]
+ },
+ "stijl": {
+  "actief_pct": 0,
+  "benchmarks": [
+   "MSCI North America ex Select Controversies Net Index in EUR",
+   "MSCI Europe ex Select Controversies Net Index in EUR",
+   "MSCI Pacific ex Select Controversies Net Index in EUR",
+   "MSCI Emerging Markets ex Select Controversies Net Index in EUR"
+  ],
+  "factorbeleggen": false,
+  "hoofdstijl": "passief",
+  "letterlijk": "De aandelenportefeuille bestaat uit passieve, marktkapitalisatie gewogen portefeuilles. Door te kiezen voor 3 regionale fondsen behoudt BPL de flexibiliteit om keuzes te maken rondom de wegingen van de verschillende regio’s (Noord-Amerika, Europa en Pacific). ... Een gedeelte van de aandelenportefeuille wordt belegd in Opkomende Markten via een passief beleggingsfonds.",
+  "pagina": 47,
+  "passief_pct": 100,
+  "tracking_error_pct": null
+ },
+ "valuta": {
+  "aandelen_afgedekt_pct": 50,
+  "letterlijk": "Er wordt 50% van de USD afgedekt voor de categorieën aandelen, high yield en emerging market debt (hard currency).",
+  "omschrijving": "Voor de aandelenbeleggingen in Noord-Amerika wordt 50% van het valutarisico op de USD afgedekt naar euro met behulp van FX-forwards (uitgevoerd door fiduciair manager BlackRock). Voor de overige regio's (Europa, Pacific, opkomende markten) is geen sprake van valuta-afdekking (n.v.t.).",
+  "pagina": 46
+ },
+ "naam": "Loodsen (Pilots)",
+ "pad": "data/annual_reports/4_Loodsen_2025.pdf",
+ "bron_model": "agy gemini-3.8-flash-high"
+}
